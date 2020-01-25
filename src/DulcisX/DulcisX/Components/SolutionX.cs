@@ -5,6 +5,7 @@ using Microsoft.VisualStudio.Shell.Interop;
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace DulcisX.Components
 {
@@ -29,9 +30,11 @@ namespace DulcisX.Components
                 {
                     ThreadHelper.ThrowIfNotOnUIThread();
 
-                    _events = new SolutionEventsX();
+                    _events = new SolutionEventsX(this);
 
-                    UnderlyingSolution.AdviseSolutionEvents(_events, out var cookieUID);
+                    var result = UnderlyingSolution.AdviseSolutionEvents(_events, out var cookieUID);
+
+                    VsHelper.ValidateVSStatusCode(result);
 
                     _events.CookieUID = cookieUID;
                 }
@@ -43,6 +46,19 @@ namespace DulcisX.Components
         public SolutionX(IVsSolution solution)
             => UnderlyingSolution = solution;
 
+        public ProjectX GetProject(Guid projectGuid)
+             => Projects.FirstOrDefault(x => x.UnderlyingGuid == projectGuid);
+
+        public ProjectX GetProject(IVsHierarchy hierarchy)
+        {
+            ThreadHelper.ThrowIfNotOnUIThread();
+
+            var result = UnderlyingSolution.GetGuidOfProject(hierarchy, out var projectGuid);
+            VsHelper.ValidateVSStatusCode(result);
+
+            return GetProject(projectGuid);
+        }
+
         public IEnumerator<ProjectX> GetEnumerator()
         {
             ThreadHelper.ThrowIfNotOnUIThread();
@@ -51,7 +67,7 @@ namespace DulcisX.Components
 
             var result = UnderlyingSolution.GetProjectEnum((uint)__VSENUMPROJFLAGS.EPF_LOADEDINSOLUTION, ref tempGuid, out var projectEnumerator);
 
-            VSHelper.ValidateVSStatusCode(result);
+            VsHelper.ValidateVSStatusCode(result);
             var hierarchy = new IVsHierarchy[1];
 
             while (true)
@@ -61,7 +77,7 @@ namespace DulcisX.Components
                 if (success == 0)
                     break;
 
-                VSHelper.ValidateVSStatusCode(result);
+                VsHelper.ValidateVSStatusCode(result);
 
                 yield return new ProjectX(hierarchy[0]);
             }
@@ -78,7 +94,9 @@ namespace DulcisX.Components
                 {
                     ThreadHelper.ThrowIfNotOnUIThread();
 
-                    UnderlyingSolution.UnadviseSolutionEvents(Events.CookieUID);
+                    var result = UnderlyingSolution.UnadviseSolutionEvents(Events.CookieUID);
+
+                    VsHelper.ValidateVSStatusCode(result);
                 }
 
                 IsDisposed = true;
