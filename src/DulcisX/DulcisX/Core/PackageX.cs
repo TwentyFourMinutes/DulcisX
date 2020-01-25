@@ -1,10 +1,8 @@
-﻿using EnvDTE;
+﻿using DulcisX.Components;
 using EnvDTE80;
 using Microsoft.VisualStudio.Shell;
+using Microsoft.VisualStudio.Shell.Interop;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using Task = System.Threading.Tasks.Task;
@@ -23,7 +21,7 @@ namespace DulcisX.Core
             {
                 if (_dte2 is null)
                 {
-                    _dte2 = GetService<DTE, DTE2>();
+                    _dte2 = GetService<SDTE, DTE2>();
                 }
                 return _dte2;
             }
@@ -33,7 +31,7 @@ namespace DulcisX.Core
         {
             if (_dte2 is null)
             {
-                _dte2 = await GetServiceAsync<DTE, DTE2>();
+                _dte2 = await GetServiceAsync<SDTE, DTE2>();
             }
 
             return _dte2;
@@ -72,6 +70,34 @@ namespace DulcisX.Core
         public TService GetGlobalService<TBaseService, TService>() where TBaseService : class
                                                                    where TService : class
             => GetGlobalService(typeof(TBaseService)) as TService;
+
+        #endregion
+
+        #region Solution
+
+        private SolutionX _solution;
+
+        public SolutionX Solution
+        {
+            get
+            {
+                if (_solution is null)
+                {
+                    _solution = new SolutionX(GetService<SVsSolution, IVsSolution>());
+                }
+                return _solution;
+            }
+        }
+
+        public async ValueTask<SolutionX> GetSolutionAsync()
+        {
+            if (_solution is null)
+            {
+                _solution = new SolutionX(await GetServiceAsync<SVsSolution, IVsSolution>());
+            }
+
+            return _solution;
+        }
 
         #endregion
     }
