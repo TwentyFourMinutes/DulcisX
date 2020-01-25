@@ -5,6 +5,8 @@ VisualStudioVersion = 16.0.29721.120
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DulcisX", "DulcisX\DulcisX.csproj", "{407F16E1-9210-41CE-93A1-4C15878B7DDB}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DulcisX.TestVSIX", "DulcisX.TestVSIX\DulcisX.TestVSIX.csproj", "{66D1DF94-9F1F-486D-8DA8-8099A6C3BB98}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{407F16E1-9210-41CE-93A1-4C15878B7DDB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{407F16E1-9210-41CE-93A1-4C15878B7DDB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{407F16E1-9210-41CE-93A1-4C15878B7DDB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{66D1DF94-9F1F-486D-8DA8-8099A6C3BB98}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{66D1DF94-9F1F-486D-8DA8-8099A6C3BB98}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{66D1DF94-9F1F-486D-8DA8-8099A6C3BB98}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{66D1DF94-9F1F-486D-8DA8-8099A6C3BB98}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
