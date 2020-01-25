@@ -5,6 +5,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace DulcisX.Core
@@ -36,6 +37,15 @@ namespace DulcisX.Core
 
             return _dte2;
         }
+
+        #endregion
+
+        #region Initialize
+
+        public event Func<IProgress<ServiceProgressData>, CancellationToken, Task> OnInitializeAsync;
+
+        protected override Task InitializeAsync(CancellationToken cancellationToken, IProgress<ServiceProgressData> progress)
+            => OnInitializeAsync?.Invoke(progress, cancellationToken);
 
         #endregion
     }
