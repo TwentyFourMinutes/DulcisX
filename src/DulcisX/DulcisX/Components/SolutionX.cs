@@ -1,4 +1,5 @@
-﻿using DulcisX.Helpers;
+﻿using DulcisX.Components.Events;
+using DulcisX.Helpers;
 using Microsoft.VisualStudio.Shell;
 using Microsoft.VisualStudio.Shell.Interop;
 using System;
@@ -7,11 +8,37 @@ using System.Collections.Generic;
 
 namespace DulcisX.Components
 {
-    public class SolutionX : IEnumerable<ProjectX>
+    public class SolutionX : IEnumerable<ProjectX>, IDisposable
     {
-        public IEnumerable<ProjectX> Projects => this;
+        public bool IsDisposed { get; private set; }
 
         public IVsSolution UnderlyingSolution { get; }
+
+        public IEnumerable<ProjectX> Projects => this;
+
+        private SolutionEventsX _events;
+
+        public SolutionEventsX Events
+        {
+            get
+            {
+                if (IsDisposed)
+                    throw new ObjectDisposedException(nameof(SolutionX));
+
+                if (_events is null)
+                {
+                    ThreadHelper.ThrowIfNotOnUIThread();
+
+                    _events = new SolutionEventsX();
+
+                    UnderlyingSolution.AdviseSolutionEvents(_events, out var cookieUID);
+
+                    _events.CookieUID = cookieUID;
+                }
+
+                return _events;
+            }
+        }
 
         public SolutionX(IVsSolution solution)
             => UnderlyingSolution = solution;
@@ -42,5 +69,24 @@ namespace DulcisX.Components
 
         IEnumerator IEnumerable.GetEnumerator()
             => GetEnumerator();
+
+        protected virtual void Dispose(bool disposing)
+        {
+            if (!IsDisposed)
+            {
+                if (disposing && _events != null)
+                {
+                    ThreadHelper.ThrowIfNotOnUIThread();
+
+                    UnderlyingSolution.UnadviseSolutionEvents(Events.CookieUID);
+                }
+
+                IsDisposed = true;
+            }
+        }
+        public void Dispose()
+        {
+            Dispose(true);
+        }
     }
 }

@@ -529,6 +529,7 @@
     <Reference Include="WindowsFormsIntegration" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Components\Events\SoulutionEventsX.cs" />
     <Compile Include="Components\ProjectX.cs" />
     <Compile Include="Components\SolutionX.cs" />
     <Compile Include="Core\PackageX.cs" />
