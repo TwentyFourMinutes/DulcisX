@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
+using Task = System.Threading.Tasks.Task;
 
 namespace DulcisX.Core
 {
@@ -22,7 +23,7 @@ namespace DulcisX.Core
             {
                 if (_dte2 is null)
                 {
-                    _dte2 = GetService(typeof(DTE)) as DTE2;
+                    _dte2 = GetService<DTE, DTE2>();
                 }
                 return _dte2;
             }
@@ -32,7 +33,7 @@ namespace DulcisX.Core
         {
             if (_dte2 is null)
             {
-                _dte2 = (await GetServiceAsync(typeof(DTE))) as DTE2;
+                _dte2 = await GetServiceAsync<DTE, DTE2>();
             }
 
             return _dte2;
@@ -46,6 +47,31 @@ namespace DulcisX.Core
 
         protected override Task InitializeAsync(CancellationToken cancellationToken, IProgress<ServiceProgressData> progress)
             => OnInitializeAsync?.Invoke(progress, cancellationToken);
+
+        #endregion
+
+        #region Services
+
+        public TService GetService<TService>() where TService : class
+            => GetService<TService, TService>();
+
+        public TService GetService<TBaseService, TService>() where TBaseService : class
+                                                            where TService : class
+            => GetService(typeof(TBaseService)) as TService;
+
+        public Task<TService> GetServiceAsync<TService>() where TService : class
+           => GetServiceAsync<TService, TService>();
+
+        public async Task<TService> GetServiceAsync<TBaseService, TService>() where TBaseService : class
+                                                                              where TService : class
+            => (await GetServiceAsync(typeof(TBaseService))) as TService;
+
+        public TService GetGlobalService<TService>() where TService : class
+            => GetGlobalService<TService, TService>();
+
+        public TService GetGlobalService<TBaseService, TService>() where TBaseService : class
+                                                                   where TService : class
+            => GetGlobalService(typeof(TBaseService)) as TService;
 
         #endregion
     }
