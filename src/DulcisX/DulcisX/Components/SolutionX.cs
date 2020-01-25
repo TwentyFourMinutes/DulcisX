@@ -79,7 +79,7 @@ namespace DulcisX.Components
 
                 VsHelper.ValidateVSStatusCode(result);
 
-                yield return new ProjectX(hierarchy[0]);
+                yield return new ProjectX(hierarchy[0], this);
             }
         }
 
