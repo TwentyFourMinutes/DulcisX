@@ -22,7 +22,7 @@ namespace DulcisX.Core
             {
                 if (_dte2 is null)
                 {
-                    _dte2 = GetService<SDTE, DTE2>();
+                    _dte2 = this.GetService<SDTE, DTE2>();
                 }
                 return _dte2;
             }
@@ -32,7 +32,7 @@ namespace DulcisX.Core
         {
             if (_dte2 is null)
             {
-                _dte2 = await GetServiceAsync<SDTE, DTE2>();
+                _dte2 = await this.GetServiceAsync<SDTE, DTE2>();
             }
 
             return _dte2;
@@ -73,7 +73,7 @@ namespace DulcisX.Core
             {
                 if (_solution is null)
                 {
-                    _solution = new SolutionX(GetService<SVsSolution, IVsSolution>(), GetServiceProviders());
+                    _solution = new SolutionX(this.GetService<SVsSolution, IVsSolution>(), GetServiceProviders());
                 }
 
                 return _solution;
@@ -84,7 +84,7 @@ namespace DulcisX.Core
         {
             if (_solution is null)
             {
-                _solution = new SolutionX(await GetServiceAsync<SVsSolution, IVsSolution>(), GetServiceProviders());
+                _solution = new SolutionX(await this.GetServiceAsync<SVsSolution, IVsSolution>(), GetServiceProviders());
             }
 
             return _solution;
