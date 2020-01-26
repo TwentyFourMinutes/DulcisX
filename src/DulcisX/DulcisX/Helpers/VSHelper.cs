@@ -1,6 +1,5 @@
 ﻿using DulcisX.Exceptions;
 using Microsoft.VisualStudio;
-using System.Linq;
 
 namespace DulcisX.Helpers
 {

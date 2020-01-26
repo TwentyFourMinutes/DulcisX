@@ -36,6 +36,24 @@ namespace DulcisX.Components
             }
         }
 
+        private SolutionBuildEventsX _buildEvents;
+
+        public SolutionBuildEventsX SolutionBuidEvents
+        {
+            get
+            {
+                if (IsDisposed)
+                    throw new ObjectDisposedException(nameof(SolutionX));
+
+                if (_buildEvents is null)
+                {
+                    _buildEvents = SolutionBuildEventsX.Create(this);
+                }
+
+                return _buildEvents;
+            }
+        }
+
         internal IServiceProviders ServiceProviders { get; }
 
         internal SolutionX(IVsSolution solution, IServiceProviders providers)
@@ -88,6 +106,7 @@ namespace DulcisX.Components
                 if (disposing && _events != null)
                 {
                     SolutionEvents.Destroy(this);
+                    SolutionBuidEvents.Destroy(this);
                 }
 
                 IsDisposed = true;
