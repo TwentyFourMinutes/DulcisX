@@ -1,5 +1,4 @@
-﻿using DulcisX.Core.Models.Interfaces;
-using DulcisX.Helpers;
+﻿using DulcisX.Helpers;
 using Microsoft.VisualStudio;
 using Microsoft.VisualStudio.Shell;
 using Microsoft.VisualStudio.Shell.Interop;
