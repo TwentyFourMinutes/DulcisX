@@ -1,4 +1,5 @@
-using DulcisX.Components.Events;
+﻿using DulcisX.Components.Events;
+using DulcisX.Core.Models.Interfaces;
 using DulcisX.Helpers;
 using Microsoft.VisualStudio.Shell;
 using Microsoft.VisualStudio.Shell.Interop;
@@ -35,8 +36,10 @@ namespace DulcisX.Components
             }
         }
 
-        public SolutionX(IVsSolution solution)
-            => UnderlyingSolution = solution;
+        internal IServiceProviders ServiceProviders { get; }
+
+        internal SolutionX(IVsSolution solution, IServiceProviders providers)
+            => (UnderlyingSolution, ServiceProviders) = (solution, providers);
 
         public ProjectX GetProject(Guid projectGuid)
              => Projects.FirstOrDefault(x => x.UnderlyingGuid == projectGuid);

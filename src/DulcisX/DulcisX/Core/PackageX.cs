@@ -1,4 +1,5 @@
 ﻿using DulcisX.Components;
+using DulcisX.Core.Models.Interfaces;
 using EnvDTE80;
 using Microsoft.VisualStudio.Shell;
 using Microsoft.VisualStudio.Shell.Interop;
@@ -71,6 +72,9 @@ namespace DulcisX.Core
                                                                    where TService : class
             => GetGlobalService(typeof(TBaseService)) as TService;
 
+        private IServiceProviders GetServiceProviders()
+            => (IServiceProviders)this;
+
         #endregion
 
         #region Solution
@@ -83,8 +87,9 @@ namespace DulcisX.Core
             {
                 if (_solution is null)
                 {
-                    _solution = new SolutionX(GetService<SVsSolution, IVsSolution>());
+                    _solution = new SolutionX(GetService<SVsSolution, IVsSolution>(), GetServiceProviders());
                 }
+
                 return _solution;
             }
         }
@@ -93,7 +98,7 @@ namespace DulcisX.Core
         {
             if (_solution is null)
             {
-                _solution = new SolutionX(await GetServiceAsync<SVsSolution, IVsSolution>());
+                _solution = new SolutionX(await GetServiceAsync<SVsSolution, IVsSolution>(), GetServiceProviders());
             }
 
             return _solution;
