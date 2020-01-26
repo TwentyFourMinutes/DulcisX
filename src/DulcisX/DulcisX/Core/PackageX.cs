@@ -40,12 +40,26 @@ namespace DulcisX.Core
 
         #endregion
 
-        #region Initialize
+        #region MethodEvents
 
-        public event Func<IProgress<ServiceProgressData>, CancellationToken, Task> OnInitializeAsync;
+        public event Func<CancellationToken, IProgress<ServiceProgressData>, Task> OnInitializeAsync;
 
         protected override Task InitializeAsync(CancellationToken cancellationToken, IProgress<ServiceProgressData> progress)
-            => OnInitializeAsync?.Invoke(progress, cancellationToken);
+        {
+            OnInitializeAsync?.Invoke(cancellationToken, progress);
+            return base.InitializeAsync(cancellationToken, progress);
+        }
+
+        public event Func<bool> OnDisposing;
+
+        protected override void Dispose(bool disposing)
+        {
+            OnDisposing?.Invoke();
+
+            Solution.Dispose();
+
+            base.Dispose(disposing);
+        }
 
         #endregion
 

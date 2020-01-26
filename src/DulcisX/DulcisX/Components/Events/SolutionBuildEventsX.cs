@@ -6,7 +6,6 @@ using System;
 
 namespace DulcisX.Components.Events
 {
-
     public class SolutionBuildEventsX : IVsUpdateSolutionEvents
     {
         private uint _cookieUID;
