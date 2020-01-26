@@ -10,7 +10,7 @@ using Task = System.Threading.Tasks.Task;
 
 namespace DulcisX.Core
 {
-    public class PackageX : AsyncPackage
+    public class PackageX : AsyncPackage, IServiceProviders
     {
         #region DTE
 
@@ -50,20 +50,6 @@ namespace DulcisX.Core
         #endregion
 
         #region Services
-
-        public TService GetService<TService>() where TService : class
-            => GetService<TService, TService>();
-
-        public TService GetService<TBaseService, TService>() where TBaseService : class
-                                                            where TService : class
-            => GetService(typeof(TBaseService)) as TService;
-
-        public Task<TService> GetServiceAsync<TService>() where TService : class
-           => GetServiceAsync<TService, TService>();
-
-        public async Task<TService> GetServiceAsync<TBaseService, TService>() where TBaseService : class
-                                                                              where TService : class
-            => (await GetServiceAsync(typeof(TBaseService))) as TService;
 
         public TService GetGlobalService<TService>() where TService : class
             => GetGlobalService<TService, TService>();

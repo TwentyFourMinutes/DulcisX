@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace DulcisX.Core.Models.Interfaces
 {
-    internal interface IServiceProviders : IAsyncServiceProvider, IServiceProvider
+    public interface IServiceProviders : IAsyncServiceProvider, IServiceProvider
     {
     }
 }
