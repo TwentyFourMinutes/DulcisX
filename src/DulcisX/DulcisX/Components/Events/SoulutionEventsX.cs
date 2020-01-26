@@ -1,4 +1,5 @@
-﻿using DulcisX.Helpers;
+﻿using DulcisX.Core.Models.Interfaces;
+using DulcisX.Helpers;
 using Microsoft.VisualStudio;
 using Microsoft.VisualStudio.Shell;
 using Microsoft.VisualStudio.Shell.Interop;
@@ -6,12 +7,18 @@ using System;
 
 namespace DulcisX.Components.Events
 {
-    public delegate void QueryProjectClose(ProjectX hierarchy, bool isRemoving, ref bool shouldCancel);
-    public delegate void QueryProjectUnload(ProjectX hierarchy, ref bool shouldCancel);
-    public delegate void QuerySolutionClose(ref bool shouldCancel);
-
     public class SolutionEventsX : IVsSolutionEvents
     {
+        private uint _cookieUID;
+        private readonly SolutionX _solution;
+
+        private SolutionEventsX(SolutionX solution)
+            => _solution = solution;
+
+        public delegate void QueryProjectClose(ProjectX hierarchy, bool isRemoving, ref bool shouldCancel);
+        public delegate void QueryProjectUnload(ProjectX hierarchy, ref bool shouldCancel);
+        public delegate void QuerySolutionClose(ref bool shouldCancel);
+
         public event Action<ProjectX, bool> OnAfterProjectOpen;
 
         public event QueryProjectClose OnQueryProjectClose;
@@ -31,13 +38,6 @@ namespace DulcisX.Components.Events
         public event Action OnBeforeSolutionClose;
 
         public event Action OnAfterSolutionClose;
-
-        internal uint CookieUID { get; set; }
-
-        private readonly SolutionX _solution;
-
-        internal SolutionEventsX(SolutionX solution)
-            => _solution = solution;
 
         public int OnAfterOpenProject(IVsHierarchy pHierarchy, int fAdded)
         {
@@ -113,6 +113,28 @@ namespace DulcisX.Components.Events
         {
             OnAfterSolutionClose?.Invoke();
             return VSConstants.S_OK;
+        }
+
+        internal void Destroy(SolutionX solution)
+        {
+            ThreadHelper.ThrowIfNotOnUIThread();
+            var result = solution.UnderlyingSolution.UnadviseSolutionEvents(_cookieUID);
+            VsHelper.ValidateVSStatusCode(result);
+        }
+
+        internal static SolutionEventsX Create(SolutionX solution)
+        {
+            ThreadHelper.ThrowIfNotOnUIThread();
+
+            var solutionEvents = new SolutionEventsX(solution);
+
+            var result = solution.UnderlyingSolution.AdviseSolutionEvents(solutionEvents, out var cookieUID);
+
+            VsHelper.ValidateVSStatusCode(result);
+
+            solutionEvents._cookieUID = cookieUID;
+
+            return solutionEvents;
         }
     }
 }

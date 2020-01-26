@@ -1,4 +1,4 @@
-﻿using DulcisX.Components.Events;
+using DulcisX.Components.Events;
 using DulcisX.Helpers;
 using Microsoft.VisualStudio.Shell;
 using Microsoft.VisualStudio.Shell.Interop;
@@ -19,7 +19,7 @@ namespace DulcisX.Components
 
         private SolutionEventsX _events;
 
-        public SolutionEventsX Events
+        public SolutionEventsX SolutionEvents
         {
             get
             {
@@ -28,15 +28,7 @@ namespace DulcisX.Components
 
                 if (_events is null)
                 {
-                    ThreadHelper.ThrowIfNotOnUIThread();
-
-                    _events = new SolutionEventsX(this);
-
-                    var result = UnderlyingSolution.AdviseSolutionEvents(_events, out var cookieUID);
-
-                    VsHelper.ValidateVSStatusCode(result);
-
-                    _events.CookieUID = cookieUID;
+                    _events = SolutionEventsX.Create(this);
                 }
 
                 return _events;
@@ -92,16 +84,13 @@ namespace DulcisX.Components
             {
                 if (disposing && _events != null)
                 {
-                    ThreadHelper.ThrowIfNotOnUIThread();
-
-                    var result = UnderlyingSolution.UnadviseSolutionEvents(Events.CookieUID);
-
-                    VsHelper.ValidateVSStatusCode(result);
+                    SolutionEvents.Destroy(this);
                 }
 
                 IsDisposed = true;
             }
         }
+
         public void Dispose()
         {
             Dispose(true);
