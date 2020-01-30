@@ -529,6 +529,9 @@
     <Reference Include="WindowsFormsIntegration" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Components\BaseProjectItemX.cs" />
+    <Compile Include="Components\Events\Interfaces\ISolutionBuildEventsX.cs" />
+    <Compile Include="Components\Events\Interfaces\ISoulutionEventsX.cs" />
     <Compile Include="Components\Events\SolutionBuildEventsX.cs" />
     <Compile Include="Components\Events\SoulutionEventsX.cs" />
     <Compile Include="Components\ProjectX.cs" />
@@ -538,7 +541,6 @@
     <Compile Include="Core\Models\Enums\PropertyType.cs" />
     <Compile Include="Core\Models\Interfaces\IServiceProviders.cs" />
     <Compile Include="Core\Models\PropertiesX.cs" />
-    <Compile Include="Core\Models\PropertyX.cs" />
     <Compile Include="Core\PackageX.cs" />
     <Compile Include="Exceptions\InvalidVSStatusCodeException.cs" />
     <Compile Include="Helpers\VSHelper.cs" />

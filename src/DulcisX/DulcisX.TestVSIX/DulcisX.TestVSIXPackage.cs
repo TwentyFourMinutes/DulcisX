@@ -1,10 +1,10 @@
 ﻿using System;
-using System.Diagnostics;
 using System.Runtime.InteropServices;
 using System.Threading;
 using DulcisX.Core;
 using Microsoft.VisualStudio;
 using Microsoft.VisualStudio.Shell;
+using Microsoft.VisualStudio.Shell.Interop;
 using Task = System.Threading.Tasks.Task;
 
 namespace DulcisX.TestVSIX
@@ -25,11 +25,15 @@ namespace DulcisX.TestVSIX
         {
             base.OnInitializeAsync += OnInitializeAsync;
         }
-
-        private new Task OnInitializeAsync(IProgress<ServiceProgressData> arg1, CancellationToken arg2)
+        public IVsSolutionBuildManager MyProperty { get; set; }
+        private new async Task OnInitializeAsync(CancellationToken arg2, IProgress<ServiceProgressData> arg1)
         {
-            return Task.CompletedTask;
+            await JoinableTaskFactory.SwitchToMainThreadAsync(arg2);
+
+            var yeet = Solution.SolutionBuidEvents;
         }
+
+       
 
         #endregion
     }

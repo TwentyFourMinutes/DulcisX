@@ -6,17 +6,13 @@ using System;
 
 namespace DulcisX.Components.Events
 {
-    public class SolutionEventsX : IVsSolutionEvents
+    internal class SolutionEventsX : ISolutionEventsX, IVsSolutionEvents
     {
         private uint _cookieUID;
         private readonly SolutionX _solution;
 
         private SolutionEventsX(SolutionX solution)
             => _solution = solution;
-
-        public delegate void QueryProjectClose(ProjectX hierarchy, bool isRemoving, ref bool shouldCancel);
-        public delegate void QueryProjectUnload(ProjectX hierarchy, ref bool shouldCancel);
-        public delegate void QuerySolutionClose(ref bool shouldCancel);
 
         public event Action<ProjectX, bool> OnAfterProjectOpen;
 
@@ -121,7 +117,7 @@ namespace DulcisX.Components.Events
             VsHelper.ValidateVSStatusCode(result);
         }
 
-        internal static SolutionEventsX Create(SolutionX solution)
+        internal static ISolutionEventsX Create(SolutionX solution)
         {
             ThreadHelper.ThrowIfNotOnUIThread();
 

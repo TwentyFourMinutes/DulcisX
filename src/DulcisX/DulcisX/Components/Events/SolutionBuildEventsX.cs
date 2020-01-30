@@ -6,16 +6,13 @@ using System;
 
 namespace DulcisX.Components.Events
 {
-    public class SolutionBuildEventsX : IVsUpdateSolutionEvents
+    internal class SolutionBuildEventsX : ISolutionBuildEventsX, IVsUpdateSolutionEvents
     {
         private uint _cookieUID;
         private readonly IVsSolutionBuildManager _buildManager;
 
         private SolutionBuildEventsX(IVsSolutionBuildManager buildManager)
             => _buildManager = buildManager;
-
-        public delegate void BeforeSolutionBuild(ref bool shouldCancel);
-        public delegate void BeforeProjectConfigurationBuild(ref bool shouldCancel);
 
         public event BeforeSolutionBuild OnBeforeSolutionBuild;
 
@@ -66,14 +63,14 @@ namespace DulcisX.Components.Events
             return VSConstants.S_OK;
         }
 
-        internal void Destroy(SolutionX solution)
+        internal void Destroy()
         {
             ThreadHelper.ThrowIfNotOnUIThread();
             var result = _buildManager.UnadviseUpdateSolutionEvents(_cookieUID);
             VsHelper.ValidateVSStatusCode(result);
         }
 
-        internal static SolutionBuildEventsX Create(SolutionX solution)
+        internal static ISolutionBuildEventsX Create(SolutionX solution)
         {
             ThreadHelper.ThrowIfNotOnUIThread();
 

@@ -1,4 +1,5 @@
-using DulcisX.Components.Events;
+﻿using DulcisX.Components.Events;
+using DulcisX.Core.Models;
 using DulcisX.Core.Models.Interfaces;
 using DulcisX.Helpers;
 using Microsoft.VisualStudio.Shell;
@@ -18,9 +19,9 @@ namespace DulcisX.Components
 
         public IEnumerable<ProjectX> Projects => this;
 
-        private SolutionEventsX _events;
+        private ISolutionEventsX _events;
 
-        public SolutionEventsX SolutionEvents
+        public ISolutionEventsX SolutionEvents
         {
             get
             {
@@ -36,9 +37,9 @@ namespace DulcisX.Components
             }
         }
 
-        private SolutionBuildEventsX _buildEvents;
+        private ISolutionBuildEventsX _buildEvents;
 
-        public SolutionBuildEventsX SolutionBuidEvents
+        public ISolutionBuildEventsX SolutionBuidEvents
         {
             get
             {
@@ -105,8 +106,8 @@ namespace DulcisX.Components
             {
                 if (disposing && _events != null)
                 {
-                    SolutionEvents.Destroy(this);
-                    SolutionBuidEvents.Destroy(this);
+                    ((SolutionEventsX)SolutionEvents).Destroy(this);
+                    ((SolutionBuildEventsX)SolutionBuidEvents).Destroy();
                 }
 
                 IsDisposed = true;
