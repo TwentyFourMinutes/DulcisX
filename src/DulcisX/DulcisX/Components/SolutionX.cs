@@ -1,4 +1,4 @@
-﻿using DulcisX.Components.Events;
+using DulcisX.Components.Events;
 using DulcisX.Core.Models.Interfaces;
 using DulcisX.Helpers;
 using Microsoft.VisualStudio.Shell;
@@ -10,7 +10,7 @@ using System.Linq;
 
 namespace DulcisX.Components
 {
-    public class SolutionX : IEnumerable<ProjectX>, IDisposable
+    public class SolutionX : BaseProjectItemX, IEnumerable<ProjectX>, IDisposable
     {
         public bool IsDisposed { get; private set; }
 

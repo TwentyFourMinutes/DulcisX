@@ -4,7 +4,7 @@ using System;
 
 namespace DulcisX.Components
 {
-    public class ProjectX
+    public class ProjectX : BaseProjectItemX
     {
         private Guid _underlyingGuid = Guid.Empty;
 
