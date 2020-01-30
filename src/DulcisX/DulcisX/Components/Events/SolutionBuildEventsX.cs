@@ -6,14 +6,8 @@ using System;
 
 namespace DulcisX.Components.Events
 {
-    internal class SolutionBuildEventsX : ISolutionBuildEventsX, IVsUpdateSolutionEvents
+    internal class SolutionBuildEventsX : EventCookieX, ISolutionBuildEventsX, IVsUpdateSolutionEvents
     {
-        private uint _cookieUID;
-        private readonly IVsSolutionBuildManager _buildManager;
-
-        private SolutionBuildEventsX(IVsSolutionBuildManager buildManager)
-            => _buildManager = buildManager;
-
         public event BeforeSolutionBuild OnBeforeSolutionBuild;
 
         public event Action<bool, bool, bool> OnAfterSolutionBuild;
@@ -23,6 +17,11 @@ namespace DulcisX.Components.Events
         public event BeforeProjectConfigurationBuild OnBeforeProjectConfigurationBuild;
 
         public event Action OnAfterProjectConfigurationChange;
+
+        private readonly IVsSolutionBuildManager _buildManager;
+
+        private SolutionBuildEventsX(IVsSolutionBuildManager buildManager)
+            => _buildManager = buildManager;
 
         public int UpdateSolution_Begin(ref int pfCancelUpdate)
         {
@@ -66,7 +65,7 @@ namespace DulcisX.Components.Events
         internal void Destroy()
         {
             ThreadHelper.ThrowIfNotOnUIThread();
-            var result = _buildManager.UnadviseUpdateSolutionEvents(_cookieUID);
+            var result = _buildManager.UnadviseUpdateSolutionEvents(CookieUID);
             VsHelper.ValidateVSStatusCode(result);
         }
 
@@ -82,7 +81,7 @@ namespace DulcisX.Components.Events
 
             VsHelper.ValidateVSStatusCode(result);
 
-            solutionBuildEvents._cookieUID = cookieUID;
+            solutionBuildEvents.CookieUID = cookieUID;
 
             return solutionBuildEvents;
         }

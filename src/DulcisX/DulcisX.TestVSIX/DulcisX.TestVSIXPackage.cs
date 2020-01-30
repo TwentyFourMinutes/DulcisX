@@ -31,8 +31,11 @@ namespace DulcisX.TestVSIX
 
             await ThreadHelper.JoinableTaskFactory.SwitchToMainThreadAsync(arg2);
 
-            var yeet = Solution.Properties[PropertyType.FullName];
+            Solution.DocumentEvents.OnDocumentWindowShow += DocumentEvents_OnDocumentWindowShow;            
+        }
 
+        private void DocumentEvents_OnDocumentWindowShow(uint arg1, bool arg2, IVsWindowFrame arg3)
+        {
             
         }
 

@@ -6,14 +6,8 @@ using System;
 
 namespace DulcisX.Components.Events
 {
-    internal class SolutionEventsX : ISolutionEventsX, IVsSolutionEvents
+    internal class SolutionEventsX : EventCookieX, ISolutionEventsX, IVsSolutionEvents
     {
-        private uint _cookieUID;
-        private readonly SolutionX _solution;
-
-        private SolutionEventsX(SolutionX solution)
-            => _solution = solution;
-
         public event Action<ProjectX, bool> OnAfterProjectOpen;
 
         public event QueryProjectClose OnQueryProjectClose;
@@ -33,6 +27,11 @@ namespace DulcisX.Components.Events
         public event Action OnBeforeSolutionClose;
 
         public event Action OnAfterSolutionClose;
+
+        private readonly SolutionX _solution;
+
+        private SolutionEventsX(SolutionX solution)
+            => _solution = solution;
 
         public int OnAfterOpenProject(IVsHierarchy pHierarchy, int fAdded)
         {
@@ -113,7 +112,7 @@ namespace DulcisX.Components.Events
         internal void Destroy(SolutionX solution)
         {
             ThreadHelper.ThrowIfNotOnUIThread();
-            var result = solution.UnderlyingSolution.UnadviseSolutionEvents(_cookieUID);
+            var result = solution.UnderlyingSolution.UnadviseSolutionEvents(CookieUID);
             VsHelper.ValidateVSStatusCode(result);
         }
 
@@ -127,7 +126,7 @@ namespace DulcisX.Components.Events
 
             VsHelper.ValidateVSStatusCode(result);
 
-            solutionEvents._cookieUID = cookieUID;
+            solutionEvents.CookieUID = cookieUID;
 
             return solutionEvents;
         }

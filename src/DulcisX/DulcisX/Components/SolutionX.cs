@@ -25,8 +25,7 @@ namespace DulcisX.Components
         {
             get
             {
-                if (IsDisposed)
-                    throw new ObjectDisposedException(nameof(SolutionX));
+                ThrowIfDisposed();
 
                 if (_events is null)
                 {
@@ -43,8 +42,7 @@ namespace DulcisX.Components
         {
             get
             {
-                if (IsDisposed)
-                    throw new ObjectDisposedException(nameof(SolutionX));
+                ThrowIfDisposed();
 
                 if (_buildEvents is null)
                 {
@@ -54,6 +52,24 @@ namespace DulcisX.Components
                 return _buildEvents;
             }
         }
+
+        private IRunningDocTableEventsX _documentEvents;
+
+        public IRunningDocTableEventsX DocumentEvents
+        {
+            get
+            {
+                ThrowIfDisposed();
+
+                if (_buildEvents is null)
+                {
+                    _documentEvents = RunningDocTableEventsX.Create(this);
+                }
+
+                return _documentEvents;
+            }
+        }
+
 
         internal IServiceProviders ServiceProviders { get; }
 
@@ -108,6 +124,7 @@ namespace DulcisX.Components
                 {
                     ((SolutionEventsX)SolutionEvents).Destroy(this);
                     ((SolutionBuildEventsX)SolutionBuidEvents).Destroy();
+                    ((RunningDocTableEventsX)DocumentEvents).Destroy();
                 }
 
                 IsDisposed = true;
@@ -117,6 +134,12 @@ namespace DulcisX.Components
         public void Dispose()
         {
             Dispose(true);
+        }
+
+        private void ThrowIfDisposed()
+        {
+            if (IsDisposed)
+                throw new ObjectDisposedException(nameof(SolutionX));
         }
     }
 }

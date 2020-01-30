@@ -530,13 +530,17 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Components\BaseProjectItemX.cs" />
+    <Compile Include="Components\Events\EventCookie.cs" />
     <Compile Include="Components\Events\Interfaces\ISolutionBuildEventsX.cs" />
     <Compile Include="Components\Events\Interfaces\ISoulutionEventsX.cs" />
+    <Compile Include="Components\Events\Interfaces\RunningDocTableEventsX.cs" />
+    <Compile Include="Components\Events\RunningDocTableEventsX.cs" />
     <Compile Include="Components\Events\SolutionBuildEventsX.cs" />
     <Compile Include="Components\Events\SoulutionEventsX.cs" />
     <Compile Include="Components\ProjectX.cs" />
     <Compile Include="Components\SolutionX.cs" />
     <Compile Include="Core\Extensions\ServiceProvidersExtensions.cs" />
+    <Compile Include="Core\Models\DocumentStateX.cs" />
     <Compile Include="Core\Models\Enums\HierarchyItem.cs" />
     <Compile Include="Core\Models\Enums\PropertyType.cs" />
     <Compile Include="Core\Models\Interfaces\IServiceProviders.cs" />
