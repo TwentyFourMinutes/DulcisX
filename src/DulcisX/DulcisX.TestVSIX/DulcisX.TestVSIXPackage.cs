@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 using System.Runtime.InteropServices;
 using System.Threading;
 using DulcisX.Core;
@@ -31,12 +32,12 @@ namespace DulcisX.TestVSIX
 
             await ThreadHelper.JoinableTaskFactory.SwitchToMainThreadAsync(arg2);
 
-            Solution.DocumentEvents.OnDocumentWindowShow += DocumentEvents_OnDocumentWindowShow;            
+            Solution.SolutionBuidEvents.OnAfterSolutionBuild += SolutionBuidEvents_OnAfterSolutionBuild;           
         }
 
-        private void DocumentEvents_OnDocumentWindowShow(uint arg1, bool arg2, IVsWindowFrame arg3)
+        private void SolutionBuidEvents_OnAfterSolutionBuild(bool arg1, bool arg2, bool arg3)
         {
-            
+            var items = Solution.SelectedHierarchyItems.ToList();
         }
 
         #endregion

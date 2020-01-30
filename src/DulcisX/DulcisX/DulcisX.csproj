@@ -545,6 +545,8 @@
     <Compile Include="Core\Models\Enums\PropertyType.cs" />
     <Compile Include="Core\Models\Interfaces\IServiceProviders.cs" />
     <Compile Include="Core\Models\PropertiesX.cs" />
+    <Compile Include="Core\Models\SelectedItemX.cs" />
+    <Compile Include="Core\Models\SelectedHierarchyItemsX.cs" />
     <Compile Include="Core\PackageX.cs" />
     <Compile Include="Exceptions\InvalidVSStatusCodeException.cs" />
     <Compile Include="Helpers\VSHelper.cs" />

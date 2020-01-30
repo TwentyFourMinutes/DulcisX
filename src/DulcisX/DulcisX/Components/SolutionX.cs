@@ -17,7 +17,11 @@ namespace DulcisX.Components
 
         public IVsSolution UnderlyingSolution { get; }
 
+        public SelectedHierarchyItemsX SelectedHierarchyItems { get; }
+
         public IEnumerable<ProjectX> Projects => this;
+
+        #region Events
 
         private ISolutionEventsX _events;
 
@@ -70,11 +74,12 @@ namespace DulcisX.Components
             }
         }
 
+        #endregion
 
         internal IServiceProviders ServiceProviders { get; }
 
         internal SolutionX(IVsSolution solution, IServiceProviders providers) : base(new PropertiesX(solution))
-            => (UnderlyingSolution, ServiceProviders) = (solution, providers);
+            => (UnderlyingSolution, ServiceProviders, SelectedHierarchyItems) = (solution, providers, new SelectedHierarchyItemsX(this));
 
         public ProjectX GetProject(Guid projectGuid)
              => Projects.FirstOrDefault(x => x.UnderlyingGuid == projectGuid);
