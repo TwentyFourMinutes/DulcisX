@@ -2,10 +2,9 @@
 
 namespace DulcisX.Core.Models.Enums
 {
-    public enum HierarchyItem : uint
+    public enum HierarchyItem : byte
     {
-        Project = 4294967294,
-        Solution = 4294967294,
-        RootItem = 4294967294
+        Solution = 1,
+        Project = 2,
     }
 }

@@ -2,6 +2,7 @@
 using System.Runtime.InteropServices;
 using System.Threading;
 using DulcisX.Core;
+using DulcisX.Core.Models.Enums;
 using Microsoft.VisualStudio;
 using Microsoft.VisualStudio.Shell;
 using Microsoft.VisualStudio.Shell.Interop;
@@ -14,26 +15,24 @@ namespace DulcisX.TestVSIX
     [ProvideAutoLoad(VSConstants.UICONTEXT.SolutionExists_string, PackageAutoLoadFlags.BackgroundLoad)]
     public sealed class DulcisXTestVSIXPackage : PackageX
     {
-        /// <summary>
-        /// DulcisX.TestVSIXPackage GUID string.
-        /// </summary>
         public const string PackageGuidString = "a7c50965-01fc-4668-9b93-c14bad2dbe25";
 
         #region Package Members
 
         public DulcisXTestVSIXPackage()
         {
-            base.OnInitializeAsync += OnInitializeAsync;
+            base.OnInitializeAsync += OnInitAsync;
         }
         public IVsSolutionBuildManager MyProperty { get; set; }
-        private new async Task OnInitializeAsync(CancellationToken arg2, IProgress<ServiceProgressData> arg1)
+        private async Task OnInitAsync(CancellationToken arg2, IProgress<ServiceProgressData> arg1)
         {
-            await JoinableTaskFactory.SwitchToMainThreadAsync(arg2);
 
-            var yeet = Solution.SolutionBuidEvents;
+            await ThreadHelper.JoinableTaskFactory.SwitchToMainThreadAsync(arg2);
+
+            var yeet = Solution.Properties[PropertyType.FullName];
+
+
         }
-
-       
 
         #endregion
     }

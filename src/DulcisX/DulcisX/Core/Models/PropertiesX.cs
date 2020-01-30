@@ -1,6 +1,7 @@
 ﻿using DulcisX.Core.Models.Enums;
 using DulcisX.Helpers;
 using Microsoft.VisualStudio;
+using Microsoft.VisualStudio.Shell;
 using Microsoft.VisualStudio.Shell.Interop;
 using System;
 using System.Collections.Generic;
@@ -16,8 +17,16 @@ namespace DulcisX.Core.Models
 
         private readonly HierarchyItem _hierarchyItem;
 
-        internal PropertiesX(IVsHierarchy vsHierarchy, HierarchyItem hierarchyItem = HierarchyItem.RootItem)
-            => (_propertyCache, _vsHierarchy, _hierarchyItem) = (new Dictionary<PropertyType, string>(), vsHierarchy, hierarchyItem);
+        private readonly IVsSolution _solution;
+
+        private PropertiesX(HierarchyItem hierarchyItem)
+                => _hierarchyItem = hierarchyItem;
+
+        internal PropertiesX(IVsHierarchy vsHierarchy, HierarchyItem hierarchyItem) : this(hierarchyItem)
+            => (_propertyCache, _vsHierarchy) = (new Dictionary<PropertyType, string>(), vsHierarchy);
+
+        internal PropertiesX(IVsSolution solution) : this(HierarchyItem.Solution)
+         => (_propertyCache, _solution) = (new Dictionary<PropertyType, string>(), solution);
 
         public string this[PropertyType type, bool forceRefresh = false]
         {
@@ -27,32 +36,49 @@ namespace DulcisX.Core.Models
                 {
                     return _propertyCache[type];
                 }
-                else if (forceRefresh)
-                {
-                    var prop = GetProperty(type);
-
-                    _propertyCache[type] = prop;
-
-                    return prop;
-                }
                 else
                 {
-                    throw new KeyNotFoundException();
+                    switch (_hierarchyItem)
+                    {
+                        case HierarchyItem.Solution:
+                            var (_, fileName, _) = GetSolutionProperties();
+
+                            _propertyCache[PropertyType.FullName] = fileName;
+                            break;
+                        case HierarchyItem.Project:
+                            var prop = GetProperty(type);
+
+                            _propertyCache[type] = prop;
+                            break;
+                    }
+
+                    return _propertyCache[type];
                 }
             }
         }
 
         private string GetProperty(PropertyType type)
         {
-            Microsoft.VisualStudio.Shell.ThreadHelper.ThrowIfNotOnUIThread();
+            ThreadHelper.ThrowIfNotOnUIThread();
 
             var propId = (int)type;
 
-            var result = _vsHierarchy.GetProperty((uint)_hierarchyItem, propId, out object property);
+            var result = _vsHierarchy.GetProperty((uint)VSConstants.VSITEMID.Root, propId, out var tempProp);
 
             VsHelper.ValidateVSStatusCode(result);
 
-            return property.ToString();
+            return tempProp.ToString();
+        }
+
+        private (string dir, string fileName, string optionsPath) GetSolutionProperties()
+        {
+            ThreadHelper.ThrowIfNotOnUIThread();
+
+            var result = _solution.GetSolutionInfo(out var dir, out var fileName, out var optionsPath);
+
+            VsHelper.ValidateVSStatusCode(result);
+
+            return (dir, fileName, optionsPath);
         }
     }
 }

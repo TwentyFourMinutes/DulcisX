@@ -1,4 +1,6 @@
-﻿using DulcisX.Helpers;
+﻿using DulcisX.Core.Models;
+using DulcisX.Core.Models.Enums;
+using DulcisX.Helpers;
 using Microsoft.VisualStudio.Shell.Interop;
 using System;
 
@@ -28,7 +30,7 @@ namespace DulcisX.Components
 
         public SolutionX Solution { get; }
 
-        public ProjectX(IVsHierarchy hierarchy, SolutionX solution)
+        public ProjectX(IVsHierarchy hierarchy, SolutionX solution) : base(new PropertiesX(hierarchy, HierarchyItem.Project))
             => (UnderlyingHierarchy, Solution) = (hierarchy, solution);
     }
 }
