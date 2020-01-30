@@ -10,7 +10,7 @@ using Task = System.Threading.Tasks.Task;
 
 namespace DulcisX.Core
 {
-    public class PackageX : AsyncPackage, IServiceProviders
+    public abstract class PackageX : AsyncPackage, IServiceProviders
     {
         #region DTE
 
