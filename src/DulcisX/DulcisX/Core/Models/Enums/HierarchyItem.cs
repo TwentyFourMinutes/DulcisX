@@ -1,6 +1,4 @@
-﻿using System.Threading.Tasks;
-
-namespace DulcisX.Core.Models.Enums
+﻿namespace DulcisX.Core.Models.Enums
 {
     public enum HierarchyItem : byte
     {

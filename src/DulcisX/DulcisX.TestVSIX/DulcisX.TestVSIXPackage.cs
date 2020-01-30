@@ -23,7 +23,9 @@ namespace DulcisX.TestVSIX
         {
             base.OnInitializeAsync += OnInitAsync;
         }
+
         public IVsSolutionBuildManager MyProperty { get; set; }
+
         private async Task OnInitAsync(CancellationToken arg2, IProgress<ServiceProgressData> arg1)
         {
 
@@ -31,7 +33,7 @@ namespace DulcisX.TestVSIX
 
             var yeet = Solution.Properties[PropertyType.FullName];
 
-
+            
         }
 
         #endregion

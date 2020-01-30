@@ -22,6 +22,7 @@ namespace DulcisX.Components
 
                     VsHelper.ValidateVSStatusCode(result);
                 }
+
                 return _underlyingGuid;
             }
         }
