@@ -1,12 +1,13 @@
 ﻿using DulcisX.Core.Models;
 using DulcisX.Core.Models.Enums;
 using DulcisX.Helpers;
+using Microsoft.VisualStudio;
 using Microsoft.VisualStudio.Shell.Interop;
 using System;
 
 namespace DulcisX.Components
 {
-    public class ProjectX : BaseProjectItemX
+    public class ProjectX : BaseSolutionItemX
     {
         private Guid _underlyingGuid = Guid.Empty;
 
@@ -28,6 +29,15 @@ namespace DulcisX.Components
         }
 
         public IVsHierarchy UnderlyingHierarchy { get; }
+
+        //public string HierarchyItems
+        //{
+        //    get
+        //    {
+        //        VSConstants.VSITEMID
+        //        UnderlyingHierarchy.
+        //    }
+        //}
 
         public SolutionX Solution { get; }
 

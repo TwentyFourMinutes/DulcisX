@@ -11,7 +11,7 @@ using System.Linq;
 
 namespace DulcisX.Components
 {
-    public class SolutionX : BaseProjectItemX, IEnumerable<ProjectX>, IDisposable
+    public class SolutionX : BaseSolutionItemX, IEnumerable<ProjectX>, IDisposable
     {
         public bool IsDisposed { get; private set; }
 

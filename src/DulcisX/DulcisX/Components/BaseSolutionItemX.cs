@@ -3,11 +3,11 @@ using DulcisX.Core.Models;
 
 namespace DulcisX.Components
 {
-    public abstract class BaseProjectItemX
+    public abstract class BaseSolutionItemX
     {
         public PropertiesX Properties { get; }
 
-        protected BaseProjectItemX(PropertiesX properties)
+        protected BaseSolutionItemX(PropertiesX properties)
             => Properties = properties;
     }
 }
