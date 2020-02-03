@@ -21,7 +21,7 @@ namespace DulcisX.Components
 
         public HierarchyItemTypeX ItemType { get; }
 
-        protected HierarchyItemX(IVsHierarchy parentHierarchy, HierarchyItemX parentItem, uint itemId, HierarchyItemTypeX itemType) : base(parentHierarchy, itemId)
+        protected HierarchyItemX(IVsHierarchy underlyingHierarchy, HierarchyItemX parentItem, uint itemId, HierarchyItemTypeX itemType) : base(underlyingHierarchy, itemId)
             => (ParentItem, ItemType) = (parentItem, itemType);
 
         public SolutionX AsSolution()
@@ -52,7 +52,7 @@ namespace DulcisX.Components
 
             ThreadHelper.ThrowIfNotOnUIThread();
 
-            var node = ParentHierarchy.GetProperty(ItemId, (int)__VSHPROPID.VSHPROPID_FirstVisibleChild);
+            var node = UnderlyingHierarchy.GetProperty(ItemId, (int)__VSHPROPID.VSHPROPID_FirstVisibleChild);
 
             do
             {
@@ -64,7 +64,7 @@ namespace DulcisX.Components
                 if (ItemType == HierarchyItemTypeX.Solution ||
                     ItemType == HierarchyItemTypeX.VirtualFolder)
                 {
-                    if (ParentHierarchy.TryGetNestedHierarchy(node, out var hierarchy))
+                    if (UnderlyingHierarchy.TryGetNestedHierarchy(node, out var hierarchy))
                     {
                         var type = hierarchy.IsProject(VSConstants.VSITEMID_ROOT) ? HierarchyItemTypeX.Project : HierarchyItemTypeX.VirtualFolder;
 
@@ -73,12 +73,12 @@ namespace DulcisX.Components
                 }
                 else
                 {
-                    var isFolder = ParentHierarchy.IsFolder(node);
+                    var isFolder = UnderlyingHierarchy.IsFolder(node);
 
-                    yield return new HierarchyItemX(ParentHierarchy, this, node, isFolder ? HierarchyItemTypeX.Folder : HierarchyItemTypeX.Document);
+                    yield return new HierarchyItemX(UnderlyingHierarchy, this, node, isFolder ? HierarchyItemTypeX.Folder : HierarchyItemTypeX.Document);
                 }
 
-                node = ParentHierarchy.GetProperty(node, (int)__VSHPROPID.VSHPROPID_NextVisibleSibling);
+                node = UnderlyingHierarchy.GetProperty(node, (int)__VSHPROPID.VSHPROPID_NextVisibleSibling);
             }
             while (true);
         }

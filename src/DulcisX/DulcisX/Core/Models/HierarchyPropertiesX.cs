@@ -13,17 +13,17 @@ namespace DulcisX.Core.Models
             set => SetProperty((int)__VSHPROPID.VSHPROPID_Name, value);
         }
 
-        public IVsHierarchy ParentHierarchy { get; }
+        public IVsHierarchy UnderlyingHierarchy { get; }
 
         public uint ItemId { get; }
 
-        protected HierarchyPropertiesX(IVsHierarchy parentHierarchy, uint itemId)
-            => (ParentHierarchy, ItemId) = (parentHierarchy, itemId);
+        protected HierarchyPropertiesX(IVsHierarchy underlyingHierarchy, uint itemId)
+            => (UnderlyingHierarchy, ItemId) = (underlyingHierarchy, itemId);
 
         protected TType GetProperty<TType>(int propId)
-            => ParentHierarchy.GetProperty<TType>(ItemId, propId);
+            => UnderlyingHierarchy.GetProperty<TType>(ItemId, propId);
 
         protected void SetProperty(int propId, object val)
-            => ParentHierarchy.SetProperty(ItemId, propId, val: val);
+            => UnderlyingHierarchy.SetProperty(ItemId, propId, val: val);
     }
 }

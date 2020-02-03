@@ -34,11 +34,9 @@ namespace DulcisX.Components
             set => SetProperty((int)__VSHPROPID5.VSHPROPID_OutputType, (uint)(int)value);
         }
 
-        public IVsHierarchy UnderlyingHierarchy { get; }
-
         public SolutionX Solution { get; }
 
         public ProjectX(IVsHierarchy hierarchy, uint itemId, SolutionX solution) : base(hierarchy, solution, itemId, HierarchyItemTypeX.Project)
-            => (UnderlyingHierarchy, Solution) = (hierarchy, solution);
+            => Solution = solution;
     }
 }

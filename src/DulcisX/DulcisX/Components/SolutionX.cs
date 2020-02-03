@@ -84,7 +84,10 @@ namespace DulcisX.Components
             => (UnderlyingSolution, ServiceProviders, SelectedHierarchyItems) = (solution, providers, new SelectedHierarchyItemsX(this));
 
         public ProjectX GetProject(Guid projectGuid)
-             => Projects.FirstOrDefault(x => x.UnderlyingGuid == projectGuid);
+        {
+            ThreadHelper.ThrowIfNotOnUIThread();
+            return Projects.FirstOrDefault(x => x.UnderlyingGuid == projectGuid);
+        }
 
         public ProjectX GetProject(IVsHierarchy hierarchy)
         {
@@ -103,7 +106,7 @@ namespace DulcisX.Components
             var tempGuid = Guid.Empty;
 
             var result = UnderlyingSolution.GetProjectEnum((uint)__VSENUMPROJFLAGS.EPF_LOADEDINSOLUTION, ref tempGuid, out var projectEnumerator);
-            
+
             VsHelper.ValidateVSStatusCode(result);
             var hierarchy = new IVsHierarchy[1];
 
