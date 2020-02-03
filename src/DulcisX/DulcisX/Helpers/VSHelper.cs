@@ -1,4 +1,5 @@
-﻿using DulcisX.Exceptions;
+﻿using DulcisX.Core.Models.Enums;
+using DulcisX.Exceptions;
 using Microsoft.VisualStudio;
 
 namespace DulcisX.Helpers
@@ -7,9 +8,26 @@ namespace DulcisX.Helpers
     {
         public static void ValidateVSStatusCode(int statusCode)
         {
-            if (statusCode != VSConstants.S_OK)
+            if (!HasSuccessCode(statusCode))
             {
                 throw new InvalidVSStatusCodeException(statusCode);
+            }
+        }
+
+        public static bool HasSuccessCode(int statusCode)
+            => statusCode == VSConstants.S_OK;
+
+        public static bool IsNil(uint statusCode)
+            => statusCode == VSConstants.VSITEMID_NIL;
+
+        public static bool HasFailed(int statusCode)
+            => statusCode == VSConstants.E_FAIL;
+
+        public static void ValidateHierarchyType(HierarchyItemTypeX actual, HierarchyItemTypeX expected)
+        {
+            if (actual != expected)
+            {
+                throw new InvalidHierarchyTypeException($"Expected {expected}, but is actually {actual}.");
             }
         }
     }
