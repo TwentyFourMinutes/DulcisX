@@ -36,17 +36,17 @@ namespace DulcisX.Core.Models
 
             var result = MonitorSelection.GetCurrentSelection(out _, out var itemId, out var selection, out _);
   
-            VsHelper.ValidateVSStatusCode(result);
+            VsHelper.ValidateSuccessStatusCode(result);
 
             result = selection.GetSelectionInfo(out var selectionCount, out var areAcrossHirarchies);
 
-            VsHelper.ValidateVSStatusCode(result);
+            VsHelper.ValidateSuccessStatusCode(result);
 
             var itemSelection = new VSITEMSELECTION[selectionCount];
 
             result = selection.GetSelectedItems(0u, selectionCount, itemSelection);
 
-            VsHelper.ValidateVSStatusCode(result);
+            VsHelper.ValidateSuccessStatusCode(result);
 
             for (int i = 0; i < itemSelection.Length; i++)
             {

@@ -21,7 +21,7 @@ namespace DulcisX.Components
 
                     var result = Solution.UnderlyingSolution.GetGuidOfProject(UnderlyingHierarchy, out _underlyingGuid);
 
-                    VsHelper.ValidateVSStatusCode(result);
+                    VsHelper.ValidateSuccessStatusCode(result);
                 }
 
                 return _underlyingGuid;

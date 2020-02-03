@@ -49,7 +49,7 @@ namespace DulcisX.Core.Extensions
 
             var result = hierarchy.GetProperty(itemId, propId, out var val);
 
-            VsHelper.ValidateVSStatusCode(result);
+            VsHelper.ValidateSuccessStatusCode(result);
 
             return (uint)Convert.ToInt32(val);
         }
@@ -60,7 +60,7 @@ namespace DulcisX.Core.Extensions
 
             var result = hierarchy.GetProperty(itemId, propId, out var val);
 
-            VsHelper.ValidateVSStatusCode(result);
+            VsHelper.ValidateSuccessStatusCode(result);
 
             return (TType)val;
         }
@@ -71,7 +71,7 @@ namespace DulcisX.Core.Extensions
 
             var result = hierarchy.GetProperty(itemId, propId, out var val);
 
-            VsHelper.ValidateVSStatusCode(result);
+            VsHelper.ValidateSuccessStatusCode(result);
 
             return val;
         }
@@ -108,7 +108,7 @@ namespace DulcisX.Core.Extensions
 
             var result = hierarchy.SetProperty(itemId, propId, val);
 
-            VsHelper.ValidateVSStatusCode(result);
+            VsHelper.ValidateSuccessStatusCode(result);
         }
     }
 }

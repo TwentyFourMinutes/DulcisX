@@ -94,7 +94,7 @@ namespace DulcisX.Components
             ThreadHelper.ThrowIfNotOnUIThread();
 
             var result = UnderlyingSolution.GetGuidOfProject(hierarchy, out var projectGuid);
-            VsHelper.ValidateVSStatusCode(result);
+            VsHelper.ValidateSuccessStatusCode(result);
 
             return GetProject(projectGuid);
         }
@@ -107,7 +107,7 @@ namespace DulcisX.Components
 
             var result = UnderlyingSolution.GetProjectEnum((uint)__VSENUMPROJFLAGS.EPF_LOADEDINSOLUTION, ref tempGuid, out var projectEnumerator);
 
-            VsHelper.ValidateVSStatusCode(result);
+            VsHelper.ValidateSuccessStatusCode(result);
             var hierarchy = new IVsHierarchy[1];
 
             while (true)
@@ -117,7 +117,7 @@ namespace DulcisX.Components
                 if (success == 0)
                     break;
 
-                VsHelper.ValidateVSStatusCode(result);
+                VsHelper.ValidateSuccessStatusCode(result);
 
                 yield return new ProjectX(hierarchy[0], VSConstants.VSITEMID_ROOT, this);
             }

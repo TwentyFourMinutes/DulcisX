@@ -66,7 +66,7 @@ namespace DulcisX.Components.Events
         {
             ThreadHelper.ThrowIfNotOnUIThread();
             var result = _buildManager.UnadviseUpdateSolutionEvents(CookieUID);
-            VsHelper.ValidateVSStatusCode(result);
+            VsHelper.ValidateSuccessStatusCode(result);
         }
 
         internal static ISolutionBuildEventsX Create(SolutionX solution)
@@ -79,7 +79,7 @@ namespace DulcisX.Components.Events
 
             var result = manager.AdviseUpdateSolutionEvents(solutionBuildEvents, out var cookieUID);
 
-            VsHelper.ValidateVSStatusCode(result);
+            VsHelper.ValidateSuccessStatusCode(result);
 
             solutionBuildEvents.CookieUID = cookieUID;
 

@@ -83,7 +83,7 @@ namespace DulcisX.Components.Events
         {
             ThreadHelper.ThrowIfNotOnUIThread();
             var result = _rdt.UnadviseRunningDocTableEvents(CookieUID);
-            VsHelper.ValidateVSStatusCode(result);
+            VsHelper.ValidateSuccessStatusCode(result);
         }
 
         internal static IRunningDocTableEventsX Create(SolutionX solution)
@@ -96,7 +96,7 @@ namespace DulcisX.Components.Events
 
             var result = rdt.AdviseRunningDocTableEvents(rdtEvents, out var cookieUID);
 
-            VsHelper.ValidateVSStatusCode(result);
+            VsHelper.ValidateSuccessStatusCode(result);
 
             rdtEvents.CookieUID = cookieUID;
 

@@ -6,7 +6,7 @@ namespace DulcisX.Helpers
 {
     public static class VsHelper
     {
-        public static void ValidateVSStatusCode(int statusCode)
+        public static void ValidateSuccessStatusCode(int statusCode)
         {
             if (!HasSuccessCode(statusCode))
             {
