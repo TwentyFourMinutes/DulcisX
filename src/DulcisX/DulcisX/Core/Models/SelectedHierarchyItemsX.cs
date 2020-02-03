@@ -1,15 +1,10 @@
 ﻿using DulcisX.Components;
 using Microsoft.VisualStudio.Shell.Interop;
-using System;
 using System.Collections;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using DulcisX.Core.Extensions;
 using Microsoft.VisualStudio.Shell;
 using DulcisX.Helpers;
-using static Microsoft.VisualStudio.VSConstants;
 
 namespace DulcisX.Core.Models
 {
