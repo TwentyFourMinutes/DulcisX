@@ -11,6 +11,11 @@ namespace DulcisX.Components
             set => SetProperty((int)__VSHPROPID4.VSHPROPID_BuildAction, value);
         }
 
+        internal DocumentX(IVsHierarchy hierarchy, uint itemId) : base(hierarchy, itemId, HierarchyItemTypeX.Document)
+        {
+
+        }
+
         internal DocumentX(IVsHierarchy hierarchy, HierarchyItemX parentItem, uint itemId) : base(hierarchy, parentItem, itemId, HierarchyItemTypeX.Document)
         {
 

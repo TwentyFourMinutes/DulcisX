@@ -1,5 +1,6 @@
 ﻿using DulcisX.Core.Models;
 using DulcisX.Helpers;
+using DulcisX.Core.Extensions;
 using Microsoft.VisualStudio;
 using Microsoft.VisualStudio.Shell;
 using Microsoft.VisualStudio.Shell.Interop;
@@ -9,13 +10,13 @@ namespace DulcisX.Components.Events
 {
     internal class RunningDocTableEventsX : EventCookieX, IRunningDocTableEventsX, IVsRunningDocTableEvents3
     {
-        public event Action<uint, _VSRDTFLAGS, uint, uint> OnDocumentLocked;
-        public event Action<uint, _VSRDTFLAGS, uint, uint> OnDocumentUnlocked;
-        public event Action<uint> OnSaved;
-        public event Action<uint, bool, IVsWindowFrame> OnDocumentWindowShow;
-        public event Action<uint, IVsWindowFrame> OnDocumentWindowHidden;
-        public event Action<uint, __VSRDTATTRIB, DocumentStateX, DocumentStateX> OnAttributeChanged;
-        public event Action<uint> OnSave;
+        public event Action<DocumentX, _VSRDTFLAGS, uint, uint> OnDocumentLocked;
+        public event Action<DocumentX, _VSRDTFLAGS, uint, uint> OnDocumentUnlocked;
+        public event Action<DocumentX> OnSaved;
+        public event Action<DocumentX, bool, IVsWindowFrame> OnDocumentWindowShow;
+        public event Action<DocumentX, IVsWindowFrame> OnDocumentWindowHidden;
+        public event Action<DocumentX, __VSRDTATTRIB, DocumentStateX, DocumentStateX> OnAttributeChanged;
+        public event Action<DocumentX> OnSave;
 
         private readonly IVsRunningDocumentTable _rdt;
 
@@ -24,19 +25,19 @@ namespace DulcisX.Components.Events
 
         public int OnAfterFirstDocumentLock(uint docCookie, uint dwRDTLockType, uint dwReadLocksRemaining, uint dwEditLocksRemaining)
         {
-            OnDocumentLocked?.Invoke(docCookie, (_VSRDTFLAGS)dwRDTLockType, dwReadLocksRemaining, dwEditLocksRemaining);
+            OnDocumentLocked?.Invoke(_rdt.GetDocument(docCookie), (_VSRDTFLAGS)dwRDTLockType, dwReadLocksRemaining, dwEditLocksRemaining);
             return VSConstants.S_OK;
         }
 
         public int OnBeforeLastDocumentUnlock(uint docCookie, uint dwRDTLockType, uint dwReadLocksRemaining, uint dwEditLocksRemaining)
         {
-            OnDocumentUnlocked?.Invoke(docCookie, (_VSRDTFLAGS)dwRDTLockType, dwReadLocksRemaining, dwEditLocksRemaining);
+            OnDocumentUnlocked?.Invoke(_rdt.GetDocument(docCookie), (_VSRDTFLAGS)dwRDTLockType, dwReadLocksRemaining, dwEditLocksRemaining);
             return VSConstants.S_OK;
         }
 
         public int OnAfterSave(uint docCookie)
         {
-            OnSaved?.Invoke(docCookie);
+            OnSaved?.Invoke(_rdt.GetDocument(docCookie));
             return VSConstants.S_OK;
         }
 
@@ -45,19 +46,19 @@ namespace DulcisX.Components.Events
 
         public int OnBeforeDocumentWindowShow(uint docCookie, int fFirstShow, IVsWindowFrame pFrame)
         {
-            OnDocumentWindowShow?.Invoke(docCookie, fFirstShow != 0, pFrame);
+            OnDocumentWindowShow?.Invoke(_rdt.GetDocument(docCookie), fFirstShow != 0, pFrame);
             return VSConstants.S_OK;
         }
 
         public int OnAfterDocumentWindowHide(uint docCookie, IVsWindowFrame pFrame)
         {
-            OnDocumentWindowHidden?.Invoke(docCookie, pFrame);
+            OnDocumentWindowHidden?.Invoke(_rdt.GetDocument(docCookie), pFrame);
             return VSConstants.S_OK;
         }
 
         public int OnAfterAttributeChangeEx(uint docCookie, uint grfAttribs, IVsHierarchy pHierOld, uint itemidOld, string pszMkDocumentOld, IVsHierarchy pHierNew, uint itemidNew, string pszMkDocumentNew)
         {
-            OnAttributeChanged?.Invoke(docCookie, (__VSRDTATTRIB)grfAttribs,
+            OnAttributeChanged?.Invoke(_rdt.GetDocument(docCookie), (__VSRDTATTRIB)grfAttribs,
             new DocumentStateX
             {
                 Hierarchy = pHierOld,
@@ -75,7 +76,7 @@ namespace DulcisX.Components.Events
 
         public int OnBeforeSave(uint docCookie)
         {
-            OnSave?.Invoke(docCookie);
+            OnSave?.Invoke(_rdt.GetDocument(docCookie));
             return VSConstants.S_OK;
         }
 
