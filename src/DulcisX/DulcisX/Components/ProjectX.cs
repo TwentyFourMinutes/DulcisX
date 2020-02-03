@@ -1,7 +1,7 @@
-using DulcisX.Core.Models;
+﻿using DulcisX.Core.Extensions;
 using DulcisX.Core.Models.Enums;
 using DulcisX.Helpers;
-using Microsoft.VisualStudio;
+using Microsoft.VisualStudio.Shell;
 using Microsoft.VisualStudio.Shell.Interop;
 using System;
 
@@ -17,7 +17,7 @@ namespace DulcisX.Components
             {
                 if (_underlyingGuid == Guid.Empty)
                 {
-                    Microsoft.VisualStudio.Shell.ThreadHelper.ThrowIfNotOnUIThread();
+                    ThreadHelper.ThrowIfNotOnUIThread();
 
                     var result = Solution.UnderlyingSolution.GetGuidOfProject(UnderlyingHierarchy, out _underlyingGuid);
 
@@ -28,16 +28,13 @@ namespace DulcisX.Components
             }
         }
 
-        public IVsHierarchy UnderlyingHierarchy { get; }
+        public __VSPROJOUTPUTTYPE OutputType
+        {
+            get => (__VSPROJOUTPUTTYPE)Convert.ToInt32(UnderlyingHierarchy.GetPropertyObject(ItemId, (int)__VSHPROPID5.VSHPROPID_OutputType));
+            set => SetProperty((int)__VSHPROPID5.VSHPROPID_OutputType, (uint)(int)value);
+        }
 
-        //public string HierarchyItems
-        //{
-        //    get
-        //    {
-        //        VSConstants.VSITEMID
-        //        UnderlyingHierarchy.
-        //    }
-        //}
+        public IVsHierarchy UnderlyingHierarchy { get; }
 
         public SolutionX Solution { get; }
 
