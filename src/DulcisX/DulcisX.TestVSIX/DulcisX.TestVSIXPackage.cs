@@ -2,11 +2,10 @@
 using System.Linq;
 using System.Runtime.InteropServices;
 using System.Threading;
+using DulcisX.Components;
 using DulcisX.Core;
-using DulcisX.Core.Models.Enums;
 using Microsoft.VisualStudio;
 using Microsoft.VisualStudio.Shell;
-using Microsoft.VisualStudio.Shell.Interop;
 using Task = System.Threading.Tasks.Task;
 
 namespace DulcisX.TestVSIX
@@ -25,21 +24,20 @@ namespace DulcisX.TestVSIX
             base.OnInitializeAsync += OnInitAsync;
         }
 
-        public IVsSolutionBuildManager MyProperty { get; set; }
-
         private async Task OnInitAsync(CancellationToken arg2, IProgress<ServiceProgressData> arg1)
         {
-
             await ThreadHelper.JoinableTaskFactory.SwitchToMainThreadAsync(arg2);
 
-            Solution.SolutionBuidEvents.OnAfterSolutionBuild += SolutionBuidEvents_OnAfterSolutionBuild;           
-        }
+            HierarchyItemX solution = Solution;
 
-        private void SolutionBuidEvents_OnAfterSolutionBuild(bool arg1, bool arg2, bool arg3)
-        {
-            var items = Solution.SelectedHierarchyItems.ToList();
-        }
+            foreach (HierarchyItemX solutionItem in solution)
+            {
+                foreach (HierarchyItemX item in solutionItem)
+                {
 
+                }
+            }
+        }
         #endregion
     }
 }

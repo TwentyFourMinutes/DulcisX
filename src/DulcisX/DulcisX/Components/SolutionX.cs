@@ -1,7 +1,9 @@
-using DulcisX.Components.Events;
+﻿using DulcisX.Components.Events;
 using DulcisX.Core.Models;
+using DulcisX.Core.Models.Enums;
 using DulcisX.Core.Models.Interfaces;
 using DulcisX.Helpers;
+using Microsoft.VisualStudio;
 using Microsoft.VisualStudio.Shell;
 using Microsoft.VisualStudio.Shell.Interop;
 using System;
@@ -94,14 +96,14 @@ namespace DulcisX.Components
             return GetProject(projectGuid);
         }
 
-        public IEnumerator<ProjectX> GetEnumerator()
+        public new IEnumerator<ProjectX> GetEnumerator()
         {
             ThreadHelper.ThrowIfNotOnUIThread();
 
             var tempGuid = Guid.Empty;
 
             var result = UnderlyingSolution.GetProjectEnum((uint)__VSENUMPROJFLAGS.EPF_LOADEDINSOLUTION, ref tempGuid, out var projectEnumerator);
-
+            
             VsHelper.ValidateVSStatusCode(result);
             var hierarchy = new IVsHierarchy[1];
 
@@ -119,7 +121,7 @@ namespace DulcisX.Components
         }
 
         IEnumerator IEnumerable.GetEnumerator()
-            => GetEnumerator();
+            => this.GetEnumerator();
 
         protected virtual void Dispose(bool disposing)
         {
