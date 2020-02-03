@@ -1,4 +1,4 @@
-﻿using DulcisX.Components.Events;
+using DulcisX.Components.Events;
 using DulcisX.Core.Models;
 using DulcisX.Core.Models.Interfaces;
 using DulcisX.Helpers;
@@ -11,7 +11,7 @@ using System.Linq;
 
 namespace DulcisX.Components
 {
-    public class SolutionX : BaseSolutionItemX, IEnumerable<ProjectX>, IDisposable
+    public class SolutionX : HierarchyItemX, IEnumerable<ProjectX>, IDisposable
     {
         public bool IsDisposed { get; private set; }
 
@@ -78,7 +78,7 @@ namespace DulcisX.Components
 
         internal IServiceProviders ServiceProviders { get; }
 
-        internal SolutionX(IVsSolution solution, IServiceProviders providers) : base(new PropertiesX(solution))
+        internal SolutionX(IVsSolution solution, IServiceProviders providers) : base((IVsHierarchy)solution, null, VSConstants.VSITEMID_ROOT, HierarchyItemTypeX.Solution)
             => (UnderlyingSolution, ServiceProviders, SelectedHierarchyItems) = (solution, providers, new SelectedHierarchyItemsX(this));
 
         public ProjectX GetProject(Guid projectGuid)
@@ -114,7 +114,7 @@ namespace DulcisX.Components
 
                 VsHelper.ValidateVSStatusCode(result);
 
-                yield return new ProjectX(hierarchy[0], this);
+                yield return new ProjectX(hierarchy[0], VSConstants.VSITEMID_ROOT, this);
             }
         }
 

@@ -1,4 +1,4 @@
-﻿using DulcisX.Core.Models;
+using DulcisX.Core.Models;
 using DulcisX.Core.Models.Enums;
 using DulcisX.Helpers;
 using Microsoft.VisualStudio;
@@ -7,7 +7,7 @@ using System;
 
 namespace DulcisX.Components
 {
-    public class ProjectX : BaseSolutionItemX
+    public class ProjectX : HierarchyItemX
     {
         private Guid _underlyingGuid = Guid.Empty;
 
@@ -41,7 +41,7 @@ namespace DulcisX.Components
 
         public SolutionX Solution { get; }
 
-        public ProjectX(IVsHierarchy hierarchy, SolutionX solution) : base(new PropertiesX(hierarchy, HierarchyItem.Project))
+        public ProjectX(IVsHierarchy hierarchy, uint itemId, SolutionX solution) : base(hierarchy, solution, itemId, HierarchyItemTypeX.Project)
             => (UnderlyingHierarchy, Solution) = (hierarchy, solution);
     }
 }
