@@ -17,12 +17,29 @@ namespace DulcisX.Components
 
         public bool HasParent => ParentItem != null;
 
-        public HierarchyItemX ParentItem { get; }
+        private HierarchyItemX _parentItem;
+
+        public HierarchyItemX ParentItem
+        {
+            get
+            {
+                if (_parentItem is null)
+                {
+                    _parentItem = GetParent();
+                }
+
+                return _parentItem;
+            }
+            internal set => _parentItem = value;
+        }
 
         public HierarchyItemTypeX ItemType { get; }
 
-        protected HierarchyItemX(IVsHierarchy underlyingHierarchy, HierarchyItemX parentItem, uint itemId, HierarchyItemTypeX itemType) : base(underlyingHierarchy, itemId)
-            => (ParentItem, ItemType) = (parentItem, itemType);
+        protected HierarchyItemX(IVsHierarchy underlyingHierarchy, uint itemId, HierarchyItemTypeX itemType) : base(underlyingHierarchy, itemId)
+            => ItemType = itemType;
+
+        protected HierarchyItemX(IVsHierarchy underlyingHierarchy, HierarchyItemX parentItem, uint itemId, HierarchyItemTypeX itemType) : this(underlyingHierarchy, itemId, itemType)
+            => _parentItem = parentItem;
 
         public SolutionX AsSolution()
         {
@@ -81,6 +98,39 @@ namespace DulcisX.Components
                 node = UnderlyingHierarchy.GetProperty(node, (int)__VSHPROPID.VSHPROPID_NextVisibleSibling);
             }
             while (true);
+        }
+
+        public HierarchyItemX GetParent(IVsHierarchy parentHierarchy = null)
+        {
+            if (ItemType == HierarchyItemTypeX.Solution)
+            {
+                return null;
+            }
+
+            var parentItemId = UnderlyingHierarchy.GetProperty(ItemId, (int)__VSHPROPID.VSHPROPID_Parent);
+
+            HierarchyItemTypeX itemType;
+
+            if (ItemType == HierarchyItemTypeX.VirtualFolder ||
+                ItemType == HierarchyItemTypeX.Project)
+            {
+                itemType = HierarchyItemTypeX.VirtualFolder;
+            }
+            else if (parentHierarchy is null && !UnderlyingHierarchy.TryGetProperty(ItemId, (int)__VSHPROPID.VSHPROPID_ParentHierarchy, out parentHierarchy))
+            {
+                itemType = HierarchyItemTypeX.Solution;
+            }
+            else if (parentHierarchy.IsProject(parentItemId))
+            {
+                itemType = HierarchyItemTypeX.Project;
+            }
+            else
+            {
+                var isFolder = UnderlyingHierarchy.IsFolder(parentItemId);
+                itemType = isFolder ? HierarchyItemTypeX.Folder : HierarchyItemTypeX.Document;
+            }
+
+            return new HierarchyItemX(parentHierarchy, parentItemId, itemType);
         }
 
         IEnumerator IEnumerable.GetEnumerator()
