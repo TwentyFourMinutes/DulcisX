@@ -28,15 +28,17 @@ namespace DulcisX.TestVSIX
         {
             await ThreadHelper.JoinableTaskFactory.SwitchToMainThreadAsync(arg2);
 
-            HierarchyItemX solution = Solution;
+            Solution.DocumentEvents.OnSave += DocumentEvents_OnSave;
+        }
 
-            foreach (HierarchyItemX solutionItem in solution)
-            {
-                foreach (HierarchyItemX item in solutionItem)
-                {
-
-                }
-            }
+        private void DocumentEvents_OnSave(DocumentX obj)
+        {
+            var test = obj.ParentItem;
+            var test2 = obj.ParentItem.ParentItem;
+            var test3 = obj.ParentItem.ParentItem.ParentItem;
+            var test4 = obj.ParentItem.ParentItem.ParentItem.ParentItem;
+            var test5 = obj.ParentItem.ParentItem.ParentItem.ParentItem.ParentItem;
+            var test6 = obj.ParentItem.ParentItem.ParentItem.ParentItem.ParentItem.ParentItem;
         }
         #endregion
     }

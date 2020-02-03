@@ -39,7 +39,7 @@ namespace DulcisX.Components
             => ItemType = itemType;
 
         protected HierarchyItemX(IVsHierarchy underlyingHierarchy, HierarchyItemX parentItem, uint itemId, HierarchyItemTypeX itemType) : this(underlyingHierarchy, itemId, itemType)
-            => _parentItem = parentItem;
+            => ParentItem = parentItem;
 
         public SolutionX AsSolution()
         {
@@ -73,7 +73,7 @@ namespace DulcisX.Components
 
             do
             {
-                if (VsHelper.IsNil(node))
+                if (VsHelper.IsItemIdNil(node))
                 {
                     break;
                 }
@@ -100,29 +100,34 @@ namespace DulcisX.Components
             while (true);
         }
 
-        public HierarchyItemX GetParent(IVsHierarchy parentHierarchy = null)
+        public HierarchyItemX GetParent()
         {
             if (ItemType == HierarchyItemTypeX.Solution)
             {
                 return null;
             }
 
-            var parentItemId = UnderlyingHierarchy.GetProperty(ItemId, (int)__VSHPROPID.VSHPROPID_Parent);
-
             HierarchyItemTypeX itemType;
 
-            if (ItemType == HierarchyItemTypeX.VirtualFolder ||
-                ItemType == HierarchyItemTypeX.Project)
-            {
-                itemType = HierarchyItemTypeX.VirtualFolder;
-            }
-            else if (parentHierarchy is null && !UnderlyingHierarchy.TryGetProperty(ItemId, (int)__VSHPROPID.VSHPROPID_ParentHierarchy, out parentHierarchy))
-            {
-                itemType = HierarchyItemTypeX.Solution;
-            }
-            else if (parentHierarchy.IsProject(parentItemId))
+            var parentItemId = UnderlyingHierarchy.GetProperty(ItemId, (int)__VSHPROPID.VSHPROPID_Parent);
+
+            if (parentItemId > VSConstants.VSITEMID_ROOT)
+                parentItemId = VSConstants.VSITEMID_ROOT;
+
+            IVsHierarchy tempHierarchy = null;
+
+            if (parentItemId == VSConstants.VSITEMID_ROOT &&
+                ItemId != VSConstants.VSITEMID_ROOT &&
+                UnderlyingHierarchy.IsProject(parentItemId))
             {
                 itemType = HierarchyItemTypeX.Project;
+            }
+            else if (parentItemId == VSConstants.VSITEMID_ROOT &&
+                    ItemId == VSConstants.VSITEMID_ROOT)
+            {
+                tempHierarchy = UnderlyingHierarchy.GetProperty<IVsHierarchy>(VSConstants.VSITEMID_ROOT, (int)__VSHPROPID.VSHPROPID_ParentHierarchy);
+
+                itemType = tempHierarchy is IVsSolution ? HierarchyItemTypeX.Solution : HierarchyItemTypeX.VirtualFolder;
             }
             else
             {
@@ -130,7 +135,9 @@ namespace DulcisX.Components
                 itemType = isFolder ? HierarchyItemTypeX.Folder : HierarchyItemTypeX.Document;
             }
 
-            return new HierarchyItemX(parentHierarchy, parentItemId, itemType);
+            tempHierarchy = tempHierarchy ?? UnderlyingHierarchy;
+
+            return new HierarchyItemX(tempHierarchy, parentItemId, itemType);
         }
 
         IEnumerator IEnumerable.GetEnumerator()

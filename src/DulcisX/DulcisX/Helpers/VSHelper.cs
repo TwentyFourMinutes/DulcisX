@@ -17,9 +17,6 @@ namespace DulcisX.Helpers
         public static bool HasSuccessCode(int statusCode)
             => statusCode == VSConstants.S_OK;
 
-        public static bool IsNil(uint statusCode)
-            => statusCode == VSConstants.VSITEMID_NIL;
-
         public static bool HasFailed(int statusCode)
             => statusCode == VSConstants.E_FAIL;
 
@@ -30,5 +27,8 @@ namespace DulcisX.Helpers
                 throw new InvalidHierarchyTypeException($"Expected {expected}, but is actually {actual}.");
             }
         }
+
+        public static bool IsItemIdNil(uint itemId)
+            => itemId == VSConstants.VSITEMID_NIL;
     }
 }
