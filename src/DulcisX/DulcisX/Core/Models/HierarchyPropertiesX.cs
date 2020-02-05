@@ -5,7 +5,7 @@ namespace DulcisX.Core.Models
 {
     public abstract class HierarchyPropertiesX
     {
-        public string FullName
+        public string Name
         {
             get => GetProperty<string>((int)__VSHPROPID.VSHPROPID_Name);
             set => SetProperty((int)__VSHPROPID.VSHPROPID_Name, value);
