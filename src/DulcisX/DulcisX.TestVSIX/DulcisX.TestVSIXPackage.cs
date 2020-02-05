@@ -34,10 +34,6 @@ namespace DulcisX.TestVSIX
 
         private void DocumentEvents_OnSave(DocumentX obj)
         {
-            var test3 = Solution.Projects2;
-
-            var test1 = ((IEnumerable<ProjectX>)Solution).ToList();
-
             var test4 = Solution.Projects.ToList();
 
             var test2 = obj.ParentProject;

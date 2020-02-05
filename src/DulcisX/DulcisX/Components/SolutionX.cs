@@ -19,8 +19,7 @@ namespace DulcisX.Components
 
         public IVsSolution UnderlyingSolution { get; }
 
-        public IEnumerable<ProjectX> Projects => (IEnumerable<ProjectX>)this;
-        public object Projects2 => this;
+        public IEnumerable<ProjectX> Projects => this;
 
         public SelectedHierarchyItemsX SelectedHierarchyItems { get; }
 
