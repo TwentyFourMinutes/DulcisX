@@ -8,7 +8,7 @@ using DulcisX.Helpers;
 
 namespace DulcisX.Core.Models
 {
-    public class SelectedHierarchyItemsX : IEnumerable<SelectedItemX>
+    public class SelectedHierarchyItemsX : IEnumerable<HierarchyItemX>
     {
         private IVsMonitorSelection _monitorSelection;
 
@@ -30,15 +30,15 @@ namespace DulcisX.Core.Models
         internal SelectedHierarchyItemsX(SolutionX solution)
             => _solution = solution;
 
-        public IEnumerator<SelectedItemX> GetEnumerator()
+        public IEnumerator<HierarchyItemX> GetEnumerator()
         {
             ThreadHelper.ThrowIfNotOnUIThread();
 
-            var result = MonitorSelection.GetCurrentSelection(out _, out var itemId, out var selection, out _);
-  
+            var result = MonitorSelection.GetCurrentSelection(out _, out _, out var selection, out _);
+
             VsHelper.ValidateSuccessStatusCode(result);
 
-            result = selection.GetSelectionInfo(out var selectionCount, out var areAcrossHirarchies);
+            result = selection.GetSelectionInfo(out var selectionCount, out _);
 
             VsHelper.ValidateSuccessStatusCode(result);
 
@@ -52,7 +52,9 @@ namespace DulcisX.Core.Models
             {
                 var item = itemSelection[i];
 
-                yield return new SelectedItemX(item.pHier, item.itemid);
+                var type = item.pHier.GetHierarchyItemType(item.itemid);
+
+                yield return new HierarchyItemX(item.pHier, item.itemid, type, ConstructorInstance.FromValue(_solution), ConstructorInstance.Empty<ProjectX>());
             }
         }
 
