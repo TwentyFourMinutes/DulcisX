@@ -27,7 +27,7 @@ namespace DulcisX.Components
         {
             get
             {
-                if (_parentItem is null)
+                if (_parentItem is null && ItemType != HierarchyItemTypeX.Solution)
                 {
                     _parentItem = GetParent();
                 }
@@ -43,7 +43,9 @@ namespace DulcisX.Components
         {
             get
             {
-                if (_parentProject is null)
+                if (_parentProject is null &&
+                    (ItemType == HierarchyItemTypeX.Document ||
+                    ItemType == HierarchyItemTypeX.Folder))
                 {
                     _parentProject = GetFirstParent(HierarchyItemTypeX.Project).AsProject();
                 }
@@ -57,7 +59,7 @@ namespace DulcisX.Components
 
         public HierarchyItemTypeX ItemType { get; }
 
-        private protected HierarchyItemX(IVsHierarchy underlyingHierarchy, uint itemId, HierarchyItemTypeX itemType, ConstructorInstance<SolutionX> solutionInstance, ConstructorInstance<ProjectX> projectInstance, HierarchyItemX parentItem = default) : base(underlyingHierarchy, itemId)
+        internal HierarchyItemX(IVsHierarchy underlyingHierarchy, uint itemId, HierarchyItemTypeX itemType, ConstructorInstance<SolutionX> solutionInstance, ConstructorInstance<ProjectX> projectInstance, HierarchyItemX parentItem = default) : base(underlyingHierarchy, itemId)
         {
             ItemType = itemType;
             ParentItem = parentItem;
@@ -107,16 +109,14 @@ namespace DulcisX.Components
                 {
                     if (UnderlyingHierarchy.TryGetNestedHierarchy(node, out var hierarchy))
                     {
-                        var type = hierarchy.IsProject(VSConstants.VSITEMID_ROOT) ? HierarchyItemTypeX.Project : HierarchyItemTypeX.VirtualFolder;
+                        var type = hierarchy.GetHierarchyItemType(VSConstants.VSITEMID_ROOT);
 
                         yield return new HierarchyItemX(hierarchy, VSConstants.VSITEMID_ROOT, type, ConstructorInstance.FromValue(ParentSolution), ConstructorInstance.FromValue(ParentProject), this);
                     }
                 }
                 else
                 {
-                    var isFolder = UnderlyingHierarchy.IsFolder(node);
-
-                    var type = isFolder ? HierarchyItemTypeX.Folder : HierarchyItemTypeX.Document;
+                    var type = UnderlyingHierarchy.GetHierarchyItemType(node);
 
                     yield return new HierarchyItemX(UnderlyingHierarchy, node, type, ConstructorInstance.FromValue(ParentSolution), ConstructorInstance.FromValue(ParentProject), this);
                 }
@@ -133,32 +133,25 @@ namespace DulcisX.Components
                 return null;
             }
 
-            HierarchyItemTypeX itemType;
-
             var parentItemId = UnderlyingHierarchy.GetProperty(ItemId, (int)__VSHPROPID.VSHPROPID_Parent);
 
             if (parentItemId > VSConstants.VSITEMID_ROOT)
                 parentItemId = VSConstants.VSITEMID_ROOT;
 
+            HierarchyItemTypeX itemType;
+
             IVsHierarchy tempHierarchy = null;
 
             if (parentItemId == VSConstants.VSITEMID_ROOT &&
-                ItemId != VSConstants.VSITEMID_ROOT &&
-                UnderlyingHierarchy.IsProject(parentItemId))
-            {
-                itemType = HierarchyItemTypeX.Project;
-            }
-            else if (parentItemId == VSConstants.VSITEMID_ROOT &&
-                    ItemId == VSConstants.VSITEMID_ROOT)
+               ItemId == VSConstants.VSITEMID_ROOT)
             {
                 tempHierarchy = UnderlyingHierarchy.GetProperty<IVsHierarchy>(VSConstants.VSITEMID_ROOT, (int)__VSHPROPID.VSHPROPID_ParentHierarchy);
 
-                itemType = tempHierarchy is IVsSolution ? HierarchyItemTypeX.Solution : HierarchyItemTypeX.VirtualFolder;
+                itemType = tempHierarchy.GetHierarchyItemType(parentItemId);
             }
             else
             {
-                var isFolder = UnderlyingHierarchy.IsFolder(parentItemId);
-                itemType = isFolder ? HierarchyItemTypeX.Folder : HierarchyItemTypeX.Document;
+                itemType = UnderlyingHierarchy.GetHierarchyItemType(parentItemId);
             }
 
             tempHierarchy = tempHierarchy ?? UnderlyingHierarchy;

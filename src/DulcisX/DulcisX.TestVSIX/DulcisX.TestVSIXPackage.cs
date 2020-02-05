@@ -31,16 +31,14 @@ namespace DulcisX.TestVSIX
             Solution.DocumentEvents.OnSave += DocumentEvents_OnSave;
         }
 
-        private void DocumentEvents_OnSave(DocumentX obj)
+        private void DocumentEvents_OnSave(HierarchyItemX obj)
         {
-            var test4 = obj.ParentProject.FullName;
-
-            //var test1 = Solution.Projects.FirstOrDefault(x => x.FullName == "bcd");
-
-            //var files = test1.ToList().First(x => x.FullName == "yeet");
-
-            //var file = files.ToList();
-            
+            var test1 = obj;
+            var test2 = obj.GetParent();
+            var test3 = obj.ParentProject;
+            var test4 = obj.ParentSolution;
+            var test5 = test3.ToList();
+            var test6 = test3.ContainsItems;
         }
         #endregion
     }

@@ -6,12 +6,12 @@ namespace DulcisX.Components.Events
 {
     public interface IRunningDocTableEventsX
     {
-       event Action<DocumentX, _VSRDTFLAGS, uint, uint> OnDocumentLocked;
-       event Action<DocumentX, _VSRDTFLAGS, uint, uint> OnDocumentUnlocked;
-       event Action<DocumentX> OnSaved;
-       event Action<DocumentX, bool, IVsWindowFrame> OnDocumentWindowShow;
-       event Action<DocumentX, IVsWindowFrame> OnDocumentWindowHidden;
-       event Action<DocumentX, __VSRDTATTRIB, DocumentStateX, DocumentStateX> OnAttributeChanged;
-       event Action<DocumentX> OnSave; 
+       event Action<HierarchyItemX, _VSRDTFLAGS, uint, uint> OnDocumentLocked;
+       event Action<HierarchyItemX, _VSRDTFLAGS, uint, uint> OnDocumentUnlocked;
+       event Action<HierarchyItemX> OnSaved;
+       event Action<HierarchyItemX, bool, IVsWindowFrame> OnDocumentWindowShow;
+       event Action<HierarchyItemX, IVsWindowFrame> OnDocumentWindowHidden;
+       event Action<HierarchyItemX, __VSRDTATTRIB, DocumentStateX, DocumentStateX> OnAttributeChanged;
+       event Action<HierarchyItemX> OnSave; 
     }
 }

@@ -1,7 +1,10 @@
-﻿using DulcisX.Helpers;
+﻿using DulcisX.Core.Models.Enums;
+using DulcisX.Helpers;
+using Microsoft.VisualStudio;
 using Microsoft.VisualStudio.Shell;
 using Microsoft.VisualStudio.Shell.Interop;
 using System;
+using System.IO;
 using System.Runtime.InteropServices;
 
 namespace DulcisX.Core.Extensions
@@ -28,11 +31,42 @@ namespace DulcisX.Core.Extensions
             return true;
         }
 
-        public static bool IsFolder(this IVsHierarchy hierarchy, uint itemId)
+        public static HierarchyItemTypeX GetHierarchyItemType(this IVsHierarchy hierarchy, uint itemId)
         {
-            // => hierarchy.TryGetPropertyObject(itemId, (int)VsHierarchyPropID.SaveName, out _);
+            ThreadHelper.ThrowIfNotOnUIThread();
 
-            return true;
+            if (itemId == VSConstants.VSITEMID_ROOT)
+            {
+                if (hierarchy.TryGetPropertyObject(itemId, (int)__VSHPROPID5.VSHPROPID_OutputType, out _))
+                {
+                    return HierarchyItemTypeX.Project;
+                }
+                else if (hierarchy is IVsSolution)
+                {
+                    return HierarchyItemTypeX.Solution;
+                }
+                else
+                {
+                    return HierarchyItemTypeX.VirtualFolder;
+                }
+            }
+            else
+            {
+                var project = (IVsProject)hierarchy;
+
+                var result = project.GetMkDocument(itemId, out var path);
+
+                VsHelper.ValidateSuccessStatusCode(result);
+
+                if (File.Exists(path))
+                {
+                    return HierarchyItemTypeX.Document;
+                }
+                else
+                {
+                    return HierarchyItemTypeX.Folder;
+                }
+            }
         }
 
         public static bool IsContainer(this IVsHierarchy hierarchy, uint itemId)
@@ -45,9 +79,6 @@ namespace DulcisX.Core.Extensions
 
             return (successExpandable && expandableValue == 1u) || (successContainer && containerValue == 1u);
         }
-
-        public static bool IsProject(this IVsHierarchy hierarchy, uint itemId)
-            => hierarchy.TryGetPropertyObject(itemId, (int)__VSHPROPID5.VSHPROPID_OutputType, out _);
 
         #region Get/Set Properties
 

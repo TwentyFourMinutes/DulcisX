@@ -10,13 +10,13 @@ namespace DulcisX.Components.Events
 {
     internal class RunningDocTableEventsX : BaseEventX, IRunningDocTableEventsX, IVsRunningDocTableEvents3
     {
-        public event Action<DocumentX, _VSRDTFLAGS, uint, uint> OnDocumentLocked;
-        public event Action<DocumentX, _VSRDTFLAGS, uint, uint> OnDocumentUnlocked;
-        public event Action<DocumentX> OnSaved;
-        public event Action<DocumentX, bool, IVsWindowFrame> OnDocumentWindowShow;
-        public event Action<DocumentX, IVsWindowFrame> OnDocumentWindowHidden;
-        public event Action<DocumentX, __VSRDTATTRIB, DocumentStateX, DocumentStateX> OnAttributeChanged;
-        public event Action<DocumentX> OnSave;
+        public event Action<HierarchyItemX, _VSRDTFLAGS, uint, uint> OnDocumentLocked;
+        public event Action<HierarchyItemX, _VSRDTFLAGS, uint, uint> OnDocumentUnlocked;
+        public event Action<HierarchyItemX> OnSaved;
+        public event Action<HierarchyItemX, bool, IVsWindowFrame> OnDocumentWindowShow;
+        public event Action<HierarchyItemX, IVsWindowFrame> OnDocumentWindowHidden;
+        public event Action<HierarchyItemX, __VSRDTATTRIB, DocumentStateX, DocumentStateX> OnAttributeChanged;
+        public event Action<HierarchyItemX> OnSave;
 
         private readonly IVsRunningDocumentTable _rdt;
 
@@ -25,19 +25,19 @@ namespace DulcisX.Components.Events
 
         public int OnAfterFirstDocumentLock(uint docCookie, uint dwRDTLockType, uint dwReadLocksRemaining, uint dwEditLocksRemaining)
         {
-            OnDocumentLocked?.Invoke(_rdt.GetDocument(docCookie, Solution), (_VSRDTFLAGS)dwRDTLockType, dwReadLocksRemaining, dwEditLocksRemaining);
+            OnDocumentLocked?.Invoke(_rdt.GetHierarchyItem(docCookie, Solution), (_VSRDTFLAGS)dwRDTLockType, dwReadLocksRemaining, dwEditLocksRemaining);
             return VSConstants.S_OK;
         }
 
         public int OnBeforeLastDocumentUnlock(uint docCookie, uint dwRDTLockType, uint dwReadLocksRemaining, uint dwEditLocksRemaining)
         {
-            OnDocumentUnlocked?.Invoke(_rdt.GetDocument(docCookie, Solution), (_VSRDTFLAGS)dwRDTLockType, dwReadLocksRemaining, dwEditLocksRemaining);
+            OnDocumentUnlocked?.Invoke(_rdt.GetHierarchyItem(docCookie, Solution), (_VSRDTFLAGS)dwRDTLockType, dwReadLocksRemaining, dwEditLocksRemaining);
             return VSConstants.S_OK;
         }
 
         public int OnAfterSave(uint docCookie)
         {
-            OnSaved?.Invoke(_rdt.GetDocument(docCookie, Solution));
+            OnSaved?.Invoke(_rdt.GetHierarchyItem(docCookie, Solution));
             return VSConstants.S_OK;
         }
 
@@ -46,19 +46,19 @@ namespace DulcisX.Components.Events
 
         public int OnBeforeDocumentWindowShow(uint docCookie, int fFirstShow, IVsWindowFrame pFrame)
         {
-            OnDocumentWindowShow?.Invoke(_rdt.GetDocument(docCookie, Solution), fFirstShow != 0, pFrame);
+            OnDocumentWindowShow?.Invoke(_rdt.GetHierarchyItem(docCookie, Solution), fFirstShow != 0, pFrame);
             return VSConstants.S_OK;
         }
 
         public int OnAfterDocumentWindowHide(uint docCookie, IVsWindowFrame pFrame)
         {
-            OnDocumentWindowHidden?.Invoke(_rdt.GetDocument(docCookie, Solution), pFrame);
+            OnDocumentWindowHidden?.Invoke(_rdt.GetHierarchyItem(docCookie, Solution), pFrame);
             return VSConstants.S_OK;
         }
 
         public int OnAfterAttributeChangeEx(uint docCookie, uint grfAttribs, IVsHierarchy pHierOld, uint itemidOld, string pszMkDocumentOld, IVsHierarchy pHierNew, uint itemidNew, string pszMkDocumentNew)
         {
-            OnAttributeChanged?.Invoke(_rdt.GetDocument(docCookie, Solution), (__VSRDTATTRIB)grfAttribs,
+            OnAttributeChanged?.Invoke(_rdt.GetHierarchyItem(docCookie, Solution), (__VSRDTATTRIB)grfAttribs,
             new DocumentStateX
             {
                 Hierarchy = pHierOld,
@@ -76,7 +76,7 @@ namespace DulcisX.Components.Events
 
         public int OnBeforeSave(uint docCookie)
         {
-            OnSave?.Invoke(_rdt.GetDocument(docCookie, Solution));
+            OnSave?.Invoke(_rdt.GetHierarchyItem(docCookie, Solution));
             return VSConstants.S_OK;
         }
 
