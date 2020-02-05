@@ -31,14 +31,16 @@ namespace DulcisX.TestVSIX
             Solution.DocumentEvents.OnSave += DocumentEvents_OnSave;
         }
 
+        private HierarchyItemX lastItem;
+
         private void DocumentEvents_OnSave(HierarchyItemX obj)
         {
-            var test1 = obj;
-            var test2 = obj.GetParent();
-            var test3 = obj.ParentProject;
-            var test4 = obj.ParentSolution;
-            var test5 = test3.ToList();
-            var test6 = test3.ContainsItems;
+            if (lastItem is null)
+                lastItem = obj;
+            else
+            {
+                var test = lastItem == obj;
+            }
         }
         #endregion
     }

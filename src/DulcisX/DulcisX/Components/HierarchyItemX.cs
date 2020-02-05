@@ -19,6 +19,8 @@ namespace DulcisX.Components
 
         public bool IsContainer => UnderlyingHierarchy.IsContainer(ItemId);
 
+        #region Parents
+
         public bool HasParent => ParentItem != null;
 
         private HierarchyItemX _parentItem;
@@ -57,6 +59,8 @@ namespace DulcisX.Components
 
         public SolutionX ParentSolution { get; }
 
+        #endregion
+
         public HierarchyItemTypeX ItemType { get; }
 
         internal HierarchyItemX(IVsHierarchy underlyingHierarchy, uint itemId, HierarchyItemTypeX itemType, ConstructorInstance<SolutionX> solutionInstance, ConstructorInstance<ProjectX> projectInstance, HierarchyItemX parentItem = default) : base(underlyingHierarchy, itemId)
@@ -66,6 +70,8 @@ namespace DulcisX.Components
             ParentSolution = solutionInstance.GetInstance(this);
             ParentProject = projectInstance.GetInstance(this);
         }
+
+        #region Helper Methods
 
         public SolutionX AsSolution()
         {
@@ -86,44 +92,6 @@ namespace DulcisX.Components
             VsHelper.ValidateHierarchyType(ItemType, HierarchyItemTypeX.Document);
 
             return (DocumentX)this;
-        }
-
-        public IEnumerator<HierarchyItemX> GetEnumerator()
-        {
-            if (ItemType == HierarchyItemTypeX.Document)
-                yield break;
-
-            ThreadHelper.ThrowIfNotOnUIThread();
-
-            var node = UnderlyingHierarchy.GetProperty(ItemId, (int)__VSHPROPID.VSHPROPID_FirstVisibleChild);
-
-            do
-            {
-                if (VsHelper.IsItemIdNil(node))
-                {
-                    break;
-                }
-
-                if (ItemType == HierarchyItemTypeX.Solution ||
-                    ItemType == HierarchyItemTypeX.VirtualFolder)
-                {
-                    if (UnderlyingHierarchy.TryGetNestedHierarchy(node, out var hierarchy))
-                    {
-                        var type = hierarchy.GetHierarchyItemType(VSConstants.VSITEMID_ROOT);
-
-                        yield return new HierarchyItemX(hierarchy, VSConstants.VSITEMID_ROOT, type, ConstructorInstance.FromValue(ParentSolution), ConstructorInstance.FromValue(ParentProject), this);
-                    }
-                }
-                else
-                {
-                    var type = UnderlyingHierarchy.GetHierarchyItemType(node);
-
-                    yield return new HierarchyItemX(UnderlyingHierarchy, node, type, ConstructorInstance.FromValue(ParentSolution), ConstructorInstance.FromValue(ParentProject), this);
-                }
-
-                node = UnderlyingHierarchy.GetProperty(node, (int)__VSHPROPID.VSHPROPID_NextVisibleSibling);
-            }
-            while (true);
         }
 
         public HierarchyItemX GetParent()
@@ -208,7 +176,82 @@ namespace DulcisX.Components
             return fullName;
         }
 
+        #endregion
+
+        #region Enumerable
+
+        public IEnumerator<HierarchyItemX> GetEnumerator()
+        {
+            if (ItemType == HierarchyItemTypeX.Document)
+                yield break;
+
+            ThreadHelper.ThrowIfNotOnUIThread();
+
+            var node = UnderlyingHierarchy.GetProperty(ItemId, (int)__VSHPROPID.VSHPROPID_FirstVisibleChild);
+
+            do
+            {
+                if (VsHelper.IsItemIdNil(node))
+                {
+                    break;
+                }
+
+                if (ItemType == HierarchyItemTypeX.Solution ||
+                    ItemType == HierarchyItemTypeX.VirtualFolder)
+                {
+                    if (UnderlyingHierarchy.TryGetNestedHierarchy(node, out var hierarchy))
+                    {
+                        var type = hierarchy.GetHierarchyItemType(VSConstants.VSITEMID_ROOT);
+
+                        yield return new HierarchyItemX(hierarchy, VSConstants.VSITEMID_ROOT, type, ConstructorInstance.FromValue(ParentSolution), ConstructorInstance.FromValue(ParentProject), this);
+                    }
+                }
+                else
+                {
+                    var type = UnderlyingHierarchy.GetHierarchyItemType(node);
+
+                    yield return new HierarchyItemX(UnderlyingHierarchy, node, type, ConstructorInstance.FromValue(ParentSolution), ConstructorInstance.FromValue(ParentProject), this);
+                }
+
+                node = UnderlyingHierarchy.GetProperty(node, (int)__VSHPROPID.VSHPROPID_NextVisibleSibling);
+            }
+            while (true);
+        }
+
         IEnumerator IEnumerable.GetEnumerator()
             => GetEnumerator();
+
+        #endregion
+
+        #region Equality Comparison
+
+        public override bool Equals(object obj)
+        {
+            return obj is HierarchyItemX x &&
+                   FullName == x.FullName;
+        }
+
+        public override int GetHashCode()
+        {
+            return FullName.GetHashCode();
+        }
+
+        public static bool operator ==(HierarchyItemX hierarchyItem1, HierarchyItemX hierarchyItem2)
+        {
+            if (hierarchyItem1 is null || hierarchyItem2 is null)
+                return false;
+            
+            return hierarchyItem1.FullName == hierarchyItem2.FullName;
+        }
+
+        public static bool operator !=(HierarchyItemX hierarchyItem1, HierarchyItemX hierarchyItem2)
+        {
+            if (hierarchyItem1 is null || hierarchyItem2 is null)
+                return false;
+
+            return hierarchyItem1.FullName != hierarchyItem2.FullName;
+        }
+
+        #endregion
     }
 }
