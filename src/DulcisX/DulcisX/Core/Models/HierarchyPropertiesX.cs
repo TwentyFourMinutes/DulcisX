@@ -1,6 +1,4 @@
-﻿using DulcisX.Helpers;
-using Microsoft.VisualStudio.Shell;
-using Microsoft.VisualStudio.Shell.Interop;
+﻿using Microsoft.VisualStudio.Shell.Interop;
 using DulcisX.Core.Extensions;
 
 namespace DulcisX.Core.Models
@@ -17,8 +15,8 @@ namespace DulcisX.Core.Models
 
         public uint ItemId { get; }
 
-        protected HierarchyPropertiesX(IVsHierarchy underlyingHierarchy, uint itemId)
-            => (UnderlyingHierarchy, ItemId) = (underlyingHierarchy, itemId);
+        protected HierarchyPropertiesX(IVsHierarchy parentHierarchy, uint itemId)
+            => (UnderlyingHierarchy, ItemId) = (parentHierarchy, itemId);
 
         protected TType GetProperty<TType>(int propId)
             => UnderlyingHierarchy.GetProperty<TType>(ItemId, propId);

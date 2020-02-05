@@ -1,4 +1,5 @@
 ﻿using DulcisX.Core.Extensions;
+using DulcisX.Core.Models;
 using DulcisX.Core.Models.Enums;
 using DulcisX.Helpers;
 using Microsoft.VisualStudio.Shell;
@@ -19,7 +20,7 @@ namespace DulcisX.Components
                 {
                     ThreadHelper.ThrowIfNotOnUIThread();
 
-                    var result = Solution.UnderlyingSolution.GetGuidOfProject(UnderlyingHierarchy, out _underlyingGuid);
+                    var result = ParentSolution.UnderlyingSolution.GetGuidOfProject(UnderlyingHierarchy, out _underlyingGuid);
 
                     VsHelper.ValidateSuccessStatusCode(result);
                 }
@@ -34,9 +35,9 @@ namespace DulcisX.Components
             set => SetProperty((int)__VSHPROPID5.VSHPROPID_OutputType, (uint)(int)value);
         }
 
-        public SolutionX Solution { get; }
+        internal ProjectX(IVsHierarchy hierarchy, uint itemId, SolutionX solution) : base(hierarchy, itemId, HierarchyItemTypeX.Project, ConstructorInstance.FromValue(solution), ConstructorInstance.Empty<ProjectX>())
+        {
 
-        public ProjectX(IVsHierarchy hierarchy, uint itemId, SolutionX solution) : base(hierarchy, solution, itemId, HierarchyItemTypeX.Project)
-            => Solution = solution;
+        }
     }
 }

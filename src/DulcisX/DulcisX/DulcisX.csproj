@@ -549,6 +549,7 @@
     <Compile Include="Core\Extensions\ServiceProvidersExtensions.cs" />
     <Compile Include="Core\Extensions\VsHierarchyExtensions.cs" />
     <Compile Include="Core\Extensions\VsRunningDocumentTableExtensions.cs" />
+    <Compile Include="Core\Models\ConstructorInstance.cs" />
     <Compile Include="Core\Models\DocumentStateX.cs" />
     <Compile Include="Core\Models\Enums\HierarchyItemType.cs" />
     <Compile Include="Core\Models\Interfaces\IServiceProviders.cs" />

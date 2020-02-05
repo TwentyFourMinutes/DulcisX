@@ -6,7 +6,7 @@ using System;
 
 namespace DulcisX.Components.Events
 {
-    internal class SolutionBuildEventsX : EventCookieX, ISolutionBuildEventsX, IVsUpdateSolutionEvents
+    internal class SolutionBuildEventsX : BaseEventX, ISolutionBuildEventsX, IVsUpdateSolutionEvents
     {
         public event BeforeSolutionBuild OnBeforeSolutionBuild;
 
@@ -20,7 +20,7 @@ namespace DulcisX.Components.Events
 
         private readonly IVsSolutionBuildManager _buildManager;
 
-        private SolutionBuildEventsX(IVsSolutionBuildManager buildManager)
+        private SolutionBuildEventsX(IVsSolutionBuildManager buildManager, SolutionX solution) : base(solution)
             => _buildManager = buildManager;
 
         public int UpdateSolution_Begin(ref int pfCancelUpdate)
@@ -75,7 +75,7 @@ namespace DulcisX.Components.Events
 
             var manager = solution.ServiceProviders.GetService<SVsSolutionBuildManager, IVsSolutionBuildManager>();
 
-            var solutionBuildEvents = new SolutionBuildEventsX(manager);
+            var solutionBuildEvents = new SolutionBuildEventsX(manager, solution);
 
             var result = manager.AdviseUpdateSolutionEvents(solutionBuildEvents, out var cookieUID);
 

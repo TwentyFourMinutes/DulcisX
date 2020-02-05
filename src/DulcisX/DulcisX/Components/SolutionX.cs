@@ -19,9 +19,10 @@ namespace DulcisX.Components
 
         public IVsSolution UnderlyingSolution { get; }
 
-        public SelectedHierarchyItemsX SelectedHierarchyItems { get; }
+        public IEnumerable<ProjectX> Projects => (IEnumerable<ProjectX>)this;
+        public object Projects2 => this;
 
-        public IEnumerable<ProjectX> Projects => this;
+        public SelectedHierarchyItemsX SelectedHierarchyItems { get; }
 
         #region Events
 
@@ -80,7 +81,7 @@ namespace DulcisX.Components
 
         internal IServiceProviders ServiceProviders { get; }
 
-        internal SolutionX(IVsSolution solution, IServiceProviders providers) : base((IVsHierarchy)solution, null, VSConstants.VSITEMID_ROOT, HierarchyItemTypeX.Solution)
+        internal SolutionX(IVsSolution solution, IServiceProviders providers) : base((IVsHierarchy)solution, VSConstants.VSITEMID_ROOT, HierarchyItemTypeX.Solution, ConstructorInstance.This<SolutionX>(), ConstructorInstance.Empty<ProjectX>())
             => (UnderlyingSolution, ServiceProviders, SelectedHierarchyItems) = (solution, providers, new SelectedHierarchyItemsX(this));
 
         public ProjectX GetProject(Guid projectGuid)
@@ -124,7 +125,7 @@ namespace DulcisX.Components
         }
 
         IEnumerator IEnumerable.GetEnumerator()
-            => this.GetEnumerator();
+            => GetEnumerator();
 
         protected virtual void Dispose(bool disposing)
         {

@@ -1,12 +1,13 @@
 ﻿using System;
-using System.Linq;
 using System.Runtime.InteropServices;
 using System.Threading;
 using DulcisX.Components;
+using System.Linq;
 using DulcisX.Core;
 using Microsoft.VisualStudio;
 using Microsoft.VisualStudio.Shell;
 using Task = System.Threading.Tasks.Task;
+using System.Collections.Generic;
 
 namespace DulcisX.TestVSIX
 {
@@ -33,12 +34,19 @@ namespace DulcisX.TestVSIX
 
         private void DocumentEvents_OnSave(DocumentX obj)
         {
-            var test = obj.ParentItem;
-            var test2 = obj.ParentItem.ParentItem;
-            var test3 = obj.ParentItem.ParentItem.ParentItem;
-            var test4 = obj.ParentItem.ParentItem.ParentItem.ParentItem;
-            var test5 = obj.ParentItem.ParentItem.ParentItem.ParentItem.ParentItem;
-            var test6 = obj.ParentItem.ParentItem.ParentItem.ParentItem.ParentItem.ParentItem;
+            var test3 = Solution.Projects2;
+
+            var test1 = ((IEnumerable<ProjectX>)Solution).ToList();
+
+            var test4 = Solution.Projects.ToList();
+
+            var test2 = obj.ParentProject;
+
+            //var test1 = Solution.Projects.FirstOrDefault(x => x.FullName == "bcd");
+
+            //var files = test1.ToList().First(x => x.FullName == "yeet");
+
+            //var file = files.ToList();
         }
         #endregion
     }

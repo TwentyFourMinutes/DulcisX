@@ -13,7 +13,9 @@ namespace DulcisX.Components
 {
     public class HierarchyItemX : HierarchyPropertiesX, IEnumerable<HierarchyItemX>
     {
-        public bool ContainsItems => ItemType != HierarchyItemTypeX.Document && this.Any();
+        public bool ContainsItems => IsContainer && this.Any();
+
+        public bool IsContainer => UnderlyingHierarchy.IsContainer(ItemId);
 
         public bool HasParent => ParentItem != null;
 
@@ -33,13 +35,33 @@ namespace DulcisX.Components
             internal set => _parentItem = value;
         }
 
+        private ProjectX _parentProject;
+
+        public ProjectX ParentProject
+        {
+            get
+            {
+                if (_parentProject is null)
+                {
+                    _parentProject = GetFirstParent(HierarchyItemTypeX.Project).AsProject();
+                }
+
+                return _parentProject;
+            }
+            internal set => _parentProject = value;
+        }
+
+        public SolutionX ParentSolution { get; }
+
         public HierarchyItemTypeX ItemType { get; }
 
-        protected HierarchyItemX(IVsHierarchy underlyingHierarchy, uint itemId, HierarchyItemTypeX itemType) : base(underlyingHierarchy, itemId)
-            => ItemType = itemType;
-
-        protected HierarchyItemX(IVsHierarchy underlyingHierarchy, HierarchyItemX parentItem, uint itemId, HierarchyItemTypeX itemType) : this(underlyingHierarchy, itemId, itemType)
-            => ParentItem = parentItem;
+        private protected HierarchyItemX(IVsHierarchy underlyingHierarchy, uint itemId, HierarchyItemTypeX itemType, ConstructorInstance<SolutionX> solutionInstance, ConstructorInstance<ProjectX> projectInstance, HierarchyItemX parentItem = default) : base(underlyingHierarchy, itemId)
+        {
+            ItemType = itemType;
+            ParentItem = parentItem;
+            ParentSolution = solutionInstance.GetInstance(this);
+            ParentProject = projectInstance.GetInstance(this);
+        }
 
         public SolutionX AsSolution()
         {
@@ -85,14 +107,16 @@ namespace DulcisX.Components
                     {
                         var type = hierarchy.IsProject(VSConstants.VSITEMID_ROOT) ? HierarchyItemTypeX.Project : HierarchyItemTypeX.VirtualFolder;
 
-                        yield return new HierarchyItemX(hierarchy, this, VSConstants.VSITEMID_ROOT, type);
+                        yield return new HierarchyItemX(hierarchy, VSConstants.VSITEMID_ROOT, type, ConstructorInstance.FromValue(ParentSolution), ConstructorInstance.FromValue(ParentProject), this);
                     }
                 }
                 else
                 {
                     var isFolder = UnderlyingHierarchy.IsFolder(node);
 
-                    yield return new HierarchyItemX(UnderlyingHierarchy, this, node, isFolder ? HierarchyItemTypeX.Folder : HierarchyItemTypeX.Document);
+                    var type = isFolder ? HierarchyItemTypeX.Folder : HierarchyItemTypeX.Document;
+
+                    yield return new HierarchyItemX(UnderlyingHierarchy, node, type, ConstructorInstance.FromValue(ParentSolution), ConstructorInstance.FromValue(ParentProject), this);
                 }
 
                 node = UnderlyingHierarchy.GetProperty(node, (int)__VSHPROPID.VSHPROPID_NextVisibleSibling);
@@ -137,10 +161,29 @@ namespace DulcisX.Components
 
             tempHierarchy = tempHierarchy ?? UnderlyingHierarchy;
 
-            return new HierarchyItemX(tempHierarchy, parentItemId, itemType);
+            return new HierarchyItemX(tempHierarchy, parentItemId, itemType, ConstructorInstance.FromValue(ParentSolution), ConstructorInstance.Empty<ProjectX>());
+        }
+
+        public HierarchyItemX GetFirstParent(HierarchyItemTypeX itemType)
+        {
+            HierarchyItemX previousParent = ParentItem;
+
+            while (true)
+            {
+                if (previousParent is null)
+                {
+                    return null;
+                }
+                else if (previousParent.ItemType == itemType)
+                {
+                    return previousParent;
+                }
+
+                previousParent = previousParent.ParentItem;
+            }
         }
 
         IEnumerator IEnumerable.GetEnumerator()
-            => this.GetEnumerator();
+            => GetEnumerator();
     }
 }

@@ -6,7 +6,7 @@ using System;
 
 namespace DulcisX.Components.Events
 {
-    internal class SolutionEventsX : EventCookieX, ISolutionEventsX, IVsSolutionEvents
+    internal class SolutionEventsX : BaseEventX, ISolutionEventsX, IVsSolutionEvents
     {
         public event Action<ProjectX, bool> OnAfterProjectOpen;
 
@@ -28,14 +28,12 @@ namespace DulcisX.Components.Events
 
         public event Action OnAfterSolutionClose;
 
-        private readonly SolutionX _solution;
-
-        private SolutionEventsX(SolutionX solution)
-            => _solution = solution;
+        private SolutionEventsX(SolutionX solution) : base(solution)
+        { }
 
         public int OnAfterOpenProject(IVsHierarchy pHierarchy, int fAdded)
         {
-            OnAfterProjectOpen?.Invoke(_solution.GetProject(pHierarchy), fAdded == 1);
+            OnAfterProjectOpen?.Invoke(Solution.GetProject(pHierarchy), fAdded == 1);
             return VSConstants.S_OK;
         }
 
@@ -43,7 +41,7 @@ namespace DulcisX.Components.Events
         {
             bool tempBool = false;
 
-            OnQueryProjectClose?.Invoke(_solution.GetProject(pHierarchy), fRemoving == 1, ref tempBool);
+            OnQueryProjectClose?.Invoke(Solution.GetProject(pHierarchy), fRemoving == 1, ref tempBool);
 
             pfCancel = tempBool ? 1 : 0;
 
@@ -52,13 +50,13 @@ namespace DulcisX.Components.Events
 
         public int OnBeforeCloseProject(IVsHierarchy pHierarchy, int fRemoved)
         {
-            OnBeforeProjectClose?.Invoke(_solution.GetProject(pHierarchy), fRemoved == 1);
+            OnBeforeProjectClose?.Invoke(Solution.GetProject(pHierarchy), fRemoved == 1);
             return VSConstants.S_OK;
         }
 
         public int OnAfterLoadProject(IVsHierarchy pStubHierarchy, IVsHierarchy pRealHierarchy)
         {
-            OnAfterProjectLoad?.Invoke(pStubHierarchy, _solution.GetProject(pRealHierarchy));
+            OnAfterProjectLoad?.Invoke(pStubHierarchy, Solution.GetProject(pRealHierarchy));
             return VSConstants.S_OK;
         }
 
@@ -66,7 +64,7 @@ namespace DulcisX.Components.Events
         {
             bool tempBool = false;
 
-            OnQueryProjectUnload?.Invoke(_solution.GetProject(pRealHierarchy), ref tempBool);
+            OnQueryProjectUnload?.Invoke(Solution.GetProject(pRealHierarchy), ref tempBool);
 
             pfCancel = tempBool ? 1 : 0;
 
@@ -75,7 +73,7 @@ namespace DulcisX.Components.Events
 
         public int OnBeforeUnloadProject(IVsHierarchy pRealHierarchy, IVsHierarchy pStubHierarchy)
         {
-            OnBeforeProjectUnload?.Invoke(_solution.GetProject(pRealHierarchy), pStubHierarchy);
+            OnBeforeProjectUnload?.Invoke(Solution.GetProject(pRealHierarchy), pStubHierarchy);
             return VSConstants.S_OK;
         }
 

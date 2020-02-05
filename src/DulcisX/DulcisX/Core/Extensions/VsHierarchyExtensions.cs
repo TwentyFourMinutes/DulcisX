@@ -31,17 +31,26 @@ namespace DulcisX.Core.Extensions
 
         public static bool IsFolder(this IVsHierarchy hierarchy, uint itemId)
         {
+            // => hierarchy.TryGetPropertyObject(itemId, (int)VsHierarchyPropID.SaveName, out _);
+
+            return true;
+        }
+
+        public static bool IsContainer(this IVsHierarchy hierarchy, uint itemId)
+        {
             ThreadHelper.ThrowIfNotOnUIThread();
 
-            var expandableValue = hierarchy.GetProperty(itemId, (int)__VSHPROPID.VSHPROPID_Expandable);
+            var successExpandable = hierarchy.TryGetProperty(itemId, (int)__VSHPROPID.VSHPROPID_Expandable, out uint expandableValue);
 
-            var containerValue = hierarchy.GetProperty(itemId, (int)__VSHPROPID2.VSHPROPID_Container);
+            var successContainer = hierarchy.TryGetProperty(itemId, (int)__VSHPROPID2.VSHPROPID_Container, out uint containerValue);
 
-            return expandableValue == 1u || containerValue == 1u;
+            return (successExpandable && expandableValue == 1u) || (successContainer && containerValue == 1u);
         }
 
         public static bool IsProject(this IVsHierarchy hierarchy, uint itemId)
             => hierarchy.TryGetPropertyObject(itemId, (int)__VSHPROPID5.VSHPROPID_OutputType, out _);
+
+        #region Get/Set Properties
 
         public static uint GetProperty(this IVsHierarchy hierarchy, uint itemId, int propId)
         {
@@ -74,6 +83,23 @@ namespace DulcisX.Core.Extensions
             VsHelper.ValidateSuccessStatusCode(result);
 
             return val;
+        }
+
+        public static bool TryGetProperty(this IVsHierarchy hierarchy, uint itemId, int propId, out uint value)
+        {
+            ThreadHelper.ThrowIfNotOnUIThread();
+
+            var result = hierarchy.GetProperty(itemId, propId, out var val);
+
+            if (!VsHelper.HasSuccessCode(result))
+            {
+                value = default;
+                return false;
+            }
+
+            value = (uint)Convert.ToInt32(val);
+
+            return true;
         }
 
         public static bool TryGetProperty<TType>(this IVsHierarchy hierarchy, uint itemId, int propId, out TType type)
@@ -110,5 +136,7 @@ namespace DulcisX.Core.Extensions
 
             VsHelper.ValidateSuccessStatusCode(result);
         }
+
+        #endregion
     }
 }

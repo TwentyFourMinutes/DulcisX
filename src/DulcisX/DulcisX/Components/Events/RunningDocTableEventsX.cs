@@ -8,7 +8,7 @@ using System;
 
 namespace DulcisX.Components.Events
 {
-    internal class RunningDocTableEventsX : EventCookieX, IRunningDocTableEventsX, IVsRunningDocTableEvents3
+    internal class RunningDocTableEventsX : BaseEventX, IRunningDocTableEventsX, IVsRunningDocTableEvents3
     {
         public event Action<DocumentX, _VSRDTFLAGS, uint, uint> OnDocumentLocked;
         public event Action<DocumentX, _VSRDTFLAGS, uint, uint> OnDocumentUnlocked;
@@ -20,24 +20,24 @@ namespace DulcisX.Components.Events
 
         private readonly IVsRunningDocumentTable _rdt;
 
-        private RunningDocTableEventsX(IVsRunningDocumentTable rdt)
+        private RunningDocTableEventsX(IVsRunningDocumentTable rdt, SolutionX solution) : base(solution)
             => _rdt = rdt;
 
         public int OnAfterFirstDocumentLock(uint docCookie, uint dwRDTLockType, uint dwReadLocksRemaining, uint dwEditLocksRemaining)
         {
-            OnDocumentLocked?.Invoke(_rdt.GetDocument(docCookie), (_VSRDTFLAGS)dwRDTLockType, dwReadLocksRemaining, dwEditLocksRemaining);
+            OnDocumentLocked?.Invoke(_rdt.GetDocument(docCookie, Solution), (_VSRDTFLAGS)dwRDTLockType, dwReadLocksRemaining, dwEditLocksRemaining);
             return VSConstants.S_OK;
         }
 
         public int OnBeforeLastDocumentUnlock(uint docCookie, uint dwRDTLockType, uint dwReadLocksRemaining, uint dwEditLocksRemaining)
         {
-            OnDocumentUnlocked?.Invoke(_rdt.GetDocument(docCookie), (_VSRDTFLAGS)dwRDTLockType, dwReadLocksRemaining, dwEditLocksRemaining);
+            OnDocumentUnlocked?.Invoke(_rdt.GetDocument(docCookie, Solution), (_VSRDTFLAGS)dwRDTLockType, dwReadLocksRemaining, dwEditLocksRemaining);
             return VSConstants.S_OK;
         }
 
         public int OnAfterSave(uint docCookie)
         {
-            OnSaved?.Invoke(_rdt.GetDocument(docCookie));
+            OnSaved?.Invoke(_rdt.GetDocument(docCookie, Solution));
             return VSConstants.S_OK;
         }
 
@@ -46,19 +46,19 @@ namespace DulcisX.Components.Events
 
         public int OnBeforeDocumentWindowShow(uint docCookie, int fFirstShow, IVsWindowFrame pFrame)
         {
-            OnDocumentWindowShow?.Invoke(_rdt.GetDocument(docCookie), fFirstShow != 0, pFrame);
+            OnDocumentWindowShow?.Invoke(_rdt.GetDocument(docCookie, Solution), fFirstShow != 0, pFrame);
             return VSConstants.S_OK;
         }
 
         public int OnAfterDocumentWindowHide(uint docCookie, IVsWindowFrame pFrame)
         {
-            OnDocumentWindowHidden?.Invoke(_rdt.GetDocument(docCookie), pFrame);
+            OnDocumentWindowHidden?.Invoke(_rdt.GetDocument(docCookie, Solution), pFrame);
             return VSConstants.S_OK;
         }
 
         public int OnAfterAttributeChangeEx(uint docCookie, uint grfAttribs, IVsHierarchy pHierOld, uint itemidOld, string pszMkDocumentOld, IVsHierarchy pHierNew, uint itemidNew, string pszMkDocumentNew)
         {
-            OnAttributeChanged?.Invoke(_rdt.GetDocument(docCookie), (__VSRDTATTRIB)grfAttribs,
+            OnAttributeChanged?.Invoke(_rdt.GetDocument(docCookie, Solution), (__VSRDTATTRIB)grfAttribs,
             new DocumentStateX
             {
                 Hierarchy = pHierOld,
@@ -76,7 +76,7 @@ namespace DulcisX.Components.Events
 
         public int OnBeforeSave(uint docCookie)
         {
-            OnSave?.Invoke(_rdt.GetDocument(docCookie));
+            OnSave?.Invoke(_rdt.GetDocument(docCookie, Solution));
             return VSConstants.S_OK;
         }
 
@@ -93,7 +93,7 @@ namespace DulcisX.Components.Events
 
             var rdt = solution.ServiceProviders.GetService<SVsRunningDocumentTable, IVsRunningDocumentTable>();
 
-            var rdtEvents = new RunningDocTableEventsX(rdt);
+            var rdtEvents = new RunningDocTableEventsX(rdt, solution);
 
             var result = rdt.AdviseRunningDocTableEvents(rdtEvents, out var cookieUID);
 
