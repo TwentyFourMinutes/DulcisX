@@ -31,7 +31,7 @@ namespace DulcisX.Components
 
         public __VSPROJOUTPUTTYPE OutputType
         {
-            get => (__VSPROJOUTPUTTYPE)Convert.ToInt32(UnderlyingHierarchy.GetPropertyObject(ItemId, (int)__VSHPROPID5.VSHPROPID_OutputType));
+            get => (__VSPROJOUTPUTTYPE)UnderlyingHierarchy.GetProperty(ItemId, (int)__VSHPROPID5.VSHPROPID_OutputType);
             set => SetProperty((int)__VSHPROPID5.VSHPROPID_OutputType, (uint)(int)value);
         }
 

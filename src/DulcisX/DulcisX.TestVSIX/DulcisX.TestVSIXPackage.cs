@@ -7,7 +7,6 @@ using DulcisX.Core;
 using Microsoft.VisualStudio;
 using Microsoft.VisualStudio.Shell;
 using Task = System.Threading.Tasks.Task;
-using System.Collections.Generic;
 
 namespace DulcisX.TestVSIX
 {
@@ -34,9 +33,7 @@ namespace DulcisX.TestVSIX
 
         private void DocumentEvents_OnSave(DocumentX obj)
         {
-            var test4 = Solution.Projects.ToList();
-
-            var test2 = obj.ParentProject;
+            var test4 = obj.ParentProject.OutputType;
 
             //var test1 = Solution.Projects.FirstOrDefault(x => x.FullName == "bcd");
 

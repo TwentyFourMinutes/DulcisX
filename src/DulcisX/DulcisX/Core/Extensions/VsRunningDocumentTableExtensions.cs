@@ -2,8 +2,6 @@
 using DulcisX.Helpers;
 using Microsoft.VisualStudio.Shell;
 using Microsoft.VisualStudio.Shell.Interop;
-using System;
-using System.Threading.Tasks;
 
 namespace DulcisX.Core.Extensions
 {

@@ -3,7 +3,6 @@ using Microsoft.VisualStudio.Shell;
 using Microsoft.VisualStudio.Shell.Interop;
 using System;
 using System.Runtime.InteropServices;
-using static Microsoft.VisualStudio.VSConstants;
 
 namespace DulcisX.Core.Extensions
 {
