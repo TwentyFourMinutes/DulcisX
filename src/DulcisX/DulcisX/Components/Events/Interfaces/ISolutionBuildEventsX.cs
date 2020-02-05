@@ -15,6 +15,6 @@ namespace DulcisX.Components.Events
 
         event BeforeProjectConfigurationBuild OnBeforeProjectConfigurationBuild;
 
-        event Action OnAfterProjectConfigurationChange;
+        event Action<ProjectX> OnAfterProjectConfigurationChange;
     }
 }

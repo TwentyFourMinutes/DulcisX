@@ -16,7 +16,7 @@ namespace DulcisX.Components.Events
 
         public event BeforeProjectConfigurationBuild OnBeforeProjectConfigurationBuild;
 
-        public event Action OnAfterProjectConfigurationChange;
+        public event Action<ProjectX> OnAfterProjectConfigurationChange;
 
         private readonly IVsSolutionBuildManager _buildManager;
 
@@ -58,7 +58,7 @@ namespace DulcisX.Components.Events
 
         public int OnActiveProjectCfgChange(IVsHierarchy pIVsHierarchy)
         {
-            OnAfterProjectConfigurationChange?.Invoke();
+            OnAfterProjectConfigurationChange?.Invoke(Solution.GetProject(pIVsHierarchy));
             return VSConstants.S_OK;
         }
 
