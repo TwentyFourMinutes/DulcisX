@@ -33,13 +33,14 @@ namespace DulcisX.TestVSIX
 
         private void DocumentEvents_OnSave(DocumentX obj)
         {
-            var test4 = obj.ParentProject.OutputType;
+            var test4 = obj.ParentProject.FullName;
 
             //var test1 = Solution.Projects.FirstOrDefault(x => x.FullName == "bcd");
 
             //var files = test1.ToList().First(x => x.FullName == "yeet");
 
             //var file = files.ToList();
+            
         }
         #endregion
     }

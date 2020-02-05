@@ -29,6 +29,8 @@ namespace DulcisX.Components
             }
         }
 
+        public IVsProject UnderlyingProject => (IVsProject)UnderlyingHierarchy;
+
         public __VSPROJOUTPUTTYPE OutputType
         {
             get => (__VSPROJOUTPUTTYPE)UnderlyingHierarchy.GetProperty(ItemId, (int)__VSHPROPID5.VSHPROPID_OutputType);

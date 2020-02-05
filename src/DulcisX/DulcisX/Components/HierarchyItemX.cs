@@ -13,6 +13,8 @@ namespace DulcisX.Components
 {
     public class HierarchyItemX : HierarchyPropertiesX, IEnumerable<HierarchyItemX>
     {
+        public string FullName => GetFullName();
+
         public bool ContainsItems => IsContainer && this.Any();
 
         public bool IsContainer => UnderlyingHierarchy.IsContainer(ItemId);
@@ -67,7 +69,7 @@ namespace DulcisX.Components
         {
             VsHelper.ValidateHierarchyType(ItemType, HierarchyItemTypeX.Solution);
 
-            return ParentSolution;
+            return (SolutionX)this;
         }
 
         public ProjectX AsProject()
@@ -181,6 +183,36 @@ namespace DulcisX.Components
 
                 previousParent = previousParent.ParentItem;
             }
+        }
+
+        private string GetFullName()
+        {
+            ThreadHelper.ThrowIfNotOnUIThread();
+
+            string fullName = null;
+            int result = 0;
+
+            switch (ItemType)
+            {
+                case HierarchyItemTypeX.Document:
+                case HierarchyItemTypeX.Folder:
+                    result = ParentProject.UnderlyingProject.GetMkDocument(ItemId, out fullName);
+                    break;
+                case HierarchyItemTypeX.Project:
+                    result = AsProject().UnderlyingProject.GetMkDocument(ItemId, out fullName);
+                    break;
+                case HierarchyItemTypeX.Solution:
+                    result = AsSolution().UnderlyingSolution.GetProperty((int)__VSPROPID.VSPROPID_SolutionFileName, out var tempPath);
+                    fullName = (string)tempPath;
+                    break;
+                case HierarchyItemTypeX.VirtualFolder:
+                    fullName = null;
+                    break;
+            }
+
+            VsHelper.ValidateSuccessStatusCode(result);
+
+            return fullName;
         }
 
         IEnumerator IEnumerable.GetEnumerator()
