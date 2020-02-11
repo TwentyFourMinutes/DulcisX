@@ -554,7 +554,6 @@
     <Compile Include="Core\Models\Enums\HierarchyItemType.cs" />
     <Compile Include="Core\Models\Interfaces\IServiceProviders.cs" />
     <Compile Include="Core\Models\HierarchyPropertiesX.cs" />
-    <Compile Include="Core\Models\SelectedItemX.cs" />
     <Compile Include="Core\Models\SelectedHierarchyItemsX.cs" />
     <Compile Include="Core\PackageX.cs" />
     <Compile Include="Exceptions\InvalidHierarchyTypeException.cs" />

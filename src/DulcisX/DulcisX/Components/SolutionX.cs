@@ -3,6 +3,7 @@ using DulcisX.Core.Models;
 using DulcisX.Core.Models.Enums;
 using DulcisX.Core.Models.Interfaces;
 using DulcisX.Helpers;
+using EnvDTE80;
 using Microsoft.VisualStudio;
 using Microsoft.VisualStudio.Shell;
 using Microsoft.VisualStudio.Shell.Interop;
@@ -19,9 +20,26 @@ namespace DulcisX.Components
 
         public IVsSolution UnderlyingSolution { get; }
 
+        #region Properties
+
         public IEnumerable<ProjectX> Projects => this;
 
+        public IEnumerable<ProjectX> StartupProjects
+        {
+            get
+            {
+                ThreadHelper.ThrowIfNotOnUIThread();
+
+                foreach (var projectPath in DTE2.Solution.SolutionBuild.StartupProjects)
+                {
+                    yield return GetProject(projectPath);
+                }
+            }
+        }
+
         public SelectedHierarchyItemsX SelectedHierarchyItems { get; }
+
+        #endregion
 
         #region Events
 
@@ -80,8 +98,22 @@ namespace DulcisX.Components
 
         internal IServiceProviders ServiceProviders { get; }
 
-        internal SolutionX(IVsSolution solution, IServiceProviders providers) : base((IVsHierarchy)solution, VSConstants.VSITEMID_ROOT, HierarchyItemTypeX.Solution, ConstructorInstance.This<SolutionX>(), ConstructorInstance.Empty<ProjectX>())
-            => (UnderlyingSolution, ServiceProviders, SelectedHierarchyItems) = (solution, providers, new SelectedHierarchyItemsX(this));
+
+        internal DTE2 DTE2 { get; }
+
+        internal SolutionX(IVsSolution solution, DTE2 dte2, IServiceProviders providers) : base((IVsHierarchy)solution, VSConstants.VSITEMID_ROOT, HierarchyItemTypeX.Solution, ConstructorInstance.This<SolutionX>(), ConstructorInstance.Empty<ProjectX>())
+            => (UnderlyingSolution, ServiceProviders, SelectedHierarchyItems, DTE2) = (solution, providers, new SelectedHierarchyItemsX(this), dte2);
+
+        #region Projects
+
+        public ProjectX GetProject(string fullName)
+        {
+            ThreadHelper.ThrowIfNotOnUIThread();
+            var result = UnderlyingSolution.GetProjectOfUniqueName(fullName, out var hierarchy);
+            VsHelper.ValidateSuccessStatusCode(result);
+
+            return new ProjectX(hierarchy, VSConstants.VSITEMID_ROOT, this);
+        }
 
         public ProjectX GetProject(Guid projectGuid)
         {
@@ -126,6 +158,10 @@ namespace DulcisX.Components
         IEnumerator IEnumerable.GetEnumerator()
             => GetEnumerator();
 
+        #endregion
+
+        #region Disposing
+
         protected virtual void Dispose(bool disposing)
         {
             if (!IsDisposed)
@@ -151,5 +187,7 @@ namespace DulcisX.Components
             if (IsDisposed)
                 throw new ObjectDisposedException(nameof(SolutionX));
         }
+
+        #endregion
     }
 }

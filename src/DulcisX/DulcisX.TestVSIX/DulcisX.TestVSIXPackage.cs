@@ -7,6 +7,12 @@ using DulcisX.Core;
 using Microsoft.VisualStudio;
 using Microsoft.VisualStudio.Shell;
 using Task = System.Threading.Tasks.Task;
+using Microsoft.VisualStudio.Shell.Interop;
+using DulcisX.Core.Models.Interfaces;
+using Microsoft.VisualStudio.OLE.Interop;
+using System.IO;
+using System.Text;
+using Microsoft.VisualStudio.ProjectSystem.VS;
 
 namespace DulcisX.TestVSIX
 {
@@ -31,17 +37,11 @@ namespace DulcisX.TestVSIX
             Solution.DocumentEvents.OnSave += DocumentEvents_OnSave;
         }
 
-        private HierarchyItemX lastItem;
-
         private void DocumentEvents_OnSave(HierarchyItemX obj)
         {
-            if (lastItem is null)
-                lastItem = obj;
-            else
-            {
-                var test = lastItem == obj;
-            }
+
         }
+
         #endregion
     }
 }
