@@ -546,14 +546,17 @@
     <Compile Include="Components\ProjectX.cs" />
     <Compile Include="Components\HierarchyItemX.cs" />
     <Compile Include="Components\SolutionX.cs" />
+    <Compile Include="Components\StartupProjectX.cs" />
     <Compile Include="Core\Extensions\ServiceProvidersExtensions.cs" />
     <Compile Include="Core\Extensions\VsHierarchyExtensions.cs" />
     <Compile Include="Core\Extensions\VsRunningDocumentTableExtensions.cs" />
     <Compile Include="Core\Models\ConstructorInstance.cs" />
     <Compile Include="Core\Models\DocumentStateX.cs" />
     <Compile Include="Core\Models\Enums\HierarchyItemType.cs" />
+    <Compile Include="Core\Models\Enums\StartupOptions.cs" />
     <Compile Include="Core\Models\Interfaces\IServiceProviders.cs" />
     <Compile Include="Core\Models\HierarchyPropertiesX.cs" />
+    <Compile Include="Core\Models\PackageUserOptions\SolutionConfigurationOptions.cs" />
     <Compile Include="Core\Models\SelectedHierarchyItemsX.cs" />
     <Compile Include="Core\PackageX.cs" />
     <Compile Include="Exceptions\InvalidHierarchyTypeException.cs" />

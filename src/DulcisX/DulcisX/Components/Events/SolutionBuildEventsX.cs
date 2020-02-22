@@ -69,15 +69,13 @@ namespace DulcisX.Components.Events
             VsHelper.ValidateSuccessStatusCode(result);
         }
 
-        internal static ISolutionBuildEventsX Create(SolutionX solution)
+        internal static ISolutionBuildEventsX Create(SolutionX solution, IVsSolutionBuildManager solutionBuildManager)
         {
             ThreadHelper.ThrowIfNotOnUIThread();
 
-            var manager = solution.ServiceProviders.GetService<SVsSolutionBuildManager, IVsSolutionBuildManager>();
+            var solutionBuildEvents = new SolutionBuildEventsX(solutionBuildManager, solution);
 
-            var solutionBuildEvents = new SolutionBuildEventsX(manager, solution);
-
-            var result = manager.AdviseUpdateSolutionEvents(solutionBuildEvents, out var cookieUID);
+            var result = solutionBuildManager.AdviseUpdateSolutionEvents(solutionBuildEvents, out var cookieUID);
 
             VsHelper.ValidateSuccessStatusCode(result);
 

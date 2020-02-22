@@ -240,7 +240,7 @@ namespace DulcisX.Components
         {
             if (hierarchyItem1 is null || hierarchyItem2 is null)
                 return false;
-            
+
             return hierarchyItem1.FullName == hierarchyItem2.FullName;
         }
 

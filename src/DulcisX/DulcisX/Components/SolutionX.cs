@@ -2,6 +2,7 @@
 using DulcisX.Core.Models;
 using DulcisX.Core.Models.Enums;
 using DulcisX.Core.Models.Interfaces;
+using DulcisX.Core.Models.PackageUserOptions;
 using DulcisX.Helpers;
 using EnvDTE80;
 using Microsoft.VisualStudio;
@@ -20,22 +21,30 @@ namespace DulcisX.Components
 
         public IVsSolution UnderlyingSolution { get; }
 
+        public IVsSolutionPersistence SolutionPersistence { get; }
+
+
+        private IVsSolutionBuildManager _solutionBuildManager;
+
+        public IVsSolutionBuildManager SolutionBuildManager
+        {
+            get
+            {
+                if (_solutionBuildManager is null)
+                {
+                    _solutionBuildManager = ServiceProviders.GetService<SVsSolutionBuildManager, IVsSolutionBuildManager>();
+                }
+
+                return _solutionBuildManager;
+            }
+        }
+
+
         #region Properties
 
         public IEnumerable<ProjectX> Projects => this;
 
-        public IEnumerable<ProjectX> StartupProjects
-        {
-            get
-            {
-                ThreadHelper.ThrowIfNotOnUIThread();
-
-                foreach (var projectPath in DTE2.Solution.SolutionBuild.StartupProjects)
-                {
-                    yield return GetProject(projectPath);
-                }
-            }
-        }
+        public IEnumerable<StartupProjectX> StartupProjects => GetStartupProjects();
 
         public SelectedHierarchyItemsX SelectedHierarchyItems { get; }
 
@@ -70,7 +79,7 @@ namespace DulcisX.Components
 
                 if (_buildEvents is null)
                 {
-                    _buildEvents = SolutionBuildEventsX.Create(this);
+                    _buildEvents = SolutionBuildEventsX.Create(this, SolutionBuildManager);
                 }
 
                 return _buildEvents;
@@ -98,11 +107,10 @@ namespace DulcisX.Components
 
         internal IServiceProviders ServiceProviders { get; }
 
-
         internal DTE2 DTE2 { get; }
 
-        internal SolutionX(IVsSolution solution, DTE2 dte2, IServiceProviders providers) : base((IVsHierarchy)solution, VSConstants.VSITEMID_ROOT, HierarchyItemTypeX.Solution, ConstructorInstance.This<SolutionX>(), ConstructorInstance.Empty<ProjectX>())
-            => (UnderlyingSolution, ServiceProviders, SelectedHierarchyItems, DTE2) = (solution, providers, new SelectedHierarchyItemsX(this), dte2);
+        internal SolutionX(IVsSolution solution, DTE2 dte2, IServiceProviders providers, IVsSolutionPersistence solutionPersistence) : base((IVsHierarchy)solution, VSConstants.VSITEMID_ROOT, HierarchyItemTypeX.Solution, ConstructorInstance.This<SolutionX>(), ConstructorInstance.Empty<ProjectX>())
+            => (UnderlyingSolution, ServiceProviders, SelectedHierarchyItems, DTE2, SolutionPersistence) = (solution, providers, new SelectedHierarchyItemsX(this), dte2, solutionPersistence);
 
         #region Projects
 
@@ -157,6 +165,44 @@ namespace DulcisX.Components
 
         IEnumerator IEnumerable.GetEnumerator()
             => GetEnumerator();
+
+        #endregion
+
+        #region UserConfiguration
+
+        public IEnumerable<StartupProjectX> GetStartupProjects()
+        {
+            var solutionConfiguration = new SolutionConfigurationOptions();
+
+            GetUserConfiguration(solutionConfiguration, "SolutionConfiguration");
+
+            if (solutionConfiguration.IsMultiStartup)
+            {
+                foreach (var startupProject in solutionConfiguration.StartupProjects)
+                {
+                    var project = GetProject(startupProject.Key);
+
+                    yield return new StartupProjectX(startupProject.Value, project);
+                }
+            }
+            else
+            {
+                var result = SolutionBuildManager.get_StartupProject(out var hierarchy);
+
+                yield return new StartupProjectX(StartupOptions.Start, GetProject(hierarchy));
+
+                VsHelper.ValidateSuccessStatusCode(result);
+            }
+        }
+
+        public void GetUserConfiguration(IVsPersistSolutionOpts persistanceSolutionOptions, string streamKey)
+        {
+            ThreadHelper.ThrowIfNotOnUIThread();
+
+            var result = SolutionPersistence.LoadPackageUserOpts(persistanceSolutionOptions, streamKey);
+
+            VsHelper.ValidateSuccessStatusCode(result);
+        }
 
         #endregion
 

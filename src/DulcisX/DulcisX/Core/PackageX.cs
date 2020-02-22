@@ -87,7 +87,7 @@ namespace DulcisX.Core
             {
                 if (_solution is null)
                 {
-                    _solution = new SolutionX(this.GetService<SVsSolution, IVsSolution>(), DTE2, GetServiceProviders());
+                    _solution = new SolutionX(this.GetService<SVsSolution, IVsSolution>(), DTE2, GetServiceProviders(), this.GetService<SVsSolutionPersistence, IVsSolutionPersistence>());
                 }
 
                 return _solution;
@@ -98,7 +98,7 @@ namespace DulcisX.Core
         {
             if (_solution is null)
             {
-                _solution = new SolutionX(await this.GetServiceAsync<SVsSolution, IVsSolution>(), DTE2, GetServiceProviders());
+                _solution = new SolutionX(await this.GetServiceAsync<SVsSolution, IVsSolution>(), DTE2, GetServiceProviders(), await this.GetServiceAsync<SVsSolutionPersistence, IVsSolutionPersistence>());
             }
 
             return _solution;

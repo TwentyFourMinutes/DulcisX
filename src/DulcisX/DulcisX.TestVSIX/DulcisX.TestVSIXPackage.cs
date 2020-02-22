@@ -2,17 +2,11 @@
 using System.Runtime.InteropServices;
 using System.Threading;
 using DulcisX.Components;
-using System.Linq;
 using DulcisX.Core;
 using Microsoft.VisualStudio;
 using Microsoft.VisualStudio.Shell;
 using Task = System.Threading.Tasks.Task;
-using Microsoft.VisualStudio.Shell.Interop;
-using DulcisX.Core.Models.Interfaces;
-using Microsoft.VisualStudio.OLE.Interop;
-using System.IO;
-using System.Text;
-using Microsoft.VisualStudio.ProjectSystem.VS;
+using System.Linq;
 
 namespace DulcisX.TestVSIX
 {
@@ -39,7 +33,7 @@ namespace DulcisX.TestVSIX
 
         private void DocumentEvents_OnSave(HierarchyItemX obj)
         {
-
+            var project = Solution.StartupProjects.ToList();
         }
 
         #endregion
