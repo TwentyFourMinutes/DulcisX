@@ -114,10 +114,10 @@ namespace DulcisX.Components
 
         #region Projects
 
-        public ProjectX GetProject(string fullName)
+        public ProjectX GetProject(string uniqueName)
         {
             ThreadHelper.ThrowIfNotOnUIThread();
-            var result = UnderlyingSolution.GetProjectOfUniqueName(fullName, out var hierarchy);
+            var result = UnderlyingSolution.GetProjectOfUniqueName(uniqueName, out var hierarchy);
             VsHelper.ValidateSuccessStatusCode(result);
 
             return new ProjectX(hierarchy, VSConstants.VSITEMID_ROOT, this);
@@ -126,17 +126,18 @@ namespace DulcisX.Components
         public ProjectX GetProject(Guid projectGuid)
         {
             ThreadHelper.ThrowIfNotOnUIThread();
-            return Projects.FirstOrDefault(x => x.UnderlyingGuid == projectGuid);
+
+            var result = UnderlyingSolution.GetProjectOfGuid(projectGuid, out var hierarchy);
+            VsHelper.ValidateSuccessStatusCode(result);
+
+            return new ProjectX(hierarchy, VSConstants.VSITEMID_ROOT, this);
         }
 
         public ProjectX GetProject(IVsHierarchy hierarchy)
         {
             ThreadHelper.ThrowIfNotOnUIThread();
 
-            var result = UnderlyingSolution.GetGuidOfProject(hierarchy, out var projectGuid);
-            VsHelper.ValidateSuccessStatusCode(result);
-
-            return GetProject(projectGuid);
+            return new ProjectX(hierarchy, VSConstants.VSITEMID_ROOT, this);
         }
 
         public new IEnumerator<ProjectX> GetEnumerator()
