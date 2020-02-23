@@ -37,7 +37,7 @@ namespace DulcisX.Components
             set => SetProperty((int)__VSHPROPID5.VSHPROPID_OutputType, (uint)(int)value);
         }
 
-        internal ProjectX(IVsHierarchy hierarchy, uint itemId, SolutionX solution) : base(hierarchy, itemId, HierarchyItemTypeX.Project, ConstructorInstance.FromValue(solution), ConstructorInstance.Empty<ProjectX>())
+        internal ProjectX(IVsHierarchy hierarchy, uint itemId, SolutionX solution, HierarchyItemX parentItem = null) : base(hierarchy, itemId, HierarchyItemTypeX.Project, ConstructorInstance.FromValue(solution), ConstructorInstance.Empty<ProjectX>(), parentItem)
         {
 
         }

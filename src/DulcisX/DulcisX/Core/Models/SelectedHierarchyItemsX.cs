@@ -52,9 +52,7 @@ namespace DulcisX.Core.Models
             {
                 var item = itemSelection[i];
 
-                var type = item.pHier.GetHierarchyItemType(item.itemid);
-
-                yield return new HierarchyItemX(item.pHier, item.itemid, type, ConstructorInstance.FromValue(_solution), ConstructorInstance.Empty<ProjectX>());
+                yield return item.pHier.ConstructHierarchyItem(item.itemid, _solution);
             }
         }
 

@@ -107,25 +107,19 @@ namespace DulcisX.Components
             if (parentItemId > VSConstants.VSITEMID_ROOT)
                 parentItemId = VSConstants.VSITEMID_ROOT;
 
-            HierarchyItemTypeX itemType;
-
-            IVsHierarchy tempHierarchy = null;
+            IVsHierarchy tempHierarchy;
 
             if (parentItemId == VSConstants.VSITEMID_ROOT &&
                ItemId == VSConstants.VSITEMID_ROOT)
             {
                 tempHierarchy = UnderlyingHierarchy.GetProperty<IVsHierarchy>(VSConstants.VSITEMID_ROOT, (int)__VSHPROPID.VSHPROPID_ParentHierarchy);
-
-                itemType = tempHierarchy.GetHierarchyItemType(parentItemId);
             }
             else
             {
-                itemType = UnderlyingHierarchy.GetHierarchyItemType(parentItemId);
+                tempHierarchy = UnderlyingHierarchy;
             }
 
-            tempHierarchy = tempHierarchy ?? UnderlyingHierarchy;
-
-            return new HierarchyItemX(tempHierarchy, parentItemId, itemType, ConstructorInstance.FromValue(ParentSolution), ConstructorInstance.Empty<ProjectX>());
+            return tempHierarchy.ConstructHierarchyItem(parentItemId, ParentSolution);
         }
 
         public HierarchyItemX GetFirstParent(HierarchyItemTypeX itemType)
@@ -202,16 +196,12 @@ namespace DulcisX.Components
                 {
                     if (UnderlyingHierarchy.TryGetNestedHierarchy(node, out var hierarchy))
                     {
-                        var type = hierarchy.GetHierarchyItemType(VSConstants.VSITEMID_ROOT);
-
-                        yield return new HierarchyItemX(hierarchy, VSConstants.VSITEMID_ROOT, type, ConstructorInstance.FromValue(ParentSolution), ConstructorInstance.FromValue(ParentProject), this);
+                        yield return hierarchy.ConstructHierarchyItem(VSConstants.VSITEMID_ROOT, ParentSolution, null, ParentProject, this);
                     }
                 }
                 else
                 {
-                    var type = UnderlyingHierarchy.GetHierarchyItemType(node);
-
-                    yield return new HierarchyItemX(UnderlyingHierarchy, node, type, ConstructorInstance.FromValue(ParentSolution), ConstructorInstance.FromValue(ParentProject), this);
+                    yield return UnderlyingHierarchy.ConstructHierarchyItem(node, ParentSolution, null, ParentProject, this);
                 }
 
                 node = UnderlyingHierarchy.GetProperty(node, (int)__VSHPROPID.VSHPROPID_NextVisibleSibling);

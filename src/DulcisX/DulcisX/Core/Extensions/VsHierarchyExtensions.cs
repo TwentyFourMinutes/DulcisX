@@ -1,4 +1,6 @@
-﻿using DulcisX.Core.Models.Enums;
+﻿using DulcisX.Components;
+using DulcisX.Core.Models;
+using DulcisX.Core.Models.Enums;
 using DulcisX.Helpers;
 using Microsoft.VisualStudio;
 using Microsoft.VisualStudio.Shell;
@@ -66,6 +68,25 @@ namespace DulcisX.Core.Extensions
                 {
                     return HierarchyItemTypeX.Folder;
                 }
+            }
+        }
+
+        public static HierarchyItemX ConstructHierarchyItem(this IVsHierarchy hierarchy, uint itemId, SolutionX solution, HierarchyItemTypeX? itemType = null, ProjectX parentProject = null, HierarchyItemX parentItem = null)
+        {
+            switch (itemType ?? hierarchy.GetHierarchyItemType(itemId))
+            {
+                case HierarchyItemTypeX.Solution:
+                    return solution;
+                case HierarchyItemTypeX.Project:
+                    return new ProjectX(hierarchy, itemId, solution, parentItem);
+                case HierarchyItemTypeX.Folder:
+                    return new HierarchyItemX(hierarchy, itemId, HierarchyItemTypeX.Folder, ConstructorInstance.FromValue(solution), ConstructorInstance.FromValue(parentProject), parentItem);
+                case HierarchyItemTypeX.VirtualFolder:
+                    return new HierarchyItemX(hierarchy, itemId, HierarchyItemTypeX.VirtualFolder, ConstructorInstance.FromValue(solution), ConstructorInstance.FromValue(parentProject), parentItem);
+                case HierarchyItemTypeX.Document:
+                    return new DocumentX(hierarchy, itemId, solution, parentItem: parentItem);
+                default:
+                    return null;
             }
         }
 
