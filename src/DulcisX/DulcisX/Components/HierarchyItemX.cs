@@ -50,7 +50,7 @@ namespace DulcisX.Components
                     (ItemType == HierarchyItemTypeX.Document ||
                     ItemType == HierarchyItemTypeX.Folder))
                 {
-                    _parentProject = GetFirstParent(HierarchyItemTypeX.Project).AsProject();
+                    _parentProject = new ProjectX(UnderlyingHierarchy, VSConstants.VSITEMID_ROOT, ParentSolution);
                 }
 
                 return _parentProject;
@@ -125,6 +125,15 @@ namespace DulcisX.Components
         public HierarchyItemX GetFirstParent(HierarchyItemTypeX itemType)
         {
             HierarchyItemX previousParent = ParentItem;
+
+            if (itemType == HierarchyItemTypeX.Project)
+            {
+                return ParentProject;
+            }
+            else if (itemType == HierarchyItemTypeX.Solution)
+            {
+                return ParentSolution;
+            }
 
             while (true)
             {
