@@ -158,13 +158,13 @@ namespace DulcisX.Core.Extensions
             return VsHelper.HasSuccessCode(result);
         }
 
-        public static void SetProperty(this IVsHierarchy hierarchy, uint itemId, int propId, object val)
+        public static bool TrySetProperty(this IVsHierarchy hierarchy, uint itemId, int propId, object val)
         {
             ThreadHelper.ThrowIfNotOnUIThread();
 
             var result = hierarchy.SetProperty(itemId, propId, val);
 
-            VsHelper.ValidateSuccessStatusCode(result);
+            return VsHelper.HasSuccessCode(result);
         }
 
         #endregion

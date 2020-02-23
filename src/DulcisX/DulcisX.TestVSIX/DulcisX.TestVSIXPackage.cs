@@ -7,11 +7,12 @@ using Microsoft.VisualStudio;
 using Microsoft.VisualStudio.Shell;
 using Task = System.Threading.Tasks.Task;
 using System.Linq;
+using Microsoft.VisualStudio.Shell.Interop;
 
 namespace DulcisX.TestVSIX
 {
     [PackageRegistration(UseManagedResourcesOnly = true, AllowsBackgroundLoading = true)]
-    [Guid(DulcisXTestVSIXPackage.PackageGuidString)]
+    [Guid(PackageGuidString)]
     [ProvideAutoLoad(VSConstants.UICONTEXT.SolutionExists_string, PackageAutoLoadFlags.BackgroundLoad)]
     public sealed class DulcisXTestVSIXPackage : PackageX
     {
@@ -21,20 +22,21 @@ namespace DulcisX.TestVSIX
 
         public DulcisXTestVSIXPackage()
         {
-            base.OnInitializeAsync += OnInitAsync;
+            OnInitializeAsync += OnInitAsync;
         }
 
         private async Task OnInitAsync(CancellationToken arg2, IProgress<ServiceProgressData> arg1)
         {
             await ThreadHelper.JoinableTaskFactory.SwitchToMainThreadAsync(arg2);
 
-            var test = Solution.StartupProjects;
+            Solution.DocumentEvents.OnSave += DocumentEvents_OnSave;
+        }
 
-            var first = test.First();
+        private void DocumentEvents_OnSave(HierarchyItemX obj)
+        {
+            var test = obj.AsDocument();
 
-            var info = first.Project;
-
-            var pinfo = info.HasParent;
+            var test2 = test.GetPropertyObject((int)__VSHPROPID4.VSHPROPID_BuildAction);
         }
 
         #endregion

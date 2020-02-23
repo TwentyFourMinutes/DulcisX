@@ -102,7 +102,7 @@ namespace DulcisX.Components
                 return null;
             }
 
-            var parentItemId = UnderlyingHierarchy.GetProperty(ItemId, (int)__VSHPROPID.VSHPROPID_Parent);
+            var parentItemId = GetProperty((int)__VSHPROPID.VSHPROPID_Parent);
 
             if (parentItemId > VSConstants.VSITEMID_ROOT)
                 parentItemId = VSConstants.VSITEMID_ROOT;
@@ -188,7 +188,7 @@ namespace DulcisX.Components
 
             ThreadHelper.ThrowIfNotOnUIThread();
 
-            var node = UnderlyingHierarchy.GetProperty(ItemId, (int)__VSHPROPID.VSHPROPID_FirstVisibleChild);
+            var node = GetProperty((int)__VSHPROPID.VSHPROPID_FirstVisibleChild);
 
             do
             {

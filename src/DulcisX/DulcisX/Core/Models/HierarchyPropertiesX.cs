@@ -18,10 +18,32 @@ namespace DulcisX.Core.Models
         protected HierarchyPropertiesX(IVsHierarchy parentHierarchy, uint itemId)
             => (UnderlyingHierarchy, ItemId) = (parentHierarchy, itemId);
 
-        protected TType GetProperty<TType>(int propId)
+        #region Get/Set Properties
+
+        public uint GetProperty(int propId)
+            => UnderlyingHierarchy.GetProperty(ItemId, propId);
+
+        public TType GetProperty<TType>(int propId)
             => UnderlyingHierarchy.GetProperty<TType>(ItemId, propId);
 
-        protected void SetProperty(int propId, object val)
-            => UnderlyingHierarchy.SetProperty(ItemId, propId, val: val);
+        public object GetPropertyObject(int propId)
+            => UnderlyingHierarchy.GetPropertyObject(ItemId, propId);
+
+        public bool TryGetProperty(int propId, out uint value)
+            => UnderlyingHierarchy.TryGetProperty(ItemId, propId, out value);
+
+        public bool TryGetProperty<TType>(int propId, out TType type)
+            => UnderlyingHierarchy.TryGetProperty(ItemId, propId, out type);
+
+        public bool TryGetPropertyObject(int propId, out object obj)
+            => UnderlyingHierarchy.TryGetPropertyObject(ItemId, propId, out obj);
+
+        public void SetProperty(int propId, object val)
+            => UnderlyingHierarchy.SetProperty(ItemId, propId, val);
+
+        public bool TrySetProperty(int propId, object val)
+            => UnderlyingHierarchy.TrySetProperty(ItemId, propId, val);
+
+        #endregion
     }
 }
