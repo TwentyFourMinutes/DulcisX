@@ -5,13 +5,14 @@ using DulcisX.Helpers;
 using Microsoft.VisualStudio;
 using Microsoft.VisualStudio.Shell;
 using Microsoft.VisualStudio.Shell.Interop;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 
 namespace DulcisX.Components
 {
-    public class HierarchyItemX : HierarchyPropertiesX, IEnumerable<HierarchyItemX>
+    public class HierarchyItemX : HierarchyPropertiesX, IEnumerable<HierarchyItemX>, IEquatable<HierarchyItemX>
     {
         public string FullName => GetFullName();
 
@@ -225,31 +226,46 @@ namespace DulcisX.Components
 
         #region Equality Comparison
 
-        public override bool Equals(object obj)
-        {
-            return obj is HierarchyItemX x &&
-                   FullName == x.FullName;
-        }
-
         public override int GetHashCode()
         {
             return FullName.GetHashCode();
         }
 
+        public bool Equals(HierarchyItemX other)
+        {
+            if (other is null)
+                return false;
+
+            if (ReferenceEquals(this, other))
+            {
+                return true;
+            }
+
+            return this.FullName == other.FullName;
+        }
+
         public static bool operator ==(HierarchyItemX hierarchyItem1, HierarchyItemX hierarchyItem2)
         {
-            if (hierarchyItem1 is null || hierarchyItem2 is null)
+            if (hierarchyItem1 is null && hierarchyItem2 is null)
+            {
+                return true;
+            }
+
+            if ((hierarchyItem1 is null && !(hierarchyItem2 is null)) ||
+                (hierarchyItem2 is null && !(hierarchyItem1 is null)))
                 return false;
+
+            if (ReferenceEquals(hierarchyItem1, hierarchyItem2))
+            {
+                return true;
+            }
 
             return hierarchyItem1.FullName == hierarchyItem2.FullName;
         }
 
         public static bool operator !=(HierarchyItemX hierarchyItem1, HierarchyItemX hierarchyItem2)
         {
-            if (hierarchyItem1 is null || hierarchyItem2 is null)
-                return false;
-
-            return hierarchyItem1.FullName != hierarchyItem2.FullName;
+            return !(hierarchyItem1 == hierarchyItem2);
         }
 
         #endregion

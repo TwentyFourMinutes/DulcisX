@@ -27,6 +27,14 @@ namespace DulcisX.TestVSIX
         private async Task OnInitAsync(CancellationToken arg2, IProgress<ServiceProgressData> arg1)
         {
             await ThreadHelper.JoinableTaskFactory.SwitchToMainThreadAsync(arg2);
+
+            var test = Solution.StartupProjects;
+
+            var first = test.First();
+
+            var info = first.Project;
+
+            var pinfo = info.HasParent;
         }
 
         #endregion

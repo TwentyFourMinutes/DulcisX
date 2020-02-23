@@ -628,7 +628,6 @@
     <Compile Include="Exceptions\InvalidHierarchyTypeException.cs" />
     <Compile Include="Exceptions\InvalidVSStatusCodeException.cs" />
     <Compile Include="Helpers\VSHelper.cs" />
-    <Compile Include="ProjectProperties.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
