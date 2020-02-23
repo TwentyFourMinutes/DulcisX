@@ -1,14 +1,15 @@
 ﻿using DulcisX.Core.Models;
 using DulcisX.Core.Models.Enums;
 using Microsoft.VisualStudio.Shell.Interop;
+using System;
 
 namespace DulcisX.Components
 {
     public class DocumentX : HierarchyItemX
     {
-        public int BuildAction
+        public string BuildAction
         {
-            get => GetProperty<int>((int)__VSHPROPID4.VSHPROPID_BuildAction);
+            get => GetProperty<string>((int)__VSHPROPID4.VSHPROPID_BuildAction);
             set => SetProperty((int)__VSHPROPID4.VSHPROPID_BuildAction, value);
         }
 
