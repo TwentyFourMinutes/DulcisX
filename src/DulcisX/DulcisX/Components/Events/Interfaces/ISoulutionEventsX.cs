@@ -14,19 +14,19 @@ namespace DulcisX.Components.Events
         event QueryProjectClose OnQueryProjectClose;
 
         event Action<ProjectX, bool> OnBeforeProjectClose;
-        
+
         event Action<IVsHierarchy, ProjectX> OnAfterProjectLoad;
-        
+
         event QueryProjectUnload OnQueryProjectUnload;
-        
+
         event Action<ProjectX, IVsHierarchy> OnBeforeProjectUnload;
-        
+
         event Action<bool> OnAfterSolutionOpen;
-        
+
         event QuerySolutionClose OnQuerySolutionClose;
-        
+
         event Action OnBeforeSolutionClose;
-        
+
         event Action OnAfterSolutionClose;
     }
 }

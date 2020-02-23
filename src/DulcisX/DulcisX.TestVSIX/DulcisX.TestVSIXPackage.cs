@@ -27,13 +27,6 @@ namespace DulcisX.TestVSIX
         private async Task OnInitAsync(CancellationToken arg2, IProgress<ServiceProgressData> arg1)
         {
             await ThreadHelper.JoinableTaskFactory.SwitchToMainThreadAsync(arg2);
-
-            Solution.DocumentEvents.OnSave += DocumentEvents_OnSave;
-        }
-
-        private void DocumentEvents_OnSave(HierarchyItemX obj)
-        {
-            var project = Solution.StartupProjects.ToList();
         }
 
         #endregion

@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 [assembly: AssemblyTitle("DulcisX")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyDescription("DulcisX enables you to write VSIX extensions a lot faster, by providing new, cleaner and easier API's.")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
+[assembly: AssemblyCompany("Twenty")]
 [assembly: AssemblyProduct("DulcisX")]
-[assembly: AssemblyCopyright("Copyright ©  2020")]
+[assembly: AssemblyCopyright("Copyright © Twenty 2020")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
