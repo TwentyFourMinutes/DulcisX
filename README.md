@@ -1,6 +1,6 @@
 # DulcisX
 
-<img alt="GitHub issues" src="https://img.shields.io/github/issues-raw/TwentyFourMinutes/DulcisX?style=flat-square"> <img alt="GitHub release (latest by date including pre-releases)" src="https://img.shields.io/github/v/release/TwentyFourMinutes/DulcisX?include_prereleases&style=flat-square"> ![GitHub](https://img.shields.io/github/license/TwentyFourMinutes/DulcisX?style=flat-square)
+![Nuget](https://img.shields.io/nuget/dt/DulcisX?style=flat-square) <img alt="GitHub issues" src="https://img.shields.io/github/issues-raw/TwentyFourMinutes/DulcisX?style=flat-square"> <img alt="GitHub release (latest by date including pre-releases)" src="https://img.shields.io/github/v/release/TwentyFourMinutes/DulcisX?include_prereleases&style=flat-square"> ![GitHub](https://img.shields.io/github/license/TwentyFourMinutes/DulcisX?style=flat-square)
 
 DulcisX translates to _Sweet Extension_ and this is the goal for this Project, making the experience of developing Visual Studio Extensions sweat. It allows you to get your extension done faster and doesn't bother you with ugly or missing API's.
 
@@ -15,6 +15,18 @@ How you can help? This can be done in numerous ways, over on the issue section, 
 - Creating pull requests
 - Informing about missing documentation/API's
 
+## Installation
+
+You can either get this package by downloading it from the NuGet Package Manager built in Visual Studio, in the [releases](https://github.com/TwentyFourMinutes/DulcisX/releases) tab or from the official [nuget.org](https://www.nuget.org/packages/DulcisX) website.
+
+Also you can install it via the **P**ackage **M**anager **C**onsole:
+
+```
+PM> Install-Package DulcisX
+```
+
+Please note, that the package is currently in the pre-release state. This indicates that the version is not yet production ready.
+
 ### Collaboration
 
 If you want to collaborate on this project more than creating issues and PR's, feel free to contact me on any of the mentioned contacts at the bottom of the file.
@@ -22,10 +34,6 @@ If you want to collaborate on this project more than creating issues and PR's, f
 ## Stay up to date
 
 If you want to see what is currently planned and being worked on, head over to the projects [Trello](https://trello.com/b/wHTa9Vb8/dulcisx) board. 
-
-## Installation
-
-For now you will need to compile and build the project yourself in order to use it. Later on, after some testing has been done and the most basic API's are covered, it will be published on nuget.org.
 
 ## Notes
 
