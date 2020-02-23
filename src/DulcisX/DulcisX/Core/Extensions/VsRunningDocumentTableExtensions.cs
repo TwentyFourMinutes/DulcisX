@@ -1,6 +1,4 @@
 ﻿using DulcisX.Components;
-using DulcisX.Core.Models;
-using DulcisX.Core.Models.Enums;
 using DulcisX.Helpers;
 using Microsoft.VisualStudio.Shell;
 using Microsoft.VisualStudio.Shell.Interop;

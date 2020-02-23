@@ -3,7 +3,9 @@ using DulcisX.Core.Models.Interfaces;
 using EnvDTE80;
 using Microsoft.VisualStudio.Shell;
 using Microsoft.VisualStudio.Shell.Interop;
+using StringyEnums;
 using System;
+using System.Reflection;
 using System.Threading;
 using System.Threading.Tasks;
 using Task = System.Threading.Tasks.Task;
@@ -39,6 +41,11 @@ namespace DulcisX.Core
         }
 
         #endregion
+
+        static PackageX()
+        {
+            EnumCore.Init(initializer => initializer.InitWith(Assembly.GetExecutingAssembly()), false);
+        }
 
         #region MethodEvents
 

@@ -53,8 +53,8 @@
     <AssemblyOriginatorKeyFile>Twenty.pfx</AssemblyOriginatorKeyFile>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="BidirectionalDict, Version=1.1.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\BidirectionalDict.1.1.0\lib\net48\BidirectionalDict.dll</HintPath>
+    <Reference Include="BidirectionalDict, Version=1.2.0.0, Culture=neutral, PublicKeyToken=ee564df2d0985226, processorArchitecture=MSIL">
+      <HintPath>..\packages\BidirectionalDict.1.2.0\lib\net48\BidirectionalDict.dll</HintPath>
     </Reference>
     <Reference Include="EnvDTE, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
       <HintPath>..\packages\EnvDTE.8.0.2\lib\net10\EnvDTE.dll</HintPath>
@@ -360,8 +360,8 @@
     <Reference Include="StreamJsonRpc, Version=2.3.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>..\packages\StreamJsonRpc.2.3.99\lib\netstandard2.0\StreamJsonRpc.dll</HintPath>
     </Reference>
-    <Reference Include="StringyEnums, Version=1.1.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\StringyEnums.1.1.0\lib\net48\StringyEnums.dll</HintPath>
+    <Reference Include="StringyEnums, Version=1.2.0.0, Culture=neutral, PublicKeyToken=ee564df2d0985226, processorArchitecture=MSIL">
+      <HintPath>..\packages\StringyEnums.1.2.0\lib\net48\StringyEnums.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.AppContext, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
@@ -620,12 +620,11 @@
     <Compile Include="Components\SolutionX.cs" />
     <Compile Include="Components\StartupProjectX.cs" />
     <Compile Include="Core\Extensions\ServiceProvidersExtensions.cs" />
-    <Compile Include="Core\Extensions\VsBuildPropertyStorageExtensions.cs" />
     <Compile Include="Core\Extensions\VsHierarchyExtensions.cs" />
     <Compile Include="Core\Extensions\VsRunningDocumentTableExtensions.cs" />
     <Compile Include="Core\Models\ConstructorInstance.cs" />
     <Compile Include="Core\Models\DocumentStateX.cs" />
-    <Compile Include="Core\Models\Enums\DocumentPropertyValueX.cs" />
+    <Compile Include="Core\Models\Enums\CopyToOutputDirectoryX.cs" />
     <Compile Include="Core\Models\Enums\DocumentPropertyX.cs" />
     <Compile Include="Core\Models\Enums\HierarchyItemType.cs" />
     <Compile Include="Core\Models\Enums\StartupOptions.cs" />

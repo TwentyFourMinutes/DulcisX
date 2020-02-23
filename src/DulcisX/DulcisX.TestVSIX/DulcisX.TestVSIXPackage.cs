@@ -6,8 +6,6 @@ using DulcisX.Core;
 using Microsoft.VisualStudio;
 using Microsoft.VisualStudio.Shell;
 using Task = System.Threading.Tasks.Task;
-using System.Linq;
-using Microsoft.VisualStudio.Shell.Interop;
 
 namespace DulcisX.TestVSIX
 {
@@ -35,8 +33,7 @@ namespace DulcisX.TestVSIX
         private void DocumentEvents_OnSave(HierarchyItemX obj)
         {
             var test = obj.AsDocument();
-
-            var test2 = test.GetPropertyObject((int)__VSHPROPID4.VSHPROPID_BuildAction);
+            var test2 = test.CopyToOutputDirectory;
         }
 
         #endregion
