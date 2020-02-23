@@ -16,9 +16,7 @@ namespace DulcisX.Core.Extensions
             var result = rdt.GetDocumentInfo(docCookie, out _, out _, out _, out _, out var hierarchy, out uint itemId, out _);
             VsHelper.ValidateSuccessStatusCode(result);
 
-            var itemType = hierarchy.GetHierarchyItemType(itemId);
-
-            return itemType.ConstructHierarchyItem(hierarchy, itemId, solution);
+            return hierarchy.ConstructHierarchyItem(itemId, solution);
         }
     }
 }
