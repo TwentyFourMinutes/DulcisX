@@ -85,7 +85,7 @@ namespace DulcisX.Components
         {
             VsHelper.ValidateHierarchyType(ItemType, HierarchyItemTypeX.Project);
 
-            return new ProjectX(this.UnderlyingHierarchy, ItemId, ParentSolution);
+            return (ProjectX)this;
         }
 
         public DocumentX AsDocument()

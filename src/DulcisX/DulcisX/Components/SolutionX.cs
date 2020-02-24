@@ -6,6 +6,7 @@ using DulcisX.Core.Models.PackageUserOptions;
 using DulcisX.Helpers;
 using EnvDTE80;
 using Microsoft.VisualStudio;
+using Microsoft.VisualStudio.OLE.Interop;
 using Microsoft.VisualStudio.Shell;
 using Microsoft.VisualStudio.Shell.Interop;
 using System;
@@ -152,12 +153,28 @@ namespace DulcisX.Components
 
             while (true)
             {
-                result = projectEnumerator.Next(1, hierarchy, out var success);
+                result = projectEnumerator.Next(1, hierarchy, out var fetchedCount);
 
-                if (success == 0)
+                if (fetchedCount == 0)
                     break;
 
                 VsHelper.ValidateSuccessStatusCode(result);
+
+                var persistance = hierarchy[0] as IPersist;
+
+                if (persistance is null)
+                {
+                    continue;
+                }
+
+                result = persistance.GetClassID(out var classId);
+
+                VsHelper.ValidateSuccessStatusCode(result);
+
+                if (classId == VSConstants.CLSID.SolutionFolderProject_guid)
+                {
+                    continue;
+                }
 
                 yield return new ProjectX(hierarchy[0], VSConstants.VSITEMID_ROOT, this);
             }
