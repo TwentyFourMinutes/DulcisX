@@ -39,7 +39,7 @@ namespace DulcisX.Core.Extensions
 
             if (itemId == VSConstants.VSITEMID_ROOT)
             {
-                if (hierarchy is IVsProject)
+                if (hierarchy.TryGetPropertyObject(itemId, (int)__VSHPROPID5.VSHPROPID_OutputType, out _))
                 {
                     return HierarchyItemTypeX.Project;
                 }
