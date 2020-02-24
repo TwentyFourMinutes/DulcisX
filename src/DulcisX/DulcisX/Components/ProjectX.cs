@@ -1,5 +1,6 @@
 ﻿using DulcisX.Core.Models;
 using DulcisX.Core.Models.Enums;
+using DulcisX.Exceptions;
 using DulcisX.Helpers;
 using Microsoft.VisualStudio.Shell;
 using Microsoft.VisualStudio.Shell.Interop;
@@ -46,7 +47,12 @@ namespace DulcisX.Components
 
                 if (_vsBuildPropertyStorage is null)
                 {
-                    _vsBuildPropertyStorage = (IVsBuildPropertyStorage)UnderlyingHierarchy;
+                    _vsBuildPropertyStorage = UnderlyingHierarchy as IVsBuildPropertyStorage;
+
+                    if (_vsBuildPropertyStorage is null)
+                    {
+                        throw new InvalidHierarchyItemExceptionX($"This item does not support the '{nameof(IVsBuildPropertyStorage)}' interface.");
+                    }
                 }
 
                 return _vsBuildPropertyStorage;

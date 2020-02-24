@@ -633,8 +633,9 @@
     <Compile Include="Core\Models\PackageUserOptions\SolutionConfigurationOptions.cs" />
     <Compile Include="Core\Models\SelectedHierarchyItemsX.cs" />
     <Compile Include="Core\PackageX.cs" />
-    <Compile Include="Exceptions\InvalidHierarchyTypeException.cs" />
-    <Compile Include="Exceptions\InvalidVSStatusCodeException.cs" />
+    <Compile Include="Exceptions\InvalidHierarchyItemExceptionX.cs" />
+    <Compile Include="Exceptions\InvalidHierarchyTypeExceptionX.cs" />
+    <Compile Include="Exceptions\InvalidVSStatusCodeExceptionX.cs" />
     <Compile Include="Helpers\VSHelper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

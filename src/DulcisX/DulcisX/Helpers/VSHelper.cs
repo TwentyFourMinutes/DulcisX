@@ -10,7 +10,7 @@ namespace DulcisX.Helpers
         {
             if (!HasSuccessCode(statusCode))
             {
-                throw new InvalidVSStatusCodeException(statusCode);
+                throw new InvalidVSStatusCodeExceptionX(statusCode);
             }
         }
 
@@ -24,7 +24,7 @@ namespace DulcisX.Helpers
         {
             if (actual != expected)
             {
-                throw new InvalidHierarchyTypeException($"Expected {expected}, but is actually {actual}.");
+                throw new InvalidHierarchyTypeExceptionX($"Expected {expected}, but is actually {actual}.");
             }
         }
 
