@@ -1,10 +1,10 @@
 # **[Name of the Utility/Helper class]**
 
-![](https://img.shields.io/badge/Source-[DulcisX/VS SDK]-blue) ![](https://img.shields.io/badge/namespace-[namespace]-blue) ![](https://img.shields.io/badge/Type-[Enum/Class]-[seagreem/tomato])
+![](https://img.shields.io/badge/Source-[DulcisX/VS_SDK]-blue) ![](https://img.shields.io/badge/namespace-[namespace]-blue) ![](https://img.shields.io/badge/Type-[Enum/Class]-[seagreem/tomato])
 
 ### Quick Links
 
-- *[**D**ulcisX **D**ocumentation **O**verview](https://github.com/TwentyFourMinutes/DulcisX/SDKDocumentation/)*
+- *[**D**ulcisX **D**ocumentation **O**verview](https://github.com/TwentyFourMinutes/DulcisX/tree/master/SDK%20Documentation)*
 - *[**M**icrosoft **D**ocs]([Url of the offical MD])* <--- **[Insert Url]**
 
 ### About

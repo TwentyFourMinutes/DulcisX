@@ -4,7 +4,7 @@
 
 ### Quick Links
 
-- *[**D**ulcisX **D**ocumentation **O**verview](https://github.com/TwentyFourMinutes/DulcisX/SDKDocumentation/)*
+- *[**D**ulcisX **D**ocumentation **O**verview](https://github.com/TwentyFourMinutes/DulcisX/tree/master/SDK%20Documentation/)*
 - *[Sourcecode](https://github.com/TwentyFourMinutes/DulcisX/blob/master/src/DulcisX/DulcisX/Core/Models/Enums/VisualStudio/VsRDTAttributeX.cs)*
 
 ### About
