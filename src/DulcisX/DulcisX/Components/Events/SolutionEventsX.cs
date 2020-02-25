@@ -107,10 +107,10 @@ namespace DulcisX.Components.Events
             return VSConstants.S_OK;
         }
 
-        internal void Destroy(SolutionX solution)
+        internal void Destroy()
         {
             ThreadHelper.ThrowIfNotOnUIThread();
-            var result = solution.UnderlyingSolution.UnadviseSolutionEvents(CookieUID);
+            var result = Solution.UnderlyingSolution.UnadviseSolutionEvents(CookieUID);
             VsHelper.ValidateSuccessStatusCode(result);
         }
 
