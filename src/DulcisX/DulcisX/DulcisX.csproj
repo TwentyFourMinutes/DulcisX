@@ -611,8 +611,8 @@
     <Compile Include="Components\Events\EventCookie.cs" />
     <Compile Include="Components\Events\Interfaces\ISolutionBuildEventsX.cs" />
     <Compile Include="Components\Events\Interfaces\ISoulutionEventsX.cs" />
-    <Compile Include="Components\Events\Interfaces\RunningDocTableEventsX.cs" />
-    <Compile Include="Components\Events\RunningDocTableEventsX.cs" />
+    <Compile Include="Components\Events\Interfaces\IOpenHierarchyItemEventsX.cs" />
+    <Compile Include="Components\Events\OpenHierarchyItemEventsX.cs" />
     <Compile Include="Components\Events\SolutionBuildEventsX.cs" />
     <Compile Include="Components\Events\SolutionEventsX.cs" />
     <Compile Include="Components\ProjectX.cs" />
@@ -623,11 +623,11 @@
     <Compile Include="Core\Extensions\VsHierarchyExtensions.cs" />
     <Compile Include="Core\Extensions\VsRunningDocumentTableExtensions.cs" />
     <Compile Include="Core\Models\ConstructorInstance.cs" />
-    <Compile Include="Core\Models\DocumentStateX.cs" />
     <Compile Include="Core\Models\Enums\CopyToOutputDirectoryX.cs" />
     <Compile Include="Core\Models\Enums\DocumentPropertyX.cs" />
     <Compile Include="Core\Models\Enums\HierarchyItemType.cs" />
     <Compile Include="Core\Models\Enums\StartupOptions.cs" />
+    <Compile Include="Core\Models\Enums\VisualStudio\VsRDTAttributeX.cs" />
     <Compile Include="Core\Models\Interfaces\IServiceProviders.cs" />
     <Compile Include="Core\Models\HierarchyPropertiesX.cs" />
     <Compile Include="Core\Models\PackageUserOptions\SolutionConfigurationOptions.cs" />

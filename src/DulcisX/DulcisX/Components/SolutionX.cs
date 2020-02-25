@@ -86,20 +86,20 @@ namespace DulcisX.Components
             }
         }
 
-        private IRunningDocTableEventsX _documentEvents;
+        private IOpenHierarchyItemEventsX _hierarchyItemEvents;
 
-        public IRunningDocTableEventsX DocumentEvents
+        public IOpenHierarchyItemEventsX HierarchyItemEvents
         {
             get
             {
                 ThrowIfDisposed();
 
-                if (_buildEvents is null)
+                if (_hierarchyItemEvents is null)
                 {
-                    _documentEvents = RunningDocTableEventsX.Create(this);
+                    _hierarchyItemEvents = OpenHierarchyItemEventsX.Create(this);
                 }
 
-                return _documentEvents;
+                return _hierarchyItemEvents;
             }
         }
 
@@ -233,7 +233,7 @@ namespace DulcisX.Components
                 {
                     ((SolutionEventsX)SolutionEvents).Destroy(this);
                     ((SolutionBuildEventsX)SolutionBuidEvents).Destroy();
-                    ((RunningDocTableEventsX)DocumentEvents).Destroy();
+                    ((OpenHierarchyItemEventsX)HierarchyItemEvents).Destroy();
                 }
 
                 IsDisposed = true;

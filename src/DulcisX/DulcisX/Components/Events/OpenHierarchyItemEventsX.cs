@@ -1,27 +1,32 @@
-﻿using DulcisX.Core.Models;
-using DulcisX.Helpers;
+﻿using DulcisX.Helpers;
 using DulcisX.Core.Extensions;
 using Microsoft.VisualStudio;
 using Microsoft.VisualStudio.Shell;
 using Microsoft.VisualStudio.Shell.Interop;
 using System;
+using DulcisX.Core.Models.Enums.VisualStudio;
+using System.IO;
 
 namespace DulcisX.Components.Events
 {
-    internal class RunningDocTableEventsX : BaseEventX, IRunningDocTableEventsX, IVsRunningDocTableEvents3
+    internal class OpenHierarchyItemEventsX : BaseEventX, IOpenHierarchyItemEventsX, IVsRunningDocTableEvents3
     {
         public event Action<HierarchyItemX, _VSRDTFLAGS, uint, uint> OnDocumentLocked;
         public event Action<HierarchyItemX, _VSRDTFLAGS, uint, uint> OnDocumentUnlocked;
         public event Action<HierarchyItemX> OnSaved;
         public event Action<HierarchyItemX, bool, IVsWindowFrame> OnDocumentWindowShow;
         public event Action<HierarchyItemX, IVsWindowFrame> OnDocumentWindowHidden;
-        public event Action<HierarchyItemX, __VSRDTATTRIB, DocumentStateX, DocumentStateX> OnAttributeChanged;
+        public event Action<HierarchyItemX, VsRDTAttributeX> OnAttributeChanged;
+        public event Action<HierarchyItemX, string, string> OnRenamed;
+        public event Action<HierarchyItemX, string, string> OnMoved;
         public event Action<HierarchyItemX> OnSave;
 
         private readonly IVsRunningDocumentTable _rdt;
 
-        private RunningDocTableEventsX(IVsRunningDocumentTable rdt, SolutionX solution) : base(solution)
+        private OpenHierarchyItemEventsX(IVsRunningDocumentTable rdt, SolutionX solution) : base(solution)
             => _rdt = rdt;
+
+        #region Internal Event Callbacks
 
         public int OnAfterFirstDocumentLock(uint docCookie, uint dwRDTLockType, uint dwReadLocksRemaining, uint dwEditLocksRemaining)
         {
@@ -58,19 +63,18 @@ namespace DulcisX.Components.Events
 
         public int OnAfterAttributeChangeEx(uint docCookie, uint grfAttribs, IVsHierarchy pHierOld, uint itemidOld, string pszMkDocumentOld, IVsHierarchy pHierNew, uint itemidNew, string pszMkDocumentNew)
         {
-            OnAttributeChanged?.Invoke(_rdt.GetHierarchyItem(docCookie, Solution), (__VSRDTATTRIB)grfAttribs,
-            new DocumentStateX
+            var hierarchyItem = _rdt.GetHierarchyItem(docCookie, Solution);
+
+            var chgAttribute = (VsRDTAttributeX)grfAttribs;
+
+            switch (chgAttribute)
             {
-                Hierarchy = pHierOld,
-                Identifier = itemidOld,
-                Name = pszMkDocumentOld
-            },
-            new DocumentStateX
-            {
-                Hierarchy = pHierNew,
-                Identifier = itemidNew,
-                Name = pszMkDocumentNew
-            });
+                case VsRDTAttributeX.MkDocument:
+                    OnItemChangedFullName(hierarchyItem, pszMkDocumentOld, pszMkDocumentNew);
+                    break;
+            }
+
+            OnAttributeChanged?.Invoke(hierarchyItem, chgAttribute);
             return VSConstants.S_OK;
         }
 
@@ -80,6 +84,33 @@ namespace DulcisX.Components.Events
             return VSConstants.S_OK;
         }
 
+        #endregion
+
+        #region Event Helper Methods
+
+        private void OnItemChangedFullName(HierarchyItemX hierarchyItem, string oldName, string newName)
+        {
+            var oldFileName = Path.GetFileName(oldName);
+            var newFileName = Path.GetFileName(newName);
+
+            if (oldFileName != newFileName)
+            {
+                OnRenamed?.Invoke(hierarchyItem, oldFileName, newFileName);
+                return;
+            }
+
+            var oldFilePath = Path.GetDirectoryName(oldName);
+            var newFilePath = Path.GetDirectoryName(newName);
+
+
+            if (oldFilePath != newFilePath)
+            {
+                OnMoved?.Invoke(hierarchyItem, oldFilePath, newFilePath);
+            }
+        }
+
+        #endregion
+
         internal void Destroy()
         {
             ThreadHelper.ThrowIfNotOnUIThread();
@@ -87,13 +118,13 @@ namespace DulcisX.Components.Events
             VsHelper.ValidateSuccessStatusCode(result);
         }
 
-        internal static IRunningDocTableEventsX Create(SolutionX solution)
+        internal static IOpenHierarchyItemEventsX Create(SolutionX solution)
         {
             ThreadHelper.ThrowIfNotOnUIThread();
 
             var rdt = solution.ServiceProviders.GetService<SVsRunningDocumentTable, IVsRunningDocumentTable>();
 
-            var rdtEvents = new RunningDocTableEventsX(rdt, solution);
+            var rdtEvents = new OpenHierarchyItemEventsX(rdt, solution);
 
             var result = rdt.AdviseRunningDocTableEvents(rdtEvents, out var cookieUID);
 
