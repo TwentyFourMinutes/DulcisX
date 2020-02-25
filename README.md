@@ -38,7 +38,7 @@ Please note, that the package is currently in the pre-release state. This indica
 
 DulcisX provides a better and more detailed overview over the Visual Studio SDK. It hoists things such as Helper and Utility Classes, varies enums and other interesting stuff, which is hard to find on the official Microsoft Documentation.  
 
-You can find the documentation [here](https://github.com/TwentyFourMinutes/DulcisX/tree/master/SDK%20Documentation) or in the `SDK Documentation` subdirectory.
+You can find the documentation [here](https://github.com/TwentyFourMinutes/DulcisX/wiki) or by clicking on the 'Wiki' tab.
 
 ## Stay up to date
 
