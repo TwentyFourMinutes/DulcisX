@@ -7,8 +7,9 @@ assignees: TwentyFourMinutes
 
 ---
 
-## [This](INSERT WIKI PAGE LINK) page contains issues.
+**[This](INSERT WIKI PAGE LINK) page contains issues.**
 
-## What is the problem with the current page?
+**What is the problem with the current page?**
 
-## How could it be fixed?
+**How could it be fixed?**
+
