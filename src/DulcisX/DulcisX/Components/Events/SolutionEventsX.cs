@@ -29,7 +29,9 @@ namespace DulcisX.Components.Events
         public event Action OnAfterSolutionClose;
 
         private SolutionEventsX(SolutionX solution) : base(solution)
-        { }
+        {
+
+        }
 
         public int OnAfterOpenProject(IVsHierarchy pHierarchy, int fAdded)
         {

@@ -23,7 +23,6 @@ namespace DulcisX.Components
 
         public IVsSolutionPersistence SolutionPersistence { get; }
 
-
         private IVsSolutionBuildManager _solutionBuildManager;
 
         public IVsSolutionBuildManager SolutionBuildManager
@@ -39,6 +38,8 @@ namespace DulcisX.Components
             }
         }
 
+
+        public lols Lols => HierachyItemChangeEventsX.Create(this);
 
         #region Properties
 

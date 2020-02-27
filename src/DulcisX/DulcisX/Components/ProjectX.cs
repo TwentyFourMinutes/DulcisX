@@ -1,4 +1,5 @@
-﻿using DulcisX.Core.Models;
+﻿using DulcisX.Components.Events;
+using DulcisX.Core.Models;
 using DulcisX.Core.Models.Enums;
 using DulcisX.Exceptions;
 using DulcisX.Helpers;

@@ -615,6 +615,7 @@
     <Compile Include="Components\Events\OpenHierarchyItemEventsX.cs" />
     <Compile Include="Components\Events\SolutionBuildEventsX.cs" />
     <Compile Include="Components\Events\SolutionEventsX.cs" />
+    <Compile Include="Components\Events\HierachyItemChangeEventsX.cs" />
     <Compile Include="Components\ProjectX.cs" />
     <Compile Include="Components\HierarchyItemX.cs" />
     <Compile Include="Components\SolutionX.cs" />
@@ -637,6 +638,12 @@
     <Compile Include="Exceptions\InvalidHierarchyTypeExceptionX.cs" />
     <Compile Include="Exceptions\InvalidVSStatusCodeExceptionX.cs" />
     <Compile Include="Helpers\VSHelper.cs" />
+    <Compile Include="Nodes\INamedNote.cs" />
+    <Compile Include="Nodes\IPhysicalNode.cs" />
+    <Compile Include="Nodes\VirtualFolderNode.cs" />
+    <Compile Include="Nodes\FolderNode.cs" />
+    <Compile Include="Nodes\ProjectNode.cs" />
+    <Compile Include="Nodes\SolutionNode.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
