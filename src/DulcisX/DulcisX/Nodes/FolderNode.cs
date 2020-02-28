@@ -1,20 +1,27 @@
-﻿using DulcisX.Components;
-using System;
+﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace DulcisX.Nodes
 {
     public class FolderNode : ProjectItemNode, IPhysicalNode
     {
-        public string FullName => throw new NotImplementedException();
-
-        public override string Name => throw new NotImplementedException();
-
-        public FolderNode(SolutionNode solution, ProjectX project) : base(solution, project)
+        public FolderNode(SolutionNode solution, ProjectNode project) : base(solution, project)
         {
+        }
+
+        public string GetFullName()
+        {
+            throw new NotImplementedException();
+        }
+
+        public override string GetName()
+        {
+            throw new NotImplementedException();
+        }
+
+        public override ProjectNode GetParentProject()
+        {
+            throw new NotImplementedException();
         }
 
         public override IEnumerator<SolutionItemNode> GetEnumerator()

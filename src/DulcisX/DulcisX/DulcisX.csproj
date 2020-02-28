@@ -640,10 +640,12 @@
     <Compile Include="Helpers\VSHelper.cs" />
     <Compile Include="Nodes\INamedNote.cs" />
     <Compile Include="Nodes\IPhysicalNode.cs" />
+    <Compile Include="Nodes\SolutionNode.cs" />
+    <Compile Include="Nodes\ProjectNode.cs" />
     <Compile Include="Nodes\VirtualFolderNode.cs" />
     <Compile Include="Nodes\FolderNode.cs" />
-    <Compile Include="Nodes\ProjectNode.cs" />
-    <Compile Include="Nodes\SolutionNode.cs" />
+    <Compile Include="Nodes\ProjectItemNode.cs" />
+    <Compile Include="Nodes\SolutionItemNode.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

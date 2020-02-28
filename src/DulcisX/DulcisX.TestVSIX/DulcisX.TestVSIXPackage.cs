@@ -1,20 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel.Design;
-using System.Linq;
 using System.Runtime.InteropServices;
 using System.Threading;
-using DulcisX.Components;
-using DulcisX.Components.Events;
 using DulcisX.Core;
-using DulcisX.Core.Extensions;
-using DulcisX.Core.Models.Enums.VisualStudio;
-using EnvDTE;
-using EnvDTE80;
 using Microsoft.VisualStudio;
-using Microsoft.VisualStudio.OLE.Interop;
 using Microsoft.VisualStudio.Shell;
-using Microsoft.VisualStudio.Shell.Interop;
 using Task = System.Threading.Tasks.Task;
 
 namespace DulcisX.TestVSIX
