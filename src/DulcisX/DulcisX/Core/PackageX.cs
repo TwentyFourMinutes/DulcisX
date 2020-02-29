@@ -1,11 +1,14 @@
 ﻿using DulcisX.Components;
 using DulcisX.Core.Models.Interfaces;
 using EnvDTE80;
+using Microsoft.VisualStudio.ComponentModelHost;
 using Microsoft.VisualStudio.Shell;
 using Microsoft.VisualStudio.Shell.Interop;
+using SimpleInjector;
 using StringyEnums;
 using System;
 using System.Reflection;
+using System.Runtime.InteropServices;
 using System.Threading;
 using System.Threading.Tasks;
 using Task = System.Threading.Tasks.Task;
@@ -14,61 +17,54 @@ namespace DulcisX.Core
 {
     public abstract class PackageX : AsyncPackage, IServiceProviders
     {
-        #region DTE
+        public event Func<CancellationToken, Task> OnInitializeAsync;
 
-        private DTE2 _dte2;
+        public Container ServiceContainer { get; }
 
-        public DTE2 DTE2
+        private readonly Action<Container> _consumerServices;
+
+        protected PackageX()
         {
-            get
-            {
-                if (_dte2 is null)
-                {
-                    _dte2 = this.GetService<SDTE, DTE2>();
-                }
-                return _dte2;
-            }
+            ServiceContainer = new Container();
         }
 
-        public async ValueTask<DTE2> GetDTE2Async()
+        protected PackageX(Action<Container> configuration) : this()
         {
-            if (_dte2 is null)
-            {
-                _dte2 = await this.GetServiceAsync<SDTE, DTE2>();
-            }
-
-            return _dte2;
+            _consumerServices = configuration;
         }
-
-        #endregion
 
         static PackageX()
         {
             EnumCore.Init(initializer => initializer.InitWith(Assembly.GetExecutingAssembly()), false);
         }
 
-        #region MethodEvents
-
-        public event Func<CancellationToken, IProgress<ServiceProgressData>, Task> OnInitializeAsync;
-
-        protected override Task InitializeAsync(CancellationToken cancellationToken, IProgress<ServiceProgressData> progress)
+        protected override async Task InitializeAsync(CancellationToken cancellationToken, IProgress<ServiceProgressData> progress)
         {
-            OnInitializeAsync?.Invoke(cancellationToken, progress);
-            return base.InitializeAsync(cancellationToken, progress);
+            AddDefaultServices(ServiceContainer);
+
+            _consumerServices.Invoke(ServiceContainer);
+
+            ServiceContainer.Verify();
+
+            await OnInitializeAsync(cancellationToken);
+
+            await base.InitializeAsync(cancellationToken, progress);
         }
 
-        public event Func<bool> OnDisposing;
-
-        protected override void Dispose(bool disposing)
+        private void AddDefaultServices(Container container)
         {
-            OnDisposing?.Invoke();
+            container.RegisterSingleton(() =>
+            {
+                return this.GetService<SComponentModel, IComponentModel>();
+            });
 
-            Solution.Dispose();
+            container.RegisterSingleton(() =>
+            {
+                var componentModel = container.GetInstance<IComponentModel>();
 
-            base.Dispose(disposing);
+                return componentModel.GetService<IVsHierarchyItemManager>();
+            });
         }
-
-        #endregion
 
         #region Services
 
@@ -81,35 +77,6 @@ namespace DulcisX.Core
 
         private IServiceProviders GetServiceProviders()
             => (IServiceProviders)this;
-
-        #endregion
-
-        #region Solution
-
-        private SolutionX _solution;
-
-        public SolutionX Solution
-        {
-            get
-            {
-                if (_solution is null)
-                {
-                    _solution = new SolutionX(this.GetService<SVsSolution, IVsSolution>(), DTE2, GetServiceProviders(), this.GetService<SVsSolutionPersistence, IVsSolutionPersistence>());
-                }
-
-                return _solution;
-            }
-        }
-
-        public async ValueTask<SolutionX> GetSolutionAsync()
-        {
-            if (_solution is null)
-            {
-                _solution = new SolutionX(await this.GetServiceAsync<SVsSolution, IVsSolution>(), DTE2, GetServiceProviders(), await this.GetServiceAsync<SVsSolutionPersistence, IVsSolutionPersistence>());
-            }
-
-            return _solution;
-        }
 
         #endregion
     }

@@ -1,15 +1,21 @@
-﻿using Microsoft.VisualStudio.Shell.Interop;
+﻿using DulcisX.Core.Models.Enums;
+using DulcisX.Core.Models.Enums.VisualStudio;
+using Microsoft.VisualStudio.Shell.Interop;
+using SimpleInjector;
 using System;
 using System.Collections.Generic;
 
 namespace DulcisX.Nodes
 {
-    public class SolutionNode : SolutionItemNode, IPhysicalNode
+    public class SolutionNode : ItemNode, IPhysicalNode
     {
-        public override SolutionNode ParentSolution => this;
+        public override NodeTypes NodeType => NodeTypes.Solution;
 
-        public SolutionNode(IVsHierarchy hierarchy) : base(null, hierarchy)
+        public Container ServiceContainer { get; }
+
+        public SolutionNode(IVsHierarchy hierarchy, Container container) : base(null, hierarchy, CommonNodeId.Solution)
         {
+            ServiceContainer = container;
         }
 
         public override string GetName()
@@ -22,7 +28,13 @@ namespace DulcisX.Nodes
             throw new NotImplementedException();
         }
 
-        public override IEnumerator<SolutionItemNode> GetEnumerator()
+        public override ItemNode GetParent()
+            => null;
+
+        public override ItemNode GetParent(NodeTypes nodeType)
+            => null;
+
+        public override IEnumerator<ItemNode> GetEnumerator()
         {
             throw new NotImplementedException();
         }

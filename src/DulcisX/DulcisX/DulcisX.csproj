@@ -353,6 +353,9 @@
     </Reference>
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
+    <Reference Include="SimpleInjector, Version=4.9.0.0, Culture=neutral, PublicKeyToken=984cb50dea722e99, processorArchitecture=MSIL">
+      <HintPath>..\packages\SimpleInjector.4.9.0\lib\net45\SimpleInjector.dll</HintPath>
+    </Reference>
     <Reference Include="stdole, Version=7.0.3300.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
       <HintPath>..\packages\stdole.7.0.3303\lib\net10\stdole.dll</HintPath>
       <EmbedInteropTypes>True</EmbedInteropTypes>
@@ -620,6 +623,7 @@
     <Compile Include="Components\HierarchyItemX.cs" />
     <Compile Include="Components\SolutionX.cs" />
     <Compile Include="Components\StartupProjectX.cs" />
+    <Compile Include="Core\Extensions\EnumExtensions.cs" />
     <Compile Include="Core\Extensions\ServiceProvidersExtensions.cs" />
     <Compile Include="Core\Extensions\VsHierarchyExtensions.cs" />
     <Compile Include="Core\Extensions\VsRunningDocumentTableExtensions.cs" />
@@ -628,6 +632,7 @@
     <Compile Include="Core\Models\Enums\DocumentPropertyX.cs" />
     <Compile Include="Core\Models\Enums\HierarchyItemType.cs" />
     <Compile Include="Core\Models\Enums\StartupOptions.cs" />
+    <Compile Include="Core\Models\Enums\VisualStudio\CommonNodeId.cs" />
     <Compile Include="Core\Models\Enums\VisualStudio\VsRDTAttributeX.cs" />
     <Compile Include="Core\Models\Interfaces\IServiceProviders.cs" />
     <Compile Include="Core\Models\HierarchyPropertiesX.cs" />
@@ -637,15 +642,19 @@
     <Compile Include="Exceptions\InvalidHierarchyItemExceptionX.cs" />
     <Compile Include="Exceptions\InvalidHierarchyTypeExceptionX.cs" />
     <Compile Include="Exceptions\InvalidVSStatusCodeExceptionX.cs" />
+    <Compile Include="Exceptions\NoFlagsAllowedException.cs" />
     <Compile Include="Helpers\VSHelper.cs" />
-    <Compile Include="Nodes\INamedNote.cs" />
+    <Compile Include="Nodes\INamedNode.cs" />
     <Compile Include="Nodes\IPhysicalNode.cs" />
+    <Compile Include="Core\Models\Enums\NodeTypes.cs" />
+    <Compile Include="Nodes\NodeFactory.cs" />
+    <Compile Include="Nodes\SolutionItemNode.cs" />
     <Compile Include="Nodes\SolutionNode.cs" />
     <Compile Include="Nodes\ProjectNode.cs" />
     <Compile Include="Nodes\VirtualFolderNode.cs" />
     <Compile Include="Nodes\FolderNode.cs" />
     <Compile Include="Nodes\ProjectItemNode.cs" />
-    <Compile Include="Nodes\SolutionItemNode.cs" />
+    <Compile Include="Nodes\ItemNode.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

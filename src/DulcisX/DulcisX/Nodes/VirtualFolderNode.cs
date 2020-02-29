@@ -1,4 +1,5 @@
-﻿using Microsoft.VisualStudio.Shell.Interop;
+﻿using DulcisX.Core.Models.Enums;
+using Microsoft.VisualStudio.Shell.Interop;
 using System;
 using System.Collections.Generic;
 
@@ -6,7 +7,9 @@ namespace DulcisX.Nodes
 {
     public class VirtualFolderNode : SolutionItemNode
     {
-        public VirtualFolderNode(SolutionNode solution, IVsHierarchy hierarchy) : base(solution, hierarchy)
+        public override NodeTypes NodeType => NodeTypes.VirtualFolder;
+
+        public VirtualFolderNode(SolutionNode solution, IVsHierarchy hierarchy, uint itemId) : base(solution, hierarchy, itemId)
         {
         }
 
@@ -15,7 +18,7 @@ namespace DulcisX.Nodes
             throw new NotImplementedException();
         }
 
-        public override IEnumerator<SolutionItemNode> GetEnumerator()
+        public override IEnumerator<ItemNode> GetEnumerator()
         {
             throw new NotImplementedException();
         }

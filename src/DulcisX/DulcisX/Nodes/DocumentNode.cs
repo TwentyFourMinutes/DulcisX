@@ -1,16 +1,14 @@
 ﻿using DulcisX.Core.Models.Enums;
-using DulcisX.Core.Models.Enums.VisualStudio;
-using Microsoft.VisualStudio.Shell.Interop;
 using System;
 using System.Collections.Generic;
 
 namespace DulcisX.Nodes
 {
-    public class ProjectNode : SolutionItemNode, IPhysicalNode
+    public class DocumentNode : ProjectItemNode, IPhysicalNode
     {
-        public override NodeTypes NodeType => NodeTypes.Project;
+        public override NodeTypes NodeType => NodeTypes.Document;
 
-        public ProjectNode(SolutionNode solution, IVsHierarchy hierarchy) : base(solution, hierarchy, CommonNodeId.Project)
+        public DocumentNode(SolutionNode solution, ProjectNode project, uint itemId) : base(solution, project, itemId)
         {
         }
 
