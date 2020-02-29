@@ -1,13 +1,8 @@
 ﻿using DulcisX.Core.Extensions;
-using DulcisX.Core.Models.Enums;
 using DulcisX.Core.Models.Enums.VisualStudio;
-using DulcisX.Exceptions;
 using Microsoft.VisualStudio.Shell.Interop;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace DulcisX.Nodes
 {

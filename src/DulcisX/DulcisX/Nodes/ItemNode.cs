@@ -2,11 +2,9 @@
 using DulcisX.Core.Models.Enums;
 using DulcisX.Exceptions;
 using Microsoft.VisualStudio.Shell;
-using Microsoft.VisualStudio.Shell.Events;
 using Microsoft.VisualStudio.Shell.Interop;
 using System.Collections;
 using System.Collections.Generic;
-using System.Runtime.InteropServices.WindowsRuntime;
 
 namespace DulcisX.Nodes
 {

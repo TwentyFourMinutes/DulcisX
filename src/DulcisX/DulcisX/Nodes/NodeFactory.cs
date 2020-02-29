@@ -1,13 +1,6 @@
-﻿using DulcisX.Core.Extensions;
-using Microsoft.Internal.VisualStudio.PlatformUI;
+﻿using Microsoft.Internal.VisualStudio.PlatformUI;
 using Microsoft.VisualStudio.Shell;
 using Microsoft.VisualStudio.Shell.Interop;
-using SimpleInjector;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace DulcisX.Nodes
 {

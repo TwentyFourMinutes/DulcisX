@@ -1,16 +1,11 @@
-﻿using DulcisX.Components;
-using DulcisX.Core.Models.Interfaces;
-using EnvDTE80;
+﻿using DulcisX.Core.Models.Interfaces;
 using Microsoft.VisualStudio.ComponentModelHost;
 using Microsoft.VisualStudio.Shell;
-using Microsoft.VisualStudio.Shell.Interop;
 using SimpleInjector;
 using StringyEnums;
 using System;
 using System.Reflection;
-using System.Runtime.InteropServices;
 using System.Threading;
-using System.Threading.Tasks;
 using Task = System.Threading.Tasks.Task;
 
 namespace DulcisX.Core
