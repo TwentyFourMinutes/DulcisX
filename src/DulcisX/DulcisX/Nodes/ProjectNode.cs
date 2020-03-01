@@ -4,6 +4,7 @@ using DulcisX.Exceptions;
 using DulcisX.Helpers;
 using Microsoft.Internal.VisualStudio.PlatformUI;
 using Microsoft.VisualStudio;
+using Microsoft.VisualStudio.PlatformUI;
 using Microsoft.VisualStudio.Shell;
 using Microsoft.VisualStudio.Shell.Interop;
 using System;
@@ -62,6 +63,17 @@ namespace DulcisX.Nodes
         public bool IsLoaded()
         {
             return !HierarchyUtilities.IsStubHierarchy(UnderlyingHierarchy);
+        }
+
+        public __VSPROJOUTPUTTYPE GeOutputTypeAction()
+            => HierarchyUtilities.GetHierarchyProperty(UnderlyingHierarchy, ItemId, (int)__VSHPROPID5.VSHPROPID_OutputType, obj => (__VSPROJOUTPUTTYPE)Unbox.AsInt32(obj));
+
+        public void SetOutputTypeAction(__VSPROJOUTPUTTYPE outputType)
+        {
+            ThreadHelper.ThrowIfNotOnUIThread();
+
+            var result = UnderlyingHierarchy.SetProperty(ItemId, (int)__VSHPROPID5.VSHPROPID_OutputType, (int)outputType);
+            ErrorHandler.ThrowOnFailure(result);
         }
 
         public string GetItemProperty(uint itemId, DocumentProperty documentProperty)

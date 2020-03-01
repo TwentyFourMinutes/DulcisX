@@ -24,12 +24,9 @@ namespace DulcisX.TestVSIX
         {
             await JoinableTaskFactory.SwitchToMainThreadAsync(arg);
 
-            var projects = GetSolution().GetStartupProjects().ToList();
+            var project = GetSolution().GetStartupProjects().First();
 
-            foreach (var item in projects)
-            {
-                var test = item.Project.GetDisplayName();
-            }
+            var kek = project.Project.GetBuildAction();
         }
 
         #endregion
