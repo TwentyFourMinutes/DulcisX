@@ -5,14 +5,15 @@ namespace DulcisX.Core.Models.Enums
     [Flags]
     public enum NodeTypes
     {
-        Document = 1,
-        Folder = 2,
-        Project = 4,
-        MiscellaneousFilesProject = 8,
-        SolutionItemsProject = 16,
-        VirtualProject = 32,
-        VirtualFolder = 64,
-        Solution = 128,
+        Unknown = 1,
+        Document = 2,
+        Folder = 4,
+        Project = 8,
+        MiscellaneousFilesProject = 16,
+        SolutionItemsProject = 32,
+        VirtualProject = 64,
+        VirtualFolder = 128,
+        Solution = 256,
         All = ~0
     }
 }

@@ -26,6 +26,12 @@ namespace DulcisX.TestVSIX
             await JoinableTaskFactory.SwitchToMainThreadAsync(arg);
 
             var solution = GetSolution();
+            var project = solution.GetChildren().OfType<ProjectNode>().First();
+
+            var test = project.IsLoaded();
+            var yeet = project.GetChildren().First();
+
+            var kek = yeet.GetDisplayName();
         }
 
         #endregion
