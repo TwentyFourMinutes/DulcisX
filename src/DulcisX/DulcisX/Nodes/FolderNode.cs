@@ -1,5 +1,6 @@
 ﻿using DulcisX.Core.Models.Enums;
 using DulcisX.Helpers;
+using Microsoft.VisualStudio;
 using Microsoft.VisualStudio.Shell;
 
 namespace DulcisX.Nodes
@@ -18,7 +19,7 @@ namespace DulcisX.Nodes
 
             var result = ParentProject.UnderlyingProject.GetMkDocument(ItemId, out var fullName);
 
-            VsHelper.ValidateSuccessStatusCode(result);
+            ErrorHandler.ThrowOnFailure(result);
 
             return fullName;
         }

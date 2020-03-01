@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using DulcisX.Core.Extensions;
 using Microsoft.VisualStudio.Shell;
 using DulcisX.Helpers;
+using Microsoft.VisualStudio;
 
 namespace DulcisX.Core.Models
 {
@@ -36,17 +37,17 @@ namespace DulcisX.Core.Models
 
             var result = MonitorSelection.GetCurrentSelection(out _, out _, out var selection, out _);
 
-            VsHelper.ValidateSuccessStatusCode(result);
+            ErrorHandler.ThrowOnFailure(result);
 
             result = selection.GetSelectionInfo(out var selectionCount, out _);
 
-            VsHelper.ValidateSuccessStatusCode(result);
+            ErrorHandler.ThrowOnFailure(result);
 
             var itemSelection = new VSITEMSELECTION[selectionCount];
 
             result = selection.GetSelectedItems(0u, selectionCount, itemSelection);
 
-            VsHelper.ValidateSuccessStatusCode(result);
+            ErrorHandler.ThrowOnFailure(result);
 
             for (int i = 0; i < itemSelection.Length; i++)
             {

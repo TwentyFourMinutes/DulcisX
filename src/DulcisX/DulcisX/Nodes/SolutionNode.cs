@@ -1,8 +1,9 @@
-﻿using DulcisX.Core.Extensions;
+using DulcisX.Core.Extensions;
 using DulcisX.Core.Models.Enums;
 using DulcisX.Core.Models.Enums.VisualStudio;
 using DulcisX.Helpers;
 using Microsoft.Internal.VisualStudio.PlatformUI;
+using Microsoft.VisualStudio;
 using Microsoft.VisualStudio.Shell;
 using Microsoft.VisualStudio.Shell.Interop;
 using SimpleInjector;
@@ -32,7 +33,7 @@ namespace DulcisX.Nodes
 
             var result = UnderlyingSolution.GetProperty((int)__VSPROPID.VSPROPID_SolutionFileName, out var fullName);
 
-            VsHelper.ValidateSuccessStatusCode(result);
+            ErrorHandler.ThrowOnFailure(result);
 
             return (string)fullName;
         }

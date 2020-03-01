@@ -1,4 +1,4 @@
-﻿using DulcisX.Core.Models.Enums;
+using DulcisX.Core.Models.Enums;
 using DulcisX.Core.Models.Enums.VisualStudio;
 using DulcisX.Exceptions;
 
@@ -6,14 +6,6 @@ namespace DulcisX.Helpers
 {
     public static class VsHelper
     {
-        public static void ValidateSuccessStatusCode(int statusCode)
-        {
-            if (!HasSuccessCode(statusCode))
-            {
-                throw new InvalidVSStatusCodeExceptionX(statusCode);
-            }
-        }
-
         public static bool HasSuccessCode(int statusCode)
             => statusCode == CommonStatusCode.Success;
 

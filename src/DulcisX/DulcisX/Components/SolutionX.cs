@@ -119,7 +119,7 @@ namespace DulcisX.Components
         {
             ThreadHelper.ThrowIfNotOnUIThread();
             var result = UnderlyingSolution.GetProjectOfUniqueName(uniqueName, out var hierarchy);
-            VsHelper.ValidateSuccessStatusCode(result);
+             ErrorHandler.ThrowOnFailure(result);
 
             return new ProjectX(hierarchy, VSConstants.VSITEMID_ROOT, this);
         }
@@ -129,7 +129,7 @@ namespace DulcisX.Components
             ThreadHelper.ThrowIfNotOnUIThread();
 
             var result = UnderlyingSolution.GetProjectOfGuid(projectGuid, out var hierarchy);
-            VsHelper.ValidateSuccessStatusCode(result);
+             ErrorHandler.ThrowOnFailure(result);
 
             return new ProjectX(hierarchy, VSConstants.VSITEMID_ROOT, this);
         }
@@ -149,7 +149,7 @@ namespace DulcisX.Components
 
             var result = UnderlyingSolution.GetProjectEnum((uint)__VSENUMPROJFLAGS.EPF_LOADEDINSOLUTION, ref tempGuid, out var projectEnumerator);
 
-            VsHelper.ValidateSuccessStatusCode(result);
+             ErrorHandler.ThrowOnFailure(result);
             var hierarchy = new IVsHierarchy[1];
 
             while (true)
@@ -159,7 +159,7 @@ namespace DulcisX.Components
                 if (fetchedCount == 0)
                     break;
 
-                VsHelper.ValidateSuccessStatusCode(result);
+                 ErrorHandler.ThrowOnFailure(result);
 
                 var persistance = hierarchy[0] as IPersist;
 
@@ -170,7 +170,7 @@ namespace DulcisX.Components
 
                 result = persistance.GetClassID(out var classId);
 
-                VsHelper.ValidateSuccessStatusCode(result);
+                 ErrorHandler.ThrowOnFailure(result);
 
                 if (classId == VSConstants.CLSID.SolutionFolderProject_guid)
                 {
@@ -190,6 +190,8 @@ namespace DulcisX.Components
 
         public IEnumerable<StartupProjectX> GetStartupProjects()
         {
+            ThreadHelper.ThrowIfNotOnUIThread();
+
             var solutionConfiguration = new SolutionConfigurationOptions();
 
             GetUserConfiguration(solutionConfiguration, "SolutionConfiguration");
@@ -209,7 +211,7 @@ namespace DulcisX.Components
 
                 yield return new StartupProjectX(StartupOptions.Start, GetProject(hierarchy));
 
-                VsHelper.ValidateSuccessStatusCode(result);
+                 ErrorHandler.ThrowOnFailure(result);
             }
         }
 
@@ -219,7 +221,7 @@ namespace DulcisX.Components
 
             var result = SolutionPersistence.LoadPackageUserOpts(persistanceSolutionOptions, streamKey);
 
-            VsHelper.ValidateSuccessStatusCode(result);
+             ErrorHandler.ThrowOnFailure(result);
         }
 
         #endregion

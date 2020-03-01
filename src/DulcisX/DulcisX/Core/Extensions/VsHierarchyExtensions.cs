@@ -1,4 +1,4 @@
-﻿using DulcisX.Components;
+using DulcisX.Components;
 using DulcisX.Core.Models;
 using DulcisX.Core.Models.Enums;
 using DulcisX.Core.Models.Enums.VisualStudio;
@@ -62,7 +62,7 @@ namespace DulcisX.Core.Extensions
 
                 var result = project.GetMkDocument(itemId, out var path);
 
-                VsHelper.ValidateSuccessStatusCode(result);
+                 ErrorHandler.ThrowOnFailure(result);
 
                 if (File.Exists(path))
                 {
@@ -113,7 +113,7 @@ namespace DulcisX.Core.Extensions
 
             var result = hierarchy.GetProperty(itemId, propId, out var val);
 
-            VsHelper.ValidateSuccessStatusCode(result);
+             ErrorHandler.ThrowOnFailure(result);
 
             return (uint)Convert.ToInt32(val);
         }
@@ -124,7 +124,7 @@ namespace DulcisX.Core.Extensions
 
             var result = hierarchy.GetProperty(itemId, propId, out var val);
 
-            VsHelper.ValidateSuccessStatusCode(result);
+             ErrorHandler.ThrowOnFailure(result);
 
             return (TType)val;
         }
@@ -135,7 +135,7 @@ namespace DulcisX.Core.Extensions
 
             var result = hierarchy.GetProperty(itemId, propId, out var val);
 
-            VsHelper.ValidateSuccessStatusCode(result);
+             ErrorHandler.ThrowOnFailure(result);
 
             return val;
         }

@@ -30,7 +30,7 @@ namespace DulcisX.Components.Events
         {
             ThreadHelper.ThrowIfNotOnUIThread();
             var result = _vsFileChangeEx.UnadviseDirChange(CookieUID);
-            VsHelper.ValidateSuccessStatusCode(result);
+             ErrorHandler.ThrowOnFailure(result);
         }
 
         internal static HierachyItemChangeEventsX Create(SolutionX solution)
@@ -44,7 +44,7 @@ namespace DulcisX.Components.Events
             var folder = solution.Projects.First().Skip(1).Take(1).First();
             var result = fileChange.AdviseDirChange(folder.FullName, VSConstants.S_FALSE, hierachyItemChangeEvents, out var cookieUID);
 
-            VsHelper.ValidateSuccessStatusCode(result);
+             ErrorHandler.ThrowOnFailure(result);
 
             hierachyItemChangeEvents.CookieUID = cookieUID;
 

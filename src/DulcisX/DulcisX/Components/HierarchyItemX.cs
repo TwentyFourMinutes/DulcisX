@@ -175,7 +175,7 @@ namespace DulcisX.Components
                     break;
             }
 
-            VsHelper.ValidateSuccessStatusCode(result);
+             ErrorHandler.ThrowOnFailure(result);
 
             return fullName;
         }

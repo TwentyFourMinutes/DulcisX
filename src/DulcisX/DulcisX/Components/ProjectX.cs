@@ -2,6 +2,7 @@
 using DulcisX.Core.Models.Enums;
 using DulcisX.Exceptions;
 using DulcisX.Helpers;
+using Microsoft.VisualStudio;
 using Microsoft.VisualStudio.Shell;
 using Microsoft.VisualStudio.Shell.Interop;
 using System;
@@ -22,7 +23,7 @@ namespace DulcisX.Components
 
                     var result = ParentSolution.UnderlyingSolution.GetGuidOfProject(UnderlyingHierarchy, out _underlyingGuid);
 
-                    VsHelper.ValidateSuccessStatusCode(result);
+                     ErrorHandler.ThrowOnFailure(result);
                 }
 
                 return _underlyingGuid;
@@ -70,7 +71,7 @@ namespace DulcisX.Components
 
             var result = VsBuildPropertyStorage.GetItemAttribute(itemId, documentProperty.ToString(), out var val);
 
-            VsHelper.ValidateSuccessStatusCode(result);
+             ErrorHandler.ThrowOnFailure(result);
 
             return val;
         }

@@ -113,7 +113,7 @@ namespace DulcisX.Components.Events
         {
             ThreadHelper.ThrowIfNotOnUIThread();
             var result = Solution.UnderlyingSolution.UnadviseSolutionEvents(CookieUID);
-            VsHelper.ValidateSuccessStatusCode(result);
+             ErrorHandler.ThrowOnFailure(result);
         }
 
         internal static ISolutionEventsX Create(SolutionX solution)
@@ -124,7 +124,7 @@ namespace DulcisX.Components.Events
 
             var result = solution.UnderlyingSolution.AdviseSolutionEvents(solutionEvents, out var cookieUID);
 
-            VsHelper.ValidateSuccessStatusCode(result);
+             ErrorHandler.ThrowOnFailure(result);
 
             solutionEvents.CookieUID = cookieUID;
 

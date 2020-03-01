@@ -115,7 +115,7 @@ namespace DulcisX.Components.Events
         {
             ThreadHelper.ThrowIfNotOnUIThread();
             var result = _rdt.UnadviseRunningDocTableEvents(CookieUID);
-            VsHelper.ValidateSuccessStatusCode(result);
+             ErrorHandler.ThrowOnFailure(result);
         }
 
         internal static IOpenHierarchyItemEventsX Create(SolutionX solution)
@@ -128,7 +128,7 @@ namespace DulcisX.Components.Events
 
             var result = rdt.AdviseRunningDocTableEvents(rdtEvents, out var cookieUID);
 
-            VsHelper.ValidateSuccessStatusCode(result);
+             ErrorHandler.ThrowOnFailure(result);
 
             rdtEvents.CookieUID = cookieUID;
 
