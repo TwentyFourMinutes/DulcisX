@@ -1,5 +1,7 @@
 ﻿using DulcisX.Core.Models.Enums;
 using DulcisX.Core.Models.Enums.VisualStudio;
+using DulcisX.Helpers;
+using Microsoft.VisualStudio.Shell;
 using Microsoft.VisualStudio.Shell.Interop;
 using System;
 using System.Collections.Generic;
@@ -18,12 +20,13 @@ namespace DulcisX.Nodes
 
         public string GetFullName()
         {
-            throw new NotImplementedException();
-        }
+            ThreadHelper.ThrowIfNotOnUIThread();
 
-        public override string GetName()
-        {
-            throw new NotImplementedException();
+            var result = UnderlyingProject.GetMkDocument(ItemId, out var fullName);
+
+            VsHelper.ValidateSuccessStatusCode(result);
+
+            return fullName;
         }
 
         public override IEnumerator<ItemNode> GetEnumerator()

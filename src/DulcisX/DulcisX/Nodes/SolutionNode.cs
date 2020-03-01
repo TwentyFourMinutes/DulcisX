@@ -1,5 +1,7 @@
 ﻿using DulcisX.Core.Models.Enums;
 using DulcisX.Core.Models.Enums.VisualStudio;
+using DulcisX.Helpers;
+using Microsoft.VisualStudio.Shell;
 using Microsoft.VisualStudio.Shell.Interop;
 using SimpleInjector;
 using System;
@@ -9,6 +11,8 @@ namespace DulcisX.Nodes
 {
     public class SolutionNode : ItemNode, IPhysicalNode
     {
+        public IVsSolution UnderlyingSolution => (IVsSolution)UnderlyingHierarchy;
+
         public override NodeTypes NodeType => NodeTypes.Solution;
 
         public Container ServiceContainer { get; }
@@ -20,7 +24,13 @@ namespace DulcisX.Nodes
 
         public string GetFullName()
         {
-            throw new NotImplementedException();
+            ThreadHelper.ThrowIfNotOnUIThread();
+
+            var result = UnderlyingSolution.GetProperty((int)__VSPROPID.VSPROPID_SolutionFileName, out var fullName);
+
+            VsHelper.ValidateSuccessStatusCode(result);
+
+            return (string)fullName;
         }
 
         public override ItemNode GetParent()
