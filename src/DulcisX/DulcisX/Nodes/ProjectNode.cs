@@ -1,10 +1,11 @@
-using DulcisX.Core.Models.Enums;
+﻿using DulcisX.Core.Models.Enums;
 using DulcisX.Core.Models.Enums.VisualStudio;
 using DulcisX.Helpers;
 using Microsoft.Internal.VisualStudio.PlatformUI;
 using Microsoft.VisualStudio;
 using Microsoft.VisualStudio.Shell;
 using Microsoft.VisualStudio.Shell.Interop;
+using System;
 using System.Collections.Generic;
 
 namespace DulcisX.Nodes
@@ -18,6 +19,17 @@ namespace DulcisX.Nodes
         public ProjectNode(SolutionNode solution, IVsHierarchy hierarchy, NodeTypes nodeType = NodeTypes.Project) : base(solution, hierarchy, CommonNodeIds.Project)
         {
             NodeType = nodeType;
+        }
+
+        public Guid GetGuid()
+        {
+            ThreadHelper.ThrowIfNotOnUIThread();
+
+            var result = ParentSolution.UnderlyingSolution.GetGuidOfProject(UnderlyingHierarchy, out var underlyingGuid);
+
+            ErrorHandler.ThrowOnFailure(result);
+
+            return underlyingGuid;
         }
 
         public string GetFullName()

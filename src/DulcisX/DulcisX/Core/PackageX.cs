@@ -1,4 +1,5 @@
-﻿using DulcisX.Core.Models;
+﻿using DulcisX.Core.Extensions;
+using DulcisX.Core.Models;
 using DulcisX.Core.Models.Interfaces;
 using DulcisX.Nodes;
 using Microsoft.VisualStudio.ComponentModelHost;
@@ -69,6 +70,16 @@ namespace DulcisX.Core
             {
                 return COMContainer.Create(this.GetService<SVsSolution, IVsSolution>());
             });
+
+            container.RegisterSingleton(() =>
+            {
+                return COMContainer.Create(this.GetService<SVsSolutionPersistence, IVsSolutionPersistence>());
+            });
+
+            container.RegisterSingleton(() =>
+            {
+                return COMContainer.Create(this.GetService<SVsSolutionBuildManager, IVsSolutionBuildManager>());
+            });
         }
 
         #region Services
@@ -94,7 +105,7 @@ namespace DulcisX.Core
                 return _solutionNode;
             }
 
-            var solution = ServiceContainer.GetInstance<COMContainer<IVsSolution>>().Value;
+            var solution = ServiceContainer.GetCOMInstance<IVsSolution>();
 
             _solutionNode = new SolutionNode(solution, ServiceContainer);
 

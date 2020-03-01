@@ -1,7 +1,6 @@
 ﻿using System.Linq;
 using System.Runtime.InteropServices;
 using DulcisX.Core;
-using DulcisX.Nodes;
 using Microsoft.VisualStudio;
 using Microsoft.VisualStudio.Shell;
 
@@ -25,13 +24,12 @@ namespace DulcisX.TestVSIX
         {
             await JoinableTaskFactory.SwitchToMainThreadAsync(arg);
 
-            var solution = GetSolution();
-            var project = solution.GetChildren().OfType<ProjectNode>().First();
+            var projects = GetSolution().GetStartupProjects().ToList();
 
-            var test = project.IsLoaded();
-            var yeet = project.GetChildren().First();
-
-            var kek = yeet.GetDisplayName();
+            foreach (var item in projects)
+            {
+                var test = item.Project.GetDisplayName();
+            }
         }
 
         #endregion
