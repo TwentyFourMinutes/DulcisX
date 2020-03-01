@@ -3,6 +3,7 @@ using Microsoft.Internal.VisualStudio.PlatformUI;
 using Microsoft.VisualStudio;
 using Microsoft.VisualStudio.Shell;
 using Microsoft.VisualStudio.Shell.Interop;
+using StringyEnums;
 
 namespace DulcisX.Nodes
 {
@@ -34,6 +35,15 @@ namespace DulcisX.Nodes
 
             var result = UnderlyingHierarchy.SetProperty(ItemId, (int)__VSHPROPID4.VSHPROPID_BuildAction, buildAction);
             ErrorHandler.ThrowOnFailure(result);
+        }
+
+        public CopyToOutputDirectory GetCopyToOutputDirectory()
+        {
+            ThreadHelper.ThrowIfNotOnUIThread();
+
+            var val = ParentProject.GetItemProperty(ItemId, DocumentProperty.CopyToOutputDirectory);
+
+            return val.GetEnumFromRepresentation<CopyToOutputDirectory>();
         }
     }
 }

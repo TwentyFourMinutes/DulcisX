@@ -13,13 +13,13 @@ namespace DulcisX.Components
             set => SetProperty((int)__VSHPROPID4.VSHPROPID_BuildAction, value);
         }
 
-        public CopyToOutputDirectoryX CopyToOutputDirectory
+        public CopyToOutputDirectory CopyToOutputDirectory
         {
             get
             {
-                var val = ParentProject.GetItemProperty(ItemId, DocumentPropertyX.CopyToOutputDirectory);
+                var val = ParentProject.GetItemProperty(ItemId, DocumentProperty.CopyToOutputDirectory);
 
-                return val.GetEnumFromRepresentation<CopyToOutputDirectoryX>();
+                return val.GetEnumFromRepresentation<CopyToOutputDirectory>();
             }
         }
 

@@ -2,7 +2,7 @@
 
 namespace DulcisX.Core.Models.Enums
 {
-    public enum CopyToOutputDirectoryX
+    public enum CopyToOutputDirectory
     {
         [StringRepresentation("Always")]
         Always,

@@ -52,7 +52,7 @@ namespace DulcisX.Components
 
                     if (_vsBuildPropertyStorage is null)
                     {
-                        throw new InvalidHierarchyItemExceptionX($"This item does not support the '{nameof(IVsBuildPropertyStorage)}' interface.");
+                        throw new InvalidHierarchyItemException($"This item does not support the '{nameof(IVsBuildPropertyStorage)}' interface.");
                     }
                 }
 
@@ -65,7 +65,7 @@ namespace DulcisX.Components
 
         }
 
-        public string GetItemProperty(uint itemId, DocumentPropertyX documentProperty)
+        public string GetItemProperty(uint itemId, DocumentProperty documentProperty)
         {
             ThreadHelper.ThrowIfNotOnUIThread();
 

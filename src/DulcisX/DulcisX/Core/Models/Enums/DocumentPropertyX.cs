@@ -1,6 +1,6 @@
 ﻿namespace DulcisX.Core.Models.Enums
 {
-    public enum DocumentPropertyX
+    public enum DocumentProperty
     {
         CopyToOutputDirectory
     }

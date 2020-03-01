@@ -1,5 +1,6 @@
 ﻿using DulcisX.Core.Models.Enums;
 using DulcisX.Core.Models.Enums.VisualStudio;
+using DulcisX.Exceptions;
 using DulcisX.Helpers;
 using Microsoft.Internal.VisualStudio.PlatformUI;
 using Microsoft.VisualStudio;
@@ -12,6 +13,21 @@ namespace DulcisX.Nodes
 {
     public class ProjectNode : SolutionItemNode, IPhysicalNode
     {
+        public IVsBuildPropertyStorage VsBuildPropertyStorage
+        {
+            get
+            {
+                ThreadHelper.ThrowIfNotOnUIThread();
+
+                if (!(UnderlyingHierarchy is IVsBuildPropertyStorage vsBuildPropertyStorage))
+                {
+                    throw new InvalidHierarchyItemException($"This item does not support the '{nameof(IVsBuildPropertyStorage)}' interface.");
+                }
+
+                return vsBuildPropertyStorage;
+            }
+        }
+
         public IVsProject UnderlyingProject => (IVsProject)UnderlyingHierarchy;
 
         public override NodeTypes NodeType { get; }
@@ -46,6 +62,17 @@ namespace DulcisX.Nodes
         public bool IsLoaded()
         {
             return !HierarchyUtilities.IsStubHierarchy(UnderlyingHierarchy);
+        }
+
+        public string GetItemProperty(uint itemId, DocumentProperty documentProperty)
+        {
+            ThreadHelper.ThrowIfNotOnUIThread();
+
+            var result = VsBuildPropertyStorage.GetItemAttribute(itemId, documentProperty.ToString(), out var val);
+
+            ErrorHandler.ThrowOnFailure(result);
+
+            return val;
         }
 
         public override IEnumerable<BaseNode> GetChildren()
