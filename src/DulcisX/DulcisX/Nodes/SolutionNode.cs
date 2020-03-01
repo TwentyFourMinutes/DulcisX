@@ -18,11 +18,6 @@ namespace DulcisX.Nodes
             ServiceContainer = container;
         }
 
-        public override string GetName()
-        {
-            throw new NotImplementedException();
-        }
-
         public string GetFullName()
         {
             throw new NotImplementedException();

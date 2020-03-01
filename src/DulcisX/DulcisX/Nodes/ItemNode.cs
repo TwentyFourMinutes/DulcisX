@@ -1,6 +1,7 @@
 ﻿using DulcisX.Core.Extensions;
 using DulcisX.Core.Models.Enums;
 using DulcisX.Exceptions;
+using Microsoft.Internal.VisualStudio.PlatformUI;
 using Microsoft.VisualStudio.Shell;
 using Microsoft.VisualStudio.Shell.Interop;
 using System.Collections;
@@ -25,7 +26,8 @@ namespace DulcisX.Nodes
             ItemId = itemId;
         }
 
-        public abstract string GetName();
+        public string GetName()
+            => AsHierarchyItem().Text;
 
         public abstract ItemNode GetParent();
 
@@ -51,7 +53,7 @@ namespace DulcisX.Nodes
             return parent;
         }
 
-        public IVsHierarchyItem GetHierarchyItem()
+        public IVsHierarchyItem AsHierarchyItem()
         {
             var manager = ParentSolution.ServiceContainer.GetInstance<IVsHierarchyItemManager>();
 

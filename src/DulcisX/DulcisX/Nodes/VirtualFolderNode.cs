@@ -13,11 +13,6 @@ namespace DulcisX.Nodes
         {
         }
 
-        public override string GetName()
-        {
-            throw new NotImplementedException();
-        }
-
         public override IEnumerator<ItemNode> GetEnumerator()
         {
             throw new NotImplementedException();

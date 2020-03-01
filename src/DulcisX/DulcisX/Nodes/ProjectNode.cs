@@ -8,6 +8,8 @@ namespace DulcisX.Nodes
 {
     public class ProjectNode : SolutionItemNode, IPhysicalNode
     {
+        public IVsProject UnderlyingProject => (IVsProject)UnderlyingHierarchy;
+
         public override NodeTypes NodeType => NodeTypes.Project;
 
         public ProjectNode(SolutionNode solution, IVsHierarchy hierarchy) : base(solution, hierarchy, CommonNodeId.Project)

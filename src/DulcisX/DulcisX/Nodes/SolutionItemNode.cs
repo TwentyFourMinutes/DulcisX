@@ -13,11 +13,6 @@ namespace DulcisX.Nodes
 
         }
 
-        public override string GetName()
-        {
-            throw new NotImplementedException();
-        }
-
         public override ItemNode GetParent()
         {
             if (!UnderlyingHierarchy.TryGetParentHierarchy(out var parentHierarchy))

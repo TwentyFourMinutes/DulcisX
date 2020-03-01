@@ -2,12 +2,15 @@
 using DulcisX.Core.Extensions;
 using DulcisX.Core.Models.Enums;
 using DulcisX.Core.Models.Enums.VisualStudio;
+using DulcisX.Helpers;
+using Microsoft.VisualStudio.Shell;
 using Microsoft.VisualStudio.Shell.Interop;
 
 namespace DulcisX.Nodes
 {
     public abstract class ProjectItemNode : ItemNode
     {
+
         protected readonly ProjectNode ParentProject;
 
         protected ProjectItemNode(SolutionNode solution, ProjectNode project, uint itemId) : base(solution, project.UnderlyingHierarchy, itemId)
@@ -19,7 +22,6 @@ namespace DulcisX.Nodes
         {
 
         }
-
 
         public ProjectNode GetParentProject()
         {
