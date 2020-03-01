@@ -1,7 +1,8 @@
 ﻿using DulcisX.Core.Models.Enums;
-using DulcisX.Helpers;
+using Microsoft.Internal.VisualStudio.PlatformUI;
 using Microsoft.VisualStudio;
 using Microsoft.VisualStudio.Shell;
+using Microsoft.VisualStudio.Shell.Interop;
 
 namespace DulcisX.Nodes
 {
@@ -22,6 +23,17 @@ namespace DulcisX.Nodes
             ErrorHandler.ThrowOnFailure(result);
 
             return fullName;
+        }
+
+        public string GetBuildAction()
+            => HierarchyUtilities.GetHierarchyProperty<string>(UnderlyingHierarchy, ItemId, (int)__VSHPROPID4.VSHPROPID_BuildAction);
+
+        public void SetBuildAction(string buildAction)
+        {
+            ThreadHelper.ThrowIfNotOnUIThread();
+
+            var result = UnderlyingHierarchy.SetProperty(ItemId, (int)__VSHPROPID4.VSHPROPID_BuildAction, buildAction);
+            ErrorHandler.ThrowOnFailure(result);
         }
     }
 }
