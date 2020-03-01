@@ -65,7 +65,7 @@ namespace DulcisX.Nodes
             return !HierarchyUtilities.IsStubHierarchy(UnderlyingHierarchy);
         }
 
-        public __VSPROJOUTPUTTYPE GeOutputTypeAction()
+        public __VSPROJOUTPUTTYPE GetOutputTypeAction()
             => HierarchyUtilities.GetHierarchyProperty(UnderlyingHierarchy, ItemId, (int)__VSHPROPID5.VSHPROPID_OutputType, obj => (__VSPROJOUTPUTTYPE)Unbox.AsInt32(obj));
 
         public void SetOutputTypeAction(__VSPROJOUTPUTTYPE outputType)
