@@ -3,12 +3,13 @@ using DulcisX.Core.Extensions;
 using DulcisX.Core.Models.Enums;
 using DulcisX.Core.Models.Enums.VisualStudio;
 using DulcisX.Helpers;
-using Microsoft.VisualStudio.Shell;
+using Microsoft.Internal.VisualStudio.PlatformUI;
 using Microsoft.VisualStudio.Shell.Interop;
+using System.Collections.Generic;
 
 namespace DulcisX.Nodes
 {
-    public abstract class ProjectItemNode : ItemNode
+    public abstract class ProjectItemNode : BaseNode
     {
 
         protected readonly ProjectNode ParentProject;
@@ -33,7 +34,7 @@ namespace DulcisX.Nodes
             return new ProjectNode(ParentSolution, UnderlyingHierarchy);
         }
 
-        public override ItemNode GetParent()
+        public override BaseNode GetParent()
         {
             var parentItemId = UnderlyingHierarchy.GetProperty(ItemId, (int)__VSHPROPID.VSHPROPID_Parent);
 
@@ -45,7 +46,7 @@ namespace DulcisX.Nodes
             return NodeFactory.GetProjectItemNode(ParentSolution, GetParentProject(), UnderlyingHierarchy, parentItemId);
         }
 
-        public override ItemNode GetParent(NodeTypes nodeType)
+        public override BaseNode GetParent(NodeTypes nodeType)
         {
             if (nodeType == NodeTypes.Project)
             {
@@ -53,6 +54,24 @@ namespace DulcisX.Nodes
             }
 
             return base.GetParent(nodeType);
+        }
+
+        public override IEnumerable<BaseNode> GetChildren()
+        {
+            var node = HierarchyUtilities.GetFirstChild(UnderlyingHierarchy, ItemId, true);
+
+            do
+            {
+                if (VsHelper.IsItemIdNil(node))
+                {
+                    yield break;
+                }
+
+                yield return NodeFactory.GetProjectItemNode(ParentSolution, ParentProject, UnderlyingHierarchy, node);
+
+                node = HierarchyUtilities.GetNextSibling(UnderlyingHierarchy, node, true);
+            }
+            while (true);
         }
     }
 }

@@ -1,8 +1,6 @@
 ﻿using DulcisX.Core.Models.Enums;
 using DulcisX.Helpers;
 using Microsoft.VisualStudio.Shell;
-using System;
-using System.Collections.Generic;
 
 namespace DulcisX.Nodes
 {

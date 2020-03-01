@@ -8,10 +8,11 @@ namespace DulcisX.Core.Models.Enums
         Document = 1,
         Folder = 2,
         Project = 4,
-        VirtualFolder = 8,
-        Solution = 16,
-        All = Folder | Project | VirtualFolder | Solution,
-        Virtual = VirtualFolder,
-        Physical = Folder | Project | Solution
+        MiscellaneousFilesProject = 8,
+        SolutionItemsProject = 16,
+        VirtualProject = 32,
+        VirtualFolder = 64,
+        Solution = 128,
+        All = ~0
     }
 }

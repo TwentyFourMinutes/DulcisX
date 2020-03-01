@@ -3,19 +3,16 @@ using DulcisX.Core.Models.Enums;
 using DulcisX.Core.Models.Enums.VisualStudio;
 using DulcisX.Helpers;
 using Microsoft.Internal.VisualStudio.PlatformUI;
-using Microsoft.VisualStudio.PlatformUI;
 using Microsoft.VisualStudio.Shell;
 using Microsoft.VisualStudio.Shell.Interop;
 using SimpleInjector;
-using System;
 using System.Collections.Generic;
-using System.Windows.Media.Animation;
 
 namespace DulcisX.Nodes
 {
-    public class SolutionNode : ItemNode, IPhysicalNode
+    public class SolutionNode : BaseNode, IPhysicalNode
     {
-        public IVsSolution UnderlyingSolution => (IVsSolution)UnderlyingHierarchy;
+        public IVsSolution UnderlyingSolution { get; }
 
         public override NodeTypes NodeType => NodeTypes.Solution;
 
@@ -23,8 +20,9 @@ namespace DulcisX.Nodes
 
         public Container ServiceContainer { get; }
 
-        public SolutionNode(IVsHierarchy hierarchy, Container container) : base(null, hierarchy, CommonNodeId.Solution)
+        public SolutionNode(IVsSolution solution, Container container) : base(null, (IVsHierarchy)solution, CommonNodeId.Solution)
         {
+            UnderlyingSolution = solution;
             ServiceContainer = container;
         }
 
@@ -39,10 +37,31 @@ namespace DulcisX.Nodes
             return (string)fullName;
         }
 
-        public override ItemNode GetParent()
+        public override BaseNode GetParent()
             => null;
 
-        public override ItemNode GetParent(NodeTypes nodeType)
+        public override BaseNode GetParent(NodeTypes nodeType)
             => null;
+
+        public override IEnumerable<BaseNode> GetChildren()
+        {
+            var node = HierarchyUtilities.GetFirstChild(UnderlyingHierarchy, ItemId, true);
+
+            do
+            {
+                if (VsHelper.IsItemIdNil(node))
+                {
+                    yield break;
+                }
+
+                if (UnderlyingHierarchy.TryGetNestedHierarchy(node, out var nestedHierarchy))
+                {
+                    yield return NodeFactory.GetSolutionItemNode(ParentSolution, nestedHierarchy, CommonNodeId.Root);
+                }
+
+                node = HierarchyUtilities.GetNextSibling(UnderlyingHierarchy, node, true);
+            }
+            while (true);
+        }
     }
 }

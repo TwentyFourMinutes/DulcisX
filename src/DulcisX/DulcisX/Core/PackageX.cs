@@ -1,6 +1,9 @@
-﻿using DulcisX.Core.Models.Interfaces;
+﻿using DulcisX.Core.Models;
+using DulcisX.Core.Models.Interfaces;
+using DulcisX.Nodes;
 using Microsoft.VisualStudio.ComponentModelHost;
 using Microsoft.VisualStudio.Shell;
+using Microsoft.VisualStudio.Shell.Interop;
 using SimpleInjector;
 using StringyEnums;
 using System;
@@ -43,8 +46,6 @@ namespace DulcisX.Core
 
             _consumerServices?.Invoke(ServiceContainer);
 
-            ServiceContainer.Verify();
-
             await OnInitializeAsync?.Invoke(cancellationToken);
 
             await base.InitializeAsync(cancellationToken, progress);
@@ -63,6 +64,11 @@ namespace DulcisX.Core
 
                 return componentModel.GetService<IVsHierarchyItemManager>();
             });
+
+            container.RegisterSingleton(() =>
+            {
+                return COMContainer.Create(this.GetService<SVsSolution, IVsSolution>());
+            });
         }
 
         #region Services
@@ -78,5 +84,21 @@ namespace DulcisX.Core
             => (IServiceProviders)this;
 
         #endregion
+
+        private SolutionNode _solutionNode;
+
+        public SolutionNode GetSolution()
+        {
+            if (_solutionNode is object)
+            {
+                return _solutionNode;
+            }
+
+            var solution = ServiceContainer.GetInstance<COMContainer<IVsSolution>>().Value;
+
+            _solutionNode = new SolutionNode(solution, ServiceContainer);
+
+            return _solutionNode;
+        }
     }
 }

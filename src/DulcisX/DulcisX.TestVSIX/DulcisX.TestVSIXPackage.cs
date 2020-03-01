@@ -1,5 +1,7 @@
-﻿using System.Runtime.InteropServices;
+﻿using System.Linq;
+using System.Runtime.InteropServices;
 using DulcisX.Core;
+using DulcisX.Nodes;
 using Microsoft.VisualStudio;
 using Microsoft.VisualStudio.Shell;
 
@@ -16,7 +18,14 @@ namespace DulcisX.TestVSIX
 
         public DulcisXTestVSIXPackage()
         {
+            OnInitializeAsync += DulcisXTestVSIXPackage_OnInitializeAsync;
+        }
 
+        private async System.Threading.Tasks.Task DulcisXTestVSIXPackage_OnInitializeAsync(System.Threading.CancellationToken arg)
+        {
+            await JoinableTaskFactory.SwitchToMainThreadAsync(arg);
+
+            var solution = GetSolution();
         }
 
         #endregion
