@@ -59,7 +59,7 @@ namespace DulcisX.Nodes
 
             var hierarchyItem = manager.GetHierarchyItem(hierarchy, itemId);
 
-            if (itemId == CommonNodeId.Root)
+            if (itemId == CommonNodeIds.Root)
             {
                 if (ExtentedHierarchyUtilities.IsRealProject(hierarchy) ||
                     HierarchyUtilities.IsFaultedProject(hierarchyItem.HierarchyIdentity) ||

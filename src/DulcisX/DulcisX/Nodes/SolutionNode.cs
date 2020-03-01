@@ -21,7 +21,7 @@ namespace DulcisX.Nodes
 
         public Container ServiceContainer { get; }
 
-        public SolutionNode(IVsSolution solution, Container container) : base(null, (IVsHierarchy)solution, CommonNodeId.Solution)
+        public SolutionNode(IVsSolution solution, Container container) : base(null, (IVsHierarchy)solution, CommonNodeIds.Solution)
         {
             UnderlyingSolution = solution;
             ServiceContainer = container;
@@ -57,7 +57,7 @@ namespace DulcisX.Nodes
 
                 if (UnderlyingHierarchy.TryGetNestedHierarchy(node, out var nestedHierarchy))
                 {
-                    yield return NodeFactory.GetSolutionItemNode(ParentSolution, nestedHierarchy, CommonNodeId.Root);
+                    yield return NodeFactory.GetSolutionItemNode(ParentSolution, nestedHierarchy, CommonNodeIds.Root);
                 }
 
                 node = HierarchyUtilities.GetNextSibling(UnderlyingHierarchy, node, true);

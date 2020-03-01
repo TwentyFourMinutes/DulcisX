@@ -15,7 +15,7 @@ namespace DulcisX.Nodes
 
         public override NodeTypes NodeType { get; }
 
-        public ProjectNode(SolutionNode solution, IVsHierarchy hierarchy, NodeTypes nodeType = NodeTypes.Project) : base(solution, hierarchy, CommonNodeId.Project)
+        public ProjectNode(SolutionNode solution, IVsHierarchy hierarchy, NodeTypes nodeType = NodeTypes.Project) : base(solution, hierarchy, CommonNodeIds.Project)
         {
             NodeType = nodeType;
         }

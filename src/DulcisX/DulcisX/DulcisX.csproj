@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="..\packages\Microsoft.CodeAnalysis.BannedApiAnalyzers.2.9.8\build\Microsoft.CodeAnalysis.BannedApiAnalyzers.props" Condition="Exists('..\packages\Microsoft.CodeAnalysis.BannedApiAnalyzers.2.9.8\build\Microsoft.CodeAnalysis.BannedApiAnalyzers.props')" />
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
@@ -632,8 +632,9 @@
     <Compile Include="Core\Models\Enums\DocumentPropertyX.cs" />
     <Compile Include="Core\Models\Enums\HierarchyItemType.cs" />
     <Compile Include="Core\Models\Enums\StartupOptions.cs" />
-    <Compile Include="Core\Models\Enums\VisualStudio\CommonNodeId.cs" />
-    <Compile Include="Core\Models\Enums\VisualStudio\CommonStatusCode.cs" />
+    <Compile Include="Core\Models\Enums\VisualStudio\CommonNodeIds.cs" />
+    <Compile Include="Core\Models\Enums\VisualStudio\CommonStatusCodes.cs" />
+    <Compile Include="Core\Models\Enums\VisualStudio\CommonStreamKeys.cs" />
     <Compile Include="Core\Models\Enums\VisualStudio\VsRDTAttributeX.cs" />
     <Compile Include="Core\Models\Interfaces\IServiceProviders.cs" />
     <Compile Include="Core\Models\HierarchyPropertiesX.cs" />

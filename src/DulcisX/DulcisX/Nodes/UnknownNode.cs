@@ -4,9 +4,6 @@ using DulcisX.Core.Models.Enums.VisualStudio;
 using Microsoft.VisualStudio.Shell.Interop;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace DulcisX.Nodes
 {
@@ -25,20 +22,20 @@ namespace DulcisX.Nodes
 
         public override BaseNode GetParent()
         {
-            if (ItemId == CommonNodeId.Root)
+            if (ItemId == CommonNodeIds.Root)
             {
                 if (!UnderlyingHierarchy.TryGetParentHierarchy(out var tempHierarchy))
                 {
                     return null;
                 }
 
-                return NodeFactory.GetSolutionItemNode(ParentSolution, tempHierarchy, CommonNodeId.Root);
+                return NodeFactory.GetSolutionItemNode(ParentSolution, tempHierarchy, CommonNodeIds.Root);
             }
             else
             {
                 var parentItemId = UnderlyingHierarchy.GetProperty(ItemId, (int)__VSHPROPID.VSHPROPID_Parent);
 
-                if (parentItemId == CommonNodeId.Nil)
+                if (parentItemId == CommonNodeIds.Nil)
                 {
                     return null;
                 }

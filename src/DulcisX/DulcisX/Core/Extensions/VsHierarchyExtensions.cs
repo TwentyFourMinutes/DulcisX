@@ -1,4 +1,4 @@
-using DulcisX.Components;
+﻿using DulcisX.Components;
 using DulcisX.Core.Models;
 using DulcisX.Core.Models.Enums;
 using DulcisX.Core.Models.Enums.VisualStudio;
@@ -15,7 +15,7 @@ namespace DulcisX.Core.Extensions
     public static class VsHierarchyExtensions
     {
         public static bool TryGetParentHierarchy(this IVsHierarchy hierarchy, out IVsHierarchy parentHierarchy)
-            => hierarchy.TryGetProperty(CommonNodeId.Root, (int)__VSHPROPID.VSHPROPID_ParentHierarchy, out parentHierarchy);
+            => hierarchy.TryGetProperty(CommonNodeIds.Root, (int)__VSHPROPID.VSHPROPID_ParentHierarchy, out parentHierarchy);
 
         public static bool TryGetNestedHierarchy(this IVsHierarchy hierarchy, uint itemId, out IVsHierarchy nestedHierarchy)
         {

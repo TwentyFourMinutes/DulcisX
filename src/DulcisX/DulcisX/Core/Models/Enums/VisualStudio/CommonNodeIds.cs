@@ -2,7 +2,7 @@
 
 namespace DulcisX.Core.Models.Enums.VisualStudio
 {
-    public static class CommonNodeId
+    public static class CommonNodeIds
     {
         public const uint Nil = VSConstants.VSITEMID_NIL;
         public const uint Root = VSConstants.VSITEMID_ROOT;

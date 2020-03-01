@@ -21,7 +21,7 @@ namespace DulcisX.Nodes
                 return null;
             }
 
-            return NodeFactory.GetSolutionItemNode(ParentSolution, parentHierarchy, CommonNodeId.Root);
+            return NodeFactory.GetSolutionItemNode(ParentSolution, parentHierarchy, CommonNodeIds.Root);
         }
 
         public override IEnumerable<BaseNode> GetChildren()
@@ -37,7 +37,7 @@ namespace DulcisX.Nodes
 
                 if (UnderlyingHierarchy.TryGetNestedHierarchy(node, out var nestedHierarchy))
                 {
-                    yield return NodeFactory.GetSolutionItemNode(ParentSolution, nestedHierarchy, CommonNodeId.Root);
+                    yield return NodeFactory.GetSolutionItemNode(ParentSolution, nestedHierarchy, CommonNodeIds.Root);
                 }
 
                 node = HierarchyUtilities.GetNextSibling(UnderlyingHierarchy, node, true);

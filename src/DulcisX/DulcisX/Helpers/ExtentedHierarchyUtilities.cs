@@ -24,7 +24,7 @@ namespace DulcisX.Helpers
                 return false;
             }
 
-            var result = project.GetMkDocument(CommonNodeId.Project, out _);
+            var result = project.GetMkDocument(CommonNodeIds.Project, out _);
 
             return ErrorHandler.Succeeded(result);
         }
