@@ -644,10 +644,9 @@
     <Compile Include="Core\PackageX.cs" />
     <Compile Include="Exceptions\InvalidHierarchyItemExceptionX.cs" />
     <Compile Include="Exceptions\InvalidHierarchyTypeExceptionX.cs" />
-    <Compile Include="Exceptions\InvalidVSStatusCodeExceptionX.cs" />
     <Compile Include="Exceptions\NoFlagsAllowedException.cs" />
     <Compile Include="Helpers\ExtentedHierarchyUtilities.cs" />
-    <Compile Include="Helpers\VSHelper.cs" />
+    <Compile Include="Helpers\VsHelper.cs" />
     <Compile Include="Nodes\DocumentNode.cs" />
     <Compile Include="Nodes\INamedNode.cs" />
     <Compile Include="Nodes\IPhysicalNode.cs" />

@@ -25,7 +25,7 @@ namespace DulcisX.Core.Extensions
 
             var result = hierarchy.GetNestedHierarchy(itemId, ref guid, out var hierarchyPointer, out _);
 
-            if (VsHelper.HasFailed(result) || hierarchyPointer == IntPtr.Zero)
+            if (ErrorHandler.Failed(result) || hierarchyPointer == IntPtr.Zero)
             {
                 nestedHierarchy = null;
                 return false;
@@ -62,7 +62,7 @@ namespace DulcisX.Core.Extensions
 
                 var result = project.GetMkDocument(itemId, out var path);
 
-                 ErrorHandler.ThrowOnFailure(result);
+                ErrorHandler.ThrowOnFailure(result);
 
                 if (File.Exists(path))
                 {
@@ -113,7 +113,7 @@ namespace DulcisX.Core.Extensions
 
             var result = hierarchy.GetProperty(itemId, propId, out var val);
 
-             ErrorHandler.ThrowOnFailure(result);
+            ErrorHandler.ThrowOnFailure(result);
 
             return (uint)Convert.ToInt32(val);
         }
@@ -124,7 +124,7 @@ namespace DulcisX.Core.Extensions
 
             var result = hierarchy.GetProperty(itemId, propId, out var val);
 
-             ErrorHandler.ThrowOnFailure(result);
+            ErrorHandler.ThrowOnFailure(result);
 
             return (TType)val;
         }
@@ -135,7 +135,7 @@ namespace DulcisX.Core.Extensions
 
             var result = hierarchy.GetProperty(itemId, propId, out var val);
 
-             ErrorHandler.ThrowOnFailure(result);
+            ErrorHandler.ThrowOnFailure(result);
 
             return val;
         }
@@ -146,7 +146,7 @@ namespace DulcisX.Core.Extensions
 
             var result = hierarchy.GetProperty(itemId, propId, out var val);
 
-            if (!VsHelper.HasSuccessCode(result))
+            if (ErrorHandler.Failed(result))
             {
                 value = default;
                 return false;
@@ -163,7 +163,7 @@ namespace DulcisX.Core.Extensions
 
             var result = hierarchy.GetProperty(itemId, propId, out var val);
 
-            if (!VsHelper.HasSuccessCode(result))
+            if (ErrorHandler.Failed(result))
             {
                 type = default;
                 return false;
@@ -180,7 +180,7 @@ namespace DulcisX.Core.Extensions
 
             var result = hierarchy.GetProperty(itemId, propId, out obj);
 
-            return VsHelper.HasSuccessCode(result);
+            return ErrorHandler.Succeeded(result);
         }
 
         public static bool TrySetProperty(this IVsHierarchy hierarchy, uint itemId, int propId, object val)
@@ -189,7 +189,7 @@ namespace DulcisX.Core.Extensions
 
             var result = hierarchy.SetProperty(itemId, propId, val);
 
-            return VsHelper.HasSuccessCode(result);
+            return ErrorHandler.Succeeded(result);
         }
 
         #endregion

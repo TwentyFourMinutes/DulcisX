@@ -6,12 +6,6 @@ namespace DulcisX.Helpers
 {
     public static class VsHelper
     {
-        public static bool HasSuccessCode(int statusCode)
-            => statusCode == CommonStatusCodes.Success;
-
-        public static bool HasFailed(int statusCode)
-            => statusCode == CommonStatusCodes.Failure;
-
         public static void ValidateHierarchyType(HierarchyItemTypeX actual, HierarchyItemTypeX expected)
         {
             if (actual != expected)
