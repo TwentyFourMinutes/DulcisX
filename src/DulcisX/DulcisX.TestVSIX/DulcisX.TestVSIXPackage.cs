@@ -19,7 +19,6 @@ namespace DulcisX.TestVSIX
 
         }
 
-
         #endregion
     }
 }

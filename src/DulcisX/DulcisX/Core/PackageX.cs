@@ -18,6 +18,8 @@ namespace DulcisX.Core
 
         private readonly Action<Container> _consumerServices;
 
+        #region Constructors
+
         protected PackageX()
         {
             ServiceContainer = new Container();
@@ -33,15 +35,17 @@ namespace DulcisX.Core
             EnumCore.Init(initializer => initializer.InitWith(Assembly.GetExecutingAssembly()), false);
         }
 
+        #endregion
+
         protected override async Task InitializeAsync(CancellationToken cancellationToken, IProgress<ServiceProgressData> progress)
         {
             AddDefaultServices(ServiceContainer);
 
-            _consumerServices.Invoke(ServiceContainer);
+            _consumerServices?.Invoke(ServiceContainer);
 
             ServiceContainer.Verify();
 
-            await OnInitializeAsync(cancellationToken);
+            await OnInitializeAsync?.Invoke(cancellationToken);
 
             await base.InitializeAsync(cancellationToken, progress);
         }
