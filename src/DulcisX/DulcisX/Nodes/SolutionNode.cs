@@ -1,11 +1,15 @@
-﻿using DulcisX.Core.Models.Enums;
+﻿using DulcisX.Core.Extensions;
+using DulcisX.Core.Models.Enums;
 using DulcisX.Core.Models.Enums.VisualStudio;
 using DulcisX.Helpers;
+using Microsoft.Internal.VisualStudio.PlatformUI;
+using Microsoft.VisualStudio.PlatformUI;
 using Microsoft.VisualStudio.Shell;
 using Microsoft.VisualStudio.Shell.Interop;
 using SimpleInjector;
 using System;
 using System.Collections.Generic;
+using System.Windows.Media.Animation;
 
 namespace DulcisX.Nodes
 {
@@ -14,6 +18,8 @@ namespace DulcisX.Nodes
         public IVsSolution UnderlyingSolution => (IVsSolution)UnderlyingHierarchy;
 
         public override NodeTypes NodeType => NodeTypes.Solution;
+
+        public override SolutionNode ParentSolution => this;
 
         public Container ServiceContainer { get; }
 
@@ -38,10 +44,5 @@ namespace DulcisX.Nodes
 
         public override ItemNode GetParent(NodeTypes nodeType)
             => null;
-
-        public override IEnumerator<ItemNode> GetEnumerator()
-        {
-            throw new NotImplementedException();
-        }
     }
 }

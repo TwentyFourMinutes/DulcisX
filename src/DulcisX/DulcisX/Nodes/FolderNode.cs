@@ -24,10 +24,5 @@ namespace DulcisX.Nodes
 
             return fullName;
         }
-
-        public override IEnumerator<ItemNode> GetEnumerator()
-        {
-            throw new NotImplementedException();
-        }
     }
 }

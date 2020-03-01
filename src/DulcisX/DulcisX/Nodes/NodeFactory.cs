@@ -6,6 +6,18 @@ namespace DulcisX.Nodes
 {
     internal static class NodeFactory
     {
+        internal static ItemNode GetItemNode(SolutionNode solution, IVsHierarchy hierarchy, uint itemId)
+        {
+            var node = GetProjectItemNode(solution, null, hierarchy, itemId);
+
+            if (node is null)
+            {
+                node = GetSolutionItemNode(solution, hierarchy, itemId);
+            }
+
+            return node;
+        }
+
         internal static ItemNode GetSolutionItemNode(SolutionNode solution, IVsHierarchy hierarchy, uint itemId)
         {
             var manager = solution.ServiceContainer.GetInstance<IVsHierarchyItemManager>();
@@ -13,6 +25,10 @@ namespace DulcisX.Nodes
             var hierarchyItem = manager.GetHierarchyItem(hierarchy, itemId);
 
             if (HierarchyUtilities.IsSolutionFolder(hierarchyItem.HierarchyIdentity))
+            {
+                return new VirtualFolderNode(solution, hierarchy, itemId);
+            }
+            else if (HierarchyUtilities.IsProject(hierarchyItem.HierarchyIdentity))
             {
                 return new VirtualFolderNode(solution, hierarchy, itemId);
             }

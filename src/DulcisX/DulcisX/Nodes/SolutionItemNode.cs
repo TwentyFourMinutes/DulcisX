@@ -22,10 +22,5 @@ namespace DulcisX.Nodes
 
             return NodeFactory.GetSolutionItemNode(ParentSolution, parentHierarchy, CommonNodeId.Root);
         }
-
-        public override IEnumerator<ItemNode> GetEnumerator()
-        {
-            throw new NotImplementedException();
-        }
     }
 }

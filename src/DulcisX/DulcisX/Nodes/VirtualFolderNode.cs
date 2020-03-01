@@ -12,10 +12,5 @@ namespace DulcisX.Nodes
         public VirtualFolderNode(SolutionNode solution, IVsHierarchy hierarchy, uint itemId) : base(solution, hierarchy, itemId)
         {
         }
-
-        public override IEnumerator<ItemNode> GetEnumerator()
-        {
-            throw new NotImplementedException();
-        }
     }
 }

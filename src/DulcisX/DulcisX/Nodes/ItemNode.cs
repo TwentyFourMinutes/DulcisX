@@ -1,6 +1,8 @@
 ﻿using DulcisX.Core.Extensions;
 using DulcisX.Core.Models.Enums;
+using DulcisX.Core.Models.Enums.VisualStudio;
 using DulcisX.Exceptions;
+using DulcisX.Helpers;
 using Microsoft.Internal.VisualStudio.PlatformUI;
 using Microsoft.VisualStudio.Shell;
 using Microsoft.VisualStudio.Shell.Interop;
@@ -11,7 +13,7 @@ namespace DulcisX.Nodes
 {
     public abstract class ItemNode : INamedNode, IEnumerable<ItemNode>
     {
-        public SolutionNode ParentSolution { get; }
+        public virtual SolutionNode ParentSolution { get; }
 
         public IVsHierarchy UnderlyingHierarchy { get; }
 
@@ -63,7 +65,28 @@ namespace DulcisX.Nodes
         public bool IsTypeMatching(NodeTypes nodeType)
             => NodeType == nodeType;
 
-        public abstract IEnumerator<ItemNode> GetEnumerator();
+        public IEnumerator<ItemNode> GetEnumerator()
+        {
+            var node = HierarchyUtilities.GetFirstChild(UnderlyingHierarchy, ItemId, true);
+
+            do
+            {
+                if (VsHelper.IsItemIdNil(node))
+                {
+                    yield break;
+                }
+
+                if (UnderlyingHierarchy.TryGetNestedHierarchy(node, out var nestedHierarchy))
+                {
+                    yield return NodeFactory.GetItemNode(ParentSolution, nestedHierarchy, CommonNodeId.Root);
+                }
+
+                node = HierarchyUtilities.GetNextSibling(UnderlyingHierarchy, node, true);
+
+                node = UnderlyingHierarchy.GetProperty(node, (int)__VSHPROPID.VSHPROPID_NextVisibleSibling);
+            }
+            while (true);
+        }
 
         IEnumerator IEnumerable.GetEnumerator()
             => GetEnumerator();
