@@ -645,7 +645,7 @@
     <Compile Include="Exceptions\InvalidHierarchyItemExceptionX.cs" />
     <Compile Include="Exceptions\InvalidHierarchyTypeExceptionX.cs" />
     <Compile Include="Exceptions\NoFlagsAllowedException.cs" />
-    <Compile Include="Helpers\ExtentedHierarchyUtilities.cs" />
+    <Compile Include="Helpers\ExtendedHierarchyUtilities.cs" />
     <Compile Include="Helpers\VsHelper.cs" />
     <Compile Include="Nodes\DocumentNode.cs" />
     <Compile Include="Nodes\INamedNode.cs" />

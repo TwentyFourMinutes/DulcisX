@@ -31,13 +31,13 @@ namespace DulcisX.Nodes
 
             var hierarchyItem = manager.GetHierarchyItem(hierarchy, itemId);
 
-            if (ExtentedHierarchyUtilities.IsRealProject(hierarchy) ||
+            if (ExtendedHierarchyUtilities.IsRealProject(hierarchy) ||
                 HierarchyUtilities.IsFaultedProject(hierarchyItem.HierarchyIdentity) ||
                 HierarchyUtilities.IsStubHierarchy(hierarchy))
             {
                 return new ProjectNode(solution, hierarchy);
             }
-            else if (ExtentedHierarchyUtilities.IsSolutionItemsProject(hierarchy))
+            else if (ExtendedHierarchyUtilities.IsSolutionItemsProject(hierarchy))
             {
                 return new ProjectNode(solution, hierarchy, NodeTypes.SolutionItemsProject);
             }
@@ -67,7 +67,7 @@ namespace DulcisX.Nodes
 
             if (itemId == CommonNodeIds.Root)
             {
-                if (ExtentedHierarchyUtilities.IsRealProject(hierarchy) ||
+                if (ExtendedHierarchyUtilities.IsRealProject(hierarchy) ||
                     HierarchyUtilities.IsFaultedProject(hierarchyItem.HierarchyIdentity) ||
                     HierarchyUtilities.IsStubHierarchy(hierarchy))
                 {
@@ -77,11 +77,11 @@ namespace DulcisX.Nodes
                 {
                     return project ?? new ProjectNode(solution, hierarchy, NodeTypes.VirtualProject);
                 }
-                else if (ExtentedHierarchyUtilities.IsMiscellaneousFilesProject(hierarchy))
+                else if (ExtendedHierarchyUtilities.IsMiscellaneousFilesProject(hierarchy))
                 {
                     return project ?? new ProjectNode(solution, hierarchy, NodeTypes.MiscellaneousFilesProject);
                 }
-                else if (ExtentedHierarchyUtilities.IsSolutionItemsProject(hierarchy))
+                else if (ExtendedHierarchyUtilities.IsSolutionItemsProject(hierarchy))
                 {
                     return project ?? new ProjectNode(solution, hierarchy, NodeTypes.SolutionItemsProject);
                 }

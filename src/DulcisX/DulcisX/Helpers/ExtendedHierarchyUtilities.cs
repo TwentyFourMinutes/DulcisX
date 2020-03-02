@@ -7,7 +7,7 @@ using System;
 
 namespace DulcisX.Helpers
 {
-    public static class ExtentedHierarchyUtilities
+    public static class ExtendedHierarchyUtilities
     {
         public static bool IsSolutionItemsProject(IVsHierarchy hierarchy)
             => IsNodeType(hierarchy, VSConstants.CLSID.SolutionItemsProject_guid);
