@@ -1,4 +1,5 @@
-﻿using System.Linq;
+﻿using System.Diagnostics;
+using System.Linq;
 using System.Runtime.InteropServices;
 using DulcisX.Core;
 using Microsoft.VisualStudio;
@@ -24,9 +25,8 @@ namespace DulcisX.TestVSIX
         {
             await JoinableTaskFactory.SwitchToMainThreadAsync(arg);
 
-            var project = GetSolution().GetStartupProjects().First();
-
-            var kek = project.Project.GetBuildAction();
+            var projects = GetSolution().GetAllProjects().ToList();
+            var projects2 = projects.Select(x => x.GetDisplayName()).ToList();
         }
 
         #endregion

@@ -1,4 +1,5 @@
 ﻿using DulcisX.Core.Models.Enums;
+using DulcisX.Core.Models.Enums.VisualStudio;
 using Microsoft.VisualStudio.Shell.Interop;
 
 namespace DulcisX.Nodes
@@ -7,7 +8,7 @@ namespace DulcisX.Nodes
     {
         public override NodeTypes NodeType => NodeTypes.VirtualFolder;
 
-        public VirtualFolderNode(SolutionNode solution, IVsHierarchy hierarchy, uint itemId) : base(solution, hierarchy, itemId)
+        public VirtualFolderNode(SolutionNode solution, IVsHierarchy hierarchy) : base(solution, hierarchy, CommonNodeIds.VirtualFolder)
         {
         }
     }

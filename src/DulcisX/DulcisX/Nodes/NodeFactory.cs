@@ -11,6 +11,8 @@ namespace DulcisX.Nodes
     {
         internal static BaseNode GetItemNode(SolutionNode solution, IVsHierarchy hierarchy, uint itemId)
         {
+            ThreadHelper.ThrowIfNotOnUIThread();
+
             var node = GetProjectItemNode(solution, null, hierarchy, itemId);
 
             if (node is UnknownNode)
@@ -23,6 +25,8 @@ namespace DulcisX.Nodes
 
         internal static BaseNode GetSolutionItemNode(SolutionNode solution, IVsHierarchy hierarchy, uint itemId)
         {
+            ThreadHelper.ThrowIfNotOnUIThread();
+
             var manager = solution.ServiceContainer.GetInstance<IVsHierarchyItemManager>();
 
             var hierarchyItem = manager.GetHierarchyItem(hierarchy, itemId);
@@ -33,17 +37,17 @@ namespace DulcisX.Nodes
             {
                 return new ProjectNode(solution, hierarchy);
             }
-            else if (HierarchyUtilities.IsVirtualProject(hierarchyItem.HierarchyIdentity))
-            {
-                return new ProjectNode(solution, hierarchy, NodeTypes.VirtualProject);
-            }
             else if (ExtentedHierarchyUtilities.IsSolutionItemsProject(hierarchy))
             {
                 return new ProjectNode(solution, hierarchy, NodeTypes.SolutionItemsProject);
             }
+            else if (HierarchyUtilities.IsVirtualProject(hierarchyItem.HierarchyIdentity))
+            {
+                return new ProjectNode(solution, hierarchy, NodeTypes.VirtualProject);
+            }
             else if (HierarchyUtilities.IsSolutionFolder(hierarchyItem.HierarchyIdentity))
             {
-                return new VirtualFolderNode(solution, hierarchy, itemId);
+                return new VirtualFolderNode(solution, hierarchy);
             }
             else if (HierarchyUtilities.IsSolutionNode(hierarchyItem.HierarchyIdentity))
             {
@@ -55,6 +59,8 @@ namespace DulcisX.Nodes
 
         internal static BaseNode GetProjectItemNode(SolutionNode solution, ProjectNode project, IVsHierarchy hierarchy, uint itemId)
         {
+            ThreadHelper.ThrowIfNotOnUIThread();
+
             var manager = solution.ServiceContainer.GetInstance<IVsHierarchyItemManager>();
 
             var hierarchyItem = manager.GetHierarchyItem(hierarchy, itemId);

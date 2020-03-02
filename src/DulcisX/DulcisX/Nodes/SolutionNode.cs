@@ -5,6 +5,7 @@ using DulcisX.Core.Models.PackageUserOptions;
 using DulcisX.Helpers;
 using Microsoft.Internal.VisualStudio.PlatformUI;
 using Microsoft.VisualStudio;
+using Microsoft.VisualStudio.OLE.Interop;
 using Microsoft.VisualStudio.Shell;
 using Microsoft.VisualStudio.Shell.Interop;
 using SimpleInjector;
@@ -120,6 +121,38 @@ namespace DulcisX.Nodes
                 yield return (GetProject(hierarchy), StartupOptions.Start);
 
                 ErrorHandler.ThrowOnFailure(result);
+            }
+        }
+
+        public IEnumerable<ProjectNode> GetAllProjects()
+        {
+            ThreadHelper.ThrowIfNotOnUIThread();
+
+            var tempGuid = Guid.Empty;
+
+            var result = UnderlyingSolution.GetProjectEnum((uint)__VSENUMPROJFLAGS.EPF_ALLPROJECTS, ref tempGuid, out var projectEnumerator);
+
+            ErrorHandler.ThrowOnFailure(result);
+
+            var manager = this.ServiceContainer.GetInstance<IVsHierarchyItemManager>();
+
+            var hierarchy = new IVsHierarchy[1];
+
+            while (true)
+            {
+                result = projectEnumerator.Next(1, hierarchy, out var fetchedCount);
+
+                if (fetchedCount == 0)
+                    break;
+
+                ErrorHandler.ThrowOnFailure(result);
+
+                if (!(NodeFactory.GetSolutionItemNode(this, hierarchy[0], CommonNodeIds.Project) is ProjectNode projectNode))
+                {
+                    continue;
+                }
+
+                yield return projectNode;
             }
         }
 
