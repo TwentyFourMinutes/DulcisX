@@ -1,5 +1,4 @@
-﻿using DulcisX.Helpers;
-using Microsoft.VisualStudio;
+﻿using Microsoft.VisualStudio;
 using Microsoft.VisualStudio.Shell;
 using Microsoft.VisualStudio.Shell.Interop;
 using System;
@@ -113,7 +112,7 @@ namespace DulcisX.Components.Events
         {
             ThreadHelper.ThrowIfNotOnUIThread();
             var result = Solution.UnderlyingSolution.UnadviseSolutionEvents(CookieUID);
-             ErrorHandler.ThrowOnFailure(result);
+            ErrorHandler.ThrowOnFailure(result);
         }
 
         internal static ISolutionEventsX Create(SolutionX solution)
@@ -124,8 +123,7 @@ namespace DulcisX.Components.Events
 
             var result = solution.UnderlyingSolution.AdviseSolutionEvents(solutionEvents, out var cookieUID);
 
-             ErrorHandler.ThrowOnFailure(result);
-
+            ErrorHandler.ThrowOnFailure(result);
             solutionEvents.CookieUID = cookieUID;
 
             return solutionEvents;

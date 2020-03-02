@@ -3,7 +3,6 @@ using DulcisX.Core.Models;
 using DulcisX.Core.Models.Enums;
 using DulcisX.Core.Models.Interfaces;
 using DulcisX.Core.Models.PackageUserOptions;
-using DulcisX.Helpers;
 using EnvDTE80;
 using Microsoft.VisualStudio;
 using Microsoft.VisualStudio.OLE.Interop;

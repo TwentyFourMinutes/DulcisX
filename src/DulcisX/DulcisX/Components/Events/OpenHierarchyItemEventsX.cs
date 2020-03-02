@@ -1,5 +1,4 @@
-﻿using DulcisX.Helpers;
-using DulcisX.Core.Extensions;
+﻿using DulcisX.Core.Extensions;
 using Microsoft.VisualStudio;
 using Microsoft.VisualStudio.Shell;
 using Microsoft.VisualStudio.Shell.Interop;

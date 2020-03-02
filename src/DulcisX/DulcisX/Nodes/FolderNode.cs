@@ -1,5 +1,4 @@
 ﻿using DulcisX.Core.Models.Enums;
-using DulcisX.Helpers;
 using Microsoft.VisualStudio;
 using Microsoft.VisualStudio.Shell;
 

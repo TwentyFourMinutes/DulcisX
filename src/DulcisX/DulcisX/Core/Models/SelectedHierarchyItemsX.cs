@@ -4,7 +4,6 @@ using System.Collections;
 using System.Collections.Generic;
 using DulcisX.Core.Extensions;
 using Microsoft.VisualStudio.Shell;
-using DulcisX.Helpers;
 using Microsoft.VisualStudio;
 
 namespace DulcisX.Core.Models

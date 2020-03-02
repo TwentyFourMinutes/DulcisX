@@ -648,6 +648,7 @@
     <Compile Include="Helpers\ExtendedHierarchyUtilities.cs" />
     <Compile Include="Helpers\VsHelper.cs" />
     <Compile Include="Nodes\DocumentNode.cs" />
+    <Compile Include="Nodes\Events\EventSink.cs" />
     <Compile Include="Nodes\INamedNode.cs" />
     <Compile Include="Nodes\IPhysicalNode.cs" />
     <Compile Include="Core\Models\Enums\NodeTypes.cs" />
