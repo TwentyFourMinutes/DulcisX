@@ -616,22 +616,18 @@
     <Compile Include="Core\Extensions\VsHierarchyExtensions.cs" />
     <Compile Include="Core\Extensions\VsRunningDocumentTableExtensions.cs" />
     <Compile Include="Core\Models\COMContainer.cs" />
-    <Compile Include="Core\Models\ConstructorInstance.cs" />
-    <Compile Include="Core\Models\Enums\CopyToOutputDirectoryX.cs" />
-    <Compile Include="Core\Models\Enums\DocumentPropertyX.cs" />
-    <Compile Include="Core\Models\Enums\HierarchyItemType.cs" />
+    <Compile Include="Core\Models\Enums\CopyToOutputDirectory.cs" />
+    <Compile Include="Core\Models\Enums\DocumentProperty.cs" />
     <Compile Include="Core\Models\Enums\StartupOptions.cs" />
     <Compile Include="Core\Models\Enums\VisualStudio\CommonNodeIds.cs" />
     <Compile Include="Core\Models\Enums\VisualStudio\CommonStatusCodes.cs" />
     <Compile Include="Core\Models\Enums\VisualStudio\CommonStreamKeys.cs" />
-    <Compile Include="Core\Models\Enums\VisualStudio\VsRDTAttributeX.cs" />
-    <Compile Include="Core\Models\Interfaces\IServiceProviders.cs" />
-    <Compile Include="Core\Models\HierarchyPropertiesX.cs" />
+    <Compile Include="Core\Models\Enums\VisualStudio\VsRDTAttribute.cs" />
+    <Compile Include="Core\Models\IServiceProviders.cs" />
     <Compile Include="Core\Models\PackageUserOptions\SolutionConfigurationOptions.cs" />
     <Compile Include="Core\Models\SelectedHierarchyItemsX.cs" />
     <Compile Include="Core\PackageX.cs" />
-    <Compile Include="Exceptions\InvalidHierarchyItemExceptionX.cs" />
-    <Compile Include="Exceptions\InvalidHierarchyTypeExceptionX.cs" />
+    <Compile Include="Exceptions\InvalidHierarchyItemException.cs" />
     <Compile Include="Exceptions\NoFlagsAllowedException.cs" />
     <Compile Include="Helpers\ExtendedHierarchyUtilities.cs" />
     <Compile Include="Helpers\VsHelper.cs" />
@@ -671,7 +667,9 @@
     <Analyzer Include="..\packages\Microsoft.VisualStudio.Threading.Analyzers.16.5.132\analyzers\cs\Microsoft.VisualStudio.Threading.Analyzers.CodeFixes.dll" />
     <Analyzer Include="..\packages\Microsoft.VisualStudio.Threading.Analyzers.16.5.132\analyzers\cs\Microsoft.VisualStudio.Threading.Analyzers.dll" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Core\Models\Interfaces\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>

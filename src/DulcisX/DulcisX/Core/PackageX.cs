@@ -1,6 +1,5 @@
 ﻿using DulcisX.Core.Extensions;
 using DulcisX.Core.Models;
-using DulcisX.Core.Models.Interfaces;
 using DulcisX.Nodes;
 using Microsoft.VisualStudio.ComponentModelHost;
 using Microsoft.VisualStudio.Shell;

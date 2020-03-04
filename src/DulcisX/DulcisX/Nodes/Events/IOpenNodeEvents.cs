@@ -1,10 +1,6 @@
 ﻿using DulcisX.Core.Models.Enums.VisualStudio;
 using Microsoft.VisualStudio.Shell.Interop;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace DulcisX.Nodes.Events
 {
@@ -15,7 +11,7 @@ namespace DulcisX.Nodes.Events
         EventDistributor<Action<BaseNode>> OnSaved { get; }
         EventDistributor<Action<BaseNode, bool, IVsWindowFrame>> OnNodeWindowShow { get; }
         EventDistributor<Action<BaseNode, IVsWindowFrame>> OnNodeWindowHidden { get; }
-        EventDistributor<Action<BaseNode, VsRDTAttributeX>> OnAttributeChanged { get; }
+        EventDistributor<Action<BaseNode, VsRDTAttribute>> OnAttributeChanged { get; }
         EventDistributor<Action<BaseNode, string, string>> OnRenamed { get; }
         EventDistributor<Action<BaseNode, string, string>> OnMoved { get; }
         EventDistributor<Action<BaseNode>> OnSave { get; }

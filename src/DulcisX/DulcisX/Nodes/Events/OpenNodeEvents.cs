@@ -3,7 +3,6 @@ using DulcisX.Core.Models.Enums.VisualStudio;
 using Microsoft.VisualStudio;
 using Microsoft.VisualStudio.Shell;
 using Microsoft.VisualStudio.Shell.Interop;
-using Microsoft.VisualStudio.Text.Editor.Commanding.Commands;
 using System;
 using System.IO;
 
@@ -33,9 +32,9 @@ namespace DulcisX.Nodes.Events
         public EventDistributor<Action<BaseNode, IVsWindowFrame>> OnNodeWindowHidden
             => _onNodeWindowHidden ?? (_onNodeWindowHidden = new EventDistributor<Action<BaseNode, IVsWindowFrame>>());
 
-        private EventDistributor<Action<BaseNode, VsRDTAttributeX>> _onAttributeChanged;
-        public EventDistributor<Action<BaseNode, VsRDTAttributeX>> OnAttributeChanged
-            => _onAttributeChanged ?? (_onAttributeChanged = new EventDistributor<Action<BaseNode, VsRDTAttributeX>>());
+        private EventDistributor<Action<BaseNode, VsRDTAttribute>> _onAttributeChanged;
+        public EventDistributor<Action<BaseNode, VsRDTAttribute>> OnAttributeChanged
+            => _onAttributeChanged ?? (_onAttributeChanged = new EventDistributor<Action<BaseNode, VsRDTAttribute>>());
 
         private EventDistributor<Action<BaseNode, string, string>> _onRenamed;
         public EventDistributor<Action<BaseNode, string, string>> OnRenamed =>
@@ -125,7 +124,7 @@ namespace DulcisX.Nodes.Events
         {
             var node = new Lazy<BaseNode>(() => _documentTable.GetNode(docCookie, Solution));
 
-            var attribute = (VsRDTAttributeX)grfAttribs;
+            var attribute = (VsRDTAttribute)grfAttribs;
 
             _onAttributeChanged?.Invoke(node.Value.NodeType, node.Value, attribute);
 
@@ -134,7 +133,7 @@ namespace DulcisX.Nodes.Events
 
             switch (attribute)
             {
-                case VsRDTAttributeX.MkDocument:
+                case VsRDTAttribute.MkDocument:
                     OnItemChangedFullName(node, pszMkDocumentOld, pszMkDocumentNew);
                     break;
             }

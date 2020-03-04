@@ -1,7 +1,6 @@
 ﻿using Microsoft.VisualStudio.Shell.Interop;
 using System.Collections;
 using System.Collections.Generic;
-using DulcisX.Core.Extensions;
 using Microsoft.VisualStudio.Shell;
 using Microsoft.VisualStudio;
 
