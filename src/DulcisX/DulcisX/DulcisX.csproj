@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="..\packages\Microsoft.CodeAnalysis.BannedApiAnalyzers.2.9.8\build\Microsoft.CodeAnalysis.BannedApiAnalyzers.props" Condition="Exists('..\packages\Microsoft.CodeAnalysis.BannedApiAnalyzers.2.9.8\build\Microsoft.CodeAnalysis.BannedApiAnalyzers.props')" />
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
@@ -610,19 +610,11 @@
     <Reference Include="WindowsFormsIntegration" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Components\DocumentX.cs" />
-    <Compile Include="Components\Events\EventCookie.cs" />
     <Compile Include="Components\Events\Interfaces\ISolutionBuildEventsX.cs" />
-    <Compile Include="Components\Events\Interfaces\ISoulutionEventsX.cs" />
     <Compile Include="Components\Events\Interfaces\IOpenHierarchyItemEventsX.cs" />
     <Compile Include="Components\Events\OpenHierarchyItemEventsX.cs" />
     <Compile Include="Components\Events\SolutionBuildEventsX.cs" />
-    <Compile Include="Components\Events\SolutionEventsX.cs" />
     <Compile Include="Components\Events\HierachyItemChangeEventsX.cs" />
-    <Compile Include="Components\ProjectX.cs" />
-    <Compile Include="Components\HierarchyItemX.cs" />
-    <Compile Include="Components\SolutionX.cs" />
-    <Compile Include="Components\StartupProjectX.cs" />
     <Compile Include="Core\Extensions\ContainerExtensions.cs" />
     <Compile Include="Core\Extensions\EnumExtensions.cs" />
     <Compile Include="Core\Extensions\VsHierarchyExtensions.cs" />
@@ -650,6 +642,8 @@
     <Compile Include="Nodes\DocumentNode.cs" />
     <Compile Include="Nodes\Events\EventDistributor.cs" />
     <Compile Include="Nodes\Events\EventSink.cs" />
+    <Compile Include="Nodes\Events\ISolutionEvents.cs" />
+    <Compile Include="Nodes\Events\SolEvents.cs" />
     <Compile Include="Nodes\INamedNode.cs" />
     <Compile Include="Nodes\IPhysicalNode.cs" />
     <Compile Include="Core\Models\Enums\NodeTypes.cs" />
