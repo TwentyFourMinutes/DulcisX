@@ -80,6 +80,11 @@ namespace DulcisX.Core
             {
                 return COMContainer.Create(this.GetService<SVsSolutionBuildManager, IVsSolutionBuildManager>());
             });
+
+            container.RegisterSingleton(() =>
+            {
+                return COMContainer.Create(this.GetService<SVsRunningDocumentTable, IVsRunningDocumentTable>());
+            });
         }
 
         #region Services

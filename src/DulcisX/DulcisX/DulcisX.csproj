@@ -610,10 +610,6 @@
     <Reference Include="WindowsFormsIntegration" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Components\Events\Interfaces\ISolutionBuildEventsX.cs" />
-    <Compile Include="Components\Events\Interfaces\IOpenHierarchyItemEventsX.cs" />
-    <Compile Include="Components\Events\OpenHierarchyItemEventsX.cs" />
-    <Compile Include="Components\Events\SolutionBuildEventsX.cs" />
     <Compile Include="Components\Events\HierachyItemChangeEventsX.cs" />
     <Compile Include="Core\Extensions\ContainerExtensions.cs" />
     <Compile Include="Core\Extensions\EnumExtensions.cs" />
@@ -642,7 +638,11 @@
     <Compile Include="Nodes\DocumentNode.cs" />
     <Compile Include="Nodes\Events\EventDistributor.cs" />
     <Compile Include="Nodes\Events\EventSink.cs" />
+    <Compile Include="Nodes\Events\IOpenNodeEvents.cs" />
+    <Compile Include="Nodes\Events\ISolutionBuildEvents.cs" />
     <Compile Include="Nodes\Events\ISolutionEvents.cs" />
+    <Compile Include="Nodes\Events\OpenNodeEvents.cs" />
+    <Compile Include="Nodes\Events\SolutionBuildEvents.cs" />
     <Compile Include="Nodes\Events\SolutionEvents.cs" />
     <Compile Include="Nodes\INamedNode.cs" />
     <Compile Include="Nodes\IPhysicalNode.cs" />

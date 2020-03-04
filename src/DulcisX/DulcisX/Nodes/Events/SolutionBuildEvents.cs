@@ -98,6 +98,5 @@ namespace DulcisX.Nodes.Events
 
             ErrorHandler.ThrowOnFailure(result);
         }
-
     }
 }

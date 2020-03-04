@@ -28,6 +28,11 @@ namespace DulcisX.Nodes
         public ISolutionBuildEvents SolutionBuildEvents
             => _solutionBuildEvents ?? (_solutionBuildEvents = Events.SolutionBuildEvents.Create(this));
 
+        private IOpenNodeEvents _openNodeEvents;
+
+        public IOpenNodeEvents OpenNodeEvents
+            => _openNodeEvents ?? (_openNodeEvents = Events.OpenNodeEvents.Create(this));
+
         #endregion
 
         public IVsSolution UnderlyingSolution { get; }
