@@ -1,5 +1,4 @@
-﻿using DulcisX.Components;
-using Microsoft.VisualStudio.Shell.Interop;
+﻿using Microsoft.VisualStudio.Shell.Interop;
 using System.Collections;
 using System.Collections.Generic;
 using DulcisX.Core.Extensions;

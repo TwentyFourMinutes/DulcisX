@@ -16,20 +16,19 @@ namespace DulcisX.Nodes
 {
     public class SolutionNode : BaseNode, IPhysicalNode
     {
-        private ISolutionEvents _events;
+        #region Events
+
+        private ISolutionEvents _solutionEvents;
 
         public ISolutionEvents SolutionEvents
-        {
-            get
-            {
-                if (_events is null)
-                {
-                    _events = Events.SolutionEvents.Create(this);
-                }
+            => _solutionEvents ?? (_solutionEvents = Events.SolutionEvents.Create(this));
 
-                return _events;
-            }
-        }
+        private ISolutionBuildEvents _solutionBuildEvents;
+
+        public ISolutionBuildEvents SolutionBuildEvents
+            => _solutionBuildEvents ?? (_solutionBuildEvents = Events.SolutionBuildEvents.Create(this));
+
+        #endregion
 
         public IVsSolution UnderlyingSolution { get; }
 
@@ -82,6 +81,8 @@ namespace DulcisX.Nodes
             }
             while (true);
         }
+
+        #region Project
 
         public ProjectNode GetProject(string uniqueName)
         {
@@ -149,8 +150,6 @@ namespace DulcisX.Nodes
 
             ErrorHandler.ThrowOnFailure(result);
 
-            var manager = this.ServiceContainer.GetInstance<IVsHierarchyItemManager>();
-
             var hierarchy = new IVsHierarchy[1];
 
             while (true)
@@ -181,5 +180,7 @@ namespace DulcisX.Nodes
 
             ErrorHandler.ThrowOnFailure(result);
         }
+
+        #endregion
     }
 }

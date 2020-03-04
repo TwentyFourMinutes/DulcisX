@@ -643,7 +643,7 @@
     <Compile Include="Nodes\Events\EventDistributor.cs" />
     <Compile Include="Nodes\Events\EventSink.cs" />
     <Compile Include="Nodes\Events\ISolutionEvents.cs" />
-    <Compile Include="Nodes\Events\SolEvents.cs" />
+    <Compile Include="Nodes\Events\SolutionEvents.cs" />
     <Compile Include="Nodes\INamedNode.cs" />
     <Compile Include="Nodes\IPhysicalNode.cs" />
     <Compile Include="Core\Models\Enums\NodeTypes.cs" />

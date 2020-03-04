@@ -1,11 +1,11 @@
 ﻿using System;
 
-namespace DulcisX.Components.Events
+namespace DulcisX.Nodes.Events
 {
     public delegate void BeforeSolutionBuild(ref bool shouldCancel);
     public delegate void BeforeProjectConfigurationBuild(ref bool shouldCancel);
 
-    public interface ISolutionBuildEventsX
+    public interface ISolutionBuildEvents
     {
         event BeforeSolutionBuild OnBeforeSolutionBuild;
 
@@ -15,6 +15,6 @@ namespace DulcisX.Components.Events
 
         event BeforeProjectConfigurationBuild OnBeforeProjectConfigurationBuild;
 
-        event Action<ProjectX> OnAfterProjectConfigurationChange;
+        EventDistributor<Action<ProjectNode>> OnAfterProjectConfigurationChange { get; }
     }
 }

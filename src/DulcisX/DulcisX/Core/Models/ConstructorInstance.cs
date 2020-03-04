@@ -1,6 +1,4 @@
-﻿using DulcisX.Components;
-
-namespace DulcisX.Core.Models
+﻿namespace DulcisX.Core.Models
 {
     internal static class ConstructorInstance
     {
