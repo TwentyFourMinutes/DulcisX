@@ -3,6 +3,7 @@ using DulcisX.Core.Models.Enums;
 using DulcisX.Core.Models.Enums.VisualStudio;
 using DulcisX.Core.Models.PackageUserOptions;
 using DulcisX.Helpers;
+using DulcisX.Nodes.Events;
 using Microsoft.Internal.VisualStudio.PlatformUI;
 using Microsoft.VisualStudio;
 using Microsoft.VisualStudio.Shell;
@@ -15,6 +16,21 @@ namespace DulcisX.Nodes
 {
     public class SolutionNode : BaseNode, IPhysicalNode
     {
+        private ISolutionEvents _events;
+
+        public ISolutionEvents SolutionEvents
+        {
+            get
+            {
+                if (_events is null)
+                {
+                    _events = Events.SolutionEvents.Create(this);
+                }
+
+                return _events;
+            }
+        }
+
         public IVsSolution UnderlyingSolution { get; }
 
         public override NodeTypes NodeType => NodeTypes.Solution;

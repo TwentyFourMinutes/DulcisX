@@ -8,6 +8,13 @@ namespace DulcisX.Nodes.Events
 
         private bool _isCookieSet;
 
+        protected SolutionNode Solution { get; }
+
+        protected EventSink(SolutionNode solution)
+        {
+            Solution = solution;
+        }
+
         protected void SetCookie(uint cookie)
         {
             if (!_isCookieSet)

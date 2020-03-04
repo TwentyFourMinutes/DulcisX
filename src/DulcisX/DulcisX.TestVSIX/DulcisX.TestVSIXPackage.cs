@@ -1,6 +1,7 @@
 ﻿using System.Linq;
 using System.Runtime.InteropServices;
 using DulcisX.Core;
+using DulcisX.Core.Models.Enums;
 using Microsoft.VisualStudio;
 using Microsoft.VisualStudio.Shell;
 
@@ -24,8 +25,12 @@ namespace DulcisX.TestVSIX
         {
             await JoinableTaskFactory.SwitchToMainThreadAsync(arg);
 
-            var projects = GetSolution().GetAllProjects().ToList();
-            var projects2 = projects.Select(x => x.GetDisplayName()).ToList();
+            GetSolution().SolutionEvents.OnBeforeProjectUnload.Hook(NodeTypes.All, (projectOld, projectNew) =>
+            {
+                var test = projectOld.GetDisplayName();
+                var test2 = projectNew.GetDisplayName();
+                var test3 = projectNew.IsLoaded();
+            });
         }
 
         #endregion
