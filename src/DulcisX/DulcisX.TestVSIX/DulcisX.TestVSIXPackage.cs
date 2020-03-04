@@ -1,5 +1,4 @@
-﻿using System.Linq;
-using System.Runtime.InteropServices;
+﻿using System.Runtime.InteropServices;
 using DulcisX.Core;
 using DulcisX.Core.Models.Enums;
 using Microsoft.VisualStudio;

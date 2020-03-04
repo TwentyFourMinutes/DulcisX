@@ -20,12 +20,12 @@ namespace DulcisX.Nodes.Events
 
         EventDistributor<Action<ProjectNode, ProjectNode>> OnBeforeProjectUnload { get; }
 
-        EventDistributor<Action<bool>> OnAfterSolutionOpen { get; }
+        event Action<bool> OnAfterSolutionOpen;
 
-        EventDistributor<QuerySolutionClose> OnQuerySolutionClose { get; }
+        event QuerySolutionClose OnQuerySolutionClose;
 
-        EventDistributor<Action> OnBeforeSolutionClose { get; }
+        event Action OnBeforeSolutionClose;
 
-        EventDistributor<Action> OnAfterSolutionClose { get; }
+        event Action OnAfterSolutionClose;
     }
 }

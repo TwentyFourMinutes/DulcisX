@@ -35,21 +35,13 @@ namespace DulcisX.Nodes.Events
         public EventDistributor<Action<ProjectNode, ProjectNode>> OnBeforeProjectUnload
              => _onBeforeProjectUnload ?? (_onBeforeProjectUnload = new EventDistributor<Action<ProjectNode, ProjectNode>>());
 
-        private EventDistributor<Action<bool>> _onAfterSolutionOpen;
-        public EventDistributor<Action<bool>> OnAfterSolutionOpen
-             => _onAfterSolutionOpen ?? (_onAfterSolutionOpen = new EventDistributor<Action<bool>>());
+        public event Action<bool> OnAfterSolutionOpen;
 
-        private EventDistributor<QuerySolutionClose> _onQuerySolutionClose;
-        public EventDistributor<QuerySolutionClose> OnQuerySolutionClose
-             => _onQuerySolutionClose ?? (_onQuerySolutionClose = new EventDistributor<QuerySolutionClose>());
+        public event QuerySolutionClose OnQuerySolutionClose;
 
-        private EventDistributor<Action> _onBeforeSolutionClose;
-        public EventDistributor<Action> OnBeforeSolutionClose
-            => _onBeforeSolutionClose ?? (_onBeforeSolutionClose = new EventDistributor<Action>());
+        public event Action OnBeforeSolutionClose;
 
-        private EventDistributor<Action> _onAfterSolutionClose;
-        public EventDistributor<Action> OnAfterSolutionClose
-             => _onAfterSolutionClose ?? (_onAfterSolutionClose = new EventDistributor<Action>());
+        public event Action OnAfterSolutionClose;
 
         #endregion
 
@@ -62,7 +54,7 @@ namespace DulcisX.Nodes.Events
         {
             var project = Solution.GetProject(pHierarchy);
 
-            OnAfterProjectOpen.Invoke(project.NodeType, project, fAdded == 1);
+            _onAfterProjectOpen?.Invoke(project.NodeType, project, fAdded == 1);
 
             return CommonStatusCodes.Success;
         }
@@ -73,7 +65,7 @@ namespace DulcisX.Nodes.Events
 
             var project = Solution.GetProject(pHierarchy);
 
-            OnQueryProjectClose.Invoke(project.NodeType, fRemoving == 1, ref tempBool);
+            _onQueryProjectClose?.Invoke(project.NodeType, fRemoving == 1, ref tempBool);
 
             pfCancel = tempBool ? 1 : 0;
 
@@ -84,7 +76,7 @@ namespace DulcisX.Nodes.Events
         {
             var project = Solution.GetProject(pHierarchy);
 
-            OnBeforeProjectClose.Invoke(project.NodeType, project, fRemoved == 1);
+            _onBeforeProjectClose?.Invoke(project.NodeType, project, fRemoved == 1);
 
             return CommonStatusCodes.Success;
         }
@@ -94,7 +86,7 @@ namespace DulcisX.Nodes.Events
             var oldProject = Solution.GetProject(pStubHierarchy);
             var newProject = Solution.GetProject(pRealHierarchy);
 
-            OnAfterProjectLoad.Invoke(newProject.NodeType | oldProject.NodeType, oldProject, newProject);
+            _onAfterProjectLoad?.Invoke(newProject.NodeType, oldProject, newProject);
 
             return CommonStatusCodes.Success;
         }
@@ -105,7 +97,7 @@ namespace DulcisX.Nodes.Events
 
             var project = Solution.GetProject(pRealHierarchy);
 
-            OnQueryProjectUnload.Invoke(project.NodeType, project, ref tempBool);
+            _onQueryProjectUnload?.Invoke(project.NodeType, project, ref tempBool);
 
             pfCancel = tempBool ? 1 : 0;
 
@@ -117,14 +109,14 @@ namespace DulcisX.Nodes.Events
             var oldProject = Solution.GetProject(pRealHierarchy);
             var newProject = Solution.GetProject(pStubHierarchy);
 
-            OnBeforeProjectUnload.Invoke(newProject.NodeType | oldProject.NodeType, oldProject, newProject);
+            _onBeforeProjectUnload?.Invoke(newProject.NodeType, oldProject, newProject);
 
             return CommonStatusCodes.Success;
         }
 
         public int OnAfterOpenSolution(object pUnkReserved, int fNewSolution)
         {
-            OnAfterSolutionOpen.Invoke(NodeTypes.Solution, fNewSolution == 1);
+            OnAfterSolutionOpen?.Invoke(fNewSolution == 1);
 
             return CommonStatusCodes.Success;
         }
@@ -133,7 +125,7 @@ namespace DulcisX.Nodes.Events
         {
             bool tempBool = false;
 
-            OnQuerySolutionClose.Invoke(NodeTypes.Solution, ref tempBool);
+            OnQuerySolutionClose?.Invoke(ref tempBool);
 
             pfCancel = tempBool ? 1 : 0;
 
@@ -142,23 +134,15 @@ namespace DulcisX.Nodes.Events
 
         public int OnBeforeCloseSolution(object pUnkReserved)
         {
-            OnBeforeSolutionClose.Invoke(NodeTypes.Solution);
+            OnBeforeSolutionClose?.Invoke();
+
             return CommonStatusCodes.Success;
         }
 
         public int OnAfterCloseSolution(object pUnkReserved)
         {
-            OnAfterSolutionClose.Invoke(NodeTypes.Solution);
+            OnAfterSolutionClose?.Invoke();
             return CommonStatusCodes.Success;
-        }
-
-        public override void Dispose()
-        {
-            ThreadHelper.ThrowIfNotOnUIThread();
-
-            var result = Solution.UnderlyingSolution.UnadviseSolutionEvents(Cookie);
-
-            ErrorHandler.ThrowOnFailure(result);
         }
 
         internal static ISolutionEvents Create(SolutionNode solution)
@@ -174,6 +158,15 @@ namespace DulcisX.Nodes.Events
             solutionEvents.SetCookie(cookieUID);
 
             return solutionEvents;
+        }
+
+        public override void Dispose()
+        {
+            ThreadHelper.ThrowIfNotOnUIThread();
+
+            var result = Solution.UnderlyingSolution.UnadviseSolutionEvents(Cookie);
+
+            ErrorHandler.ThrowOnFailure(result);
         }
     }
 }
