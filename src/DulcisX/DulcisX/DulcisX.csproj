@@ -637,6 +637,7 @@
     <Compile Include="Nodes\Events\IOpenNodeEvents.cs" />
     <Compile Include="Nodes\Events\ISolutionBuildEvents.cs" />
     <Compile Include="Nodes\Events\ISolutionEvents.cs" />
+    <Compile Include="Nodes\Events\NodeChangeEvents.cs" />
     <Compile Include="Nodes\Events\OpenNodeEvents.cs" />
     <Compile Include="Nodes\Events\SolutionBuildEvents.cs" />
     <Compile Include="Nodes\Events\SolutionEvents.cs" />
@@ -667,9 +668,7 @@
     <Analyzer Include="..\packages\Microsoft.VisualStudio.Threading.Analyzers.16.5.132\analyzers\cs\Microsoft.VisualStudio.Threading.Analyzers.CodeFixes.dll" />
     <Analyzer Include="..\packages\Microsoft.VisualStudio.Threading.Analyzers.16.5.132\analyzers\cs\Microsoft.VisualStudio.Threading.Analyzers.dll" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Core\Models\Interfaces\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>

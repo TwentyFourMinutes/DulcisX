@@ -28,13 +28,8 @@ namespace DulcisX.Nodes
         {
             var node = HierarchyUtilities.GetFirstChild(UnderlyingHierarchy, ItemId, true);
 
-            do
+            while (VsHelper.IsItemIdNil(node))
             {
-                if (VsHelper.IsItemIdNil(node))
-                {
-                    yield break;
-                }
-
                 if (UnderlyingHierarchy.TryGetNestedHierarchy(node, out var nestedHierarchy))
                 {
                     yield return NodeFactory.GetSolutionItemNode(ParentSolution, nestedHierarchy, CommonNodeIds.Root);
@@ -42,7 +37,6 @@ namespace DulcisX.Nodes
 
                 node = HierarchyUtilities.GetNextSibling(UnderlyingHierarchy, node, true);
             }
-            while (true);
         }
     }
 }

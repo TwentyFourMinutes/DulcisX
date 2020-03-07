@@ -91,18 +91,13 @@ namespace DulcisX.Nodes
         {
             var node = HierarchyUtilities.GetFirstChild(UnderlyingHierarchy, ItemId, true);
 
-            do
+            while (VsHelper.IsItemIdNil(node))
             {
-                if (VsHelper.IsItemIdNil(node))
-                {
-                    yield break;
-                }
-
                 yield return NodeFactory.GetProjectItemNode(ParentSolution, this, UnderlyingHierarchy, node);
 
                 node = HierarchyUtilities.GetNextSibling(UnderlyingHierarchy, node, true);
             }
-            while (true);
+
         }
     }
 }
