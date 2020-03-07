@@ -34,6 +34,10 @@ namespace DulcisX.Helpers
             ThreadHelper.ThrowIfNotOnUIThread();
 
             var persist = hierarchy as IPersist;
+
+            if (persist is null)
+                return false;
+
             var result = persist.GetClassID(out Guid pClassID);
 
             if (ErrorHandler.Failed(result))

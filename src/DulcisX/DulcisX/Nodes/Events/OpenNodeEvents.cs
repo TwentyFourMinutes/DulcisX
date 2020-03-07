@@ -194,6 +194,7 @@ namespace DulcisX.Nodes.Events
         public override void Dispose()
         {
             ThreadHelper.ThrowIfNotOnUIThread();
+
             var result = _documentTable.UnadviseRunningDocTableEvents(Cookie);
 
             ErrorHandler.ThrowOnFailure(result);

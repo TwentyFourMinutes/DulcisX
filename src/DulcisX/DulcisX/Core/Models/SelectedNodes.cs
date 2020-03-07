@@ -3,36 +3,31 @@ using System.Collections;
 using System.Collections.Generic;
 using Microsoft.VisualStudio.Shell;
 using Microsoft.VisualStudio;
+using DulcisX.Nodes;
+using DulcisX.Core.Extensions;
 
 namespace DulcisX.Core.Models
 {
-    public class SelectedHierarchyItemsX : IEnumerable<HierarchyItemX>
+    public class SelectedNodes : IEnumerable<BaseNode>
     {
+        private readonly SolutionNode _solution;
+
         private IVsMonitorSelection _monitorSelection;
 
         private IVsMonitorSelection MonitorSelection
-        {
-            get
-            {
-                if (_monitorSelection is null)
-                {
-                    _monitorSelection = _solution.ServiceProviders.GetService<SVsShellMonitorSelection, IVsMonitorSelection>();
-                }
+            => _monitorSelection ?? (_monitorSelection = _solution.ServiceContainer.GetCOMInstance<IVsMonitorSelection>());
 
-                return _monitorSelection;
-            }
-        }
-
-        private readonly SolutionX _solution;
-
-        internal SelectedHierarchyItemsX(SolutionX solution)
+        internal SelectedNodes(SolutionNode solution)
             => _solution = solution;
 
-        public IEnumerator<HierarchyItemX> GetEnumerator()
+        public IEnumerator<BaseNode> GetEnumerator()
         {
             ThreadHelper.ThrowIfNotOnUIThread();
 
             var result = MonitorSelection.GetCurrentSelection(out _, out _, out var selection, out _);
+
+            if (selection is null)
+                yield break;
 
             ErrorHandler.ThrowOnFailure(result);
 
@@ -50,7 +45,7 @@ namespace DulcisX.Core.Models
             {
                 var item = itemSelection[i];
 
-                yield return item.pHier.ConstructHierarchyItem(item.itemid, _solution);
+                yield return NodeFactory.GetItemNode(_solution, item.pHier, item.itemid);
             }
         }
 

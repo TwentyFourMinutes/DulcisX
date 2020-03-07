@@ -90,11 +90,17 @@ namespace DulcisX.Nodes
             {
                 if (HierarchyUtilities.IsPhysicalFolder(hierarchyItem.HierarchyIdentity))
                 {
-                    return new FolderNode(solution, project, itemId);
+                    if(project is null)
+                        return new FolderNode(solution, hierarchy, itemId);
+                    else
+                        return new FolderNode(solution, project, itemId);
                 }
                 else if (HierarchyUtilities.IsPhysicalFile(hierarchyItem.HierarchyIdentity))
                 {
-                    return new DocumentNode(solution, project, itemId);
+                    if (project is null)
+                        return new DocumentNode(solution, hierarchy, itemId);
+                    else
+                        return new DocumentNode(solution, project, itemId);
                 }
             }
 

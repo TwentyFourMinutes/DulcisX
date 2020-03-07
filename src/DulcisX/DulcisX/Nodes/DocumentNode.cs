@@ -11,6 +11,10 @@ namespace DulcisX.Nodes
     {
         public override NodeTypes NodeType => NodeTypes.Document;
 
+        public DocumentNode(SolutionNode solution, IVsHierarchy hierarchy, uint itemId) : base(solution, hierarchy, itemId)
+        {
+        }
+
         public DocumentNode(SolutionNode solution, ProjectNode project, uint itemId) : base(solution, project, itemId)
         {
         }

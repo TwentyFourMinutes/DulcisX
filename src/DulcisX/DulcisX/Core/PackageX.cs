@@ -65,25 +65,12 @@ namespace DulcisX.Core
                 return componentModel.GetService<IVsHierarchyItemManager>();
             });
 
-            container.RegisterSingleton(() =>
-            {
-                return COMContainer.Create(this.GetService<SVsSolution, IVsSolution>());
-            });
-
-            container.RegisterSingleton(() =>
-            {
-                return COMContainer.Create(this.GetService<SVsSolutionPersistence, IVsSolutionPersistence>());
-            });
-
-            container.RegisterSingleton(() =>
-            {
-                return COMContainer.Create(this.GetService<SVsSolutionBuildManager, IVsSolutionBuildManager>());
-            });
-
-            container.RegisterSingleton(() =>
-            {
-                return COMContainer.Create(this.GetService<SVsRunningDocumentTable, IVsRunningDocumentTable>());
-            });
+            container.RegisterCOMInstance<SVsSolution, IVsSolution>(this);
+            container.RegisterCOMInstance<SVsSolutionPersistence, IVsSolutionPersistence>(this);
+            container.RegisterCOMInstance<SVsSolutionBuildManager, IVsSolutionBuildManager>(this);
+            container.RegisterCOMInstance<SVsRunningDocumentTable, IVsRunningDocumentTable>(this);
+            container.RegisterCOMInstance<SVsTrackProjectDocuments, IVsTrackProjectDocuments2>(this);
+            container.RegisterCOMInstance<SVsShellMonitorSelection, IVsMonitorSelection>(this);
         }
 
         #region Services

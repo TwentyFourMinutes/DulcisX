@@ -1,4 +1,4 @@
-﻿using DulcisX.Core.Extensions;
+using DulcisX.Core.Extensions;
 using DulcisX.Core.Models.Enums;
 using DulcisX.Core.Models.Enums.VisualStudio;
 using DulcisX.Core.Models.PackageUserOptions;
@@ -33,6 +33,8 @@ namespace DulcisX.Nodes
         public IOpenNodeEvents OpenNodeEvents
             => _openNodeEvents ?? (_openNodeEvents = Events.OpenNodeEvents.Create(this));
 
+        public SelectedNodes SelectedNodes { get; }
+
         #endregion
 
         public IVsSolution UnderlyingSolution { get; }
@@ -45,6 +47,8 @@ namespace DulcisX.Nodes
 
         public SolutionNode(IVsSolution solution, Container container) : base(null, (IVsHierarchy)solution, CommonNodeIds.Solution)
         {
+            SelectedNodes = new SelectedNodes(this);
+
             UnderlyingSolution = solution;
             ServiceContainer = container;
         }
