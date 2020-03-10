@@ -2,7 +2,7 @@
 
 namespace DulcisX.Nodes.Events
 {
-    public interface ISolutionEvents
+    public interface ISolutionEvents : ISolutionLoadEvents
     {
         EventDistributor<Action<ProjectNode, bool>> OnProjectOpened { get; }
 

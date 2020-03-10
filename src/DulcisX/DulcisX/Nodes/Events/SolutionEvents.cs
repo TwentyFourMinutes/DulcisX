@@ -7,7 +7,7 @@ using System;
 
 namespace DulcisX.Nodes.Events
 {
-    internal class SolutionEvents : EventSink, ISolutionEvents, IVsSolutionEvents, IVsSolutionEvents4, IVsSolutionEvents5
+    internal class SolutionEvents : EventSink, ISolutionEvents, IVsSolutionLoadEvents, IVsSolutionEvents, IVsSolutionEvents4, IVsSolutionEvents5
     {
         #region Events
 
@@ -40,16 +40,13 @@ namespace DulcisX.Nodes.Events
              => _onProjectRenamed ?? (_onProjectRenamed = new EventDistributor<Action<ProjectNode>>());
 
         public event Action<ProjectNode> OnProjectAdd;
-
         public event Action<ProjectNode> OnProjectRemove;
-
         public event Action<bool> OnSolutionOpened;
-
         public event Action<CancelTraslaterToken> OnQuerySolutionClose;
-
         public event Action OnSolutionClose;
-
         public event Action OnSolutionClosed;
+        public event Action<string> OnBackgroundSolutionLoad;
+        public event Action OnBackgroundSolutionLoaded;
 
         #endregion
 
@@ -59,6 +56,41 @@ namespace DulcisX.Nodes.Events
         private SolutionEvents(SolutionNode solution) : base(solution)
         {
 
+        }
+        public int OnBeforeOpenSolution(string pszSolutionFilename)
+        {
+            OnBackgroundSolutionLoad?.Invoke(pszSolutionFilename);
+
+            return CommonStatusCodes.Success;
+        }
+
+        public int OnBeforeBackgroundSolutionLoadBegins()
+        {
+            return CommonStatusCodes.Success;
+        }
+
+        public int OnQueryBackgroundLoadProjectBatch(out bool pfShouldDelayLoadToNextIdle)
+        {
+            pfShouldDelayLoadToNextIdle = false;
+
+            return CommonStatusCodes.Success;
+        }
+
+        public int OnBeforeLoadProjectBatch(bool fIsBackgroundIdleBatch)
+        {
+            return CommonStatusCodes.Success;
+        }
+
+        public int OnAfterLoadProjectBatch(bool fIsBackgroundIdleBatch)
+        {
+            return CommonStatusCodes.Success;
+        }
+
+        public int OnAfterBackgroundSolutionLoadComplete()
+        {
+            OnBackgroundSolutionLoaded?.Invoke();
+
+            return CommonStatusCodes.Success;
         }
 
         public int OnAfterOpenProject(IVsHierarchy pHierarchy, int fAdded)
