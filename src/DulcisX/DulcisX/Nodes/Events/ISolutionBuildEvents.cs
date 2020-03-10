@@ -4,14 +4,14 @@ namespace DulcisX.Nodes.Events
 {
     public interface ISolutionBuildEvents
     {
-        event Action<CancelTraslaterToken> OnBeforeSolutionBuild;
+        event Action<CancelTraslaterToken> OnSolutionBuild;
 
-        event Action<bool, bool, bool> OnAfterSolutionBuild;
+        event Action<bool, bool, bool> OnSolutionBuilt;
 
         event Action OnSolutionBuildCancel;
 
-        event Action<CancelTraslaterToken> OnBeforeProjectConfigurationBuild;
+        event Action<CancelTraslaterToken> OnProjectConfigurationBuild;
 
-        EventDistributor<Action<ProjectNode>> OnAfterProjectConfigurationChange { get; }
+        EventDistributor<Action<ProjectNode>> OnProjectConfigurationChanged { get; }
     }
 }

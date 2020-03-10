@@ -11,42 +11,42 @@ namespace DulcisX.Nodes.Events
     {
         #region Events
 
-        private EventDistributor<Action<ProjectNode, bool>> _onAfterProjectOpen;
-        public EventDistributor<Action<ProjectNode, bool>> OnAfterProjectOpen
-            => _onAfterProjectOpen ?? (_onAfterProjectOpen = new EventDistributor<Action<ProjectNode, bool>>());
+        private EventDistributor<Action<ProjectNode, bool>> _onProjectOpened;
+        public EventDistributor<Action<ProjectNode, bool>> OnProjectOpened
+            => _onProjectOpened ?? (_onProjectOpened = new EventDistributor<Action<ProjectNode, bool>>());
 
         private EventDistributor<Action<ProjectNode, bool, CancelTraslaterToken>> _onQueryProjectClose;
         public EventDistributor<Action<ProjectNode, bool, CancelTraslaterToken>> OnQueryProjectClose
              => _onQueryProjectClose ?? (_onQueryProjectClose = new EventDistributor<Action<ProjectNode, bool, CancelTraslaterToken>>());
 
-        private EventDistributor<Action<ProjectNode, bool>> _onBeforeProjectClose;
-        public EventDistributor<Action<ProjectNode, bool>> OnBeforeProjectClose
-             => _onBeforeProjectClose ?? (_onBeforeProjectClose = new EventDistributor<Action<ProjectNode, bool>>());
+        private EventDistributor<Action<ProjectNode, bool>> _onProjectClose;
+        public EventDistributor<Action<ProjectNode, bool>> OnProjectClose
+             => _onProjectClose ?? (_onProjectClose = new EventDistributor<Action<ProjectNode, bool>>());
 
-        private EventDistributor<Action<ProjectNode, ProjectNode>> _onAfterProjectLoad;
-        public EventDistributor<Action<ProjectNode, ProjectNode>> OnAfterProjectLoad
-             => _onAfterProjectLoad ?? (_onAfterProjectLoad = new EventDistributor<Action<ProjectNode, ProjectNode>>());
+        private EventDistributor<Action<ProjectNode, ProjectNode>> _onProjectLoaded;
+        public EventDistributor<Action<ProjectNode, ProjectNode>> OnProjectLoaded
+             => _onProjectLoaded ?? (_onProjectLoaded = new EventDistributor<Action<ProjectNode, ProjectNode>>());
 
         private EventDistributor<Action<ProjectNode, CancelTraslaterToken>> _onQueryProjectUnload;
         public EventDistributor<Action<ProjectNode, CancelTraslaterToken>> OnQueryProjectUnload
              => _onQueryProjectUnload ?? (_onQueryProjectUnload = new EventDistributor<Action<ProjectNode, CancelTraslaterToken>>());
 
-        private EventDistributor<Action<ProjectNode, ProjectNode>> _onBeforeProjectUnload;
-        public EventDistributor<Action<ProjectNode, ProjectNode>> OnBeforeProjectUnload
-             => _onBeforeProjectUnload ?? (_onBeforeProjectUnload = new EventDistributor<Action<ProjectNode, ProjectNode>>());
+        private EventDistributor<Action<ProjectNode, ProjectNode>> _onProjectUnload;
+        public EventDistributor<Action<ProjectNode, ProjectNode>> OnProjectUnload
+             => _onProjectUnload ?? (_onProjectUnload = new EventDistributor<Action<ProjectNode, ProjectNode>>());
 
 
         public event Action<ProjectNode> OnProjectAdd;
 
         public event Action<ProjectNode> OnProjectRemove;
 
-        public event Action<bool> OnAfterSolutionOpen;
+        public event Action<bool> OnSolutionOpened;
 
         public event Action<CancelTraslaterToken> OnQuerySolutionClose;
 
-        public event Action OnBeforeSolutionClose;
+        public event Action OnSolutionClose;
 
-        public event Action OnAfterSolutionClose;
+        public event Action OnSolutionClosed;
 
         #endregion
 
@@ -62,7 +62,7 @@ namespace DulcisX.Nodes.Events
         {
             var project = Solution.GetProject(pHierarchy);
 
-            _onAfterProjectOpen?.Invoke(project.NodeType, project, VsConverter.Boolean(fAdded));
+            _onProjectOpened?.Invoke(project.NodeType, project, VsConverter.Boolean(fAdded));
 
             if (_lastProjectOpened is object &&
                 _lastProjectOpened == project.GetFullName())
@@ -87,7 +87,7 @@ namespace DulcisX.Nodes.Events
         {
             var project = Solution.GetProject(pHierarchy);
 
-            _onBeforeProjectClose?.Invoke(project.NodeType, project, VsConverter.Boolean(fRemoved));
+            _onProjectClose?.Invoke(project.NodeType, project, VsConverter.Boolean(fRemoved));
 
             if (OnProjectRemove is object &&
                 _lastProjectUnloaded == project.GetGuid())
@@ -103,7 +103,7 @@ namespace DulcisX.Nodes.Events
             var oldProject = Solution.GetProject(pStubHierarchy);
             var newProject = Solution.GetProject(pRealHierarchy);
 
-            _onAfterProjectLoad?.Invoke(newProject.NodeType, oldProject, newProject);
+            _onProjectLoaded?.Invoke(newProject.NodeType, oldProject, newProject);
 
             return CommonStatusCodes.Success;
         }
@@ -123,7 +123,7 @@ namespace DulcisX.Nodes.Events
             var oldProject = Solution.GetProject(pRealHierarchy);
             var newProject = Solution.GetProject(pStubHierarchy);
 
-            _onBeforeProjectUnload?.Invoke(newProject.NodeType, oldProject, newProject);
+            _onProjectUnload?.Invoke(newProject.NodeType, oldProject, newProject);
 
             if (OnProjectRemove is object)
             {
@@ -135,7 +135,7 @@ namespace DulcisX.Nodes.Events
 
         public int OnAfterOpenSolution(object pUnkReserved, int fNewSolution)
         {
-            OnAfterSolutionOpen?.Invoke(fNewSolution == 1);
+            OnSolutionOpened?.Invoke(fNewSolution == 1);
 
             return CommonStatusCodes.Success;
         }
@@ -148,14 +148,14 @@ namespace DulcisX.Nodes.Events
 
         public int OnBeforeCloseSolution(object pUnkReserved)
         {
-            OnBeforeSolutionClose?.Invoke();
+            OnSolutionClose?.Invoke();
 
             return CommonStatusCodes.Success;
         }
 
         public int OnAfterCloseSolution(object pUnkReserved)
         {
-            OnAfterSolutionClose?.Invoke();
+            OnSolutionClosed?.Invoke();
             return CommonStatusCodes.Success;
         }
 

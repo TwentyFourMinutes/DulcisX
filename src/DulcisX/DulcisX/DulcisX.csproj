@@ -625,7 +625,9 @@
     <Compile Include="Core\PackageX.cs" />
     <Compile Include="Exceptions\InvalidHierarchyItemException.cs" />
     <Compile Include="Exceptions\NoFlagsAllowedException.cs" />
+    <Compile Include="Nodes\Events\CancelTranslatorFactory.cs" />
     <Compile Include="Helpers\ExtendedHierarchyUtilities.cs" />
+    <Compile Include="Helpers\VsConverter.cs" />
     <Compile Include="Helpers\VsHelper.cs" />
     <Compile Include="Nodes\DocumentNode.cs" />
     <Compile Include="Nodes\Events\EventDistributor.cs" />

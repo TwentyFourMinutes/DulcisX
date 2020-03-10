@@ -12,14 +12,14 @@ namespace DulcisX.Nodes.Events
     {
         #region Events
 
-        private EventDistributor<Action<ProjectNode>> _onAfterProjectConfigurationChange;
-        public EventDistributor<Action<ProjectNode>> OnAfterProjectConfigurationChange
-            => _onAfterProjectConfigurationChange ?? (_onAfterProjectConfigurationChange = new EventDistributor<Action<ProjectNode>>());
+        private EventDistributor<Action<ProjectNode>> _onProjectConfigurationChanged;
+        public EventDistributor<Action<ProjectNode>> OnProjectConfigurationChanged
+            => _onProjectConfigurationChanged ?? (_onProjectConfigurationChanged = new EventDistributor<Action<ProjectNode>>());
 
-        public event Action<CancelTraslaterToken> OnBeforeSolutionBuild;
-        public event Action<bool, bool, bool> OnAfterSolutionBuild;
+        public event Action<CancelTraslaterToken> OnSolutionBuild;
+        public event Action<bool, bool, bool> OnSolutionBuilt;
         public event Action OnSolutionBuildCancel;
-        public event Action<CancelTraslaterToken> OnBeforeProjectConfigurationBuild;
+        public event Action<CancelTraslaterToken> OnProjectConfigurationBuild;
 
         #endregion
 
@@ -32,21 +32,21 @@ namespace DulcisX.Nodes.Events
 
         public int UpdateSolution_Begin(ref int pfCancelUpdate)
         {
-            return CancelTranslaterFactory.Create(OnBeforeSolutionBuild, ref pfCancelUpdate,
-                token => OnBeforeSolutionBuild.Invoke(token));
+            return CancelTranslaterFactory.Create(OnSolutionBuild, ref pfCancelUpdate,
+                token => OnSolutionBuild.Invoke(token));
         }
 
         public int UpdateSolution_Done(int fSucceeded, int fModified, int fCancelCommand)
         {
-            OnAfterSolutionBuild?.Invoke(VsConverter.Boolean(fSucceeded), VsConverter.Boolean(fModified), VsConverter.Boolean(fCancelCommand));
+            OnSolutionBuilt?.Invoke(VsConverter.Boolean(fSucceeded), VsConverter.Boolean(fModified), VsConverter.Boolean(fCancelCommand));
 
             return CommonStatusCodes.Success;
         }
 
         public int UpdateSolution_StartUpdate(ref int pfCancelUpdate)
         {
-            return CancelTranslaterFactory.Create(OnBeforeProjectConfigurationBuild, ref pfCancelUpdate,
-                token => OnBeforeProjectConfigurationBuild.Invoke(token));
+            return CancelTranslaterFactory.Create(OnProjectConfigurationBuild, ref pfCancelUpdate,
+                token => OnProjectConfigurationBuild.Invoke(token));
         }
 
         public int UpdateSolution_Cancel()
@@ -60,7 +60,7 @@ namespace DulcisX.Nodes.Events
         {
             var project = Solution.GetProject(pIVsHierarchy);
 
-            _onAfterProjectConfigurationChange?.Invoke(project.NodeType, project);
+            _onProjectConfigurationChanged?.Invoke(project.NodeType, project);
 
             return CommonStatusCodes.Success;
         }
