@@ -1,11 +1,8 @@
 ﻿using System;
 using System.Runtime.InteropServices;
 using DulcisX.Core;
-using DulcisX.Core.Extensions;
 using DulcisX.Nodes;
-using EnvDTE;
 using Microsoft.VisualStudio;
-using Microsoft.VisualStudio.CommandBars;
 using Microsoft.VisualStudio.Shell;
 using Microsoft.VisualStudio.Shell.Interop;
 

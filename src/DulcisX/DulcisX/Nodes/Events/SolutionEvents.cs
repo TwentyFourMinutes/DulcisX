@@ -1,4 +1,5 @@
 ﻿using DulcisX.Core.Models.Enums.VisualStudio;
+using DulcisX.Helpers;
 using Microsoft.VisualStudio;
 using Microsoft.VisualStudio.Shell;
 using Microsoft.VisualStudio.Shell.Interop;
@@ -61,7 +62,7 @@ namespace DulcisX.Nodes.Events
         {
             var project = Solution.GetProject(pHierarchy);
 
-            _onAfterProjectOpen?.Invoke(project.NodeType, project, fAdded == 1);
+            _onAfterProjectOpen?.Invoke(project.NodeType, project, VsConverter.Boolean(fAdded));
 
             if (_lastProjectOpened is object &&
                 _lastProjectOpened == project.GetFullName())
@@ -78,7 +79,7 @@ namespace DulcisX.Nodes.Events
 
             var project = Solution.GetProject(pHierarchy);
 
-            _onQueryProjectClose?.Invoke(project.NodeType, fRemoving == 1, ref tempBool);
+            _onQueryProjectClose?.Invoke(project.NodeType, VsConverter.Boolean(fRemoving), ref tempBool);
 
             pfCancel = tempBool ? 1 : 0;
 
@@ -89,7 +90,7 @@ namespace DulcisX.Nodes.Events
         {
             var project = Solution.GetProject(pHierarchy);
 
-            _onBeforeProjectClose?.Invoke(project.NodeType, project, fRemoved == 1);
+            _onBeforeProjectClose?.Invoke(project.NodeType, project, VsConverter.Boolean(fRemoved));
 
             if (OnProjectRemove is object &&
                 _lastProjectUnloaded == project.GetGuid())

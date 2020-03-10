@@ -1,5 +1,6 @@
 ﻿using DulcisX.Core.Extensions;
 using DulcisX.Core.Models.Enums.VisualStudio;
+using DulcisX.Helpers;
 using Microsoft.VisualStudio;
 using Microsoft.VisualStudio.Shell;
 using Microsoft.VisualStudio.Shell.Interop;
@@ -42,7 +43,7 @@ namespace DulcisX.Nodes.Events
 
         public int UpdateSolution_Done(int fSucceeded, int fModified, int fCancelCommand)
         {
-            OnAfterSolutionBuild?.Invoke(fSucceeded == 1, fModified == 1, fCancelCommand == 1);
+            OnAfterSolutionBuild?.Invoke(VsConverter.Boolean(fSucceeded), VsConverter.Boolean(fModified), VsConverter.Boolean(fCancelCommand));
 
             return CommonStatusCodes.Success;
         }
