@@ -7,7 +7,7 @@ using System;
 
 namespace DulcisX.Nodes.Events
 {
-    internal class SolutionEvents : EventSink, ISolutionEvents, IVsSolutionLoadEvents, IVsSolutionEvents, IVsSolutionEvents4, IVsSolutionEvents5
+    internal class SolutionEvents : EventSink, ISolutionEvents, IVsSolutionLoadEvents, IVsSolutionEvents, IVsSolutionEvents4, IVsSolutionEvents5, IVsSolutionEvents8
     {
         #region Events
 
@@ -47,6 +47,7 @@ namespace DulcisX.Nodes.Events
         public event Action OnSolutionClosed;
         public event Action<string> OnBackgroundSolutionLoad;
         public event Action OnBackgroundSolutionLoaded;
+        public event Action<string, string> OnSolutionRenamed;
 
         #endregion
 
@@ -226,7 +227,6 @@ namespace DulcisX.Nodes.Events
             return CommonStatusCodes.Success;
         }
 
-
         public int OnAfterRenameProject(IVsHierarchy pHierarchy)
         {
             if (_onProjectRenamed is object)
@@ -252,6 +252,11 @@ namespace DulcisX.Nodes.Events
         public int OnAfterAsynchOpenProject(IVsHierarchy pHierarchy, int fAdded)
         {
             return CommonStatusCodes.Success;
+        }
+
+        public void OnAfterRenameSolution(string oldName, string newName)
+        {
+            OnSolutionRenamed?.Invoke(oldName, newName);
         }
 
         public void OnBeforeOpenProject(ref Guid guidProjectID, ref Guid guidProjectType, string pszFileName)

@@ -19,15 +19,11 @@ namespace DulcisX.Nodes.Events
         EventDistributor<Action<ProjectNode>> OnProjectRenamed { get; }
 
         event Action<ProjectNode> OnProjectAdd;
-
         event Action<ProjectNode> OnProjectRemove;
-
         event Action<bool> OnSolutionOpened;
-
         event Action<CancelTraslaterToken> OnQuerySolutionClose;
-
         event Action OnSolutionClose;
-
         event Action OnSolutionClosed;
+        event Action<string, string> OnSolutionRenamed;
     }
 }
