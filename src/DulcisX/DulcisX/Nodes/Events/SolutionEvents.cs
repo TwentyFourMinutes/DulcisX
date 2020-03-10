@@ -7,7 +7,7 @@ using System;
 
 namespace DulcisX.Nodes.Events
 {
-    internal class SolutionEvents : EventSink, ISolutionEvents, IVsSolutionEvents, IVsSolutionEvents5
+    internal class SolutionEvents : EventSink, ISolutionEvents, IVsSolutionEvents, IVsSolutionEvents4, IVsSolutionEvents5
     {
         #region Events
 
@@ -35,6 +35,9 @@ namespace DulcisX.Nodes.Events
         public EventDistributor<Action<ProjectNode, ProjectNode>> OnProjectUnload
              => _onProjectUnload ?? (_onProjectUnload = new EventDistributor<Action<ProjectNode, ProjectNode>>());
 
+        private EventDistributor<Action<ProjectNode>> _onProjectRenamed;
+        public EventDistributor<Action<ProjectNode>> OnProjectRenamed
+             => _onProjectRenamed ?? (_onProjectRenamed = new EventDistributor<Action<ProjectNode>>());
 
         public event Action<ProjectNode> OnProjectAdd;
 
@@ -188,6 +191,34 @@ namespace DulcisX.Nodes.Events
         {
             OnSolutionClosed?.Invoke();
 
+            return CommonStatusCodes.Success;
+        }
+
+
+        public int OnAfterRenameProject(IVsHierarchy pHierarchy)
+        {
+            if (_onProjectRenamed is object)
+            {
+                var project = Solution.GetProject(pHierarchy);
+
+                _onProjectRenamed.Invoke(project.NodeType, project);
+            }
+
+            return CommonStatusCodes.Success;
+        }
+
+        public int OnQueryChangeProjectParent(IVsHierarchy pHierarchy, IVsHierarchy pNewParentHier, ref int pfCancel)
+        {
+            return CommonStatusCodes.Success;
+        }
+
+        public int OnAfterChangeProjectParent(IVsHierarchy pHierarchy)
+        {
+            return CommonStatusCodes.Success;
+        }
+
+        public int OnAfterAsynchOpenProject(IVsHierarchy pHierarchy, int fAdded)
+        {
             return CommonStatusCodes.Success;
         }
 

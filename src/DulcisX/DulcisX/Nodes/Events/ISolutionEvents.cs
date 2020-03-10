@@ -16,6 +16,8 @@ namespace DulcisX.Nodes.Events
 
         EventDistributor<Action<ProjectNode, ProjectNode>> OnProjectUnload { get; }
 
+        EventDistributor<Action<ProjectNode>> OnProjectRenamed { get; }
+
         event Action<ProjectNode> OnProjectAdd;
 
         event Action<ProjectNode> OnProjectRemove;
