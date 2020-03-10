@@ -60,14 +60,23 @@ namespace DulcisX.Nodes.Events
 
         public int OnAfterOpenProject(IVsHierarchy pHierarchy, int fAdded)
         {
-            var project = Solution.GetProject(pHierarchy);
+            var projectOpenedListener = _onProjectOpened is object;
+            var projectAddListener = OnProjectAdd is object;
 
-            _onProjectOpened?.Invoke(project.NodeType, project, VsConverter.Boolean(fAdded));
-
-            if (_lastProjectOpened is object &&
-                _lastProjectOpened == project.GetFullName())
+            if (projectOpenedListener || projectAddListener)
             {
-                OnProjectAdd?.Invoke(project);
+                var project = Solution.GetProject(pHierarchy);
+
+                if (projectOpenedListener)
+                {
+                    _onProjectOpened.Invoke(project.NodeType, project, VsConverter.Boolean(fAdded));
+                }
+
+                if (projectAddListener &&
+                    _lastProjectOpened == project.GetFullName())
+                {
+                    OnProjectAdd.Invoke(project);
+                }
             }
 
             return CommonStatusCodes.Success;
@@ -85,14 +94,23 @@ namespace DulcisX.Nodes.Events
 
         public int OnBeforeCloseProject(IVsHierarchy pHierarchy, int fRemoved)
         {
-            var project = Solution.GetProject(pHierarchy);
+            var projectCloseListener = _onProjectClose is object;
+            var projectRemoveListener = OnProjectRemove is object;
 
-            _onProjectClose?.Invoke(project.NodeType, project, VsConverter.Boolean(fRemoved));
-
-            if (OnProjectRemove is object &&
-                _lastProjectUnloaded == project.GetGuid())
+            if (projectCloseListener || projectRemoveListener)
             {
-                OnProjectRemove.Invoke(project);
+                var project = Solution.GetProject(pHierarchy);
+
+                if (projectCloseListener)
+                {
+                    _onProjectClose.Invoke(project.NodeType, project, VsConverter.Boolean(fRemoved));
+                }
+
+                if (projectRemoveListener &&
+                    _lastProjectUnloaded == project.GetGuid())
+                {
+                    OnProjectRemove.Invoke(project);
+                }
             }
 
             return CommonStatusCodes.Success;
@@ -100,10 +118,13 @@ namespace DulcisX.Nodes.Events
 
         public int OnAfterLoadProject(IVsHierarchy pStubHierarchy, IVsHierarchy pRealHierarchy)
         {
-            var oldProject = Solution.GetProject(pStubHierarchy);
-            var newProject = Solution.GetProject(pRealHierarchy);
+            if (_onProjectLoaded is object)
+            {
+                var oldProject = Solution.GetProject(pStubHierarchy);
+                var newProject = Solution.GetProject(pRealHierarchy);
 
-            _onProjectLoaded?.Invoke(newProject.NodeType, oldProject, newProject);
+                _onProjectLoaded.Invoke(newProject.NodeType, oldProject, newProject);
+            }
 
             return CommonStatusCodes.Success;
         }
@@ -120,14 +141,24 @@ namespace DulcisX.Nodes.Events
 
         public int OnBeforeUnloadProject(IVsHierarchy pRealHierarchy, IVsHierarchy pStubHierarchy)
         {
-            var oldProject = Solution.GetProject(pRealHierarchy);
-            var newProject = Solution.GetProject(pStubHierarchy);
+            var projectUnloadListener = _onProjectUnload is object;
+            var projectRemoveListener = OnProjectRemove is object;
 
-            _onProjectUnload?.Invoke(newProject.NodeType, oldProject, newProject);
-
-            if (OnProjectRemove is object)
+            if (projectUnloadListener || projectRemoveListener)
             {
-                _lastProjectUnloaded = newProject.GetGuid();
+                var newProject = Solution.GetProject(pStubHierarchy);
+
+                if (projectUnloadListener)
+                {
+                    var oldProject = Solution.GetProject(pRealHierarchy);
+
+                    _onProjectUnload.Invoke(newProject.NodeType, oldProject, newProject);
+                }
+
+                if (projectRemoveListener)
+                {
+                    _lastProjectUnloaded = newProject.GetGuid();
+                }
             }
 
             return CommonStatusCodes.Success;
@@ -135,7 +166,7 @@ namespace DulcisX.Nodes.Events
 
         public int OnAfterOpenSolution(object pUnkReserved, int fNewSolution)
         {
-            OnSolutionOpened?.Invoke(fNewSolution == 1);
+            OnSolutionOpened?.Invoke(VsConverter.Boolean(fNewSolution));
 
             return CommonStatusCodes.Success;
         }
@@ -156,7 +187,22 @@ namespace DulcisX.Nodes.Events
         public int OnAfterCloseSolution(object pUnkReserved)
         {
             OnSolutionClosed?.Invoke();
+
             return CommonStatusCodes.Success;
+        }
+
+        public void OnBeforeOpenProject(ref Guid guidProjectID, ref Guid guidProjectType, string pszFileName)
+        {
+            if (OnProjectAdd is null)
+                return;
+
+            if (guidProjectType == VSConstants.CLSID.MiscellaneousFilesProject_guid ||
+                guidProjectID != Guid.Empty)
+            {
+                return;
+            }
+
+            _lastProjectOpened = pszFileName;
         }
 
         internal static ISolutionEvents Create(SolutionNode solution)
@@ -181,17 +227,6 @@ namespace DulcisX.Nodes.Events
             var result = Solution.UnderlyingSolution.UnadviseSolutionEvents(Cookie);
 
             ErrorHandler.ThrowOnFailure(result);
-        }
-
-        public void OnBeforeOpenProject(ref Guid guidProjectID, ref Guid guidProjectType, string pszFileName)
-        {
-            if (guidProjectType == VSConstants.CLSID.MiscellaneousFilesProject_guid ||
-                guidProjectID != Guid.Empty)
-            {
-                return;
-            }
-
-            _lastProjectOpened = pszFileName;
         }
     }
 }

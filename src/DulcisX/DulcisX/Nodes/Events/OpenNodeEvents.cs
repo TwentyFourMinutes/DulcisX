@@ -59,36 +59,38 @@ namespace DulcisX.Nodes.Events
 
         public int OnAfterFirstDocumentLock(uint docCookie, uint dwRDTLockType, uint dwReadLocksRemaining, uint dwEditLocksRemaining)
         {
-            if (_onNodeLocked is null)
-                return CommonStatusCodes.Success;
+            if (_onNodeLocked is object)
+            {
+                var node = _documentTable.GetNode(docCookie, Solution);
 
-            var node = _documentTable.GetNode(docCookie, Solution);
-
-            _onNodeLocked.Invoke(node.NodeType, node, (_VSRDTFLAGS)dwRDTLockType, dwReadLocksRemaining, dwEditLocksRemaining);
+                _onNodeLocked.Invoke(node.NodeType, node, (_VSRDTFLAGS)dwRDTLockType, dwReadLocksRemaining, dwEditLocksRemaining);
+            }
 
             return CommonStatusCodes.Success;
         }
 
         public int OnBeforeLastDocumentUnlock(uint docCookie, uint dwRDTLockType, uint dwReadLocksRemaining, uint dwEditLocksRemaining)
         {
-            if (_onNodeUnlocked is null)
-                return CommonStatusCodes.Success;
 
-            var node = _documentTable.GetNode(docCookie, Solution);
+            if (_onNodeUnlocked is object)
+            {
+                var node = _documentTable.GetNode(docCookie, Solution);
 
-            _onNodeUnlocked.Invoke(node.NodeType, node, (_VSRDTFLAGS)dwRDTLockType, dwReadLocksRemaining, dwEditLocksRemaining);
+                _onNodeUnlocked.Invoke(node.NodeType, node, (_VSRDTFLAGS)dwRDTLockType, dwReadLocksRemaining, dwEditLocksRemaining);
+            }
 
             return CommonStatusCodes.Success;
         }
 
         public int OnAfterSave(uint docCookie)
         {
-            if (_onSaved is null)
-                return CommonStatusCodes.Success;
 
-            var node = _documentTable.GetNode(docCookie, Solution);
+            if (_onSaved is object)
+            {
+                var node = _documentTable.GetNode(docCookie, Solution);
 
-            _onSaved.Invoke(node.NodeType, node);
+                _onSaved.Invoke(node.NodeType, node);
+            }
 
             return CommonStatusCodes.Success;
         }
@@ -98,24 +100,25 @@ namespace DulcisX.Nodes.Events
 
         public int OnBeforeDocumentWindowShow(uint docCookie, int fFirstShow, IVsWindowFrame pFrame)
         {
-            if (_onNodeWindowShow is null)
-                return CommonStatusCodes.Success;
+            if (_onNodeWindowShow is object)
+            {
+                var node = _documentTable.GetNode(docCookie, Solution);
 
-            var node = _documentTable.GetNode(docCookie, Solution);
-
-            _onNodeWindowShow.Invoke(node.NodeType, node, fFirstShow != 0, pFrame);
+                _onNodeWindowShow.Invoke(node.NodeType, node, fFirstShow != 0, pFrame);
+            }
 
             return CommonStatusCodes.Success;
         }
 
         public int OnAfterDocumentWindowHide(uint docCookie, IVsWindowFrame pFrame)
         {
-            if (_onNodeWindowHidden is null)
-                return CommonStatusCodes.Success;
 
-            var node = _documentTable.GetNode(docCookie, Solution);
+            if (_onNodeWindowHidden is object)
+            {
+                var node = _documentTable.GetNode(docCookie, Solution);
 
-            _onNodeWindowHidden.Invoke(node.NodeType, node, pFrame);
+                _onNodeWindowHidden.Invoke(node.NodeType, node, pFrame);
+            }
 
             return CommonStatusCodes.Success;
         }
@@ -146,7 +149,8 @@ namespace DulcisX.Nodes.Events
             var oldFileName = Path.GetFileName(oldName);
             var newFileName = Path.GetFileName(newName);
 
-            if (oldFileName != newFileName && _onRenamed is object)
+            if (_onRenamed is object &&
+                oldFileName != newFileName)
             {
                 _onRenamed.Invoke(node.Value.NodeType, node.Value, oldFileName, newFileName);
                 return;
@@ -155,8 +159,8 @@ namespace DulcisX.Nodes.Events
             var oldFilePath = Path.GetDirectoryName(oldName);
             var newFilePath = Path.GetDirectoryName(newName);
 
-
-            if (oldFilePath != newFilePath && _onMoved is object)
+            if (_onMoved is object &&
+                oldFilePath != newFilePath)
             {
                 _onMoved.Invoke(node.Value.NodeType, node.Value, oldFilePath, newFilePath);
             }
@@ -164,12 +168,13 @@ namespace DulcisX.Nodes.Events
 
         public int OnBeforeSave(uint docCookie)
         {
-            if (_onNodeLocked is null)
-                return CommonStatusCodes.Success;
 
-            var node = _documentTable.GetNode(docCookie, Solution);
+            if (_onSave is object)
+            {
+                var node = _documentTable.GetNode(docCookie, Solution);
 
-            _onSave.Invoke(node.NodeType, node);
+                _onSave.Invoke(node.NodeType, node);
+            }
 
             return CommonStatusCodes.Success;
         }
