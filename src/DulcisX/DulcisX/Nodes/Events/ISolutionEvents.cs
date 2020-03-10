@@ -20,6 +20,10 @@ namespace DulcisX.Nodes.Events
 
         EventDistributor<Action<ProjectNode, ProjectNode>> OnBeforeProjectUnload { get; }
 
+        event Action<ProjectNode> OnProjectAdd;
+
+        event Action<ProjectNode> OnProjectRemove;
+
         event Action<bool> OnAfterSolutionOpen;
 
         event QuerySolutionClose OnQuerySolutionClose;

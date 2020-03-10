@@ -6,7 +6,7 @@ using System;
 
 namespace DulcisX.Nodes.Events
 {
-    internal class SolutionEvents : EventSink, ISolutionEvents, IVsSolutionEvents
+    internal class SolutionEvents : EventSink, ISolutionEvents, IVsSolutionEvents, IVsSolutionEvents5
     {
         #region Events
 
@@ -34,6 +34,11 @@ namespace DulcisX.Nodes.Events
         public EventDistributor<Action<ProjectNode, ProjectNode>> OnBeforeProjectUnload
              => _onBeforeProjectUnload ?? (_onBeforeProjectUnload = new EventDistributor<Action<ProjectNode, ProjectNode>>());
 
+
+        public event Action<ProjectNode> OnProjectAdd;
+
+        public event Action<ProjectNode> OnProjectRemove;
+
         public event Action<bool> OnAfterSolutionOpen;
 
         public event QuerySolutionClose OnQuerySolutionClose;
@@ -43,6 +48,9 @@ namespace DulcisX.Nodes.Events
         public event Action OnAfterSolutionClose;
 
         #endregion
+
+        private Guid _lastProjectUnloaded = Guid.Empty;
+        private string _lastProjectOpened = null;
 
         private SolutionEvents(SolutionNode solution) : base(solution)
         {
@@ -54,6 +62,12 @@ namespace DulcisX.Nodes.Events
             var project = Solution.GetProject(pHierarchy);
 
             _onAfterProjectOpen?.Invoke(project.NodeType, project, fAdded == 1);
+
+            if (_lastProjectOpened is object &&
+                _lastProjectOpened == project.GetFullName())
+            {
+                OnProjectAdd?.Invoke(project);
+            }
 
             return CommonStatusCodes.Success;
         }
@@ -76,6 +90,12 @@ namespace DulcisX.Nodes.Events
             var project = Solution.GetProject(pHierarchy);
 
             _onBeforeProjectClose?.Invoke(project.NodeType, project, fRemoved == 1);
+
+            if (OnProjectRemove is object &&
+                _lastProjectUnloaded == project.GetGuid())
+            {
+                OnProjectRemove.Invoke(project);
+            }
 
             return CommonStatusCodes.Success;
         }
@@ -109,6 +129,11 @@ namespace DulcisX.Nodes.Events
             var newProject = Solution.GetProject(pStubHierarchy);
 
             _onBeforeProjectUnload?.Invoke(newProject.NodeType, oldProject, newProject);
+
+            if (OnProjectRemove is object)
+            {
+                _lastProjectUnloaded = newProject.GetGuid();
+            }
 
             return CommonStatusCodes.Success;
         }
@@ -166,6 +191,17 @@ namespace DulcisX.Nodes.Events
             var result = Solution.UnderlyingSolution.UnadviseSolutionEvents(Cookie);
 
             ErrorHandler.ThrowOnFailure(result);
+        }
+
+        public void OnBeforeOpenProject(ref Guid guidProjectID, ref Guid guidProjectType, string pszFileName)
+        {
+            if (guidProjectType == VSConstants.CLSID.MiscellaneousFilesProject_guid ||
+                guidProjectID != Guid.Empty)
+            {
+                return;
+            }
+
+            _lastProjectOpened = pszFileName;
         }
     }
 }

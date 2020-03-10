@@ -1,6 +1,4 @@
 ﻿using DulcisX.Core.Models;
-using DulcisX.Nodes;
-using Microsoft.VisualStudio.Language.Intellisense;
 using Microsoft.VisualStudio.Shell;
 using SimpleInjector;
 
