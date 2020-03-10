@@ -2,6 +2,7 @@
 {
     public enum StartupOptions
     {
+        None,
         Start,
         StartWithDebugging
     }

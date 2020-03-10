@@ -53,9 +53,6 @@
     <AssemblyOriginatorKeyFile>Twenty.pfx</AssemblyOriginatorKeyFile>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="BidirectionalDict, Version=1.2.0.0, Culture=neutral, PublicKeyToken=ee564df2d0985226, processorArchitecture=MSIL">
-      <HintPath>..\packages\BidirectionalDict.1.2.0\lib\net48\BidirectionalDict.dll</HintPath>
-    </Reference>
     <Reference Include="EnvDTE, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
       <HintPath>..\packages\EnvDTE.8.0.2\lib\net10\EnvDTE.dll</HintPath>
       <EmbedInteropTypes>True</EmbedInteropTypes>
@@ -353,6 +350,9 @@
     </Reference>
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
+    <Reference Include="SimpleInjector, Version=4.9.0.0, Culture=neutral, PublicKeyToken=984cb50dea722e99, processorArchitecture=MSIL">
+      <HintPath>..\packages\SimpleInjector.4.9.0\lib\net45\SimpleInjector.dll</HintPath>
+    </Reference>
     <Reference Include="stdole, Version=7.0.3300.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
       <HintPath>..\packages\stdole.7.0.3303\lib\net10\stdole.dll</HintPath>
       <EmbedInteropTypes>True</EmbedInteropTypes>
@@ -607,36 +607,49 @@
     <Reference Include="WindowsFormsIntegration" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Components\DocumentX.cs" />
-    <Compile Include="Components\Events\EventCookie.cs" />
-    <Compile Include="Components\Events\Interfaces\ISolutionBuildEventsX.cs" />
-    <Compile Include="Components\Events\Interfaces\ISoulutionEventsX.cs" />
-    <Compile Include="Components\Events\Interfaces\IOpenHierarchyItemEventsX.cs" />
-    <Compile Include="Components\Events\OpenHierarchyItemEventsX.cs" />
-    <Compile Include="Components\Events\SolutionBuildEventsX.cs" />
-    <Compile Include="Components\Events\SolutionEventsX.cs" />
-    <Compile Include="Components\ProjectX.cs" />
-    <Compile Include="Components\HierarchyItemX.cs" />
-    <Compile Include="Components\SolutionX.cs" />
-    <Compile Include="Components\StartupProjectX.cs" />
-    <Compile Include="Core\Extensions\ServiceProvidersExtensions.cs" />
+    <Compile Include="Core\Extensions\ContainerExtensions.cs" />
+    <Compile Include="Core\Extensions\EnumExtensions.cs" />
     <Compile Include="Core\Extensions\VsHierarchyExtensions.cs" />
     <Compile Include="Core\Extensions\VsRunningDocumentTableExtensions.cs" />
-    <Compile Include="Core\Models\ConstructorInstance.cs" />
-    <Compile Include="Core\Models\Enums\CopyToOutputDirectoryX.cs" />
-    <Compile Include="Core\Models\Enums\DocumentPropertyX.cs" />
-    <Compile Include="Core\Models\Enums\HierarchyItemType.cs" />
+    <Compile Include="Core\Models\COMContainer.cs" />
+    <Compile Include="Core\Models\Enums\CopyToOutputDirectory.cs" />
+    <Compile Include="Core\Models\Enums\DocumentProperty.cs" />
     <Compile Include="Core\Models\Enums\StartupOptions.cs" />
-    <Compile Include="Core\Models\Enums\VisualStudio\VsRDTAttributeX.cs" />
-    <Compile Include="Core\Models\Interfaces\IServiceProviders.cs" />
-    <Compile Include="Core\Models\HierarchyPropertiesX.cs" />
+    <Compile Include="Core\Models\Enums\VisualStudio\CommonNodeIds.cs" />
+    <Compile Include="Core\Models\Enums\VisualStudio\CommonStatusCodes.cs" />
+    <Compile Include="Core\Models\Enums\VisualStudio\CommonStreamKeys.cs" />
+    <Compile Include="Core\Models\Enums\VisualStudio\VsRDTAttribute.cs" />
+    <Compile Include="Core\Models\IServiceProviders.cs" />
     <Compile Include="Core\Models\PackageUserOptions\SolutionConfigurationOptions.cs" />
-    <Compile Include="Core\Models\SelectedHierarchyItemsX.cs" />
+    <Compile Include="Core\Models\SelectedNodes.cs" />
     <Compile Include="Core\PackageX.cs" />
-    <Compile Include="Exceptions\InvalidHierarchyItemExceptionX.cs" />
-    <Compile Include="Exceptions\InvalidHierarchyTypeExceptionX.cs" />
-    <Compile Include="Exceptions\InvalidVSStatusCodeExceptionX.cs" />
-    <Compile Include="Helpers\VSHelper.cs" />
+    <Compile Include="Exceptions\InvalidHierarchyItemException.cs" />
+    <Compile Include="Exceptions\NoFlagsAllowedException.cs" />
+    <Compile Include="Helpers\ExtendedHierarchyUtilities.cs" />
+    <Compile Include="Helpers\VsHelper.cs" />
+    <Compile Include="Nodes\DocumentNode.cs" />
+    <Compile Include="Nodes\Events\EventDistributor.cs" />
+    <Compile Include="Nodes\Events\EventSink.cs" />
+    <Compile Include="Nodes\Events\IOpenNodeEvents.cs" />
+    <Compile Include="Nodes\Events\IProjectNodeChangeEvents.cs" />
+    <Compile Include="Nodes\Events\ISolutionBuildEvents.cs" />
+    <Compile Include="Nodes\Events\ISolutionEvents.cs" />
+    <Compile Include="Nodes\Events\ProjectNodeChangeEvents.cs" />
+    <Compile Include="Nodes\Events\OpenNodeEvents.cs" />
+    <Compile Include="Nodes\Events\SolutionBuildEvents.cs" />
+    <Compile Include="Nodes\Events\SolutionEvents.cs" />
+    <Compile Include="Nodes\INamedNode.cs" />
+    <Compile Include="Nodes\IPhysicalNode.cs" />
+    <Compile Include="Core\Models\Enums\NodeTypes.cs" />
+    <Compile Include="Nodes\NodeFactory.cs" />
+    <Compile Include="Nodes\SolutionItemNode.cs" />
+    <Compile Include="Nodes\SolutionNode.cs" />
+    <Compile Include="Nodes\ProjectNode.cs" />
+    <Compile Include="Nodes\UnknownNode.cs" />
+    <Compile Include="Nodes\VirtualFolderNode.cs" />
+    <Compile Include="Nodes\FolderNode.cs" />
+    <Compile Include="Nodes\ProjectItemNode.cs" />
+    <Compile Include="Nodes\BaseNode.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

@@ -11,7 +11,7 @@ namespace DulcisX.Core.Models.PackageUserOptions
 {
     internal class SolutionConfigurationOptions : IVsPersistSolutionOpts
     {
-        public Dictionary<Guid, StartupOptions> StartupProjects { get; private set; }
+        public Dictionary<Guid, StartupOptions> StartupProjects { get; }
 
         public bool IsMultiStartup { get; private set; }
 

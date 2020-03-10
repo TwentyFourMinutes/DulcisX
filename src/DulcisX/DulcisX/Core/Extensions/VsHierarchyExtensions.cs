@@ -1,18 +1,17 @@
-﻿using DulcisX.Components;
-using DulcisX.Core.Models;
-using DulcisX.Core.Models.Enums;
-using DulcisX.Helpers;
+﻿using DulcisX.Core.Models.Enums.VisualStudio;
 using Microsoft.VisualStudio;
 using Microsoft.VisualStudio.Shell;
 using Microsoft.VisualStudio.Shell.Interop;
 using System;
-using System.IO;
 using System.Runtime.InteropServices;
 
 namespace DulcisX.Core.Extensions
 {
     public static class VsHierarchyExtensions
     {
+        public static bool TryGetParentHierarchy(this IVsHierarchy hierarchy, out IVsHierarchy parentHierarchy)
+            => hierarchy.TryGetProperty(CommonNodeIds.Root, (int)__VSHPROPID.VSHPROPID_ParentHierarchy, out parentHierarchy);
+
         public static bool TryGetNestedHierarchy(this IVsHierarchy hierarchy, uint itemId, out IVsHierarchy nestedHierarchy)
         {
             ThreadHelper.ThrowIfNotOnUIThread();
@@ -21,7 +20,7 @@ namespace DulcisX.Core.Extensions
 
             var result = hierarchy.GetNestedHierarchy(itemId, ref guid, out var hierarchyPointer, out _);
 
-            if (VsHelper.HasFailed(result) || hierarchyPointer == IntPtr.Zero)
+            if (ErrorHandler.Failed(result) || hierarchyPointer == IntPtr.Zero)
             {
                 nestedHierarchy = null;
                 return false;
@@ -31,63 +30,6 @@ namespace DulcisX.Core.Extensions
             Marshal.Release(hierarchyPointer);
 
             return true;
-        }
-
-        public static HierarchyItemTypeX GetHierarchyItemType(this IVsHierarchy hierarchy, uint itemId)
-        {
-            ThreadHelper.ThrowIfNotOnUIThread();
-
-            if (itemId == VSConstants.VSITEMID_ROOT)
-            {
-                if (hierarchy.TryGetPropertyObject(itemId, (int)__VSHPROPID5.VSHPROPID_OutputType, out _))
-                {
-                    return HierarchyItemTypeX.Project;
-                }
-                else if (hierarchy is IVsSolution)
-                {
-                    return HierarchyItemTypeX.Solution;
-                }
-                else
-                {
-                    return HierarchyItemTypeX.VirtualFolder;
-                }
-            }
-            else
-            {
-                var project = (IVsProject)hierarchy;
-
-                var result = project.GetMkDocument(itemId, out var path);
-
-                VsHelper.ValidateSuccessStatusCode(result);
-
-                if (File.Exists(path))
-                {
-                    return HierarchyItemTypeX.Document;
-                }
-                else
-                {
-                    return HierarchyItemTypeX.Folder;
-                }
-            }
-        }
-
-        public static HierarchyItemX ConstructHierarchyItem(this IVsHierarchy hierarchy, uint itemId, SolutionX solution, HierarchyItemTypeX? itemType = null, ProjectX parentProject = null, HierarchyItemX parentItem = null)
-        {
-            switch (itemType ?? hierarchy.GetHierarchyItemType(itemId))
-            {
-                case HierarchyItemTypeX.Solution:
-                    return solution;
-                case HierarchyItemTypeX.Project:
-                    return new ProjectX(hierarchy, itemId, solution, parentItem);
-                case HierarchyItemTypeX.Folder:
-                    return new HierarchyItemX(hierarchy, itemId, HierarchyItemTypeX.Folder, ConstructorInstance.FromValue(solution), ConstructorInstance.FromValue(parentProject), parentItem);
-                case HierarchyItemTypeX.VirtualFolder:
-                    return new HierarchyItemX(hierarchy, itemId, HierarchyItemTypeX.VirtualFolder, ConstructorInstance.FromValue(solution), ConstructorInstance.FromValue(parentProject), parentItem);
-                case HierarchyItemTypeX.Document:
-                    return new DocumentX(hierarchy, itemId, solution, parentItem: parentItem);
-                default:
-                    return null;
-            }
         }
 
         public static bool IsContainer(this IVsHierarchy hierarchy, uint itemId)
@@ -109,7 +51,7 @@ namespace DulcisX.Core.Extensions
 
             var result = hierarchy.GetProperty(itemId, propId, out var val);
 
-            VsHelper.ValidateSuccessStatusCode(result);
+            ErrorHandler.ThrowOnFailure(result);
 
             return (uint)Convert.ToInt32(val);
         }
@@ -120,7 +62,7 @@ namespace DulcisX.Core.Extensions
 
             var result = hierarchy.GetProperty(itemId, propId, out var val);
 
-            VsHelper.ValidateSuccessStatusCode(result);
+            ErrorHandler.ThrowOnFailure(result);
 
             return (TType)val;
         }
@@ -131,7 +73,7 @@ namespace DulcisX.Core.Extensions
 
             var result = hierarchy.GetProperty(itemId, propId, out var val);
 
-            VsHelper.ValidateSuccessStatusCode(result);
+            ErrorHandler.ThrowOnFailure(result);
 
             return val;
         }
@@ -142,7 +84,7 @@ namespace DulcisX.Core.Extensions
 
             var result = hierarchy.GetProperty(itemId, propId, out var val);
 
-            if (!VsHelper.HasSuccessCode(result))
+            if (ErrorHandler.Failed(result))
             {
                 value = default;
                 return false;
@@ -159,7 +101,7 @@ namespace DulcisX.Core.Extensions
 
             var result = hierarchy.GetProperty(itemId, propId, out var val);
 
-            if (!VsHelper.HasSuccessCode(result))
+            if (ErrorHandler.Failed(result))
             {
                 type = default;
                 return false;
@@ -176,7 +118,7 @@ namespace DulcisX.Core.Extensions
 
             var result = hierarchy.GetProperty(itemId, propId, out obj);
 
-            return VsHelper.HasSuccessCode(result);
+            return ErrorHandler.Succeeded(result);
         }
 
         public static bool TrySetProperty(this IVsHierarchy hierarchy, uint itemId, int propId, object val)
@@ -185,7 +127,7 @@ namespace DulcisX.Core.Extensions
 
             var result = hierarchy.SetProperty(itemId, propId, val);
 
-            return VsHelper.HasSuccessCode(result);
+            return ErrorHandler.Succeeded(result);
         }
 
         #endregion
