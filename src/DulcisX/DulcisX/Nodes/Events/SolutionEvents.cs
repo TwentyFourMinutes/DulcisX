@@ -15,9 +15,9 @@ namespace DulcisX.Nodes.Events
         public EventDistributor<Action<ProjectNode, bool>> OnAfterProjectOpen
             => _onAfterProjectOpen ?? (_onAfterProjectOpen = new EventDistributor<Action<ProjectNode, bool>>());
 
-        private EventDistributor<QueryProjectClose> _onQueryProjectClose;
-        public EventDistributor<QueryProjectClose> OnQueryProjectClose
-             => _onQueryProjectClose ?? (_onQueryProjectClose = new EventDistributor<QueryProjectClose>());
+        private EventDistributor<Action<ProjectNode, bool, CancelTraslaterToken>> _onQueryProjectClose;
+        public EventDistributor<Action<ProjectNode, bool, CancelTraslaterToken>> OnQueryProjectClose
+             => _onQueryProjectClose ?? (_onQueryProjectClose = new EventDistributor<Action<ProjectNode, bool, CancelTraslaterToken>>());
 
         private EventDistributor<Action<ProjectNode, bool>> _onBeforeProjectClose;
         public EventDistributor<Action<ProjectNode, bool>> OnBeforeProjectClose
@@ -27,9 +27,9 @@ namespace DulcisX.Nodes.Events
         public EventDistributor<Action<ProjectNode, ProjectNode>> OnAfterProjectLoad
              => _onAfterProjectLoad ?? (_onAfterProjectLoad = new EventDistributor<Action<ProjectNode, ProjectNode>>());
 
-        private EventDistributor<QueryProjectUnload> _onQueryProjectUnload;
-        public EventDistributor<QueryProjectUnload> OnQueryProjectUnload
-             => _onQueryProjectUnload ?? (_onQueryProjectUnload = new EventDistributor<QueryProjectUnload>());
+        private EventDistributor<Action<ProjectNode, CancelTraslaterToken>> _onQueryProjectUnload;
+        public EventDistributor<Action<ProjectNode, CancelTraslaterToken>> OnQueryProjectUnload
+             => _onQueryProjectUnload ?? (_onQueryProjectUnload = new EventDistributor<Action<ProjectNode, CancelTraslaterToken>>());
 
         private EventDistributor<Action<ProjectNode, ProjectNode>> _onBeforeProjectUnload;
         public EventDistributor<Action<ProjectNode, ProjectNode>> OnBeforeProjectUnload
@@ -42,7 +42,7 @@ namespace DulcisX.Nodes.Events
 
         public event Action<bool> OnAfterSolutionOpen;
 
-        public event QuerySolutionClose OnQuerySolutionClose;
+        public event Action<CancelTraslaterToken> OnQuerySolutionClose;
 
         public event Action OnBeforeSolutionClose;
 
@@ -75,15 +75,12 @@ namespace DulcisX.Nodes.Events
 
         public int OnQueryCloseProject(IVsHierarchy pHierarchy, int fRemoving, ref int pfCancel)
         {
-            bool tempBool = false;
+            return CancelTranslaterFactory.Create(_onQueryProjectClose, ref pfCancel, token =>
+            {
+                var project = Solution.GetProject(pHierarchy);
 
-            var project = Solution.GetProject(pHierarchy);
-
-            _onQueryProjectClose?.Invoke(project.NodeType, VsConverter.Boolean(fRemoving), ref tempBool);
-
-            pfCancel = tempBool ? 1 : 0;
-
-            return CommonStatusCodes.Success;
+                _onQueryProjectClose.Invoke(project.NodeType, VsConverter.Boolean(fRemoving), token);
+            });
         }
 
         public int OnBeforeCloseProject(IVsHierarchy pHierarchy, int fRemoved)
@@ -113,15 +110,12 @@ namespace DulcisX.Nodes.Events
 
         public int OnQueryUnloadProject(IVsHierarchy pRealHierarchy, ref int pfCancel)
         {
-            bool tempBool = false;
+            return CancelTranslaterFactory.Create(_onQueryProjectUnload, ref pfCancel, token =>
+            {
+                var project = Solution.GetProject(pRealHierarchy);
 
-            var project = Solution.GetProject(pRealHierarchy);
-
-            _onQueryProjectUnload?.Invoke(project.NodeType, project, ref tempBool);
-
-            pfCancel = tempBool ? 1 : 0;
-
-            return CommonStatusCodes.Success;
+                _onQueryProjectUnload.Invoke(project.NodeType, project, token);
+            });
         }
 
         public int OnBeforeUnloadProject(IVsHierarchy pRealHierarchy, IVsHierarchy pStubHierarchy)
@@ -148,13 +142,8 @@ namespace DulcisX.Nodes.Events
 
         public int OnQueryCloseSolution(object pUnkReserved, ref int pfCancel)
         {
-            bool tempBool = false;
-
-            OnQuerySolutionClose?.Invoke(ref tempBool);
-
-            pfCancel = tempBool ? 1 : 0;
-
-            return CommonStatusCodes.Success;
+            return CancelTranslaterFactory.Create(OnQuerySolutionClose, ref pfCancel,
+                token => OnQuerySolutionClose.Invoke(token));
         }
 
         public int OnBeforeCloseSolution(object pUnkReserved)

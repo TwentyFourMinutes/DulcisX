@@ -16,10 +16,10 @@ namespace DulcisX.Nodes.Events
         public EventDistributor<Action<ProjectNode>> OnAfterProjectConfigurationChange
             => _onAfterProjectConfigurationChange ?? (_onAfterProjectConfigurationChange = new EventDistributor<Action<ProjectNode>>());
 
-        public event BeforeSolutionBuild OnBeforeSolutionBuild;
+        public event Action<CancelTraslaterToken> OnBeforeSolutionBuild;
         public event Action<bool, bool, bool> OnAfterSolutionBuild;
         public event Action OnSolutionBuildCancel;
-        public event BeforeProjectConfigurationBuild OnBeforeProjectConfigurationBuild;
+        public event Action<CancelTraslaterToken> OnBeforeProjectConfigurationBuild;
 
         #endregion
 
@@ -32,13 +32,8 @@ namespace DulcisX.Nodes.Events
 
         public int UpdateSolution_Begin(ref int pfCancelUpdate)
         {
-            bool tempBool = false;
-
-            OnBeforeSolutionBuild?.Invoke(ref tempBool);
-
-            pfCancelUpdate = tempBool ? 1 : 0;
-
-            return CommonStatusCodes.Success;
+            return CancelTranslaterFactory.Create(OnBeforeSolutionBuild, ref pfCancelUpdate,
+                token => OnBeforeSolutionBuild.Invoke(token));
         }
 
         public int UpdateSolution_Done(int fSucceeded, int fModified, int fCancelCommand)
@@ -50,13 +45,8 @@ namespace DulcisX.Nodes.Events
 
         public int UpdateSolution_StartUpdate(ref int pfCancelUpdate)
         {
-            bool tempBool = false;
-
-            OnBeforeProjectConfigurationBuild?.Invoke(ref tempBool);
-
-            pfCancelUpdate = tempBool ? 1 : 0;
-
-            return CommonStatusCodes.Success;
+            return CancelTranslaterFactory.Create(OnBeforeProjectConfigurationBuild, ref pfCancelUpdate,
+                token => OnBeforeProjectConfigurationBuild.Invoke(token));
         }
 
         public int UpdateSolution_Cancel()

@@ -116,26 +116,6 @@ namespace DulcisX.Nodes.Events
             CallActions(nodeTypes, action => action(t1, t2, t3, t4));
         }
 
-        internal void Invoke(NodeTypes nodeTypes, ref bool shouldCancel)
-        {
-            CallActions(nodeTypes, ref shouldCancel, (dynamic action, ref bool val) => action(ref val));
-        }
-
-        internal void Invoke<T1>(NodeTypes nodeTypes, T1 t1, ref bool shouldCancel)
-        {
-            CallActions(nodeTypes, ref shouldCancel, (dynamic action, ref bool val) => action(t1, ref val));
-        }
-
-        internal void Invoke<T1, T2>(NodeTypes nodeTypes, T1 t1, T2 t2, ref bool shouldCancel)
-        {
-            CallActions(nodeTypes, ref shouldCancel, (dynamic action, ref bool val) => action(t1, t2, ref val));
-        }
-
-        internal void Invoke<T1, T2, T3>(NodeTypes nodeTypes, T1 t1, T2 t2, T3 t3, ref bool shouldCancel)
-        {
-            CallActions(nodeTypes, ref shouldCancel, (dynamic action, ref bool val) => action(t1, t2, t3, ref val));
-        }
-
         #endregion
 
         private void CallActions(NodeTypes nodeTypes, CallAction action)
@@ -147,19 +127,6 @@ namespace DulcisX.Nodes.Events
                     action.Invoke((dynamic)_cache[i]);
                 }
             });
-        }
-
-        private void CallActions(NodeTypes nodeTypes, ref bool cancel, CancebleCallAction action)
-        {
-            var flags = (int)nodeTypes;
-
-            for (int i = 1; i <= flags; i *= 2)
-            {
-                if ((flags & i) != 0 && _cache.ContainsKey(i))
-                {
-                    action.Invoke((dynamic)_cache[i], ref cancel);
-                }
-            }
         }
 
         private void DoByTypes(NodeTypes nodeTypes, Action<int> action)
