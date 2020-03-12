@@ -1,4 +1,4 @@
-using DulcisX.Core.Extensions;
+﻿using DulcisX.Core.Extensions;
 using DulcisX.Core.Models;
 using DulcisX.Core.Models.Enums;
 using DulcisX.Core.Models.Enums.VisualStudio;
@@ -22,22 +22,22 @@ namespace DulcisX.Nodes
         private ISolutionEvents _solutionEvents;
 
         public ISolutionEvents SolutionEvents
-            => _solutionEvents ?? (_solutionEvents = Events.SolutionEvents.Create(this));
+            => _solutionEvents ?? (_solutionEvents = ServiceContainer.GetInstance<ISolutionEvents>());
 
         private ISolutionBuildEvents _solutionBuildEvents;
 
         public ISolutionBuildEvents SolutionBuildEvents
-            => _solutionBuildEvents ?? (_solutionBuildEvents = Events.SolutionBuildEvents.Create(this));
+            => _solutionBuildEvents ?? (_solutionBuildEvents = ServiceContainer.GetInstance<ISolutionBuildEvents>());
 
         private IOpenNodeEvents _openNodeEvents;
 
         public IOpenNodeEvents OpenNodeEvents
-            => _openNodeEvents ?? (_openNodeEvents = Events.OpenNodeEvents.Create(this));
+            => _openNodeEvents ?? (_openNodeEvents = ServiceContainer.GetInstance<IOpenNodeEvents>());
 
         private INodeSelectionEvents _nodeSelectionEvents;
 
         public INodeSelectionEvents NodeSelectionEvents
-            => _nodeSelectionEvents ?? (_nodeSelectionEvents = );
+            => _nodeSelectionEvents ?? (_nodeSelectionEvents = ServiceContainer.GetInstance<INodeSelectionEvents>());
 
         #endregion
 
@@ -57,6 +57,16 @@ namespace DulcisX.Nodes
 
             UnderlyingSolution = solution;
             ServiceContainer = container;
+
+            ConfigureServices();
+        }
+
+        private void ConfigureServices()
+        {
+            ServiceContainer.RegisterSingleton(() => Events.SolutionEvents.Create(this));
+            ServiceContainer.RegisterSingleton(() => Events.SolutionBuildEvents.Create(this));
+            ServiceContainer.RegisterSingleton(() => Events.OpenNodeEvents.Create(this));
+            ServiceContainer.RegisterSingleton(() => Events.NodeSelectionEvents.Create(this));
         }
 
         public string GetFullName()

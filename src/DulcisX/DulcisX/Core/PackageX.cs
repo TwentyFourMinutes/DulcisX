@@ -48,15 +48,12 @@ namespace DulcisX.Core
 
             await OnInitializeAsync?.Invoke(cancellationToken);
 
-            await base.InitializeAsync(cancellationToken, progress);
+            await base.InitializeAsync(cancellationToken, progress).ConfigureAwait(false);
         }
 
         private void AddDefaultServices(Container container)
         {
-            container.RegisterSingleton(() =>
-            {
-                return this.GetService<SComponentModel, IComponentModel>();
-            });
+            container.RegisterSingleton(() => this.GetService<SComponentModel, IComponentModel>());
 
             container.RegisterSingleton(() =>
             {
@@ -101,6 +98,13 @@ namespace DulcisX.Core
             _solutionNode = new SolutionNode(solution, ServiceContainer);
 
             return _solutionNode;
+        }
+
+        protected override void Dispose(bool disposing)
+        {
+            ServiceContainer.Dispose();
+
+            base.Dispose(disposing);
         }
     }
 }

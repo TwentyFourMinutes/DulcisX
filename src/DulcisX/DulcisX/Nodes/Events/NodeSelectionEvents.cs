@@ -1,21 +1,12 @@
 ﻿using DulcisX.Core.Extensions;
 using DulcisX.Core.Models;
 using DulcisX.Core.Models.Enums.VisualStudio;
-using DulcisX.Helpers;
-using Microsoft.Internal.VisualStudio.PlatformUI;
 using Microsoft.VisualStudio;
-using Microsoft.VisualStudio.OLE.Interop;
-using Microsoft.VisualStudio.ProjectSystem.Properties;
 using Microsoft.VisualStudio.Shell;
 using Microsoft.VisualStudio.Shell.Interop;
-using stdole;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Runtime.InteropServices;
 using System.Runtime.InteropServices.ComTypes;
-using System.Windows.Controls;
-using VSLangProj;
 using Constants = Microsoft.VisualStudio.Shell.Interop.Constants;
 using ITypeInfo = System.Runtime.InteropServices.ComTypes.ITypeInfo;
 
