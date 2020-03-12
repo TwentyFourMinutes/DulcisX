@@ -1,4 +1,4 @@
-﻿using DulcisX.Core.Extensions;
+using DulcisX.Core.Extensions;
 using DulcisX.Core.Models;
 using DulcisX.Core.Models.Enums;
 using DulcisX.Core.Models.Enums.VisualStudio;
@@ -34,9 +34,11 @@ namespace DulcisX.Nodes
         public IOpenNodeEvents OpenNodeEvents
             => _openNodeEvents ?? (_openNodeEvents = Events.OpenNodeEvents.Create(this));
 
-        public SelectedNodes SelectedNodes { get; }
+        private INodeSelectionEvents _nodeSelectionEvents;
 
         #endregion
+
+        public SelectedNodes SelectedNodes { get; }
 
         public IVsSolution UnderlyingSolution { get; }
 

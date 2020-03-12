@@ -27,6 +27,7 @@ namespace DulcisX.Core.Extensions
             }
 
             nestedHierarchy = (IVsHierarchy)Marshal.GetObjectForIUnknown(hierarchyPointer);
+
             Marshal.Release(hierarchyPointer);
 
             return true;

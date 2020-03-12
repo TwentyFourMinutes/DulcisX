@@ -5,6 +5,8 @@ using Microsoft.VisualStudio.Shell;
 using Microsoft.VisualStudio;
 using DulcisX.Nodes;
 using DulcisX.Core.Extensions;
+using DulcisX.Core.Models.Enums.VisualStudio;
+using System.Runtime.InteropServices;
 
 namespace DulcisX.Core.Models
 {
@@ -24,20 +26,63 @@ namespace DulcisX.Core.Models
         {
             ThreadHelper.ThrowIfNotOnUIThread();
 
-            var result = MonitorSelection.GetCurrentSelection(out _, out _, out var selection, out _);
-
-            if (selection is null)
-                yield break;
+            var result = MonitorSelection.GetCurrentSelection(out var hierarchyPointer, out var itemId, out var multiSelect, out _);
 
             ErrorHandler.ThrowOnFailure(result);
 
-            result = selection.GetSelectionInfo(out var selectionCount, out _);
+            var hierarchy = (IVsHierarchy)Marshal.GetObjectForIUnknown(hierarchyPointer);
+
+            Marshal.Release(hierarchyPointer);
+
+            foreach (var selectedNode in GetSelection(multiSelect, hierarchy, itemId, _solution))
+            {
+                yield return selectedNode;
+            }
+        }
+
+        public static IEnumerable<BaseNode> GetSelection(IVsMultiItemSelect multiSelect, IVsHierarchy hierarchy, uint itemId, SolutionNode solution)
+        {
+            if (itemId == CommonNodeIds.MutlipleSelectedNodes)
+            {
+                foreach (var selectedNode in GetMultiSelection(multiSelect, solution))
+                {
+                    yield return selectedNode;
+                }
+            }
+            else
+            {
+                yield return GetSingleSelection(hierarchy, itemId, solution);
+            }
+        }
+
+        public static BaseNode GetSingleSelection(IVsHierarchy hierarchy, uint itemId, SolutionNode solution)
+        {
+            if (hierarchy is null)
+            {
+                return solution;
+            }
+            else if (itemId == CommonNodeIds.Root)
+            {
+                return NodeFactory.GetSolutionItemNode(solution, hierarchy, CommonNodeIds.Root);
+            }
+            else
+            {
+                return NodeFactory.GetProjectItemNode(solution, null, hierarchy, itemId);
+                //Unknown ItemTypes
+            }
+        }
+
+        public static IEnumerable<BaseNode> GetMultiSelection(IVsMultiItemSelect multiSelect, SolutionNode solution)
+        {
+            ThreadHelper.ThrowIfNotOnUIThread();
+
+            var result = multiSelect.GetSelectionInfo(out var selectionCount, out _);
 
             ErrorHandler.ThrowOnFailure(result);
 
             var itemSelection = new VSITEMSELECTION[selectionCount];
 
-            result = selection.GetSelectedItems(0u, selectionCount, itemSelection);
+            result = multiSelect.GetSelectedItems(0u, selectionCount, itemSelection);
 
             ErrorHandler.ThrowOnFailure(result);
 
@@ -45,7 +90,7 @@ namespace DulcisX.Core.Models
             {
                 var item = itemSelection[i];
 
-                yield return NodeFactory.GetItemNode(_solution, item.pHier, item.itemid);
+                yield return NodeFactory.GetItemNode(solution, item.pHier, item.itemid);
             }
         }
 

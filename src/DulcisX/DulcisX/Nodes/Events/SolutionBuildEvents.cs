@@ -88,6 +88,7 @@ namespace DulcisX.Nodes.Events
         public override void Dispose()
         {
             ThreadHelper.ThrowIfNotOnUIThread();
+
             var result = _buildManager.UnadviseUpdateSolutionEvents(Cookie);
 
             ErrorHandler.ThrowOnFailure(result);
