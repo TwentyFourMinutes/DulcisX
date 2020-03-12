@@ -607,10 +607,12 @@
     <Reference Include="WindowsFormsIntegration" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Core\ContainerConstructor.cs" />
     <Compile Include="Core\Extensions\ContainerExtensions.cs" />
     <Compile Include="Core\Extensions\EnumExtensions.cs" />
     <Compile Include="Core\Extensions\VsHierarchyExtensions.cs" />
     <Compile Include="Core\Extensions\VsRunningDocumentTableExtensions.cs" />
+    <Compile Include="Core\IContainerConfiguration.cs" />
     <Compile Include="Core\Models\COMContainer.cs" />
     <Compile Include="Core\Models\Enums\CopyToOutputDirectory.cs" />
     <Compile Include="Core\Models\Enums\DocumentProperty.cs" />
@@ -622,6 +624,7 @@
     <Compile Include="Core\Models\IServiceProviders.cs" />
     <Compile Include="Core\Models\PackageUserOptions\SolutionConfigurationOptions.cs" />
     <Compile Include="Core\Models\SelectedNodes.cs" />
+    <Compile Include="Core\PackageConfiguration.cs" />
     <Compile Include="Core\PackageX.cs" />
     <Compile Include="Exceptions\InvalidHierarchyItemException.cs" />
     <Compile Include="Exceptions\NoFlagsAllowedException.cs" />
@@ -650,6 +653,7 @@
     <Compile Include="Nodes\SolutionItemNode.cs" />
     <Compile Include="Nodes\SolutionNode.cs" />
     <Compile Include="Nodes\ProjectNode.cs" />
+    <Compile Include="Nodes\SolutionNodeConfiguration.cs" />
     <Compile Include="Nodes\UnknownNode.cs" />
     <Compile Include="Nodes\VirtualFolderNode.cs" />
     <Compile Include="Nodes\FolderNode.cs" />

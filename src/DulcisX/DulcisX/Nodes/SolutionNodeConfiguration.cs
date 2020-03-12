@@ -7,12 +7,10 @@ namespace DulcisX.Nodes
     {
         public void ConfigureServices(PackageX package, Container container)
         {
-            var solution = package.GetSolution();
-
-            container.RegisterSingleton(() => Events.SolutionEvents.Create(solution));
-            container.RegisterSingleton(() => Events.SolutionBuildEvents.Create(solution));
-            container.RegisterSingleton(() => Events.OpenNodeEvents.Create(solution));
-            container.RegisterSingleton(() => Events.NodeSelectionEvents.Create(solution));
+            container.RegisterSingleton(() => Events.SolutionEvents.Create(package.GetSolution()));
+            container.RegisterSingleton(() => Events.SolutionBuildEvents.Create(package.GetSolution()));
+            container.RegisterSingleton(() => Events.OpenNodeEvents.Create(package.GetSolution()));
+            container.RegisterSingleton(() => Events.NodeSelectionEvents.Create(package.GetSolution()));
         }
     }
 }

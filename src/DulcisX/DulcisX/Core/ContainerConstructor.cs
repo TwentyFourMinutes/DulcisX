@@ -4,7 +4,7 @@ using System.Reflection;
 
 namespace DulcisX.Core
 {
-    internal class ContainerConstructor
+    internal sealed class ContainerConstructor
     {
         private readonly PackageX _package;
 
@@ -18,6 +18,9 @@ namespace DulcisX.Core
 
         internal ContainerConstructor With(Assembly assembly)
         {
+            if (assembly is null)
+                return this;
+
             var configurations = assembly.GetTypes()
                                          .Where(x => x.IsClass && x.GetInterface(nameof(IContainerConfiguration)) != null);
 
@@ -33,6 +36,9 @@ namespace DulcisX.Core
 
         internal ContainerConstructor With(Assembly[] assemblies)
         {
+            if (assemblies is null)
+                return this;
+
             foreach (var assembly in assemblies)
             {
                 With(assembly);
