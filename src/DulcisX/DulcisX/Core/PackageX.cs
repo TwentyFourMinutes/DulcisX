@@ -1,4 +1,4 @@
-﻿using DulcisX.Core.Extensions;
+using DulcisX.Core.Extensions;
 using DulcisX.Core.Models;
 using DulcisX.Nodes;
 using Microsoft.VisualStudio.ComponentModelHost;
@@ -16,6 +16,7 @@ namespace DulcisX.Core
     public abstract class PackageX : AsyncPackage, IServiceProviders
     {
         public event Func<CancellationToken, Task> OnInitializeAsync;
+        public event Action OnDisposing;
 
         public Container ServiceContainer { get; }
 
@@ -102,9 +103,16 @@ namespace DulcisX.Core
 
         protected override void Dispose(bool disposing)
         {
-            ServiceContainer.Dispose();
+            try
+            {
+                OnDisposing?.Invoke();
+            }
+            finally
+            {
+                ServiceContainer.Dispose();
 
-            base.Dispose(disposing);
+                base.Dispose(disposing);
+            }
         }
     }
 }
