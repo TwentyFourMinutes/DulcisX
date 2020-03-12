@@ -36,6 +36,9 @@ namespace DulcisX.Nodes
 
         private INodeSelectionEvents _nodeSelectionEvents;
 
+        public INodeSelectionEvents NodeSelectionEvents
+            => _nodeSelectionEvents ?? (_nodeSelectionEvents = );
+
         #endregion
 
         public SelectedNodes SelectedNodes { get; }

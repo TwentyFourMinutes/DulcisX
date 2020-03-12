@@ -637,8 +637,10 @@
     <Compile Include="Nodes\Events\ISolutionBuildEvents.cs" />
     <Compile Include="Nodes\Events\ISolutionEvents.cs" />
     <Compile Include="Nodes\Events\ISolutionLoadEvents.cs" />
+    <Compile Include="Nodes\Events\INodeSelectionEvents.cs" />
     <Compile Include="Nodes\Events\ProjectNodeChangeEvents.cs" />
     <Compile Include="Nodes\Events\OpenNodeEvents.cs" />
+    <Compile Include="Nodes\Events\NodeSelectionEvents.cs" />
     <Compile Include="Nodes\Events\SolutionBuildEvents.cs" />
     <Compile Include="Nodes\Events\SolutionEvents.cs" />
     <Compile Include="Nodes\INamedNode.cs" />
