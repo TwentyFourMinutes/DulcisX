@@ -1,6 +1,10 @@
 ﻿using System;
+using System.Linq;
 using System.Runtime.InteropServices;
+using System.Threading;
 using DulcisX.Core;
+using DulcisX.Core.Models.Enums;
+using DulcisX.Nodes;
 using Microsoft.VisualStudio;
 using Microsoft.VisualStudio.Shell;
 
@@ -20,9 +24,17 @@ namespace DulcisX.TestVSIX
             OnInitializeAsync += DulcisXTestVSIXPackage_OnInitializeAsync;
         }
 
-        private async System.Threading.Tasks.Task DulcisXTestVSIXPackage_OnInitializeAsync(System.Threading.CancellationToken arg)
+        private async System.Threading.Tasks.Task DulcisXTestVSIXPackage_OnInitializeAsync(CancellationToken arg, IProgress<ServiceProgressData> progress)
         {
             await JoinableTaskFactory.SwitchToMainThreadAsync(arg);
+
+            GetSolution().OpenNodeEvents.OnSave.Hook(NodeTypes.Document, Saved);
+        }
+
+        private void Saved(BaseNode node)
+        {
+            var test1 = GetSolution().GetChildren().ToList();
+            var test2 = GetSolution().GetAllProjects().ToList();
         }
 
         #endregion

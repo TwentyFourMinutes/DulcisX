@@ -1,7 +1,6 @@
-using DulcisX.Core.Extensions;
+﻿using DulcisX.Core.Extensions;
 using DulcisX.Core.Models;
 using DulcisX.Nodes;
-using Microsoft.VisualStudio.ComponentModelHost;
 using Microsoft.VisualStudio.Shell;
 using Microsoft.VisualStudio.Shell.Interop;
 using SimpleInjector;
@@ -15,12 +14,12 @@ namespace DulcisX.Core
 {
     public abstract class PackageX : AsyncPackage, IServiceProviders
     {
-        public event Func<CancellationToken, Task> OnInitializeAsync;
+        public event Func<CancellationToken, IProgress<ServiceProgressData>, Task> OnInitializeAsync;
         public event Action OnDisposing;
 
         public Container ServiceContainer { get; }
 
-        private readonly Action<Container> _consumerServices;
+        private readonly Assembly[] _containerConfigurationAssemblies;
 
         #region Constructors
 
@@ -29,9 +28,9 @@ namespace DulcisX.Core
             ServiceContainer = new Container();
         }
 
-        protected PackageX(Action<Container> configuration) : this()
+        protected PackageX(params Assembly[] containerConfigurationAssemblies) : base()
         {
-            _consumerServices = configuration;
+            _containerConfigurationAssemblies = containerConfigurationAssemblies;
         }
 
         static PackageX()
@@ -43,32 +42,18 @@ namespace DulcisX.Core
 
         protected override async Task InitializeAsync(CancellationToken cancellationToken, IProgress<ServiceProgressData> progress)
         {
-            AddDefaultServices(ServiceContainer);
-
-            _consumerServices?.Invoke(ServiceContainer);
-
-            await OnInitializeAsync?.Invoke(cancellationToken);
-
-            await base.InitializeAsync(cancellationToken, progress).ConfigureAwait(false);
-        }
-
-        private void AddDefaultServices(Container container)
-        {
-            container.RegisterSingleton(() => this.GetService<SComponentModel, IComponentModel>());
-
-            container.RegisterSingleton(() =>
+            try
             {
-                var componentModel = container.GetInstance<IComponentModel>();
+                ContainerConstructor.Construct(this)
+                                    .With(Assembly.GetExecutingAssembly())
+                                    .With(_containerConfigurationAssemblies);
 
-                return componentModel.GetService<IVsHierarchyItemManager>();
-            });
-
-            container.RegisterCOMInstance<SVsSolution, IVsSolution>(this);
-            container.RegisterCOMInstance<SVsSolutionPersistence, IVsSolutionPersistence>(this);
-            container.RegisterCOMInstance<SVsSolutionBuildManager, IVsSolutionBuildManager>(this);
-            container.RegisterCOMInstance<SVsRunningDocumentTable, IVsRunningDocumentTable>(this);
-            container.RegisterCOMInstance<SVsTrackProjectDocuments, IVsTrackProjectDocuments2>(this);
-            container.RegisterCOMInstance<SVsShellMonitorSelection, IVsMonitorSelection>(this);
+                await OnInitializeAsync?.Invoke(cancellationToken, progress);
+            }
+            finally
+            {
+                await base.InitializeAsync(cancellationToken, progress).ConfigureAwait(false);
+            }
         }
 
         #region Services

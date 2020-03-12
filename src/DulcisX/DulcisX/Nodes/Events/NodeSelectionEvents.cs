@@ -6,9 +6,6 @@ using Microsoft.VisualStudio.Shell;
 using Microsoft.VisualStudio.Shell.Interop;
 using System;
 using System.Collections.Generic;
-using System.Runtime.InteropServices.ComTypes;
-using Constants = Microsoft.VisualStudio.Shell.Interop.Constants;
-using ITypeInfo = System.Runtime.InteropServices.ComTypes.ITypeInfo;
 
 namespace DulcisX.Nodes.Events
 {

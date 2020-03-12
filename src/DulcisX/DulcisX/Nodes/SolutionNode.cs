@@ -57,16 +57,6 @@ namespace DulcisX.Nodes
 
             UnderlyingSolution = solution;
             ServiceContainer = container;
-
-            ConfigureServices();
-        }
-
-        private void ConfigureServices()
-        {
-            ServiceContainer.RegisterSingleton(() => Events.SolutionEvents.Create(this));
-            ServiceContainer.RegisterSingleton(() => Events.SolutionBuildEvents.Create(this));
-            ServiceContainer.RegisterSingleton(() => Events.OpenNodeEvents.Create(this));
-            ServiceContainer.RegisterSingleton(() => Events.NodeSelectionEvents.Create(this));
         }
 
         public string GetFullName()
