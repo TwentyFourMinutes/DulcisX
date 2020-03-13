@@ -80,7 +80,7 @@ namespace DulcisX.Nodes
         {
             var node = HierarchyUtilities.GetFirstChild(UnderlyingHierarchy, ItemId, true);
 
-            while (VsHelper.IsItemIdNil(node))
+            while (!VsHelper.IsItemIdNil(node))
             {
                 if (UnderlyingHierarchy.TryGetNestedHierarchy(node, out var nestedHierarchy))
                 {

@@ -60,7 +60,7 @@ namespace DulcisX.Nodes
         {
             var node = HierarchyUtilities.GetFirstChild(UnderlyingHierarchy, ItemId, true);
 
-            while (VsHelper.IsItemIdNil(node))
+            while (!VsHelper.IsItemIdNil(node))
             {
                 yield return NodeFactory.GetProjectItemNode(ParentSolution, ParentProject, UnderlyingHierarchy, node);
 

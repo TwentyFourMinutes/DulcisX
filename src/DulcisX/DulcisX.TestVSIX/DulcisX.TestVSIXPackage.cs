@@ -34,6 +34,9 @@ namespace DulcisX.TestVSIX
         private void Saved(BaseNode node)
         {
             var test1 = GetSolution().GetChildren().ToList();
+
+            var test = test1.Select(x => x.GetChildren()).ToList();
+
             var test2 = GetSolution().GetAllProjects().ToList();
         }
 
