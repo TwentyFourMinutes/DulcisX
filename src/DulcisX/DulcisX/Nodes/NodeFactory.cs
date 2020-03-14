@@ -13,98 +13,112 @@ namespace DulcisX.Nodes
         {
             ThreadHelper.ThrowIfNotOnUIThread();
 
-            var node = GetProjectItemNode(solution, null, hierarchy, itemId);
+            var hierarchyIdentity = GetHierarchyIdentity(solution, hierarchy, itemId);
+
+            var node = GetProjectItemNode(solution, null, hierarchy, itemId, hierarchyIdentity);
 
             if (node is UnknownNode)
             {
-                node = GetSolutionItemNode(solution, hierarchy, itemId);
+                node = GetSolutionItemNode(solution, hierarchy, itemId, hierarchyIdentity);
             }
 
             return node;
         }
 
-        internal static BaseNode GetSolutionItemNode(SolutionNode solution, IVsHierarchy hierarchy, uint itemId)
+        internal static BaseNode GetSolutionItemNode(SolutionNode solution, IVsHierarchy hierarchy, uint itemId, IVsHierarchyItemIdentity hierarchyIdentity = null)
         {
             ThreadHelper.ThrowIfNotOnUIThread();
 
-            var manager = solution.ServiceContainer.GetInstance<IVsHierarchyItemManager>();
+            hierarchyIdentity = hierarchyIdentity ?? GetHierarchyIdentity(solution, hierarchy, itemId);
 
-            var hierarchyItem = manager.GetHierarchyItem(hierarchy, itemId);
+            var project = GetProject(solution, null, hierarchy, hierarchyIdentity);
 
-            if (ExtendedHierarchyUtilities.IsRealProject(hierarchy) ||
-                HierarchyUtilities.IsFaultedProject(hierarchyItem.HierarchyIdentity) ||
-                HierarchyUtilities.IsStubHierarchy(hierarchy))
+            if (project is null)
             {
-                return new ProjectNode(solution, hierarchy);
+                if (HierarchyUtilities.IsSolutionFolder(hierarchyIdentity))
+                {
+                    return new VirtualFolderNode(solution, hierarchy);
+                }
+                else if (HierarchyUtilities.IsSolutionNode(hierarchy, itemId))
+                {
+                    return solution;
+                }
             }
-            else if (ExtendedHierarchyUtilities.IsSolutionItemsProject(hierarchy))
+            else
             {
-                return new ProjectNode(solution, hierarchy, NodeTypes.SolutionItemsProject);
-            }
-            else if (HierarchyUtilities.IsVirtualProject(hierarchyItem.HierarchyIdentity))
-            {
-                return new ProjectNode(solution, hierarchy, NodeTypes.VirtualProject);
-            }
-            else if (HierarchyUtilities.IsSolutionFolder(hierarchyItem.HierarchyIdentity))
-            {
-                return new VirtualFolderNode(solution, hierarchy);
-            }
-            else if (HierarchyUtilities.IsSolutionNode(hierarchyItem.HierarchyIdentity))
-            {
-                return solution;
+                return project;
             }
 
             return new UnknownNode(solution, hierarchy, itemId);
         }
 
-        internal static BaseNode GetProjectItemNode(SolutionNode solution, ProjectNode project, IVsHierarchy hierarchy, uint itemId)
+        internal static BaseNode GetProjectItemNode(SolutionNode solution, ProjectNode parentProject, IVsHierarchy hierarchy, uint itemId, IVsHierarchyItemIdentity hierarchyIdentity = null)
         {
             ThreadHelper.ThrowIfNotOnUIThread();
 
-            var manager = solution.ServiceContainer.GetInstance<IVsHierarchyItemManager>();
-
-            var hierarchyItem = manager.GetHierarchyItem(hierarchy, itemId);
+            hierarchyIdentity = hierarchyIdentity ?? GetHierarchyIdentity(solution, hierarchy, itemId);
 
             if (itemId == CommonNodeIds.Root)
             {
-                if (ExtendedHierarchyUtilities.IsRealProject(hierarchy) ||
-                    HierarchyUtilities.IsFaultedProject(hierarchyItem.HierarchyIdentity) ||
-                    HierarchyUtilities.IsStubHierarchy(hierarchy))
+                var project = GetProject(solution, parentProject, hierarchy, hierarchyIdentity);
+
+                if (project is object)
                 {
-                    return project ?? new ProjectNode(solution, hierarchy);
-                }
-                else if (HierarchyUtilities.IsVirtualProject(hierarchyItem.HierarchyIdentity))
-                {
-                    return project ?? new ProjectNode(solution, hierarchy, NodeTypes.VirtualProject);
-                }
-                else if (ExtendedHierarchyUtilities.IsMiscellaneousFilesProject(hierarchy))
-                {
-                    return project ?? new ProjectNode(solution, hierarchy, NodeTypes.MiscellaneousFilesProject);
-                }
-                else if (ExtendedHierarchyUtilities.IsSolutionItemsProject(hierarchy))
-                {
-                    return project ?? new ProjectNode(solution, hierarchy, NodeTypes.SolutionItemsProject);
+                    return project;
                 }
             }
             else
             {
-                if (HierarchyUtilities.IsPhysicalFolder(hierarchyItem.HierarchyIdentity))
+                if (HierarchyUtilities.IsPhysicalFolder(hierarchyIdentity))
                 {
-                    if(project is null)
+                    if (parentProject is null)
                         return new FolderNode(solution, hierarchy, itemId);
                     else
-                        return new FolderNode(solution, project, itemId);
+                        return new FolderNode(solution, parentProject, itemId);
                 }
-                else if (HierarchyUtilities.IsPhysicalFile(hierarchyItem.HierarchyIdentity))
+                else if (HierarchyUtilities.IsPhysicalFile(hierarchyIdentity))
                 {
-                    if (project is null)
+                    if (parentProject is null)
                         return new DocumentNode(solution, hierarchy, itemId);
                     else
-                        return new DocumentNode(solution, project, itemId);
+                        return new DocumentNode(solution, parentProject, itemId);
                 }
             }
 
             return new UnknownNode(solution, hierarchy, itemId);
+        }
+
+        private static ProjectNode GetProject(SolutionNode solution, ProjectNode parentProject, IVsHierarchy hierarchy, IVsHierarchyItemIdentity hierarchyIdentity)
+        {
+            if (parentProject is object)
+                return parentProject;
+
+            if (ExtendedHierarchyUtilities.IsRealProject(hierarchy) ||
+                    HierarchyUtilities.IsFaultedProject(hierarchyIdentity))
+            {
+                return new ProjectNode(solution, hierarchy);
+            }
+            else if (HierarchyUtilities.IsVirtualProject(hierarchyIdentity))
+            {
+                return new ProjectNode(solution, hierarchy, NodeTypes.VirtualProject);
+            }
+            else if (ExtendedHierarchyUtilities.IsMiscellaneousFilesProject(hierarchy))
+            {
+                return new ProjectNode(solution, hierarchy, NodeTypes.MiscellaneousFilesProject);
+            }
+            else if (ExtendedHierarchyUtilities.IsSolutionItemsProject(hierarchy))
+            {
+                return new ProjectNode(solution, hierarchy, NodeTypes.SolutionItemsProject);
+            }
+
+            return null;
+        }
+
+        private static IVsHierarchyItemIdentity GetHierarchyIdentity(SolutionNode solution, IVsHierarchy hierarchy, uint itemId)
+        {
+            var manager = solution.ServiceContainer.GetInstance<IVsHierarchyItemManager>();
+
+            return manager.GetHierarchyItem(hierarchy, itemId).HierarchyIdentity;
         }
     }
 }

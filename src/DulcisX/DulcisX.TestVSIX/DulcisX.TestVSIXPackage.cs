@@ -38,6 +38,10 @@ namespace DulcisX.TestVSIX
             var parentProject = node.GetParentProject();
 
             var displayName = parentProject.GetDisplayName();
+
+            var projects = GetSolution().GetAllProjects();
+
+            var children = GetSolution().GetChildren();
         }
 
         #endregion
