@@ -38,6 +38,7 @@ namespace DulcisX.Nodes
             ThreadHelper.ThrowIfNotOnUIThread();
 
             var result = UnderlyingHierarchy.SetProperty(ItemId, (int)__VSHPROPID4.VSHPROPID_BuildAction, buildAction);
+
             ErrorHandler.ThrowOnFailure(result);
         }
 

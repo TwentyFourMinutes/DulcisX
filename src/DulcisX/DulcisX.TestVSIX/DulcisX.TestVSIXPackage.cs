@@ -5,6 +5,7 @@ using System.Threading;
 using DulcisX.Core;
 using DulcisX.Core.Models.Enums;
 using DulcisX.Nodes;
+using Microsoft.Internal.VisualStudio.Shell;
 using Microsoft.VisualStudio;
 using Microsoft.VisualStudio.Shell;
 
@@ -33,15 +34,17 @@ namespace DulcisX.TestVSIX
 
         private void Saved(IPhysicalNode savedNode)
         {
-            var node = (DocumentNode)savedNode;
+            var solution = GetSolution();
 
-            var parentProject = node.GetParentProject();
+            var name = solution.GetDisplayName();
 
-            var displayName = parentProject.GetDisplayName();
+            var name2 = savedNode.GetDisplayName();
 
-            var projects = GetSolution().GetAllProjects();
+            var parent = savedNode.GetParent();
 
-            var children = GetSolution().GetChildren();
+            var parentproject = ((DocumentNode)savedNode).GetParentProject();
+
+            var projects = solution.GetAllProjects();
         }
 
         #endregion
