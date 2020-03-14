@@ -1,6 +1,6 @@
 ﻿using StringyEnums;
 
-namespace DulcisX.Core.Models.Enums
+namespace DulcisX.Core.Enums
 {
     public enum CopyToOutputDirectory
     {

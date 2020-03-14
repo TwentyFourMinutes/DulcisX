@@ -1,6 +1,6 @@
 ﻿using DulcisX.Core.Extensions;
-using DulcisX.Core.Models.Enums;
-using DulcisX.Core.Models.Enums.VisualStudio;
+using DulcisX.Core.Enums;
+using DulcisX.Core.Enums.VisualStudio;
 using Microsoft.VisualStudio.Shell.Interop;
 using System;
 using System.Collections.Generic;

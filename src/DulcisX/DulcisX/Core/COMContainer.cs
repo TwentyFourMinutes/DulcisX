@@ -1,4 +1,4 @@
-﻿namespace DulcisX.Core.Models
+﻿namespace DulcisX.Core
 {
     public class COMContainer<TComType>
     {

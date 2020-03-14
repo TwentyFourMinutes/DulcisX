@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace DulcisX.Core.Models.Enums
+namespace DulcisX.Core.Enums
 {
     [Flags]
     public enum NodeTypes

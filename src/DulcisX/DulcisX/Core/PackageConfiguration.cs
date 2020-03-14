@@ -32,6 +32,7 @@ namespace DulcisX.Core
             container.RegisterCOMInstance<SVsRunningDocumentTable, IVsRunningDocumentTable>(package);
             container.RegisterCOMInstance<SVsTrackProjectDocuments, IVsTrackProjectDocuments2>(package);
             container.RegisterCOMInstance<SVsShellMonitorSelection, IVsMonitorSelection>(package);
+            container.RegisterCOMInstance<SVsStatusbar, IVsStatusbar>(package);
         }
     }
 }

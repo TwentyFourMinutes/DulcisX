@@ -1,4 +1,4 @@
-﻿namespace DulcisX.Core.Models.Enums
+﻿namespace DulcisX.Core.Enums
 {
     public enum StartupOptions
     {

@@ -1,4 +1,4 @@
-﻿using DulcisX.Core.Models.Enums;
+﻿using DulcisX.Core.Enums;
 using Microsoft.VisualStudio.Shell;
 using Microsoft.VisualStudio.Shell.Interop;
 using System.Collections.Generic;

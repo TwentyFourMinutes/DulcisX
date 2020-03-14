@@ -1,4 +1,4 @@
-﻿namespace DulcisX.Core.Models.Enums.VisualStudio
+﻿namespace DulcisX.Core.Enums.VisualStudio
 {
     /// <summary>
     /// https://docs.microsoft.com/en-us/dotnet/api/microsoft.visualstudio.shell.interop.__vsrdtattrib?view=visualstudiosdk-2017

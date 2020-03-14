@@ -1,4 +1,4 @@
-﻿using DulcisX.Core.Models.Enums;
+﻿using DulcisX.Core.Enums;
 
 namespace DulcisX.Core.Extensions
 {

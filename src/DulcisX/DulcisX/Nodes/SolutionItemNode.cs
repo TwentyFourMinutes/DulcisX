@@ -1,6 +1,5 @@
-﻿using DulcisX.Core.Attributes;
-using DulcisX.Core.Extensions;
-using DulcisX.Core.Models.Enums.VisualStudio;
+﻿using DulcisX.Core.Extensions;
+using DulcisX.Core.Enums.VisualStudio;
 using DulcisX.Helpers;
 using Microsoft.Internal.VisualStudio.PlatformUI;
 using Microsoft.VisualStudio.Shell;

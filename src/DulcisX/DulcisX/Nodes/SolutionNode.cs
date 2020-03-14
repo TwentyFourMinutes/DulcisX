@@ -1,8 +1,6 @@
 using DulcisX.Core.Extensions;
-using DulcisX.Core.Models;
-using DulcisX.Core.Models.Enums;
-using DulcisX.Core.Models.Enums.VisualStudio;
-using DulcisX.Core.Models.PackageUserOptions;
+using DulcisX.Core.Enums;
+using DulcisX.Core.Enums.VisualStudio;
 using DulcisX.Nodes.Events;
 using Microsoft.VisualStudio;
 using Microsoft.VisualStudio.PlatformUI;
@@ -11,6 +9,7 @@ using Microsoft.VisualStudio.Shell.Interop;
 using SimpleInjector;
 using System;
 using System.Collections.Generic;
+using DulcisX.Core;
 
 namespace DulcisX.Nodes
 {

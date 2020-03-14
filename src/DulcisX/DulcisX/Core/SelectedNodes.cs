@@ -5,10 +5,10 @@ using Microsoft.VisualStudio.Shell;
 using Microsoft.VisualStudio;
 using DulcisX.Nodes;
 using DulcisX.Core.Extensions;
-using DulcisX.Core.Models.Enums.VisualStudio;
+using DulcisX.Core.Enums.VisualStudio;
 using System.Runtime.InteropServices;
 
-namespace DulcisX.Core.Models
+namespace DulcisX.Core
 {
     public class SelectedNodes : IEnumerable<BaseNode>
     {

@@ -1,10 +1,8 @@
 using System;
-using System.Linq;
-using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using System.Threading;
 using DulcisX.Core;
-using DulcisX.Core.Models.Enums;
+using DulcisX.Core.Enums;
 using DulcisX.Nodes;
 using Microsoft.VisualStudio;
 using Microsoft.VisualStudio.Shell;

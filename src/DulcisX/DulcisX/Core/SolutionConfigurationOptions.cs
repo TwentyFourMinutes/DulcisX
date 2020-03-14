@@ -1,4 +1,4 @@
-﻿using DulcisX.Core.Models.Enums;
+﻿using DulcisX.Core.Enums;
 using Microsoft.Internal.VisualStudio.Shell;
 using Microsoft.VisualStudio;
 using Microsoft.VisualStudio.OLE.Interop;
@@ -7,7 +7,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace DulcisX.Core.Models.PackageUserOptions
+namespace DulcisX.Core
 {
     internal class SolutionConfigurationOptions : IVsPersistSolutionOpts
     {

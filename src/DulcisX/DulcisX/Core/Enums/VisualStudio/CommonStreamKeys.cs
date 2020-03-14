@@ -1,4 +1,4 @@
-﻿namespace DulcisX.Core.Models.Enums.VisualStudio
+﻿namespace DulcisX.Core.Enums.VisualStudio
 {
     public static class CommonStreamKeys
     {
