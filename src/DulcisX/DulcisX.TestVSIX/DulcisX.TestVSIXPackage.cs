@@ -1,5 +1,6 @@
 using System;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using System.Threading;
 using DulcisX.Core;
@@ -37,11 +38,19 @@ namespace DulcisX.TestVSIX
 
             var test = await solution.GetAllChildrenAsync();
 
-            var test2 = test.ToList();
-
-            var test3 = test2.Select(x => x.GetDisplayName()).ToList();
         }
 
         #endregion
+    }
+
+    [AttributeUsage(AttributeTargets.Method | AttributeTargets.Property | AttributeTargets.Event, Inherited = false, AllowMultiple = false)]
+    public sealed class NotImplementedAttribute : Attribute
+    {
+        public string Reason { get; }
+
+        public NotImplementedAttribute(string reason)
+        {
+            Reason = reason;
+        }
     }
 }

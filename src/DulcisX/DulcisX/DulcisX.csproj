@@ -607,6 +607,7 @@
     <Reference Include="WindowsFormsIntegration" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Core\Attributes\NotImplementedAttribute.cs" />
     <Compile Include="Core\ContainerConstructor.cs" />
     <Compile Include="Core\Extensions\ContainerExtensions.cs" />
     <Compile Include="Core\Extensions\EnumExtensions.cs" />
