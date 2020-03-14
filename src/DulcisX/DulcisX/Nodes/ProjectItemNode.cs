@@ -31,7 +31,12 @@ namespace DulcisX.Nodes
                 return ParentProject;
             }
 
-            return new ProjectNode(ParentSolution, UnderlyingHierarchy);
+            var parentProject = NodeFactory.GetSolutionItemNode(ParentSolution, UnderlyingHierarchy, CommonNodeIds.Project);
+
+            if (!(parentProject is ProjectNode))
+                return null;
+
+            return (ProjectNode)parentProject;
         }
 
         public override BaseNode GetParent()

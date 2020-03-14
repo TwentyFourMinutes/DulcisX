@@ -31,13 +31,13 @@ namespace DulcisX.TestVSIX
             GetSolution().OpenNodeEvents.OnSave.Hook(NodeTypes.Document, Saved);
         }
 
-        private void Saved(BaseNode node)
+        private void Saved(IPhysicalNode savedNode)
         {
-            var test1 = GetSolution().GetChildren().ToList();
+            var node = (DocumentNode)savedNode;
 
-            var test = test1.Select(x => x.GetChildren()).ToList();
+            var parentProject = node.GetParentProject();
 
-            var test2 = GetSolution().GetAllProjects().ToList();
+            var displayName = parentProject.GetDisplayName();
         }
 
         #endregion
