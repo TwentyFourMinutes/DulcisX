@@ -34,6 +34,21 @@ namespace DulcisX.Core
             }
         }
 
+        private IVsStatusbar _statusBar;
+
+        public IVsStatusbar StatusBar
+        {
+            get
+            {
+                if (_statusBar is null)
+                {
+                    _statusBar = ServiceContainer.GetCOMInstance<IVsStatusbar>();
+                }
+
+                return _statusBar;
+            }
+        }
+
         public Container ServiceContainer { get; }
 
         private readonly Assembly[] _containerConfigurationAssemblies;

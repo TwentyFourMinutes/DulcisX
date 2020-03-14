@@ -30,7 +30,7 @@ namespace DulcisX.TestVSIX
             Solution.OpenNodeEvents.OnSave.Hook(NodeTypes.Document, Saved);
         }
 
-        private async void Saved(IPhysicalNode savedNode)
+        private void Saved(IPhysicalNode savedNode)
         {
 
 
