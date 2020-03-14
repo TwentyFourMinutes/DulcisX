@@ -17,6 +17,23 @@ namespace DulcisX.Core
         public event Func<CancellationToken, IProgress<ServiceProgressData>, Task> OnInitializeAsync;
         public event Action OnDisposing;
 
+        private SolutionNode _solution;
+
+        public SolutionNode Solution
+        {
+            get
+            {
+                if (_solution is null)
+                {
+                    var solution = ServiceContainer.GetCOMInstance<IVsSolution>();
+
+                    _solution = new SolutionNode(solution, ServiceContainer);
+                }
+
+                return _solution;
+            }
+        }
+
         public Container ServiceContainer { get; }
 
         private readonly Assembly[] _containerConfigurationAssemblies;
@@ -69,22 +86,6 @@ namespace DulcisX.Core
             => (IServiceProviders)this;
 
         #endregion
-
-        private SolutionNode _solutionNode;
-
-        public SolutionNode GetSolution()
-        {
-            if (_solutionNode is object)
-            {
-                return _solutionNode;
-            }
-
-            var solution = ServiceContainer.GetCOMInstance<IVsSolution>();
-
-            _solutionNode = new SolutionNode(solution, ServiceContainer);
-
-            return _solutionNode;
-        }
 
         protected override void Dispose(bool disposing)
         {
