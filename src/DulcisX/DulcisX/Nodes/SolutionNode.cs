@@ -203,5 +203,14 @@ namespace DulcisX.Nodes
 
             return Unbox.AsBoolean(isLoaded);
         }
+
+        public bool IsTempSolution()
+        {
+            ThreadHelper.ThrowIfNotOnUIThread();
+
+            var result = UnderlyingSolution.GetProperty((int)__VSPROPID.VSPROPID_SolutionFileName, out _);
+
+            return result == VSConstants.E_UNEXPECTED;
+        }
     }
 }
