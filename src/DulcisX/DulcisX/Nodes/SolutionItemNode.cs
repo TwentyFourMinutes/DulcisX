@@ -2,8 +2,13 @@
 using DulcisX.Core.Models.Enums.VisualStudio;
 using DulcisX.Helpers;
 using Microsoft.Internal.VisualStudio.PlatformUI;
+using Microsoft.VisualStudio.Shell;
 using Microsoft.VisualStudio.Shell.Interop;
+using System;
 using System.Collections.Generic;
+using System.Linq;
+using System.Threading;
+using System.Threading.Tasks;
 
 namespace DulcisX.Nodes
 {
@@ -37,6 +42,29 @@ namespace DulcisX.Nodes
 
                 node = HierarchyUtilities.GetNextSibling(UnderlyingHierarchy, node, true);
             }
+        }
+
+        public async Task<IEnumerable<BaseNode>> GetAllChildrenAsync(CancellationToken ct = default)
+        {
+            var collectionProvider = ParentSolution.ServiceContainer.GetInstance<IVsHierarchyItemCollectionProvider>();
+
+            return (await collectionProvider.GetDescendantsAsync(UnderlyingHierarchy, ct).ConfigureAwait(false))
+                                            .Select(hierarchyItem => NodeFactory.GetItemNode(ParentSolution, hierarchyItem));
+        }
+
+        public async Task<IEnumerable<BaseNode>> GetAllChildrenAsync(Predicate<BaseNode> predicate, CancellationToken ct = default)
+        {
+            var collectionProvider = ParentSolution.ServiceContainer.GetInstance<IVsHierarchyItemCollectionProvider>();
+
+            var hierarchyItems = await collectionProvider.GetDescendantsAsync(UnderlyingHierarchy, ct).ConfigureAwait(false);
+
+            var filteredItems = await collectionProvider.GetFilteredHierarchyItemsAsync(hierarchyItems, hierarchyItem => predicate(NodeFactory.GetItemNode(ParentSolution, hierarchyItem)), ct).ConfigureAwait(false);
+
+            var filteredNodes = filteredItems.Select(hierarchyItem => NodeFactory.GetItemNode(ParentSolution, hierarchyItem));
+
+            filteredItems.Dispose();
+
+            return filteredNodes;
         }
     }
 }

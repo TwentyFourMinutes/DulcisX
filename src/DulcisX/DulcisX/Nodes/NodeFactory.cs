@@ -9,6 +9,9 @@ namespace DulcisX.Nodes
 {
     internal static class NodeFactory
     {
+        internal static BaseNode GetItemNode(SolutionNode solution, IVsHierarchyItem hierarchyItem)
+            => GetItemNode(solution, hierarchyItem.HierarchyIdentity.Hierarchy, hierarchyItem.HierarchyIdentity.ItemID);
+
         internal static BaseNode GetItemNode(SolutionNode solution, IVsHierarchy hierarchy, uint itemId)
         {
             ThreadHelper.ThrowIfNotOnUIThread();

@@ -19,6 +19,13 @@ namespace DulcisX.Core
                 return componentModel.GetService<IVsHierarchyItemManager>();
             });
 
+            container.RegisterSingleton(() =>
+            {
+                var componentModel = container.GetInstance<IComponentModel>();
+
+                return componentModel.GetService<IVsHierarchyItemCollectionProvider>();
+            });
+
             container.RegisterCOMInstance<SVsSolution, IVsSolution>(package);
             container.RegisterCOMInstance<SVsSolutionPersistence, IVsSolutionPersistence>(package);
             container.RegisterCOMInstance<SVsSolutionBuildManager, IVsSolutionBuildManager>(package);

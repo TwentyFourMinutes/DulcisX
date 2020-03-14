@@ -3,9 +3,7 @@ using DulcisX.Core.Models;
 using DulcisX.Core.Models.Enums;
 using DulcisX.Core.Models.Enums.VisualStudio;
 using DulcisX.Core.Models.PackageUserOptions;
-using DulcisX.Helpers;
 using DulcisX.Nodes.Events;
-using Microsoft.Internal.VisualStudio.PlatformUI;
 using Microsoft.VisualStudio;
 using Microsoft.VisualStudio.PlatformUI;
 using Microsoft.VisualStudio.Shell;
@@ -16,7 +14,7 @@ using System.Collections.Generic;
 
 namespace DulcisX.Nodes
 {
-    public class SolutionNode : BaseNode, IPhysicalNode
+    public class SolutionNode : SolutionItemNode, IPhysicalNode
     {
         #region Events
 
@@ -76,21 +74,6 @@ namespace DulcisX.Nodes
 
         public override BaseNode GetParent(NodeTypes nodeType)
             => null;
-
-        public override IEnumerable<BaseNode> GetChildren()
-        {
-            var node = HierarchyUtilities.GetFirstChild(UnderlyingHierarchy, ItemId, true);
-
-            while (!VsHelper.IsItemIdNil(node))
-            {
-                if (UnderlyingHierarchy.TryGetNestedHierarchy(node, out var nestedHierarchy))
-                {
-                    yield return NodeFactory.GetSolutionItemNode(ParentSolution, nestedHierarchy, CommonNodeIds.Root);
-                }
-
-                node = HierarchyUtilities.GetNextSibling(UnderlyingHierarchy, node, true);
-            }
-        }
 
         #region Project
 

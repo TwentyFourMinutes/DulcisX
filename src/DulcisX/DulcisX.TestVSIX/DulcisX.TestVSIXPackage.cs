@@ -5,7 +5,6 @@ using System.Threading;
 using DulcisX.Core;
 using DulcisX.Core.Models.Enums;
 using DulcisX.Nodes;
-using Microsoft.Internal.VisualStudio.Shell;
 using Microsoft.VisualStudio;
 using Microsoft.VisualStudio.Shell;
 
@@ -32,11 +31,15 @@ namespace DulcisX.TestVSIX
             GetSolution().OpenNodeEvents.OnSave.Hook(NodeTypes.Document, Saved);
         }
 
-        private void Saved(IPhysicalNode savedNode)
+        private async void Saved(IPhysicalNode savedNode)
         {
             var solution = GetSolution();
 
-            var test = solution.GetFullName();
+            var test = await solution.GetAllChildrenAsync();
+
+            var test2 = test.ToList();
+
+            var test3 = test2.Select(x => x.GetDisplayName()).ToList();
         }
 
         #endregion
