@@ -12,41 +12,41 @@ namespace DulcisX.Nodes.Events
     {
         #region Events
 
-        private EventDistributor<Action<BaseNode, _VSRDTFLAGS, uint, uint>> _onNodeLocked;
-        public EventDistributor<Action<BaseNode, _VSRDTFLAGS, uint, uint>> OnNodeLocked
-            => _onNodeLocked ?? (_onNodeLocked = new EventDistributor<Action<BaseNode, _VSRDTFLAGS, uint, uint>>());
+        private EventDistributor<Action<IPhysicalNode, _VSRDTFLAGS, uint, uint>> _onNodeLocked;
+        public EventDistributor<Action<IPhysicalNode, _VSRDTFLAGS, uint, uint>> OnNodeLocked
+            => _onNodeLocked ?? (_onNodeLocked = new EventDistributor<Action<IPhysicalNode, _VSRDTFLAGS, uint, uint>>());
 
-        private EventDistributor<Action<BaseNode, _VSRDTFLAGS, uint, uint>> _onNodeUnlocked;
-        public EventDistributor<Action<BaseNode, _VSRDTFLAGS, uint, uint>> OnNodeUnlocked
-            => _onNodeUnlocked ?? (_onNodeUnlocked = new EventDistributor<Action<BaseNode, _VSRDTFLAGS, uint, uint>>());
+        private EventDistributor<Action<IPhysicalNode, _VSRDTFLAGS, uint, uint>> _onNodeUnlocked;
+        public EventDistributor<Action<IPhysicalNode, _VSRDTFLAGS, uint, uint>> OnNodeUnlocked
+            => _onNodeUnlocked ?? (_onNodeUnlocked = new EventDistributor<Action<IPhysicalNode, _VSRDTFLAGS, uint, uint>>());
 
-        private EventDistributor<Action<BaseNode>> _onSaved;
-        public EventDistributor<Action<BaseNode>> OnSaved
-            => _onSaved ?? (_onSaved = new EventDistributor<Action<BaseNode>>());
+        private EventDistributor<Action<IPhysicalNode>> _onSaved;
+        public EventDistributor<Action<IPhysicalNode>> OnSaved
+            => _onSaved ?? (_onSaved = new EventDistributor<Action<IPhysicalNode>>());
 
-        private EventDistributor<Action<BaseNode, bool, IVsWindowFrame>> _onNodeWindowShow;
-        public EventDistributor<Action<BaseNode, bool, IVsWindowFrame>> OnNodeWindowShow
-            => _onNodeWindowShow ?? (_onNodeWindowShow = new EventDistributor<Action<BaseNode, bool, IVsWindowFrame>>());
+        private EventDistributor<Action<IPhysicalNode, bool, IVsWindowFrame>> _onNodeWindowShow;
+        public EventDistributor<Action<IPhysicalNode, bool, IVsWindowFrame>> OnNodeWindowShow
+            => _onNodeWindowShow ?? (_onNodeWindowShow = new EventDistributor<Action<IPhysicalNode, bool, IVsWindowFrame>>());
 
-        private EventDistributor<Action<BaseNode, IVsWindowFrame>> _onNodeWindowHidden;
-        public EventDistributor<Action<BaseNode, IVsWindowFrame>> OnNodeWindowHidden
-            => _onNodeWindowHidden ?? (_onNodeWindowHidden = new EventDistributor<Action<BaseNode, IVsWindowFrame>>());
+        private EventDistributor<Action<IPhysicalNode, IVsWindowFrame>> _onNodeWindowHidden;
+        public EventDistributor<Action<IPhysicalNode, IVsWindowFrame>> OnNodeWindowHidden
+            => _onNodeWindowHidden ?? (_onNodeWindowHidden = new EventDistributor<Action<IPhysicalNode, IVsWindowFrame>>());
 
-        private EventDistributor<Action<BaseNode, VsRDTAttribute>> _onAttributeChanged;
-        public EventDistributor<Action<BaseNode, VsRDTAttribute>> OnAttributeChanged
-            => _onAttributeChanged ?? (_onAttributeChanged = new EventDistributor<Action<BaseNode, VsRDTAttribute>>());
+        private EventDistributor<Action<IPhysicalNode, VsRDTAttribute>> _onAttributeChanged;
+        public EventDistributor<Action<IPhysicalNode, VsRDTAttribute>> OnAttributeChanged
+            => _onAttributeChanged ?? (_onAttributeChanged = new EventDistributor<Action<IPhysicalNode, VsRDTAttribute>>());
 
-        private EventDistributor<Action<BaseNode, string, string>> _onRenamed;
-        public EventDistributor<Action<BaseNode, string, string>> OnRenamed =>
-            _onRenamed ?? (_onRenamed = new EventDistributor<Action<BaseNode, string, string>>());
+        private EventDistributor<Action<IPhysicalNode, string, string>> _onRenamed;
+        public EventDistributor<Action<IPhysicalNode, string, string>> OnRenamed =>
+            _onRenamed ?? (_onRenamed = new EventDistributor<Action<IPhysicalNode, string, string>>());
 
-        private EventDistributor<Action<BaseNode, string, string>> _onMoved;
-        public EventDistributor<Action<BaseNode, string, string>> OnMoved =>
-            _onMoved ?? (_onMoved = new EventDistributor<Action<BaseNode, string, string>>());
+        private EventDistributor<Action<IPhysicalNode, string, string>> _onMoved;
+        public EventDistributor<Action<IPhysicalNode, string, string>> OnMoved =>
+            _onMoved ?? (_onMoved = new EventDistributor<Action<IPhysicalNode, string, string>>());
 
-        private EventDistributor<Action<BaseNode>> _onSave;
-        public EventDistributor<Action<BaseNode>> OnSave
-            => _onSave ?? (_onSave = new EventDistributor<Action<BaseNode>>());
+        private EventDistributor<Action<IPhysicalNode>> _onSave;
+        public EventDistributor<Action<IPhysicalNode>> OnSave
+            => _onSave ?? (_onSave = new EventDistributor<Action<IPhysicalNode>>());
 
         #endregion
 
@@ -71,7 +71,6 @@ namespace DulcisX.Nodes.Events
 
         public int OnBeforeLastDocumentUnlock(uint docCookie, uint dwRDTLockType, uint dwReadLocksRemaining, uint dwEditLocksRemaining)
         {
-
             if (_onNodeUnlocked is object)
             {
                 var node = _documentTable.GetNode(docCookie, Solution);
@@ -84,7 +83,6 @@ namespace DulcisX.Nodes.Events
 
         public int OnAfterSave(uint docCookie)
         {
-
             if (_onSaved is object)
             {
                 var node = _documentTable.GetNode(docCookie, Solution);
@@ -112,7 +110,6 @@ namespace DulcisX.Nodes.Events
 
         public int OnAfterDocumentWindowHide(uint docCookie, IVsWindowFrame pFrame)
         {
-
             if (_onNodeWindowHidden is object)
             {
                 var node = _documentTable.GetNode(docCookie, Solution);
@@ -125,7 +122,7 @@ namespace DulcisX.Nodes.Events
 
         public int OnAfterAttributeChangeEx(uint docCookie, uint grfAttribs, IVsHierarchy pHierOld, uint itemidOld, string pszMkDocumentOld, IVsHierarchy pHierNew, uint itemidNew, string pszMkDocumentNew)
         {
-            var node = new Lazy<BaseNode>(() => _documentTable.GetNode(docCookie, Solution));
+            var node = new Lazy<IPhysicalNode>(() => _documentTable.GetNode(docCookie, Solution));
 
             var attribute = (VsRDTAttribute)grfAttribs;
 
@@ -144,7 +141,7 @@ namespace DulcisX.Nodes.Events
             return CommonStatusCodes.Success;
         }
 
-        private void OnItemChangedFullName(Lazy<BaseNode> node, string oldName, string newName)
+        private void OnItemChangedFullName(Lazy<IPhysicalNode> node, string oldName, string newName)
         {
             var oldFileName = Path.GetFileName(oldName);
             var newFileName = Path.GetFileName(newName);
@@ -168,7 +165,6 @@ namespace DulcisX.Nodes.Events
 
         public int OnBeforeSave(uint docCookie)
         {
-
             if (_onSave is object)
             {
                 var node = _documentTable.GetNode(docCookie, Solution);

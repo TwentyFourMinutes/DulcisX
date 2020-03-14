@@ -646,6 +646,7 @@
     <Compile Include="Nodes\Events\NodeSelectionEvents.cs" />
     <Compile Include="Nodes\Events\SolutionBuildEvents.cs" />
     <Compile Include="Nodes\Events\SolutionEvents.cs" />
+    <Compile Include="Nodes\IBaseNode.cs" />
     <Compile Include="Nodes\INamedNode.cs" />
     <Compile Include="Nodes\IPhysicalNode.cs" />
     <Compile Include="Core\Models\Enums\NodeTypes.cs" />

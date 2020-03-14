@@ -6,14 +6,14 @@ namespace DulcisX.Nodes.Events
 {
     public interface IOpenNodeEvents
     {
-        EventDistributor<Action<BaseNode, _VSRDTFLAGS, uint, uint>> OnNodeLocked { get; }
-        EventDistributor<Action<BaseNode, _VSRDTFLAGS, uint, uint>> OnNodeUnlocked { get; }
-        EventDistributor<Action<BaseNode>> OnSaved { get; }
-        EventDistributor<Action<BaseNode, bool, IVsWindowFrame>> OnNodeWindowShow { get; }
-        EventDistributor<Action<BaseNode, IVsWindowFrame>> OnNodeWindowHidden { get; }
-        EventDistributor<Action<BaseNode, VsRDTAttribute>> OnAttributeChanged { get; }
-        EventDistributor<Action<BaseNode, string, string>> OnRenamed { get; }
-        EventDistributor<Action<BaseNode, string, string>> OnMoved { get; }
-        EventDistributor<Action<BaseNode>> OnSave { get; }
+        EventDistributor<Action<IPhysicalNode, _VSRDTFLAGS, uint, uint>> OnNodeLocked { get; }
+        EventDistributor<Action<IPhysicalNode, _VSRDTFLAGS, uint, uint>> OnNodeUnlocked { get; }
+        EventDistributor<Action<IPhysicalNode>> OnSaved { get; }
+        EventDistributor<Action<IPhysicalNode, bool, IVsWindowFrame>> OnNodeWindowShow { get; }
+        EventDistributor<Action<IPhysicalNode, IVsWindowFrame>> OnNodeWindowHidden { get; }
+        EventDistributor<Action<IPhysicalNode, VsRDTAttribute>> OnAttributeChanged { get; }
+        EventDistributor<Action<IPhysicalNode, string, string>> OnRenamed { get; }
+        EventDistributor<Action<IPhysicalNode, string, string>> OnMoved { get; }
+        EventDistributor<Action<IPhysicalNode>> OnSave { get; }
     }
 }

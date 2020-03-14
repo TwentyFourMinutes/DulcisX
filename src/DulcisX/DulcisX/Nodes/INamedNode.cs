@@ -1,7 +1,7 @@
 ﻿
 namespace DulcisX.Nodes
 {
-    public interface INamedNode
+    public interface INamedNode : IBaseNode
     {
         string GetDisplayName();
     }

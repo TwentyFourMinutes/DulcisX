@@ -7,7 +7,7 @@ namespace DulcisX.Core.Extensions
 {
     public static class VsRunningDocumentTableExtensions
     {
-        public static BaseNode GetNode(this IVsRunningDocumentTable rdt, uint docCookie, SolutionNode solution)
+        public static IPhysicalNode GetNode(this IVsRunningDocumentTable rdt, uint docCookie, SolutionNode solution)
         {
             ThreadHelper.ThrowIfNotOnUIThread();
 
@@ -15,7 +15,7 @@ namespace DulcisX.Core.Extensions
 
             ErrorHandler.ThrowOnFailure(result);
 
-            return NodeFactory.GetItemNode(solution, hierarchy, itemId);
+            return (IPhysicalNode)NodeFactory.GetItemNode(solution, hierarchy, itemId);
         }
     }
 }
