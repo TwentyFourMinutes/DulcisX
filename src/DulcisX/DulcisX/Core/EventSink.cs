@@ -1,19 +1,12 @@
 ﻿using System;
 
-namespace DulcisX.Nodes.Events
+namespace DulcisX.Core
 {
     public abstract class EventSink : IDisposable
     {
         public uint Cookie { get; private set; }
 
         private bool _isCookieSet;
-
-        protected SolutionNode Solution { get; }
-
-        protected EventSink(SolutionNode solution)
-        {
-            Solution = solution;
-        }
 
         protected void SetCookie(uint cookie)
         {

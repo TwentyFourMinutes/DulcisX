@@ -1,4 +1,5 @@
-﻿using DulcisX.Core.Enums.VisualStudio;
+﻿using DulcisX.Core;
+using DulcisX.Core.Enums.VisualStudio;
 using DulcisX.Helpers;
 using Microsoft.VisualStudio;
 using Microsoft.VisualStudio.Shell;
@@ -7,7 +8,7 @@ using System;
 
 namespace DulcisX.Nodes.Events
 {
-    internal class SolutionEvents : EventSink, ISolutionEvents, IVsSolutionLoadEvents, IVsSolutionEvents, IVsSolutionEvents4, IVsSolutionEvents5, IVsSolutionEvents8
+    internal class SolutionEvents : NodeEventSink, ISolutionEvents, IVsSolutionLoadEvents, IVsSolutionEvents, IVsSolutionEvents4, IVsSolutionEvents5, IVsSolutionEvents8
     {
         #region Events
 

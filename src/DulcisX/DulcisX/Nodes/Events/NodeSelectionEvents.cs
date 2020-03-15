@@ -9,7 +9,7 @@ using DulcisX.Core;
 
 namespace DulcisX.Nodes.Events
 {
-    internal class NodeSelectionEvents : EventSink, INodeSelectionEvents, IVsSelectionEvents
+    internal class NodeSelectionEvents : NodeEventSink, INodeSelectionEvents, IVsSelectionEvents
     {
         #region Events
 

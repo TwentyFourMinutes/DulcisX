@@ -5,13 +5,14 @@ using Microsoft.VisualStudio.Shell;
 using Microsoft.VisualStudio.Shell.Interop;
 using System;
 using System.Collections.Generic;
+using DulcisX.Core;
 
 namespace DulcisX.Nodes.Events
 {
     /// <summary>
     /// Currently not being used
     /// </summary>
-    internal class ProjectNodeChangeEvents : EventSink, IProjectNodeChangeEvents, IVsTrackProjectDocumentsEvents2, IVsTrackProjectDocumentsEvents4
+    internal class ProjectNodeChangeEvents : NodeEventSink, IProjectNodeChangeEvents, IVsTrackProjectDocumentsEvents2, IVsTrackProjectDocumentsEvents4
     {
         public event Action<DocumentNode> OnDocumentAdded;
         public event Action<IEnumerable<DocumentNode>> OnBulkDocumentsAdded;

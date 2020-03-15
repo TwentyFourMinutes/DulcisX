@@ -5,10 +5,11 @@ using Microsoft.VisualStudio.Shell;
 using Microsoft.VisualStudio.Shell.Interop;
 using System;
 using System.IO;
+using DulcisX.Core;
 
 namespace DulcisX.Nodes.Events
 {
-    internal class OpenNodeEvents : EventSink, IOpenNodeEvents, IVsRunningDocTableEvents3
+    internal class OpenNodeEvents : NodeEventSink, IOpenNodeEvents, IVsRunningDocTableEvents3
     {
         #region Events
 
