@@ -65,6 +65,21 @@ namespace DulcisX.Core
             }
         }
 
+        private WebBrowser _webBrowser;
+
+        public WebBrowser WebBrowser
+        {
+            get
+            {
+                if (_webBrowser is null)
+                {
+                    _webBrowser = new WebBrowser(ServiceContainer.GetCOMInstance<IVsWebBrowsingService>());
+                }
+
+                return _webBrowser;
+            }
+        }
+
         public Container ServiceContainer { get; }
 
         private readonly Assembly[] _containerConfigurationAssemblies;

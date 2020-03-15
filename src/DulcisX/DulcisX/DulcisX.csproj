@@ -628,6 +628,7 @@
     <Compile Include="Core\SelectedNodes.cs" />
     <Compile Include="Core\PackageConfiguration.cs" />
     <Compile Include="Core\PackageX.cs" />
+    <Compile Include="Core\WebBrowser.cs" />
     <Compile Include="Exceptions\InvalidHierarchyItemException.cs" />
     <Compile Include="Exceptions\NoFlagsAllowedException.cs" />
     <Compile Include="Nodes\Events\CancelTranslatorFactory.cs" />
@@ -636,7 +637,8 @@
     <Compile Include="Helpers\VsHelper.cs" />
     <Compile Include="Nodes\DocumentNode.cs" />
     <Compile Include="Nodes\Events\EventDistributor.cs" />
-    <Compile Include="Nodes\Events\EventSink.cs" />
+    <Compile Include="Core\EventSink.cs" />
+    <Compile Include="Nodes\Events\NodeEventSink.cs" />
     <Compile Include="Nodes\Events\IOpenNodeEvents.cs" />
     <Compile Include="Nodes\Events\IProjectNodeChangeEvents.cs" />
     <Compile Include="Nodes\Events\ISolutionBuildEvents.cs" />

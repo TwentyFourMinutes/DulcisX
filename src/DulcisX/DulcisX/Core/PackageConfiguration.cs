@@ -49,6 +49,7 @@ namespace DulcisX.Core
             container.RegisterCOMInstance<SVsStatusbar, IVsStatusbar>(package);
             container.RegisterCOMInstance<SVsInfoBarUIFactory, IVsInfoBarUIFactory>(package);
             container.RegisterCOMInstance<SVsShell, IVsShell>(package);
+            container.RegisterCOMInstance<SVsWebBrowsingService, IVsWebBrowsingService>(package);
         }
     }
 }
