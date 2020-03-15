@@ -4,7 +4,7 @@ using Microsoft.VisualStudio.Shell.Interop;
 using System;
 using System.Collections.Generic;
 
-namespace DulcisX.Core
+namespace DulcisX.Core.Components
 {
     public class WebBrowser
     {

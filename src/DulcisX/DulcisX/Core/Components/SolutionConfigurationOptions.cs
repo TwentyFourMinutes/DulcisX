@@ -7,7 +7,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace DulcisX.Core
+namespace DulcisX.Core.Components
 {
     internal class SolutionConfigurationOptions : IVsPersistSolutionOpts
     {

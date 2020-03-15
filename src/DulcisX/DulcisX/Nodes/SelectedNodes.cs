@@ -8,7 +8,7 @@ using DulcisX.Core.Extensions;
 using DulcisX.Core.Enums.VisualStudio;
 using System.Runtime.InteropServices;
 
-namespace DulcisX.Core
+namespace DulcisX.Nodes
 {
     public class SelectedNodes : IEnumerable<BaseNode>
     {
