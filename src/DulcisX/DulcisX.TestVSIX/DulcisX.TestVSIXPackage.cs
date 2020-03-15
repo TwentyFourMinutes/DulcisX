@@ -32,8 +32,12 @@ namespace DulcisX.TestVSIX
 
         private void Saved(IPhysicalNode savedNode)
         {
-
-
+            InfoBar.NewMessage()
+                   .WithInfoImage()
+                   .WithText("Is this code a good boi?")
+                   .WithButton("Yes")
+                   .WithButton("No")
+                   .Publish();
         }
 
         #endregion

@@ -622,6 +622,7 @@
     <Compile Include="Core\Enums\VisualStudio\CommonStatusCodes.cs" />
     <Compile Include="Core\Enums\VisualStudio\CommonStreamKeys.cs" />
     <Compile Include="Core\Enums\VisualStudio\VsRDTAttribute.cs" />
+    <Compile Include="Core\InfoBar.cs" />
     <Compile Include="Core\IServiceProviders.cs" />
     <Compile Include="Core\SolutionConfigurationOptions.cs" />
     <Compile Include="Core\SelectedNodes.cs" />

@@ -1,4 +1,4 @@
-﻿using DulcisX.Core.Extensions;
+using DulcisX.Core.Extensions;
 using DulcisX.Core.Models;
 using DulcisX.Nodes;
 using Microsoft.VisualStudio.Shell;
@@ -46,6 +46,22 @@ namespace DulcisX.Core
                 }
 
                 return _statusBar;
+            }
+        }
+
+        private InfoBar _infoBar;
+
+        public InfoBar InfoBar
+        {
+            get
+            {
+                if (_infoBar is null)
+                {
+                    _infoBar = new InfoBar(ServiceContainer.GetCOMInstance<IVsInfoBarUIFactory>(),
+                                           ServiceContainer.GetCOMInstance<IVsInfoBarHost>());
+                }
+
+                return _infoBar;
             }
         }
 
