@@ -44,7 +44,7 @@ You can find the documentation [here](https://github.com/TwentyFourMinutes/Dulci
 
 Currently DulcisX only supports Visual Studio 2019. 
 
-Now why should you even choose this package over the current DTE? This package provides a cleaner abstraction than the DTE does additionally, it is simpler to use and open-source. However as it currently stands DuclisX doesn't cover all parts which the DTE does. See the table below for more detailed information.
+Now how does it differ from the current DTE? This package provides a cleaner abstraction than the DTE does additionally, it is simpler to use and more powerful and most importantly open-source. However as it currently stands DuclisX doesn't cover all parts which the DTE does. See the table below for more detailed information.
 
 | Status | Name                   |
 | :----: | ---------------------- |
@@ -75,8 +75,6 @@ Now why should you even choose this package over the current DTE? This package p
 |   ❌    | Version                |
 |   ❌    | WindowConfigurations   |
 |   ❌    | Windows                |
-
-
 
 ## Stay up to date
 
