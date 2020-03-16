@@ -1,5 +1,4 @@
 using System;
-using System.Linq;
 using System.Runtime.InteropServices;
 using System.Threading;
 using DulcisX.Core;
@@ -33,17 +32,23 @@ namespace DulcisX.TestVSIX
 
         private void Saved(IPhysicalNode savedNode)
         {
+            InfoBar.NewMessage()
+                   .WithInfoImage()
+                   .WithText("Is this code a good boi?")
+                   .WithHyperlink(" plz food.", () =>
+                   {
 
-            WebBrowser.OpenExternal(new Uri("https://www.twenty-four.dev"));
+                   })
+                   .WithHyperlink(" plz food link.", new Uri("https://www.twenty-four.dev"), true)
+                   .WithButton("Yes", () =>
+                   {
 
-            //var stuff = WebBrowser.Stuff().ToList();
+                   })
+                   .WithButton("No", () =>
+                   {
 
-            //InfoBar.NewMessage()
-            //       .WithInfoImage()
-            //       .WithText("Is this code a good boi?")
-            //       .WithButton("Yes", null)
-            //       .WithButton("No", null)
-            //       .Publish();
+                   })
+                   .Publish();
         }
 
         #endregion

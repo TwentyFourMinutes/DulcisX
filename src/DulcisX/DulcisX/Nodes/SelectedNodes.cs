@@ -3,7 +3,6 @@ using System.Collections;
 using System.Collections.Generic;
 using Microsoft.VisualStudio.Shell;
 using Microsoft.VisualStudio;
-using DulcisX.Nodes;
 using DulcisX.Core.Extensions;
 using DulcisX.Core.Enums.VisualStudio;
 using System.Runtime.InteropServices;

@@ -59,7 +59,8 @@ namespace DulcisX.Core
                 if (_infoBar is null)
                 {
                     _infoBar = new InfoBar(ServiceContainer.GetCOMInstance<IVsInfoBarUIFactory>(),
-                                           ServiceContainer.GetCOMInstance<IVsInfoBarHost>());
+                                           ServiceContainer.GetCOMInstance<IVsInfoBarHost>(),
+                                           WebBrowser);
                 }
 
                 return _infoBar;

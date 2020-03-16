@@ -9,7 +9,6 @@ using Microsoft.VisualStudio.Shell.Interop;
 using SimpleInjector;
 using System;
 using System.Collections.Generic;
-using DulcisX.Core;
 using DulcisX.Core.Components;
 
 namespace DulcisX.Nodes

@@ -58,7 +58,6 @@ namespace DulcisX.Core.Components
                     continue;
                 }
 
-
                 if (!isMultiStartup && Match(bytes, delimiterTokenBytes, i))
                 {
                     if (Match(bytes, sohTokenBytes, i - 4))
@@ -71,7 +70,6 @@ namespace DulcisX.Core.Components
                         return VSConstants.S_OK;
                     }
                 }
-
 
                 if (Match(bytes, startupTokenBytes, i))
                 {
