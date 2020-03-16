@@ -132,11 +132,18 @@ namespace DulcisX.Core.Components
             => new InternalInfoMessageBuilder(this, hasCloseButton);
 
         public void RemoveMessage(InfoBarHandle handle)
+            => RemoveMessage(handle.UIElement, handle.Events);
+
+        internal void RemoveMessage(IVsInfoBarUIElement uiElement, InfoBarEvents events)
         {
             ThreadHelper.ThrowIfNotOnUIThread();
 
-            handle.Events.Dispose();
-            Host.RemoveInfoBar(handle.UIElement);
+            uiElement.Close();
+            events.Dispose();
+
+            // Calling the IVsInfoBarHost::RemoveInfoBar causes the Editor to produce weird issues, such as preventing some keyboard inputs,
+            // However the IVsInfoBarUIElement::Close method will do similar, it will call its own Close method.
+            // Host.RemoveInfoBar(uiElement);
         }
     }
 }

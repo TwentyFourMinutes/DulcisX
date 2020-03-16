@@ -26,7 +26,7 @@ namespace DulcisX.Core.Components
 
                 if (actionCallback.CloseAfterClick)
                 {
-                    _infoBar.RemoveMessage(new InfoBarHandle(infoBarUIElement, this));
+                    _infoBar.RemoveMessage(infoBarUIElement, this);
                 }
             }
             else if (actionItem.ActionContext is HyperLink hyperLink)
