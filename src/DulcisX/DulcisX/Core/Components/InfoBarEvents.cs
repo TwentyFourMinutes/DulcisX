@@ -1,4 +1,4 @@
-﻿using Microsoft.VisualStudio;
+using Microsoft.VisualStudio;
 using Microsoft.VisualStudio.Shell;
 using Microsoft.VisualStudio.Shell.Interop;
 
@@ -22,7 +22,7 @@ namespace DulcisX.Core.Components
 
             if (actionItem.ActionContext is ActionCallback actionCallback)
             {
-                actionCallback.Callback.Invoke();
+                actionCallback.Callback?.Invoke();
 
                 if (actionCallback.CloseAfterClick)
                 {

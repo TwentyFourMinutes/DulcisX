@@ -1,4 +1,4 @@
-﻿using Microsoft.VisualStudio.Imaging;
+using Microsoft.VisualStudio.Imaging;
 using Microsoft.VisualStudio.Imaging.Interop;
 using Microsoft.VisualStudio.Shell;
 using Microsoft.VisualStudio.Shell.Interop;
@@ -119,7 +119,7 @@ namespace DulcisX.Core.Components
 
                 InfoBarEvents events = null;
 
-                if (_containsHyperlink || _actionButtons.Count == 0)
+                if (_containsHyperlink || _actionButtons.Count > 0)
                 {
                     events = InfoBarEvents.Create(_infoBar, uiElement);
                 }
