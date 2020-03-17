@@ -25,7 +25,18 @@ namespace DulcisX.Core.Components
         InfoBarHandle Publish();
     }
 
-    public interface IMoreContentInfoMessageBuilder : IContentInfoMessageBuilder, IButtonInfoMessageBuilder
+    public interface IButtonIdentifierInfoMessageBuilder
+    {
+        IButtonIdentifierInfoMessageBuilder<TIdentifier> WithButton<TIdentifier>(string text, TIdentifier identifier);
+    }
+
+    public interface IButtonIdentifierInfoMessageBuilder<TIdentifier>
+    {
+        IButtonIdentifierInfoMessageBuilder<TIdentifier> WithButton(string text, TIdentifier identifier);
+        ResultInfoBarHandle<TIdentifier> Publish();
+    }
+
+    public interface IMoreContentInfoMessageBuilder : IContentInfoMessageBuilder, IButtonInfoMessageBuilder, IButtonIdentifierInfoMessageBuilder
     {
 
     }

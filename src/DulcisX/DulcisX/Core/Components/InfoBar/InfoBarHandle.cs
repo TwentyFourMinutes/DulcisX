@@ -5,9 +5,10 @@ namespace DulcisX.Core.Components
     public class InfoBarHandle
     {
         internal IVsInfoBarUIElement UIElement { get; }
-        internal InfoBarEvents Events { get; }
 
-        internal InfoBarHandle(IVsInfoBarUIElement uiElement, InfoBarEvents events)
+        internal BaseInfoBarEvents Events { get; }
+
+        internal InfoBarHandle(IVsInfoBarUIElement uiElement, BaseInfoBarEvents events)
         {
             UIElement = uiElement;
             Events = events;

@@ -30,25 +30,25 @@ namespace DulcisX.TestVSIX
             Solution.OpenNodeEvents.OnSave.Hook(NodeTypes.Document, Saved);
         }
 
-        private void Saved(IPhysicalNode savedNode)
+        private async void Saved(IPhysicalNode savedNode)
         {
-            InfoBar.NewMessage()
-                   .WithInfoImage()
-                   .WithText("Is this code a good boi?")
-                   .WithHyperlink(" plz food.", () =>
-                   {
+            var result = await InfoBar.NewMessage()
+                                      .WithInfoImage()
+                                      .WithText("Is this code a good boi?", true, false, true)
+                                      .WithHyperlink(" plz food.", () =>
+                                      {
 
-                   })
-                   .WithHyperlink(" plz food link.", new Uri("https://www.twenty-four.dev"), true)
-                   .WithButton("Yes", () =>
-                   {
+                                      })
+                                      .WithHyperlink(" plz food link.", new Uri("https://www.twenty-four.dev"), true)
+                                      .WithButton<bool>("Yes", true)
+                                      .WithButton("Yes, but actually no", false)
+                                      .Publish()
+                                      .WaitForResultAsync();
 
-                   })
-                   .WithButton("No", () =>
-                   {
+            if (result.TryGetResult(out bool state))
+            {
 
-                   })
-                   .Publish();
+            }
         }
 
         #endregion

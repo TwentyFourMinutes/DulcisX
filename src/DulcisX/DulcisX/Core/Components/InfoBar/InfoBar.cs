@@ -110,6 +110,13 @@ namespace DulcisX.Core.Components
                 return this;
             }
 
+            public IButtonIdentifierInfoMessageBuilder<TIdentifier> WithButton<TIdentifier>(string text, TIdentifier identifier)
+            {
+                var builder = new InternalButtonIdentifierBuilder<TIdentifier>(_textSpans, _actionButtons, _image, _infoBar, _hasCloseButton, _containsHyperlink);
+
+                return builder.WithButton(text, identifier);
+            }
+
             public InfoBarHandle Publish()
             {
                 ThreadHelper.ThrowIfNotOnUIThread();
@@ -124,10 +131,63 @@ namespace DulcisX.Core.Components
 
                 if (_containsHyperlink || _actionButtons.Count > 0)
                 {
-                    events = InfoBarEvents.Create(_infoBar, uiElement);
+                    events = new InfoBarEvents(_infoBar, uiElement);
                 }
 
                 return new InfoBarHandle(uiElement, events);
+            }
+        }
+
+        private class InternalButtonIdentifierBuilder<TIdentifier> : IButtonIdentifierInfoMessageBuilder<TIdentifier>
+        {
+            private readonly List<IVsInfoBarTextSpan> _textSpans;
+            private readonly List<IVsInfoBarActionItem> _actionButtons;
+            private ImageMoniker _image;
+
+            private readonly InfoBar _infoBar;
+            private readonly bool _hasCloseButton;
+            private readonly bool _containsHyperlink;
+
+            internal InternalButtonIdentifierBuilder(List<IVsInfoBarTextSpan> textSpans, List<IVsInfoBarActionItem> actionButtons, ImageMoniker image, InfoBar infoBar, bool hasCloseButton, bool containsHyperlink)
+            {
+                _textSpans = textSpans;
+                _actionButtons = actionButtons;
+                _image = image;
+                _infoBar = infoBar;
+                _hasCloseButton = hasCloseButton;
+                _containsHyperlink = containsHyperlink;
+            }
+
+            public IButtonIdentifierInfoMessageBuilder<TIdentifier> WithButton(string text, TIdentifier identifier)
+            {
+                if (string.IsNullOrWhiteSpace(text))
+                {
+                    throw new InvalidOperationException($"{nameof(text)} can not be null or empty.");
+                }
+
+                _actionButtons.Add(new InfoBarButton(text, identifier));
+
+                return this;
+            }
+
+            public ResultInfoBarHandle<TIdentifier> Publish()
+            {
+                ThreadHelper.ThrowIfNotOnUIThread();
+
+                var model = new InfoBarModel(_textSpans, _actionButtons, _image, _hasCloseButton);
+
+                var uiElement = _infoBar.UIFactory.CreateInfoBar(model);
+
+                _infoBar.Host.AddInfoBar(uiElement);
+
+                ResultInfoBarEvents<TIdentifier> events = null;
+
+                if (_containsHyperlink || _actionButtons.Count > 0)
+                {
+                    events = new ResultInfoBarEvents<TIdentifier>(_infoBar, uiElement);
+                }
+
+                return new ResultInfoBarHandle<TIdentifier>(uiElement, events);
             }
         }
 
@@ -137,12 +197,12 @@ namespace DulcisX.Core.Components
         public void RemoveMessage(InfoBarHandle handle)
             => RemoveMessage(handle.UIElement, handle.Events);
 
-        internal void RemoveMessage(IVsInfoBarUIElement uiElement, InfoBarEvents events)
+        internal void RemoveMessage(IVsInfoBarUIElement uiElement, BaseInfoBarEvents events)
         {
             ThreadHelper.ThrowIfNotOnUIThread();
 
             uiElement.Close();
-            events.Dispose();
+            events?.Dispose();
 
             // Calling the IVsInfoBarHost::RemoveInfoBar causes the Editor to produce weird issues, such as preventing some keyboard inputs,
             // However the IVsInfoBarUIElement::Close method will do similar, it will call its own Close method.

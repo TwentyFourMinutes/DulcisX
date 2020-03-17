@@ -607,12 +607,16 @@
     <Reference Include="WindowsFormsIntegration" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Core\AsyncResult.cs" />
     <Compile Include="Core\Attributes\NotImplementedAttribute.cs" />
-    <Compile Include="Core\Components\ActionCallback.cs" />
-    <Compile Include="Core\Components\HyperLink.cs" />
-    <Compile Include="Core\Components\IMessageBuilder.cs" />
-    <Compile Include="Core\Components\InfoBarEvents.cs" />
-    <Compile Include="Core\Components\InfoBarHandle.cs" />
+    <Compile Include="Core\Components\InfoBar\ActionCallback.cs" />
+    <Compile Include="Core\Components\InfoBar\ResultInfoBarEvents.cs" />
+    <Compile Include="Core\Components\InfoBar\CommonInfoBarEvents.cs" />
+    <Compile Include="Core\Components\InfoBar\HyperLink.cs" />
+    <Compile Include="Core\Components\InfoBar\IdentifierInfoBarHandle.cs" />
+    <Compile Include="Core\Components\InfoBar\IMessageBuilder.cs" />
+    <Compile Include="Core\Components\InfoBar\InfoBarEvents.cs" />
+    <Compile Include="Core\Components\InfoBar\InfoBarHandle.cs" />
     <Compile Include="Core\ContainerConstructor.cs" />
     <Compile Include="Core\Enums\VisualStudio\OpenNodeAttribute.cs" />
     <Compile Include="Core\Extensions\ContainerExtensions.cs" />
@@ -627,7 +631,7 @@
     <Compile Include="Core\Enums\VisualStudio\CommonNodeIds.cs" />
     <Compile Include="Core\Enums\VisualStudio\CommonStatusCodes.cs" />
     <Compile Include="Core\Enums\VisualStudio\CommonStreamKeys.cs" />
-    <Compile Include="Core\Components\InfoBar.cs" />
+    <Compile Include="Core\Components\InfoBar\InfoBar.cs" />
     <Compile Include="Core\IServiceProviders.cs" />
     <Compile Include="Core\Components\SolutionConfigurationOptions.cs" />
     <Compile Include="Nodes\SelectedNodes.cs" />
