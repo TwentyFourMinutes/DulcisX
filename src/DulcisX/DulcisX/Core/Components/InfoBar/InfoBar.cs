@@ -202,8 +202,8 @@ namespace DulcisX.Core.Components
         {
             ThreadHelper.ThrowIfNotOnUIThread();
 
-            uiElement.Close();
             events?.Dispose();
+            uiElement.Close();
 
             // Calling the IVsInfoBarHost::RemoveInfoBar causes the Editor to produce weird issues, such as preventing some keyboard inputs,
             // However the IVsInfoBarUIElement::Close method will do similar, it will call its own Close method.
