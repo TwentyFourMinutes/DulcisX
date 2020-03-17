@@ -614,6 +614,7 @@
     <Compile Include="Core\Components\InfoBarEvents.cs" />
     <Compile Include="Core\Components\InfoBarHandle.cs" />
     <Compile Include="Core\ContainerConstructor.cs" />
+    <Compile Include="Core\Enums\VisualStudio\OpenNodeAttribute.cs" />
     <Compile Include="Core\Extensions\ContainerExtensions.cs" />
     <Compile Include="Core\Extensions\EnumExtensions.cs" />
     <Compile Include="Core\Extensions\VsHierarchyExtensions.cs" />
@@ -626,7 +627,6 @@
     <Compile Include="Core\Enums\VisualStudio\CommonNodeIds.cs" />
     <Compile Include="Core\Enums\VisualStudio\CommonStatusCodes.cs" />
     <Compile Include="Core\Enums\VisualStudio\CommonStreamKeys.cs" />
-    <Compile Include="Core\Enums\VisualStudio\OpenNodeAttribute.cs" />
     <Compile Include="Core\Components\InfoBar.cs" />
     <Compile Include="Core\IServiceProviders.cs" />
     <Compile Include="Core\Components\SolutionConfigurationOptions.cs" />
