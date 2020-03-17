@@ -20,8 +20,8 @@ namespace DulcisX.Core.Components
 
     public interface IButtonInfoMessageBuilder
     {
+        IButtonInfoMessageBuilder WithButton(string text, bool closeAfterClick = true);
         IButtonInfoMessageBuilder WithButton(string text, Action callback, bool closeAfterClick = true);
-
         InfoBarHandle Publish();
     }
 

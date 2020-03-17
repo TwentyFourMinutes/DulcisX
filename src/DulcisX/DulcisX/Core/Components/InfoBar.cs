@@ -1,4 +1,4 @@
-using Microsoft.VisualStudio.Imaging;
+﻿using Microsoft.VisualStudio.Imaging;
 using Microsoft.VisualStudio.Imaging.Interop;
 using Microsoft.VisualStudio.Shell;
 using Microsoft.VisualStudio.Shell.Interop;
@@ -94,6 +94,9 @@ namespace DulcisX.Core.Components
 
                 return this;
             }
+
+            public IButtonInfoMessageBuilder WithButton(string text, bool closeAfterClick = true)
+                => WithButton(text, null, closeAfterClick);
 
             public IButtonInfoMessageBuilder WithButton(string text, Action callback, bool closeAfterClick = true)
             {
