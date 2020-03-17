@@ -32,23 +32,20 @@ namespace DulcisX.TestVSIX
 
         private async void Saved(IPhysicalNode savedNode)
         {
-            var result = await InfoBar.NewMessage()
-                                      .WithInfoImage()
-                                      .WithText("Is this code a good boi?", true, false, true)
-                                      .WithHyperlink(" plz food.", () =>
-                                      {
+            var result = InfoBar.NewMessage()
+                                .WithInfoImage()
+                                .WithText("Is this code a good boi?", true, false, true)
+                                .WithHyperlink(" plz food.", () =>
+                                {
 
-                                      })
-                                      .WithHyperlink(" plz food link.", new Uri("https://www.twenty-four.dev"), true)
-                                      .WithButton<bool>("Yes", true)
-                                      .WithButton("Yes, but actually no", false)
-                                      .Publish()
-                                      .WaitForResultAsync();
+                                })
+                                .WithHyperlink(" plz food link.", new Uri("https://www.twenty-four.dev"), true)
+                                .WithButton("Yes")
+                                .WithButton("Yes, but actually no")
+                                .Publish(() =>
+                                {
 
-            if (result.TryGetResult(out bool state))
-            {
-
-            }
+                                });
         }
 
         #endregion

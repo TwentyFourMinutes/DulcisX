@@ -28,6 +28,7 @@ namespace DulcisX.Core.Components
 
             private readonly InfoBar _infoBar;
             private readonly bool _hasCloseButton;
+            private Action _cancelCallback;
 
             private bool _containsHyperlink;
 
@@ -117,7 +118,7 @@ namespace DulcisX.Core.Components
                 return builder.WithButton(text, identifier);
             }
 
-            public InfoBarHandle Publish()
+            public InfoBarHandle Publish(Action cancelCallback = null)
             {
                 ThreadHelper.ThrowIfNotOnUIThread();
 
@@ -131,7 +132,7 @@ namespace DulcisX.Core.Components
 
                 if (_containsHyperlink || _actionButtons.Count > 0)
                 {
-                    events = new InfoBarEvents(_infoBar, uiElement);
+                    events = new InfoBarEvents(_infoBar, uiElement, cancelCallback);
                 }
 
                 return new InfoBarHandle(uiElement, events);

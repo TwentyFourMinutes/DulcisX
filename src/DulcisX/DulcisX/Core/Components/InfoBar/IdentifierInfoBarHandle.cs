@@ -7,7 +7,7 @@ namespace DulcisX.Core.Components
 {
     public class ResultInfoBarHandle<TIdentifier> : InfoBarHandle
     {
-        public event Action<TIdentifier> OnResult;
+        public event Action<TIdentifier, bool> OnResult;
 
         private readonly ResultInfoBarEvents<TIdentifier> _events;
         private SemaphoreSlim _semaphore;
@@ -19,7 +19,13 @@ namespace DulcisX.Core.Components
         {
             _events = events;
             _events.OnInfoBarResult += OnInfoBarResult;
-            _events.OnMessageClosed += InternalDispose;
+            _events.OnMessageClosed += OnMessageClosed;
+        }
+
+        private void OnMessageClosed()
+        {
+            OnResult?.Invoke(_identifier, !_isIdentifierSet);
+            InternalDispose();
         }
 
         private void OnInfoBarResult(TIdentifier identifier)
@@ -32,7 +38,7 @@ namespace DulcisX.Core.Components
                 _semaphore.Release();
             }
 
-            OnResult?.Invoke(_identifier);
+            OnResult?.Invoke(_identifier, true);
         }
 
         public async Task<AsyncResult<TIdentifier>> WaitForResultAsync(CancellationToken ct = default)
@@ -65,7 +71,7 @@ namespace DulcisX.Core.Components
                 }
 
                 _events.OnInfoBarResult -= OnInfoBarResult;
-                _events.OnMessageClosed -= InternalDispose;
+                _events.OnMessageClosed -= OnMessageClosed;
 
                 _isDisposed = true;
             }

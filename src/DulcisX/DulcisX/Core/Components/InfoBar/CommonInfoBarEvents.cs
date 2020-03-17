@@ -1,12 +1,27 @@
 ﻿using Microsoft.VisualStudio.Shell.Interop;
+using System;
 
 namespace DulcisX.Core.Components
 {
     internal class InfoBarEvents : BaseInfoBarEvents
     {
-        internal InfoBarEvents(InfoBar infoBar, IVsInfoBarUIElement uiElement) : base(infoBar, uiElement)
-        {
+        private readonly Action _cancelCallback;
 
+        internal InfoBarEvents(InfoBar infoBar, IVsInfoBarUIElement uiElement, Action cancelCallback) : base(infoBar, uiElement)
+        {
+            _cancelCallback = cancelCallback;
+
+            if (_cancelCallback is object)
+            {
+                base.OnMessageClosed += OnMessageClosed;
+            }
+        }
+
+        private new void OnMessageClosed()
+        {
+            _cancelCallback.Invoke();
+
+            base.OnMessageClosed -= OnMessageClosed;
         }
 
         public override void OnActionItemClicked(IVsInfoBarUIElement infoBarUIElement, IVsInfoBarActionItem actionItem)

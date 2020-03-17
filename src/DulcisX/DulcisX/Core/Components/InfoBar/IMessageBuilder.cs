@@ -22,7 +22,7 @@ namespace DulcisX.Core.Components
     {
         IButtonInfoMessageBuilder WithButton(string text, bool closeAfterClick = true);
         IButtonInfoMessageBuilder WithButton(string text, Action callback, bool closeAfterClick = true);
-        InfoBarHandle Publish();
+        InfoBarHandle Publish(Action cancelCallback = null);
     }
 
     public interface IButtonIdentifierInfoMessageBuilder
