@@ -33,9 +33,9 @@ namespace DulcisX.Nodes.Events
         public EventDistributor<Action<IPhysicalNode, IVsWindowFrame>> OnNodeWindowHidden
             => _onNodeWindowHidden ?? (_onNodeWindowHidden = new EventDistributor<Action<IPhysicalNode, IVsWindowFrame>>());
 
-        private EventDistributor<Action<IPhysicalNode, VsRDTAttribute>> _onAttributeChanged;
-        public EventDistributor<Action<IPhysicalNode, VsRDTAttribute>> OnAttributeChanged
-            => _onAttributeChanged ?? (_onAttributeChanged = new EventDistributor<Action<IPhysicalNode, VsRDTAttribute>>());
+        private EventDistributor<Action<IPhysicalNode, OpenNodeAttribute>> _onAttributeChanged;
+        public EventDistributor<Action<IPhysicalNode, OpenNodeAttribute>> OnAttributeChanged
+            => _onAttributeChanged ?? (_onAttributeChanged = new EventDistributor<Action<IPhysicalNode, OpenNodeAttribute>>());
 
         private EventDistributor<Action<IPhysicalNode, string, string>> _onRenamed;
         public EventDistributor<Action<IPhysicalNode, string, string>> OnRenamed =>
@@ -125,7 +125,7 @@ namespace DulcisX.Nodes.Events
         {
             var node = new Lazy<IPhysicalNode>(() => _documentTable.GetNode(docCookie, Solution));
 
-            var attribute = (VsRDTAttribute)grfAttribs;
+            var attribute = (OpenNodeAttribute)grfAttribs;
 
             _onAttributeChanged?.Invoke(node.Value.NodeType, node.Value, attribute);
 
@@ -134,7 +134,7 @@ namespace DulcisX.Nodes.Events
 
             switch (attribute)
             {
-                case VsRDTAttribute.MkDocument:
+                case OpenNodeAttribute.MkDocument:
                     OnItemChangedFullName(node, pszMkDocumentOld, pszMkDocumentNew);
                     break;
             }

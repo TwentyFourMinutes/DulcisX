@@ -11,7 +11,7 @@ namespace DulcisX.Nodes.Events
         EventDistributor<Action<IPhysicalNode>> OnSaved { get; }
         EventDistributor<Action<IPhysicalNode, bool, IVsWindowFrame>> OnNodeWindowShow { get; }
         EventDistributor<Action<IPhysicalNode, IVsWindowFrame>> OnNodeWindowHidden { get; }
-        EventDistributor<Action<IPhysicalNode, VsRDTAttribute>> OnAttributeChanged { get; }
+        EventDistributor<Action<IPhysicalNode, OpenNodeAttribute>> OnAttributeChanged { get; }
         EventDistributor<Action<IPhysicalNode, string, string>> OnRenamed { get; }
         EventDistributor<Action<IPhysicalNode, string, string>> OnMoved { get; }
         EventDistributor<Action<IPhysicalNode>> OnSave { get; }

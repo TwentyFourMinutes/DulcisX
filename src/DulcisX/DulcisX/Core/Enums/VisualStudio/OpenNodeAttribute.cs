@@ -5,7 +5,7 @@
     /// https://docs.microsoft.com/en-us/dotnet/api/microsoft.visualstudio.shell.interop.__vsrdtattrib2?view=visualstudiosdk-2017
     /// https://docs.microsoft.com/en-us/dotnet/api/microsoft.visualstudio.shell.interop.__vsrdtattrib3?view=visualstudiosdk-2017
     /// </summary>
-    public enum VsRDTAttribute
+    public enum OpenNodeAttribute
     {
         #region __VSRDTATTRIB
 
