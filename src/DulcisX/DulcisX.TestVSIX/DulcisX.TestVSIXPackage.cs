@@ -1,4 +1,5 @@
 using System;
+using System.Linq;
 using System.Runtime.InteropServices;
 using System.Threading;
 using DulcisX.Core;
@@ -30,22 +31,8 @@ namespace DulcisX.TestVSIX
             Solution.OpenNodeEvents.OnSave.Hook(NodeTypes.Document, Saved);
         }
 
-        private async void Saved(IPhysicalNode savedNode)
+        private void Saved(IPhysicalNode savedNode)
         {
-            var result = InfoBar.NewMessage()
-                                .WithInfoImage()
-                                .WithText("Is this code a good boi?", true, false, true)
-                                .WithHyperlink(" plz food.", () =>
-                                {
-
-                                })
-                                .WithHyperlink(" plz food link.", new Uri("https://www.twenty-four.dev"), true)
-                                .WithButton("Yes")
-                                .WithButton("Yes, but actually no")
-                                .Publish(() =>
-                                {
-
-                                });
         }
 
         #endregion

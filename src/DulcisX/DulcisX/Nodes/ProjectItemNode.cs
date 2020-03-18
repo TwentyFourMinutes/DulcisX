@@ -12,11 +12,11 @@ namespace DulcisX.Nodes
     public abstract class ProjectItemNode : BaseNode
     {
 
-        protected readonly ProjectNode ParentProject;
+        private readonly ProjectNode _parentProject;
 
         protected ProjectItemNode(SolutionNode solution, ProjectNode project, uint itemId) : base(solution, project.UnderlyingHierarchy, itemId)
         {
-            ParentProject = project;
+            _parentProject = project;
         }
 
         protected ProjectItemNode(SolutionNode solution, IVsHierarchy hierarchy, uint itemId) : base(solution, hierarchy, itemId)
@@ -26,9 +26,9 @@ namespace DulcisX.Nodes
 
         public ProjectNode GetParentProject()
         {
-            if (ParentProject is object)
+            if (_parentProject is object)
             {
-                return ParentProject;
+                return _parentProject;
             }
 
             var parentProject = NodeFactory.GetSolutionItemNode(ParentSolution, UnderlyingHierarchy, CommonNodeIds.Project);
@@ -67,7 +67,7 @@ namespace DulcisX.Nodes
 
             while (!VsHelper.IsItemIdNil(node))
             {
-                yield return NodeFactory.GetProjectItemNode(ParentSolution, ParentProject, UnderlyingHierarchy, node);
+                yield return NodeFactory.GetProjectItemNode(ParentSolution, _parentProject, UnderlyingHierarchy, node);
 
                 node = HierarchyUtilities.GetNextSibling(UnderlyingHierarchy, node, true);
             }

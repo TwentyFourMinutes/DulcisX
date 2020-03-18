@@ -21,7 +21,7 @@ namespace DulcisX.Nodes
         {
             ThreadHelper.ThrowIfNotOnUIThread();
 
-            var result = ParentProject.UnderlyingProject.GetMkDocument(ItemId, out var fullName);
+            var result = GetParentProject().UnderlyingProject.GetMkDocument(ItemId, out var fullName);
 
             ErrorHandler.ThrowOnFailure(result);
 
