@@ -16,6 +16,7 @@
     <dependencies>
       <dependency id="Microsoft.VisualStudio.SDK" version="16.0.204" />
 	  <dependency id="StringyEnums" version="1.2.0" />
+	  <dependency id="SimpleInjector" version="4.9.1" />
     </dependencies>
   </metadata>
 </package>
