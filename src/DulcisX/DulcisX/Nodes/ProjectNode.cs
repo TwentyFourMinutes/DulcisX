@@ -9,6 +9,7 @@ using Microsoft.VisualStudio.Shell;
 using Microsoft.VisualStudio.Shell.Interop;
 using System;
 using System.Collections.Generic;
+using System.IO;
 
 namespace DulcisX.Nodes
 {
@@ -97,7 +98,25 @@ namespace DulcisX.Nodes
 
                 node = HierarchyUtilities.GetNextSibling(UnderlyingHierarchy, node, true);
             }
+        }
 
+        public VSADDRESULT CreateDocument(string name)
+            => CreateDocument(this.ItemId, name);
+
+        public VSADDRESULT CreateDocument(ProjectItemNode parentNode, string name)
+            => CreateDocument(parentNode.ItemId, name);
+
+        private VSADDRESULT CreateDocument(uint parentId, string name)
+        {
+            ThreadHelper.ThrowIfNotOnUIThread();
+
+            var addResult = new VSADDRESULT[1];
+
+            var result = UnderlyingProject.AddItem(parentId, VSADDITEMOPERATION.VSADDITEMOP_CLONEFILE, name, 1, new string[] { Path.GetTempFileName() }, IntPtr.Zero, addResult);
+
+            ErrorHandler.ThrowOnFailure(result);
+
+            return addResult[0];
         }
     }
 }
