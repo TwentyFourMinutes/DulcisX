@@ -45,7 +45,7 @@ namespace DulcisX.Core.Components
         {
             _semaphore = new SemaphoreSlim(0, 1);
 
-            await _semaphore.WaitAsync(ct).ConfigureAwait(false);
+            await _semaphore.WaitAsync(ct);
 
             this.InternalDispose();
 

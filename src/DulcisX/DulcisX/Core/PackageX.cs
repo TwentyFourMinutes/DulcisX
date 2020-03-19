@@ -117,7 +117,7 @@ namespace DulcisX.Core
             }
             finally
             {
-                await base.InitializeAsync(cancellationToken, progress).ConfigureAwait(false);
+                await base.InitializeAsync(cancellationToken, progress);
             }
         }
 
@@ -143,9 +143,14 @@ namespace DulcisX.Core
             }
             finally
             {
-                ServiceContainer.Dispose();
-
-                base.Dispose(disposing);
+                try
+                {
+                    base.Dispose(disposing);
+                }
+                finally
+                {
+                    ServiceContainer.Dispose();
+                }
             }
         }
     }

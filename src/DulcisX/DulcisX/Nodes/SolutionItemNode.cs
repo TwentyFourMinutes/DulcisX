@@ -48,7 +48,7 @@ namespace DulcisX.Nodes
         {
             var collectionProvider = ParentSolution.ServiceContainer.GetInstance<IVsHierarchyItemCollectionProvider>();
 
-            return (await collectionProvider.GetDescendantsAsync(UnderlyingHierarchy, ct).ConfigureAwait(false))
+            return (await collectionProvider.GetDescendantsAsync(UnderlyingHierarchy, ct))
                                             .Select(hierarchyItem => NodeFactory.GetItemNode(ParentSolution, hierarchyItem));
         }
 
@@ -56,9 +56,9 @@ namespace DulcisX.Nodes
         {
             var collectionProvider = ParentSolution.ServiceContainer.GetInstance<IVsHierarchyItemCollectionProvider>();
 
-            var hierarchyItems = await collectionProvider.GetDescendantsAsync(UnderlyingHierarchy, ct).ConfigureAwait(false);
+            var hierarchyItems = await collectionProvider.GetDescendantsAsync(UnderlyingHierarchy, ct);
 
-            var filteredItems = await collectionProvider.GetFilteredHierarchyItemsAsync(hierarchyItems, hierarchyItem => predicate(NodeFactory.GetItemNode(ParentSolution, hierarchyItem)), ct).ConfigureAwait(false);
+            var filteredItems = await collectionProvider.GetFilteredHierarchyItemsAsync(hierarchyItems, hierarchyItem => predicate(NodeFactory.GetItemNode(ParentSolution, hierarchyItem)), ct);
 
             var filteredNodes = filteredItems.Select(hierarchyItem => NodeFactory.GetItemNode(ParentSolution, hierarchyItem));
 

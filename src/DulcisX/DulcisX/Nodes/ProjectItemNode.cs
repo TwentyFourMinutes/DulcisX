@@ -71,7 +71,6 @@ namespace DulcisX.Nodes
 
                 node = HierarchyUtilities.GetNextSibling(UnderlyingHierarchy, node, true);
             }
-
         }
     }
 }
