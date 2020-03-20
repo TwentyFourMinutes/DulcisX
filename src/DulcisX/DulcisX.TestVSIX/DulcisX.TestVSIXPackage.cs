@@ -1,12 +1,16 @@
 using System;
+using System.ComponentModel;
+using System.Diagnostics;
 using System.Linq;
 using System.Runtime.InteropServices;
 using System.Threading;
 using DulcisX.Core;
 using DulcisX.Core.Enums;
 using DulcisX.Nodes;
+using EnvDTE;
 using Microsoft.VisualStudio;
 using Microsoft.VisualStudio.Shell;
+using Microsoft.VisualStudio.Shell.Interop;
 
 namespace DulcisX.TestVSIX
 {
@@ -33,6 +37,7 @@ namespace DulcisX.TestVSIX
 
         private void Saved(IPhysicalNode savedNode)
         {
+            (savedNode as DocumentNode).SetCopyToOutputDirectory(CopyToOutputDirectory.Never);
         }
 
         #endregion

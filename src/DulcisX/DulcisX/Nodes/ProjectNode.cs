@@ -88,6 +88,15 @@ namespace DulcisX.Nodes
             return val;
         }
 
+        public void SetItemProperty(uint itemId, DocumentProperty documentProperty, string value)
+        {
+            ThreadHelper.ThrowIfNotOnUIThread();
+
+            var result = VsBuildPropertyStorage.SetItemAttribute(itemId, documentProperty.ToString(), value);
+
+            ErrorHandler.ThrowOnFailure(result);
+        }
+
         public override IEnumerable<BaseNode> GetChildren()
         {
             var node = HierarchyUtilities.GetFirstChild(UnderlyingHierarchy, ItemId, true);
