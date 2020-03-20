@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <package xmlns="http://schemas.microsoft.com/packaging/2013/05/nuspec.xsd">
   <metadata>
-    <id>DulcisX</id>
+	<id>DulcisX</id>
 	<license type="expression">MIT</license>
-    <version>2.0.0.0-alpha</version>
-    <title>DulcisX</title>
-    <authors>Twenty</authors>
-    <owners>Twenty</owners>
-    <requireLicenseAcceptance>true</requireLicenseAcceptance>
-    <description>DulcisX enables you to write VSIX extensions a lot faster, by providing new, cleaner and easier API's.</description>
+	<version>2.0.0.0-alpha</version>
+	<title>DulcisX</title>
+	<authors>Twenty</authors>
+	<owners>Twenty</owners>
+	<requireLicenseAcceptance>true</requireLicenseAcceptance>
+	<description>DulcisX enables you to write VSIX extensions a lot faster, by providing new, cleaner and easier API's.</description>
 	<copyright>Copyright © Twenty 2020</copyright>
 	<tags>dulcisx dulcis vs vsix visualstudio visualstudioextension extension extensibility</tags>
 	<projectUrl>https://github.com/TwentyFourMinutes/DulcisX</projectUrl>
 	<repository type="git" url="https://github.com/TwentyFourMinutes/DulcisX" branch="master" />
-    <dependencies>
-      <dependency id="Microsoft.VisualStudio.SDK" version="16.0.204" />
+	<dependencies>
+	  <dependency id="Microsoft.VisualStudio.SDK" version="16.0.204" />
 	  <dependency id="StringyEnums" version="1.2.0" />
 	  <dependency id="SimpleInjector" version="4.9.1" />
-    </dependencies>
+	</dependencies>
   </metadata>
 </package>
