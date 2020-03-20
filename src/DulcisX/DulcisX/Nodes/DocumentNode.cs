@@ -1,4 +1,4 @@
-﻿using DulcisX.Core.Enums;
+using DulcisX.Core.Enums;
 using Microsoft.Internal.VisualStudio.PlatformUI;
 using Microsoft.VisualStudio;
 using Microsoft.VisualStudio.Shell;
@@ -33,11 +33,21 @@ namespace DulcisX.Nodes
         public string GetBuildAction()
             => HierarchyUtilities.GetHierarchyProperty<string>(UnderlyingHierarchy, ItemId, (int)__VSHPROPID4.VSHPROPID_BuildAction);
 
-        public void SetBuildAction(string buildAction)
+        public CopyToOutputDirectory GetCopyToOutputDirectory()
         {
             ThreadHelper.ThrowIfNotOnUIThread();
 
-            var result = UnderlyingHierarchy.SetProperty(ItemId, (int)__VSHPROPID4.VSHPROPID_BuildAction, buildAction);
+            var val = GetParentProject().GetItemProperty(ItemId, DocumentProperty.CopyToOutputDirectory);
+
+            return val.GetEnumFromRepresentation<CopyToOutputDirectory>();
+        }
+
+        public void SetCopyToOutputDirectory(CopyToOutputDirectory copyToOutputDirectory)
+        {
+            ThreadHelper.ThrowIfNotOnUIThread();
+
+            GetParentProject().SetItemProperty(ItemId, DocumentProperty.CopyToOutputDirectory, copyToOutputDirectory.GetRepresentation());
+        }
 
             ErrorHandler.ThrowOnFailure(result);
         }
