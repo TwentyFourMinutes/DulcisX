@@ -1,9 +1,12 @@
-using DulcisX.Core.Enums;
+﻿using DulcisX.Core.Enums;
+using DulcisX.Core.Enums.VisualStudio;
+using DulcisX.Core.Extensions;
 using Microsoft.Internal.VisualStudio.PlatformUI;
 using Microsoft.VisualStudio;
 using Microsoft.VisualStudio.Shell;
 using Microsoft.VisualStudio.Shell.Interop;
 using StringyEnums;
+using System.IO;
 
 namespace DulcisX.Nodes
 {
@@ -49,16 +52,37 @@ namespace DulcisX.Nodes
             GetParentProject().SetItemProperty(ItemId, DocumentProperty.CopyToOutputDirectory, copyToOutputDirectory.GetRepresentation());
         }
 
-            ErrorHandler.ThrowOnFailure(result);
-        }
-
-        public CopyToOutputDirectory GetCopyToOutputDirectory()
+        public void Rename(string newName)
         {
             ThreadHelper.ThrowIfNotOnUIThread();
 
-            var val = GetParentProject().GetItemProperty(ItemId, DocumentProperty.CopyToOutputDirectory);
+            var rdt = ParentSolution.ServiceContainer.GetCOMInstance<IVsRunningDocumentTable>();
 
-            return val.GetEnumFromRepresentation<CopyToOutputDirectory>();
+            var fullName = GetFullName();
+
+            var name = Path.GetFileName(fullName);
+
+            if (!Path.HasExtension(newName))
+            {
+                newName += Path.GetExtension(fullName);
+            }
+
+            var result = rdt.RenameDocument(fullName, fullName.Replace(name, newName), VSConstants.HIERARCHY_DONTCHANGE, CommonNodeIds.Nil);
+
+            ErrorHandler.ThrowOnFailure(result);
+        }
+
+        public void ChangeExtension(string extension)
+        {
+            ThreadHelper.ThrowIfNotOnUIThread();
+
+            var rdt = ParentSolution.ServiceContainer.GetCOMInstance<IVsRunningDocumentTable>();
+
+            var fullName = GetFullName();
+
+            var result = rdt.RenameDocument(fullName, Path.ChangeExtension(fullName, extension), VSConstants.HIERARCHY_DONTCHANGE, CommonNodeIds.Nil);
+
+            ErrorHandler.ThrowOnFailure(result);
         }
     }
 }
