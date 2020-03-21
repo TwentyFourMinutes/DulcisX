@@ -10,6 +10,7 @@ using SimpleInjector;
 using System;
 using System.Collections.Generic;
 using DulcisX.Core.Components;
+using DulcisX.Core.Models;
 
 namespace DulcisX.Nodes
 {
@@ -49,11 +50,14 @@ namespace DulcisX.Nodes
 
         public Container ServiceContainer { get; }
 
-        public SolutionNode(IVsSolution solution, Container container) : base(null, (IVsHierarchy)solution, CommonNodeIds.Solution)
+        public IServiceProviders ServiceProviders { get; }
+
+        public SolutionNode(IVsSolution solution, IServiceProviders serviceProviders, Container container) : base(null, (IVsHierarchy)solution, CommonNodeIds.Solution)
         {
             SelectedNodes = new SelectedNodes(this);
 
             UnderlyingSolution = solution;
+            ServiceProviders = serviceProviders;
             ServiceContainer = container;
         }
 
