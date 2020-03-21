@@ -30,7 +30,22 @@ namespace DulcisX.Nodes
             }
         }
 
-        public IVsProject UnderlyingProject => (IVsProject)UnderlyingHierarchy;
+        private IVsProject _underlyingProject;
+
+        public IVsProject UnderlyingProject
+        {
+            get
+            {
+                ThreadHelper.ThrowIfNotOnUIThread();
+
+                if (_underlyingProject is null)
+                {
+                    _underlyingProject = (IVsProject)UnderlyingHierarchy;
+                }
+
+                return _underlyingProject;
+            }
+        }
 
         public override NodeTypes NodeType { get; }
 
@@ -112,7 +127,7 @@ namespace DulcisX.Nodes
         public VSADDRESULT CreateDocument(string name)
             => CreateDocument(this.ItemId, name);
 
-        public VSADDRESULT CreateDocument(ProjectItemNode parentNode, string name)
+        public VSADDRESULT CreateDocument(FolderNode parentNode, string name)
             => CreateDocument(parentNode.ItemId, name);
 
         private VSADDRESULT CreateDocument(uint parentId, string name)
@@ -122,6 +137,30 @@ namespace DulcisX.Nodes
             var addResult = new VSADDRESULT[1];
 
             var result = UnderlyingProject.AddItem(parentId, VSADDITEMOPERATION.VSADDITEMOP_CLONEFILE, name, 1, new string[] { Path.GetTempFileName() }, IntPtr.Zero, addResult);
+
+            ErrorHandler.ThrowOnFailure(result);
+
+            return addResult[0];
+        }
+
+        public VSADDRESULT AddExistingDocument(string fullName)
+            => AddExistingDocument(this.ItemId, fullName);
+
+        public VSADDRESULT AddExistingDocument(FolderNode parentNode, string fullName)
+            => AddExistingDocument(parentNode.ItemId, fullName);
+
+        private VSADDRESULT AddExistingDocument(uint parentId, string fullName)
+        {
+            ThreadHelper.ThrowIfNotOnUIThread();
+
+            if (!File.Exists(fullName))
+            {
+                throw new FileNotFoundException("The method couldn't find the specified file.", fullName);
+            }
+
+            VSADDRESULT[] addResult = new VSADDRESULT[1];
+
+            var result = UnderlyingProject.AddItem(parentId, VSADDITEMOPERATION.VSADDITEMOP_CLONEFILE, Path.GetFileName(fullName), 1, new string[] { fullName }, IntPtr.Zero, addResult);
 
             ErrorHandler.ThrowOnFailure(result);
 
