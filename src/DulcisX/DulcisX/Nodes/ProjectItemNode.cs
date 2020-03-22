@@ -1,6 +1,4 @@
-﻿
-using DulcisX.Core.Extensions;
-using DulcisX.Core.Enums;
+﻿using DulcisX.Core.Enums;
 using DulcisX.Core.Enums.VisualStudio;
 using DulcisX.Helpers;
 using Microsoft.Internal.VisualStudio.PlatformUI;
@@ -41,7 +39,7 @@ namespace DulcisX.Nodes
 
         public override BaseNode GetParent()
         {
-            var parentItemId = UnderlyingHierarchy.GetProperty(ItemId, (int)__VSHPROPID.VSHPROPID_Parent);
+            var parentItemId = GetParentNodeId();
 
             if (parentItemId == CommonNodeIds.Nil)
             {

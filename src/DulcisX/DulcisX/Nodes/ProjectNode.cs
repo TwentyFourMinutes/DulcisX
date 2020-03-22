@@ -1,4 +1,4 @@
-using DulcisX.Core.Enums;
+﻿using DulcisX.Core.Enums;
 using DulcisX.Core.Enums.VisualStudio;
 using DulcisX.Exceptions;
 using DulcisX.Helpers;
@@ -156,7 +156,7 @@ namespace DulcisX.Nodes
         public VSADDRESULT AddExistingDocument(FolderNode parentNode, string fullName)
             => AddExistingDocument(parentNode.ItemId, fullName);
 
-        private VSADDRESULT AddExistingDocument(uint parentId, string fullName)
+        internal VSADDRESULT AddExistingDocument(uint parentId, string fullName)
         {
             ThreadHelper.ThrowIfNotOnUIThread();
 
@@ -183,6 +183,34 @@ namespace DulcisX.Nodes
             errorCode = project.RemoveItem(0, node.ItemId, out var success);
 
             return VsConverter.Boolean(success) && ErrorHandler.Succeeded(errorCode);
+        }
+
+        public bool TryGetDocumentNode(string fullName, out DocumentNode document)
+        {
+            if (!File.Exists(fullName))
+            {
+                document = null;
+                return false;
+            }
+
+            ThreadHelper.ThrowIfNotOnUIThread();
+
+            var priority = new VSDOCUMENTPRIORITY[1];
+
+            var result = UnderlyingProject.IsDocumentInProject(fullName, out var found, priority, out var item);
+
+            ErrorHandler.ThrowOnFailure(result);
+
+            if (!VsConverter.Boolean(found))
+            {
+                document = null;
+                return false;
+            }
+
+            var node = NodeFactory.GetProjectItemNode(ParentSolution, this, this.UnderlyingHierarchy, item);
+
+            document = node as DocumentNode;
+            return document is object;
         }
     }
 }

@@ -33,7 +33,7 @@ namespace DulcisX.Nodes
             }
             else
             {
-                var parentItemId = UnderlyingHierarchy.GetProperty(ItemId, (int)__VSHPROPID.VSHPROPID_Parent);
+                var parentItemId = GetParentNodeId();
 
                 if (parentItemId == CommonNodeIds.Nil)
                 {
