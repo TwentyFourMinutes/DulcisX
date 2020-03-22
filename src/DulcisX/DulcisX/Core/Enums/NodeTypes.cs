@@ -12,7 +12,7 @@ namespace DulcisX.Core.Enums
         MiscellaneousFilesProject = 1 << 4,
         SolutionItemsProject = 1 << 5,
         VirtualProject = 1 << 6,
-        VirtualFolder = 1 << 7,
+        SolutionFolder = 1 << 7,
         Solution = 1 << 8,
         All = ~(-1 << 9)
     }

@@ -76,6 +76,7 @@
     <Compile Include="Core\ContainerConstructor.cs" />
     <Compile Include="Core\Enums\CopyToOutputDirectory.cs" />
     <Compile Include="Core\Enums\DocumentProperty.cs" />
+    <Compile Include="Core\Enums\DocumentType.cs" />
     <Compile Include="Core\Enums\NodeTypes.cs" />
     <Compile Include="Core\Enums\StartupOptions.cs" />
     <Compile Include="Core\Enums\VisualStudio\CommonNodeIds.cs" />

@@ -40,7 +40,7 @@ namespace DulcisX.Nodes
             {
                 if (HierarchyUtilities.IsSolutionFolder(hierarchyIdentity))
                 {
-                    return new VirtualFolderNode(solution, hierarchy);
+                    return new SolutionFolderNode(solution, hierarchy);
                 }
                 else if (HierarchyUtilities.IsSolutionNode(hierarchy, itemId))
                 {
