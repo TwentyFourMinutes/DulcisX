@@ -180,7 +180,7 @@ namespace DulcisX.Nodes.Events
         {
             ThreadHelper.ThrowIfNotOnUIThread();
 
-            var documentTable = solution.ServiceContainer.GetCOMInstance<IVsRunningDocumentTable>();
+            var documentTable = solution.RunningDocumentTable;
 
             var rdtEvents = new OpenNodeEvents(solution, documentTable);
 

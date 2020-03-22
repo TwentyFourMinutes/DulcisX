@@ -1,5 +1,6 @@
 ﻿using DulcisX.Core.Enums;
 using DulcisX.Core.Enums.VisualStudio;
+using DulcisX.Core.Extensions;
 using DulcisX.Exceptions;
 using DulcisX.Helpers;
 using Microsoft.Internal.VisualStudio.PlatformUI;
@@ -211,6 +212,17 @@ namespace DulcisX.Nodes
 
             document = node as DocumentNode;
             return document is object;
+        }
+
+        internal uint GetDocumentCookie(DocumentNode document)
+        {
+            ThreadHelper.ThrowIfNotOnUIThread();
+
+            var result = UnderlyingProject.GetMkDocument(document.ItemId, out var fullName);
+
+            ErrorHandler.ThrowOnFailure(result);
+
+            return ((IVsRunningDocumentTable4)ParentSolution.RunningDocumentTable).GetDocumentCookie(fullName);
         }
     }
 }

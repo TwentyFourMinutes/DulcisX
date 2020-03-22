@@ -1,4 +1,6 @@
 using DulcisX.Core.Enums;
+using DulcisX.Core.Enums.VisualStudio;
+using DulcisX.Core.Extensions;
 using DulcisX.Exceptions;
 using Microsoft.Internal.VisualStudio.PlatformUI;
 using Microsoft.VisualStudio;
@@ -109,6 +111,24 @@ namespace DulcisX.Nodes
             GetParentProject().TryGetDocumentNode(newFullName, out var document);
 
             return document;
+        }
+
+        public bool ChangedSinceLastUserSave()
+        {
+            ThreadHelper.ThrowIfNotOnUIThread();
+
+            var docCookie = GetParentProject().GetDocumentCookie(this);
+
+            return ((IVsRunningDocumentTable3)ParentSolution.RunningDocumentTable).IsDocumentDirty(docCookie);
+        }
+
+        public bool IsReadonly()
+        {
+            ThreadHelper.ThrowIfNotOnUIThread();
+
+            var docCookie = GetParentProject().GetDocumentCookie(this);
+
+            return ((IVsRunningDocumentTable3)ParentSolution.RunningDocumentTable).IsDocumentReadOnly(docCookie);
         }
     }
 }

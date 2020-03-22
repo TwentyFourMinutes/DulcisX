@@ -53,6 +53,21 @@ namespace DulcisX.Nodes
 
         public IServiceProviders ServiceProviders { get; }
 
+        private IVsRunningDocumentTable _runningDocumentTable;
+
+        internal IVsRunningDocumentTable RunningDocumentTable
+        {
+            get
+            {
+                if (_runningDocumentTable is null)
+                {
+                    _runningDocumentTable = ServiceContainer.GetCOMInstance<IVsRunningDocumentTable>();
+                }
+
+                return _runningDocumentTable;
+            }
+        }
+
         public SolutionNode(IVsSolution solution, IServiceProviders serviceProviders, Container container) : base(null, (IVsHierarchy)solution, CommonNodeIds.Solution)
         {
             SelectedNodes = new SelectedNodes(this);
