@@ -72,6 +72,22 @@ namespace DulcisX.Nodes
 
             var newFullName = Path.Combine(Path.GetDirectoryName(fullName), newName);
 
+            return Move(newFullName);
+        }
+
+        public DocumentNode ChangeExtension(string extension)
+        {
+            ThreadHelper.ThrowIfNotOnUIThread();
+
+            return Move(Path.ChangeExtension(GetFullName(), extension));
+        }
+
+        private DocumentNode Move(string newFullName)
+        {
+            ThreadHelper.ThrowIfNotOnUIThread();
+
+            var fullName = GetFullName();
+
             File.Move(fullName, newFullName);
 
             var project = GetParentProject();
