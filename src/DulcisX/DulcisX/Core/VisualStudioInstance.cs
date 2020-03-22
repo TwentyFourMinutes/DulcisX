@@ -1,5 +1,4 @@
 ﻿using Microsoft.VisualStudio;
-using Microsoft.VisualStudio.PlatformUI;
 using Microsoft.VisualStudio.Shell;
 using Microsoft.VisualStudio.Shell.Interop;
 
@@ -80,6 +79,39 @@ namespace DulcisX.Core
             ErrorHandler.ThrowOnFailure(result);
 
             return (string)localAppDataDirObj;
+        }
+
+        public string GetReleaseVersion()
+        {
+            ThreadHelper.ThrowIfNotOnUIThread();
+
+            var result = _shell.GetProperty((int)__VSSPROPID5.VSSPROPID_ReleaseVersion, out var releaseVersionObj);
+
+            ErrorHandler.ThrowOnFailure(result);
+
+            return (string)releaseVersionObj;
+        }
+
+        public string GetReleaseDescription()
+        {
+            ThreadHelper.ThrowIfNotOnUIThread();
+
+            var result = _shell.GetProperty((int)__VSSPROPID5.VSSPROPID_ReleaseDescription, out var releaseDescriptionObj);
+
+            ErrorHandler.ThrowOnFailure(result);
+
+            return (string)releaseDescriptionObj;
+        }
+
+        public bool IsPrereleaseVersion()
+        {
+            ThreadHelper.ThrowIfNotOnUIThread();
+
+            var result = _shell.GetProperty((int)__VSSPROPID7.VSSPROPID_IsPrerelease, out var prereleaseVersionObj);
+
+            ErrorHandler.ThrowOnFailure(result);
+
+            return (bool)prereleaseVersionObj;
         }
     }
 }
