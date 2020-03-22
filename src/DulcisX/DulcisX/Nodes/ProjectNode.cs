@@ -1,6 +1,5 @@
 ﻿using DulcisX.Core.Enums;
 using DulcisX.Core.Enums.VisualStudio;
-using DulcisX.Core.Extensions;
 using DulcisX.Exceptions;
 using DulcisX.Helpers;
 using Microsoft.Internal.VisualStudio.PlatformUI;
@@ -223,6 +222,15 @@ namespace DulcisX.Nodes
             ErrorHandler.ThrowOnFailure(result);
 
             return ((IVsRunningDocumentTable4)ParentSolution.RunningDocumentTable).GetDocumentCookie(fullName);
+        }
+
+        public void SaveAllChildren(bool forceSave = false)
+        {
+            ThreadHelper.ThrowIfNotOnUIThread();
+
+            var result = ParentSolution.UnderlyingSolution.SaveSolutionElement(forceSave ? (uint)__VSSLNSAVEOPTIONS.SLNSAVEOPT_ForceSave : (uint)__VSSLNSAVEOPTIONS.SLNSAVEOPT_SaveIfDirty, UnderlyingHierarchy, 0);
+
+            ErrorHandler.ThrowOnFailure(result);
         }
     }
 }

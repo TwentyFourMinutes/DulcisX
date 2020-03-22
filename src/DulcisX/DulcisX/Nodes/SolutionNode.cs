@@ -217,5 +217,14 @@ namespace DulcisX.Nodes
 
             return result == VSConstants.E_UNEXPECTED;
         }
+
+        public void SaveAllChildren(bool forceSave = false)
+        {
+            ThreadHelper.ThrowIfNotOnUIThread();
+
+            var result = UnderlyingSolution.SaveSolutionElement(forceSave ? (uint)__VSSLNSAVEOPTIONS.SLNSAVEOPT_ForceSave : (uint)__VSSLNSAVEOPTIONS.SLNSAVEOPT_SaveIfDirty, null, 0);
+
+            ErrorHandler.ThrowOnFailure(result);
+        }
     }
 }
