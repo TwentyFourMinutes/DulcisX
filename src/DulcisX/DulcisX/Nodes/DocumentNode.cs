@@ -136,5 +136,27 @@ namespace DulcisX.Nodes
 
             ErrorHandler.ThrowOnFailure(result);
         }
+
+        public DocumentType GetDocumentType()
+        {
+            switch (Path.GetExtension(GetFileName()).ToLower())
+            {
+                case ".png":
+                case ".jpg":
+                case ".jpeg":
+                case ".ico":
+                case ".svg":
+                case ".webp":
+                case ".gif":
+                case ".tif":
+                case ".tiff":
+                case ".bmp":
+                case ".psd":
+                case ".ai":
+                    return DocumentType.Image;
+                default:
+                    return DocumentType.Text;
+            }
+        }
     }
 }
