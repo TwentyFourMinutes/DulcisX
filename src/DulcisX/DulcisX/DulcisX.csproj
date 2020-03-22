@@ -126,7 +126,7 @@
     <Compile Include="Nodes\SolutionNode.cs" />
     <Compile Include="Nodes\SolutionNodeConfiguration.cs" />
     <Compile Include="Nodes\UnknownNode.cs" />
-    <Compile Include="Nodes\VirtualFolderNode.cs" />
+    <Compile Include="Nodes\SolutionFolderNode.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

@@ -2,6 +2,7 @@
 using DulcisX.Core.Enums.VisualStudio;
 using DulcisX.Helpers;
 using Microsoft.Internal.VisualStudio.PlatformUI;
+using Microsoft.VisualStudio.Shell;
 using Microsoft.VisualStudio.Shell.Interop;
 using System.Collections.Generic;
 
@@ -69,6 +70,13 @@ namespace DulcisX.Nodes
 
                 node = HierarchyUtilities.GetNextSibling(UnderlyingHierarchy, node, true);
             }
+        }
+
+        public string GetDefaultNamespace()
+        {
+            ThreadHelper.ThrowIfNotOnUIThread();
+
+            return HierarchyUtilities.GetHierarchyProperty<string>(UnderlyingHierarchy, ItemId, (int)__VSHPROPID.VSHPROPID_DefaultNamespace);
         }
     }
 }
