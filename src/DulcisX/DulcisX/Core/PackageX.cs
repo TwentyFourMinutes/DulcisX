@@ -84,6 +84,21 @@ namespace DulcisX.Core
             }
         }
 
+        private VisualStudioInstance _vsInstance;
+
+        public VisualStudioInstance VSInstance
+        {
+            get
+            {
+                if (_vsInstance is null)
+                {
+                    _vsInstance = new VisualStudioInstance(ServiceContainer.GetCOMInstance<IVsShell>());
+                }
+
+                return _vsInstance;
+            }
+        }
+
         public Container ServiceContainer { get; }
 
         private readonly Assembly[] _containerConfigurationAssemblies;
@@ -136,31 +151,6 @@ namespace DulcisX.Core
             => (IServiceProviders)this;
 
         #endregion
-
-        public bool IsElevatedInstance()
-        {
-            ThreadHelper.ThrowIfNotOnUIThread();
-
-            var shell = ServiceContainer.GetCOMInstance<IVsShell>() as IVsShell3;
-
-            var result = shell.IsRunningElevated(out var isElevated);
-
-            ErrorHandler.ThrowOnFailure(result);
-
-            return isElevated;
-        }
-
-        public void RestartInstance(bool restartAsElevated = false)
-        {
-            ThreadHelper.ThrowIfNotOnUIThread();
-
-            var shell = ServiceContainer.GetCOMInstance<IVsShell>() as IVsShell4;
-
-            var result = shell.Restart(restartAsElevated ? (uint)__VSRESTARTTYPE.RESTART_Elevated : (uint)__VSRESTARTTYPE.RESTART_Normal);
-
-            ErrorHandler.ThrowOnFailure(result);
-        }
-
 
         protected override void Dispose(bool disposing)
         {
