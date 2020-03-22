@@ -1,9 +1,12 @@
 using DulcisX.Core.Enums;
+using DulcisX.Exceptions;
 using Microsoft.Internal.VisualStudio.PlatformUI;
 using Microsoft.VisualStudio;
 using Microsoft.VisualStudio.Shell;
 using Microsoft.VisualStudio.Shell.Interop;
 using StringyEnums;
+using System;
+using System.IO;
 
 namespace DulcisX.Nodes
 {
@@ -54,6 +57,42 @@ namespace DulcisX.Nodes
             ThreadHelper.ThrowIfNotOnUIThread();
 
             GetParentProject().SetItemProperty(ItemId, DocumentProperty.CopyToOutputDirectory, copyToOutputDirectory.GetRepresentation());
+        }
+
+        public DocumentNode Rename(string newName)
+        {
+            ThreadHelper.ThrowIfNotOnUIThread();
+
+            var fullName = GetFullName();
+
+            if (!Path.HasExtension(newName))
+            {
+                newName += Path.GetExtension(fullName);
+            }
+
+            var newFullName = Path.Combine(Path.GetDirectoryName(fullName), newName);
+
+            File.Move(fullName, newFullName);
+
+            var project = GetParentProject();
+
+            if (!project.TryRemoveChildren(this, out var code))
+            {
+                ErrorHandler.ThrowOnFailure(code);
+            }
+
+            var parentId = this.GetParentNodeId();
+
+            var success = project.AddExistingDocument(parentId, newFullName);
+
+            if (success != VSADDRESULT.ADDRESULT_Success)
+            {
+                throw new OperationNotSuccessfulException($"Couldn't re-add the file to the project. AddResult: '{success}'.");
+            }
+
+            GetParentProject().TryGetDocumentNode(newFullName, out var document);
+
+            return document;
         }
     }
 }
