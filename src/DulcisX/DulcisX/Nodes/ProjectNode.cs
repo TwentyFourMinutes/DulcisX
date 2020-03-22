@@ -65,6 +65,13 @@ namespace DulcisX.Nodes
             return underlyingGuid;
         }
 
+        public string GetFileName()
+        {
+            ThreadHelper.ThrowIfNotOnUIThread();
+
+            return HierarchyUtilities.GetHierarchyProperty<string>(UnderlyingHierarchy, CommonNodeIds.Project, (int)__VSHPROPID.VSHPROPID_Name);
+        }
+
         public string GetFullName()
         {
             ThreadHelper.ThrowIfNotOnUIThread();

@@ -1,12 +1,9 @@
-﻿using DulcisX.Core.Enums;
-using DulcisX.Core.Enums.VisualStudio;
-using DulcisX.Core.Extensions;
+using DulcisX.Core.Enums;
 using Microsoft.Internal.VisualStudio.PlatformUI;
 using Microsoft.VisualStudio;
 using Microsoft.VisualStudio.Shell;
 using Microsoft.VisualStudio.Shell.Interop;
 using StringyEnums;
-using System.IO;
 
 namespace DulcisX.Nodes
 {
@@ -20,6 +17,13 @@ namespace DulcisX.Nodes
 
         public DocumentNode(SolutionNode solution, ProjectNode project, uint itemId) : base(solution, project, itemId)
         {
+        }
+
+        public string GetFileName()
+        {
+            ThreadHelper.ThrowIfNotOnUIThread();
+
+            return HierarchyUtilities.GetHierarchyProperty<string>(UnderlyingHierarchy, ItemId, (int)__VSHPROPID.VSHPROPID_Name);
         }
 
         public string GetFullName()
@@ -50,39 +54,6 @@ namespace DulcisX.Nodes
             ThreadHelper.ThrowIfNotOnUIThread();
 
             GetParentProject().SetItemProperty(ItemId, DocumentProperty.CopyToOutputDirectory, copyToOutputDirectory.GetRepresentation());
-        }
-
-        public void Rename(string newName)
-        {
-            ThreadHelper.ThrowIfNotOnUIThread();
-
-            var rdt = ParentSolution.ServiceContainer.GetCOMInstance<IVsRunningDocumentTable>();
-
-            var fullName = GetFullName();
-
-            var name = Path.GetFileName(fullName);
-
-            if (!Path.HasExtension(newName))
-            {
-                newName += Path.GetExtension(fullName);
-            }
-
-            var result = rdt.RenameDocument(fullName, fullName.Replace(name, newName), VSConstants.HIERARCHY_DONTCHANGE, CommonNodeIds.Nil);
-
-            ErrorHandler.ThrowOnFailure(result);
-        }
-
-        public void ChangeExtension(string extension)
-        {
-            ThreadHelper.ThrowIfNotOnUIThread();
-
-            var rdt = ParentSolution.ServiceContainer.GetCOMInstance<IVsRunningDocumentTable>();
-
-            var fullName = GetFullName();
-
-            var result = rdt.RenameDocument(fullName, Path.ChangeExtension(fullName, extension), VSConstants.HIERARCHY_DONTCHANGE, CommonNodeIds.Nil);
-
-            ErrorHandler.ThrowOnFailure(result);
         }
     }
 }

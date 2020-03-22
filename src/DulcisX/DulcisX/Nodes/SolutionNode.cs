@@ -11,6 +11,7 @@ using System;
 using System.Collections.Generic;
 using DulcisX.Core.Components;
 using DulcisX.Core.Models;
+using System.IO;
 
 namespace DulcisX.Nodes
 {
@@ -60,6 +61,9 @@ namespace DulcisX.Nodes
             ServiceProviders = serviceProviders;
             ServiceContainer = container;
         }
+
+        public string GetFileName()
+            => Path.GetFileName(GetFullName());
 
         public string GetFullName()
         {

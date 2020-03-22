@@ -28,7 +28,7 @@ namespace DulcisX.Core
                 {
                     var solution = ServiceContainer.GetCOMInstance<IVsSolution>();
 
-                    _solution = new SolutionNode(solution, ServiceContainer);
+                    _solution = new SolutionNode(solution, this, ServiceContainer);
                 }
 
                 return _solution;
