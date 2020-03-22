@@ -1,4 +1,4 @@
-﻿using DulcisX.Core.Enums;
+using DulcisX.Core.Enums;
 using DulcisX.Core.Enums.VisualStudio;
 using DulcisX.Exceptions;
 using DulcisX.Helpers;
@@ -172,6 +172,17 @@ namespace DulcisX.Nodes
             ErrorHandler.ThrowOnFailure(result);
 
             return addResult[0];
+        }
+
+        public bool TryRemoveChildren(ProjectItemNode node, out int errorCode)
+        {
+            ThreadHelper.ThrowIfNotOnUIThread();
+
+            var project = (IVsProject2)UnderlyingProject;
+
+            errorCode = project.RemoveItem(0, node.ItemId, out var success);
+
+            return VsConverter.Boolean(success) && ErrorHandler.Succeeded(errorCode);
         }
     }
 }

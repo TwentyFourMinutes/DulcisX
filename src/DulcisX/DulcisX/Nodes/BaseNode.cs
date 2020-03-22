@@ -51,6 +51,9 @@ namespace DulcisX.Nodes
             return parent;
         }
 
+        internal uint GetParentNodeId()
+            => UnderlyingHierarchy.GetProperty(ItemId, (int)__VSHPROPID.VSHPROPID_Parent);
+
         public IVsHierarchyItem AsHierarchyItem()
         {
             var manager = ParentSolution.ServiceContainer.GetInstance<IVsHierarchyItemManager>();

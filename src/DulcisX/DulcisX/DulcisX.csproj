@@ -93,6 +93,7 @@
     <Compile Include="Core\PackageX.cs" />
     <Compile Include="Exceptions\InvalidHierarchyItemException.cs" />
     <Compile Include="Exceptions\NoFlagsAllowedException.cs" />
+    <Compile Include="Exceptions\OperationNotSuccessfullException.cs" />
     <Compile Include="Helpers\ExtendedHierarchyUtilities.cs" />
     <Compile Include="Helpers\VsConverter.cs" />
     <Compile Include="Helpers\VSHelper.cs" />
@@ -500,9 +501,7 @@
     </Reference>
     <Reference Include="WindowsBase" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Components\Events\Interfaces\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>
