@@ -105,7 +105,7 @@ namespace DulcisX.Nodes
                 throw new OperationNotSuccessfulException($"Couldn't re-add the file to the project. AddResult: '{success}'.");
             }
 
-            GetParentProject().TryGetDocumentNode(newFullName, out var document);
+            GetParentProject().TryGetPhysicalNode<DocumentNode>(newFullName, out var document);
 
             return document;
         }

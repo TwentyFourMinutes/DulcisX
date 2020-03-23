@@ -185,14 +185,8 @@ namespace DulcisX.Nodes
             return VsConverter.Boolean(success) && ErrorHandler.Succeeded(errorCode);
         }
 
-        public bool TryGetDocumentNode(string fullName, out DocumentNode document)
+        public bool TryGetPhysicalNode<TNode>(string fullName, out TNode node) where TNode : ProjectItemNode, IPhysicalNode
         {
-            if (!File.Exists(fullName))
-            {
-                document = null;
-                return false;
-            }
-
             ThreadHelper.ThrowIfNotOnUIThread();
 
             var priority = new VSDOCUMENTPRIORITY[1];
@@ -203,14 +197,14 @@ namespace DulcisX.Nodes
 
             if (!VsConverter.Boolean(found))
             {
-                document = null;
+                node = null;
                 return false;
             }
 
-            var node = NodeFactory.GetProjectItemNode(ParentSolution, this, this.UnderlyingHierarchy, item);
+            var baseNode = NodeFactory.GetProjectItemNode(ParentSolution, this, this.UnderlyingHierarchy, item);
 
-            document = node as DocumentNode;
-            return document is object;
+            node = baseNode as TNode;
+            return node is object;
         }
 
         internal uint GetDocumentCookie(DocumentNode document)
