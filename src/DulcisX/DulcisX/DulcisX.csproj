@@ -85,9 +85,11 @@
     <Compile Include="Core\Enums\VisualStudio\OpenNodeAttribute.cs" />
     <Compile Include="Core\EventSink.cs" />
     <Compile Include="Core\Extensions\ContainerExtensions.cs" />
+    <Compile Include="Core\Extensions\EnumerableExtensions.cs" />
     <Compile Include="Core\Extensions\EnumExtensions.cs" />
     <Compile Include="Core\Extensions\VsHierarchyExtensions.cs" />
     <Compile Include="Core\Extensions\VsRunningDocumentTableExtensions.cs" />
+    <Compile Include="Core\CachingEnumerable.cs" />
     <Compile Include="Core\IContainerConfiguration.cs" />
     <Compile Include="Core\IServiceProviders.cs" />
     <Compile Include="Core\PackageConfiguration.cs" />

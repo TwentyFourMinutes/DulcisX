@@ -26,7 +26,12 @@ namespace DulcisX.Nodes.Events
 
         public int OnSelectionChanged(IVsHierarchy pHierOld, uint itemidOld, IVsMultiItemSelect pMISOld, ISelectionContainer pSCOld, IVsHierarchy pHierNew, uint itemidNew, IVsMultiItemSelect pMISNew, ISelectionContainer pSCNew)
         {
-            OnSelected?.Invoke(SelectedNodes.GetSelection(pMISNew, pHierNew, itemidNew, Solution));
+            if (OnSelected is object)
+            {
+                var enumerable = SelectedNodes.GetSelection(pMISNew, pHierNew, itemidNew, Solution).ToCachingEnumerable();
+
+                OnSelected.Invoke(enumerable);
+            }
 
             return CommonStatusCodes.Success;
         }
