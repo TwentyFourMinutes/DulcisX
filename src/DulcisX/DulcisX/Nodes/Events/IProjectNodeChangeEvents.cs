@@ -1,4 +1,5 @@
-﻿using Microsoft.VisualStudio.Shell.Interop;
+﻿using DulcisX.Core.Enums.VisualStudio;
+using Microsoft.VisualStudio.Shell.Interop;
 using System;
 using System.Collections.Generic;
 
@@ -10,9 +11,9 @@ namespace DulcisX.Nodes.Events
 
         event Action<IEnumerable<AddedPhysicalNode<FolderNode, VSADDDIRECTORYFLAGS>>> OnFoldersAdded;
 
-        event Action<IEnumerable<RemovedPhysicalNode<__VSREMOVEFILEFLAGS2>>> OnDocumentsRemoved;
+        event Action<IEnumerable<RemovedPhysicalNode<PhysicalNodeRemovedFlags>>> OnDocumentsRemoved;
 
-        event Action<IEnumerable<RemovedPhysicalNode<__VSREMOVEDIRECTORYFLAGS2>>> OnFoldersRemoved;
+        event Action<IEnumerable<RemovedPhysicalNode<PhysicalNodeRemovedFlags>>> OnFoldersRemoved;
 
         event Action<IEnumerable<RenamedPhysicalNode<DocumentNode, VSRENAMEFILEFLAGS>>> OnDocumentsRenamed;
 

@@ -15,9 +15,9 @@ namespace DulcisX.Nodes.Events
 
         public event Action<IEnumerable<AddedPhysicalNode<FolderNode, VSADDDIRECTORYFLAGS>>> OnFoldersAdded;
 
-        public event Action<IEnumerable<RemovedPhysicalNode<__VSREMOVEFILEFLAGS2>>> OnDocumentsRemoved;
+        public event Action<IEnumerable<RemovedPhysicalNode<PhysicalNodeRemovedFlags>>> OnDocumentsRemoved;
 
-        public event Action<IEnumerable<RemovedPhysicalNode<__VSREMOVEDIRECTORYFLAGS2>>> OnFoldersRemoved;
+        public event Action<IEnumerable<RemovedPhysicalNode<PhysicalNodeRemovedFlags>>> OnFoldersRemoved;
 
         public event Action<IEnumerable<RenamedPhysicalNode<DocumentNode, VSRENAMEFILEFLAGS>>> OnDocumentsRenamed;
 
@@ -27,7 +27,7 @@ namespace DulcisX.Nodes.Events
 
         private readonly IVsTrackProjectDocuments2 _trackProjectDocuments;
 
-        public ProjectNodeChangeEvents(SolutionNode solution, IVsTrackProjectDocuments2 trackProjectDocuments) : base(solution)
+        private ProjectNodeChangeEvents(SolutionNode solution, IVsTrackProjectDocuments2 trackProjectDocuments) : base(solution)
         {
             _trackProjectDocuments = trackProjectDocuments;
         }
@@ -96,7 +96,7 @@ namespace DulcisX.Nodes.Events
         {
             OnDocumentsRemoved?.Invoke(NodesChanged(rgpProjects, rgFirstIndices, rgpszMkDocuments.Length, (projectNode, iterator) =>
             {
-                return new RemovedPhysicalNode<__VSREMOVEFILEFLAGS2>(projectNode, rgpszMkDocuments[iterator], (__VSREMOVEFILEFLAGS2)rgFlags[iterator]);
+                return new RemovedPhysicalNode<PhysicalNodeRemovedFlags>(projectNode, rgpszMkDocuments[iterator], ((rgFlags[iterator] & 16u) != 0u) ? PhysicalNodeRemovedFlags.Removed : PhysicalNodeRemovedFlags.Deleted);
             }).ToCachingEnumerable());
         }
 
@@ -104,7 +104,7 @@ namespace DulcisX.Nodes.Events
         {
             OnFoldersRemoved?.Invoke(NodesChanged(rgpProjects, rgFirstIndices, rgpszMkDocuments.Length, (projectNode, iterator) =>
             {
-                return new RemovedPhysicalNode<__VSREMOVEDIRECTORYFLAGS2>(projectNode, rgpszMkDocuments[iterator], (__VSREMOVEDIRECTORYFLAGS2)rgFlags[iterator]);
+                return new RemovedPhysicalNode<PhysicalNodeRemovedFlags>(projectNode, rgpszMkDocuments[iterator], ((rgFlags[iterator] & 16u) != 0u) ? PhysicalNodeRemovedFlags.Removed : PhysicalNodeRemovedFlags.Deleted);
             }).ToCachingEnumerable());
         }
 

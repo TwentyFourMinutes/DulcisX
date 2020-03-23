@@ -83,6 +83,7 @@
     <Compile Include="Core\Enums\VisualStudio\CommonStatusCodes.cs" />
     <Compile Include="Core\Enums\VisualStudio\CommonStreamKeys.cs" />
     <Compile Include="Core\Enums\VisualStudio\OpenNodeAttribute.cs" />
+    <Compile Include="Core\Enums\VisualStudio\PhysicalNodeRemovedFlags.cs" />
     <Compile Include="Core\EventSink.cs" />
     <Compile Include="Core\Extensions\ContainerExtensions.cs" />
     <Compile Include="Core\Extensions\EnumerableExtensions.cs" />
