@@ -101,9 +101,12 @@
     <Compile Include="Helpers\ExtendedHierarchyUtilities.cs" />
     <Compile Include="Helpers\VsConverter.cs" />
     <Compile Include="Helpers\VSHelper.cs" />
+    <Compile Include="Nodes\ChangedNodeBase.cs" />
+    <Compile Include="Nodes\RemovedPhysicalNode.cs" />
     <Compile Include="Nodes\BaseNode.cs" />
     <Compile Include="Nodes\DocumentNode.cs" />
     <Compile Include="Nodes\Events\CancelTranslatorFactory.cs" />
+    <Compile Include="Nodes\AddedPhysicalNode.cs" />
     <Compile Include="Nodes\Events\EventDistributor.cs" />
     <Compile Include="Nodes\Events\INodeSelectionEvents.cs" />
     <Compile Include="Nodes\Events\IOpenNodeEvents.cs" />
@@ -124,6 +127,8 @@
     <Compile Include="Nodes\NodeFactory.cs" />
     <Compile Include="Nodes\ProjectItemNode.cs" />
     <Compile Include="Nodes\ProjectNode.cs" />
+    <Compile Include="Nodes\RenamedPhysicalNode.cs" />
+    <Compile Include="Nodes\ChangedPhysicalSccNode.cs" />
     <Compile Include="Nodes\SelectedNodes.cs" />
     <Compile Include="Nodes\SolutionItemNode.cs" />
     <Compile Include="Nodes\SolutionNode.cs" />

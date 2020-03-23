@@ -1,32 +1,23 @@
-﻿using System;
+﻿using Microsoft.VisualStudio.Shell.Interop;
+using System;
 using System.Collections.Generic;
 
 namespace DulcisX.Nodes.Events
 {
-    /// <summary>
-    /// Currently not being used
-    /// </summary>
     public interface IProjectNodeChangeEvents
     {
-        event Action<DocumentNode> OnDocumentAdded;
-        event Action<IEnumerable<DocumentNode>> OnBulkDocumentsAdded;
+        event Action<IEnumerable<AddedPhysicalNode<DocumentNode, VSADDFILEFLAGS>>> OnDocumentsAdded;
 
-        event Action<FolderNode> OnFolderAdded;
-        event Action<IEnumerable<FolderNode>> OnBulkFoldersAdded;
+        event Action<IEnumerable<AddedPhysicalNode<FolderNode, VSADDDIRECTORYFLAGS>>> OnFoldersAdded;
 
-        event Action<DocumentNode> OnDocumentRemoved;
-        event Action<IEnumerable<DocumentNode>> OnBulkDocumentsRemoved;
+        event Action<IEnumerable<RemovedPhysicalNode<__VSREMOVEFILEFLAGS2>>> OnDocumentsRemoved;
 
-        event Action<FolderNode> OnFolderRemoved;
-        event Action<IEnumerable<FolderNode>> OnBulkFoldersRemoved;
+        event Action<IEnumerable<RemovedPhysicalNode<__VSREMOVEDIRECTORYFLAGS2>>> OnFoldersRemoved;
 
-        event Action<DocumentNode> OnDocumentRenamed;
-        event Action<IEnumerable<DocumentNode>> OnBulkDocumentsRenamed;
+        event Action<IEnumerable<RenamedPhysicalNode<DocumentNode, VSRENAMEFILEFLAGS>>> OnDocumentsRenamed;
 
-        event Action<FolderNode> OnFolderRenamed;
-        event Action<IEnumerable<FolderNode>> OnBulkFoldersRenamed;
+        event Action<IEnumerable<RenamedPhysicalNode<FolderNode, VSRENAMEDIRECTORYFLAGS>>> OnFoldersRenamed;
 
-        event Action<DocumentNode> OnDocumentSccStatusChanged;
-        event Action<IEnumerable<DocumentNode>> OnBulkDocumentSccStatusChanged;
+        event Action<IEnumerable<ChangedPhysicalSccNode<IPhysicalNode, __SccStatus>>> OnDocumentSccStatusChanged;
     }
 }

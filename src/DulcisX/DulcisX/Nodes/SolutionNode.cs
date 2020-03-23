@@ -39,6 +39,11 @@ namespace DulcisX.Nodes
         public INodeSelectionEvents NodeSelectionEvents
             => _nodeSelectionEvents ?? (_nodeSelectionEvents = ServiceContainer.GetInstance<INodeSelectionEvents>());
 
+        private IProjectNodeChangeEvents _projectNodeChangedEvents;
+
+        public IProjectNodeChangeEvents ProjectNodeChangedEvents
+            => _projectNodeChangedEvents ?? (_projectNodeChangedEvents = ServiceContainer.GetInstance<IProjectNodeChangeEvents>());
+
         #endregion
 
         public SelectedNodes SelectedNodes { get; }

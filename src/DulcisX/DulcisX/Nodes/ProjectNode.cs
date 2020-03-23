@@ -185,7 +185,7 @@ namespace DulcisX.Nodes
             return VsConverter.Boolean(success) && ErrorHandler.Succeeded(errorCode);
         }
 
-        public bool TryGetPhysicalNode<TNode>(string fullName, out TNode node) where TNode : ProjectItemNode, IPhysicalNode
+        public bool TryGetPhysicalNode<TNode>(string fullName, out TNode node) where TNode : class, IPhysicalNode
         {
             ThreadHelper.ThrowIfNotOnUIThread();
 

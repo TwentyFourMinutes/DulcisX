@@ -1,16 +1,9 @@
-using System;
-using System.ComponentModel;
-using System.Diagnostics;
-using System.Linq;
-using System.Runtime.InteropServices;
-using System.Threading;
 using DulcisX.Core;
-using DulcisX.Core.Enums;
-using DulcisX.Nodes;
-using EnvDTE;
 using Microsoft.VisualStudio;
 using Microsoft.VisualStudio.Shell;
-using Microsoft.VisualStudio.Shell.Interop;
+using System;
+using System.Runtime.InteropServices;
+using System.Threading;
 
 namespace DulcisX.TestVSIX
 {
@@ -31,13 +24,6 @@ namespace DulcisX.TestVSIX
         private async System.Threading.Tasks.Task DulcisXTestVSIXPackage_OnInitializeAsync(CancellationToken arg, IProgress<ServiceProgressData> progress)
         {
             await JoinableTaskFactory.SwitchToMainThreadAsync(arg);
-
-            Solution.OpenNodeEvents.OnSave.Hook(NodeTypes.Document, Saved);
-        }
-
-        private void Saved(IPhysicalNode savedNode)
-        {
-            (savedNode as DocumentNode).SetCopyToOutputDirectory(CopyToOutputDirectory.Never);
         }
 
         #endregion

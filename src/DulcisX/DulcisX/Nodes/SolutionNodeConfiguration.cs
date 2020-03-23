@@ -11,6 +11,7 @@ namespace DulcisX.Nodes
             container.RegisterSingleton(() => Events.SolutionBuildEvents.Create(package.Solution));
             container.RegisterSingleton(() => Events.OpenNodeEvents.Create(package.Solution));
             container.RegisterSingleton(() => Events.NodeSelectionEvents.Create(package.Solution));
+            container.RegisterSingleton(() => Events.ProjectNodeChangeEvents.Create(package.Solution));
         }
     }
 }

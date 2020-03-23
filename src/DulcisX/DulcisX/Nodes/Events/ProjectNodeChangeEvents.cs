@@ -9,31 +9,21 @@ using DulcisX.Core;
 
 namespace DulcisX.Nodes.Events
 {
-    /// <summary>
-    /// Currently not being used
-    /// </summary>
     internal class ProjectNodeChangeEvents : NodeEventSink, IProjectNodeChangeEvents, IVsTrackProjectDocumentsEvents2, IVsTrackProjectDocumentsEvents4
     {
-        public event Action<DocumentNode> OnDocumentAdded;
-        public event Action<IEnumerable<DocumentNode>> OnBulkDocumentsAdded;
+        public event Action<IEnumerable<AddedPhysicalNode<DocumentNode, VSADDFILEFLAGS>>> OnDocumentsAdded;
 
-        public event Action<FolderNode> OnFolderAdded;
-        public event Action<IEnumerable<FolderNode>> OnBulkFoldersAdded;
+        public event Action<IEnumerable<AddedPhysicalNode<FolderNode, VSADDDIRECTORYFLAGS>>> OnFoldersAdded;
 
-        public event Action<DocumentNode> OnDocumentRemoved;
-        public event Action<IEnumerable<DocumentNode>> OnBulkDocumentsRemoved;
+        public event Action<IEnumerable<RemovedPhysicalNode<__VSREMOVEFILEFLAGS2>>> OnDocumentsRemoved;
 
-        public event Action<FolderNode> OnFolderRemoved;
-        public event Action<IEnumerable<FolderNode>> OnBulkFoldersRemoved;
+        public event Action<IEnumerable<RemovedPhysicalNode<__VSREMOVEDIRECTORYFLAGS2>>> OnFoldersRemoved;
 
-        public event Action<DocumentNode> OnDocumentRenamed;
-        public event Action<IEnumerable<DocumentNode>> OnBulkDocumentsRenamed;
+        public event Action<IEnumerable<RenamedPhysicalNode<DocumentNode, VSRENAMEFILEFLAGS>>> OnDocumentsRenamed;
 
-        public event Action<FolderNode> OnFolderRenamed;
-        public event Action<IEnumerable<FolderNode>> OnBulkFoldersRenamed;
+        public event Action<IEnumerable<RenamedPhysicalNode<FolderNode, VSRENAMEDIRECTORYFLAGS>>> OnFoldersRenamed;
 
-        public event Action<DocumentNode> OnDocumentSccStatusChanged;
-        public event Action<IEnumerable<DocumentNode>> OnBulkDocumentSccStatusChanged;
+        public event Action<IEnumerable<ChangedPhysicalSccNode<IPhysicalNode, __SccStatus>>> OnDocumentSccStatusChanged;
 
         private readonly IVsTrackProjectDocuments2 _trackProjectDocuments;
 
@@ -44,13 +34,96 @@ namespace DulcisX.Nodes.Events
 
         public int OnAfterAddFilesEx(int cProjects, int cFiles, IVsProject[] rgpProjects, int[] rgFirstIndices, string[] rgpszMkDocuments, VSADDFILEFLAGS[] rgFlags)
         {
+            OnDocumentsAdded?.Invoke(NodesChanged(rgpProjects, rgFirstIndices, rgpszMkDocuments.Length, (projectNode, iterator) =>
+            {
+                if (!projectNode.TryGetPhysicalNode<DocumentNode>(rgpszMkDocuments[iterator], out var document))
+                {
+                    throw new InvalidOperationException();
+                }
+
+                return new AddedPhysicalNode<DocumentNode, VSADDFILEFLAGS>(document, rgFlags[iterator]);
+            }).ToCachingEnumerable());
+
             return CommonStatusCodes.Success;
         }
 
         public int OnAfterAddDirectoriesEx(int cProjects, int cDirectories, IVsProject[] rgpProjects, int[] rgFirstIndices, string[] rgpszMkDocuments, VSADDDIRECTORYFLAGS[] rgFlags)
         {
+            OnFoldersAdded?.Invoke(NodesChanged(rgpProjects, rgFirstIndices, rgpszMkDocuments.Length, (projectNode, iterator) =>
+            {
+                if (!projectNode.TryGetPhysicalNode<FolderNode>(rgpszMkDocuments[iterator], out var folder))
+                {
+                    throw new InvalidOperationException();
+                }
+
+                return new AddedPhysicalNode<FolderNode, VSADDDIRECTORYFLAGS>(folder, rgFlags[iterator]);
+            }).ToCachingEnumerable());
+
             return CommonStatusCodes.Success;
         }
+
+        public int OnAfterRenameFiles(int cProjects, int cFiles, IVsProject[] rgpProjects, int[] rgFirstIndices, string[] rgszMkOldNames, string[] rgszMkNewNames, VSRENAMEFILEFLAGS[] rgFlags)
+        {
+            OnDocumentsRenamed?.Invoke(NodesChanged(rgpProjects, rgFirstIndices, rgszMkNewNames.Length, (projectNode, iterator) =>
+            {
+                if (!projectNode.TryGetPhysicalNode<DocumentNode>(rgszMkNewNames[iterator], out var document))
+                {
+                    throw new InvalidOperationException();
+                }
+
+                return new RenamedPhysicalNode<DocumentNode, VSRENAMEFILEFLAGS>(document, rgszMkOldNames[iterator], rgszMkNewNames[iterator], rgFlags[iterator]);
+            }).ToCachingEnumerable());
+
+            return CommonStatusCodes.Success;
+        }
+
+        public int OnAfterRenameDirectories(int cProjects, int cDirs, IVsProject[] rgpProjects, int[] rgFirstIndices, string[] rgszMkOldNames, string[] rgszMkNewNames, VSRENAMEDIRECTORYFLAGS[] rgFlags)
+        {
+            OnFoldersRenamed?.Invoke(NodesChanged(rgpProjects, rgFirstIndices, rgszMkNewNames.Length, (projectNode, iterator) =>
+            {
+                if (!projectNode.TryGetPhysicalNode<FolderNode>(rgszMkNewNames[iterator], out var folder))
+                {
+                    throw new InvalidOperationException();
+                }
+
+                return new RenamedPhysicalNode<FolderNode, VSRENAMEDIRECTORYFLAGS>(folder, rgszMkOldNames[iterator], rgszMkNewNames[iterator], rgFlags[iterator]);
+            }).ToCachingEnumerable());
+
+            return CommonStatusCodes.Success;
+        }
+
+        public void OnAfterRemoveFilesEx(int cProjects, int cFiles, IVsProject[] rgpProjects, int[] rgFirstIndices, string[] rgpszMkDocuments, uint[] rgFlags)
+        {
+            OnDocumentsRemoved?.Invoke(NodesChanged(rgpProjects, rgFirstIndices, rgpszMkDocuments.Length, (projectNode, iterator) =>
+            {
+                return new RemovedPhysicalNode<__VSREMOVEFILEFLAGS2>(projectNode, rgpszMkDocuments[iterator], (__VSREMOVEFILEFLAGS2)rgFlags[iterator]);
+            }).ToCachingEnumerable());
+        }
+
+        public void OnAfterRemoveDirectoriesEx(int cProjects, int cDirectories, IVsProject[] rgpProjects, int[] rgFirstIndices, string[] rgpszMkDocuments, uint[] rgFlags)
+        {
+            OnFoldersRemoved?.Invoke(NodesChanged(rgpProjects, rgFirstIndices, rgpszMkDocuments.Length, (projectNode, iterator) =>
+            {
+                return new RemovedPhysicalNode<__VSREMOVEDIRECTORYFLAGS2>(projectNode, rgpszMkDocuments[iterator], (__VSREMOVEDIRECTORYFLAGS2)rgFlags[iterator]);
+            }).ToCachingEnumerable());
+        }
+
+        public int OnAfterSccStatusChanged(int cProjects, int cFiles, IVsProject[] rgpProjects, int[] rgFirstIndices, string[] rgpszMkDocuments, uint[] rgdwSccStatus)
+        {
+            OnDocumentSccStatusChanged?.Invoke(NodesChanged(rgpProjects, rgFirstIndices, rgpszMkDocuments.Length, (projectNode, iterator) =>
+            {
+                if (!projectNode.TryGetPhysicalNode<IPhysicalNode>(rgpszMkDocuments[iterator], out var physicalNode))
+                {
+                    throw new InvalidOperationException();
+                }
+
+                return new ChangedPhysicalSccNode<IPhysicalNode, __SccStatus>(physicalNode, (__SccStatus)rgdwSccStatus[iterator]);
+            }).ToCachingEnumerable());
+
+            return CommonStatusCodes.Success;
+        }
+
+        #region Replaced by ExMethods
 
         public int OnAfterRemoveFiles(int cProjects, int cFiles, IVsProject[] rgpProjects, int[] rgFirstIndices, string[] rgpszMkDocuments, VSREMOVEFILEFLAGS[] rgFlags)
         {
@@ -62,20 +135,9 @@ namespace DulcisX.Nodes.Events
             return CommonStatusCodes.Success;
         }
 
-        public int OnAfterRenameFiles(int cProjects, int cFiles, IVsProject[] rgpProjects, int[] rgFirstIndices, string[] rgszMkOldNames, string[] rgszMkNewNames, VSRENAMEFILEFLAGS[] rgFlags)
-        {
-            return CommonStatusCodes.Success;
-        }
+        #endregion
 
-        public int OnAfterRenameDirectories(int cProjects, int cDirs, IVsProject[] rgpProjects, int[] rgFirstIndices, string[] rgszMkOldNames, string[] rgszMkNewNames, VSRENAMEDIRECTORYFLAGS[] rgFlags)
-        {
-            return CommonStatusCodes.Success;
-        }
-
-        public int OnAfterSccStatusChanged(int cProjects, int cFiles, IVsProject[] rgpProjects, int[] rgFirstIndices, string[] rgpszMkDocuments, uint[] rgdwSccStatus)
-        {
-            return CommonStatusCodes.Success;
-        }
+        #region Queries
 
         public int OnQueryAddFiles(IVsProject pProject, int cFiles, string[] rgpszMkDocuments, VSQUERYADDFILEFLAGS[] rgFlags, VSQUERYADDFILERESULTS[] pSummaryResult, VSQUERYADDFILERESULTS[] rgResults)
             => CommonStatusCodes.Success;
@@ -94,6 +156,40 @@ namespace DulcisX.Nodes.Events
 
         public int OnQueryRemoveDirectories(IVsProject pProject, int cDirectories, string[] rgpszMkDocuments, VSQUERYREMOVEDIRECTORYFLAGS[] rgFlags, VSQUERYREMOVEDIRECTORYRESULTS[] pSummaryResult, VSQUERYREMOVEDIRECTORYRESULTS[] rgResults)
             => CommonStatusCodes.Success;
+
+        public void OnQueryRemoveFilesEx(IVsProject pProject, int cFiles, string[] rgpszMkDocuments, uint[] rgFlags, VSQUERYREMOVEFILERESULTS[] pSummaryResult, VSQUERYREMOVEFILERESULTS[] rgResults)
+        { }
+
+        public void OnQueryRemoveDirectoriesEx(IVsProject pProject, int cDirectories, string[] rgpszMkDocuments, uint[] rgFlags, VSQUERYREMOVEDIRECTORYRESULTS[] pSummaryResult, VSQUERYREMOVEDIRECTORYRESULTS[] rgResults)
+        { }
+
+        #endregion
+
+        private IEnumerable<T> NodesChanged<T>(IVsProject[] projects, int[] firstIndices, int itemCount, Func<ProjectNode, int, T> converter)
+        {
+            ThreadHelper.ThrowIfNotOnUIThread();
+
+            int projItemIndex = 0;
+
+            for (int i = 0; i < projects.Length; i++)
+            {
+                var currentProjectNode = NodeFactory.GetSolutionItemNode(Solution, (IVsHierarchy)projects[i], CommonNodeIds.Project);
+
+                if (!(currentProjectNode is ProjectNode currentProject))
+                {
+                    continue;
+                }
+
+                int endProjectIndex = ((i + 1) == projects.Length)
+                                          ? itemCount
+                                          : firstIndices[i + 1];
+
+                for (; projItemIndex < endProjectIndex; projItemIndex++)
+                {
+                    yield return converter.Invoke(currentProject, projItemIndex);
+                }
+            }
+        }
 
         internal static IProjectNodeChangeEvents Create(SolutionNode solution)
         {
@@ -119,26 +215,6 @@ namespace DulcisX.Nodes.Events
             var result = _trackProjectDocuments.UnadviseTrackProjectDocumentsEvents(Cookie);
 
             ErrorHandler.ThrowOnFailure(result);
-        }
-
-        public void OnQueryRemoveFilesEx(IVsProject pProject, int cFiles, string[] rgpszMkDocuments, uint[] rgFlags, VSQUERYREMOVEFILERESULTS[] pSummaryResult, VSQUERYREMOVEFILERESULTS[] rgResults)
-        {
-
-        }
-
-        public void OnQueryRemoveDirectoriesEx(IVsProject pProject, int cDirectories, string[] rgpszMkDocuments, uint[] rgFlags, VSQUERYREMOVEDIRECTORYRESULTS[] pSummaryResult, VSQUERYREMOVEDIRECTORYRESULTS[] rgResults)
-        {
-
-        }
-
-        public void OnAfterRemoveFilesEx(int cProjects, int cFiles, IVsProject[] rgpProjects, int[] rgFirstIndices, string[] rgpszMkDocuments, uint[] rgFlags)
-        {
-
-        }
-
-        public void OnAfterRemoveDirectoriesEx(int cProjects, int cDirectories, IVsProject[] rgpProjects, int[] rgFirstIndices, string[] rgpszMkDocuments, uint[] rgFlags)
-        {
-
         }
     }
 }

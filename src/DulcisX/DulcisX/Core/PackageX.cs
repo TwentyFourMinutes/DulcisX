@@ -2,8 +2,6 @@ using DulcisX.Core.Components;
 using DulcisX.Core.Extensions;
 using DulcisX.Core.Models;
 using DulcisX.Nodes;
-using Microsoft.VisualStudio;
-using Microsoft.VisualStudio.PlatformUI;
 using Microsoft.VisualStudio.Shell;
 using Microsoft.VisualStudio.Shell.Interop;
 using SimpleInjector;
