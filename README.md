@@ -68,11 +68,11 @@ Now how does it differ from the current DTE? This package provides a cleaner abs
 |   ✅    | SelectedItems          |
 |   🌀    | Solution               |
 |   🌀    | SourceControl          |
-|   ✅    | StatusBar              |
+|   🌀    | StatusBar              |
 |   ❌    | ToolWindows            |
 |   ❌    | UndoContext            |
 |   ❌    | UserControl            |
-|   ❌    | Version                |
+|   ✅    | Version                |
 |   ❌    | WindowConfigurations   |
 |   ❌    | Windows                |
 
