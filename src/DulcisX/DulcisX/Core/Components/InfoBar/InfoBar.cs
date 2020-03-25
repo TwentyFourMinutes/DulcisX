@@ -28,7 +28,6 @@ namespace DulcisX.Core.Components
 
             private readonly InfoBar _infoBar;
             private readonly bool _hasCloseButton;
-            private Action _cancelCallback;
 
             private bool _containsHyperlink;
 
