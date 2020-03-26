@@ -1,0 +1,551 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Interface ISolutionEvents
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Interface ISolutionEvents
+   ">
+    <meta name="generator" content="docfx 2.51.0.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="DulcisX.Nodes.Events.ISolutionEvents">
+  
+  
+  <h1 id="DulcisX_Nodes_Events_ISolutionEvents" data-uid="DulcisX.Nodes.Events.ISolutionEvents" class="text-break">Interface ISolutionEvents
+  </h1>
+  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="DulcisX.Nodes.Events.ISolutionLoadEvents.html#DulcisX_Nodes_Events_ISolutionLoadEvents_OnBackgroundSolutionLoad">ISolutionLoadEvents.OnBackgroundSolutionLoad</a>
+    </div>
+    <div>
+      <a class="xref" href="DulcisX.Nodes.Events.ISolutionLoadEvents.html#DulcisX_Nodes_Events_ISolutionLoadEvents_OnBackgroundSolutionLoaded">ISolutionLoadEvents.OnBackgroundSolutionLoaded</a>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="DulcisX.Nodes.Events.html">DulcisX.Nodes.Events</a></h6>
+  <h6><strong>Assembly</strong>: DulcisX.dll</h6>
+  <h5 id="DulcisX_Nodes_Events_ISolutionEvents_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public interface ISolutionEvents : ISolutionLoadEvents</code></pre>
+  </div>
+  <h3 id="properties">Properties
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/TwentyFourMinutes/DulcisX/new/master/apiSpec/new?filename=DulcisX_Nodes_Events_ISolutionEvents_OnProjectClose.md&amp;value=---%0Auid%3A%20DulcisX.Nodes.Events.ISolutionEvents.OnProjectClose%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/TwentyFourMinutes/DulcisX/blob/master/src/DulcisX/DulcisX/Nodes/Events/ISolutionEvents.cs/#L11">View Source</a>
+  </span>
+  <a id="DulcisX_Nodes_Events_ISolutionEvents_OnProjectClose_" data-uid="DulcisX.Nodes.Events.ISolutionEvents.OnProjectClose*"></a>
+  <h4 id="DulcisX_Nodes_Events_ISolutionEvents_OnProjectClose" data-uid="DulcisX.Nodes.Events.ISolutionEvents.OnProjectClose">OnProjectClose</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">EventDistributor&lt;Action&lt;ProjectNode, bool&gt;&gt; OnProjectClose { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="DulcisX.Nodes.Events.EventDistributor-1.html">EventDistributor</a>&lt;<span class="xref">System.Action</span>&lt;<a class="xref" href="DulcisX.Nodes.ProjectNode.html">ProjectNode</a>, <span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/TwentyFourMinutes/DulcisX/new/master/apiSpec/new?filename=DulcisX_Nodes_Events_ISolutionEvents_OnProjectLoaded.md&amp;value=---%0Auid%3A%20DulcisX.Nodes.Events.ISolutionEvents.OnProjectLoaded%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/TwentyFourMinutes/DulcisX/blob/master/src/DulcisX/DulcisX/Nodes/Events/ISolutionEvents.cs/#L13">View Source</a>
+  </span>
+  <a id="DulcisX_Nodes_Events_ISolutionEvents_OnProjectLoaded_" data-uid="DulcisX.Nodes.Events.ISolutionEvents.OnProjectLoaded*"></a>
+  <h4 id="DulcisX_Nodes_Events_ISolutionEvents_OnProjectLoaded" data-uid="DulcisX.Nodes.Events.ISolutionEvents.OnProjectLoaded">OnProjectLoaded</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">EventDistributor&lt;Action&lt;ProjectNode, ProjectNode&gt;&gt; OnProjectLoaded { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="DulcisX.Nodes.Events.EventDistributor-1.html">EventDistributor</a>&lt;<span class="xref">System.Action</span>&lt;<a class="xref" href="DulcisX.Nodes.ProjectNode.html">ProjectNode</a>, <a class="xref" href="DulcisX.Nodes.ProjectNode.html">ProjectNode</a>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/TwentyFourMinutes/DulcisX/new/master/apiSpec/new?filename=DulcisX_Nodes_Events_ISolutionEvents_OnProjectOpened.md&amp;value=---%0Auid%3A%20DulcisX.Nodes.Events.ISolutionEvents.OnProjectOpened%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/TwentyFourMinutes/DulcisX/blob/master/src/DulcisX/DulcisX/Nodes/Events/ISolutionEvents.cs/#L7">View Source</a>
+  </span>
+  <a id="DulcisX_Nodes_Events_ISolutionEvents_OnProjectOpened_" data-uid="DulcisX.Nodes.Events.ISolutionEvents.OnProjectOpened*"></a>
+  <h4 id="DulcisX_Nodes_Events_ISolutionEvents_OnProjectOpened" data-uid="DulcisX.Nodes.Events.ISolutionEvents.OnProjectOpened">OnProjectOpened</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">EventDistributor&lt;Action&lt;ProjectNode, bool&gt;&gt; OnProjectOpened { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="DulcisX.Nodes.Events.EventDistributor-1.html">EventDistributor</a>&lt;<span class="xref">System.Action</span>&lt;<a class="xref" href="DulcisX.Nodes.ProjectNode.html">ProjectNode</a>, <span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/TwentyFourMinutes/DulcisX/new/master/apiSpec/new?filename=DulcisX_Nodes_Events_ISolutionEvents_OnProjectRenamed.md&amp;value=---%0Auid%3A%20DulcisX.Nodes.Events.ISolutionEvents.OnProjectRenamed%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/TwentyFourMinutes/DulcisX/blob/master/src/DulcisX/DulcisX/Nodes/Events/ISolutionEvents.cs/#L19">View Source</a>
+  </span>
+  <a id="DulcisX_Nodes_Events_ISolutionEvents_OnProjectRenamed_" data-uid="DulcisX.Nodes.Events.ISolutionEvents.OnProjectRenamed*"></a>
+  <h4 id="DulcisX_Nodes_Events_ISolutionEvents_OnProjectRenamed" data-uid="DulcisX.Nodes.Events.ISolutionEvents.OnProjectRenamed">OnProjectRenamed</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">EventDistributor&lt;Action&lt;ProjectNode&gt;&gt; OnProjectRenamed { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="DulcisX.Nodes.Events.EventDistributor-1.html">EventDistributor</a>&lt;<span class="xref">System.Action</span>&lt;<a class="xref" href="DulcisX.Nodes.ProjectNode.html">ProjectNode</a>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/TwentyFourMinutes/DulcisX/new/master/apiSpec/new?filename=DulcisX_Nodes_Events_ISolutionEvents_OnProjectUnload.md&amp;value=---%0Auid%3A%20DulcisX.Nodes.Events.ISolutionEvents.OnProjectUnload%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/TwentyFourMinutes/DulcisX/blob/master/src/DulcisX/DulcisX/Nodes/Events/ISolutionEvents.cs/#L17">View Source</a>
+  </span>
+  <a id="DulcisX_Nodes_Events_ISolutionEvents_OnProjectUnload_" data-uid="DulcisX.Nodes.Events.ISolutionEvents.OnProjectUnload*"></a>
+  <h4 id="DulcisX_Nodes_Events_ISolutionEvents_OnProjectUnload" data-uid="DulcisX.Nodes.Events.ISolutionEvents.OnProjectUnload">OnProjectUnload</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">EventDistributor&lt;Action&lt;ProjectNode, ProjectNode&gt;&gt; OnProjectUnload { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="DulcisX.Nodes.Events.EventDistributor-1.html">EventDistributor</a>&lt;<span class="xref">System.Action</span>&lt;<a class="xref" href="DulcisX.Nodes.ProjectNode.html">ProjectNode</a>, <a class="xref" href="DulcisX.Nodes.ProjectNode.html">ProjectNode</a>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/TwentyFourMinutes/DulcisX/new/master/apiSpec/new?filename=DulcisX_Nodes_Events_ISolutionEvents_OnQueryProjectClose.md&amp;value=---%0Auid%3A%20DulcisX.Nodes.Events.ISolutionEvents.OnQueryProjectClose%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/TwentyFourMinutes/DulcisX/blob/master/src/DulcisX/DulcisX/Nodes/Events/ISolutionEvents.cs/#L9">View Source</a>
+  </span>
+  <a id="DulcisX_Nodes_Events_ISolutionEvents_OnQueryProjectClose_" data-uid="DulcisX.Nodes.Events.ISolutionEvents.OnQueryProjectClose*"></a>
+  <h4 id="DulcisX_Nodes_Events_ISolutionEvents_OnQueryProjectClose" data-uid="DulcisX.Nodes.Events.ISolutionEvents.OnQueryProjectClose">OnQueryProjectClose</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">EventDistributor&lt;Action&lt;ProjectNode, bool, CancelTraslaterToken&gt;&gt; OnQueryProjectClose { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="DulcisX.Nodes.Events.EventDistributor-1.html">EventDistributor</a>&lt;<span class="xref">System.Action</span>&lt;<a class="xref" href="DulcisX.Nodes.ProjectNode.html">ProjectNode</a>, <span class="xref">System.Boolean</span>, <a class="xref" href="DulcisX.Nodes.Events.CancelTraslaterToken.html">CancelTraslaterToken</a>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/TwentyFourMinutes/DulcisX/new/master/apiSpec/new?filename=DulcisX_Nodes_Events_ISolutionEvents_OnQueryProjectUnload.md&amp;value=---%0Auid%3A%20DulcisX.Nodes.Events.ISolutionEvents.OnQueryProjectUnload%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/TwentyFourMinutes/DulcisX/blob/master/src/DulcisX/DulcisX/Nodes/Events/ISolutionEvents.cs/#L15">View Source</a>
+  </span>
+  <a id="DulcisX_Nodes_Events_ISolutionEvents_OnQueryProjectUnload_" data-uid="DulcisX.Nodes.Events.ISolutionEvents.OnQueryProjectUnload*"></a>
+  <h4 id="DulcisX_Nodes_Events_ISolutionEvents_OnQueryProjectUnload" data-uid="DulcisX.Nodes.Events.ISolutionEvents.OnQueryProjectUnload">OnQueryProjectUnload</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">EventDistributor&lt;Action&lt;ProjectNode, CancelTraslaterToken&gt;&gt; OnQueryProjectUnload { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="DulcisX.Nodes.Events.EventDistributor-1.html">EventDistributor</a>&lt;<span class="xref">System.Action</span>&lt;<a class="xref" href="DulcisX.Nodes.ProjectNode.html">ProjectNode</a>, <a class="xref" href="DulcisX.Nodes.Events.CancelTraslaterToken.html">CancelTraslaterToken</a>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="events">Events
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/TwentyFourMinutes/DulcisX/new/master/apiSpec/new?filename=DulcisX_Nodes_Events_ISolutionEvents_OnProjectAdd.md&amp;value=---%0Auid%3A%20DulcisX.Nodes.Events.ISolutionEvents.OnProjectAdd%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/TwentyFourMinutes/DulcisX/blob/master/src/DulcisX/DulcisX/Nodes/Events/ISolutionEvents.cs/#L21">View Source</a>
+  </span>
+  <h4 id="DulcisX_Nodes_Events_ISolutionEvents_OnProjectAdd" data-uid="DulcisX.Nodes.Events.ISolutionEvents.OnProjectAdd">OnProjectAdd</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">event Action&lt;ProjectNode&gt; OnProjectAdd</code></pre>
+  </div>
+  <h5 class="eventType">Event Type</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Action</span>&lt;<a class="xref" href="DulcisX.Nodes.ProjectNode.html">ProjectNode</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/TwentyFourMinutes/DulcisX/new/master/apiSpec/new?filename=DulcisX_Nodes_Events_ISolutionEvents_OnProjectRemove.md&amp;value=---%0Auid%3A%20DulcisX.Nodes.Events.ISolutionEvents.OnProjectRemove%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/TwentyFourMinutes/DulcisX/blob/master/src/DulcisX/DulcisX/Nodes/Events/ISolutionEvents.cs/#L22">View Source</a>
+  </span>
+  <h4 id="DulcisX_Nodes_Events_ISolutionEvents_OnProjectRemove" data-uid="DulcisX.Nodes.Events.ISolutionEvents.OnProjectRemove">OnProjectRemove</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">event Action&lt;ProjectNode&gt; OnProjectRemove</code></pre>
+  </div>
+  <h5 class="eventType">Event Type</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Action</span>&lt;<a class="xref" href="DulcisX.Nodes.ProjectNode.html">ProjectNode</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/TwentyFourMinutes/DulcisX/new/master/apiSpec/new?filename=DulcisX_Nodes_Events_ISolutionEvents_OnQuerySolutionClose.md&amp;value=---%0Auid%3A%20DulcisX.Nodes.Events.ISolutionEvents.OnQuerySolutionClose%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/TwentyFourMinutes/DulcisX/blob/master/src/DulcisX/DulcisX/Nodes/Events/ISolutionEvents.cs/#L24">View Source</a>
+  </span>
+  <h4 id="DulcisX_Nodes_Events_ISolutionEvents_OnQuerySolutionClose" data-uid="DulcisX.Nodes.Events.ISolutionEvents.OnQuerySolutionClose">OnQuerySolutionClose</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">event Action&lt;CancelTraslaterToken&gt; OnQuerySolutionClose</code></pre>
+  </div>
+  <h5 class="eventType">Event Type</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Action</span>&lt;<a class="xref" href="DulcisX.Nodes.Events.CancelTraslaterToken.html">CancelTraslaterToken</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/TwentyFourMinutes/DulcisX/new/master/apiSpec/new?filename=DulcisX_Nodes_Events_ISolutionEvents_OnSolutionClose.md&amp;value=---%0Auid%3A%20DulcisX.Nodes.Events.ISolutionEvents.OnSolutionClose%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/TwentyFourMinutes/DulcisX/blob/master/src/DulcisX/DulcisX/Nodes/Events/ISolutionEvents.cs/#L25">View Source</a>
+  </span>
+  <h4 id="DulcisX_Nodes_Events_ISolutionEvents_OnSolutionClose" data-uid="DulcisX.Nodes.Events.ISolutionEvents.OnSolutionClose">OnSolutionClose</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">event Action OnSolutionClose</code></pre>
+  </div>
+  <h5 class="eventType">Event Type</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Action</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/TwentyFourMinutes/DulcisX/new/master/apiSpec/new?filename=DulcisX_Nodes_Events_ISolutionEvents_OnSolutionClosed.md&amp;value=---%0Auid%3A%20DulcisX.Nodes.Events.ISolutionEvents.OnSolutionClosed%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/TwentyFourMinutes/DulcisX/blob/master/src/DulcisX/DulcisX/Nodes/Events/ISolutionEvents.cs/#L26">View Source</a>
+  </span>
+  <h4 id="DulcisX_Nodes_Events_ISolutionEvents_OnSolutionClosed" data-uid="DulcisX.Nodes.Events.ISolutionEvents.OnSolutionClosed">OnSolutionClosed</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">event Action OnSolutionClosed</code></pre>
+  </div>
+  <h5 class="eventType">Event Type</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Action</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/TwentyFourMinutes/DulcisX/new/master/apiSpec/new?filename=DulcisX_Nodes_Events_ISolutionEvents_OnSolutionOpened.md&amp;value=---%0Auid%3A%20DulcisX.Nodes.Events.ISolutionEvents.OnSolutionOpened%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/TwentyFourMinutes/DulcisX/blob/master/src/DulcisX/DulcisX/Nodes/Events/ISolutionEvents.cs/#L23">View Source</a>
+  </span>
+  <h4 id="DulcisX_Nodes_Events_ISolutionEvents_OnSolutionOpened" data-uid="DulcisX.Nodes.Events.ISolutionEvents.OnSolutionOpened">OnSolutionOpened</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">event Action&lt;bool&gt; OnSolutionOpened</code></pre>
+  </div>
+  <h5 class="eventType">Event Type</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Action</span>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/TwentyFourMinutes/DulcisX/new/master/apiSpec/new?filename=DulcisX_Nodes_Events_ISolutionEvents_OnSolutionRenamed.md&amp;value=---%0Auid%3A%20DulcisX.Nodes.Events.ISolutionEvents.OnSolutionRenamed%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/TwentyFourMinutes/DulcisX/blob/master/src/DulcisX/DulcisX/Nodes/Events/ISolutionEvents.cs/#L27">View Source</a>
+  </span>
+  <h4 id="DulcisX_Nodes_Events_ISolutionEvents_OnSolutionRenamed" data-uid="DulcisX.Nodes.Events.ISolutionEvents.OnSolutionRenamed">OnSolutionRenamed</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">event Action&lt;string, string&gt; OnSolutionRenamed</code></pre>
+  </div>
+  <h5 class="eventType">Event Type</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Action</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/TwentyFourMinutes/DulcisX/new/master/apiSpec/new?filename=DulcisX_Nodes_Events_ISolutionEvents.md&amp;value=---%0Auid%3A%20DulcisX.Nodes.Events.ISolutionEvents%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/TwentyFourMinutes/DulcisX/blob/master/src/DulcisX/DulcisX/Nodes/Events/ISolutionEvents.cs/#L5" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>
