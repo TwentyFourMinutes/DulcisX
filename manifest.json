@@ -9,10 +9,10 @@
       "output": {
         ".html": {
           "relative_path": "api/DulcisX.Core.AsyncResult-1.html",
-          "hash": "5geie0ElXf34M95bzYhpIA=="
+          "hash": "DOXGqRVTpASpHRLdpdv2pA=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -21,10 +21,10 @@
       "output": {
         ".html": {
           "relative_path": "api/DulcisX.Core.Attributes.NotImplementedAttribute.html",
-          "hash": "+Jiti3iu00CYrt2LxFbTdg=="
+          "hash": "PFgUDZJPKCK4YCsqWEfCbA=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -33,10 +33,10 @@
       "output": {
         ".html": {
           "relative_path": "api/DulcisX.Core.Attributes.html",
-          "hash": "m6lCKXpzUTpHcOmoDqpJMg=="
+          "hash": "tsm1cJurG7shPwDJNUejww=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -45,10 +45,10 @@
       "output": {
         ".html": {
           "relative_path": "api/DulcisX.Core.COMContainer-1.html",
-          "hash": "royrQbEhNvWCU4cS7J+k7Q=="
+          "hash": "wzpPsg+JkC6OHQ2zNHjdrw=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -57,10 +57,10 @@
       "output": {
         ".html": {
           "relative_path": "api/DulcisX.Core.COMContainer.html",
-          "hash": "RgogcuG09L8etKvoPpnkvw=="
+          "hash": "2L4+KB3HTANClDiXdVUBNA=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -69,10 +69,10 @@
       "output": {
         ".html": {
           "relative_path": "api/DulcisX.Core.Components.IBaseInfoMessageBuilder.html",
-          "hash": "QJJM8LqUfjyazD3tHzmvxg=="
+          "hash": "0mG/oVvA8CVzIaE3j6nOPg=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -81,10 +81,10 @@
       "output": {
         ".html": {
           "relative_path": "api/DulcisX.Core.Components.IButtonIdentifierInfoMessageBuilder-1.html",
-          "hash": "BnMVz2r5jjy6IZIkERZTZw=="
+          "hash": "8+5S7uCnzc5CWVilg/teWQ=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -93,10 +93,10 @@
       "output": {
         ".html": {
           "relative_path": "api/DulcisX.Core.Components.IButtonIdentifierInfoMessageBuilder.html",
-          "hash": "dTg+eNdESgRs6dOXCtPSkw=="
+          "hash": "ekUvYpb2brCPwtcN0tQZ1w=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -105,10 +105,10 @@
       "output": {
         ".html": {
           "relative_path": "api/DulcisX.Core.Components.IButtonInfoMessageBuilder.html",
-          "hash": "JusdnPa0TlwoG3+DqneL7Q=="
+          "hash": "5MilcVmn5FTw6tDKU99jEA=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -117,10 +117,10 @@
       "output": {
         ".html": {
           "relative_path": "api/DulcisX.Core.Components.IContentInfoMessageBuilder.html",
-          "hash": "XTBMQmE4wNgyZTAwjegjxQ=="
+          "hash": "01NuRL6tECyQqbjwl24ptg=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -129,10 +129,10 @@
       "output": {
         ".html": {
           "relative_path": "api/DulcisX.Core.Components.IMoreContentInfoMessageBuilder.html",
-          "hash": "5Qa0Vq373Kz3dT8S+iKaZg=="
+          "hash": "G+kZ/nPJ9A24SwriK66+9Q=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -141,10 +141,10 @@
       "output": {
         ".html": {
           "relative_path": "api/DulcisX.Core.Components.InfoBar.html",
-          "hash": "yfozfTRo10sOKtO2Di33Rg=="
+          "hash": "FVtOo+SABtWNfuzf4zyVXw=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -153,10 +153,10 @@
       "output": {
         ".html": {
           "relative_path": "api/DulcisX.Core.Components.InfoBarHandle.html",
-          "hash": "qA0gELKS4lbDjfXRV3pWiw=="
+          "hash": "s1RgkisadHZEkdcI9gXnUA=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -165,10 +165,10 @@
       "output": {
         ".html": {
           "relative_path": "api/DulcisX.Core.Components.ResultInfoBarHandle-1.html",
-          "hash": "PU0KVAZiuPGoUVLRaf2h5A=="
+          "hash": "ISlAWaEdgFNLf/4GCxrhjA=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -177,10 +177,10 @@
       "output": {
         ".html": {
           "relative_path": "api/DulcisX.Core.Components.WebBrowser.html",
-          "hash": "OChtJA7pDMpYneIeJG2QlA=="
+          "hash": "+NOKC/2BY99Ftep3072apQ=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -189,10 +189,10 @@
       "output": {
         ".html": {
           "relative_path": "api/DulcisX.Core.Components.html",
-          "hash": "Kh/TRf/jAexvcZceLhIg+A=="
+          "hash": "SoR3D9KgwC9cVF0b9xkEjw=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -201,10 +201,10 @@
       "output": {
         ".html": {
           "relative_path": "api/DulcisX.Core.Enums.CopyToOutputDirectory.html",
-          "hash": "Nn9gOB6+TcwBXEN1B7JEwA=="
+          "hash": "kPYR2dmJ49LUsOazyQVlOg=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -213,10 +213,10 @@
       "output": {
         ".html": {
           "relative_path": "api/DulcisX.Core.Enums.DocumentProperty.html",
-          "hash": "9RMx4yeTxQtfXI0VGr/R8g=="
+          "hash": "fPL6tVWov8tw62JNOLC8Vw=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -225,10 +225,10 @@
       "output": {
         ".html": {
           "relative_path": "api/DulcisX.Core.Enums.DocumentType.html",
-          "hash": "Tdp4jcds5qCUh7A9n9drxQ=="
+          "hash": "CWQGhI2ypg2n0soWEqRFbg=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -237,10 +237,10 @@
       "output": {
         ".html": {
           "relative_path": "api/DulcisX.Core.Enums.NodeTypes.html",
-          "hash": "PgEl3ryhH87xiiJyHUmzTA=="
+          "hash": "yP2kNQivJC2pYS/lrsKokQ=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -249,10 +249,10 @@
       "output": {
         ".html": {
           "relative_path": "api/DulcisX.Core.Enums.StartupOptions.html",
-          "hash": "tk4Qp97fgQrbaG7XpQ0GeA=="
+          "hash": "L8HVGivGltBhQyA6xvhF/g=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -261,10 +261,10 @@
       "output": {
         ".html": {
           "relative_path": "api/DulcisX.Core.Enums.VisualStudio.CommonNodeIds.html",
-          "hash": "utqq8uy1maZDqHzOOjkZ5g=="
+          "hash": "WiAJh7lA/YkunCtDByfjJQ=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -273,10 +273,10 @@
       "output": {
         ".html": {
           "relative_path": "api/DulcisX.Core.Enums.VisualStudio.CommonStatusCodes.html",
-          "hash": "baZTeD50M+texfjmvg32pg=="
+          "hash": "ZrteNXrUAFwywfcLuifFsA=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -285,10 +285,10 @@
       "output": {
         ".html": {
           "relative_path": "api/DulcisX.Core.Enums.VisualStudio.CommonStreamKeys.html",
-          "hash": "aPu2DDx7FBwI9JBz7G/fAA=="
+          "hash": "bDIlJ0zsvvIubvFjUr67yw=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -297,10 +297,10 @@
       "output": {
         ".html": {
           "relative_path": "api/DulcisX.Core.Enums.VisualStudio.OpenNodeAttribute.html",
-          "hash": "HEzompIWsVQjqzgZZT1h9w=="
+          "hash": "6TRRitPJbfTz6uYtM6k+kw=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -309,10 +309,10 @@
       "output": {
         ".html": {
           "relative_path": "api/DulcisX.Core.Enums.VisualStudio.PhysicalNodeRemovedFlags.html",
-          "hash": "NeQ+rNpiptZI+Ak8MfL/nQ=="
+          "hash": "GauhBVKj4rPQBb0I56Qavg=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -321,10 +321,10 @@
       "output": {
         ".html": {
           "relative_path": "api/DulcisX.Core.Enums.VisualStudio.html",
-          "hash": "CpD4TRTz5JtcpCWlLHQ0BQ=="
+          "hash": "8D0sxqm4uIo6LRusY7NFaQ=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -333,10 +333,10 @@
       "output": {
         ".html": {
           "relative_path": "api/DulcisX.Core.Enums.html",
-          "hash": "xSiYtxu8POCrW9GZvxNTHw=="
+          "hash": "k1V63jOs/z6ClRdhHXcFuQ=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -345,10 +345,10 @@
       "output": {
         ".html": {
           "relative_path": "api/DulcisX.Core.EventSink.html",
-          "hash": "veFLdxE7fHOUVTwflATlAQ=="
+          "hash": "TensEFYHUp1zVExDcwuR/Q=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -357,10 +357,10 @@
       "output": {
         ".html": {
           "relative_path": "api/DulcisX.Core.Extensions.ContainerExtensions.html",
-          "hash": "Rk/L/JbkZ40hgOHkj4IxjA=="
+          "hash": "sIUdr4Y1Uw4CnCTPw00xIg=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -369,10 +369,10 @@
       "output": {
         ".html": {
           "relative_path": "api/DulcisX.Core.Extensions.VsHierarchyExtensions.html",
-          "hash": "7BUVVwrQNsjiSs1rVnelOw=="
+          "hash": "OVwRJyfUXxnEj+oZqdgBNw=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -381,10 +381,10 @@
       "output": {
         ".html": {
           "relative_path": "api/DulcisX.Core.Extensions.VsRunningDocumentTableExtensions.html",
-          "hash": "JobSiUJKMmSh3DvmZmjiPg=="
+          "hash": "1hd0smdq5yx1WuxLxchS7A=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -393,10 +393,10 @@
       "output": {
         ".html": {
           "relative_path": "api/DulcisX.Core.Extensions.html",
-          "hash": "/RyINwHw/+DF15jrZGZUAw=="
+          "hash": "nkBWO+4PTOqtabo82GJm8w=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -405,10 +405,10 @@
       "output": {
         ".html": {
           "relative_path": "api/DulcisX.Core.IContainerConfiguration.html",
-          "hash": "SqMcH5xh19jnenioH1Hl4A=="
+          "hash": "4M5qnakujt81efk3fitImQ=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -417,10 +417,10 @@
       "output": {
         ".html": {
           "relative_path": "api/DulcisX.Core.Models.IServiceProviders.html",
-          "hash": "kMciAuwBmV26AzU9PXLkcQ=="
+          "hash": "IGT9LKkVRGepq6D3/0Wh5w=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -429,10 +429,10 @@
       "output": {
         ".html": {
           "relative_path": "api/DulcisX.Core.Models.html",
-          "hash": "ehpmf/RjpbF40f/1iv9Dzw=="
+          "hash": "5ETRWeO5gW21ONtkOSzOtQ=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -441,10 +441,10 @@
       "output": {
         ".html": {
           "relative_path": "api/DulcisX.Core.NodeEventSink.html",
-          "hash": "WbS21irfM5TEZOqoLjuPcQ=="
+          "hash": "IE69h9vQ5GOVHyGK85ASgw=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -453,10 +453,10 @@
       "output": {
         ".html": {
           "relative_path": "api/DulcisX.Core.PackageX.html",
-          "hash": "asHYyCU8s9XpmmZVkLHXdg=="
+          "hash": "qFbnxaueyii/sdEh3EphDg=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -465,10 +465,10 @@
       "output": {
         ".html": {
           "relative_path": "api/DulcisX.Core.VisualStudioInstance.html",
-          "hash": "wSYa3Oi+Lxht43Fczh2+Jg=="
+          "hash": "5Cy3h9erdy2DT/dMKsBu3Q=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -477,10 +477,10 @@
       "output": {
         ".html": {
           "relative_path": "api/DulcisX.Core.html",
-          "hash": "fbzX3irsGhGCPKPjCO6ktg=="
+          "hash": "VUTtBn3snFa0AZ3u+XAfGg=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -489,10 +489,10 @@
       "output": {
         ".html": {
           "relative_path": "api/DulcisX.Exceptions.InvalidHierarchyItemException.html",
-          "hash": "ixaxodVRRn7B8mBjV6/9rw=="
+          "hash": "q5FsAI91oeZdiDJEw/YcJg=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -501,10 +501,10 @@
       "output": {
         ".html": {
           "relative_path": "api/DulcisX.Exceptions.NoFlagsAllowedException.html",
-          "hash": "LFLqLRNZLrrAKk45depWxA=="
+          "hash": "2NVNtJrTgPINlwW+FbwJZA=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -513,10 +513,10 @@
       "output": {
         ".html": {
           "relative_path": "api/DulcisX.Exceptions.OperationNotSuccessfulException.html",
-          "hash": "d8XOh4ebVvv+SmRQGghCYg=="
+          "hash": "s8rHFg3HFfDt2YQ4NK9dFA=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -525,10 +525,10 @@
       "output": {
         ".html": {
           "relative_path": "api/DulcisX.Exceptions.html",
-          "hash": "3fxbmJAJhUpD5E6tMZx8Uw=="
+          "hash": "CjBOK5U4sUgrpde2ymUYIw=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -537,10 +537,10 @@
       "output": {
         ".html": {
           "relative_path": "api/DulcisX.Helpers.ExtendedHierarchyUtilities.html",
-          "hash": "C775UVSniSd8gfvQacLtow=="
+          "hash": "K8PKo93muKB+Z6OfzhuZzg=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -549,10 +549,10 @@
       "output": {
         ".html": {
           "relative_path": "api/DulcisX.Helpers.VsConverter.html",
-          "hash": "FFktmqN1EqV0nEcH9NETIQ=="
+          "hash": "+TWMlZ/4VhFb6Yow5r3GFQ=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -561,10 +561,10 @@
       "output": {
         ".html": {
           "relative_path": "api/DulcisX.Helpers.VsHelper.html",
-          "hash": "uh0SmvizpT7VK7OlyBxw3w=="
+          "hash": "wFnUBHkVsxPB2p8XkY8FiA=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -573,10 +573,10 @@
       "output": {
         ".html": {
           "relative_path": "api/DulcisX.Helpers.html",
-          "hash": "IMGz1VuJ9YvimFj6+cX49g=="
+          "hash": "0Jq5diK5EaVuBD7PsImJfA=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -585,10 +585,10 @@
       "output": {
         ".html": {
           "relative_path": "api/DulcisX.Nodes.AddedPhysicalNode-2.html",
-          "hash": "QlaNcFscbPlXeBuxbcPJ9Q=="
+          "hash": "KWyxxj4qfeXffjWc5N5RdA=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -597,10 +597,10 @@
       "output": {
         ".html": {
           "relative_path": "api/DulcisX.Nodes.BaseNode.html",
-          "hash": "5V7Ysr3G3lK73UyBm2ahkA=="
+          "hash": "Od+KLUYVQDUglnANzkE/eg=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -609,10 +609,10 @@
       "output": {
         ".html": {
           "relative_path": "api/DulcisX.Nodes.ChangedNodeBase-2.html",
-          "hash": "MdrDPmQSzzU3+8vtsviXQg=="
+          "hash": "jopgIU/1Uv1UfvEdOIKlLg=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -621,10 +621,10 @@
       "output": {
         ".html": {
           "relative_path": "api/DulcisX.Nodes.ChangedPhysicalSccNode-2.html",
-          "hash": "mtSAsKci1cGReZZQsQF01Q=="
+          "hash": "OsGImDsOKzjQkTRfNaT8Vw=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -633,10 +633,10 @@
       "output": {
         ".html": {
           "relative_path": "api/DulcisX.Nodes.DocumentNode.html",
-          "hash": "ZrQ3fAFB0zciKWcCvKzhaA=="
+          "hash": "lGCIMzJ2rHFXLUwtkHmOyQ=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -645,10 +645,10 @@
       "output": {
         ".html": {
           "relative_path": "api/DulcisX.Nodes.Events.CancelTranslaterFactory.html",
-          "hash": "VX2lHJupn8fwN5aQMvU/aA=="
+          "hash": "mcAhGgFqrD5sv11DA6n6OA=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -657,10 +657,10 @@
       "output": {
         ".html": {
           "relative_path": "api/DulcisX.Nodes.Events.CancelTraslaterToken.html",
-          "hash": "j9xqUQej44CvhOrbNs/zfA=="
+          "hash": "q0RKjEe5kcc+0NcPYYMhtA=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -669,10 +669,10 @@
       "output": {
         ".html": {
           "relative_path": "api/DulcisX.Nodes.Events.EventDistributor-1.html",
-          "hash": "OdwhWfTdXoW2ZHRbqcUvRg=="
+          "hash": "pXYBvcmgo/nnWMemTpZeeg=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -681,10 +681,10 @@
       "output": {
         ".html": {
           "relative_path": "api/DulcisX.Nodes.Events.INodeSelectionEvents.html",
-          "hash": "R1oFlPYEIlHhtY1fNAlZLA=="
+          "hash": "in6cdNscdS/aNS/n+gAcOg=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -693,10 +693,10 @@
       "output": {
         ".html": {
           "relative_path": "api/DulcisX.Nodes.Events.IOpenNodeEvents.html",
-          "hash": "Ncs2oAqX2QAfCk8BCbKJfg=="
+          "hash": "7vRMFxGWKxndNkumJ+Zniw=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -705,10 +705,10 @@
       "output": {
         ".html": {
           "relative_path": "api/DulcisX.Nodes.Events.IProjectNodeChangeEvents.html",
-          "hash": "NZN9eiKWm+iRIWKsCWnOYw=="
+          "hash": "oYXg0ikSxL579Tx68qzzOw=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -717,10 +717,10 @@
       "output": {
         ".html": {
           "relative_path": "api/DulcisX.Nodes.Events.ISolutionBuildEvents.html",
-          "hash": "GPFzDdN2W+Pgum2FwHhTZw=="
+          "hash": "O7jp62HSDqdyYPHuLSIs4A=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -729,10 +729,10 @@
       "output": {
         ".html": {
           "relative_path": "api/DulcisX.Nodes.Events.ISolutionEvents.html",
-          "hash": "p4N7rS0EAwmdNSuaefabAw=="
+          "hash": "I02eFjwjRF0G0H9GU5VfRA=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -741,10 +741,10 @@
       "output": {
         ".html": {
           "relative_path": "api/DulcisX.Nodes.Events.ISolutionLoadEvents.html",
-          "hash": "/LTBCPCpD2D/1fVUU/RoJg=="
+          "hash": "fh1qATOUudxy94PjEfQkUA=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -753,10 +753,10 @@
       "output": {
         ".html": {
           "relative_path": "api/DulcisX.Nodes.Events.html",
-          "hash": "YZRYzLSpAk7co/+Ntxgv8w=="
+          "hash": "8x1L/jW7x4lJlD5y9GMV0g=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -765,10 +765,10 @@
       "output": {
         ".html": {
           "relative_path": "api/DulcisX.Nodes.FolderNode.html",
-          "hash": "LtgKTXyhCnDiU9cDp7pe5w=="
+          "hash": "Y7PLagYiwiuxw0dJWGQ6/g=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -777,10 +777,10 @@
       "output": {
         ".html": {
           "relative_path": "api/DulcisX.Nodes.IBaseNode.html",
-          "hash": "uv8IyNNuMfYzqATo21JG0A=="
+          "hash": "YohaI+7AAYFTiafU7Wv8pA=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -789,10 +789,10 @@
       "output": {
         ".html": {
           "relative_path": "api/DulcisX.Nodes.INamedNode.html",
-          "hash": "SVi3T/gvDRQkzgx0i0mmYg=="
+          "hash": "jKomMcUG5ZtOK2/g7p+bfA=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -801,10 +801,10 @@
       "output": {
         ".html": {
           "relative_path": "api/DulcisX.Nodes.IPhysicalNode.html",
-          "hash": "L5EwFAOnjRYow5EaUfB7XA=="
+          "hash": "TfuMxkKyl46Z8Qv/poI5Qw=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -813,10 +813,10 @@
       "output": {
         ".html": {
           "relative_path": "api/DulcisX.Nodes.ProjectItemNode.html",
-          "hash": "1+kbLUL7C7g726vbRiAW2Q=="
+          "hash": "/Lh0TuMkgcxtVHwgQR7ZVw=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -825,10 +825,10 @@
       "output": {
         ".html": {
           "relative_path": "api/DulcisX.Nodes.ProjectNode.html",
-          "hash": "rdLPGzB3mx8BFrtyFcak+Q=="
+          "hash": "HiUaGqu5y2Bq7a2taZhJnw=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -837,10 +837,10 @@
       "output": {
         ".html": {
           "relative_path": "api/DulcisX.Nodes.RemovedPhysicalNode-1.html",
-          "hash": "oAi4Xhg3sk/IeVFM52Xf2A=="
+          "hash": "Aj4HblA8wVjPZYCtAWLm0Q=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -849,10 +849,10 @@
       "output": {
         ".html": {
           "relative_path": "api/DulcisX.Nodes.RenamedPhysicalNode-2.html",
-          "hash": "GBFcCPORWpM4vxuSp146+A=="
+          "hash": "tJAMdO+kRFtQ33pWV9AtGA=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -861,10 +861,10 @@
       "output": {
         ".html": {
           "relative_path": "api/DulcisX.Nodes.SelectedNodes.html",
-          "hash": "bnRJACjcibpIPb2lJMms2A=="
+          "hash": "kQhwDKxnHeySgXAeEoye1w=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -873,10 +873,10 @@
       "output": {
         ".html": {
           "relative_path": "api/DulcisX.Nodes.SolutionFolderNode.html",
-          "hash": "j30s+DWVzSIpCyynOQ1wbA=="
+          "hash": "RiNPURAoKVUUSMKXSBxvbA=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -885,10 +885,10 @@
       "output": {
         ".html": {
           "relative_path": "api/DulcisX.Nodes.SolutionItemNode.html",
-          "hash": "CViPNU8hCJLN6/52KUvnCg=="
+          "hash": "2k6eLN61AHDQ+Rap4fkGWw=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -897,10 +897,10 @@
       "output": {
         ".html": {
           "relative_path": "api/DulcisX.Nodes.SolutionNode.html",
-          "hash": "U+P2iz54b8TsVPeV35HTSQ=="
+          "hash": "TrrKPBsx9RoEyGOjR57mcw=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -909,10 +909,10 @@
       "output": {
         ".html": {
           "relative_path": "api/DulcisX.Nodes.UnknownNode.html",
-          "hash": "fZOQc7DFMOyOkR+x82IYvQ=="
+          "hash": "py3ISrtyHxfA9GsAZyAq5g=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -921,10 +921,10 @@
       "output": {
         ".html": {
           "relative_path": "api/DulcisX.Nodes.html",
-          "hash": "VYa38q2lJpcMsn5KhGiLug=="
+          "hash": "V3BvEC7hn/t3tO8prW50cw=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -933,7 +933,7 @@
       "output": {
         ".html": {
           "relative_path": "api/index.html",
-          "hash": "ueKGTbIyegnvblq7EU7HjQ=="
+          "hash": "WdpFxqUamICAS5pXu7BnHw=="
         }
       },
       "is_incremental": false,
@@ -957,10 +957,10 @@
       "output": {
         ".html": {
           "relative_path": "articles/intro.html",
-          "hash": "yUkbnnK75yHjBkBbxh2fnQ=="
+          "hash": "imAG/hbU/TYVkpFjdmYM4g=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -981,7 +981,7 @@
       "output": {
         ".html": {
           "relative_path": "index.html",
-          "hash": "rjhMLVnf1KiRQN7mXMOufw=="
+          "hash": "anI21kDsx59epQx+ZsrPUg=="
         }
       },
       "is_incremental": false,
@@ -1003,23 +1003,25 @@
   "incremental_info": [
     {
       "status": {
-        "can_incremental": true,
+        "can_incremental": false,
+        "details": "Cannot build incrementally because config changed.",
         "incrementalPhase": "build",
         "total_file_count": 0,
-        "skipped_file_count": 0
+        "skipped_file_count": 0,
+        "full_build_reason_code": "ConfigChanged"
       },
       "processors": {
         "ConceptualDocumentProcessor": {
-          "can_incremental": true,
+          "can_incremental": false,
           "incrementalPhase": "build",
           "total_file_count": 3,
-          "skipped_file_count": 2
+          "skipped_file_count": 0
         },
         "ManagedReferenceDocumentProcessor": {
-          "can_incremental": true,
+          "can_incremental": false,
           "incrementalPhase": "build",
           "total_file_count": 77,
-          "skipped_file_count": 77
+          "skipped_file_count": 0
         },
         "TocDocumentProcessor": {
           "can_incremental": false,

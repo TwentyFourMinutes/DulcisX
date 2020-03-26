@@ -49,6 +49,9 @@
     ],
     "dest": "../",
     "globalMetadataFiles": [],
+	"globalMetadata": {
+		"_appFooter": "<span>Copyright © 2020 Twenty</span>"
+	},
     "fileMetadataFiles": [],
     "template": [
       "default",
