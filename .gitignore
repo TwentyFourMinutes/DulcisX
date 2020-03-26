@@ -6,6 +6,8 @@
 # Custom Directories
 
 packages/
+DocFX/
+docs/
 
 # User-specific files
 *.rsuser
