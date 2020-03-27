@@ -123,7 +123,7 @@ namespace DulcisX.Core
         }
 
         /// <summary>
-        /// Gets the <see cref="Container"/> which hold package and user specifc services.
+        /// Gets the <see cref="Container"/> which holds package and user specifc services.
         /// </summary>
         public Container ServiceContainer { get; }
 
@@ -132,7 +132,7 @@ namespace DulcisX.Core
         #region Constructors
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="Package"/> class.
+        /// Initializes a new instance of the <see cref="PackageX"/> class.
         /// </summary>
         protected PackageX()
         {
@@ -140,7 +140,7 @@ namespace DulcisX.Core
         }
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="Package"/> class with a list of assemblies which contain <see cref="IContainerConfiguration"/>s.
+        /// Initializes a new instance of the <see cref="PackageX"/> class with a list of assemblies which contain <see cref="IContainerConfiguration"/>s.
         /// </summary>
         /// <param name="containerConfigurationAssemblies">An Array which contains all assemblies witch contain <see cref="IContainerConfiguration"/>s.</param>
         protected PackageX(params Assembly[] containerConfigurationAssemblies) : base()
