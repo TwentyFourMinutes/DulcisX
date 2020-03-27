@@ -3,7 +3,9 @@ using System;
 
 namespace DulcisX.Core.Models
 {
-    public interface IServiceProviders : IAsyncServiceProvider, IServiceProvider
+
+    /// <inheritdoc/>
+    public interface IServiceProviders : IServiceProvider, IAsyncServiceProvider
     {
     }
 }

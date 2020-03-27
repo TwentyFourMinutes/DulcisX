@@ -1,5 +1,9 @@
 ﻿namespace DulcisX.Core
 {
+    /// <summary>
+    /// Contains the result of an asynchronous operation.
+    /// </summary>
+    /// <typeparam name="TResult">The type of the result.</typeparam>
     public class AsyncResult<TResult>
     {
         private readonly TResult _result;
@@ -11,6 +15,11 @@
             _hasResult = hasResult;
         }
 
+        /// <summary>
+        /// Gets the result of the asynchronous operation. A return value indicates whether the operation succeeded.
+        /// </summary>
+        /// <param name="result">The result of the operation.</param>
+        /// <returns><see langword="true"/> if the operation returned a result; otherwise <see langword="false"/>.</returns>
         public bool TryGetResult(out TResult result)
         {
             result = _result;

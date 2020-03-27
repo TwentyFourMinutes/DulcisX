@@ -37,7 +37,7 @@ namespace DulcisX.Core
 
                 ErrorHandler.ThrowOnFailure(result);
 
-                return new COMContainer<IVsInfoBarHost>((IVsInfoBarHost)infoBarHost);
+                return new ComContainer<IVsInfoBarHost>((IVsInfoBarHost)infoBarHost);
             });
 
             container.RegisterCOMInstance<SVsSolution, IVsSolution>(package);

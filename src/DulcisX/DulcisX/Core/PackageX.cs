@@ -13,13 +13,26 @@ using Task = System.Threading.Tasks.Task;
 
 namespace DulcisX.Core
 {
+    /// <summary>
+    /// Registers a new Package and provides all the Visual Studio Services to the environment.
+    /// </summary>
     public abstract class PackageX : AsyncPackage, IServiceProviders
     {
+        /// <summary>
+        /// Occurs when the environment initializes the Package.
+        /// </summary>
         public event Func<CancellationToken, IProgress<ServiceProgressData>, Task> OnInitializeAsync;
+
+        /// <summary>
+        /// Occurs when the environment disposes the Package.
+        /// </summary>
         public event Action OnDisposing;
 
         private SolutionNode _solution;
 
+        /// <summary>
+        /// Gets the current open Solution.
+        /// </summary>
         public SolutionNode Solution
         {
             get
@@ -37,6 +50,9 @@ namespace DulcisX.Core
 
         private IVsStatusbar _statusBar;
 
+        /// <summary>
+        /// Gets the <see cref="IVsStatusbar"/> of the environment.
+        /// </summary>
         public IVsStatusbar StatusBar
         {
             get
@@ -52,6 +68,9 @@ namespace DulcisX.Core
 
         private InfoBar _infoBar;
 
+        /// <summary>
+        /// Gets the InfoBar of the environment.
+        /// </summary>
         public InfoBar InfoBar
         {
             get
@@ -69,6 +88,9 @@ namespace DulcisX.Core
 
         private WebBrowser _webBrowser;
 
+        /// <summary>
+        /// Gets the WebBrowser of the environment.
+        /// </summary>
         public WebBrowser WebBrowser
         {
             get
@@ -84,6 +106,9 @@ namespace DulcisX.Core
 
         private VisualStudioInstance _vsInstance;
 
+        /// <summary>
+        /// Gets the <see cref="VisualStudioInstance"/> of the environment.
+        /// </summary>
         public VisualStudioInstance VSInstance
         {
             get
@@ -97,17 +122,27 @@ namespace DulcisX.Core
             }
         }
 
+        /// <summary>
+        /// Gets the <see cref="Container"/> which hold package and user specifc services.
+        /// </summary>
         public Container ServiceContainer { get; }
 
         private readonly Assembly[] _containerConfigurationAssemblies;
 
         #region Constructors
 
+        /// <summary>
+        /// Initializes a new instance of the <see cref="Package"/> class.
+        /// </summary>
         protected PackageX()
         {
             ServiceContainer = new Container();
         }
 
+        /// <summary>
+        /// Initializes a new instance of the <see cref="Package"/> class with a list of assemblies which contain <see cref="IContainerConfiguration"/>s.
+        /// </summary>
+        /// <param name="containerConfigurationAssemblies">An Array which contains all assemblies witch contain <see cref="IContainerConfiguration"/>s.</param>
         protected PackageX(params Assembly[] containerConfigurationAssemblies) : base()
         {
             _containerConfigurationAssemblies = containerConfigurationAssemblies;
@@ -120,7 +155,7 @@ namespace DulcisX.Core
 
         #endregion
 
-        protected override async Task InitializeAsync(CancellationToken cancellationToken, IProgress<ServiceProgressData> progress)
+        protected sealed override async Task InitializeAsync(CancellationToken cancellationToken, IProgress<ServiceProgressData> progress)
         {
             try
             {
@@ -138,9 +173,20 @@ namespace DulcisX.Core
 
         #region Services
 
+        /// <summary>
+        /// Returns a service which is registered in the native Global Service Container.
+        /// </summary>
+        /// <typeparam name="TService">The type which should be retrieved.</typeparam>
+        /// <returns>The service being requested if available, otherwise null.</returns>
         public TService GetGlobalService<TService>() where TService : class
             => GetGlobalService<TService, TService>();
 
+        /// <summary>
+        /// Returns a service which is registered in the native Global Service Container.
+        /// </summary>
+        /// <typeparam name="TBaseService">The service type of the implemention which should be retrieved.</typeparam>
+        /// <typeparam name="TService">The implemention type of the service which should be retrieved.</typeparam>
+        /// <returns>The service being requested if available, otherwise null.</returns>
         public TService GetGlobalService<TBaseService, TService>() where TBaseService : class
                                                                    where TService : class
             => GetGlobalService(typeof(TBaseService)) as TService;
@@ -150,7 +196,7 @@ namespace DulcisX.Core
 
         #endregion
 
-        protected override void Dispose(bool disposing)
+        protected sealed override void Dispose(bool disposing)
         {
             try
             {
