@@ -11,13 +11,13 @@ namespace DulcisX.Core.Components
 {
     internal class SolutionConfigurationOptions : IVsPersistSolutionOpts
     {
-        public Dictionary<Guid, StartupOptions> StartupProjects { get; }
+        public Dictionary<Guid, StartupOption> StartupProjects { get; }
 
         public bool IsMultiStartup { get; private set; }
 
         public SolutionConfigurationOptions()
         {
-            StartupProjects = new Dictionary<Guid, StartupOptions>();
+            StartupProjects = new Dictionary<Guid, StartupOption>();
         }
 
         public int SaveUserOptions(IVsSolutionPersistence pPersistence)
@@ -82,11 +82,11 @@ namespace DulcisX.Core.Components
 
                     if ((options & 1) != 0)
                     {
-                        StartupProjects.Add(guid, StartupOptions.Start);
+                        StartupProjects.Add(guid, StartupOption.Start);
                     }
                     else if ((options & 2) != 0)
                     {
-                        StartupProjects.Add(guid, StartupOptions.StartWithDebugging);
+                        StartupProjects.Add(guid, StartupOption.StartWithDebugging);
                     }
                 }
 

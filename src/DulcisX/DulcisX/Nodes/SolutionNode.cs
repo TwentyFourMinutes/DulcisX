@@ -131,7 +131,7 @@ namespace DulcisX.Nodes
             return new ProjectNode(this, hierarchy);
         }
 
-        public IEnumerable<(ProjectNode Project, StartupOptions Options)> GetStartupProjects()
+        public IEnumerable<(ProjectNode Project, StartupOption Options)> GetStartupProjects()
         {
             ThreadHelper.ThrowIfNotOnUIThread();
 
@@ -154,7 +154,7 @@ namespace DulcisX.Nodes
 
                 var result = solutionBuildManager.get_StartupProject(out var hierarchy);
 
-                yield return (GetProject(hierarchy), StartupOptions.Start);
+                yield return (GetProject(hierarchy), StartupOption.Start);
 
                 ErrorHandler.ThrowOnFailure(result);
             }

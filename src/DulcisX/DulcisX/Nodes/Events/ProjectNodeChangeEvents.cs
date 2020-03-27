@@ -96,7 +96,7 @@ namespace DulcisX.Nodes.Events
         {
             OnDocumentsRemoved?.Invoke(NodesChanged(rgpProjects, rgFirstIndices, rgpszMkDocuments.Length, (projectNode, iterator) =>
             {
-                return new RemovedPhysicalNode<PhysicalNodeRemovedFlags>(projectNode, rgpszMkDocuments[iterator], ((rgFlags[iterator] & 16u) != 0u) ? PhysicalNodeRemovedFlags.Removed : PhysicalNodeRemovedFlags.Deleted);
+                return new RemovedPhysicalNode<PhysicalNodeRemovedFlags>(projectNode, rgpszMkDocuments[iterator], ((rgFlags[iterator] & 16u) != 0u) ? PhysicalNodeRemovedFlags.Removed : PhysicalNodeRemovedFlags.Deleted | PhysicalNodeRemovedFlags.Removed);
             }).ToCachingEnumerable());
         }
 
@@ -104,7 +104,7 @@ namespace DulcisX.Nodes.Events
         {
             OnFoldersRemoved?.Invoke(NodesChanged(rgpProjects, rgFirstIndices, rgpszMkDocuments.Length, (projectNode, iterator) =>
             {
-                return new RemovedPhysicalNode<PhysicalNodeRemovedFlags>(projectNode, rgpszMkDocuments[iterator], ((rgFlags[iterator] & 16u) != 0u) ? PhysicalNodeRemovedFlags.Removed : PhysicalNodeRemovedFlags.Deleted);
+                return new RemovedPhysicalNode<PhysicalNodeRemovedFlags>(projectNode, rgpszMkDocuments[iterator], ((rgFlags[iterator] & 16u) != 0u) ? PhysicalNodeRemovedFlags.Removed : PhysicalNodeRemovedFlags.Deleted | PhysicalNodeRemovedFlags.Removed);
             }).ToCachingEnumerable());
         }
 

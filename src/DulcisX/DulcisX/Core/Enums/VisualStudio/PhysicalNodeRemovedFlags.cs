@@ -3,17 +3,23 @@
 namespace DulcisX.Core.Enums.VisualStudio
 {
     /// <summary>
-    /// https://docs.microsoft.com/en-us/dotnet/api/microsoft.visualstudio.shell.interop.__vsremovefileflags2?view=visualstudiosdk-2017
+    /// Used instead of <see cref="Microsoft.VisualStudio.Shell.Interop.__VSREMOVEFILEFLAGS2"/>.
     /// </summary>
     [Flags]
     public enum PhysicalNodeRemovedFlags
     {
         #region __VSREMOVEFILEFLAGS2
 
+        /// <summary>
+        /// If this flag is set, the file is removed from the project, but still exists on disk.
+        /// </summary>
         Removed = 1,
 
         #endregion
 
-        Deleted = 2 | Removed
+        /// <summary>
+        /// If this flag is set, the file is removed from disk.
+        /// </summary>
+        Deleted = 2
     }
 }
