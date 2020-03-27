@@ -7,6 +7,9 @@ using System.Collections.Generic;
 
 namespace DulcisX.Core.Components
 {
+    /// <summary>
+    /// Wraps around <see cref="IVsInfoBarHost"/> and <see cref="IVsInfoBar"/>.
+    /// </summary>
     public class InfoBar
     {
         internal IVsInfoBarUIFactory UIFactory { get; }
@@ -191,9 +194,18 @@ namespace DulcisX.Core.Components
             }
         }
 
+        /// <summary>
+        /// Instantiates a new InfoBar message.
+        /// </summary>
+        /// <param name="hasCloseButton">Specifies whether the InfoBar has a 'x' button.</param>
+        /// <returns>An <see cref="IBaseInfoMessageBuilder"/> instance.</returns>
         public IBaseInfoMessageBuilder NewMessage(bool hasCloseButton = true)
             => new InternalInfoMessageBuilder(this, hasCloseButton);
 
+        /// <summary>
+        /// Removes a InfoBar message from the <see cref="IVsInfoBarHost"/> with the specified <see cref="InfoBarHandle"/>.
+        /// </summary>
+        /// <param name="handle">Pointer to the InfoBar message which should be removed.</param>
         public void RemoveMessage(InfoBarHandle handle)
             => RemoveMessage(handle.UIElement, handle.Events);
 

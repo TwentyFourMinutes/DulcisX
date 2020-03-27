@@ -11,11 +11,11 @@ namespace DulcisX.Core.Components
 {
     internal class SolutionConfigurationOptions : IVsPersistSolutionOpts
     {
-        public Dictionary<Guid, StartupOption> StartupProjects { get; }
+        internal Dictionary<Guid, StartupOption> StartupProjects { get; }
 
-        public bool IsMultiStartup { get; private set; }
+        internal bool IsMultiStartup { get; private set; }
 
-        public SolutionConfigurationOptions()
+        internal SolutionConfigurationOptions()
         {
             StartupProjects = new Dictionary<Guid, StartupOption>();
         }
@@ -97,7 +97,7 @@ namespace DulcisX.Core.Components
             return VSConstants.S_OK;
         }
 
-        public bool Match(byte[] bytes, byte[] tokenBytes, int index)
+        private bool Match(byte[] bytes, byte[] tokenBytes, int index)
         {
             var found = true;
 

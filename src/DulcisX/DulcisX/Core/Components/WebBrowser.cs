@@ -6,6 +6,9 @@ using System.Collections.Generic;
 
 namespace DulcisX.Core.Components
 {
+    /// <summary>
+    /// Wraps around the <see cref="IVsWebBrowsingService"/>.
+    /// </summary>
     public class WebBrowser
     {
         private readonly IVsWebBrowsingService _browsingService;
@@ -15,6 +18,12 @@ namespace DulcisX.Core.Components
             _browsingService = browsingService;
         }
 
+        /// <summary>
+        /// Opens a Browser window with the given <see cref="Uri"/> from wihtin a Visual Studio Browser.
+        /// </summary>
+        /// <param name="uri">The uri which should be opened in the Browser.</param>
+        /// <param name="flags">The navigation options.</param>
+        /// <returns>A new <see cref="IVsWindowFrame"/> instance pointing to the newly created Browser window.</returns>
         public IVsWindowFrame OpenInternal(Uri uri, __VSWBNAVIGATEFLAGS flags = 0)
         {
             ThreadHelper.ThrowIfNotOnUIThread();
@@ -26,6 +35,12 @@ namespace DulcisX.Core.Components
             return frame;
         }
 
+        /// <summary>
+        /// Opens a Browser tab in the default system Brwoser with the given <see cref="Uri"/>.
+        /// </summary>
+        /// <param name="uri">The uri which should be opened in the Browser.</param>
+        /// <param name="creationFlags">The creation options.</param>
+        /// <param name="previewFlags">The display options.</param>
         public void OpenExternal(Uri uri, __VSCREATEWEBBROWSER creationFlags = __VSCREATEWEBBROWSER.VSCWB_ForceNew, VSPREVIEWRESOLUTION previewFlags = VSPREVIEWRESOLUTION.PR_Default)
         {
             ThreadHelper.ThrowIfNotOnUIThread();
@@ -35,7 +50,11 @@ namespace DulcisX.Core.Components
             ErrorHandler.ThrowOnFailure(result);
         }
 
-        public IEnumerable<IVsWindowFrame> OpenInternalBrowserWindows()
+        /// <summary>
+        /// Gets all Browser window pointers which are opened in Visual Studio.
+        /// </summary>
+        /// <returns>An <see cref="IEnumerable{IVsWindowFrame}"/> containg the opened Browser windows.</returns>
+        public IEnumerable<IVsWindowFrame> GetInternalBrowserWindows()
         {
             ThreadHelper.ThrowIfNotOnUIThread();
 

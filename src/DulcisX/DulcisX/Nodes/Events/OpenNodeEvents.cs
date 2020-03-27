@@ -5,7 +5,6 @@ using Microsoft.VisualStudio.Shell;
 using Microsoft.VisualStudio.Shell.Interop;
 using System;
 using System.IO;
-using DulcisX.Core;
 
 namespace DulcisX.Nodes.Events
 {

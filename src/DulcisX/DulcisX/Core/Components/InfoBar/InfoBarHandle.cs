@@ -2,6 +2,9 @@
 
 namespace DulcisX.Core.Components
 {
+    /// <summary>
+    /// Points to an InfoBar message and serves as a unique pointer to this message.
+    /// </summary>
     public class InfoBarHandle
     {
         internal IVsInfoBarUIElement UIElement { get; }

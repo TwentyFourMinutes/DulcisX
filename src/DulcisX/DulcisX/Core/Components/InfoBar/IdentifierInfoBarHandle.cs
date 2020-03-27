@@ -5,8 +5,15 @@ using System.Threading.Tasks;
 
 namespace DulcisX.Core.Components
 {
+    /// <summary>
+    /// Represents a result Handler of an InforBar message.
+    /// </summary>
+    /// <typeparam name="TIdentifier">The type of the button identifier.</typeparam>
     public class ResultInfoBarHandle<TIdentifier> : InfoBarHandle
     {
+        /// <summary>
+        /// Occurs when the user produces any kind of result.
+        /// </summary>
         public event Action<TIdentifier, bool> OnResult;
 
         private readonly ResultInfoBarEvents<TIdentifier> _events;
@@ -41,6 +48,11 @@ namespace DulcisX.Core.Components
             OnResult?.Invoke(_identifier, true);
         }
 
+        /// <summary>
+        /// Asynchronously waits for an result which is produced by the user.
+        /// </summary>
+        /// <param name="ct"></param>
+        /// <returns></returns>
         public async Task<AsyncResult<TIdentifier>> WaitForResultAsync(CancellationToken ct = default)
         {
             _semaphore = new SemaphoreSlim(0, 1);
