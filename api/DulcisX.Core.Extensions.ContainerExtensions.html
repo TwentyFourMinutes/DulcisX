@@ -86,7 +86,8 @@
   
   <h1 id="DulcisX_Core_Extensions_ContainerExtensions" data-uid="DulcisX.Core.Extensions.ContainerExtensions" class="text-break">Class ContainerExtensions
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p><span class="xref">SimpleInjector.Container</span> specific Extensions.</p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
@@ -130,11 +131,12 @@
     <a href="https://github.com/TwentyFourMinutes/DulcisX/new/master/apiSpec/new?filename=DulcisX_Core_Extensions_ContainerExtensions_GetCOMInstance__1_SimpleInjector_Container_.md&amp;value=---%0Auid%3A%20DulcisX.Core.Extensions.ContainerExtensions.GetCOMInstance%60%601(SimpleInjector.Container)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/TwentyFourMinutes/DulcisX/blob/master/src/DulcisX/DulcisX/Core/Extensions/ContainerExtensions.cs/#L9">View Source</a>
+    <a href="https://github.com/TwentyFourMinutes/DulcisX/blob/master/src/DulcisX/DulcisX/Core/Extensions/ContainerExtensions.cs/#L18">View Source</a>
   </span>
   <a id="DulcisX_Core_Extensions_ContainerExtensions_GetCOMInstance_" data-uid="DulcisX.Core.Extensions.ContainerExtensions.GetCOMInstance*"></a>
   <h4 id="DulcisX_Core_Extensions_ContainerExtensions_GetCOMInstance__1_SimpleInjector_Container_" data-uid="DulcisX.Core.Extensions.ContainerExtensions.GetCOMInstance``1(SimpleInjector.Container)">GetCOMInstance&lt;TCOMType&gt;(Container)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns a Com service which is register in the <a class="xref" href="DulcisX.Core.PackageX.html#DulcisX_Core_PackageX_ServiceContainer">ServiceContainer</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -153,7 +155,8 @@
       <tr>
         <td><span class="xref">SimpleInjector.Container</span></td>
         <td><span class="parametername">container</span></td>
-        <td></td>
+        <td><p>The <span class="xref">SimpleInjector.Container</span> from which the Com service should be retrieved.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -168,7 +171,8 @@
     <tbody>
       <tr>
         <td><span class="xref">TCOMType</span></td>
-        <td></td>
+        <td><p>The service being requested if available, otherwise null.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -183,7 +187,8 @@
     <tbody>
       <tr>
         <td><span class="parametername">TCOMType</span></td>
-        <td></td>
+        <td><p>The wrapped Com Type service which should be retrieved.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -192,16 +197,16 @@
     <a href="https://github.com/TwentyFourMinutes/DulcisX/new/master/apiSpec/new?filename=DulcisX_Core_Extensions_ContainerExtensions_RegisterCOMInstance__2_SimpleInjector_Container_DulcisX_Core_Models_IServiceProviders_.md&amp;value=---%0Auid%3A%20DulcisX.Core.Extensions.ContainerExtensions.RegisterCOMInstance%60%602(SimpleInjector.Container%2CDulcisX.Core.Models.IServiceProviders)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/TwentyFourMinutes/DulcisX/blob/master/src/DulcisX/DulcisX/Core/Extensions/ContainerExtensions.cs/#L12">View Source</a>
+    <a href="https://github.com/TwentyFourMinutes/DulcisX/blob/master/src/DulcisX/DulcisX/Core/Extensions/ContainerExtensions.cs/#L28">View Source</a>
   </span>
   <a id="DulcisX_Core_Extensions_ContainerExtensions_RegisterCOMInstance_" data-uid="DulcisX.Core.Extensions.ContainerExtensions.RegisterCOMInstance*"></a>
   <h4 id="DulcisX_Core_Extensions_ContainerExtensions_RegisterCOMInstance__2_SimpleInjector_Container_DulcisX_Core_Models_IServiceProviders_" data-uid="DulcisX.Core.Extensions.ContainerExtensions.RegisterCOMInstance``2(SimpleInjector.Container,DulcisX.Core.Models.IServiceProviders)">RegisterCOMInstance&lt;TService, TInterface&gt;(Container, IServiceProviders)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Registers a <a class="xref" href="DulcisX.Core.ComContainer-1.html">ComContainer&lt;TComType&gt;</a> in the <a class="xref" href="DulcisX.Core.PackageX.html#DulcisX_Core_PackageX_ServiceContainer">ServiceContainer</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static void RegisterCOMInstance&lt;TService, TInterface&gt;(this Container container, IServiceProviders providers)
-
     where TInterface : class</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -217,12 +222,14 @@
       <tr>
         <td><span class="xref">SimpleInjector.Container</span></td>
         <td><span class="parametername">container</span></td>
-        <td></td>
+        <td><p>The <span class="xref">SimpleInjector.Container</span> in which the Com service will be registered.</p>
+</td>
       </tr>
       <tr>
         <td><a class="xref" href="DulcisX.Core.Models.IServiceProviders.html">IServiceProviders</a></td>
         <td><span class="parametername">providers</span></td>
-        <td></td>
+        <td><p>The native <a class="xref" href="DulcisX.Core.Models.IServiceProviders.html">IServiceProviders</a> provided by the environment implemented by the <a class="xref" href="DulcisX.Core.PackageX.html">PackageX</a>.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -237,11 +244,13 @@
     <tbody>
       <tr>
         <td><span class="parametername">TService</span></td>
-        <td></td>
+        <td><p>The Com service type of the implemention which should be stored.</p>
+</td>
       </tr>
       <tr>
         <td><span class="parametername">TInterface</span></td>
-        <td></td>
+        <td><p>The implemention type of the Com service which should be retrieved.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -264,7 +273,7 @@
                     <a href="https://github.com/TwentyFourMinutes/DulcisX/new/master/apiSpec/new?filename=DulcisX_Core_Extensions_ContainerExtensions.md&amp;value=---%0Auid%3A%20DulcisX.Core.Extensions.ContainerExtensions%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/TwentyFourMinutes/DulcisX/blob/master/src/DulcisX/DulcisX/Core/Extensions/ContainerExtensions.cs/#L7" class="contribution-link">View Source</a>
+                    <a href="https://github.com/TwentyFourMinutes/DulcisX/blob/master/src/DulcisX/DulcisX/Core/Extensions/ContainerExtensions.cs/#L10" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

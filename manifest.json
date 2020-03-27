@@ -9,7 +9,7 @@
       "output": {
         ".html": {
           "relative_path": "api/DulcisX.Core.AsyncResult-1.html",
-          "hash": "DOXGqRVTpASpHRLdpdv2pA=="
+          "hash": "/XqI3ZOXolnwR6f0BJAUew=="
         }
       },
       "is_incremental": false,
@@ -41,11 +41,11 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/DulcisX.Core.COMContainer-1.yml",
+      "source_relative_path": "api/DulcisX.Core.ComContainer-1.yml",
       "output": {
         ".html": {
-          "relative_path": "api/DulcisX.Core.COMContainer-1.html",
-          "hash": "wzpPsg+JkC6OHQ2zNHjdrw=="
+          "relative_path": "api/DulcisX.Core.ComContainer-1.html",
+          "hash": "KJRj8JNfHyZRn+voHmxgzQ=="
         }
       },
       "is_incremental": false,
@@ -53,11 +53,11 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/DulcisX.Core.COMContainer.yml",
+      "source_relative_path": "api/DulcisX.Core.ComContainer.yml",
       "output": {
         ".html": {
-          "relative_path": "api/DulcisX.Core.COMContainer.html",
-          "hash": "2L4+KB3HTANClDiXdVUBNA=="
+          "relative_path": "api/DulcisX.Core.ComContainer.html",
+          "hash": "3HUXaQKmaSqDQOYy3RdwEg=="
         }
       },
       "is_incremental": false,
@@ -345,7 +345,7 @@
       "output": {
         ".html": {
           "relative_path": "api/DulcisX.Core.EventSink.html",
-          "hash": "TensEFYHUp1zVExDcwuR/Q=="
+          "hash": "4FFKW0IBow+5RTSvvn79iQ=="
         }
       },
       "is_incremental": false,
@@ -357,7 +357,7 @@
       "output": {
         ".html": {
           "relative_path": "api/DulcisX.Core.Extensions.ContainerExtensions.html",
-          "hash": "sIUdr4Y1Uw4CnCTPw00xIg=="
+          "hash": "Hvy59BKPQIjYkW3itZnBww=="
         }
       },
       "is_incremental": false,
@@ -369,7 +369,7 @@
       "output": {
         ".html": {
           "relative_path": "api/DulcisX.Core.Extensions.VsHierarchyExtensions.html",
-          "hash": "OVwRJyfUXxnEj+oZqdgBNw=="
+          "hash": "5uvy0QPhOAHHPplPE9CQiA=="
         }
       },
       "is_incremental": false,
@@ -393,7 +393,7 @@
       "output": {
         ".html": {
           "relative_path": "api/DulcisX.Core.Extensions.html",
-          "hash": "nkBWO+4PTOqtabo82GJm8w=="
+          "hash": "ZnjMVYa70vIi1sjCZXauPA=="
         }
       },
       "is_incremental": false,
@@ -405,7 +405,7 @@
       "output": {
         ".html": {
           "relative_path": "api/DulcisX.Core.IContainerConfiguration.html",
-          "hash": "4M5qnakujt81efk3fitImQ=="
+          "hash": "j8CglfHfT04NPXDb9LJgRg=="
         }
       },
       "is_incremental": false,
@@ -417,7 +417,7 @@
       "output": {
         ".html": {
           "relative_path": "api/DulcisX.Core.Models.IServiceProviders.html",
-          "hash": "IGT9LKkVRGepq6D3/0Wh5w=="
+          "hash": "Ug6gOTcIgOQKzb8+dpq88g=="
         }
       },
       "is_incremental": false,
@@ -453,7 +453,7 @@
       "output": {
         ".html": {
           "relative_path": "api/DulcisX.Core.PackageX.html",
-          "hash": "qFbnxaueyii/sdEh3EphDg=="
+          "hash": "pp8I5+3+etLMT+hIVjRm3w=="
         }
       },
       "is_incremental": false,
@@ -465,7 +465,7 @@
       "output": {
         ".html": {
           "relative_path": "api/DulcisX.Core.VisualStudioInstance.html",
-          "hash": "5Cy3h9erdy2DT/dMKsBu3Q=="
+          "hash": "krbJAhUIVktSQ2m8LkAC7w=="
         }
       },
       "is_incremental": false,
@@ -477,7 +477,7 @@
       "output": {
         ".html": {
           "relative_path": "api/DulcisX.Core.html",
-          "hash": "VUTtBn3snFa0AZ3u+XAfGg=="
+          "hash": "EdNXIbtkwkFP4fWfF5ZM0A=="
         }
       },
       "is_incremental": false,
@@ -609,7 +609,7 @@
       "output": {
         ".html": {
           "relative_path": "api/DulcisX.Nodes.ChangedNodeBase-2.html",
-          "hash": "jopgIU/1Uv1UfvEdOIKlLg=="
+          "hash": "0x4CA3MWFIzccLS+IgwQvQ=="
         }
       },
       "is_incremental": false,
@@ -645,7 +645,7 @@
       "output": {
         ".html": {
           "relative_path": "api/DulcisX.Nodes.Events.CancelTranslaterFactory.html",
-          "hash": "mcAhGgFqrD5sv11DA6n6OA=="
+          "hash": "0owsA6QnMW6ljHRV3iawRQ=="
         }
       },
       "is_incremental": false,
@@ -669,7 +669,7 @@
       "output": {
         ".html": {
           "relative_path": "api/DulcisX.Nodes.Events.EventDistributor-1.html",
-          "hash": "pXYBvcmgo/nnWMemTpZeeg=="
+          "hash": "nr66/VCJpjpr5AXiRScTZg=="
         }
       },
       "is_incremental": false,
@@ -825,7 +825,7 @@
       "output": {
         ".html": {
           "relative_path": "api/DulcisX.Nodes.ProjectNode.html",
-          "hash": "HiUaGqu5y2Bq7a2taZhJnw=="
+          "hash": "DC1UXrZebMiWtgXQ0RbAow=="
         }
       },
       "is_incremental": false,
@@ -837,7 +837,7 @@
       "output": {
         ".html": {
           "relative_path": "api/DulcisX.Nodes.RemovedPhysicalNode-1.html",
-          "hash": "Aj4HblA8wVjPZYCtAWLm0Q=="
+          "hash": "GI//2iEoaDqVfcXgyV9WPw=="
         }
       },
       "is_incremental": false,
@@ -945,7 +945,7 @@
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "OOqNHJWtJYHH8jbK9SdLPA=="
+          "hash": "UMAKc5Qz5tnbpsxXHa7ICw=="
         }
       },
       "is_incremental": false,
@@ -960,7 +960,7 @@
           "hash": "imAG/hbU/TYVkpFjdmYM4g=="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -984,7 +984,7 @@
           "hash": "anI21kDsx59epQx+ZsrPUg=="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -1003,25 +1003,23 @@
   "incremental_info": [
     {
       "status": {
-        "can_incremental": false,
-        "details": "Cannot build incrementally because config changed.",
+        "can_incremental": true,
         "incrementalPhase": "build",
         "total_file_count": 0,
-        "skipped_file_count": 0,
-        "full_build_reason_code": "ConfigChanged"
+        "skipped_file_count": 0
       },
       "processors": {
         "ConceptualDocumentProcessor": {
-          "can_incremental": false,
+          "can_incremental": true,
           "incrementalPhase": "build",
           "total_file_count": 3,
-          "skipped_file_count": 0
+          "skipped_file_count": 3
         },
         "ManagedReferenceDocumentProcessor": {
-          "can_incremental": false,
+          "can_incremental": true,
           "incrementalPhase": "build",
           "total_file_count": 77,
-          "skipped_file_count": 0
+          "skipped_file_count": 39
         },
         "TocDocumentProcessor": {
           "can_incremental": false,

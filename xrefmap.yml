@@ -75,54 +75,54 @@ references:
   isSpec: "True"
   fullName: DulcisX.Core.Attributes.NotImplementedAttribute.Reason
   nameWithType: NotImplementedAttribute.Reason
-- uid: DulcisX.Core.COMContainer
-  name: COMContainer
-  href: api/DulcisX.Core.COMContainer.html
-  commentId: T:DulcisX.Core.COMContainer
-  fullName: DulcisX.Core.COMContainer
-  nameWithType: COMContainer
-- uid: DulcisX.Core.COMContainer.Create*
+- uid: DulcisX.Core.ComContainer
+  name: ComContainer
+  href: api/DulcisX.Core.ComContainer.html
+  commentId: T:DulcisX.Core.ComContainer
+  fullName: DulcisX.Core.ComContainer
+  nameWithType: ComContainer
+- uid: DulcisX.Core.ComContainer.Create*
   name: Create
-  href: api/DulcisX.Core.COMContainer.html#DulcisX_Core_COMContainer_Create_
-  commentId: Overload:DulcisX.Core.COMContainer.Create
+  href: api/DulcisX.Core.ComContainer.html#DulcisX_Core_ComContainer_Create_
+  commentId: Overload:DulcisX.Core.ComContainer.Create
   isSpec: "True"
-  fullName: DulcisX.Core.COMContainer.Create
-  nameWithType: COMContainer.Create
-- uid: DulcisX.Core.COMContainer.Create``1(``0)
+  fullName: DulcisX.Core.ComContainer.Create
+  nameWithType: ComContainer.Create
+- uid: DulcisX.Core.ComContainer.Create``1(``0)
   name: Create<TComType>(TComType)
-  href: api/DulcisX.Core.COMContainer.html#DulcisX_Core_COMContainer_Create__1___0_
-  commentId: M:DulcisX.Core.COMContainer.Create``1(``0)
+  href: api/DulcisX.Core.ComContainer.html#DulcisX_Core_ComContainer_Create__1___0_
+  commentId: M:DulcisX.Core.ComContainer.Create``1(``0)
   name.vb: Create(Of TComType)(TComType)
-  fullName: DulcisX.Core.COMContainer.Create<TComType>(TComType)
-  fullName.vb: DulcisX.Core.COMContainer.Create(Of TComType)(TComType)
-  nameWithType: COMContainer.Create<TComType>(TComType)
-  nameWithType.vb: COMContainer.Create(Of TComType)(TComType)
-- uid: DulcisX.Core.COMContainer`1
-  name: COMContainer<TComType>
-  href: api/DulcisX.Core.COMContainer-1.html
-  commentId: T:DulcisX.Core.COMContainer`1
-  name.vb: COMContainer(Of TComType)
-  fullName: DulcisX.Core.COMContainer<TComType>
-  fullName.vb: DulcisX.Core.COMContainer(Of TComType)
-  nameWithType: COMContainer<TComType>
-  nameWithType.vb: COMContainer(Of TComType)
-- uid: DulcisX.Core.COMContainer`1.Value
+  fullName: DulcisX.Core.ComContainer.Create<TComType>(TComType)
+  fullName.vb: DulcisX.Core.ComContainer.Create(Of TComType)(TComType)
+  nameWithType: ComContainer.Create<TComType>(TComType)
+  nameWithType.vb: ComContainer.Create(Of TComType)(TComType)
+- uid: DulcisX.Core.ComContainer`1
+  name: ComContainer<TComType>
+  href: api/DulcisX.Core.ComContainer-1.html
+  commentId: T:DulcisX.Core.ComContainer`1
+  name.vb: ComContainer(Of TComType)
+  fullName: DulcisX.Core.ComContainer<TComType>
+  fullName.vb: DulcisX.Core.ComContainer(Of TComType)
+  nameWithType: ComContainer<TComType>
+  nameWithType.vb: ComContainer(Of TComType)
+- uid: DulcisX.Core.ComContainer`1.Value
   name: Value
-  href: api/DulcisX.Core.COMContainer-1.html#DulcisX_Core_COMContainer_1_Value
-  commentId: P:DulcisX.Core.COMContainer`1.Value
-  fullName: DulcisX.Core.COMContainer<TComType>.Value
-  fullName.vb: DulcisX.Core.COMContainer(Of TComType).Value
-  nameWithType: COMContainer<TComType>.Value
-  nameWithType.vb: COMContainer(Of TComType).Value
-- uid: DulcisX.Core.COMContainer`1.Value*
+  href: api/DulcisX.Core.ComContainer-1.html#DulcisX_Core_ComContainer_1_Value
+  commentId: P:DulcisX.Core.ComContainer`1.Value
+  fullName: DulcisX.Core.ComContainer<TComType>.Value
+  fullName.vb: DulcisX.Core.ComContainer(Of TComType).Value
+  nameWithType: ComContainer<TComType>.Value
+  nameWithType.vb: ComContainer(Of TComType).Value
+- uid: DulcisX.Core.ComContainer`1.Value*
   name: Value
-  href: api/DulcisX.Core.COMContainer-1.html#DulcisX_Core_COMContainer_1_Value_
-  commentId: Overload:DulcisX.Core.COMContainer`1.Value
+  href: api/DulcisX.Core.ComContainer-1.html#DulcisX_Core_ComContainer_1_Value_
+  commentId: Overload:DulcisX.Core.ComContainer`1.Value
   isSpec: "True"
-  fullName: DulcisX.Core.COMContainer<TComType>.Value
-  fullName.vb: DulcisX.Core.COMContainer(Of TComType).Value
-  nameWithType: COMContainer<TComType>.Value
-  nameWithType.vb: COMContainer(Of TComType).Value
+  fullName: DulcisX.Core.ComContainer<TComType>.Value
+  fullName.vb: DulcisX.Core.ComContainer(Of TComType).Value
+  nameWithType: ComContainer<TComType>.Value
+  nameWithType.vb: ComContainer(Of TComType).Value
 - uid: DulcisX.Core.Components
   name: DulcisX.Core.Components
   href: api/DulcisX.Core.Components.html

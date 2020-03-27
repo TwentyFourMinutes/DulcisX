@@ -86,7 +86,8 @@
   
   <h1 id="DulcisX_Core_PackageX" data-uid="DulcisX.Core.PackageX" class="text-break">Class PackageX
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>Registers a new Package and provides all the Visual Studio Services to the environment.</p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
@@ -115,8 +116,8 @@
     <div><span class="xref">Microsoft.VisualStudio.Shell.Interop.IVsAsyncToolWindowFactory</span></div>
     <div><span class="xref">Microsoft.VisualStudio.Shell.Interop.IVsAsyncToolWindowFactoryProvider</span></div>
     <div><a class="xref" href="DulcisX.Core.Models.IServiceProviders.html">IServiceProviders</a></div>
-    <div><span class="xref">Microsoft.VisualStudio.Shell.IAsyncServiceProvider</span></div>
     <div><span class="xref">System.IServiceProvider</span></div>
+    <div><span class="xref">Microsoft.VisualStudio.Shell.IAsyncServiceProvider</span></div>
   </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
@@ -386,7 +387,7 @@
   <h6><strong>Assembly</strong>: DulcisX.dll</h6>
   <h5 id="DulcisX_Core_PackageX_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public abstract class PackageX : AsyncPackage, IVsPackage, IServiceProvider, IOleCommandTarget, IVsPersistSolutionOpts, IServiceContainer, IVsUserSettings, IVsUserSettingsMigration, IVsUserSettingsQuery, IVsToolWindowFactory, IVsToolboxItemProvider, IVsToolboxItemProvider2, IAsyncServiceProvider, IAsyncLoadablePackageInitialize, IAsyncServiceProvider2, IAsyncServiceContainer, IVsAsyncToolWindowFactory, IVsAsyncToolWindowFactoryProvider, IServiceProviders, IAsyncServiceProvider, IServiceProvider</code></pre>
+    <pre><code class="lang-csharp hljs">public abstract class PackageX : AsyncPackage, IVsPackage, IServiceProvider, IOleCommandTarget, IVsPersistSolutionOpts, IServiceContainer, IVsUserSettings, IVsUserSettingsMigration, IVsUserSettingsQuery, IVsToolWindowFactory, IVsToolboxItemProvider, IVsToolboxItemProvider2, IAsyncServiceProvider, IAsyncLoadablePackageInitialize, IAsyncServiceProvider2, IAsyncServiceContainer, IVsAsyncToolWindowFactory, IVsAsyncToolWindowFactoryProvider, IServiceProviders, IServiceProvider, IAsyncServiceProvider</code></pre>
   </div>
   <h3 id="constructors">Constructors
   </h3>
@@ -395,11 +396,12 @@
     <a href="https://github.com/TwentyFourMinutes/DulcisX/new/master/apiSpec/new?filename=DulcisX_Core_PackageX__ctor.md&amp;value=---%0Auid%3A%20DulcisX.Core.PackageX.%23ctor%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/TwentyFourMinutes/DulcisX/blob/master/src/DulcisX/DulcisX/Core/PackageX.cs/#L106">View Source</a>
+    <a href="https://github.com/TwentyFourMinutes/DulcisX/blob/master/src/DulcisX/DulcisX/Core/PackageX.cs/#L137">View Source</a>
   </span>
   <a id="DulcisX_Core_PackageX__ctor_" data-uid="DulcisX.Core.PackageX.#ctor*"></a>
   <h4 id="DulcisX_Core_PackageX__ctor" data-uid="DulcisX.Core.PackageX.#ctor">PackageX()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Initializes a new instance of the <span class="xref">Microsoft.VisualStudio.Shell.Package</span> class.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -410,11 +412,12 @@
     <a href="https://github.com/TwentyFourMinutes/DulcisX/new/master/apiSpec/new?filename=DulcisX_Core_PackageX__ctor_System_Reflection_Assembly___.md&amp;value=---%0Auid%3A%20DulcisX.Core.PackageX.%23ctor(System.Reflection.Assembly%5B%5D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/TwentyFourMinutes/DulcisX/blob/master/src/DulcisX/DulcisX/Core/PackageX.cs/#L111">View Source</a>
+    <a href="https://github.com/TwentyFourMinutes/DulcisX/blob/master/src/DulcisX/DulcisX/Core/PackageX.cs/#L146">View Source</a>
   </span>
   <a id="DulcisX_Core_PackageX__ctor_" data-uid="DulcisX.Core.PackageX.#ctor*"></a>
   <h4 id="DulcisX_Core_PackageX__ctor_System_Reflection_Assembly___" data-uid="DulcisX.Core.PackageX.#ctor(System.Reflection.Assembly[])">PackageX(Assembly[])</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Initializes a new instance of the <span class="xref">Microsoft.VisualStudio.Shell.Package</span> class with a list of assemblies which contain <a class="xref" href="DulcisX.Core.IContainerConfiguration.html">IContainerConfiguration</a>s.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -433,7 +436,8 @@
       <tr>
         <td><span class="xref">System.Reflection.Assembly</span>[]</td>
         <td><span class="parametername">containerConfigurationAssemblies</span></td>
-        <td></td>
+        <td><p>An Array which contains all assemblies witch contain <a class="xref" href="DulcisX.Core.IContainerConfiguration.html">IContainerConfiguration</a>s.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -444,11 +448,12 @@
     <a href="https://github.com/TwentyFourMinutes/DulcisX/new/master/apiSpec/new?filename=DulcisX_Core_PackageX_InfoBar.md&amp;value=---%0Auid%3A%20DulcisX.Core.PackageX.InfoBar%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/TwentyFourMinutes/DulcisX/blob/master/src/DulcisX/DulcisX/Core/PackageX.cs/#L55">View Source</a>
+    <a href="https://github.com/TwentyFourMinutes/DulcisX/blob/master/src/DulcisX/DulcisX/Core/PackageX.cs/#L74">View Source</a>
   </span>
   <a id="DulcisX_Core_PackageX_InfoBar_" data-uid="DulcisX.Core.PackageX.InfoBar*"></a>
   <h4 id="DulcisX_Core_PackageX_InfoBar" data-uid="DulcisX.Core.PackageX.InfoBar">InfoBar</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Gets the InfoBar of the environment.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -474,11 +479,12 @@
     <a href="https://github.com/TwentyFourMinutes/DulcisX/new/master/apiSpec/new?filename=DulcisX_Core_PackageX_ServiceContainer.md&amp;value=---%0Auid%3A%20DulcisX.Core.PackageX.ServiceContainer%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/TwentyFourMinutes/DulcisX/blob/master/src/DulcisX/DulcisX/Core/PackageX.cs/#L100">View Source</a>
+    <a href="https://github.com/TwentyFourMinutes/DulcisX/blob/master/src/DulcisX/DulcisX/Core/PackageX.cs/#L128">View Source</a>
   </span>
   <a id="DulcisX_Core_PackageX_ServiceContainer_" data-uid="DulcisX.Core.PackageX.ServiceContainer*"></a>
   <h4 id="DulcisX_Core_PackageX_ServiceContainer" data-uid="DulcisX.Core.PackageX.ServiceContainer">ServiceContainer</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Gets the <span class="xref">SimpleInjector.Container</span> which hold package and user specifc services.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -504,11 +510,12 @@
     <a href="https://github.com/TwentyFourMinutes/DulcisX/new/master/apiSpec/new?filename=DulcisX_Core_PackageX_Solution.md&amp;value=---%0Auid%3A%20DulcisX.Core.PackageX.Solution%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/TwentyFourMinutes/DulcisX/blob/master/src/DulcisX/DulcisX/Core/PackageX.cs/#L23">View Source</a>
+    <a href="https://github.com/TwentyFourMinutes/DulcisX/blob/master/src/DulcisX/DulcisX/Core/PackageX.cs/#L36">View Source</a>
   </span>
   <a id="DulcisX_Core_PackageX_Solution_" data-uid="DulcisX.Core.PackageX.Solution*"></a>
   <h4 id="DulcisX_Core_PackageX_Solution" data-uid="DulcisX.Core.PackageX.Solution">Solution</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Gets the current open Solution.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -534,11 +541,12 @@
     <a href="https://github.com/TwentyFourMinutes/DulcisX/new/master/apiSpec/new?filename=DulcisX_Core_PackageX_StatusBar.md&amp;value=---%0Auid%3A%20DulcisX.Core.PackageX.StatusBar%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/TwentyFourMinutes/DulcisX/blob/master/src/DulcisX/DulcisX/Core/PackageX.cs/#L40">View Source</a>
+    <a href="https://github.com/TwentyFourMinutes/DulcisX/blob/master/src/DulcisX/DulcisX/Core/PackageX.cs/#L56">View Source</a>
   </span>
   <a id="DulcisX_Core_PackageX_StatusBar_" data-uid="DulcisX.Core.PackageX.StatusBar*"></a>
   <h4 id="DulcisX_Core_PackageX_StatusBar" data-uid="DulcisX.Core.PackageX.StatusBar">StatusBar</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Gets the <span class="xref">Microsoft.VisualStudio.Shell.Interop.IVsStatusbar</span> of the environment.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -564,11 +572,12 @@
     <a href="https://github.com/TwentyFourMinutes/DulcisX/new/master/apiSpec/new?filename=DulcisX_Core_PackageX_VSInstance.md&amp;value=---%0Auid%3A%20DulcisX.Core.PackageX.VSInstance%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/TwentyFourMinutes/DulcisX/blob/master/src/DulcisX/DulcisX/Core/PackageX.cs/#L87">View Source</a>
+    <a href="https://github.com/TwentyFourMinutes/DulcisX/blob/master/src/DulcisX/DulcisX/Core/PackageX.cs/#L112">View Source</a>
   </span>
   <a id="DulcisX_Core_PackageX_VSInstance_" data-uid="DulcisX.Core.PackageX.VSInstance*"></a>
   <h4 id="DulcisX_Core_PackageX_VSInstance" data-uid="DulcisX.Core.PackageX.VSInstance">VSInstance</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Gets the <a class="xref" href="DulcisX.Core.VisualStudioInstance.html">VisualStudioInstance</a> of the environment.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -594,11 +603,12 @@
     <a href="https://github.com/TwentyFourMinutes/DulcisX/new/master/apiSpec/new?filename=DulcisX_Core_PackageX_WebBrowser.md&amp;value=---%0Auid%3A%20DulcisX.Core.PackageX.WebBrowser%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/TwentyFourMinutes/DulcisX/blob/master/src/DulcisX/DulcisX/Core/PackageX.cs/#L72">View Source</a>
+    <a href="https://github.com/TwentyFourMinutes/DulcisX/blob/master/src/DulcisX/DulcisX/Core/PackageX.cs/#L94">View Source</a>
   </span>
   <a id="DulcisX_Core_PackageX_WebBrowser_" data-uid="DulcisX.Core.PackageX.WebBrowser*"></a>
   <h4 id="DulcisX_Core_PackageX_WebBrowser" data-uid="DulcisX.Core.PackageX.WebBrowser">WebBrowser</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Gets the WebBrowser of the environment.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -626,7 +636,7 @@
     <a href="https://github.com/TwentyFourMinutes/DulcisX/new/master/apiSpec/new?filename=DulcisX_Core_PackageX_Dispose_System_Boolean_.md&amp;value=---%0Auid%3A%20DulcisX.Core.PackageX.Dispose(System.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/TwentyFourMinutes/DulcisX/blob/master/src/DulcisX/DulcisX/Core/PackageX.cs/#L153">View Source</a>
+    <a href="https://github.com/TwentyFourMinutes/DulcisX/blob/master/src/DulcisX/DulcisX/Core/PackageX.cs/#L199">View Source</a>
   </span>
   <a id="DulcisX_Core_PackageX_Dispose_" data-uid="DulcisX.Core.PackageX.Dispose*"></a>
   <h4 id="DulcisX_Core_PackageX_Dispose_System_Boolean_" data-uid="DulcisX.Core.PackageX.Dispose(System.Boolean)">Dispose(Boolean)</h4>
@@ -634,7 +644,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected override void Dispose(bool disposing)</code></pre>
+    <pre><code class="lang-csharp hljs">protected override sealed void Dispose(bool disposing)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -660,16 +670,16 @@
     <a href="https://github.com/TwentyFourMinutes/DulcisX/new/master/apiSpec/new?filename=DulcisX_Core_PackageX_GetGlobalService__1.md&amp;value=---%0Auid%3A%20DulcisX.Core.PackageX.GetGlobalService%60%601%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/TwentyFourMinutes/DulcisX/blob/master/src/DulcisX/DulcisX/Core/PackageX.cs/#L141">View Source</a>
+    <a href="https://github.com/TwentyFourMinutes/DulcisX/blob/master/src/DulcisX/DulcisX/Core/PackageX.cs/#L181">View Source</a>
   </span>
   <a id="DulcisX_Core_PackageX_GetGlobalService_" data-uid="DulcisX.Core.PackageX.GetGlobalService*"></a>
   <h4 id="DulcisX_Core_PackageX_GetGlobalService__1" data-uid="DulcisX.Core.PackageX.GetGlobalService``1">GetGlobalService&lt;TService&gt;()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns a service which is registered in the native Global Service Container.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public TService GetGlobalService&lt;TService&gt;()
-
     where TService : class</code></pre>
   </div>
   <h5 class="returns">Returns</h5>
@@ -683,7 +693,8 @@
     <tbody>
       <tr>
         <td><span class="xref">TService</span></td>
-        <td></td>
+        <td><p>The service being requested if available, otherwise null.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -698,7 +709,8 @@
     <tbody>
       <tr>
         <td><span class="parametername">TService</span></td>
-        <td></td>
+        <td><p>The type which should be retrieved.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -707,16 +719,16 @@
     <a href="https://github.com/TwentyFourMinutes/DulcisX/new/master/apiSpec/new?filename=DulcisX_Core_PackageX_GetGlobalService__2.md&amp;value=---%0Auid%3A%20DulcisX.Core.PackageX.GetGlobalService%60%602%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/TwentyFourMinutes/DulcisX/blob/master/src/DulcisX/DulcisX/Core/PackageX.cs/#L144">View Source</a>
+    <a href="https://github.com/TwentyFourMinutes/DulcisX/blob/master/src/DulcisX/DulcisX/Core/PackageX.cs/#L190">View Source</a>
   </span>
   <a id="DulcisX_Core_PackageX_GetGlobalService_" data-uid="DulcisX.Core.PackageX.GetGlobalService*"></a>
   <h4 id="DulcisX_Core_PackageX_GetGlobalService__2" data-uid="DulcisX.Core.PackageX.GetGlobalService``2">GetGlobalService&lt;TBaseService, TService&gt;()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns a service which is registered in the native Global Service Container.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public TService GetGlobalService&lt;TBaseService, TService&gt;()
-
     where TBaseService : class where TService : class</code></pre>
   </div>
   <h5 class="returns">Returns</h5>
@@ -730,7 +742,8 @@
     <tbody>
       <tr>
         <td><span class="xref">TService</span></td>
-        <td></td>
+        <td><p>The service being requested if available, otherwise null.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -745,11 +758,13 @@
     <tbody>
       <tr>
         <td><span class="parametername">TBaseService</span></td>
-        <td></td>
+        <td><p>The service type of the implemention which should be retrieved.</p>
+</td>
       </tr>
       <tr>
         <td><span class="parametername">TService</span></td>
-        <td></td>
+        <td><p>The implemention type of the service which should be retrieved.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -758,7 +773,7 @@
     <a href="https://github.com/TwentyFourMinutes/DulcisX/new/master/apiSpec/new?filename=DulcisX_Core_PackageX_InitializeAsync_System_Threading_CancellationToken_System_IProgress_Microsoft_VisualStudio_Shell_ServiceProgressData__.md&amp;value=---%0Auid%3A%20DulcisX.Core.PackageX.InitializeAsync(System.Threading.CancellationToken%2CSystem.IProgress%7BMicrosoft.VisualStudio.Shell.ServiceProgressData%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/TwentyFourMinutes/DulcisX/blob/master/src/DulcisX/DulcisX/Core/PackageX.cs/#L123">View Source</a>
+    <a href="https://github.com/TwentyFourMinutes/DulcisX/blob/master/src/DulcisX/DulcisX/Core/PackageX.cs/#L158">View Source</a>
   </span>
   <a id="DulcisX_Core_PackageX_InitializeAsync_" data-uid="DulcisX.Core.PackageX.InitializeAsync*"></a>
   <h4 id="DulcisX_Core_PackageX_InitializeAsync_System_Threading_CancellationToken_System_IProgress_Microsoft_VisualStudio_Shell_ServiceProgressData__" data-uid="DulcisX.Core.PackageX.InitializeAsync(System.Threading.CancellationToken,System.IProgress{Microsoft.VisualStudio.Shell.ServiceProgressData})">InitializeAsync(CancellationToken, IProgress&lt;ServiceProgressData&gt;)</h4>
@@ -766,7 +781,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected override Task InitializeAsync(CancellationToken cancellationToken, IProgress&lt;ServiceProgressData&gt; progress)</code></pre>
+    <pre><code class="lang-csharp hljs">protected override sealed Task InitializeAsync(CancellationToken cancellationToken, IProgress&lt;ServiceProgressData&gt; progress)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -814,10 +829,11 @@
     <a href="https://github.com/TwentyFourMinutes/DulcisX/new/master/apiSpec/new?filename=DulcisX_Core_PackageX_OnDisposing.md&amp;value=---%0Auid%3A%20DulcisX.Core.PackageX.OnDisposing%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/TwentyFourMinutes/DulcisX/blob/master/src/DulcisX/DulcisX/Core/PackageX.cs/#L19">View Source</a>
+    <a href="https://github.com/TwentyFourMinutes/DulcisX/blob/master/src/DulcisX/DulcisX/Core/PackageX.cs/#L29">View Source</a>
   </span>
   <h4 id="DulcisX_Core_PackageX_OnDisposing" data-uid="DulcisX.Core.PackageX.OnDisposing">OnDisposing</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Occurs when the environment disposes the Package.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -843,10 +859,11 @@
     <a href="https://github.com/TwentyFourMinutes/DulcisX/new/master/apiSpec/new?filename=DulcisX_Core_PackageX_OnInitializeAsync.md&amp;value=---%0Auid%3A%20DulcisX.Core.PackageX.OnInitializeAsync%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/TwentyFourMinutes/DulcisX/blob/master/src/DulcisX/DulcisX/Core/PackageX.cs/#L18">View Source</a>
+    <a href="https://github.com/TwentyFourMinutes/DulcisX/blob/master/src/DulcisX/DulcisX/Core/PackageX.cs/#L24">View Source</a>
   </span>
   <h4 id="DulcisX_Core_PackageX_OnInitializeAsync" data-uid="DulcisX.Core.PackageX.OnInitializeAsync">OnInitializeAsync</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Occurs when the environment initializes the Package.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -923,10 +940,10 @@
       <a class="xref" href="DulcisX.Core.Models.IServiceProviders.html">IServiceProviders</a>
   </div>
   <div>
-      <span class="xref">Microsoft.VisualStudio.Shell.IAsyncServiceProvider</span>
+      <span class="xref">System.IServiceProvider</span>
   </div>
   <div>
-      <span class="xref">System.IServiceProvider</span>
+      <span class="xref">Microsoft.VisualStudio.Shell.IAsyncServiceProvider</span>
   </div>
 </article>
           </div>
@@ -947,7 +964,7 @@
                     <a href="https://github.com/TwentyFourMinutes/DulcisX/new/master/apiSpec/new?filename=DulcisX_Core_PackageX.md&amp;value=---%0Auid%3A%20DulcisX.Core.PackageX%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/TwentyFourMinutes/DulcisX/blob/master/src/DulcisX/DulcisX/Core/PackageX.cs/#L16" class="contribution-link">View Source</a>
+                    <a href="https://github.com/TwentyFourMinutes/DulcisX/blob/master/src/DulcisX/DulcisX/Core/PackageX.cs/#L19" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>
