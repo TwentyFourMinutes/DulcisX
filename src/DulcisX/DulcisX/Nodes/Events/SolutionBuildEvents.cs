@@ -38,7 +38,7 @@ namespace DulcisX.Nodes.Events
 
         public int UpdateSolution_Done(int fSucceeded, int fModified, int fCancelCommand)
         {
-            OnSolutionBuilt?.Invoke(VsConverter.Boolean(fSucceeded), VsConverter.Boolean(fModified), VsConverter.Boolean(fCancelCommand));
+            OnSolutionBuilt?.Invoke(VsConverter.AsBoolean(fSucceeded), VsConverter.AsBoolean(fModified), VsConverter.AsBoolean(fCancelCommand));
 
             return CommonStatusCodes.Success;
         }

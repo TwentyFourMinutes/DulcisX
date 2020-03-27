@@ -105,7 +105,7 @@ namespace DulcisX.Nodes.Events
 
                 if (projectOpenedListener)
                 {
-                    _onProjectOpened.Invoke(project.NodeType, project, VsConverter.Boolean(fAdded));
+                    _onProjectOpened.Invoke(project.NodeType, project, VsConverter.AsBoolean(fAdded));
                 }
 
                 if (projectAddListener &&
@@ -124,7 +124,7 @@ namespace DulcisX.Nodes.Events
             {
                 var project = Solution.GetProject(pHierarchy);
 
-                _onQueryProjectClose.Invoke(project.NodeType, VsConverter.Boolean(fRemoving), token);
+                _onQueryProjectClose.Invoke(project.NodeType, VsConverter.AsBoolean(fRemoving), token);
             });
         }
 
@@ -139,7 +139,7 @@ namespace DulcisX.Nodes.Events
 
                 if (projectCloseListener)
                 {
-                    _onProjectClose.Invoke(project.NodeType, project, VsConverter.Boolean(fRemoved));
+                    _onProjectClose.Invoke(project.NodeType, project, VsConverter.AsBoolean(fRemoved));
                 }
 
                 if (projectRemoveListener &&
@@ -202,7 +202,7 @@ namespace DulcisX.Nodes.Events
 
         public int OnAfterOpenSolution(object pUnkReserved, int fNewSolution)
         {
-            OnSolutionOpened?.Invoke(VsConverter.Boolean(fNewSolution));
+            OnSolutionOpened?.Invoke(VsConverter.AsBoolean(fNewSolution));
 
             return CommonStatusCodes.Success;
         }

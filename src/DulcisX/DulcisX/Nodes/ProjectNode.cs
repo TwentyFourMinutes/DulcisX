@@ -182,7 +182,7 @@ namespace DulcisX.Nodes
 
             errorCode = project.RemoveItem(0, node.ItemId, out var success);
 
-            return VsConverter.Boolean(success) && ErrorHandler.Succeeded(errorCode);
+            return VsConverter.AsBoolean(success) && ErrorHandler.Succeeded(errorCode);
         }
 
         public bool TryGetPhysicalNode<TNode>(string fullName, out TNode node) where TNode : class, IPhysicalNode
@@ -195,7 +195,7 @@ namespace DulcisX.Nodes
 
             ErrorHandler.ThrowOnFailure(result);
 
-            if (!VsConverter.Boolean(found))
+            if (!VsConverter.AsBoolean(found))
             {
                 node = null;
                 return false;
