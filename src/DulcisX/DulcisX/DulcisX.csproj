@@ -62,7 +62,7 @@
   <ItemGroup>
     <Compile Include="Core\AsyncResult.cs" />
     <Compile Include="Core\Attributes\NotImplementedAttribute.cs" />
-    <Compile Include="Core\COMContainer.cs" />
+    <Compile Include="Core\ComContainer.cs" />
     <Compile Include="Core\Components\InfoBar\ActionCallback.cs" />
     <Compile Include="Core\Components\InfoBar\CommonInfoBarEvents.cs" />
     <Compile Include="Core\Components\InfoBar\HyperLink.cs" />

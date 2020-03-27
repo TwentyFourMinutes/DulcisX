@@ -1,6 +1,6 @@
-﻿using DulcisX.Nodes;
+﻿using DulcisX.Core;
 
-namespace DulcisX.Core
+namespace DulcisX.Nodes.Events
 {
     public abstract class NodeEventSink : EventSink
     {
