@@ -1,6 +1,6 @@
 # DulcisX
 
-<a href="https://www.nuget.org/packages/DulcisX"><img alt="Nuget" src="https://img.shields.io/nuget/v/DulcisX?style=flat-square"></a> <a href="https://www.nuget.org/packages/DulcisX"><img alt="Nuget" src="https://img.shields.io/nuget/dt/DulcisX?style=flat-square"></a> <a href="https://github.com/TwentyFourMinutes/DulcisX/issues"><img alt="GitHub issues" src="https://img.shields.io/github/issues-raw/TwentyFourMinutes/DulcisX?style=flat-square"></a> <a href="https://github.com/TwentyFourMinutes/DulcisX/blob/master/LICENSE"><img alt="GitHub" src="https://img.shields.io/github/license/TwentyFourMinutes/DulcisX?style=flat-square"></a> <a href="https://discordapp.com/invite/EYKxkce"><img alt="Discord" src="https://discordapp.com/api/guilds/275377268728135680/widget.png"></a>
+<a href="https://www.nuget.org/packages/DulcisX"><img alt="Nuget" src="https://img.shields.io/nuget/v/DulcisX"></a> <a href="https://www.nuget.org/packages/DulcisX"><img alt="Nuget" src="https://img.shields.io/nuget/dt/DulcisX"></a> <a href="https://github.com/TwentyFourMinutes/DulcisX/issues"><img alt="GitHub issues" src="https://img.shields.io/github/issues-raw/TwentyFourMinutes/DulcisX"></a> <a href="https://github.com/TwentyFourMinutes/DulcisX/blob/master/LICENSE"><img alt="GitHub" src="https://img.shields.io/github/license/TwentyFourMinutes/DulcisX"></a> <a href="https://discordapp.com/invite/EYKxkce"><img alt="Discord" src="https://discordapp.com/api/guilds/275377268728135680/widget.png"></a>
 
 DulcisX translates to _Sweet Extension_ and this is the goal for this Project, making the experience of developing Visual Studio Extensions sweat. It allows you to get your extension done faster and doesn't bother you with ugly or missing API's.
 
@@ -24,7 +24,9 @@ If you want to collaborate on this project more, than creating issues and PR's, 
 
 ## Installation
 
-You can either get this package by downloading it from the NuGet Package Manager built in Visual Studio, in the [releases](https://github.com/TwentyFourMinutes/DulcisX/releases) tab or from the official [nuget.org](https://www.nuget.org/packages/DulcisX) website.
+You can either get this package by downloading it from the NuGet Package Manager built in Visual Studio, in the [releases](https://github.com/TwentyFourMinutes/DulcisX/releases) tab or from the official [nuget.org](https://www.nuget.org/packages/DulcisX) website. 
+
+Also, DulcisX targets `.Net Framework 4.8`, so make sure that your projects targets the correct Framework version. You can change this in the _Property_ window of the Project under _Application_ > _Target Framework_ > _.Net Framework 4.8_.
 
 Also you can install it via the **P**ackage **M**anager **C**onsole:
 
@@ -42,7 +44,7 @@ You can find the documentation [here](https://github.com/TwentyFourMinutes/Dulci
 
 ## Coverage
 
-Currently DulcisX only supports Visual Studio 2019. 
+Currently DulcisX only supports *Visual Studio 2019*. 
 
 Now how does it differ from the current DTE? This package provides a cleaner abstraction than the DTE does additionally, it is simpler to use and more powerful and most importantly open-source. However as it currently stands DuclisX doesn't cover all parts which the DTE does. See the table below for more detailed information.
 
