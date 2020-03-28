@@ -1,0 +1,105 @@
+### YamlMime:ManagedReference
+items:
+- uid: DulcisX.Core.IContainerConfiguration
+  commentId: T:DulcisX.Core.IContainerConfiguration
+  id: IContainerConfiguration
+  parent: DulcisX.Core
+  children:
+  - DulcisX.Core.IContainerConfiguration.ConfigureServices(DulcisX.Core.PackageX,SimpleInjector.Container)
+  langs:
+  - csharp
+  - vb
+  name: IContainerConfiguration
+  nameWithType: IContainerConfiguration
+  fullName: DulcisX.Core.IContainerConfiguration
+  type: Interface
+  source:
+    remote:
+      path: src/DulcisX/DulcisX/Core/IContainerConfiguration.cs
+      branch: master
+      repo: https://github.com/TwentyFourMinutes/DulcisX.git
+    id: IContainerConfiguration
+    path: ../../DulcisX - master/src/DulcisX/DulcisX/Core/IContainerConfiguration.cs
+    startLine: 7
+  assemblies:
+  - DulcisX
+  namespace: DulcisX.Core
+  summary: "\nAllows the configuration of the <xref href=\"DulcisX.Core.PackageX.ServiceContainer\" data-throw-if-not-resolved=\"false\"></xref>.\n"
+  example: []
+  syntax:
+    content: public interface IContainerConfiguration
+    content.vb: Public Interface IContainerConfiguration
+  modifiers.csharp:
+  - public
+  - interface
+  modifiers.vb:
+  - Public
+  - Interface
+- uid: DulcisX.Core.IContainerConfiguration.ConfigureServices(DulcisX.Core.PackageX,SimpleInjector.Container)
+  commentId: M:DulcisX.Core.IContainerConfiguration.ConfigureServices(DulcisX.Core.PackageX,SimpleInjector.Container)
+  id: ConfigureServices(DulcisX.Core.PackageX,SimpleInjector.Container)
+  parent: DulcisX.Core.IContainerConfiguration
+  langs:
+  - csharp
+  - vb
+  name: ConfigureServices(PackageX, Container)
+  nameWithType: IContainerConfiguration.ConfigureServices(PackageX, Container)
+  fullName: DulcisX.Core.IContainerConfiguration.ConfigureServices(DulcisX.Core.PackageX, SimpleInjector.Container)
+  type: Method
+  source:
+    remote:
+      path: src/DulcisX/DulcisX/Core/IContainerConfiguration.cs
+      branch: master
+      repo: https://github.com/TwentyFourMinutes/DulcisX.git
+    id: ConfigureServices
+    path: ../../DulcisX - master/src/DulcisX/DulcisX/Core/IContainerConfiguration.cs
+    startLine: 14
+  assemblies:
+  - DulcisX
+  namespace: DulcisX.Core
+  summary: "\nConfigures the services of the see <xref href=\"DulcisX.Core.PackageX.ServiceContainer\" data-throw-if-not-resolved=\"false\"></xref>.\n"
+  example: []
+  syntax:
+    content: void ConfigureServices(PackageX package, Container container)
+    parameters:
+    - id: package
+      type: DulcisX.Core.PackageX
+      description: ''
+    - id: container
+      type: SimpleInjector.Container
+      description: ''
+    content.vb: Sub ConfigureServices(package As PackageX, container As Container)
+  overload: DulcisX.Core.IContainerConfiguration.ConfigureServices*
+references:
+- uid: DulcisX.Core.PackageX.ServiceContainer
+  commentId: P:DulcisX.Core.PackageX.ServiceContainer
+  isExternal: true
+- uid: DulcisX.Core
+  commentId: N:DulcisX.Core
+  name: DulcisX.Core
+  nameWithType: DulcisX.Core
+  fullName: DulcisX.Core
+- uid: DulcisX.Core.IContainerConfiguration.ConfigureServices*
+  commentId: Overload:DulcisX.Core.IContainerConfiguration.ConfigureServices
+  name: ConfigureServices
+  nameWithType: IContainerConfiguration.ConfigureServices
+  fullName: DulcisX.Core.IContainerConfiguration.ConfigureServices
+- uid: DulcisX.Core.PackageX
+  commentId: T:DulcisX.Core.PackageX
+  parent: DulcisX.Core
+  name: PackageX
+  nameWithType: PackageX
+  fullName: DulcisX.Core.PackageX
+- uid: SimpleInjector.Container
+  commentId: T:SimpleInjector.Container
+  parent: SimpleInjector
+  isExternal: true
+  name: Container
+  nameWithType: Container
+  fullName: SimpleInjector.Container
+- uid: SimpleInjector
+  commentId: N:SimpleInjector
+  isExternal: true
+  name: SimpleInjector
+  nameWithType: SimpleInjector
+  fullName: SimpleInjector

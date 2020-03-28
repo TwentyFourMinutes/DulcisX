@@ -1,0 +1,919 @@
+### YamlMime:ManagedReference
+items:
+- uid: DulcisX.Nodes.Events.IProjectNodeChangeEvents
+  commentId: T:DulcisX.Nodes.Events.IProjectNodeChangeEvents
+  id: IProjectNodeChangeEvents
+  parent: DulcisX.Nodes.Events
+  children:
+  - DulcisX.Nodes.Events.IProjectNodeChangeEvents.OnDocumentsAdded
+  - DulcisX.Nodes.Events.IProjectNodeChangeEvents.OnDocumentSccStatusChanged
+  - DulcisX.Nodes.Events.IProjectNodeChangeEvents.OnDocumentsRemoved
+  - DulcisX.Nodes.Events.IProjectNodeChangeEvents.OnDocumentsRenamed
+  - DulcisX.Nodes.Events.IProjectNodeChangeEvents.OnFoldersAdded
+  - DulcisX.Nodes.Events.IProjectNodeChangeEvents.OnFoldersRemoved
+  - DulcisX.Nodes.Events.IProjectNodeChangeEvents.OnFoldersRenamed
+  langs:
+  - csharp
+  - vb
+  name: IProjectNodeChangeEvents
+  nameWithType: IProjectNodeChangeEvents
+  fullName: DulcisX.Nodes.Events.IProjectNodeChangeEvents
+  type: Interface
+  source:
+    remote:
+      path: src/DulcisX/DulcisX/Nodes/Events/IProjectNodeChangeEvents.cs
+      branch: master
+      repo: https://github.com/TwentyFourMinutes/DulcisX.git
+    id: IProjectNodeChangeEvents
+    path: ../../DulcisX - master/src/DulcisX/DulcisX/Nodes/Events/IProjectNodeChangeEvents.cs
+    startLine: 10
+  assemblies:
+  - DulcisX
+  namespace: DulcisX.Nodes.Events
+  summary: "\nProvides events, which occur on changes to <xref href=\"DulcisX.Nodes.ProjectItemNode\" data-throw-if-not-resolved=\"false\"></xref>s within all <xref href=\"DulcisX.Nodes.ProjectNode\" data-throw-if-not-resolved=\"false\"></xref>s. Provided by the <xref href=\"Microsoft.VisualStudio.Shell.Interop.IVsTrackProjectDocumentsEvents2\" data-throw-if-not-resolved=\"false\"></xref> interface.\n"
+  example: []
+  syntax:
+    content: public interface IProjectNodeChangeEvents
+    content.vb: Public Interface IProjectNodeChangeEvents
+  modifiers.csharp:
+  - public
+  - interface
+  modifiers.vb:
+  - Public
+  - Interface
+- uid: DulcisX.Nodes.Events.IProjectNodeChangeEvents.OnDocumentsAdded
+  commentId: E:DulcisX.Nodes.Events.IProjectNodeChangeEvents.OnDocumentsAdded
+  id: OnDocumentsAdded
+  parent: DulcisX.Nodes.Events.IProjectNodeChangeEvents
+  langs:
+  - csharp
+  - vb
+  name: OnDocumentsAdded
+  nameWithType: IProjectNodeChangeEvents.OnDocumentsAdded
+  fullName: DulcisX.Nodes.Events.IProjectNodeChangeEvents.OnDocumentsAdded
+  type: Event
+  source:
+    remote:
+      path: src/DulcisX/DulcisX/Nodes/Events/IProjectNodeChangeEvents.cs
+      branch: master
+      repo: https://github.com/TwentyFourMinutes/DulcisX.git
+    id: OnDocumentsAdded
+    path: ../../DulcisX - master/src/DulcisX/DulcisX/Nodes/Events/IProjectNodeChangeEvents.cs
+    startLine: 15
+  assemblies:
+  - DulcisX
+  namespace: DulcisX.Nodes.Events
+  summary: "\nOccurs when <xref href=\"DulcisX.Nodes.DocumentNode\" data-throw-if-not-resolved=\"false\"></xref>(s) get added to a <xref href=\"DulcisX.Nodes.ProjectNode\" data-throw-if-not-resolved=\"false\"></xref>.\n"
+  example: []
+  syntax:
+    content: event Action<IEnumerable<AddedPhysicalNode<DocumentNode, VSADDFILEFLAGS>>> OnDocumentsAdded
+    return:
+      type: System.Action{System.Collections.Generic.IEnumerable{DulcisX.Nodes.AddedPhysicalNode{DulcisX.Nodes.DocumentNode,Microsoft.VisualStudio.Shell.Interop.VSADDFILEFLAGS}}}
+    content.vb: Event OnDocumentsAdded As Action(Of IEnumerable(Of AddedPhysicalNode(Of DocumentNode, VSADDFILEFLAGS)))
+- uid: DulcisX.Nodes.Events.IProjectNodeChangeEvents.OnFoldersAdded
+  commentId: E:DulcisX.Nodes.Events.IProjectNodeChangeEvents.OnFoldersAdded
+  id: OnFoldersAdded
+  parent: DulcisX.Nodes.Events.IProjectNodeChangeEvents
+  langs:
+  - csharp
+  - vb
+  name: OnFoldersAdded
+  nameWithType: IProjectNodeChangeEvents.OnFoldersAdded
+  fullName: DulcisX.Nodes.Events.IProjectNodeChangeEvents.OnFoldersAdded
+  type: Event
+  source:
+    remote:
+      path: src/DulcisX/DulcisX/Nodes/Events/IProjectNodeChangeEvents.cs
+      branch: master
+      repo: https://github.com/TwentyFourMinutes/DulcisX.git
+    id: OnFoldersAdded
+    path: ../../DulcisX - master/src/DulcisX/DulcisX/Nodes/Events/IProjectNodeChangeEvents.cs
+    startLine: 20
+  assemblies:
+  - DulcisX
+  namespace: DulcisX.Nodes.Events
+  summary: "\nOccurs when <xref href=\"DulcisX.Nodes.FolderNode\" data-throw-if-not-resolved=\"false\"></xref>(s) get added to a <xref href=\"DulcisX.Nodes.ProjectNode\" data-throw-if-not-resolved=\"false\"></xref>.\n"
+  example: []
+  syntax:
+    content: event Action<IEnumerable<AddedPhysicalNode<FolderNode, VSADDDIRECTORYFLAGS>>> OnFoldersAdded
+    return:
+      type: System.Action{System.Collections.Generic.IEnumerable{DulcisX.Nodes.AddedPhysicalNode{DulcisX.Nodes.FolderNode,Microsoft.VisualStudio.Shell.Interop.VSADDDIRECTORYFLAGS}}}
+    content.vb: Event OnFoldersAdded As Action(Of IEnumerable(Of AddedPhysicalNode(Of FolderNode, VSADDDIRECTORYFLAGS)))
+- uid: DulcisX.Nodes.Events.IProjectNodeChangeEvents.OnDocumentsRemoved
+  commentId: E:DulcisX.Nodes.Events.IProjectNodeChangeEvents.OnDocumentsRemoved
+  id: OnDocumentsRemoved
+  parent: DulcisX.Nodes.Events.IProjectNodeChangeEvents
+  langs:
+  - csharp
+  - vb
+  name: OnDocumentsRemoved
+  nameWithType: IProjectNodeChangeEvents.OnDocumentsRemoved
+  fullName: DulcisX.Nodes.Events.IProjectNodeChangeEvents.OnDocumentsRemoved
+  type: Event
+  source:
+    remote:
+      path: src/DulcisX/DulcisX/Nodes/Events/IProjectNodeChangeEvents.cs
+      branch: master
+      repo: https://github.com/TwentyFourMinutes/DulcisX.git
+    id: OnDocumentsRemoved
+    path: ../../DulcisX - master/src/DulcisX/DulcisX/Nodes/Events/IProjectNodeChangeEvents.cs
+    startLine: 25
+  assemblies:
+  - DulcisX
+  namespace: DulcisX.Nodes.Events
+  summary: "\nOccurs when <xref href=\"DulcisX.Nodes.DocumentNode\" data-throw-if-not-resolved=\"false\"></xref>(s) get removed from a <xref href=\"DulcisX.Nodes.ProjectNode\" data-throw-if-not-resolved=\"false\"></xref>.\n"
+  example: []
+  syntax:
+    content: event Action<IEnumerable<RemovedPhysicalNode<PhysicalNodeRemovedFlags>>> OnDocumentsRemoved
+    return:
+      type: System.Action{System.Collections.Generic.IEnumerable{DulcisX.Nodes.RemovedPhysicalNode{DulcisX.Core.Enums.VisualStudio.PhysicalNodeRemovedFlags}}}
+    content.vb: Event OnDocumentsRemoved As Action(Of IEnumerable(Of RemovedPhysicalNode(Of PhysicalNodeRemovedFlags)))
+- uid: DulcisX.Nodes.Events.IProjectNodeChangeEvents.OnFoldersRemoved
+  commentId: E:DulcisX.Nodes.Events.IProjectNodeChangeEvents.OnFoldersRemoved
+  id: OnFoldersRemoved
+  parent: DulcisX.Nodes.Events.IProjectNodeChangeEvents
+  langs:
+  - csharp
+  - vb
+  name: OnFoldersRemoved
+  nameWithType: IProjectNodeChangeEvents.OnFoldersRemoved
+  fullName: DulcisX.Nodes.Events.IProjectNodeChangeEvents.OnFoldersRemoved
+  type: Event
+  source:
+    remote:
+      path: src/DulcisX/DulcisX/Nodes/Events/IProjectNodeChangeEvents.cs
+      branch: master
+      repo: https://github.com/TwentyFourMinutes/DulcisX.git
+    id: OnFoldersRemoved
+    path: ../../DulcisX - master/src/DulcisX/DulcisX/Nodes/Events/IProjectNodeChangeEvents.cs
+    startLine: 30
+  assemblies:
+  - DulcisX
+  namespace: DulcisX.Nodes.Events
+  summary: "\nOccurs when <xref href=\"DulcisX.Nodes.FolderNode\" data-throw-if-not-resolved=\"false\"></xref>(s) get added from a <xref href=\"DulcisX.Nodes.ProjectNode\" data-throw-if-not-resolved=\"false\"></xref>.\n"
+  example: []
+  syntax:
+    content: event Action<IEnumerable<RemovedPhysicalNode<PhysicalNodeRemovedFlags>>> OnFoldersRemoved
+    return:
+      type: System.Action{System.Collections.Generic.IEnumerable{DulcisX.Nodes.RemovedPhysicalNode{DulcisX.Core.Enums.VisualStudio.PhysicalNodeRemovedFlags}}}
+    content.vb: Event OnFoldersRemoved As Action(Of IEnumerable(Of RemovedPhysicalNode(Of PhysicalNodeRemovedFlags)))
+- uid: DulcisX.Nodes.Events.IProjectNodeChangeEvents.OnDocumentsRenamed
+  commentId: E:DulcisX.Nodes.Events.IProjectNodeChangeEvents.OnDocumentsRenamed
+  id: OnDocumentsRenamed
+  parent: DulcisX.Nodes.Events.IProjectNodeChangeEvents
+  langs:
+  - csharp
+  - vb
+  name: OnDocumentsRenamed
+  nameWithType: IProjectNodeChangeEvents.OnDocumentsRenamed
+  fullName: DulcisX.Nodes.Events.IProjectNodeChangeEvents.OnDocumentsRenamed
+  type: Event
+  source:
+    remote:
+      path: src/DulcisX/DulcisX/Nodes/Events/IProjectNodeChangeEvents.cs
+      branch: master
+      repo: https://github.com/TwentyFourMinutes/DulcisX.git
+    id: OnDocumentsRenamed
+    path: ../../DulcisX - master/src/DulcisX/DulcisX/Nodes/Events/IProjectNodeChangeEvents.cs
+    startLine: 35
+  assemblies:
+  - DulcisX
+  namespace: DulcisX.Nodes.Events
+  summary: "\nOccurs when <xref href=\"DulcisX.Nodes.DocumentNode\" data-throw-if-not-resolved=\"false\"></xref>(s) get renamed.\n"
+  example: []
+  syntax:
+    content: event Action<IEnumerable<RenamedPhysicalNode<DocumentNode, VSRENAMEFILEFLAGS>>> OnDocumentsRenamed
+    return:
+      type: System.Action{System.Collections.Generic.IEnumerable{DulcisX.Nodes.RenamedPhysicalNode{DulcisX.Nodes.DocumentNode,Microsoft.VisualStudio.Shell.Interop.VSRENAMEFILEFLAGS}}}
+    content.vb: Event OnDocumentsRenamed As Action(Of IEnumerable(Of RenamedPhysicalNode(Of DocumentNode, VSRENAMEFILEFLAGS)))
+- uid: DulcisX.Nodes.Events.IProjectNodeChangeEvents.OnFoldersRenamed
+  commentId: E:DulcisX.Nodes.Events.IProjectNodeChangeEvents.OnFoldersRenamed
+  id: OnFoldersRenamed
+  parent: DulcisX.Nodes.Events.IProjectNodeChangeEvents
+  langs:
+  - csharp
+  - vb
+  name: OnFoldersRenamed
+  nameWithType: IProjectNodeChangeEvents.OnFoldersRenamed
+  fullName: DulcisX.Nodes.Events.IProjectNodeChangeEvents.OnFoldersRenamed
+  type: Event
+  source:
+    remote:
+      path: src/DulcisX/DulcisX/Nodes/Events/IProjectNodeChangeEvents.cs
+      branch: master
+      repo: https://github.com/TwentyFourMinutes/DulcisX.git
+    id: OnFoldersRenamed
+    path: ../../DulcisX - master/src/DulcisX/DulcisX/Nodes/Events/IProjectNodeChangeEvents.cs
+    startLine: 40
+  assemblies:
+  - DulcisX
+  namespace: DulcisX.Nodes.Events
+  summary: "\nOccurs when <xref href=\"DulcisX.Nodes.FolderNode\" data-throw-if-not-resolved=\"false\"></xref>(s) get renamed.\n"
+  example: []
+  syntax:
+    content: event Action<IEnumerable<RenamedPhysicalNode<FolderNode, VSRENAMEDIRECTORYFLAGS>>> OnFoldersRenamed
+    return:
+      type: System.Action{System.Collections.Generic.IEnumerable{DulcisX.Nodes.RenamedPhysicalNode{DulcisX.Nodes.FolderNode,Microsoft.VisualStudio.Shell.Interop.VSRENAMEDIRECTORYFLAGS}}}
+    content.vb: Event OnFoldersRenamed As Action(Of IEnumerable(Of RenamedPhysicalNode(Of FolderNode, VSRENAMEDIRECTORYFLAGS)))
+- uid: DulcisX.Nodes.Events.IProjectNodeChangeEvents.OnDocumentSccStatusChanged
+  commentId: E:DulcisX.Nodes.Events.IProjectNodeChangeEvents.OnDocumentSccStatusChanged
+  id: OnDocumentSccStatusChanged
+  parent: DulcisX.Nodes.Events.IProjectNodeChangeEvents
+  langs:
+  - csharp
+  - vb
+  name: OnDocumentSccStatusChanged
+  nameWithType: IProjectNodeChangeEvents.OnDocumentSccStatusChanged
+  fullName: DulcisX.Nodes.Events.IProjectNodeChangeEvents.OnDocumentSccStatusChanged
+  type: Event
+  source:
+    remote:
+      path: src/DulcisX/DulcisX/Nodes/Events/IProjectNodeChangeEvents.cs
+      branch: master
+      repo: https://github.com/TwentyFourMinutes/DulcisX.git
+    id: OnDocumentSccStatusChanged
+    path: ../../DulcisX - master/src/DulcisX/DulcisX/Nodes/Events/IProjectNodeChangeEvents.cs
+    startLine: 45
+  assemblies:
+  - DulcisX
+  namespace: DulcisX.Nodes.Events
+  summary: "\nOccurs when the source control status of <xref href=\"DulcisX.Nodes.IPhysicalNode\" data-throw-if-not-resolved=\"false\"></xref>(s) change.\n"
+  example: []
+  syntax:
+    content: event Action<IEnumerable<ChangedPhysicalSccNode<IPhysicalNode, __SccStatus>>> OnDocumentSccStatusChanged
+    return:
+      type: System.Action{System.Collections.Generic.IEnumerable{DulcisX.Nodes.ChangedPhysicalSccNode{DulcisX.Nodes.IPhysicalNode,Microsoft.VisualStudio.Shell.Interop.__SccStatus}}}
+    content.vb: Event OnDocumentSccStatusChanged As Action(Of IEnumerable(Of ChangedPhysicalSccNode(Of IPhysicalNode, __SccStatus)))
+references:
+- uid: DulcisX.Nodes.ProjectItemNode
+  commentId: T:DulcisX.Nodes.ProjectItemNode
+  parent: DulcisX.Nodes
+  name: ProjectItemNode
+  nameWithType: ProjectItemNode
+  fullName: DulcisX.Nodes.ProjectItemNode
+- uid: DulcisX.Nodes.ProjectNode
+  commentId: T:DulcisX.Nodes.ProjectNode
+  parent: DulcisX.Nodes
+  name: ProjectNode
+  nameWithType: ProjectNode
+  fullName: DulcisX.Nodes.ProjectNode
+- uid: Microsoft.VisualStudio.Shell.Interop.IVsTrackProjectDocumentsEvents2
+  commentId: T:Microsoft.VisualStudio.Shell.Interop.IVsTrackProjectDocumentsEvents2
+  isExternal: true
+- uid: DulcisX.Nodes.Events
+  commentId: N:DulcisX.Nodes.Events
+  name: DulcisX.Nodes.Events
+  nameWithType: DulcisX.Nodes.Events
+  fullName: DulcisX.Nodes.Events
+- uid: DulcisX.Nodes
+  commentId: N:DulcisX.Nodes
+  name: DulcisX.Nodes
+  nameWithType: DulcisX.Nodes
+  fullName: DulcisX.Nodes
+- uid: DulcisX.Nodes.DocumentNode
+  commentId: T:DulcisX.Nodes.DocumentNode
+  parent: DulcisX.Nodes
+  name: DocumentNode
+  nameWithType: DocumentNode
+  fullName: DulcisX.Nodes.DocumentNode
+- uid: System.Action{System.Collections.Generic.IEnumerable{DulcisX.Nodes.AddedPhysicalNode{DulcisX.Nodes.DocumentNode,Microsoft.VisualStudio.Shell.Interop.VSADDFILEFLAGS}}}
+  commentId: T:System.Action{System.Collections.Generic.IEnumerable{DulcisX.Nodes.AddedPhysicalNode{DulcisX.Nodes.DocumentNode,Microsoft.VisualStudio.Shell.Interop.VSADDFILEFLAGS}}}
+  parent: System
+  definition: System.Action`1
+  name: Action<IEnumerable<AddedPhysicalNode<DocumentNode, VSADDFILEFLAGS>>>
+  nameWithType: Action<IEnumerable<AddedPhysicalNode<DocumentNode, VSADDFILEFLAGS>>>
+  fullName: System.Action<System.Collections.Generic.IEnumerable<DulcisX.Nodes.AddedPhysicalNode<DulcisX.Nodes.DocumentNode, Microsoft.VisualStudio.Shell.Interop.VSADDFILEFLAGS>>>
+  nameWithType.vb: Action(Of IEnumerable(Of AddedPhysicalNode(Of DocumentNode, VSADDFILEFLAGS)))
+  fullName.vb: System.Action(Of System.Collections.Generic.IEnumerable(Of DulcisX.Nodes.AddedPhysicalNode(Of DulcisX.Nodes.DocumentNode, Microsoft.VisualStudio.Shell.Interop.VSADDFILEFLAGS)))
+  name.vb: Action(Of IEnumerable(Of AddedPhysicalNode(Of DocumentNode, VSADDFILEFLAGS)))
+  spec.csharp:
+  - uid: System.Action`1
+    name: Action
+    nameWithType: Action
+    fullName: System.Action
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: DulcisX.Nodes.AddedPhysicalNode`2
+    name: AddedPhysicalNode
+    nameWithType: AddedPhysicalNode
+    fullName: DulcisX.Nodes.AddedPhysicalNode
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: DulcisX.Nodes.DocumentNode
+    name: DocumentNode
+    nameWithType: DocumentNode
+    fullName: DulcisX.Nodes.DocumentNode
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: Microsoft.VisualStudio.Shell.Interop.VSADDFILEFLAGS
+    name: VSADDFILEFLAGS
+    nameWithType: VSADDFILEFLAGS
+    fullName: Microsoft.VisualStudio.Shell.Interop.VSADDFILEFLAGS
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Action`1
+    name: Action
+    nameWithType: Action
+    fullName: System.Action
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: DulcisX.Nodes.AddedPhysicalNode`2
+    name: AddedPhysicalNode
+    nameWithType: AddedPhysicalNode
+    fullName: DulcisX.Nodes.AddedPhysicalNode
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: DulcisX.Nodes.DocumentNode
+    name: DocumentNode
+    nameWithType: DocumentNode
+    fullName: DulcisX.Nodes.DocumentNode
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: Microsoft.VisualStudio.Shell.Interop.VSADDFILEFLAGS
+    name: VSADDFILEFLAGS
+    nameWithType: VSADDFILEFLAGS
+    fullName: Microsoft.VisualStudio.Shell.Interop.VSADDFILEFLAGS
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Action`1
+  commentId: T:System.Action`1
+  isExternal: true
+  name: Action<T>
+  nameWithType: Action<T>
+  fullName: System.Action<T>
+  nameWithType.vb: Action(Of T)
+  fullName.vb: System.Action(Of T)
+  name.vb: Action(Of T)
+  spec.csharp:
+  - uid: System.Action`1
+    name: Action
+    nameWithType: Action
+    fullName: System.Action
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Action`1
+    name: Action
+    nameWithType: Action
+    fullName: System.Action
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: DulcisX.Nodes.FolderNode
+  commentId: T:DulcisX.Nodes.FolderNode
+  parent: DulcisX.Nodes
+  name: FolderNode
+  nameWithType: FolderNode
+  fullName: DulcisX.Nodes.FolderNode
+- uid: System.Action{System.Collections.Generic.IEnumerable{DulcisX.Nodes.AddedPhysicalNode{DulcisX.Nodes.FolderNode,Microsoft.VisualStudio.Shell.Interop.VSADDDIRECTORYFLAGS}}}
+  commentId: T:System.Action{System.Collections.Generic.IEnumerable{DulcisX.Nodes.AddedPhysicalNode{DulcisX.Nodes.FolderNode,Microsoft.VisualStudio.Shell.Interop.VSADDDIRECTORYFLAGS}}}
+  parent: System
+  definition: System.Action`1
+  name: Action<IEnumerable<AddedPhysicalNode<FolderNode, VSADDDIRECTORYFLAGS>>>
+  nameWithType: Action<IEnumerable<AddedPhysicalNode<FolderNode, VSADDDIRECTORYFLAGS>>>
+  fullName: System.Action<System.Collections.Generic.IEnumerable<DulcisX.Nodes.AddedPhysicalNode<DulcisX.Nodes.FolderNode, Microsoft.VisualStudio.Shell.Interop.VSADDDIRECTORYFLAGS>>>
+  nameWithType.vb: Action(Of IEnumerable(Of AddedPhysicalNode(Of FolderNode, VSADDDIRECTORYFLAGS)))
+  fullName.vb: System.Action(Of System.Collections.Generic.IEnumerable(Of DulcisX.Nodes.AddedPhysicalNode(Of DulcisX.Nodes.FolderNode, Microsoft.VisualStudio.Shell.Interop.VSADDDIRECTORYFLAGS)))
+  name.vb: Action(Of IEnumerable(Of AddedPhysicalNode(Of FolderNode, VSADDDIRECTORYFLAGS)))
+  spec.csharp:
+  - uid: System.Action`1
+    name: Action
+    nameWithType: Action
+    fullName: System.Action
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: DulcisX.Nodes.AddedPhysicalNode`2
+    name: AddedPhysicalNode
+    nameWithType: AddedPhysicalNode
+    fullName: DulcisX.Nodes.AddedPhysicalNode
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: DulcisX.Nodes.FolderNode
+    name: FolderNode
+    nameWithType: FolderNode
+    fullName: DulcisX.Nodes.FolderNode
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: Microsoft.VisualStudio.Shell.Interop.VSADDDIRECTORYFLAGS
+    name: VSADDDIRECTORYFLAGS
+    nameWithType: VSADDDIRECTORYFLAGS
+    fullName: Microsoft.VisualStudio.Shell.Interop.VSADDDIRECTORYFLAGS
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Action`1
+    name: Action
+    nameWithType: Action
+    fullName: System.Action
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: DulcisX.Nodes.AddedPhysicalNode`2
+    name: AddedPhysicalNode
+    nameWithType: AddedPhysicalNode
+    fullName: DulcisX.Nodes.AddedPhysicalNode
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: DulcisX.Nodes.FolderNode
+    name: FolderNode
+    nameWithType: FolderNode
+    fullName: DulcisX.Nodes.FolderNode
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: Microsoft.VisualStudio.Shell.Interop.VSADDDIRECTORYFLAGS
+    name: VSADDDIRECTORYFLAGS
+    nameWithType: VSADDDIRECTORYFLAGS
+    fullName: Microsoft.VisualStudio.Shell.Interop.VSADDDIRECTORYFLAGS
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Action{System.Collections.Generic.IEnumerable{DulcisX.Nodes.RemovedPhysicalNode{DulcisX.Core.Enums.VisualStudio.PhysicalNodeRemovedFlags}}}
+  commentId: T:System.Action{System.Collections.Generic.IEnumerable{DulcisX.Nodes.RemovedPhysicalNode{DulcisX.Core.Enums.VisualStudio.PhysicalNodeRemovedFlags}}}
+  parent: System
+  definition: System.Action`1
+  name: Action<IEnumerable<RemovedPhysicalNode<PhysicalNodeRemovedFlags>>>
+  nameWithType: Action<IEnumerable<RemovedPhysicalNode<PhysicalNodeRemovedFlags>>>
+  fullName: System.Action<System.Collections.Generic.IEnumerable<DulcisX.Nodes.RemovedPhysicalNode<DulcisX.Core.Enums.VisualStudio.PhysicalNodeRemovedFlags>>>
+  nameWithType.vb: Action(Of IEnumerable(Of RemovedPhysicalNode(Of PhysicalNodeRemovedFlags)))
+  fullName.vb: System.Action(Of System.Collections.Generic.IEnumerable(Of DulcisX.Nodes.RemovedPhysicalNode(Of DulcisX.Core.Enums.VisualStudio.PhysicalNodeRemovedFlags)))
+  name.vb: Action(Of IEnumerable(Of RemovedPhysicalNode(Of PhysicalNodeRemovedFlags)))
+  spec.csharp:
+  - uid: System.Action`1
+    name: Action
+    nameWithType: Action
+    fullName: System.Action
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: DulcisX.Nodes.RemovedPhysicalNode`1
+    name: RemovedPhysicalNode
+    nameWithType: RemovedPhysicalNode
+    fullName: DulcisX.Nodes.RemovedPhysicalNode
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: DulcisX.Core.Enums.VisualStudio.PhysicalNodeRemovedFlags
+    name: PhysicalNodeRemovedFlags
+    nameWithType: PhysicalNodeRemovedFlags
+    fullName: DulcisX.Core.Enums.VisualStudio.PhysicalNodeRemovedFlags
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Action`1
+    name: Action
+    nameWithType: Action
+    fullName: System.Action
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: DulcisX.Nodes.RemovedPhysicalNode`1
+    name: RemovedPhysicalNode
+    nameWithType: RemovedPhysicalNode
+    fullName: DulcisX.Nodes.RemovedPhysicalNode
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: DulcisX.Core.Enums.VisualStudio.PhysicalNodeRemovedFlags
+    name: PhysicalNodeRemovedFlags
+    nameWithType: PhysicalNodeRemovedFlags
+    fullName: DulcisX.Core.Enums.VisualStudio.PhysicalNodeRemovedFlags
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Action{System.Collections.Generic.IEnumerable{DulcisX.Nodes.RenamedPhysicalNode{DulcisX.Nodes.DocumentNode,Microsoft.VisualStudio.Shell.Interop.VSRENAMEFILEFLAGS}}}
+  commentId: T:System.Action{System.Collections.Generic.IEnumerable{DulcisX.Nodes.RenamedPhysicalNode{DulcisX.Nodes.DocumentNode,Microsoft.VisualStudio.Shell.Interop.VSRENAMEFILEFLAGS}}}
+  parent: System
+  definition: System.Action`1
+  name: Action<IEnumerable<RenamedPhysicalNode<DocumentNode, VSRENAMEFILEFLAGS>>>
+  nameWithType: Action<IEnumerable<RenamedPhysicalNode<DocumentNode, VSRENAMEFILEFLAGS>>>
+  fullName: System.Action<System.Collections.Generic.IEnumerable<DulcisX.Nodes.RenamedPhysicalNode<DulcisX.Nodes.DocumentNode, Microsoft.VisualStudio.Shell.Interop.VSRENAMEFILEFLAGS>>>
+  nameWithType.vb: Action(Of IEnumerable(Of RenamedPhysicalNode(Of DocumentNode, VSRENAMEFILEFLAGS)))
+  fullName.vb: System.Action(Of System.Collections.Generic.IEnumerable(Of DulcisX.Nodes.RenamedPhysicalNode(Of DulcisX.Nodes.DocumentNode, Microsoft.VisualStudio.Shell.Interop.VSRENAMEFILEFLAGS)))
+  name.vb: Action(Of IEnumerable(Of RenamedPhysicalNode(Of DocumentNode, VSRENAMEFILEFLAGS)))
+  spec.csharp:
+  - uid: System.Action`1
+    name: Action
+    nameWithType: Action
+    fullName: System.Action
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: DulcisX.Nodes.RenamedPhysicalNode`2
+    name: RenamedPhysicalNode
+    nameWithType: RenamedPhysicalNode
+    fullName: DulcisX.Nodes.RenamedPhysicalNode
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: DulcisX.Nodes.DocumentNode
+    name: DocumentNode
+    nameWithType: DocumentNode
+    fullName: DulcisX.Nodes.DocumentNode
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: Microsoft.VisualStudio.Shell.Interop.VSRENAMEFILEFLAGS
+    name: VSRENAMEFILEFLAGS
+    nameWithType: VSRENAMEFILEFLAGS
+    fullName: Microsoft.VisualStudio.Shell.Interop.VSRENAMEFILEFLAGS
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Action`1
+    name: Action
+    nameWithType: Action
+    fullName: System.Action
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: DulcisX.Nodes.RenamedPhysicalNode`2
+    name: RenamedPhysicalNode
+    nameWithType: RenamedPhysicalNode
+    fullName: DulcisX.Nodes.RenamedPhysicalNode
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: DulcisX.Nodes.DocumentNode
+    name: DocumentNode
+    nameWithType: DocumentNode
+    fullName: DulcisX.Nodes.DocumentNode
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: Microsoft.VisualStudio.Shell.Interop.VSRENAMEFILEFLAGS
+    name: VSRENAMEFILEFLAGS
+    nameWithType: VSRENAMEFILEFLAGS
+    fullName: Microsoft.VisualStudio.Shell.Interop.VSRENAMEFILEFLAGS
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Action{System.Collections.Generic.IEnumerable{DulcisX.Nodes.RenamedPhysicalNode{DulcisX.Nodes.FolderNode,Microsoft.VisualStudio.Shell.Interop.VSRENAMEDIRECTORYFLAGS}}}
+  commentId: T:System.Action{System.Collections.Generic.IEnumerable{DulcisX.Nodes.RenamedPhysicalNode{DulcisX.Nodes.FolderNode,Microsoft.VisualStudio.Shell.Interop.VSRENAMEDIRECTORYFLAGS}}}
+  parent: System
+  definition: System.Action`1
+  name: Action<IEnumerable<RenamedPhysicalNode<FolderNode, VSRENAMEDIRECTORYFLAGS>>>
+  nameWithType: Action<IEnumerable<RenamedPhysicalNode<FolderNode, VSRENAMEDIRECTORYFLAGS>>>
+  fullName: System.Action<System.Collections.Generic.IEnumerable<DulcisX.Nodes.RenamedPhysicalNode<DulcisX.Nodes.FolderNode, Microsoft.VisualStudio.Shell.Interop.VSRENAMEDIRECTORYFLAGS>>>
+  nameWithType.vb: Action(Of IEnumerable(Of RenamedPhysicalNode(Of FolderNode, VSRENAMEDIRECTORYFLAGS)))
+  fullName.vb: System.Action(Of System.Collections.Generic.IEnumerable(Of DulcisX.Nodes.RenamedPhysicalNode(Of DulcisX.Nodes.FolderNode, Microsoft.VisualStudio.Shell.Interop.VSRENAMEDIRECTORYFLAGS)))
+  name.vb: Action(Of IEnumerable(Of RenamedPhysicalNode(Of FolderNode, VSRENAMEDIRECTORYFLAGS)))
+  spec.csharp:
+  - uid: System.Action`1
+    name: Action
+    nameWithType: Action
+    fullName: System.Action
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: DulcisX.Nodes.RenamedPhysicalNode`2
+    name: RenamedPhysicalNode
+    nameWithType: RenamedPhysicalNode
+    fullName: DulcisX.Nodes.RenamedPhysicalNode
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: DulcisX.Nodes.FolderNode
+    name: FolderNode
+    nameWithType: FolderNode
+    fullName: DulcisX.Nodes.FolderNode
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: Microsoft.VisualStudio.Shell.Interop.VSRENAMEDIRECTORYFLAGS
+    name: VSRENAMEDIRECTORYFLAGS
+    nameWithType: VSRENAMEDIRECTORYFLAGS
+    fullName: Microsoft.VisualStudio.Shell.Interop.VSRENAMEDIRECTORYFLAGS
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Action`1
+    name: Action
+    nameWithType: Action
+    fullName: System.Action
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: DulcisX.Nodes.RenamedPhysicalNode`2
+    name: RenamedPhysicalNode
+    nameWithType: RenamedPhysicalNode
+    fullName: DulcisX.Nodes.RenamedPhysicalNode
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: DulcisX.Nodes.FolderNode
+    name: FolderNode
+    nameWithType: FolderNode
+    fullName: DulcisX.Nodes.FolderNode
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: Microsoft.VisualStudio.Shell.Interop.VSRENAMEDIRECTORYFLAGS
+    name: VSRENAMEDIRECTORYFLAGS
+    nameWithType: VSRENAMEDIRECTORYFLAGS
+    fullName: Microsoft.VisualStudio.Shell.Interop.VSRENAMEDIRECTORYFLAGS
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: DulcisX.Nodes.IPhysicalNode
+  commentId: T:DulcisX.Nodes.IPhysicalNode
+  parent: DulcisX.Nodes
+  name: IPhysicalNode
+  nameWithType: IPhysicalNode
+  fullName: DulcisX.Nodes.IPhysicalNode
+- uid: System.Action{System.Collections.Generic.IEnumerable{DulcisX.Nodes.ChangedPhysicalSccNode{DulcisX.Nodes.IPhysicalNode,Microsoft.VisualStudio.Shell.Interop.__SccStatus}}}
+  commentId: T:System.Action{System.Collections.Generic.IEnumerable{DulcisX.Nodes.ChangedPhysicalSccNode{DulcisX.Nodes.IPhysicalNode,Microsoft.VisualStudio.Shell.Interop.__SccStatus}}}
+  parent: System
+  definition: System.Action`1
+  name: Action<IEnumerable<ChangedPhysicalSccNode<IPhysicalNode, __SccStatus>>>
+  nameWithType: Action<IEnumerable<ChangedPhysicalSccNode<IPhysicalNode, __SccStatus>>>
+  fullName: System.Action<System.Collections.Generic.IEnumerable<DulcisX.Nodes.ChangedPhysicalSccNode<DulcisX.Nodes.IPhysicalNode, Microsoft.VisualStudio.Shell.Interop.__SccStatus>>>
+  nameWithType.vb: Action(Of IEnumerable(Of ChangedPhysicalSccNode(Of IPhysicalNode, __SccStatus)))
+  fullName.vb: System.Action(Of System.Collections.Generic.IEnumerable(Of DulcisX.Nodes.ChangedPhysicalSccNode(Of DulcisX.Nodes.IPhysicalNode, Microsoft.VisualStudio.Shell.Interop.__SccStatus)))
+  name.vb: Action(Of IEnumerable(Of ChangedPhysicalSccNode(Of IPhysicalNode, __SccStatus)))
+  spec.csharp:
+  - uid: System.Action`1
+    name: Action
+    nameWithType: Action
+    fullName: System.Action
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: DulcisX.Nodes.ChangedPhysicalSccNode`2
+    name: ChangedPhysicalSccNode
+    nameWithType: ChangedPhysicalSccNode
+    fullName: DulcisX.Nodes.ChangedPhysicalSccNode
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: DulcisX.Nodes.IPhysicalNode
+    name: IPhysicalNode
+    nameWithType: IPhysicalNode
+    fullName: DulcisX.Nodes.IPhysicalNode
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: Microsoft.VisualStudio.Shell.Interop.__SccStatus
+    name: __SccStatus
+    nameWithType: __SccStatus
+    fullName: Microsoft.VisualStudio.Shell.Interop.__SccStatus
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Action`1
+    name: Action
+    nameWithType: Action
+    fullName: System.Action
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: DulcisX.Nodes.ChangedPhysicalSccNode`2
+    name: ChangedPhysicalSccNode
+    nameWithType: ChangedPhysicalSccNode
+    fullName: DulcisX.Nodes.ChangedPhysicalSccNode
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: DulcisX.Nodes.IPhysicalNode
+    name: IPhysicalNode
+    nameWithType: IPhysicalNode
+    fullName: DulcisX.Nodes.IPhysicalNode
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: Microsoft.VisualStudio.Shell.Interop.__SccStatus
+    name: __SccStatus
+    nameWithType: __SccStatus
+    fullName: Microsoft.VisualStudio.Shell.Interop.__SccStatus
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: )
+    nameWithType: )
+    fullName: )

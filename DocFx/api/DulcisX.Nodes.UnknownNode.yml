@@ -1,0 +1,893 @@
+### YamlMime:ManagedReference
+items:
+- uid: DulcisX.Nodes.UnknownNode
+  commentId: T:DulcisX.Nodes.UnknownNode
+  id: UnknownNode
+  parent: DulcisX.Nodes
+  children:
+  - DulcisX.Nodes.UnknownNode.#ctor(DulcisX.Nodes.SolutionNode,Microsoft.VisualStudio.Shell.Interop.IVsHierarchy,System.UInt32)
+  - DulcisX.Nodes.UnknownNode.GetChildren
+  - DulcisX.Nodes.UnknownNode.GetParent
+  - DulcisX.Nodes.UnknownNode.NodeType
+  langs:
+  - csharp
+  - vb
+  name: UnknownNode
+  nameWithType: UnknownNode
+  fullName: DulcisX.Nodes.UnknownNode
+  type: Class
+  source:
+    remote:
+      path: src/DulcisX/DulcisX/Nodes/UnknownNode.cs
+      branch: master
+      repo: https://github.com/TwentyFourMinutes/DulcisX.git
+    id: UnknownNode
+    path: ../../DulcisX - master/src/DulcisX/DulcisX/Nodes/UnknownNode.cs
+    startLine: 12
+  assemblies:
+  - DulcisX
+  namespace: DulcisX.Nodes
+  summary: "\nRepresents a Node which couldn&apos;t be identified.\n"
+  example: []
+  syntax:
+    content: 'public class UnknownNode : BaseNode, INamedNode, IBaseNode'
+    content.vb: >-
+      Public Class UnknownNode
+
+          Inherits BaseNode
+
+          Implements INamedNode, IBaseNode
+  inheritance:
+  - System.Object
+  - DulcisX.Nodes.BaseNode
+  implements:
+  - DulcisX.Nodes.INamedNode
+  - DulcisX.Nodes.IBaseNode
+  inheritedMembers:
+  - DulcisX.Nodes.BaseNode.ParentSolution
+  - DulcisX.Nodes.BaseNode.UnderlyingHierarchy
+  - DulcisX.Nodes.BaseNode.ItemId
+  - DulcisX.Nodes.BaseNode.GetDisplayName
+  - DulcisX.Nodes.BaseNode.GetParent(DulcisX.Core.Enums.NodeTypes)
+  - DulcisX.Nodes.BaseNode.AsHierarchyItem
+  - DulcisX.Nodes.BaseNode.IsTypeMatching(DulcisX.Core.Enums.NodeTypes)
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: DulcisX.Nodes.UnknownNode.NodeType
+  commentId: P:DulcisX.Nodes.UnknownNode.NodeType
+  id: NodeType
+  parent: DulcisX.Nodes.UnknownNode
+  langs:
+  - csharp
+  - vb
+  name: NodeType
+  nameWithType: UnknownNode.NodeType
+  fullName: DulcisX.Nodes.UnknownNode.NodeType
+  type: Property
+  source:
+    remote:
+      path: src/DulcisX/DulcisX/Nodes/UnknownNode.cs
+      branch: master
+      repo: https://github.com/TwentyFourMinutes/DulcisX.git
+    id: NodeType
+    path: ../../DulcisX - master/src/DulcisX/DulcisX/Nodes/UnknownNode.cs
+    startLine: 15
+  assemblies:
+  - DulcisX
+  namespace: DulcisX.Nodes
+  example: []
+  syntax:
+    content: public override NodeTypes NodeType { get; }
+    parameters: []
+    return:
+      type: DulcisX.Core.Enums.NodeTypes
+    content.vb: Public Overrides ReadOnly Property NodeType As NodeTypes
+  overridden: DulcisX.Nodes.BaseNode.NodeType
+  overload: DulcisX.Nodes.UnknownNode.NodeType*
+  modifiers.csharp:
+  - public
+  - override
+  - get
+  modifiers.vb:
+  - Public
+  - Overrides
+  - ReadOnly
+- uid: DulcisX.Nodes.UnknownNode.#ctor(DulcisX.Nodes.SolutionNode,Microsoft.VisualStudio.Shell.Interop.IVsHierarchy,System.UInt32)
+  commentId: M:DulcisX.Nodes.UnknownNode.#ctor(DulcisX.Nodes.SolutionNode,Microsoft.VisualStudio.Shell.Interop.IVsHierarchy,System.UInt32)
+  id: '#ctor(DulcisX.Nodes.SolutionNode,Microsoft.VisualStudio.Shell.Interop.IVsHierarchy,System.UInt32)'
+  parent: DulcisX.Nodes.UnknownNode
+  langs:
+  - csharp
+  - vb
+  name: UnknownNode(SolutionNode, IVsHierarchy, UInt32)
+  nameWithType: UnknownNode.UnknownNode(SolutionNode, IVsHierarchy, UInt32)
+  fullName: DulcisX.Nodes.UnknownNode.UnknownNode(DulcisX.Nodes.SolutionNode, Microsoft.VisualStudio.Shell.Interop.IVsHierarchy, System.UInt32)
+  type: Constructor
+  source:
+    remote:
+      path: src/DulcisX/DulcisX/Nodes/UnknownNode.cs
+      branch: master
+      repo: https://github.com/TwentyFourMinutes/DulcisX.git
+    id: .ctor
+    path: ../../DulcisX - master/src/DulcisX/DulcisX/Nodes/UnknownNode.cs
+    startLine: 23
+  assemblies:
+  - DulcisX
+  namespace: DulcisX.Nodes
+  summary: "\nInitializes a new instance of the <xref href=\"DulcisX.Nodes.UnknownNode\" data-throw-if-not-resolved=\"false\"></xref> class.\n"
+  example: []
+  syntax:
+    content: public UnknownNode(SolutionNode solution, IVsHierarchy hierarchy, uint itemId)
+    parameters:
+    - id: solution
+      type: DulcisX.Nodes.SolutionNode
+      description: The Solution in which the <xref href="DulcisX.Nodes.UnknownNode" data-throw-if-not-resolved="false"></xref> sits in.
+    - id: hierarchy
+      type: Microsoft.VisualStudio.Shell.Interop.IVsHierarchy
+      description: The Hierarchy in which the <xref href="DulcisX.Nodes.UnknownNode" data-throw-if-not-resolved="false"></xref> sits in.
+    - id: itemId
+      type: System.UInt32
+      description: The Unique Identifier for the <xref href="DulcisX.Nodes.UnknownNode" data-throw-if-not-resolved="false"></xref> in the <code data-dev-comment-type="paramref" class="paramref">hierarchy</code>.
+    content.vb: Public Sub New(solution As SolutionNode, hierarchy As IVsHierarchy, itemId As UInteger)
+  overload: DulcisX.Nodes.UnknownNode.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: DulcisX.Nodes.UnknownNode.GetChildren
+  commentId: M:DulcisX.Nodes.UnknownNode.GetChildren
+  id: GetChildren
+  parent: DulcisX.Nodes.UnknownNode
+  langs:
+  - csharp
+  - vb
+  name: GetChildren()
+  nameWithType: UnknownNode.GetChildren()
+  fullName: DulcisX.Nodes.UnknownNode.GetChildren()
+  type: Method
+  source:
+    remote:
+      path: src/DulcisX/DulcisX/Nodes/UnknownNode.cs
+      branch: master
+      repo: https://github.com/TwentyFourMinutes/DulcisX.git
+    id: GetChildren
+    path: ../../DulcisX - master/src/DulcisX/DulcisX/Nodes/UnknownNode.cs
+    startLine: 29
+  assemblies:
+  - DulcisX
+  namespace: DulcisX.Nodes
+  remarks: A <xref href="DulcisX.Nodes.UnknownNode" data-throw-if-not-resolved="false"></xref> doesn&apos;t support the iteration of any children.
+  example: []
+  syntax:
+    content: public override IEnumerable<BaseNode> GetChildren()
+    return:
+      type: System.Collections.Generic.IEnumerable{DulcisX.Nodes.BaseNode}
+    content.vb: Public Overrides Function GetChildren As IEnumerable(Of BaseNode)
+  overridden: DulcisX.Nodes.BaseNode.GetChildren
+  overload: DulcisX.Nodes.UnknownNode.GetChildren*
+  modifiers.csharp:
+  - public
+  - override
+  modifiers.vb:
+  - Public
+  - Overrides
+- uid: DulcisX.Nodes.UnknownNode.GetParent
+  commentId: M:DulcisX.Nodes.UnknownNode.GetParent
+  id: GetParent
+  parent: DulcisX.Nodes.UnknownNode
+  langs:
+  - csharp
+  - vb
+  name: GetParent()
+  nameWithType: UnknownNode.GetParent()
+  fullName: DulcisX.Nodes.UnknownNode.GetParent()
+  type: Method
+  source:
+    remote:
+      path: src/DulcisX/DulcisX/Nodes/UnknownNode.cs
+      branch: master
+      repo: https://github.com/TwentyFourMinutes/DulcisX.git
+    id: GetParent
+    path: ../../DulcisX - master/src/DulcisX/DulcisX/Nodes/UnknownNode.cs
+    startLine: 35
+  assemblies:
+  - DulcisX
+  namespace: DulcisX.Nodes
+  example: []
+  syntax:
+    content: public override BaseNode GetParent()
+    return:
+      type: DulcisX.Nodes.BaseNode
+    content.vb: Public Overrides Function GetParent As BaseNode
+  overridden: DulcisX.Nodes.BaseNode.GetParent
+  overload: DulcisX.Nodes.UnknownNode.GetParent*
+  modifiers.csharp:
+  - public
+  - override
+  modifiers.vb:
+  - Public
+  - Overrides
+references:
+- uid: DulcisX.Nodes
+  commentId: N:DulcisX.Nodes
+  name: DulcisX.Nodes
+  nameWithType: DulcisX.Nodes
+  fullName: DulcisX.Nodes
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: DulcisX.Nodes.BaseNode
+  commentId: T:DulcisX.Nodes.BaseNode
+  parent: DulcisX.Nodes
+  name: BaseNode
+  nameWithType: BaseNode
+  fullName: DulcisX.Nodes.BaseNode
+- uid: DulcisX.Nodes.INamedNode
+  commentId: T:DulcisX.Nodes.INamedNode
+  parent: DulcisX.Nodes
+  name: INamedNode
+  nameWithType: INamedNode
+  fullName: DulcisX.Nodes.INamedNode
+- uid: DulcisX.Nodes.IBaseNode
+  commentId: T:DulcisX.Nodes.IBaseNode
+  parent: DulcisX.Nodes
+  name: IBaseNode
+  nameWithType: IBaseNode
+  fullName: DulcisX.Nodes.IBaseNode
+- uid: DulcisX.Nodes.BaseNode.ParentSolution
+  commentId: P:DulcisX.Nodes.BaseNode.ParentSolution
+  parent: DulcisX.Nodes.BaseNode
+  name: ParentSolution
+  nameWithType: BaseNode.ParentSolution
+  fullName: DulcisX.Nodes.BaseNode.ParentSolution
+- uid: DulcisX.Nodes.BaseNode.UnderlyingHierarchy
+  commentId: P:DulcisX.Nodes.BaseNode.UnderlyingHierarchy
+  parent: DulcisX.Nodes.BaseNode
+  name: UnderlyingHierarchy
+  nameWithType: BaseNode.UnderlyingHierarchy
+  fullName: DulcisX.Nodes.BaseNode.UnderlyingHierarchy
+- uid: DulcisX.Nodes.BaseNode.ItemId
+  commentId: P:DulcisX.Nodes.BaseNode.ItemId
+  parent: DulcisX.Nodes.BaseNode
+  name: ItemId
+  nameWithType: BaseNode.ItemId
+  fullName: DulcisX.Nodes.BaseNode.ItemId
+- uid: DulcisX.Nodes.BaseNode.GetDisplayName
+  commentId: M:DulcisX.Nodes.BaseNode.GetDisplayName
+  parent: DulcisX.Nodes.BaseNode
+  name: GetDisplayName()
+  nameWithType: BaseNode.GetDisplayName()
+  fullName: DulcisX.Nodes.BaseNode.GetDisplayName()
+  spec.csharp:
+  - uid: DulcisX.Nodes.BaseNode.GetDisplayName
+    name: GetDisplayName
+    nameWithType: BaseNode.GetDisplayName
+    fullName: DulcisX.Nodes.BaseNode.GetDisplayName
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: DulcisX.Nodes.BaseNode.GetDisplayName
+    name: GetDisplayName
+    nameWithType: BaseNode.GetDisplayName
+    fullName: DulcisX.Nodes.BaseNode.GetDisplayName
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: DulcisX.Nodes.BaseNode.GetParent(DulcisX.Core.Enums.NodeTypes)
+  commentId: M:DulcisX.Nodes.BaseNode.GetParent(DulcisX.Core.Enums.NodeTypes)
+  parent: DulcisX.Nodes.BaseNode
+  name: GetParent(NodeTypes)
+  nameWithType: BaseNode.GetParent(NodeTypes)
+  fullName: DulcisX.Nodes.BaseNode.GetParent(DulcisX.Core.Enums.NodeTypes)
+  spec.csharp:
+  - uid: DulcisX.Nodes.BaseNode.GetParent(DulcisX.Core.Enums.NodeTypes)
+    name: GetParent
+    nameWithType: BaseNode.GetParent
+    fullName: DulcisX.Nodes.BaseNode.GetParent
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: DulcisX.Core.Enums.NodeTypes
+    name: NodeTypes
+    nameWithType: NodeTypes
+    fullName: DulcisX.Core.Enums.NodeTypes
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: DulcisX.Nodes.BaseNode.GetParent(DulcisX.Core.Enums.NodeTypes)
+    name: GetParent
+    nameWithType: BaseNode.GetParent
+    fullName: DulcisX.Nodes.BaseNode.GetParent
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: DulcisX.Core.Enums.NodeTypes
+    name: NodeTypes
+    nameWithType: NodeTypes
+    fullName: DulcisX.Core.Enums.NodeTypes
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: DulcisX.Nodes.BaseNode.AsHierarchyItem
+  commentId: M:DulcisX.Nodes.BaseNode.AsHierarchyItem
+  parent: DulcisX.Nodes.BaseNode
+  name: AsHierarchyItem()
+  nameWithType: BaseNode.AsHierarchyItem()
+  fullName: DulcisX.Nodes.BaseNode.AsHierarchyItem()
+  spec.csharp:
+  - uid: DulcisX.Nodes.BaseNode.AsHierarchyItem
+    name: AsHierarchyItem
+    nameWithType: BaseNode.AsHierarchyItem
+    fullName: DulcisX.Nodes.BaseNode.AsHierarchyItem
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: DulcisX.Nodes.BaseNode.AsHierarchyItem
+    name: AsHierarchyItem
+    nameWithType: BaseNode.AsHierarchyItem
+    fullName: DulcisX.Nodes.BaseNode.AsHierarchyItem
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: DulcisX.Nodes.BaseNode.IsTypeMatching(DulcisX.Core.Enums.NodeTypes)
+  commentId: M:DulcisX.Nodes.BaseNode.IsTypeMatching(DulcisX.Core.Enums.NodeTypes)
+  parent: DulcisX.Nodes.BaseNode
+  name: IsTypeMatching(NodeTypes)
+  nameWithType: BaseNode.IsTypeMatching(NodeTypes)
+  fullName: DulcisX.Nodes.BaseNode.IsTypeMatching(DulcisX.Core.Enums.NodeTypes)
+  spec.csharp:
+  - uid: DulcisX.Nodes.BaseNode.IsTypeMatching(DulcisX.Core.Enums.NodeTypes)
+    name: IsTypeMatching
+    nameWithType: BaseNode.IsTypeMatching
+    fullName: DulcisX.Nodes.BaseNode.IsTypeMatching
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: DulcisX.Core.Enums.NodeTypes
+    name: NodeTypes
+    nameWithType: NodeTypes
+    fullName: DulcisX.Core.Enums.NodeTypes
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: DulcisX.Nodes.BaseNode.IsTypeMatching(DulcisX.Core.Enums.NodeTypes)
+    name: IsTypeMatching
+    nameWithType: BaseNode.IsTypeMatching
+    fullName: DulcisX.Nodes.BaseNode.IsTypeMatching
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: DulcisX.Core.Enums.NodeTypes
+    name: NodeTypes
+    nameWithType: NodeTypes
+    fullName: DulcisX.Core.Enums.NodeTypes
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: DulcisX.Nodes.BaseNode.NodeType
+  commentId: P:DulcisX.Nodes.BaseNode.NodeType
+  parent: DulcisX.Nodes.BaseNode
+  name: NodeType
+  nameWithType: BaseNode.NodeType
+  fullName: DulcisX.Nodes.BaseNode.NodeType
+- uid: DulcisX.Nodes.UnknownNode.NodeType*
+  commentId: Overload:DulcisX.Nodes.UnknownNode.NodeType
+  name: NodeType
+  nameWithType: UnknownNode.NodeType
+  fullName: DulcisX.Nodes.UnknownNode.NodeType
+- uid: DulcisX.Core.Enums.NodeTypes
+  commentId: T:DulcisX.Core.Enums.NodeTypes
+  parent: DulcisX.Core.Enums
+  name: NodeTypes
+  nameWithType: NodeTypes
+  fullName: DulcisX.Core.Enums.NodeTypes
+- uid: DulcisX.Core.Enums
+  commentId: N:DulcisX.Core.Enums
+  name: DulcisX.Core.Enums
+  nameWithType: DulcisX.Core.Enums
+  fullName: DulcisX.Core.Enums
+- uid: DulcisX.Nodes.UnknownNode
+  commentId: T:DulcisX.Nodes.UnknownNode
+  name: UnknownNode
+  nameWithType: UnknownNode
+  fullName: DulcisX.Nodes.UnknownNode
+- uid: DulcisX.Nodes.UnknownNode.#ctor*
+  commentId: Overload:DulcisX.Nodes.UnknownNode.#ctor
+  name: UnknownNode
+  nameWithType: UnknownNode.UnknownNode
+  fullName: DulcisX.Nodes.UnknownNode.UnknownNode
+- uid: DulcisX.Nodes.SolutionNode
+  commentId: T:DulcisX.Nodes.SolutionNode
+  parent: DulcisX.Nodes
+  name: SolutionNode
+  nameWithType: SolutionNode
+  fullName: DulcisX.Nodes.SolutionNode
+- uid: Microsoft.VisualStudio.Shell.Interop.IVsHierarchy
+  commentId: T:Microsoft.VisualStudio.Shell.Interop.IVsHierarchy
+  parent: Microsoft.VisualStudio.Shell.Interop
+  isExternal: true
+  name: IVsHierarchy
+  nameWithType: IVsHierarchy
+  fullName: Microsoft.VisualStudio.Shell.Interop.IVsHierarchy
+- uid: System.UInt32
+  commentId: T:System.UInt32
+  parent: System
+  isExternal: true
+  name: UInt32
+  nameWithType: UInt32
+  fullName: System.UInt32
+- uid: Microsoft.VisualStudio.Shell.Interop
+  commentId: N:Microsoft.VisualStudio.Shell.Interop
+  isExternal: true
+  name: Microsoft.VisualStudio.Shell.Interop
+  nameWithType: Microsoft.VisualStudio.Shell.Interop
+  fullName: Microsoft.VisualStudio.Shell.Interop
+- uid: DulcisX.Nodes.BaseNode.GetChildren
+  commentId: M:DulcisX.Nodes.BaseNode.GetChildren
+  parent: DulcisX.Nodes.BaseNode
+  name: GetChildren()
+  nameWithType: BaseNode.GetChildren()
+  fullName: DulcisX.Nodes.BaseNode.GetChildren()
+  spec.csharp:
+  - uid: DulcisX.Nodes.BaseNode.GetChildren
+    name: GetChildren
+    nameWithType: BaseNode.GetChildren
+    fullName: DulcisX.Nodes.BaseNode.GetChildren
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: DulcisX.Nodes.BaseNode.GetChildren
+    name: GetChildren
+    nameWithType: BaseNode.GetChildren
+    fullName: DulcisX.Nodes.BaseNode.GetChildren
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: DulcisX.Nodes.UnknownNode.GetChildren*
+  commentId: Overload:DulcisX.Nodes.UnknownNode.GetChildren
+  name: GetChildren
+  nameWithType: UnknownNode.GetChildren
+  fullName: DulcisX.Nodes.UnknownNode.GetChildren
+- uid: System.Collections.Generic.IEnumerable{DulcisX.Nodes.BaseNode}
+  commentId: T:System.Collections.Generic.IEnumerable{DulcisX.Nodes.BaseNode}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IEnumerable`1
+  name: IEnumerable<BaseNode>
+  nameWithType: IEnumerable<BaseNode>
+  fullName: System.Collections.Generic.IEnumerable<DulcisX.Nodes.BaseNode>
+  nameWithType.vb: IEnumerable(Of BaseNode)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of DulcisX.Nodes.BaseNode)
+  name.vb: IEnumerable(Of BaseNode)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: DulcisX.Nodes.BaseNode
+    name: BaseNode
+    nameWithType: BaseNode
+    fullName: DulcisX.Nodes.BaseNode
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: DulcisX.Nodes.BaseNode
+    name: BaseNode
+    nameWithType: BaseNode
+    fullName: DulcisX.Nodes.BaseNode
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.IEnumerable`1
+  commentId: T:System.Collections.Generic.IEnumerable`1
+  isExternal: true
+  name: IEnumerable<T>
+  nameWithType: IEnumerable<T>
+  fullName: System.Collections.Generic.IEnumerable<T>
+  nameWithType.vb: IEnumerable(Of T)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of T)
+  name.vb: IEnumerable(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+- uid: DulcisX.Nodes.BaseNode.GetParent
+  commentId: M:DulcisX.Nodes.BaseNode.GetParent
+  parent: DulcisX.Nodes.BaseNode
+  name: GetParent()
+  nameWithType: BaseNode.GetParent()
+  fullName: DulcisX.Nodes.BaseNode.GetParent()
+  spec.csharp:
+  - uid: DulcisX.Nodes.BaseNode.GetParent
+    name: GetParent
+    nameWithType: BaseNode.GetParent
+    fullName: DulcisX.Nodes.BaseNode.GetParent
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: DulcisX.Nodes.BaseNode.GetParent
+    name: GetParent
+    nameWithType: BaseNode.GetParent
+    fullName: DulcisX.Nodes.BaseNode.GetParent
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: DulcisX.Nodes.UnknownNode.GetParent*
+  commentId: Overload:DulcisX.Nodes.UnknownNode.GetParent
+  name: GetParent
+  nameWithType: UnknownNode.GetParent
+  fullName: DulcisX.Nodes.UnknownNode.GetParent

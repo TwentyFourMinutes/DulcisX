@@ -1,0 +1,274 @@
+### YamlMime:ManagedReference
+items:
+- uid: DulcisX.Core.Components.IButtonIdentifierInfoMessageBuilder`1
+  commentId: T:DulcisX.Core.Components.IButtonIdentifierInfoMessageBuilder`1
+  id: IButtonIdentifierInfoMessageBuilder`1
+  parent: DulcisX.Core.Components
+  children:
+  - DulcisX.Core.Components.IButtonIdentifierInfoMessageBuilder`1.Publish
+  - DulcisX.Core.Components.IButtonIdentifierInfoMessageBuilder`1.WithButton(System.String,`0)
+  langs:
+  - csharp
+  - vb
+  name: IButtonIdentifierInfoMessageBuilder<TIdentifier>
+  nameWithType: IButtonIdentifierInfoMessageBuilder<TIdentifier>
+  fullName: DulcisX.Core.Components.IButtonIdentifierInfoMessageBuilder<TIdentifier>
+  type: Interface
+  source:
+    remote:
+      path: src/DulcisX/DulcisX/Core/Components/InfoBar/IMessageBuilder.cs
+      branch: master
+      repo: https://github.com/TwentyFourMinutes/DulcisX.git
+    id: IButtonIdentifierInfoMessageBuilder
+    path: ../../DulcisX - master/src/DulcisX/DulcisX/Core/Components/InfoBar/IMessageBuilder.cs
+    startLine: 112
+  assemblies:
+  - DulcisX
+  namespace: DulcisX.Core.Components
+  summary: "\nRepresents the identifier button builder of an InfoBar message.\n"
+  example: []
+  syntax:
+    content: public interface IButtonIdentifierInfoMessageBuilder<TIdentifier>
+    typeParameters:
+    - id: TIdentifier
+      description: he type of the button identifiers.
+    content.vb: Public Interface IButtonIdentifierInfoMessageBuilder(Of TIdentifier)
+  nameWithType.vb: IButtonIdentifierInfoMessageBuilder(Of TIdentifier)
+  modifiers.csharp:
+  - public
+  - interface
+  modifiers.vb:
+  - Public
+  - Interface
+  fullName.vb: DulcisX.Core.Components.IButtonIdentifierInfoMessageBuilder(Of TIdentifier)
+  name.vb: IButtonIdentifierInfoMessageBuilder(Of TIdentifier)
+- uid: DulcisX.Core.Components.IButtonIdentifierInfoMessageBuilder`1.WithButton(System.String,`0)
+  commentId: M:DulcisX.Core.Components.IButtonIdentifierInfoMessageBuilder`1.WithButton(System.String,`0)
+  id: WithButton(System.String,`0)
+  parent: DulcisX.Core.Components.IButtonIdentifierInfoMessageBuilder`1
+  langs:
+  - csharp
+  - vb
+  name: WithButton(String, TIdentifier)
+  nameWithType: IButtonIdentifierInfoMessageBuilder<TIdentifier>.WithButton(String, TIdentifier)
+  fullName: DulcisX.Core.Components.IButtonIdentifierInfoMessageBuilder<TIdentifier>.WithButton(System.String, TIdentifier)
+  type: Method
+  source:
+    remote:
+      path: src/DulcisX/DulcisX/Core/Components/InfoBar/IMessageBuilder.cs
+      branch: master
+      repo: https://github.com/TwentyFourMinutes/DulcisX.git
+    id: WithButton
+    path: ../../DulcisX - master/src/DulcisX/DulcisX/Core/Components/InfoBar/IMessageBuilder.cs
+    startLine: 120
+  assemblies:
+  - DulcisX
+  namespace: DulcisX.Core.Components
+  summary: "\nAdds a button with an identifier to the InfoBar message.\n"
+  example: []
+  syntax:
+    content: IButtonIdentifierInfoMessageBuilder<TIdentifier> WithButton(string text, TIdentifier identifier)
+    parameters:
+    - id: text
+      type: System.String
+      description: The text to be displayed inside the button.
+    - id: identifier
+      type: '{TIdentifier}'
+      description: The value which uniquely identifies the button in a InfoBar message.
+    return:
+      type: DulcisX.Core.Components.IButtonIdentifierInfoMessageBuilder`1
+      description: An <xref href="DulcisX.Core.Components.IButtonIdentifierInfoMessageBuilder%601" data-throw-if-not-resolved="false"></xref> instance.
+    content.vb: Function WithButton(text As String, identifier As TIdentifier) As IButtonIdentifierInfoMessageBuilder(Of TIdentifier)
+  overload: DulcisX.Core.Components.IButtonIdentifierInfoMessageBuilder`1.WithButton*
+  nameWithType.vb: IButtonIdentifierInfoMessageBuilder(Of TIdentifier).WithButton(String, TIdentifier)
+  fullName.vb: DulcisX.Core.Components.IButtonIdentifierInfoMessageBuilder(Of TIdentifier).WithButton(System.String, TIdentifier)
+- uid: DulcisX.Core.Components.IButtonIdentifierInfoMessageBuilder`1.Publish
+  commentId: M:DulcisX.Core.Components.IButtonIdentifierInfoMessageBuilder`1.Publish
+  id: Publish
+  parent: DulcisX.Core.Components.IButtonIdentifierInfoMessageBuilder`1
+  langs:
+  - csharp
+  - vb
+  name: Publish()
+  nameWithType: IButtonIdentifierInfoMessageBuilder<TIdentifier>.Publish()
+  fullName: DulcisX.Core.Components.IButtonIdentifierInfoMessageBuilder<TIdentifier>.Publish()
+  type: Method
+  source:
+    remote:
+      path: src/DulcisX/DulcisX/Core/Components/InfoBar/IMessageBuilder.cs
+      branch: master
+      repo: https://github.com/TwentyFourMinutes/DulcisX.git
+    id: Publish
+    path: ../../DulcisX - master/src/DulcisX/DulcisX/Core/Components/InfoBar/IMessageBuilder.cs
+    startLine: 126
+  assemblies:
+  - DulcisX
+  namespace: DulcisX.Core.Components
+  summary: "\nDisplays the InfoBar message to the user.\n"
+  example: []
+  syntax:
+    content: ResultInfoBarHandle<TIdentifier> Publish()
+    return:
+      type: DulcisX.Core.Components.ResultInfoBarHandle{{TIdentifier}}
+      description: A new unique <xref href="DulcisX.Core.Components.ResultInfoBarHandle%601" data-throw-if-not-resolved="false"></xref> instance pointing to the created InfoBar message. Used to manually remove the InfoBar message in <xref href="DulcisX.Core.Components.InfoBar.RemoveMessage(DulcisX.Core.Components.InfoBarHandle)" data-throw-if-not-resolved="false"></xref>.
+    content.vb: Function Publish As ResultInfoBarHandle(Of TIdentifier)
+  overload: DulcisX.Core.Components.IButtonIdentifierInfoMessageBuilder`1.Publish*
+  nameWithType.vb: IButtonIdentifierInfoMessageBuilder(Of TIdentifier).Publish()
+  fullName.vb: DulcisX.Core.Components.IButtonIdentifierInfoMessageBuilder(Of TIdentifier).Publish()
+references:
+- uid: DulcisX.Core.Components
+  commentId: N:DulcisX.Core.Components
+  name: DulcisX.Core.Components
+  nameWithType: DulcisX.Core.Components
+  fullName: DulcisX.Core.Components
+- uid: DulcisX.Core.Components.IButtonIdentifierInfoMessageBuilder`1
+  commentId: T:DulcisX.Core.Components.IButtonIdentifierInfoMessageBuilder`1
+  parent: DulcisX.Core.Components
+  name: IButtonIdentifierInfoMessageBuilder<TIdentifier>
+  nameWithType: IButtonIdentifierInfoMessageBuilder<TIdentifier>
+  fullName: DulcisX.Core.Components.IButtonIdentifierInfoMessageBuilder<TIdentifier>
+  nameWithType.vb: IButtonIdentifierInfoMessageBuilder(Of TIdentifier)
+  fullName.vb: DulcisX.Core.Components.IButtonIdentifierInfoMessageBuilder(Of TIdentifier)
+  name.vb: IButtonIdentifierInfoMessageBuilder(Of TIdentifier)
+  spec.csharp:
+  - uid: DulcisX.Core.Components.IButtonIdentifierInfoMessageBuilder`1
+    name: IButtonIdentifierInfoMessageBuilder
+    nameWithType: IButtonIdentifierInfoMessageBuilder
+    fullName: DulcisX.Core.Components.IButtonIdentifierInfoMessageBuilder
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TIdentifier
+    nameWithType: TIdentifier
+    fullName: TIdentifier
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: DulcisX.Core.Components.IButtonIdentifierInfoMessageBuilder`1
+    name: IButtonIdentifierInfoMessageBuilder
+    nameWithType: IButtonIdentifierInfoMessageBuilder
+    fullName: DulcisX.Core.Components.IButtonIdentifierInfoMessageBuilder
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TIdentifier
+    nameWithType: TIdentifier
+    fullName: TIdentifier
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: DulcisX.Core.Components.IButtonIdentifierInfoMessageBuilder`1.WithButton*
+  commentId: Overload:DulcisX.Core.Components.IButtonIdentifierInfoMessageBuilder`1.WithButton
+  name: WithButton
+  nameWithType: IButtonIdentifierInfoMessageBuilder<TIdentifier>.WithButton
+  fullName: DulcisX.Core.Components.IButtonIdentifierInfoMessageBuilder<TIdentifier>.WithButton
+  nameWithType.vb: IButtonIdentifierInfoMessageBuilder(Of TIdentifier).WithButton
+  fullName.vb: DulcisX.Core.Components.IButtonIdentifierInfoMessageBuilder(Of TIdentifier).WithButton
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: '{TIdentifier}'
+  commentId: '!:TIdentifier'
+  definition: TIdentifier
+  name: TIdentifier
+  nameWithType: TIdentifier
+  fullName: TIdentifier
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: TIdentifier
+  name: TIdentifier
+  nameWithType: TIdentifier
+  fullName: TIdentifier
+- uid: DulcisX.Core.Components.ResultInfoBarHandle`1
+  commentId: T:DulcisX.Core.Components.ResultInfoBarHandle`1
+  name: ResultInfoBarHandle<TIdentifier>
+  nameWithType: ResultInfoBarHandle<TIdentifier>
+  fullName: DulcisX.Core.Components.ResultInfoBarHandle<TIdentifier>
+  nameWithType.vb: ResultInfoBarHandle(Of TIdentifier)
+  fullName.vb: DulcisX.Core.Components.ResultInfoBarHandle(Of TIdentifier)
+  name.vb: ResultInfoBarHandle(Of TIdentifier)
+  spec.csharp:
+  - uid: DulcisX.Core.Components.ResultInfoBarHandle`1
+    name: ResultInfoBarHandle
+    nameWithType: ResultInfoBarHandle
+    fullName: DulcisX.Core.Components.ResultInfoBarHandle
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TIdentifier
+    nameWithType: TIdentifier
+    fullName: TIdentifier
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: DulcisX.Core.Components.ResultInfoBarHandle`1
+    name: ResultInfoBarHandle
+    nameWithType: ResultInfoBarHandle
+    fullName: DulcisX.Core.Components.ResultInfoBarHandle
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TIdentifier
+    nameWithType: TIdentifier
+    fullName: TIdentifier
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: DulcisX.Core.Components.InfoBar.RemoveMessage(DulcisX.Core.Components.InfoBarHandle)
+  commentId: M:DulcisX.Core.Components.InfoBar.RemoveMessage(DulcisX.Core.Components.InfoBarHandle)
+  isExternal: true
+- uid: DulcisX.Core.Components.IButtonIdentifierInfoMessageBuilder`1.Publish*
+  commentId: Overload:DulcisX.Core.Components.IButtonIdentifierInfoMessageBuilder`1.Publish
+  name: Publish
+  nameWithType: IButtonIdentifierInfoMessageBuilder<TIdentifier>.Publish
+  fullName: DulcisX.Core.Components.IButtonIdentifierInfoMessageBuilder<TIdentifier>.Publish
+  nameWithType.vb: IButtonIdentifierInfoMessageBuilder(Of TIdentifier).Publish
+  fullName.vb: DulcisX.Core.Components.IButtonIdentifierInfoMessageBuilder(Of TIdentifier).Publish
+- uid: DulcisX.Core.Components.ResultInfoBarHandle{{TIdentifier}}
+  commentId: T:DulcisX.Core.Components.ResultInfoBarHandle{`0}
+  parent: DulcisX.Core.Components
+  definition: DulcisX.Core.Components.ResultInfoBarHandle`1
+  name: ResultInfoBarHandle<TIdentifier>
+  nameWithType: ResultInfoBarHandle<TIdentifier>
+  fullName: DulcisX.Core.Components.ResultInfoBarHandle<TIdentifier>
+  nameWithType.vb: ResultInfoBarHandle(Of TIdentifier)
+  fullName.vb: DulcisX.Core.Components.ResultInfoBarHandle(Of TIdentifier)
+  name.vb: ResultInfoBarHandle(Of TIdentifier)
+  spec.csharp:
+  - uid: DulcisX.Core.Components.ResultInfoBarHandle`1
+    name: ResultInfoBarHandle
+    nameWithType: ResultInfoBarHandle
+    fullName: DulcisX.Core.Components.ResultInfoBarHandle
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TIdentifier
+    nameWithType: TIdentifier
+    fullName: TIdentifier
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: DulcisX.Core.Components.ResultInfoBarHandle`1
+    name: ResultInfoBarHandle
+    nameWithType: ResultInfoBarHandle
+    fullName: DulcisX.Core.Components.ResultInfoBarHandle
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TIdentifier
+    nameWithType: TIdentifier
+    fullName: TIdentifier
+  - name: )
+    nameWithType: )
+    fullName: )

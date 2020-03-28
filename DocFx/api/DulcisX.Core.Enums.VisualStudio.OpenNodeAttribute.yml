@@ -1,0 +1,531 @@
+### YamlMime:ManagedReference
+items:
+- uid: DulcisX.Core.Enums.VisualStudio.OpenNodeAttribute
+  commentId: T:DulcisX.Core.Enums.VisualStudio.OpenNodeAttribute
+  id: OpenNodeAttribute
+  parent: DulcisX.Core.Enums.VisualStudio
+  children:
+  - DulcisX.Core.Enums.VisualStudio.OpenNodeAttribute.AltHierarchyItemID
+  - DulcisX.Core.Enums.VisualStudio.OpenNodeAttribute.DocDataIsDirty
+  - DulcisX.Core.Enums.VisualStudio.OpenNodeAttribute.DocDataIsNotDirty
+  - DulcisX.Core.Enums.VisualStudio.OpenNodeAttribute.DocDataIsNotReadOnly
+  - DulcisX.Core.Enums.VisualStudio.OpenNodeAttribute.DocDataIsReadOnly
+  - DulcisX.Core.Enums.VisualStudio.OpenNodeAttribute.DocDataReloaded
+  - DulcisX.Core.Enums.VisualStudio.OpenNodeAttribute.DocumentInitialized
+  - DulcisX.Core.Enums.VisualStudio.OpenNodeAttribute.Hierarchy
+  - DulcisX.Core.Enums.VisualStudio.OpenNodeAttribute.HierarchyInitialized
+  - DulcisX.Core.Enums.VisualStudio.OpenNodeAttribute.ItemID
+  - DulcisX.Core.Enums.VisualStudio.OpenNodeAttribute.MkDocument
+  - DulcisX.Core.Enums.VisualStudio.OpenNodeAttribute.NOTIFYDOCCHANGEDMASK
+  - DulcisX.Core.Enums.VisualStudio.OpenNodeAttribute.NotifyDocChangedXMask
+  langs:
+  - csharp
+  - vb
+  name: OpenNodeAttribute
+  nameWithType: OpenNodeAttribute
+  fullName: DulcisX.Core.Enums.VisualStudio.OpenNodeAttribute
+  type: Enum
+  source:
+    remote:
+      path: src/DulcisX/DulcisX/Core/Enums/VisualStudio/OpenNodeAttribute.cs
+      branch: master
+      repo: https://github.com/TwentyFourMinutes/DulcisX.git
+    id: OpenNodeAttribute
+    path: ../../DulcisX - master/src/DulcisX/DulcisX/Core/Enums/VisualStudio/OpenNodeAttribute.cs
+    startLine: 5
+  assemblies:
+  - DulcisX
+  namespace: DulcisX.Core.Enums.VisualStudio
+  summary: "\nUsed instead of <xref href=\"Microsoft.VisualStudio.Shell.Interop.__VSRDTATTRIB\" data-throw-if-not-resolved=\"false\"></xref>, <xref href=\"Microsoft.VisualStudio.Shell.Interop.__VSRDTATTRIB2\" data-throw-if-not-resolved=\"false\"></xref> and <xref href=\"Microsoft.VisualStudio.Shell.Interop.__VSRDTATTRIB3\" data-throw-if-not-resolved=\"false\"></xref>. It unifies all of the listed enum members.\n"
+  example: []
+  syntax:
+    content: public enum OpenNodeAttribute
+    content.vb: Public Enum OpenNodeAttribute
+  modifiers.csharp:
+  - public
+  - enum
+  modifiers.vb:
+  - Public
+  - Enum
+- uid: DulcisX.Core.Enums.VisualStudio.OpenNodeAttribute.Hierarchy
+  commentId: F:DulcisX.Core.Enums.VisualStudio.OpenNodeAttribute.Hierarchy
+  id: Hierarchy
+  parent: DulcisX.Core.Enums.VisualStudio.OpenNodeAttribute
+  langs:
+  - csharp
+  - vb
+  name: Hierarchy
+  nameWithType: OpenNodeAttribute.Hierarchy
+  fullName: DulcisX.Core.Enums.VisualStudio.OpenNodeAttribute.Hierarchy
+  type: Field
+  source:
+    remote:
+      path: src/DulcisX/DulcisX/Core/Enums/VisualStudio/OpenNodeAttribute.cs
+      branch: master
+      repo: https://github.com/TwentyFourMinutes/DulcisX.git
+    id: Hierarchy
+    path: ../../DulcisX - master/src/DulcisX/DulcisX/Core/Enums/VisualStudio/OpenNodeAttribute.cs
+    startLine: 12
+  assemblies:
+  - DulcisX
+  namespace: DulcisX.Core.Enums.VisualStudio
+  summary: "\nHierarchical position of the document in the <xref href=\"Microsoft.VisualStudio.Shell.Interop.IVsRunningDocumentTable\" data-throw-if-not-resolved=\"false\"></xref>.\n"
+  example: []
+  syntax:
+    content: Hierarchy = 1
+    return:
+      type: DulcisX.Core.Enums.VisualStudio.OpenNodeAttribute
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: DulcisX.Core.Enums.VisualStudio.OpenNodeAttribute.ItemID
+  commentId: F:DulcisX.Core.Enums.VisualStudio.OpenNodeAttribute.ItemID
+  id: ItemID
+  parent: DulcisX.Core.Enums.VisualStudio.OpenNodeAttribute
+  langs:
+  - csharp
+  - vb
+  name: ItemID
+  nameWithType: OpenNodeAttribute.ItemID
+  fullName: DulcisX.Core.Enums.VisualStudio.OpenNodeAttribute.ItemID
+  type: Field
+  source:
+    remote:
+      path: src/DulcisX/DulcisX/Core/Enums/VisualStudio/OpenNodeAttribute.cs
+      branch: master
+      repo: https://github.com/TwentyFourMinutes/DulcisX.git
+    id: ItemID
+    path: ../../DulcisX - master/src/DulcisX/DulcisX/Core/Enums/VisualStudio/OpenNodeAttribute.cs
+    startLine: 16
+  assemblies:
+  - DulcisX
+  namespace: DulcisX.Core.Enums.VisualStudio
+  summary: "\nItem identifier of the document in the <xref href=\"Microsoft.VisualStudio.Shell.Interop.IVsRunningDocumentTable\" data-throw-if-not-resolved=\"false\"></xref>.\n"
+  example: []
+  syntax:
+    content: ItemID = 2
+    return:
+      type: DulcisX.Core.Enums.VisualStudio.OpenNodeAttribute
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: DulcisX.Core.Enums.VisualStudio.OpenNodeAttribute.MkDocument
+  commentId: F:DulcisX.Core.Enums.VisualStudio.OpenNodeAttribute.MkDocument
+  id: MkDocument
+  parent: DulcisX.Core.Enums.VisualStudio.OpenNodeAttribute
+  langs:
+  - csharp
+  - vb
+  name: MkDocument
+  nameWithType: OpenNodeAttribute.MkDocument
+  fullName: DulcisX.Core.Enums.VisualStudio.OpenNodeAttribute.MkDocument
+  type: Field
+  source:
+    remote:
+      path: src/DulcisX/DulcisX/Core/Enums/VisualStudio/OpenNodeAttribute.cs
+      branch: master
+      repo: https://github.com/TwentyFourMinutes/DulcisX.git
+    id: MkDocument
+    path: ../../DulcisX - master/src/DulcisX/DulcisX/Core/Enums/VisualStudio/OpenNodeAttribute.cs
+    startLine: 20
+  assemblies:
+  - DulcisX
+  namespace: DulcisX.Core.Enums.VisualStudio
+  summary: "\nFull path to the document in the <xref href=\"Microsoft.VisualStudio.Shell.Interop.IVsRunningDocumentTable\" data-throw-if-not-resolved=\"false\"></xref>.\n"
+  example: []
+  syntax:
+    content: MkDocument = 4
+    return:
+      type: DulcisX.Core.Enums.VisualStudio.OpenNodeAttribute
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: DulcisX.Core.Enums.VisualStudio.OpenNodeAttribute.DocDataIsDirty
+  commentId: F:DulcisX.Core.Enums.VisualStudio.OpenNodeAttribute.DocDataIsDirty
+  id: DocDataIsDirty
+  parent: DulcisX.Core.Enums.VisualStudio.OpenNodeAttribute
+  langs:
+  - csharp
+  - vb
+  name: DocDataIsDirty
+  nameWithType: OpenNodeAttribute.DocDataIsDirty
+  fullName: DulcisX.Core.Enums.VisualStudio.OpenNodeAttribute.DocDataIsDirty
+  type: Field
+  source:
+    remote:
+      path: src/DulcisX/DulcisX/Core/Enums/VisualStudio/OpenNodeAttribute.cs
+      branch: master
+      repo: https://github.com/TwentyFourMinutes/DulcisX.git
+    id: DocDataIsDirty
+    path: ../../DulcisX - master/src/DulcisX/DulcisX/Core/Enums/VisualStudio/OpenNodeAttribute.cs
+    startLine: 24
+  assemblies:
+  - DulcisX
+  namespace: DulcisX.Core.Enums.VisualStudio
+  summary: "\nFlag indicates that the data of the document in the <xref href=\"Microsoft.VisualStudio.Shell.Interop.IVsRunningDocumentTable\" data-throw-if-not-resolved=\"false\"></xref> has changed.\n"
+  example: []
+  syntax:
+    content: DocDataIsDirty = 8
+    return:
+      type: DulcisX.Core.Enums.VisualStudio.OpenNodeAttribute
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: DulcisX.Core.Enums.VisualStudio.OpenNodeAttribute.DocDataIsNotDirty
+  commentId: F:DulcisX.Core.Enums.VisualStudio.OpenNodeAttribute.DocDataIsNotDirty
+  id: DocDataIsNotDirty
+  parent: DulcisX.Core.Enums.VisualStudio.OpenNodeAttribute
+  langs:
+  - csharp
+  - vb
+  name: DocDataIsNotDirty
+  nameWithType: OpenNodeAttribute.DocDataIsNotDirty
+  fullName: DulcisX.Core.Enums.VisualStudio.OpenNodeAttribute.DocDataIsNotDirty
+  type: Field
+  source:
+    remote:
+      path: src/DulcisX/DulcisX/Core/Enums/VisualStudio/OpenNodeAttribute.cs
+      branch: master
+      repo: https://github.com/TwentyFourMinutes/DulcisX.git
+    id: DocDataIsNotDirty
+    path: ../../DulcisX - master/src/DulcisX/DulcisX/Core/Enums/VisualStudio/OpenNodeAttribute.cs
+    startLine: 28
+  assemblies:
+  - DulcisX
+  namespace: DulcisX.Core.Enums.VisualStudio
+  summary: "\nFlag indicates that the data of the document in the <xref href=\"Microsoft.VisualStudio.Shell.Interop.IVsRunningDocumentTable\" data-throw-if-not-resolved=\"false\"></xref> has not changed.\n"
+  example: []
+  syntax:
+    content: DocDataIsNotDirty = 16
+    return:
+      type: DulcisX.Core.Enums.VisualStudio.OpenNodeAttribute
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: DulcisX.Core.Enums.VisualStudio.OpenNodeAttribute.NOTIFYDOCCHANGEDMASK
+  commentId: F:DulcisX.Core.Enums.VisualStudio.OpenNodeAttribute.NOTIFYDOCCHANGEDMASK
+  id: NOTIFYDOCCHANGEDMASK
+  parent: DulcisX.Core.Enums.VisualStudio.OpenNodeAttribute
+  langs:
+  - csharp
+  - vb
+  name: NOTIFYDOCCHANGEDMASK
+  nameWithType: OpenNodeAttribute.NOTIFYDOCCHANGEDMASK
+  fullName: DulcisX.Core.Enums.VisualStudio.OpenNodeAttribute.NOTIFYDOCCHANGEDMASK
+  type: Field
+  source:
+    remote:
+      path: src/DulcisX/DulcisX/Core/Enums/VisualStudio/OpenNodeAttribute.cs
+      branch: master
+      repo: https://github.com/TwentyFourMinutes/DulcisX.git
+    id: NOTIFYDOCCHANGEDMASK
+    path: ../../DulcisX - master/src/DulcisX/DulcisX/Core/Enums/VisualStudio/OpenNodeAttribute.cs
+    startLine: 32
+  assemblies:
+  - DulcisX
+  namespace: DulcisX.Core.Enums.VisualStudio
+  summary: "\nA mask for the flags passed to the <xref href=\"Microsoft.VisualStudio.Shell.Interop.IVsRunningDocumentTable.NotifyDocumentChanged(System.UInt32%2cSystem.UInt32)\" data-throw-if-not-resolved=\"false\"></xref> method.\n"
+  example: []
+  syntax:
+    content: NOTIFYDOCCHANGEDMASK = -65536
+    return:
+      type: DulcisX.Core.Enums.VisualStudio.OpenNodeAttribute
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: DulcisX.Core.Enums.VisualStudio.OpenNodeAttribute.DocDataReloaded
+  commentId: F:DulcisX.Core.Enums.VisualStudio.OpenNodeAttribute.DocDataReloaded
+  id: DocDataReloaded
+  parent: DulcisX.Core.Enums.VisualStudio.OpenNodeAttribute
+  langs:
+  - csharp
+  - vb
+  name: DocDataReloaded
+  nameWithType: OpenNodeAttribute.DocDataReloaded
+  fullName: DulcisX.Core.Enums.VisualStudio.OpenNodeAttribute.DocDataReloaded
+  type: Field
+  source:
+    remote:
+      path: src/DulcisX/DulcisX/Core/Enums/VisualStudio/OpenNodeAttribute.cs
+      branch: master
+      repo: https://github.com/TwentyFourMinutes/DulcisX.git
+    id: DocDataReloaded
+    path: ../../DulcisX - master/src/DulcisX/DulcisX/Core/Enums/VisualStudio/OpenNodeAttribute.cs
+    startLine: 36
+  assemblies:
+  - DulcisX
+  namespace: DulcisX.Core.Enums.VisualStudio
+  summary: "\nThis attribute event is fired by calling the <xref href=\"Microsoft.VisualStudio.Shell.Interop.IVsRunningDocumentTable.NotifyDocumentChanged(System.UInt32%2cSystem.UInt32)\" data-throw-if-not-resolved=\"false\"></xref> method.\n"
+  example: []
+  syntax:
+    content: DocDataReloaded = 65536
+    return:
+      type: DulcisX.Core.Enums.VisualStudio.OpenNodeAttribute
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: DulcisX.Core.Enums.VisualStudio.OpenNodeAttribute.AltHierarchyItemID
+  commentId: F:DulcisX.Core.Enums.VisualStudio.OpenNodeAttribute.AltHierarchyItemID
+  id: AltHierarchyItemID
+  parent: DulcisX.Core.Enums.VisualStudio.OpenNodeAttribute
+  langs:
+  - csharp
+  - vb
+  name: AltHierarchyItemID
+  nameWithType: OpenNodeAttribute.AltHierarchyItemID
+  fullName: DulcisX.Core.Enums.VisualStudio.OpenNodeAttribute.AltHierarchyItemID
+  type: Field
+  source:
+    remote:
+      path: src/DulcisX/DulcisX/Core/Enums/VisualStudio/OpenNodeAttribute.cs
+      branch: master
+      repo: https://github.com/TwentyFourMinutes/DulcisX.git
+    id: AltHierarchyItemID
+    path: ../../DulcisX - master/src/DulcisX/DulcisX/Core/Enums/VisualStudio/OpenNodeAttribute.cs
+    startLine: 40
+  assemblies:
+  - DulcisX
+  namespace: DulcisX.Core.Enums.VisualStudio
+  summary: "\nThis attribute event is fired by calling the <xref href=\"Microsoft.VisualStudio.Shell.Interop.IVsRunningDocumentTable.NotifyDocumentChanged(System.UInt32%2cSystem.UInt32)\" data-throw-if-not-resolved=\"false\"></xref> method.\n"
+  example: []
+  syntax:
+    content: AltHierarchyItemID = 131072
+    return:
+      type: DulcisX.Core.Enums.VisualStudio.OpenNodeAttribute
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: DulcisX.Core.Enums.VisualStudio.OpenNodeAttribute.NotifyDocChangedXMask
+  commentId: F:DulcisX.Core.Enums.VisualStudio.OpenNodeAttribute.NotifyDocChangedXMask
+  id: NotifyDocChangedXMask
+  parent: DulcisX.Core.Enums.VisualStudio.OpenNodeAttribute
+  langs:
+  - csharp
+  - vb
+  name: NotifyDocChangedXMask
+  nameWithType: OpenNodeAttribute.NotifyDocChangedXMask
+  fullName: DulcisX.Core.Enums.VisualStudio.OpenNodeAttribute.NotifyDocChangedXMask
+  type: Field
+  source:
+    remote:
+      path: src/DulcisX/DulcisX/Core/Enums/VisualStudio/OpenNodeAttribute.cs
+      branch: master
+      repo: https://github.com/TwentyFourMinutes/DulcisX.git
+    id: NotifyDocChangedXMask
+    path: ../../DulcisX - master/src/DulcisX/DulcisX/Core/Enums/VisualStudio/OpenNodeAttribute.cs
+    startLine: 49
+  assemblies:
+  - DulcisX
+  namespace: DulcisX.Core.Enums.VisualStudio
+  summary: "\nA mask for the flags passed to the <xref href=\"Microsoft.VisualStudio.Shell.Interop.IVsRunningDocumentTable3.NotifyDocumentChangedEx(System.UInt32%2cSystem.UInt32)\" data-throw-if-not-resolved=\"false\"></xref> method.\n"
+  example: []
+  syntax:
+    content: NotifyDocChangedXMask = -65512
+    return:
+      type: DulcisX.Core.Enums.VisualStudio.OpenNodeAttribute
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: DulcisX.Core.Enums.VisualStudio.OpenNodeAttribute.DocDataIsReadOnly
+  commentId: F:DulcisX.Core.Enums.VisualStudio.OpenNodeAttribute.DocDataIsReadOnly
+  id: DocDataIsReadOnly
+  parent: DulcisX.Core.Enums.VisualStudio.OpenNodeAttribute
+  langs:
+  - csharp
+  - vb
+  name: DocDataIsReadOnly
+  nameWithType: OpenNodeAttribute.DocDataIsReadOnly
+  fullName: DulcisX.Core.Enums.VisualStudio.OpenNodeAttribute.DocDataIsReadOnly
+  type: Field
+  source:
+    remote:
+      path: src/DulcisX/DulcisX/Core/Enums/VisualStudio/OpenNodeAttribute.cs
+      branch: master
+      repo: https://github.com/TwentyFourMinutes/DulcisX.git
+    id: DocDataIsReadOnly
+    path: ../../DulcisX - master/src/DulcisX/DulcisX/Core/Enums/VisualStudio/OpenNodeAttribute.cs
+    startLine: 53
+  assemblies:
+  - DulcisX
+  namespace: DulcisX.Core.Enums.VisualStudio
+  summary: "\nThe data of the document in the <xref href=\"Microsoft.VisualStudio.Shell.Interop.IVsRunningDocumentTable\" data-throw-if-not-resolved=\"false\"></xref> is read-only.\n"
+  example: []
+  syntax:
+    content: DocDataIsReadOnly = 262144
+    return:
+      type: DulcisX.Core.Enums.VisualStudio.OpenNodeAttribute
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: DulcisX.Core.Enums.VisualStudio.OpenNodeAttribute.DocDataIsNotReadOnly
+  commentId: F:DulcisX.Core.Enums.VisualStudio.OpenNodeAttribute.DocDataIsNotReadOnly
+  id: DocDataIsNotReadOnly
+  parent: DulcisX.Core.Enums.VisualStudio.OpenNodeAttribute
+  langs:
+  - csharp
+  - vb
+  name: DocDataIsNotReadOnly
+  nameWithType: OpenNodeAttribute.DocDataIsNotReadOnly
+  fullName: DulcisX.Core.Enums.VisualStudio.OpenNodeAttribute.DocDataIsNotReadOnly
+  type: Field
+  source:
+    remote:
+      path: src/DulcisX/DulcisX/Core/Enums/VisualStudio/OpenNodeAttribute.cs
+      branch: master
+      repo: https://github.com/TwentyFourMinutes/DulcisX.git
+    id: DocDataIsNotReadOnly
+    path: ../../DulcisX - master/src/DulcisX/DulcisX/Core/Enums/VisualStudio/OpenNodeAttribute.cs
+    startLine: 57
+  assemblies:
+  - DulcisX
+  namespace: DulcisX.Core.Enums.VisualStudio
+  summary: "\nThe data of the document in the <xref href=\"Microsoft.VisualStudio.Shell.Interop.IVsRunningDocumentTable\" data-throw-if-not-resolved=\"false\"></xref> is readable and writable.\n"
+  example: []
+  syntax:
+    content: DocDataIsNotReadOnly = 524288
+    return:
+      type: DulcisX.Core.Enums.VisualStudio.OpenNodeAttribute
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: DulcisX.Core.Enums.VisualStudio.OpenNodeAttribute.DocumentInitialized
+  commentId: F:DulcisX.Core.Enums.VisualStudio.OpenNodeAttribute.DocumentInitialized
+  id: DocumentInitialized
+  parent: DulcisX.Core.Enums.VisualStudio.OpenNodeAttribute
+  langs:
+  - csharp
+  - vb
+  name: DocumentInitialized
+  nameWithType: OpenNodeAttribute.DocumentInitialized
+  fullName: DulcisX.Core.Enums.VisualStudio.OpenNodeAttribute.DocumentInitialized
+  type: Field
+  source:
+    remote:
+      path: src/DulcisX/DulcisX/Core/Enums/VisualStudio/OpenNodeAttribute.cs
+      branch: master
+      repo: https://github.com/TwentyFourMinutes/DulcisX.git
+    id: DocumentInitialized
+    path: ../../DulcisX - master/src/DulcisX/DulcisX/Core/Enums/VisualStudio/OpenNodeAttribute.cs
+    startLine: 66
+  assemblies:
+  - DulcisX
+  namespace: DulcisX.Core.Enums.VisualStudio
+  summary: "\nA document was added to the <xref href=\"Microsoft.VisualStudio.Shell.Interop.IVsRunningDocumentTable\" data-throw-if-not-resolved=\"false\"></xref> in a fully-initialized state, or a document that had the property RDT_PendingInitialization has completed its initialization.\n"
+  example: []
+  syntax:
+    content: DocumentInitialized = 1048576
+    return:
+      type: DulcisX.Core.Enums.VisualStudio.OpenNodeAttribute
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: DulcisX.Core.Enums.VisualStudio.OpenNodeAttribute.HierarchyInitialized
+  commentId: F:DulcisX.Core.Enums.VisualStudio.OpenNodeAttribute.HierarchyInitialized
+  id: HierarchyInitialized
+  parent: DulcisX.Core.Enums.VisualStudio.OpenNodeAttribute
+  langs:
+  - csharp
+  - vb
+  name: HierarchyInitialized
+  nameWithType: OpenNodeAttribute.HierarchyInitialized
+  fullName: DulcisX.Core.Enums.VisualStudio.OpenNodeAttribute.HierarchyInitialized
+  type: Field
+  source:
+    remote:
+      path: src/DulcisX/DulcisX/Core/Enums/VisualStudio/OpenNodeAttribute.cs
+      branch: master
+      repo: https://github.com/TwentyFourMinutes/DulcisX.git
+    id: HierarchyInitialized
+    path: ../../DulcisX - master/src/DulcisX/DulcisX/Core/Enums/VisualStudio/OpenNodeAttribute.cs
+    startLine: 70
+  assemblies:
+  - DulcisX
+  namespace: DulcisX.Core.Enums.VisualStudio
+  summary: "\nA document that had the property RDT_PendingHierarchyInitialization has completed its hierarchy initialization.\n"
+  example: []
+  syntax:
+    content: HierarchyInitialized = 2097152
+    return:
+      type: DulcisX.Core.Enums.VisualStudio.OpenNodeAttribute
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+references:
+- uid: Microsoft.VisualStudio.Shell.Interop.__VSRDTATTRIB
+  commentId: T:Microsoft.VisualStudio.Shell.Interop.__VSRDTATTRIB
+  isExternal: true
+- uid: Microsoft.VisualStudio.Shell.Interop.__VSRDTATTRIB2
+  commentId: T:Microsoft.VisualStudio.Shell.Interop.__VSRDTATTRIB2
+  isExternal: true
+- uid: Microsoft.VisualStudio.Shell.Interop.__VSRDTATTRIB3
+  commentId: T:Microsoft.VisualStudio.Shell.Interop.__VSRDTATTRIB3
+  isExternal: true
+- uid: DulcisX.Core.Enums.VisualStudio
+  commentId: N:DulcisX.Core.Enums.VisualStudio
+  name: DulcisX.Core.Enums.VisualStudio
+  nameWithType: DulcisX.Core.Enums.VisualStudio
+  fullName: DulcisX.Core.Enums.VisualStudio
+- uid: Microsoft.VisualStudio.Shell.Interop.IVsRunningDocumentTable
+  commentId: T:Microsoft.VisualStudio.Shell.Interop.IVsRunningDocumentTable
+  parent: Microsoft.VisualStudio.Shell.Interop
+  isExternal: true
+  name: IVsRunningDocumentTable
+  nameWithType: IVsRunningDocumentTable
+  fullName: Microsoft.VisualStudio.Shell.Interop.IVsRunningDocumentTable
+- uid: DulcisX.Core.Enums.VisualStudio.OpenNodeAttribute
+  commentId: T:DulcisX.Core.Enums.VisualStudio.OpenNodeAttribute
+  parent: DulcisX.Core.Enums.VisualStudio
+  name: OpenNodeAttribute
+  nameWithType: OpenNodeAttribute
+  fullName: DulcisX.Core.Enums.VisualStudio.OpenNodeAttribute
+- uid: Microsoft.VisualStudio.Shell.Interop
+  commentId: N:Microsoft.VisualStudio.Shell.Interop
+  isExternal: true
+  name: Microsoft.VisualStudio.Shell.Interop
+  nameWithType: Microsoft.VisualStudio.Shell.Interop
+  fullName: Microsoft.VisualStudio.Shell.Interop
+- uid: Microsoft.VisualStudio.Shell.Interop.IVsRunningDocumentTable.NotifyDocumentChanged(System.UInt32,System.UInt32)
+  commentId: M:Microsoft.VisualStudio.Shell.Interop.IVsRunningDocumentTable.NotifyDocumentChanged(System.UInt32,System.UInt32)
+  isExternal: true
+- uid: Microsoft.VisualStudio.Shell.Interop.IVsRunningDocumentTable3.NotifyDocumentChangedEx(System.UInt32,System.UInt32)
+  commentId: M:Microsoft.VisualStudio.Shell.Interop.IVsRunningDocumentTable3.NotifyDocumentChangedEx(System.UInt32,System.UInt32)
+  isExternal: true

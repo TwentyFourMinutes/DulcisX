@@ -1,0 +1,438 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class SelectedNodesCollection
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta property="og:title" content="Class SelectedNodesCollection
+   ">
+    
+    <meta property="og:locale" content="en-us">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="DulcisX Docs">
+    <meta property="og:image" content="">
+    <meta property="og:image:alt" content="DulcisX Logo">
+    <meta name="theme-color" content="#995EA7">
+    <meta name="generator" content="docfx 2.51.0.0">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    <meta id="docfx-style:rel" content="../">
+    <link rel="preload" href="../styles/search-worker.js" as="script">
+    <link rel="preload" href="../fonts/glyphicons-halflings-regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.minify.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/master.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <link rel="stylesheet" href="../styles/material.css">
+    <link rel="stylesheet" href="../styles/theme-switcher.css">
+    <link href="https://cdn.rawgit.com/noelboss/featherlight/1.7.6/release/featherlight.min.css" type="text/css" rel="stylesheet">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="DulcisX.Nodes.SelectedNodesCollection">
+  
+  
+  <h1 id="DulcisX_Nodes_SelectedNodesCollection" data-uid="DulcisX.Nodes.SelectedNodesCollection" class="text-break">Class SelectedNodesCollection
+  </h1>
+  <div class="markdown level0 summary"><p>A wrapper for the <span class="xref">Microsoft.VisualStudio.Shell.Interop.IVsMonitorSelection</span>, gets access to the selected nodes in the Solution Explorer.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">SelectedNodesCollection</span></div>
+  </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="DulcisX.Nodes.BaseNode.html">BaseNode</a>&gt;</div>
+    <div><span class="xref">System.Collections.IEnumerable</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="DulcisX.Nodes.html">DulcisX.Nodes</a></h6>
+  <h6><strong>Assembly</strong>: DulcisX.dll</h6>
+  <h5 id="DulcisX_Nodes_SelectedNodesCollection_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class SelectedNodesCollection : IEnumerable&lt;BaseNode&gt;, IEnumerable</code></pre>
+  </div>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/TwentyFourMinutes/DulcisX/new/master/apiSpec/new?filename=DulcisX_Nodes_SelectedNodesCollection_GetEnumerator.md&amp;value=---%0Auid%3A%20DulcisX.Nodes.SelectedNodesCollection.GetEnumerator%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/TwentyFourMinutes/DulcisX/blob/master/src/DulcisX/DulcisX/Nodes/SelectedNodesCollection.cs/#L28">View Source</a>
+  </span>
+  <a id="DulcisX_Nodes_SelectedNodesCollection_GetEnumerator_" data-uid="DulcisX.Nodes.SelectedNodesCollection.GetEnumerator*"></a>
+  <h4 id="DulcisX_Nodes_SelectedNodesCollection_GetEnumerator" data-uid="DulcisX.Nodes.SelectedNodesCollection.GetEnumerator">GetEnumerator()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IEnumerator&lt;BaseNode&gt; GetEnumerator()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerator</span>&lt;<a class="xref" href="DulcisX.Nodes.BaseNode.html">BaseNode</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/TwentyFourMinutes/DulcisX/new/master/apiSpec/new?filename=DulcisX_Nodes_SelectedNodesCollection_GetMultiSelection_Microsoft_VisualStudio_Shell_Interop_IVsMultiItemSelect_DulcisX_Nodes_SolutionNode_.md&amp;value=---%0Auid%3A%20DulcisX.Nodes.SelectedNodesCollection.GetMultiSelection(Microsoft.VisualStudio.Shell.Interop.IVsMultiItemSelect%2CDulcisX.Nodes.SolutionNode)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/TwentyFourMinutes/DulcisX/blob/master/src/DulcisX/DulcisX/Nodes/SelectedNodesCollection.cs/#L98">View Source</a>
+  </span>
+  <a id="DulcisX_Nodes_SelectedNodesCollection_GetMultiSelection_" data-uid="DulcisX.Nodes.SelectedNodesCollection.GetMultiSelection*"></a>
+  <h4 id="DulcisX_Nodes_SelectedNodesCollection_GetMultiSelection_Microsoft_VisualStudio_Shell_Interop_IVsMultiItemSelect_DulcisX_Nodes_SolutionNode_" data-uid="DulcisX.Nodes.SelectedNodesCollection.GetMultiSelection(Microsoft.VisualStudio.Shell.Interop.IVsMultiItemSelect,DulcisX.Nodes.SolutionNode)">GetMultiSelection(IVsMultiItemSelect, SolutionNode)</h4>
+  <div class="markdown level1 summary"><p>Returns all selected nodes is an <span class="xref">Microsoft.VisualStudio.Shell.Interop.IVsMultiItemSelect</span> in the <code data-dev-comment-type="paramref" class="paramref">multiSelect</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IEnumerable&lt;BaseNode&gt; GetMultiSelection(IVsMultiItemSelect multiSelect, SolutionNode solution)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Microsoft.VisualStudio.Shell.Interop.IVsMultiItemSelect</span></td>
+        <td><span class="parametername">multiSelect</span></td>
+        <td><p>The native <span class="xref">Microsoft.VisualStudio.Shell.Interop.IVsMultiItemSelect</span> interface containg the selected Nodes.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="DulcisX.Nodes.SolutionNode.html">SolutionNode</a></td>
+        <td><span class="parametername">solution</span></td>
+        <td><p>The Solution in which the Nodes sit in.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="DulcisX.Nodes.BaseNode.html">BaseNode</a>&gt;</td>
+        <td><p>An <span class="xref">System.Collections.Generic.IEnumerable&lt;T&gt;</span> with the selected Nodes.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/TwentyFourMinutes/DulcisX/new/master/apiSpec/new?filename=DulcisX_Nodes_SelectedNodesCollection_GetSelection_Microsoft_VisualStudio_Shell_Interop_IVsMultiItemSelect_Microsoft_VisualStudio_Shell_Interop_IVsHierarchy_System_UInt32_DulcisX_Nodes_SolutionNode_.md&amp;value=---%0Auid%3A%20DulcisX.Nodes.SelectedNodesCollection.GetSelection(Microsoft.VisualStudio.Shell.Interop.IVsMultiItemSelect%2CMicrosoft.VisualStudio.Shell.Interop.IVsHierarchy%2CSystem.UInt32%2CDulcisX.Nodes.SolutionNode)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/TwentyFourMinutes/DulcisX/blob/master/src/DulcisX/DulcisX/Nodes/SelectedNodesCollection.cs/#L54">View Source</a>
+  </span>
+  <a id="DulcisX_Nodes_SelectedNodesCollection_GetSelection_" data-uid="DulcisX.Nodes.SelectedNodesCollection.GetSelection*"></a>
+  <h4 id="DulcisX_Nodes_SelectedNodesCollection_GetSelection_Microsoft_VisualStudio_Shell_Interop_IVsMultiItemSelect_Microsoft_VisualStudio_Shell_Interop_IVsHierarchy_System_UInt32_DulcisX_Nodes_SolutionNode_" data-uid="DulcisX.Nodes.SelectedNodesCollection.GetSelection(Microsoft.VisualStudio.Shell.Interop.IVsMultiItemSelect,Microsoft.VisualStudio.Shell.Interop.IVsHierarchy,System.UInt32,DulcisX.Nodes.SolutionNode)">GetSelection(IVsMultiItemSelect, IVsHierarchy, UInt32, SolutionNode)</h4>
+  <div class="markdown level1 summary"><p>Returns all selected nodes.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IEnumerable&lt;BaseNode&gt; GetSelection(IVsMultiItemSelect multiSelect, IVsHierarchy hierarchy, uint itemId, SolutionNode solution)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Microsoft.VisualStudio.Shell.Interop.IVsMultiItemSelect</span></td>
+        <td><span class="parametername">multiSelect</span></td>
+        <td><p>The native <span class="xref">Microsoft.VisualStudio.Shell.Interop.IVsMultiItemSelect</span> interface containg the selected Nodes.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">Microsoft.VisualStudio.Shell.Interop.IVsHierarchy</span></td>
+        <td><span class="parametername">hierarchy</span></td>
+        <td><p>The hierarchy which could contain the selected Node.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.UInt32</span></td>
+        <td><span class="parametername">itemId</span></td>
+        <td><p>The potential Unique Identifier for the selected Node in the <code data-dev-comment-type="paramref" class="paramref">hierarchy</code>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="DulcisX.Nodes.SolutionNode.html">SolutionNode</a></td>
+        <td><span class="parametername">solution</span></td>
+        <td><p>The Solution in which the Nodes sit in.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="DulcisX.Nodes.BaseNode.html">BaseNode</a>&gt;</td>
+        <td><p>An <span class="xref">System.Collections.Generic.IEnumerable&lt;T&gt;</span> with the selected Nodes.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/TwentyFourMinutes/DulcisX/new/master/apiSpec/new?filename=DulcisX_Nodes_SelectedNodesCollection_GetSingleSelection_Microsoft_VisualStudio_Shell_Interop_IVsHierarchy_System_UInt32_DulcisX_Nodes_SolutionNode_.md&amp;value=---%0Auid%3A%20DulcisX.Nodes.SelectedNodesCollection.GetSingleSelection(Microsoft.VisualStudio.Shell.Interop.IVsHierarchy%2CSystem.UInt32%2CDulcisX.Nodes.SolutionNode)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/TwentyFourMinutes/DulcisX/blob/master/src/DulcisX/DulcisX/Nodes/SelectedNodesCollection.cs/#L76">View Source</a>
+  </span>
+  <a id="DulcisX_Nodes_SelectedNodesCollection_GetSingleSelection_" data-uid="DulcisX.Nodes.SelectedNodesCollection.GetSingleSelection*"></a>
+  <h4 id="DulcisX_Nodes_SelectedNodesCollection_GetSingleSelection_Microsoft_VisualStudio_Shell_Interop_IVsHierarchy_System_UInt32_DulcisX_Nodes_SolutionNode_" data-uid="DulcisX.Nodes.SelectedNodesCollection.GetSingleSelection(Microsoft.VisualStudio.Shell.Interop.IVsHierarchy,System.UInt32,DulcisX.Nodes.SolutionNode)">GetSingleSelection(IVsHierarchy, UInt32, SolutionNode)</h4>
+  <div class="markdown level1 summary"><p>Returns the single selected node in the <span class="xref">Microsoft.VisualStudio.Shell.Interop.IVsMultiItemSelect</span>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static BaseNode GetSingleSelection(IVsHierarchy hierarchy, uint itemId, SolutionNode solution)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Microsoft.VisualStudio.Shell.Interop.IVsHierarchy</span></td>
+        <td><span class="parametername">hierarchy</span></td>
+        <td><p>The hierarchy which contains the selected Node.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.UInt32</span></td>
+        <td><span class="parametername">itemId</span></td>
+        <td><p>The Unique Identifier for the selected Node in the <code data-dev-comment-type="paramref" class="paramref">hierarchy</code>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="DulcisX.Nodes.SolutionNode.html">SolutionNode</a></td>
+        <td><span class="parametername">solution</span></td>
+        <td><p>The Solution in which the Nodes sit in.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="DulcisX.Nodes.BaseNode.html">BaseNode</a></td>
+        <td><p>An <span class="xref">System.Collections.Generic.IEnumerable&lt;T&gt;</span> with the selected Nodes.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="eii">Explicit Interface Implementations
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/TwentyFourMinutes/DulcisX/new/master/apiSpec/new?filename=DulcisX_Nodes_SelectedNodesCollection_System_Collections_IEnumerable_GetEnumerator.md&amp;value=---%0Auid%3A%20DulcisX.Nodes.SelectedNodesCollection.System%23Collections%23IEnumerable%23GetEnumerator%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/TwentyFourMinutes/DulcisX/blob/master/src/DulcisX/DulcisX/Nodes/SelectedNodesCollection.cs/#L121">View Source</a>
+  </span>
+  <a id="DulcisX_Nodes_SelectedNodesCollection_System_Collections_IEnumerable_GetEnumerator_" data-uid="DulcisX.Nodes.SelectedNodesCollection.System#Collections#IEnumerable#GetEnumerator*"></a>
+  <h4 id="DulcisX_Nodes_SelectedNodesCollection_System_Collections_IEnumerable_GetEnumerator" data-uid="DulcisX.Nodes.SelectedNodesCollection.System#Collections#IEnumerable#GetEnumerator">IEnumerable.GetEnumerator()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IEnumerator IEnumerable.GetEnumerator()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.IEnumerator</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <span class="xref">System.Collections.Generic.IEnumerable&lt;T&gt;</span>
+  </div>
+  <div>
+      <span class="xref">System.Collections.IEnumerable</span>
+  </div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="theme-switch-field">
+                <p>Theme</p>
+                <select id="theme-switcher">
+                  <option value="dark">Dark
+                  <option value="gray">Gray
+                  <option value="light">Light
+                </select>
+              </div>
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/TwentyFourMinutes/DulcisX/new/master/apiSpec/new?filename=DulcisX_Nodes_SelectedNodesCollection.md&amp;value=---%0Auid%3A%20DulcisX.Nodes.SelectedNodesCollection%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/TwentyFourMinutes/DulcisX/blob/master/src/DulcisX/DulcisX/Nodes/SelectedNodesCollection.cs/#L15" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            <span>Copyright © 2020 Twenty</span>
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+    <script type="text/javascript" src="../styles/styleswitcher.js"></script>  </body>
+</html>

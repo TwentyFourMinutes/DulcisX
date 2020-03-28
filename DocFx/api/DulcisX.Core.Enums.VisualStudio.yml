@@ -1,0 +1,53 @@
+### YamlMime:ManagedReference
+items:
+- uid: DulcisX.Core.Enums.VisualStudio
+  commentId: N:DulcisX.Core.Enums.VisualStudio
+  id: DulcisX.Core.Enums.VisualStudio
+  children:
+  - DulcisX.Core.Enums.VisualStudio.CommonNodeIds
+  - DulcisX.Core.Enums.VisualStudio.CommonStatusCodes
+  - DulcisX.Core.Enums.VisualStudio.CommonStreamKeys
+  - DulcisX.Core.Enums.VisualStudio.OpenNodeAttribute
+  - DulcisX.Core.Enums.VisualStudio.PhysicalNodeRemovedFlags
+  langs:
+  - csharp
+  - vb
+  name: DulcisX.Core.Enums.VisualStudio
+  nameWithType: DulcisX.Core.Enums.VisualStudio
+  fullName: DulcisX.Core.Enums.VisualStudio
+  type: Namespace
+  assemblies:
+  - DulcisX
+references:
+- uid: DulcisX.Core.Enums.VisualStudio.CommonNodeIds
+  commentId: T:DulcisX.Core.Enums.VisualStudio.CommonNodeIds
+  name: CommonNodeIds
+  nameWithType: CommonNodeIds
+  fullName: DulcisX.Core.Enums.VisualStudio.CommonNodeIds
+- uid: DulcisX.Core.Enums.VisualStudio.CommonStatusCodes
+  commentId: T:DulcisX.Core.Enums.VisualStudio.CommonStatusCodes
+  name: CommonStatusCodes
+  nameWithType: CommonStatusCodes
+  fullName: DulcisX.Core.Enums.VisualStudio.CommonStatusCodes
+- uid: DulcisX.Core.Enums.VisualStudio.CommonStreamKeys
+  commentId: T:DulcisX.Core.Enums.VisualStudio.CommonStreamKeys
+  name: CommonStreamKeys
+  nameWithType: CommonStreamKeys
+  fullName: DulcisX.Core.Enums.VisualStudio.CommonStreamKeys
+- uid: DulcisX.Core.Enums.VisualStudio.OpenNodeAttribute
+  commentId: T:DulcisX.Core.Enums.VisualStudio.OpenNodeAttribute
+  parent: DulcisX.Core.Enums.VisualStudio
+  name: OpenNodeAttribute
+  nameWithType: OpenNodeAttribute
+  fullName: DulcisX.Core.Enums.VisualStudio.OpenNodeAttribute
+- uid: DulcisX.Core.Enums.VisualStudio.PhysicalNodeRemovedFlags
+  commentId: T:DulcisX.Core.Enums.VisualStudio.PhysicalNodeRemovedFlags
+  parent: DulcisX.Core.Enums.VisualStudio
+  name: PhysicalNodeRemovedFlags
+  nameWithType: PhysicalNodeRemovedFlags
+  fullName: DulcisX.Core.Enums.VisualStudio.PhysicalNodeRemovedFlags
+- uid: DulcisX.Core.Enums.VisualStudio
+  commentId: N:DulcisX.Core.Enums.VisualStudio
+  name: DulcisX.Core.Enums.VisualStudio
+  nameWithType: DulcisX.Core.Enums.VisualStudio
+  fullName: DulcisX.Core.Enums.VisualStudio

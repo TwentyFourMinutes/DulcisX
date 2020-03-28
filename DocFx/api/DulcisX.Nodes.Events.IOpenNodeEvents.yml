@@ -1,0 +1,992 @@
+### YamlMime:ManagedReference
+items:
+- uid: DulcisX.Nodes.Events.IOpenNodeEvents
+  commentId: T:DulcisX.Nodes.Events.IOpenNodeEvents
+  id: IOpenNodeEvents
+  parent: DulcisX.Nodes.Events
+  children:
+  - DulcisX.Nodes.Events.IOpenNodeEvents.OnAttributeChanged
+  - DulcisX.Nodes.Events.IOpenNodeEvents.OnMoved
+  - DulcisX.Nodes.Events.IOpenNodeEvents.OnNodeLocked
+  - DulcisX.Nodes.Events.IOpenNodeEvents.OnNodeUnlocked
+  - DulcisX.Nodes.Events.IOpenNodeEvents.OnNodeWindowHidden
+  - DulcisX.Nodes.Events.IOpenNodeEvents.OnNodeWindowShow
+  - DulcisX.Nodes.Events.IOpenNodeEvents.OnRenamed
+  - DulcisX.Nodes.Events.IOpenNodeEvents.OnSave
+  - DulcisX.Nodes.Events.IOpenNodeEvents.OnSaved
+  langs:
+  - csharp
+  - vb
+  name: IOpenNodeEvents
+  nameWithType: IOpenNodeEvents
+  fullName: DulcisX.Nodes.Events.IOpenNodeEvents
+  type: Interface
+  source:
+    remote:
+      path: src/DulcisX/DulcisX/Nodes/Events/IOpenNodeEvents.cs
+      branch: master
+      repo: https://github.com/TwentyFourMinutes/DulcisX.git
+    id: IOpenNodeEvents
+    path: ../../DulcisX - master/src/DulcisX/DulcisX/Nodes/Events/IOpenNodeEvents.cs
+    startLine: 9
+  assemblies:
+  - DulcisX
+  namespace: DulcisX.Nodes.Events
+  summary: "\nProvides events, which occur on changes to Nodes which are in the <xref href=\"Microsoft.VisualStudio.Shell.Interop.IVsRunningDocumentTable\" data-throw-if-not-resolved=\"false\"></xref>.\n"
+  example: []
+  syntax:
+    content: public interface IOpenNodeEvents
+    content.vb: Public Interface IOpenNodeEvents
+  modifiers.csharp:
+  - public
+  - interface
+  modifiers.vb:
+  - Public
+  - Interface
+- uid: DulcisX.Nodes.Events.IOpenNodeEvents.OnNodeLocked
+  commentId: P:DulcisX.Nodes.Events.IOpenNodeEvents.OnNodeLocked
+  id: OnNodeLocked
+  parent: DulcisX.Nodes.Events.IOpenNodeEvents
+  langs:
+  - csharp
+  - vb
+  name: OnNodeLocked
+  nameWithType: IOpenNodeEvents.OnNodeLocked
+  fullName: DulcisX.Nodes.Events.IOpenNodeEvents.OnNodeLocked
+  type: Property
+  source:
+    remote:
+      path: src/DulcisX/DulcisX/Nodes/Events/IOpenNodeEvents.cs
+      branch: master
+      repo: https://github.com/TwentyFourMinutes/DulcisX.git
+    id: OnNodeLocked
+    path: ../../DulcisX - master/src/DulcisX/DulcisX/Nodes/Events/IOpenNodeEvents.cs
+    startLine: 14
+  assemblies:
+  - DulcisX
+  namespace: DulcisX.Nodes.Events
+  summary: "\nOccurs when an <xref href=\"DulcisX.Nodes.IPhysicalNode\" data-throw-if-not-resolved=\"false\"></xref> gets locked.\n"
+  example: []
+  syntax:
+    content: EventDistributor<Action<IPhysicalNode, _VSRDTFLAGS, uint, uint>> OnNodeLocked { get; }
+    parameters: []
+    return:
+      type: DulcisX.Nodes.Events.EventDistributor{System.Action{DulcisX.Nodes.IPhysicalNode,Microsoft.VisualStudio.Shell.Interop._VSRDTFLAGS,System.UInt32,System.UInt32}}
+    content.vb: ReadOnly Property OnNodeLocked As EventDistributor(Of Action(Of IPhysicalNode, _VSRDTFLAGS, UInteger, UInteger))
+  overload: DulcisX.Nodes.Events.IOpenNodeEvents.OnNodeLocked*
+  modifiers.csharp:
+  - get
+  modifiers.vb:
+  - ReadOnly
+- uid: DulcisX.Nodes.Events.IOpenNodeEvents.OnNodeUnlocked
+  commentId: P:DulcisX.Nodes.Events.IOpenNodeEvents.OnNodeUnlocked
+  id: OnNodeUnlocked
+  parent: DulcisX.Nodes.Events.IOpenNodeEvents
+  langs:
+  - csharp
+  - vb
+  name: OnNodeUnlocked
+  nameWithType: IOpenNodeEvents.OnNodeUnlocked
+  fullName: DulcisX.Nodes.Events.IOpenNodeEvents.OnNodeUnlocked
+  type: Property
+  source:
+    remote:
+      path: src/DulcisX/DulcisX/Nodes/Events/IOpenNodeEvents.cs
+      branch: master
+      repo: https://github.com/TwentyFourMinutes/DulcisX.git
+    id: OnNodeUnlocked
+    path: ../../DulcisX - master/src/DulcisX/DulcisX/Nodes/Events/IOpenNodeEvents.cs
+    startLine: 18
+  assemblies:
+  - DulcisX
+  namespace: DulcisX.Nodes.Events
+  summary: "\nOccurs when an <xref href=\"DulcisX.Nodes.IPhysicalNode\" data-throw-if-not-resolved=\"false\"></xref> gets unlocked.\n"
+  example: []
+  syntax:
+    content: EventDistributor<Action<IPhysicalNode, _VSRDTFLAGS, uint, uint>> OnNodeUnlocked { get; }
+    parameters: []
+    return:
+      type: DulcisX.Nodes.Events.EventDistributor{System.Action{DulcisX.Nodes.IPhysicalNode,Microsoft.VisualStudio.Shell.Interop._VSRDTFLAGS,System.UInt32,System.UInt32}}
+    content.vb: ReadOnly Property OnNodeUnlocked As EventDistributor(Of Action(Of IPhysicalNode, _VSRDTFLAGS, UInteger, UInteger))
+  overload: DulcisX.Nodes.Events.IOpenNodeEvents.OnNodeUnlocked*
+  modifiers.csharp:
+  - get
+  modifiers.vb:
+  - ReadOnly
+- uid: DulcisX.Nodes.Events.IOpenNodeEvents.OnSaved
+  commentId: P:DulcisX.Nodes.Events.IOpenNodeEvents.OnSaved
+  id: OnSaved
+  parent: DulcisX.Nodes.Events.IOpenNodeEvents
+  langs:
+  - csharp
+  - vb
+  name: OnSaved
+  nameWithType: IOpenNodeEvents.OnSaved
+  fullName: DulcisX.Nodes.Events.IOpenNodeEvents.OnSaved
+  type: Property
+  source:
+    remote:
+      path: src/DulcisX/DulcisX/Nodes/Events/IOpenNodeEvents.cs
+      branch: master
+      repo: https://github.com/TwentyFourMinutes/DulcisX.git
+    id: OnSaved
+    path: ../../DulcisX - master/src/DulcisX/DulcisX/Nodes/Events/IOpenNodeEvents.cs
+    startLine: 22
+  assemblies:
+  - DulcisX
+  namespace: DulcisX.Nodes.Events
+  summary: "\nOccurs when an <xref href=\"DulcisX.Nodes.IPhysicalNode\" data-throw-if-not-resolved=\"false\"></xref> gets saved.\n"
+  example: []
+  syntax:
+    content: EventDistributor<Action<IPhysicalNode>> OnSaved { get; }
+    parameters: []
+    return:
+      type: DulcisX.Nodes.Events.EventDistributor{System.Action{DulcisX.Nodes.IPhysicalNode}}
+    content.vb: ReadOnly Property OnSaved As EventDistributor(Of Action(Of IPhysicalNode))
+  overload: DulcisX.Nodes.Events.IOpenNodeEvents.OnSaved*
+  modifiers.csharp:
+  - get
+  modifiers.vb:
+  - ReadOnly
+- uid: DulcisX.Nodes.Events.IOpenNodeEvents.OnNodeWindowShow
+  commentId: P:DulcisX.Nodes.Events.IOpenNodeEvents.OnNodeWindowShow
+  id: OnNodeWindowShow
+  parent: DulcisX.Nodes.Events.IOpenNodeEvents
+  langs:
+  - csharp
+  - vb
+  name: OnNodeWindowShow
+  nameWithType: IOpenNodeEvents.OnNodeWindowShow
+  fullName: DulcisX.Nodes.Events.IOpenNodeEvents.OnNodeWindowShow
+  type: Property
+  source:
+    remote:
+      path: src/DulcisX/DulcisX/Nodes/Events/IOpenNodeEvents.cs
+      branch: master
+      repo: https://github.com/TwentyFourMinutes/DulcisX.git
+    id: OnNodeWindowShow
+    path: ../../DulcisX - master/src/DulcisX/DulcisX/Nodes/Events/IOpenNodeEvents.cs
+    startLine: 26
+  assemblies:
+  - DulcisX
+  namespace: DulcisX.Nodes.Events
+  summary: "\nOccurs when an <xref href=\"DulcisX.Nodes.IPhysicalNode\" data-throw-if-not-resolved=\"false\"></xref> gets opened in an <xref href=\"Microsoft.VisualStudio.Shell.Interop.IVsWindowFrame\" data-throw-if-not-resolved=\"false\"></xref>.\n"
+  example: []
+  syntax:
+    content: EventDistributor<Action<IPhysicalNode, bool, IVsWindowFrame>> OnNodeWindowShow { get; }
+    parameters: []
+    return:
+      type: DulcisX.Nodes.Events.EventDistributor{System.Action{DulcisX.Nodes.IPhysicalNode,System.Boolean,Microsoft.VisualStudio.Shell.Interop.IVsWindowFrame}}
+    content.vb: ReadOnly Property OnNodeWindowShow As EventDistributor(Of Action(Of IPhysicalNode, Boolean, IVsWindowFrame))
+  overload: DulcisX.Nodes.Events.IOpenNodeEvents.OnNodeWindowShow*
+  modifiers.csharp:
+  - get
+  modifiers.vb:
+  - ReadOnly
+- uid: DulcisX.Nodes.Events.IOpenNodeEvents.OnNodeWindowHidden
+  commentId: P:DulcisX.Nodes.Events.IOpenNodeEvents.OnNodeWindowHidden
+  id: OnNodeWindowHidden
+  parent: DulcisX.Nodes.Events.IOpenNodeEvents
+  langs:
+  - csharp
+  - vb
+  name: OnNodeWindowHidden
+  nameWithType: IOpenNodeEvents.OnNodeWindowHidden
+  fullName: DulcisX.Nodes.Events.IOpenNodeEvents.OnNodeWindowHidden
+  type: Property
+  source:
+    remote:
+      path: src/DulcisX/DulcisX/Nodes/Events/IOpenNodeEvents.cs
+      branch: master
+      repo: https://github.com/TwentyFourMinutes/DulcisX.git
+    id: OnNodeWindowHidden
+    path: ../../DulcisX - master/src/DulcisX/DulcisX/Nodes/Events/IOpenNodeEvents.cs
+    startLine: 30
+  assemblies:
+  - DulcisX
+  namespace: DulcisX.Nodes.Events
+  summary: "\nOccurs when an <xref href=\"DulcisX.Nodes.IPhysicalNode\" data-throw-if-not-resolved=\"false\"></xref> has a <xref href=\"Microsoft.VisualStudio.Shell.Interop.IVsWindowFrame\" data-throw-if-not-resolved=\"false\"></xref> which got hidden.\n"
+  example: []
+  syntax:
+    content: EventDistributor<Action<IPhysicalNode, IVsWindowFrame>> OnNodeWindowHidden { get; }
+    parameters: []
+    return:
+      type: DulcisX.Nodes.Events.EventDistributor{System.Action{DulcisX.Nodes.IPhysicalNode,Microsoft.VisualStudio.Shell.Interop.IVsWindowFrame}}
+    content.vb: ReadOnly Property OnNodeWindowHidden As EventDistributor(Of Action(Of IPhysicalNode, IVsWindowFrame))
+  overload: DulcisX.Nodes.Events.IOpenNodeEvents.OnNodeWindowHidden*
+  modifiers.csharp:
+  - get
+  modifiers.vb:
+  - ReadOnly
+- uid: DulcisX.Nodes.Events.IOpenNodeEvents.OnAttributeChanged
+  commentId: P:DulcisX.Nodes.Events.IOpenNodeEvents.OnAttributeChanged
+  id: OnAttributeChanged
+  parent: DulcisX.Nodes.Events.IOpenNodeEvents
+  langs:
+  - csharp
+  - vb
+  name: OnAttributeChanged
+  nameWithType: IOpenNodeEvents.OnAttributeChanged
+  fullName: DulcisX.Nodes.Events.IOpenNodeEvents.OnAttributeChanged
+  type: Property
+  source:
+    remote:
+      path: src/DulcisX/DulcisX/Nodes/Events/IOpenNodeEvents.cs
+      branch: master
+      repo: https://github.com/TwentyFourMinutes/DulcisX.git
+    id: OnAttributeChanged
+    path: ../../DulcisX - master/src/DulcisX/DulcisX/Nodes/Events/IOpenNodeEvents.cs
+    startLine: 34
+  assemblies:
+  - DulcisX
+  namespace: DulcisX.Nodes.Events
+  summary: "\nOccurs when any attributes on an <xref href=\"DulcisX.Nodes.IPhysicalNode\" data-throw-if-not-resolved=\"false\"></xref> get changed.\n"
+  example: []
+  syntax:
+    content: EventDistributor<Action<IPhysicalNode, OpenNodeAttribute>> OnAttributeChanged { get; }
+    parameters: []
+    return:
+      type: DulcisX.Nodes.Events.EventDistributor{System.Action{DulcisX.Nodes.IPhysicalNode,DulcisX.Core.Enums.VisualStudio.OpenNodeAttribute}}
+    content.vb: ReadOnly Property OnAttributeChanged As EventDistributor(Of Action(Of IPhysicalNode, OpenNodeAttribute))
+  overload: DulcisX.Nodes.Events.IOpenNodeEvents.OnAttributeChanged*
+  modifiers.csharp:
+  - get
+  modifiers.vb:
+  - ReadOnly
+- uid: DulcisX.Nodes.Events.IOpenNodeEvents.OnRenamed
+  commentId: P:DulcisX.Nodes.Events.IOpenNodeEvents.OnRenamed
+  id: OnRenamed
+  parent: DulcisX.Nodes.Events.IOpenNodeEvents
+  langs:
+  - csharp
+  - vb
+  name: OnRenamed
+  nameWithType: IOpenNodeEvents.OnRenamed
+  fullName: DulcisX.Nodes.Events.IOpenNodeEvents.OnRenamed
+  type: Property
+  source:
+    remote:
+      path: src/DulcisX/DulcisX/Nodes/Events/IOpenNodeEvents.cs
+      branch: master
+      repo: https://github.com/TwentyFourMinutes/DulcisX.git
+    id: OnRenamed
+    path: ../../DulcisX - master/src/DulcisX/DulcisX/Nodes/Events/IOpenNodeEvents.cs
+    startLine: 38
+  assemblies:
+  - DulcisX
+  namespace: DulcisX.Nodes.Events
+  summary: "\nOccurs when an <xref href=\"DulcisX.Nodes.IPhysicalNode\" data-throw-if-not-resolved=\"false\"></xref> gets renamed.\n"
+  example: []
+  syntax:
+    content: EventDistributor<Action<IPhysicalNode, string, string>> OnRenamed { get; }
+    parameters: []
+    return:
+      type: DulcisX.Nodes.Events.EventDistributor{System.Action{DulcisX.Nodes.IPhysicalNode,System.String,System.String}}
+    content.vb: ReadOnly Property OnRenamed As EventDistributor(Of Action(Of IPhysicalNode, String, String))
+  overload: DulcisX.Nodes.Events.IOpenNodeEvents.OnRenamed*
+  modifiers.csharp:
+  - get
+  modifiers.vb:
+  - ReadOnly
+- uid: DulcisX.Nodes.Events.IOpenNodeEvents.OnMoved
+  commentId: P:DulcisX.Nodes.Events.IOpenNodeEvents.OnMoved
+  id: OnMoved
+  parent: DulcisX.Nodes.Events.IOpenNodeEvents
+  langs:
+  - csharp
+  - vb
+  name: OnMoved
+  nameWithType: IOpenNodeEvents.OnMoved
+  fullName: DulcisX.Nodes.Events.IOpenNodeEvents.OnMoved
+  type: Property
+  source:
+    remote:
+      path: src/DulcisX/DulcisX/Nodes/Events/IOpenNodeEvents.cs
+      branch: master
+      repo: https://github.com/TwentyFourMinutes/DulcisX.git
+    id: OnMoved
+    path: ../../DulcisX - master/src/DulcisX/DulcisX/Nodes/Events/IOpenNodeEvents.cs
+    startLine: 42
+  assemblies:
+  - DulcisX
+  namespace: DulcisX.Nodes.Events
+  summary: "\nOccurs when an <xref href=\"DulcisX.Nodes.IPhysicalNode\" data-throw-if-not-resolved=\"false\"></xref> gets moved.\n"
+  example: []
+  syntax:
+    content: EventDistributor<Action<IPhysicalNode, string, string>> OnMoved { get; }
+    parameters: []
+    return:
+      type: DulcisX.Nodes.Events.EventDistributor{System.Action{DulcisX.Nodes.IPhysicalNode,System.String,System.String}}
+    content.vb: ReadOnly Property OnMoved As EventDistributor(Of Action(Of IPhysicalNode, String, String))
+  overload: DulcisX.Nodes.Events.IOpenNodeEvents.OnMoved*
+  modifiers.csharp:
+  - get
+  modifiers.vb:
+  - ReadOnly
+- uid: DulcisX.Nodes.Events.IOpenNodeEvents.OnSave
+  commentId: P:DulcisX.Nodes.Events.IOpenNodeEvents.OnSave
+  id: OnSave
+  parent: DulcisX.Nodes.Events.IOpenNodeEvents
+  langs:
+  - csharp
+  - vb
+  name: OnSave
+  nameWithType: IOpenNodeEvents.OnSave
+  fullName: DulcisX.Nodes.Events.IOpenNodeEvents.OnSave
+  type: Property
+  source:
+    remote:
+      path: src/DulcisX/DulcisX/Nodes/Events/IOpenNodeEvents.cs
+      branch: master
+      repo: https://github.com/TwentyFourMinutes/DulcisX.git
+    id: OnSave
+    path: ../../DulcisX - master/src/DulcisX/DulcisX/Nodes/Events/IOpenNodeEvents.cs
+    startLine: 46
+  assemblies:
+  - DulcisX
+  namespace: DulcisX.Nodes.Events
+  summary: "\nOccurs when an <xref href=\"DulcisX.Nodes.IPhysicalNode\" data-throw-if-not-resolved=\"false\"></xref> gets saved.\n"
+  example: []
+  syntax:
+    content: EventDistributor<Action<IPhysicalNode>> OnSave { get; }
+    parameters: []
+    return:
+      type: DulcisX.Nodes.Events.EventDistributor{System.Action{DulcisX.Nodes.IPhysicalNode}}
+    content.vb: ReadOnly Property OnSave As EventDistributor(Of Action(Of IPhysicalNode))
+  overload: DulcisX.Nodes.Events.IOpenNodeEvents.OnSave*
+  modifiers.csharp:
+  - get
+  modifiers.vb:
+  - ReadOnly
+references:
+- uid: Microsoft.VisualStudio.Shell.Interop.IVsRunningDocumentTable
+  commentId: T:Microsoft.VisualStudio.Shell.Interop.IVsRunningDocumentTable
+  parent: Microsoft.VisualStudio.Shell.Interop
+  isExternal: true
+  name: IVsRunningDocumentTable
+  nameWithType: IVsRunningDocumentTable
+  fullName: Microsoft.VisualStudio.Shell.Interop.IVsRunningDocumentTable
+- uid: DulcisX.Nodes.Events
+  commentId: N:DulcisX.Nodes.Events
+  name: DulcisX.Nodes.Events
+  nameWithType: DulcisX.Nodes.Events
+  fullName: DulcisX.Nodes.Events
+- uid: Microsoft.VisualStudio.Shell.Interop
+  commentId: N:Microsoft.VisualStudio.Shell.Interop
+  isExternal: true
+  name: Microsoft.VisualStudio.Shell.Interop
+  nameWithType: Microsoft.VisualStudio.Shell.Interop
+  fullName: Microsoft.VisualStudio.Shell.Interop
+- uid: DulcisX.Nodes.IPhysicalNode
+  commentId: T:DulcisX.Nodes.IPhysicalNode
+  parent: DulcisX.Nodes
+  name: IPhysicalNode
+  nameWithType: IPhysicalNode
+  fullName: DulcisX.Nodes.IPhysicalNode
+- uid: DulcisX.Nodes.Events.IOpenNodeEvents.OnNodeLocked*
+  commentId: Overload:DulcisX.Nodes.Events.IOpenNodeEvents.OnNodeLocked
+  name: OnNodeLocked
+  nameWithType: IOpenNodeEvents.OnNodeLocked
+  fullName: DulcisX.Nodes.Events.IOpenNodeEvents.OnNodeLocked
+- uid: DulcisX.Nodes.Events.EventDistributor{System.Action{DulcisX.Nodes.IPhysicalNode,Microsoft.VisualStudio.Shell.Interop._VSRDTFLAGS,System.UInt32,System.UInt32}}
+  commentId: T:DulcisX.Nodes.Events.EventDistributor{System.Action{DulcisX.Nodes.IPhysicalNode,Microsoft.VisualStudio.Shell.Interop._VSRDTFLAGS,System.UInt32,System.UInt32}}
+  parent: DulcisX.Nodes.Events
+  definition: DulcisX.Nodes.Events.EventDistributor`1
+  name: EventDistributor<Action<IPhysicalNode, _VSRDTFLAGS, UInt32, UInt32>>
+  nameWithType: EventDistributor<Action<IPhysicalNode, _VSRDTFLAGS, UInt32, UInt32>>
+  fullName: DulcisX.Nodes.Events.EventDistributor<System.Action<DulcisX.Nodes.IPhysicalNode, Microsoft.VisualStudio.Shell.Interop._VSRDTFLAGS, System.UInt32, System.UInt32>>
+  nameWithType.vb: EventDistributor(Of Action(Of IPhysicalNode, _VSRDTFLAGS, UInt32, UInt32))
+  fullName.vb: DulcisX.Nodes.Events.EventDistributor(Of System.Action(Of DulcisX.Nodes.IPhysicalNode, Microsoft.VisualStudio.Shell.Interop._VSRDTFLAGS, System.UInt32, System.UInt32))
+  name.vb: EventDistributor(Of Action(Of IPhysicalNode, _VSRDTFLAGS, UInt32, UInt32))
+  spec.csharp:
+  - uid: DulcisX.Nodes.Events.EventDistributor`1
+    name: EventDistributor
+    nameWithType: EventDistributor
+    fullName: DulcisX.Nodes.Events.EventDistributor
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.Action`4
+    name: Action
+    nameWithType: Action
+    fullName: System.Action
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: DulcisX.Nodes.IPhysicalNode
+    name: IPhysicalNode
+    nameWithType: IPhysicalNode
+    fullName: DulcisX.Nodes.IPhysicalNode
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: Microsoft.VisualStudio.Shell.Interop._VSRDTFLAGS
+    name: _VSRDTFLAGS
+    nameWithType: _VSRDTFLAGS
+    fullName: Microsoft.VisualStudio.Shell.Interop._VSRDTFLAGS
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.UInt32
+    name: UInt32
+    nameWithType: UInt32
+    fullName: System.UInt32
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.UInt32
+    name: UInt32
+    nameWithType: UInt32
+    fullName: System.UInt32
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: DulcisX.Nodes.Events.EventDistributor`1
+    name: EventDistributor
+    nameWithType: EventDistributor
+    fullName: DulcisX.Nodes.Events.EventDistributor
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.Action`4
+    name: Action
+    nameWithType: Action
+    fullName: System.Action
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: DulcisX.Nodes.IPhysicalNode
+    name: IPhysicalNode
+    nameWithType: IPhysicalNode
+    fullName: DulcisX.Nodes.IPhysicalNode
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: Microsoft.VisualStudio.Shell.Interop._VSRDTFLAGS
+    name: _VSRDTFLAGS
+    nameWithType: _VSRDTFLAGS
+    fullName: Microsoft.VisualStudio.Shell.Interop._VSRDTFLAGS
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.UInt32
+    name: UInt32
+    nameWithType: UInt32
+    fullName: System.UInt32
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.UInt32
+    name: UInt32
+    nameWithType: UInt32
+    fullName: System.UInt32
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: DulcisX.Nodes
+  commentId: N:DulcisX.Nodes
+  name: DulcisX.Nodes
+  nameWithType: DulcisX.Nodes
+  fullName: DulcisX.Nodes
+- uid: DulcisX.Nodes.Events.EventDistributor`1
+  commentId: T:DulcisX.Nodes.Events.EventDistributor`1
+  name: EventDistributor<TDelegate>
+  nameWithType: EventDistributor<TDelegate>
+  fullName: DulcisX.Nodes.Events.EventDistributor<TDelegate>
+  nameWithType.vb: EventDistributor(Of TDelegate)
+  fullName.vb: DulcisX.Nodes.Events.EventDistributor(Of TDelegate)
+  name.vb: EventDistributor(Of TDelegate)
+  spec.csharp:
+  - uid: DulcisX.Nodes.Events.EventDistributor`1
+    name: EventDistributor
+    nameWithType: EventDistributor
+    fullName: DulcisX.Nodes.Events.EventDistributor
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TDelegate
+    nameWithType: TDelegate
+    fullName: TDelegate
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: DulcisX.Nodes.Events.EventDistributor`1
+    name: EventDistributor
+    nameWithType: EventDistributor
+    fullName: DulcisX.Nodes.Events.EventDistributor
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TDelegate
+    nameWithType: TDelegate
+    fullName: TDelegate
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: DulcisX.Nodes.Events.IOpenNodeEvents.OnNodeUnlocked*
+  commentId: Overload:DulcisX.Nodes.Events.IOpenNodeEvents.OnNodeUnlocked
+  name: OnNodeUnlocked
+  nameWithType: IOpenNodeEvents.OnNodeUnlocked
+  fullName: DulcisX.Nodes.Events.IOpenNodeEvents.OnNodeUnlocked
+- uid: DulcisX.Nodes.Events.IOpenNodeEvents.OnSaved*
+  commentId: Overload:DulcisX.Nodes.Events.IOpenNodeEvents.OnSaved
+  name: OnSaved
+  nameWithType: IOpenNodeEvents.OnSaved
+  fullName: DulcisX.Nodes.Events.IOpenNodeEvents.OnSaved
+- uid: DulcisX.Nodes.Events.EventDistributor{System.Action{DulcisX.Nodes.IPhysicalNode}}
+  commentId: T:DulcisX.Nodes.Events.EventDistributor{System.Action{DulcisX.Nodes.IPhysicalNode}}
+  parent: DulcisX.Nodes.Events
+  definition: DulcisX.Nodes.Events.EventDistributor`1
+  name: EventDistributor<Action<IPhysicalNode>>
+  nameWithType: EventDistributor<Action<IPhysicalNode>>
+  fullName: DulcisX.Nodes.Events.EventDistributor<System.Action<DulcisX.Nodes.IPhysicalNode>>
+  nameWithType.vb: EventDistributor(Of Action(Of IPhysicalNode))
+  fullName.vb: DulcisX.Nodes.Events.EventDistributor(Of System.Action(Of DulcisX.Nodes.IPhysicalNode))
+  name.vb: EventDistributor(Of Action(Of IPhysicalNode))
+  spec.csharp:
+  - uid: DulcisX.Nodes.Events.EventDistributor`1
+    name: EventDistributor
+    nameWithType: EventDistributor
+    fullName: DulcisX.Nodes.Events.EventDistributor
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.Action`1
+    name: Action
+    nameWithType: Action
+    fullName: System.Action
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: DulcisX.Nodes.IPhysicalNode
+    name: IPhysicalNode
+    nameWithType: IPhysicalNode
+    fullName: DulcisX.Nodes.IPhysicalNode
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: DulcisX.Nodes.Events.EventDistributor`1
+    name: EventDistributor
+    nameWithType: EventDistributor
+    fullName: DulcisX.Nodes.Events.EventDistributor
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.Action`1
+    name: Action
+    nameWithType: Action
+    fullName: System.Action
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: DulcisX.Nodes.IPhysicalNode
+    name: IPhysicalNode
+    nameWithType: IPhysicalNode
+    fullName: DulcisX.Nodes.IPhysicalNode
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Microsoft.VisualStudio.Shell.Interop.IVsWindowFrame
+  commentId: T:Microsoft.VisualStudio.Shell.Interop.IVsWindowFrame
+  parent: Microsoft.VisualStudio.Shell.Interop
+  isExternal: true
+  name: IVsWindowFrame
+  nameWithType: IVsWindowFrame
+  fullName: Microsoft.VisualStudio.Shell.Interop.IVsWindowFrame
+- uid: DulcisX.Nodes.Events.IOpenNodeEvents.OnNodeWindowShow*
+  commentId: Overload:DulcisX.Nodes.Events.IOpenNodeEvents.OnNodeWindowShow
+  name: OnNodeWindowShow
+  nameWithType: IOpenNodeEvents.OnNodeWindowShow
+  fullName: DulcisX.Nodes.Events.IOpenNodeEvents.OnNodeWindowShow
+- uid: DulcisX.Nodes.Events.EventDistributor{System.Action{DulcisX.Nodes.IPhysicalNode,System.Boolean,Microsoft.VisualStudio.Shell.Interop.IVsWindowFrame}}
+  commentId: T:DulcisX.Nodes.Events.EventDistributor{System.Action{DulcisX.Nodes.IPhysicalNode,System.Boolean,Microsoft.VisualStudio.Shell.Interop.IVsWindowFrame}}
+  parent: DulcisX.Nodes.Events
+  definition: DulcisX.Nodes.Events.EventDistributor`1
+  name: EventDistributor<Action<IPhysicalNode, Boolean, IVsWindowFrame>>
+  nameWithType: EventDistributor<Action<IPhysicalNode, Boolean, IVsWindowFrame>>
+  fullName: DulcisX.Nodes.Events.EventDistributor<System.Action<DulcisX.Nodes.IPhysicalNode, System.Boolean, Microsoft.VisualStudio.Shell.Interop.IVsWindowFrame>>
+  nameWithType.vb: EventDistributor(Of Action(Of IPhysicalNode, Boolean, IVsWindowFrame))
+  fullName.vb: DulcisX.Nodes.Events.EventDistributor(Of System.Action(Of DulcisX.Nodes.IPhysicalNode, System.Boolean, Microsoft.VisualStudio.Shell.Interop.IVsWindowFrame))
+  name.vb: EventDistributor(Of Action(Of IPhysicalNode, Boolean, IVsWindowFrame))
+  spec.csharp:
+  - uid: DulcisX.Nodes.Events.EventDistributor`1
+    name: EventDistributor
+    nameWithType: EventDistributor
+    fullName: DulcisX.Nodes.Events.EventDistributor
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.Action`3
+    name: Action
+    nameWithType: Action
+    fullName: System.Action
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: DulcisX.Nodes.IPhysicalNode
+    name: IPhysicalNode
+    nameWithType: IPhysicalNode
+    fullName: DulcisX.Nodes.IPhysicalNode
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Boolean
+    name: Boolean
+    nameWithType: Boolean
+    fullName: System.Boolean
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: Microsoft.VisualStudio.Shell.Interop.IVsWindowFrame
+    name: IVsWindowFrame
+    nameWithType: IVsWindowFrame
+    fullName: Microsoft.VisualStudio.Shell.Interop.IVsWindowFrame
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: DulcisX.Nodes.Events.EventDistributor`1
+    name: EventDistributor
+    nameWithType: EventDistributor
+    fullName: DulcisX.Nodes.Events.EventDistributor
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.Action`3
+    name: Action
+    nameWithType: Action
+    fullName: System.Action
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: DulcisX.Nodes.IPhysicalNode
+    name: IPhysicalNode
+    nameWithType: IPhysicalNode
+    fullName: DulcisX.Nodes.IPhysicalNode
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Boolean
+    name: Boolean
+    nameWithType: Boolean
+    fullName: System.Boolean
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: Microsoft.VisualStudio.Shell.Interop.IVsWindowFrame
+    name: IVsWindowFrame
+    nameWithType: IVsWindowFrame
+    fullName: Microsoft.VisualStudio.Shell.Interop.IVsWindowFrame
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: DulcisX.Nodes.Events.IOpenNodeEvents.OnNodeWindowHidden*
+  commentId: Overload:DulcisX.Nodes.Events.IOpenNodeEvents.OnNodeWindowHidden
+  name: OnNodeWindowHidden
+  nameWithType: IOpenNodeEvents.OnNodeWindowHidden
+  fullName: DulcisX.Nodes.Events.IOpenNodeEvents.OnNodeWindowHidden
+- uid: DulcisX.Nodes.Events.EventDistributor{System.Action{DulcisX.Nodes.IPhysicalNode,Microsoft.VisualStudio.Shell.Interop.IVsWindowFrame}}
+  commentId: T:DulcisX.Nodes.Events.EventDistributor{System.Action{DulcisX.Nodes.IPhysicalNode,Microsoft.VisualStudio.Shell.Interop.IVsWindowFrame}}
+  parent: DulcisX.Nodes.Events
+  definition: DulcisX.Nodes.Events.EventDistributor`1
+  name: EventDistributor<Action<IPhysicalNode, IVsWindowFrame>>
+  nameWithType: EventDistributor<Action<IPhysicalNode, IVsWindowFrame>>
+  fullName: DulcisX.Nodes.Events.EventDistributor<System.Action<DulcisX.Nodes.IPhysicalNode, Microsoft.VisualStudio.Shell.Interop.IVsWindowFrame>>
+  nameWithType.vb: EventDistributor(Of Action(Of IPhysicalNode, IVsWindowFrame))
+  fullName.vb: DulcisX.Nodes.Events.EventDistributor(Of System.Action(Of DulcisX.Nodes.IPhysicalNode, Microsoft.VisualStudio.Shell.Interop.IVsWindowFrame))
+  name.vb: EventDistributor(Of Action(Of IPhysicalNode, IVsWindowFrame))
+  spec.csharp:
+  - uid: DulcisX.Nodes.Events.EventDistributor`1
+    name: EventDistributor
+    nameWithType: EventDistributor
+    fullName: DulcisX.Nodes.Events.EventDistributor
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.Action`2
+    name: Action
+    nameWithType: Action
+    fullName: System.Action
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: DulcisX.Nodes.IPhysicalNode
+    name: IPhysicalNode
+    nameWithType: IPhysicalNode
+    fullName: DulcisX.Nodes.IPhysicalNode
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: Microsoft.VisualStudio.Shell.Interop.IVsWindowFrame
+    name: IVsWindowFrame
+    nameWithType: IVsWindowFrame
+    fullName: Microsoft.VisualStudio.Shell.Interop.IVsWindowFrame
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: DulcisX.Nodes.Events.EventDistributor`1
+    name: EventDistributor
+    nameWithType: EventDistributor
+    fullName: DulcisX.Nodes.Events.EventDistributor
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.Action`2
+    name: Action
+    nameWithType: Action
+    fullName: System.Action
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: DulcisX.Nodes.IPhysicalNode
+    name: IPhysicalNode
+    nameWithType: IPhysicalNode
+    fullName: DulcisX.Nodes.IPhysicalNode
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: Microsoft.VisualStudio.Shell.Interop.IVsWindowFrame
+    name: IVsWindowFrame
+    nameWithType: IVsWindowFrame
+    fullName: Microsoft.VisualStudio.Shell.Interop.IVsWindowFrame
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: DulcisX.Nodes.Events.IOpenNodeEvents.OnAttributeChanged*
+  commentId: Overload:DulcisX.Nodes.Events.IOpenNodeEvents.OnAttributeChanged
+  name: OnAttributeChanged
+  nameWithType: IOpenNodeEvents.OnAttributeChanged
+  fullName: DulcisX.Nodes.Events.IOpenNodeEvents.OnAttributeChanged
+- uid: DulcisX.Nodes.Events.EventDistributor{System.Action{DulcisX.Nodes.IPhysicalNode,DulcisX.Core.Enums.VisualStudio.OpenNodeAttribute}}
+  commentId: T:DulcisX.Nodes.Events.EventDistributor{System.Action{DulcisX.Nodes.IPhysicalNode,DulcisX.Core.Enums.VisualStudio.OpenNodeAttribute}}
+  parent: DulcisX.Nodes.Events
+  definition: DulcisX.Nodes.Events.EventDistributor`1
+  name: EventDistributor<Action<IPhysicalNode, OpenNodeAttribute>>
+  nameWithType: EventDistributor<Action<IPhysicalNode, OpenNodeAttribute>>
+  fullName: DulcisX.Nodes.Events.EventDistributor<System.Action<DulcisX.Nodes.IPhysicalNode, DulcisX.Core.Enums.VisualStudio.OpenNodeAttribute>>
+  nameWithType.vb: EventDistributor(Of Action(Of IPhysicalNode, OpenNodeAttribute))
+  fullName.vb: DulcisX.Nodes.Events.EventDistributor(Of System.Action(Of DulcisX.Nodes.IPhysicalNode, DulcisX.Core.Enums.VisualStudio.OpenNodeAttribute))
+  name.vb: EventDistributor(Of Action(Of IPhysicalNode, OpenNodeAttribute))
+  spec.csharp:
+  - uid: DulcisX.Nodes.Events.EventDistributor`1
+    name: EventDistributor
+    nameWithType: EventDistributor
+    fullName: DulcisX.Nodes.Events.EventDistributor
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.Action`2
+    name: Action
+    nameWithType: Action
+    fullName: System.Action
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: DulcisX.Nodes.IPhysicalNode
+    name: IPhysicalNode
+    nameWithType: IPhysicalNode
+    fullName: DulcisX.Nodes.IPhysicalNode
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: DulcisX.Core.Enums.VisualStudio.OpenNodeAttribute
+    name: OpenNodeAttribute
+    nameWithType: OpenNodeAttribute
+    fullName: DulcisX.Core.Enums.VisualStudio.OpenNodeAttribute
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: DulcisX.Nodes.Events.EventDistributor`1
+    name: EventDistributor
+    nameWithType: EventDistributor
+    fullName: DulcisX.Nodes.Events.EventDistributor
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.Action`2
+    name: Action
+    nameWithType: Action
+    fullName: System.Action
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: DulcisX.Nodes.IPhysicalNode
+    name: IPhysicalNode
+    nameWithType: IPhysicalNode
+    fullName: DulcisX.Nodes.IPhysicalNode
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: DulcisX.Core.Enums.VisualStudio.OpenNodeAttribute
+    name: OpenNodeAttribute
+    nameWithType: OpenNodeAttribute
+    fullName: DulcisX.Core.Enums.VisualStudio.OpenNodeAttribute
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: DulcisX.Nodes.Events.IOpenNodeEvents.OnRenamed*
+  commentId: Overload:DulcisX.Nodes.Events.IOpenNodeEvents.OnRenamed
+  name: OnRenamed
+  nameWithType: IOpenNodeEvents.OnRenamed
+  fullName: DulcisX.Nodes.Events.IOpenNodeEvents.OnRenamed
+- uid: DulcisX.Nodes.Events.EventDistributor{System.Action{DulcisX.Nodes.IPhysicalNode,System.String,System.String}}
+  commentId: T:DulcisX.Nodes.Events.EventDistributor{System.Action{DulcisX.Nodes.IPhysicalNode,System.String,System.String}}
+  parent: DulcisX.Nodes.Events
+  definition: DulcisX.Nodes.Events.EventDistributor`1
+  name: EventDistributor<Action<IPhysicalNode, String, String>>
+  nameWithType: EventDistributor<Action<IPhysicalNode, String, String>>
+  fullName: DulcisX.Nodes.Events.EventDistributor<System.Action<DulcisX.Nodes.IPhysicalNode, System.String, System.String>>
+  nameWithType.vb: EventDistributor(Of Action(Of IPhysicalNode, String, String))
+  fullName.vb: DulcisX.Nodes.Events.EventDistributor(Of System.Action(Of DulcisX.Nodes.IPhysicalNode, System.String, System.String))
+  name.vb: EventDistributor(Of Action(Of IPhysicalNode, String, String))
+  spec.csharp:
+  - uid: DulcisX.Nodes.Events.EventDistributor`1
+    name: EventDistributor
+    nameWithType: EventDistributor
+    fullName: DulcisX.Nodes.Events.EventDistributor
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.Action`3
+    name: Action
+    nameWithType: Action
+    fullName: System.Action
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: DulcisX.Nodes.IPhysicalNode
+    name: IPhysicalNode
+    nameWithType: IPhysicalNode
+    fullName: DulcisX.Nodes.IPhysicalNode
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: DulcisX.Nodes.Events.EventDistributor`1
+    name: EventDistributor
+    nameWithType: EventDistributor
+    fullName: DulcisX.Nodes.Events.EventDistributor
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.Action`3
+    name: Action
+    nameWithType: Action
+    fullName: System.Action
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: DulcisX.Nodes.IPhysicalNode
+    name: IPhysicalNode
+    nameWithType: IPhysicalNode
+    fullName: DulcisX.Nodes.IPhysicalNode
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: DulcisX.Nodes.Events.IOpenNodeEvents.OnMoved*
+  commentId: Overload:DulcisX.Nodes.Events.IOpenNodeEvents.OnMoved
+  name: OnMoved
+  nameWithType: IOpenNodeEvents.OnMoved
+  fullName: DulcisX.Nodes.Events.IOpenNodeEvents.OnMoved
+- uid: DulcisX.Nodes.Events.IOpenNodeEvents.OnSave*
+  commentId: Overload:DulcisX.Nodes.Events.IOpenNodeEvents.OnSave
+  name: OnSave
+  nameWithType: IOpenNodeEvents.OnSave
+  fullName: DulcisX.Nodes.Events.IOpenNodeEvents.OnSave

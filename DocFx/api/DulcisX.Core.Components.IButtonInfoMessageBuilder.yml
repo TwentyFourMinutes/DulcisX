@@ -1,0 +1,211 @@
+### YamlMime:ManagedReference
+items:
+- uid: DulcisX.Core.Components.IButtonInfoMessageBuilder
+  commentId: T:DulcisX.Core.Components.IButtonInfoMessageBuilder
+  id: IButtonInfoMessageBuilder
+  parent: DulcisX.Core.Components
+  children:
+  - DulcisX.Core.Components.IButtonInfoMessageBuilder.Publish(System.Action)
+  - DulcisX.Core.Components.IButtonInfoMessageBuilder.WithButton(System.String,System.Action,System.Boolean)
+  - DulcisX.Core.Components.IButtonInfoMessageBuilder.WithButton(System.String,System.Boolean)
+  langs:
+  - csharp
+  - vb
+  name: IButtonInfoMessageBuilder
+  nameWithType: IButtonInfoMessageBuilder
+  fullName: DulcisX.Core.Components.IButtonInfoMessageBuilder
+  type: Interface
+  source:
+    remote:
+      path: src/DulcisX/DulcisX/Core/Components/InfoBar/IMessageBuilder.cs
+      branch: master
+      repo: https://github.com/TwentyFourMinutes/DulcisX.git
+    id: IButtonInfoMessageBuilder
+    path: ../../DulcisX - master/src/DulcisX/DulcisX/Core/Components/InfoBar/IMessageBuilder.cs
+    startLine: 67
+  assemblies:
+  - DulcisX
+  namespace: DulcisX.Core.Components
+  summary: "\nRepresents the button builder of an InfoBar message.\n"
+  example: []
+  syntax:
+    content: public interface IButtonInfoMessageBuilder
+    content.vb: Public Interface IButtonInfoMessageBuilder
+  modifiers.csharp:
+  - public
+  - interface
+  modifiers.vb:
+  - Public
+  - Interface
+- uid: DulcisX.Core.Components.IButtonInfoMessageBuilder.WithButton(System.String,System.Boolean)
+  commentId: M:DulcisX.Core.Components.IButtonInfoMessageBuilder.WithButton(System.String,System.Boolean)
+  id: WithButton(System.String,System.Boolean)
+  parent: DulcisX.Core.Components.IButtonInfoMessageBuilder
+  langs:
+  - csharp
+  - vb
+  name: WithButton(String, Boolean)
+  nameWithType: IButtonInfoMessageBuilder.WithButton(String, Boolean)
+  fullName: DulcisX.Core.Components.IButtonInfoMessageBuilder.WithButton(System.String, System.Boolean)
+  type: Method
+  source:
+    remote:
+      path: src/DulcisX/DulcisX/Core/Components/InfoBar/IMessageBuilder.cs
+      branch: master
+      repo: https://github.com/TwentyFourMinutes/DulcisX.git
+    id: WithButton
+    path: ../../DulcisX - master/src/DulcisX/DulcisX/Core/Components/InfoBar/IMessageBuilder.cs
+    startLine: 75
+  assemblies:
+  - DulcisX
+  namespace: DulcisX.Core.Components
+  summary: "\nAdds a button to the InfoBar message.\n"
+  example: []
+  syntax:
+    content: IButtonInfoMessageBuilder WithButton(string text, bool closeAfterClick = true)
+    parameters:
+    - id: text
+      type: System.String
+      description: The text to be displayed inside the button.
+    - id: closeAfterClick
+      type: System.Boolean
+      description: Specifies whether or not the InfoBar message should be removed after the user clicked the button.
+    return:
+      type: DulcisX.Core.Components.IButtonInfoMessageBuilder
+      description: An <xref href="DulcisX.Core.Components.IButtonInfoMessageBuilder" data-throw-if-not-resolved="false"></xref> instance.
+    content.vb: Function WithButton(text As String, closeAfterClick As Boolean = True) As IButtonInfoMessageBuilder
+  overload: DulcisX.Core.Components.IButtonInfoMessageBuilder.WithButton*
+- uid: DulcisX.Core.Components.IButtonInfoMessageBuilder.WithButton(System.String,System.Action,System.Boolean)
+  commentId: M:DulcisX.Core.Components.IButtonInfoMessageBuilder.WithButton(System.String,System.Action,System.Boolean)
+  id: WithButton(System.String,System.Action,System.Boolean)
+  parent: DulcisX.Core.Components.IButtonInfoMessageBuilder
+  langs:
+  - csharp
+  - vb
+  name: WithButton(String, Action, Boolean)
+  nameWithType: IButtonInfoMessageBuilder.WithButton(String, Action, Boolean)
+  fullName: DulcisX.Core.Components.IButtonInfoMessageBuilder.WithButton(System.String, System.Action, System.Boolean)
+  type: Method
+  source:
+    remote:
+      path: src/DulcisX/DulcisX/Core/Components/InfoBar/IMessageBuilder.cs
+      branch: master
+      repo: https://github.com/TwentyFourMinutes/DulcisX.git
+    id: WithButton
+    path: ../../DulcisX - master/src/DulcisX/DulcisX/Core/Components/InfoBar/IMessageBuilder.cs
+    startLine: 83
+  assemblies:
+  - DulcisX
+  namespace: DulcisX.Core.Components
+  summary: "\nAdds a button to the InfoBar message.\n"
+  example: []
+  syntax:
+    content: IButtonInfoMessageBuilder WithButton(string text, Action callback, bool closeAfterClick = true)
+    parameters:
+    - id: text
+      type: System.String
+      description: The text to be displayed inside the button.
+    - id: callback
+      type: System.Action
+      description: A callback action which gets called if the user clicks on the button.
+    - id: closeAfterClick
+      type: System.Boolean
+      description: Specifies whether or not the InfoBar message should be removed after the user clicked the button.
+    return:
+      type: DulcisX.Core.Components.IButtonInfoMessageBuilder
+      description: An <xref href="DulcisX.Core.Components.IButtonInfoMessageBuilder" data-throw-if-not-resolved="false"></xref> instance.
+    content.vb: Function WithButton(text As String, callback As Action, closeAfterClick As Boolean = True) As IButtonInfoMessageBuilder
+  overload: DulcisX.Core.Components.IButtonInfoMessageBuilder.WithButton*
+- uid: DulcisX.Core.Components.IButtonInfoMessageBuilder.Publish(System.Action)
+  commentId: M:DulcisX.Core.Components.IButtonInfoMessageBuilder.Publish(System.Action)
+  id: Publish(System.Action)
+  parent: DulcisX.Core.Components.IButtonInfoMessageBuilder
+  langs:
+  - csharp
+  - vb
+  name: Publish(Action)
+  nameWithType: IButtonInfoMessageBuilder.Publish(Action)
+  fullName: DulcisX.Core.Components.IButtonInfoMessageBuilder.Publish(System.Action)
+  type: Method
+  source:
+    remote:
+      path: src/DulcisX/DulcisX/Core/Components/InfoBar/IMessageBuilder.cs
+      branch: master
+      repo: https://github.com/TwentyFourMinutes/DulcisX.git
+    id: Publish
+    path: ../../DulcisX - master/src/DulcisX/DulcisX/Core/Components/InfoBar/IMessageBuilder.cs
+    startLine: 90
+  assemblies:
+  - DulcisX
+  namespace: DulcisX.Core.Components
+  summary: "\nDisplays the InfoBar message to the user.\n"
+  example: []
+  syntax:
+    content: InfoBarHandle Publish(Action cancelCallback = null)
+    parameters:
+    - id: cancelCallback
+      type: System.Action
+      description: A callback action which gets called if the user clicks on the close (&apos;x&apos;) button.
+    return:
+      type: DulcisX.Core.Components.InfoBarHandle
+      description: A new unique <xref href="DulcisX.Core.Components.InfoBarHandle" data-throw-if-not-resolved="false"></xref> instance pointing to the created InfoBar message. Used to manually remove the InfoBar message in <xref href="DulcisX.Core.Components.InfoBar.RemoveMessage(DulcisX.Core.Components.InfoBarHandle)" data-throw-if-not-resolved="false"></xref>.
+    content.vb: Function Publish(cancelCallback As Action = Nothing) As InfoBarHandle
+  overload: DulcisX.Core.Components.IButtonInfoMessageBuilder.Publish*
+references:
+- uid: DulcisX.Core.Components
+  commentId: N:DulcisX.Core.Components
+  name: DulcisX.Core.Components
+  nameWithType: DulcisX.Core.Components
+  fullName: DulcisX.Core.Components
+- uid: DulcisX.Core.Components.IButtonInfoMessageBuilder
+  commentId: T:DulcisX.Core.Components.IButtonInfoMessageBuilder
+  parent: DulcisX.Core.Components
+  name: IButtonInfoMessageBuilder
+  nameWithType: IButtonInfoMessageBuilder
+  fullName: DulcisX.Core.Components.IButtonInfoMessageBuilder
+- uid: DulcisX.Core.Components.IButtonInfoMessageBuilder.WithButton*
+  commentId: Overload:DulcisX.Core.Components.IButtonInfoMessageBuilder.WithButton
+  name: WithButton
+  nameWithType: IButtonInfoMessageBuilder.WithButton
+  fullName: DulcisX.Core.Components.IButtonInfoMessageBuilder.WithButton
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.Action
+  commentId: T:System.Action
+  parent: System
+  isExternal: true
+  name: Action
+  nameWithType: Action
+  fullName: System.Action
+- uid: DulcisX.Core.Components.InfoBarHandle
+  commentId: T:DulcisX.Core.Components.InfoBarHandle
+  parent: DulcisX.Core.Components
+  name: InfoBarHandle
+  nameWithType: InfoBarHandle
+  fullName: DulcisX.Core.Components.InfoBarHandle
+- uid: DulcisX.Core.Components.InfoBar.RemoveMessage(DulcisX.Core.Components.InfoBarHandle)
+  commentId: M:DulcisX.Core.Components.InfoBar.RemoveMessage(DulcisX.Core.Components.InfoBarHandle)
+  isExternal: true
+- uid: DulcisX.Core.Components.IButtonInfoMessageBuilder.Publish*
+  commentId: Overload:DulcisX.Core.Components.IButtonInfoMessageBuilder.Publish
+  name: Publish
+  nameWithType: IButtonInfoMessageBuilder.Publish
+  fullName: DulcisX.Core.Components.IButtonInfoMessageBuilder.Publish

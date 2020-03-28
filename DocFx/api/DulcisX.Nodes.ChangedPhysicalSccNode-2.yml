@@ -1,0 +1,494 @@
+### YamlMime:ManagedReference
+items:
+- uid: DulcisX.Nodes.ChangedPhysicalSccNode`2
+  commentId: T:DulcisX.Nodes.ChangedPhysicalSccNode`2
+  id: ChangedPhysicalSccNode`2
+  parent: DulcisX.Nodes
+  children: []
+  langs:
+  - csharp
+  - vb
+  name: ChangedPhysicalSccNode<TNodeType, TFlag>
+  nameWithType: ChangedPhysicalSccNode<TNodeType, TFlag>
+  fullName: DulcisX.Nodes.ChangedPhysicalSccNode<TNodeType, TFlag>
+  type: Class
+  source:
+    remote:
+      path: src/DulcisX/DulcisX/Nodes/ChangedPhysicalSccNode.cs
+      branch: master
+      repo: https://github.com/TwentyFourMinutes/DulcisX.git
+    id: ChangedPhysicalSccNode
+    path: ../../DulcisX - master/src/DulcisX/DulcisX/Nodes/ChangedPhysicalSccNode.cs
+    startLine: 9
+  assemblies:
+  - DulcisX
+  namespace: DulcisX.Nodes
+  summary: "\nRepresents an <xref href=\"DulcisX.Nodes.IPhysicalNode\" data-throw-if-not-resolved=\"false\"></xref> which Source Control state changed.\n"
+  example: []
+  syntax:
+    content: 'public class ChangedPhysicalSccNode<TNodeType, TFlag> : ChangedNodeBase<TNodeType, TFlag> where TNodeType : IPhysicalNode where TFlag : struct, Enum'
+    typeParameters:
+    - id: TNodeType
+      description: The type of the node which got changed.
+    - id: TFlag
+      description: The enumeration which specifies what happend to the <xref href="DulcisX.Nodes.IPhysicalNode" data-throw-if-not-resolved="false"></xref>.
+    content.vb: >-
+      Public Class ChangedPhysicalSccNode(Of TNodeType As IPhysicalNode, TFlag As {Structure,  Enum})
+
+          Inherits ChangedNodeBase(Of TNodeType, TFlag)
+  inheritance:
+  - System.Object
+  - DulcisX.Nodes.ChangedNodeBase{{TNodeType},{TFlag}}
+  inheritedMembers:
+  - DulcisX.Nodes.ChangedNodeBase{{TNodeType},{TFlag}}.Node
+  - DulcisX.Nodes.ChangedNodeBase{{TNodeType},{TFlag}}.Flag
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  nameWithType.vb: ChangedPhysicalSccNode(Of TNodeType, TFlag)
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+  fullName.vb: DulcisX.Nodes.ChangedPhysicalSccNode(Of TNodeType, TFlag)
+  name.vb: ChangedPhysicalSccNode(Of TNodeType, TFlag)
+references:
+- uid: DulcisX.Nodes.IPhysicalNode
+  commentId: T:DulcisX.Nodes.IPhysicalNode
+  parent: DulcisX.Nodes
+  name: IPhysicalNode
+  nameWithType: IPhysicalNode
+  fullName: DulcisX.Nodes.IPhysicalNode
+- uid: DulcisX.Nodes
+  commentId: N:DulcisX.Nodes
+  name: DulcisX.Nodes
+  nameWithType: DulcisX.Nodes
+  fullName: DulcisX.Nodes
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: DulcisX.Nodes.ChangedNodeBase{{TNodeType},{TFlag}}
+  commentId: T:DulcisX.Nodes.ChangedNodeBase{`0,`1}
+  parent: DulcisX.Nodes
+  definition: DulcisX.Nodes.ChangedNodeBase`2
+  name: ChangedNodeBase<TNodeType, TFlag>
+  nameWithType: ChangedNodeBase<TNodeType, TFlag>
+  fullName: DulcisX.Nodes.ChangedNodeBase<TNodeType, TFlag>
+  nameWithType.vb: ChangedNodeBase(Of TNodeType, TFlag)
+  fullName.vb: DulcisX.Nodes.ChangedNodeBase(Of TNodeType, TFlag)
+  name.vb: ChangedNodeBase(Of TNodeType, TFlag)
+  spec.csharp:
+  - uid: DulcisX.Nodes.ChangedNodeBase`2
+    name: ChangedNodeBase
+    nameWithType: ChangedNodeBase
+    fullName: DulcisX.Nodes.ChangedNodeBase
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TNodeType
+    nameWithType: TNodeType
+    fullName: TNodeType
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TFlag
+    nameWithType: TFlag
+    fullName: TFlag
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: DulcisX.Nodes.ChangedNodeBase`2
+    name: ChangedNodeBase
+    nameWithType: ChangedNodeBase
+    fullName: DulcisX.Nodes.ChangedNodeBase
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TNodeType
+    nameWithType: TNodeType
+    fullName: TNodeType
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TFlag
+    nameWithType: TFlag
+    fullName: TFlag
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: DulcisX.Nodes.ChangedNodeBase{{TNodeType},{TFlag}}.Node
+  commentId: P:DulcisX.Nodes.ChangedNodeBase{`0,`1}.Node
+  parent: DulcisX.Nodes.ChangedNodeBase{{TNodeType},{TFlag}}
+  definition: DulcisX.Nodes.ChangedNodeBase`2.Node
+  name: Node
+  nameWithType: ChangedNodeBase<TNodeType, TFlag>.Node
+  fullName: DulcisX.Nodes.ChangedNodeBase<TNodeType, TFlag>.Node
+  nameWithType.vb: ChangedNodeBase(Of TNodeType, TFlag).Node
+  fullName.vb: DulcisX.Nodes.ChangedNodeBase(Of TNodeType, TFlag).Node
+- uid: DulcisX.Nodes.ChangedNodeBase{{TNodeType},{TFlag}}.Flag
+  commentId: P:DulcisX.Nodes.ChangedNodeBase{`0,`1}.Flag
+  parent: DulcisX.Nodes.ChangedNodeBase{{TNodeType},{TFlag}}
+  definition: DulcisX.Nodes.ChangedNodeBase`2.Flag
+  name: Flag
+  nameWithType: ChangedNodeBase<TNodeType, TFlag>.Flag
+  fullName: DulcisX.Nodes.ChangedNodeBase<TNodeType, TFlag>.Flag
+  nameWithType.vb: ChangedNodeBase(Of TNodeType, TFlag).Flag
+  fullName.vb: DulcisX.Nodes.ChangedNodeBase(Of TNodeType, TFlag).Flag
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: DulcisX.Nodes.ChangedNodeBase`2
+  commentId: T:DulcisX.Nodes.ChangedNodeBase`2
+  name: ChangedNodeBase<TNodeType, TFlag>
+  nameWithType: ChangedNodeBase<TNodeType, TFlag>
+  fullName: DulcisX.Nodes.ChangedNodeBase<TNodeType, TFlag>
+  nameWithType.vb: ChangedNodeBase(Of TNodeType, TFlag)
+  fullName.vb: DulcisX.Nodes.ChangedNodeBase(Of TNodeType, TFlag)
+  name.vb: ChangedNodeBase(Of TNodeType, TFlag)
+  spec.csharp:
+  - uid: DulcisX.Nodes.ChangedNodeBase`2
+    name: ChangedNodeBase
+    nameWithType: ChangedNodeBase
+    fullName: DulcisX.Nodes.ChangedNodeBase
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TNodeType
+    nameWithType: TNodeType
+    fullName: TNodeType
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TFlag
+    nameWithType: TFlag
+    fullName: TFlag
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: DulcisX.Nodes.ChangedNodeBase`2
+    name: ChangedNodeBase
+    nameWithType: ChangedNodeBase
+    fullName: DulcisX.Nodes.ChangedNodeBase
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TNodeType
+    nameWithType: TNodeType
+    fullName: TNodeType
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TFlag
+    nameWithType: TFlag
+    fullName: TFlag
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: DulcisX.Nodes.ChangedNodeBase`2.Node
+  commentId: P:DulcisX.Nodes.ChangedNodeBase`2.Node
+  name: Node
+  nameWithType: ChangedNodeBase<TNodeType, TFlag>.Node
+  fullName: DulcisX.Nodes.ChangedNodeBase<TNodeType, TFlag>.Node
+  nameWithType.vb: ChangedNodeBase(Of TNodeType, TFlag).Node
+  fullName.vb: DulcisX.Nodes.ChangedNodeBase(Of TNodeType, TFlag).Node
+- uid: DulcisX.Nodes.ChangedNodeBase`2.Flag
+  commentId: P:DulcisX.Nodes.ChangedNodeBase`2.Flag
+  name: Flag
+  nameWithType: ChangedNodeBase<TNodeType, TFlag>.Flag
+  fullName: DulcisX.Nodes.ChangedNodeBase<TNodeType, TFlag>.Flag
+  nameWithType.vb: ChangedNodeBase(Of TNodeType, TFlag).Flag
+  fullName.vb: DulcisX.Nodes.ChangedNodeBase(Of TNodeType, TFlag).Flag

@@ -1,0 +1,56 @@
+### YamlMime:ManagedReference
+items:
+- uid: DulcisX.Core.Enums
+  commentId: N:DulcisX.Core.Enums
+  id: DulcisX.Core.Enums
+  children:
+  - DulcisX.Core.Enums.CopyToOutputDirectory
+  - DulcisX.Core.Enums.DocumentProperty
+  - DulcisX.Core.Enums.DocumentType
+  - DulcisX.Core.Enums.NodeTypes
+  - DulcisX.Core.Enums.StartupOption
+  langs:
+  - csharp
+  - vb
+  name: DulcisX.Core.Enums
+  nameWithType: DulcisX.Core.Enums
+  fullName: DulcisX.Core.Enums
+  type: Namespace
+  assemblies:
+  - DulcisX
+references:
+- uid: DulcisX.Core.Enums.CopyToOutputDirectory
+  commentId: T:DulcisX.Core.Enums.CopyToOutputDirectory
+  parent: DulcisX.Core.Enums
+  name: CopyToOutputDirectory
+  nameWithType: CopyToOutputDirectory
+  fullName: DulcisX.Core.Enums.CopyToOutputDirectory
+- uid: DulcisX.Core.Enums.DocumentProperty
+  commentId: T:DulcisX.Core.Enums.DocumentProperty
+  parent: DulcisX.Core.Enums
+  name: DocumentProperty
+  nameWithType: DocumentProperty
+  fullName: DulcisX.Core.Enums.DocumentProperty
+- uid: DulcisX.Core.Enums.DocumentType
+  commentId: T:DulcisX.Core.Enums.DocumentType
+  parent: DulcisX.Core.Enums
+  name: DocumentType
+  nameWithType: DocumentType
+  fullName: DulcisX.Core.Enums.DocumentType
+- uid: DulcisX.Core.Enums.NodeTypes
+  commentId: T:DulcisX.Core.Enums.NodeTypes
+  parent: DulcisX.Core.Enums
+  name: NodeTypes
+  nameWithType: NodeTypes
+  fullName: DulcisX.Core.Enums.NodeTypes
+- uid: DulcisX.Core.Enums.StartupOption
+  commentId: T:DulcisX.Core.Enums.StartupOption
+  parent: DulcisX.Core.Enums
+  name: StartupOption
+  nameWithType: StartupOption
+  fullName: DulcisX.Core.Enums.StartupOption
+- uid: DulcisX.Core.Enums
+  commentId: N:DulcisX.Core.Enums
+  name: DulcisX.Core.Enums
+  nameWithType: DulcisX.Core.Enums
+  fullName: DulcisX.Core.Enums

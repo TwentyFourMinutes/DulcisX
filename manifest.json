@@ -1,0 +1,1026 @@
+{
+  "homepages": [],
+  "source_base_path": "C:/Users/Twenty/Desktop/DulcisX/DulcisX - gh-pages/DocFx",
+  "xrefmap": "xrefmap.yml",
+  "files": [
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DulcisX.Core.AsyncResult-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DulcisX.Core.AsyncResult-1.html",
+          "hash": "/XqI3ZOXolnwR6f0BJAUew=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DulcisX.Core.Attributes.NotImplementedAttribute.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DulcisX.Core.Attributes.NotImplementedAttribute.html",
+          "hash": "ausElu+iKU1/b1upbje02A=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DulcisX.Core.Attributes.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DulcisX.Core.Attributes.html",
+          "hash": "cFSXPJ67VKt1laqgsVj5Cw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DulcisX.Core.ComContainer-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DulcisX.Core.ComContainer-1.html",
+          "hash": "KJRj8JNfHyZRn+voHmxgzQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DulcisX.Core.ComContainer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DulcisX.Core.ComContainer.html",
+          "hash": "3HUXaQKmaSqDQOYy3RdwEg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DulcisX.Core.Components.IBaseInfoMessageBuilder.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DulcisX.Core.Components.IBaseInfoMessageBuilder.html",
+          "hash": "+mByH6aUVPMI/3rtWNIJ0Q=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DulcisX.Core.Components.IButtonIdentifierInfoMessageBuilder-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DulcisX.Core.Components.IButtonIdentifierInfoMessageBuilder-1.html",
+          "hash": "DNbfl24OX3N8oBx5qHSIPA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DulcisX.Core.Components.IButtonIdentifierInfoMessageBuilder.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DulcisX.Core.Components.IButtonIdentifierInfoMessageBuilder.html",
+          "hash": "j1BOKFt6LxSF+ngx63BEFA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DulcisX.Core.Components.IButtonInfoMessageBuilder.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DulcisX.Core.Components.IButtonInfoMessageBuilder.html",
+          "hash": "KBp6iBQHA9rr12cqm3jLig=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DulcisX.Core.Components.IContentInfoMessageBuilder.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DulcisX.Core.Components.IContentInfoMessageBuilder.html",
+          "hash": "svK9c+VQlTexLHiZ74hqOQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DulcisX.Core.Components.IMoreContentInfoMessageBuilder.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DulcisX.Core.Components.IMoreContentInfoMessageBuilder.html",
+          "hash": "d3oSz70sstAnekP6T2V36Q=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DulcisX.Core.Components.InfoBar.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DulcisX.Core.Components.InfoBar.html",
+          "hash": "cxIL2pAApP5ifnILht0bLw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DulcisX.Core.Components.InfoBarHandle.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DulcisX.Core.Components.InfoBarHandle.html",
+          "hash": "KAcUV34R9+wzjt8TOp10cA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DulcisX.Core.Components.ResultInfoBarHandle-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DulcisX.Core.Components.ResultInfoBarHandle-1.html",
+          "hash": "uRB9U31P6tj5TYJxVGxbNA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DulcisX.Core.Components.WebBrowser.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DulcisX.Core.Components.WebBrowser.html",
+          "hash": "vNPpnRLHrAFX2YpIOvJ0Fg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DulcisX.Core.Components.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DulcisX.Core.Components.html",
+          "hash": "N8Rm2J4SutIHxn/3jtjuvQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DulcisX.Core.Enums.CopyToOutputDirectory.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DulcisX.Core.Enums.CopyToOutputDirectory.html",
+          "hash": "h5W5onWI/hxEKxddSy24+A=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DulcisX.Core.Enums.DocumentProperty.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DulcisX.Core.Enums.DocumentProperty.html",
+          "hash": "5v/7JC8cMFBE9cIi9qZ1XQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DulcisX.Core.Enums.DocumentType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DulcisX.Core.Enums.DocumentType.html",
+          "hash": "rqxNjd6A6l06d2QK0x34Mw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DulcisX.Core.Enums.NodeTypes.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DulcisX.Core.Enums.NodeTypes.html",
+          "hash": "MNZHlf14638IguNL4w+jnA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DulcisX.Core.Enums.StartupOption.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DulcisX.Core.Enums.StartupOption.html",
+          "hash": "YVU9oPvAZp+fv2Yc/QkcKw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DulcisX.Core.Enums.VisualStudio.CommonNodeIds.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DulcisX.Core.Enums.VisualStudio.CommonNodeIds.html",
+          "hash": "rYfjmtwxXbFwZjui1ldy7A=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DulcisX.Core.Enums.VisualStudio.CommonStatusCodes.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DulcisX.Core.Enums.VisualStudio.CommonStatusCodes.html",
+          "hash": "+7wx5pdM02B7WWKEK6UwKg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DulcisX.Core.Enums.VisualStudio.CommonStreamKeys.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DulcisX.Core.Enums.VisualStudio.CommonStreamKeys.html",
+          "hash": "qELou4/7JFEzfAU7NwhHEg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DulcisX.Core.Enums.VisualStudio.OpenNodeAttribute.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DulcisX.Core.Enums.VisualStudio.OpenNodeAttribute.html",
+          "hash": "/xNjy7rG4DBh76vM2ixMUQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DulcisX.Core.Enums.VisualStudio.PhysicalNodeRemovedFlags.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DulcisX.Core.Enums.VisualStudio.PhysicalNodeRemovedFlags.html",
+          "hash": "Aqj7f2if544uc3Wn+JjwZw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DulcisX.Core.Enums.VisualStudio.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DulcisX.Core.Enums.VisualStudio.html",
+          "hash": "B0pZTjI42nnathqviBqfZw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DulcisX.Core.Enums.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DulcisX.Core.Enums.html",
+          "hash": "vvtcZ2/vLnRjWlmJre2PXQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DulcisX.Core.EventSink.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DulcisX.Core.EventSink.html",
+          "hash": "/iLfmAmy9Kkp0/dSsyQb+g=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DulcisX.Core.Extensions.ContainerExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DulcisX.Core.Extensions.ContainerExtensions.html",
+          "hash": "5x7jR9tTKtLxk6uB/3QHOQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DulcisX.Core.Extensions.VsHierarchyExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DulcisX.Core.Extensions.VsHierarchyExtensions.html",
+          "hash": "yWdRBLVVLy8QHJB6ZToCnw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DulcisX.Core.Extensions.VsRunningDocumentTableExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DulcisX.Core.Extensions.VsRunningDocumentTableExtensions.html",
+          "hash": "SfISq+x/x+qVGhcjTXZ+zA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DulcisX.Core.Extensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DulcisX.Core.Extensions.html",
+          "hash": "CI+h208lyHlkaaCeh+CIAQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DulcisX.Core.IContainerConfiguration.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DulcisX.Core.IContainerConfiguration.html",
+          "hash": "j8CglfHfT04NPXDb9LJgRg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DulcisX.Core.IServiceProviders.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DulcisX.Core.IServiceProviders.html",
+          "hash": "L0rWRiD10VUIIWTV/6BrRw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DulcisX.Core.PackageX.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DulcisX.Core.PackageX.html",
+          "hash": "qdD9RFyv0pwbSV6uRa1qDw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DulcisX.Core.VisualStudioInstance.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DulcisX.Core.VisualStudioInstance.html",
+          "hash": "krbJAhUIVktSQ2m8LkAC7w=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DulcisX.Core.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DulcisX.Core.html",
+          "hash": "k1dEKyVcYm9ukhPloGEXQA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DulcisX.Exceptions.InvalidHierarchyItemException.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DulcisX.Exceptions.InvalidHierarchyItemException.html",
+          "hash": "WqtlxgF8SsmJfjuSwA1PxA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DulcisX.Exceptions.NoFlagsAllowedException.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DulcisX.Exceptions.NoFlagsAllowedException.html",
+          "hash": "xwAAGExszgHX/0fJKza6kw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DulcisX.Exceptions.OperationNotSuccessfulException.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DulcisX.Exceptions.OperationNotSuccessfulException.html",
+          "hash": "WVxEchNjJmHgEsu9+574WA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DulcisX.Exceptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DulcisX.Exceptions.html",
+          "hash": "wrGNxEm31ynZBnzrNcRtbg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DulcisX.Helpers.ExtendedHierarchyUtilities.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DulcisX.Helpers.ExtendedHierarchyUtilities.html",
+          "hash": "Ahr3wc4qFU3hMLktljE/ow=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DulcisX.Helpers.VsConverter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DulcisX.Helpers.VsConverter.html",
+          "hash": "XZfTXCInnpUazHJ3NxiWmQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DulcisX.Helpers.VsHelper.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DulcisX.Helpers.VsHelper.html",
+          "hash": "BGtlPP8hMtwS0HoHCpYsyQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DulcisX.Helpers.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DulcisX.Helpers.html",
+          "hash": "cUlZQ/y3IbPIG7UL74LZpQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DulcisX.Nodes.AddedPhysicalNode-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DulcisX.Nodes.AddedPhysicalNode-2.html",
+          "hash": "ituo62g3bsjdVHy7Btr5gA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DulcisX.Nodes.BaseNode.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DulcisX.Nodes.BaseNode.html",
+          "hash": "kNQnUzA9KVo9CST9FkiMUg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DulcisX.Nodes.ChangedNodeBase-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DulcisX.Nodes.ChangedNodeBase-2.html",
+          "hash": "hALdN8CDALzpAmACts9f4A=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DulcisX.Nodes.ChangedPhysicalSccNode-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DulcisX.Nodes.ChangedPhysicalSccNode-2.html",
+          "hash": "gF/B1qsTnNp/VTUBMx6iOA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DulcisX.Nodes.DocumentNode.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DulcisX.Nodes.DocumentNode.html",
+          "hash": "jz0pHJUuAkbViC+IWni3LA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DulcisX.Nodes.Events.CancelTraslaterToken.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DulcisX.Nodes.Events.CancelTraslaterToken.html",
+          "hash": "3jUFbY2CJ4dJ3VsVqORW3Q=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DulcisX.Nodes.Events.EventDistributor-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DulcisX.Nodes.Events.EventDistributor-1.html",
+          "hash": "/q9nT04i/EWkW8HDzW4GTA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DulcisX.Nodes.Events.INodeSelectionEvents.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DulcisX.Nodes.Events.INodeSelectionEvents.html",
+          "hash": "AS7HjRj4RAIU2JAVe8gTFA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DulcisX.Nodes.Events.IOpenNodeEvents.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DulcisX.Nodes.Events.IOpenNodeEvents.html",
+          "hash": "+F/gapjNi8sCWkD8lg+6Kg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DulcisX.Nodes.Events.IProjectNodeChangeEvents.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DulcisX.Nodes.Events.IProjectNodeChangeEvents.html",
+          "hash": "9Bqkl+qNV8MSRtnuDrhfYQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DulcisX.Nodes.Events.ISolutionBuildEvents.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DulcisX.Nodes.Events.ISolutionBuildEvents.html",
+          "hash": "4XdDrf+qWx66mcz3DaH4qA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DulcisX.Nodes.Events.ISolutionEvents.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DulcisX.Nodes.Events.ISolutionEvents.html",
+          "hash": "Lq7PNzy3DTDJvCUZXSLBjQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DulcisX.Nodes.Events.ISolutionLoadEvents.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DulcisX.Nodes.Events.ISolutionLoadEvents.html",
+          "hash": "Hgbr6+uQxJ7LWf51tqggFQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DulcisX.Nodes.Events.NodeEventSink.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DulcisX.Nodes.Events.NodeEventSink.html",
+          "hash": "6Lgq0i6uSq+ne6wIjk4+MA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DulcisX.Nodes.Events.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DulcisX.Nodes.Events.html",
+          "hash": "7zmjHScuxRnShivHveM1+A=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DulcisX.Nodes.FolderNode.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DulcisX.Nodes.FolderNode.html",
+          "hash": "tMd/oo2toqXhhhCy1CjcCQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DulcisX.Nodes.IBaseNode.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DulcisX.Nodes.IBaseNode.html",
+          "hash": "hWe/SA5pGYHkAVXZWz3Wxw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DulcisX.Nodes.INamedNode.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DulcisX.Nodes.INamedNode.html",
+          "hash": "qpnXLLsnrWJ+XQy8rekUkw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DulcisX.Nodes.IPhysicalNode.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DulcisX.Nodes.IPhysicalNode.html",
+          "hash": "oWj1s79khtJXeFwis90e7A=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DulcisX.Nodes.ProjectItemNode.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DulcisX.Nodes.ProjectItemNode.html",
+          "hash": "43B3T5wJsLmnYvVKD4q/0w=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DulcisX.Nodes.ProjectNode.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DulcisX.Nodes.ProjectNode.html",
+          "hash": "hVY4DUzeqqh6oF+qq+TA0A=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DulcisX.Nodes.RemovedPhysicalNode-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DulcisX.Nodes.RemovedPhysicalNode-1.html",
+          "hash": "KJL08sGPhepBkVf7CmApkQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DulcisX.Nodes.RenamedPhysicalNode-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DulcisX.Nodes.RenamedPhysicalNode-2.html",
+          "hash": "71W7/8NWLpg2TVUtIuxXtQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DulcisX.Nodes.SelectedNodesCollection.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DulcisX.Nodes.SelectedNodesCollection.html",
+          "hash": "R3wKEEunXGvZbbSQjE5qkg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DulcisX.Nodes.SolutionFolderNode.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DulcisX.Nodes.SolutionFolderNode.html",
+          "hash": "NkCU/OJthO60MQnU3CSJfA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DulcisX.Nodes.SolutionItemNode.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DulcisX.Nodes.SolutionItemNode.html",
+          "hash": "A5+DCvBLFZ1OD7z0PbvFJQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DulcisX.Nodes.SolutionNode.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DulcisX.Nodes.SolutionNode.html",
+          "hash": "LypKvM3a0aU2K+ed7tOBeQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DulcisX.Nodes.UnknownNode.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DulcisX.Nodes.UnknownNode.html",
+          "hash": "CMPsrhEY5nKEFK7NeMZPPw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DulcisX.Nodes.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DulcisX.Nodes.html",
+          "hash": "7dMRk8NykepwkR+RdIso8g=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "api/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "api/index.html",
+          "hash": "WdpFxqUamICAS5pXu7BnHw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "api/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/toc.html",
+          "hash": "reikffhH+PU3Rrfx59M1Uw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/intro.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/intro.html",
+          "hash": "imAG/hbU/TYVkpFjdmYM4g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "articles/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "articles/toc.html",
+          "hash": "gB8AESyvNru97tzIZofEEg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "index.md",
+      "output": {
+        ".html": {
+          "relative_path": "index.html",
+          "hash": "anI21kDsx59epQx+ZsrPUg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "toc.html",
+          "hash": "G2AoE5T/2VarbHvzLEo4TQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    }
+  ],
+  "incremental_info": [
+    {
+      "status": {
+        "can_incremental": true,
+        "incrementalPhase": "build",
+        "total_file_count": 0,
+        "skipped_file_count": 0
+      },
+      "processors": {
+        "ConceptualDocumentProcessor": {
+          "can_incremental": true,
+          "incrementalPhase": "build",
+          "total_file_count": 3,
+          "skipped_file_count": 1
+        },
+        "ManagedReferenceDocumentProcessor": {
+          "can_incremental": true,
+          "incrementalPhase": "build",
+          "total_file_count": 75,
+          "skipped_file_count": 75
+        },
+        "TocDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "incrementalPhase": "build",
+          "total_file_count": 0,
+          "skipped_file_count": 0
+        }
+      }
+    },
+    {
+      "status": {
+        "can_incremental": true,
+        "details": "Can support incremental post processing.",
+        "incrementalPhase": "postProcessing",
+        "total_file_count": 0,
+        "skipped_file_count": 0
+      },
+      "processors": {}
+    }
+  ],
+  "version_info": {},
+  "groups": [
+    {
+      "xrefmap": "xrefmap.yml"
+    }
+  ]
+}

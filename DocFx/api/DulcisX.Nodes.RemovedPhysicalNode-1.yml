@@ -1,0 +1,523 @@
+### YamlMime:ManagedReference
+items:
+- uid: DulcisX.Nodes.RemovedPhysicalNode`1
+  commentId: T:DulcisX.Nodes.RemovedPhysicalNode`1
+  id: RemovedPhysicalNode`1
+  parent: DulcisX.Nodes
+  children:
+  - DulcisX.Nodes.RemovedPhysicalNode`1.Flag
+  - DulcisX.Nodes.RemovedPhysicalNode`1.FullName
+  - DulcisX.Nodes.RemovedPhysicalNode`1.ParentProject
+  langs:
+  - csharp
+  - vb
+  name: RemovedPhysicalNode<TFlag>
+  nameWithType: RemovedPhysicalNode<TFlag>
+  fullName: DulcisX.Nodes.RemovedPhysicalNode<TFlag>
+  type: Class
+  source:
+    remote:
+      path: src/DulcisX/DulcisX/Nodes/RemovedPhysicalNode.cs
+      branch: master
+      repo: https://github.com/TwentyFourMinutes/DulcisX.git
+    id: RemovedPhysicalNode
+    path: ../../DulcisX - master/src/DulcisX/DulcisX/Nodes/RemovedPhysicalNode.cs
+    startLine: 8
+  assemblies:
+  - DulcisX
+  namespace: DulcisX.Nodes
+  summary: "\nRepresents a removed <xref href=\"DulcisX.Nodes.IPhysicalNode\" data-throw-if-not-resolved=\"false\"></xref>.\n"
+  example: []
+  syntax:
+    content: >-
+      public class RemovedPhysicalNode<TFlag>
+
+          where TFlag : struct, Enum
+    typeParameters:
+    - id: TFlag
+      description: The enumeration which specifies what happend to the <xref href="DulcisX.Nodes.IPhysicalNode" data-throw-if-not-resolved="false"></xref>.
+    content.vb: Public Class RemovedPhysicalNode(Of TFlag As {Structure,  Enum})
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  nameWithType.vb: RemovedPhysicalNode(Of TFlag)
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+  fullName.vb: DulcisX.Nodes.RemovedPhysicalNode(Of TFlag)
+  name.vb: RemovedPhysicalNode(Of TFlag)
+- uid: DulcisX.Nodes.RemovedPhysicalNode`1.ParentProject
+  commentId: P:DulcisX.Nodes.RemovedPhysicalNode`1.ParentProject
+  id: ParentProject
+  parent: DulcisX.Nodes.RemovedPhysicalNode`1
+  langs:
+  - csharp
+  - vb
+  name: ParentProject
+  nameWithType: RemovedPhysicalNode<TFlag>.ParentProject
+  fullName: DulcisX.Nodes.RemovedPhysicalNode<TFlag>.ParentProject
+  type: Property
+  source:
+    remote:
+      path: src/DulcisX/DulcisX/Nodes/RemovedPhysicalNode.cs
+      branch: master
+      repo: https://github.com/TwentyFourMinutes/DulcisX.git
+    id: ParentProject
+    path: ../../DulcisX - master/src/DulcisX/DulcisX/Nodes/RemovedPhysicalNode.cs
+    startLine: 13
+  assemblies:
+  - DulcisX
+  namespace: DulcisX.Nodes
+  summary: "\nGets the project in which the <xref href=\"DulcisX.Nodes.IPhysicalNode\" data-throw-if-not-resolved=\"false\"></xref> was.\n"
+  example: []
+  syntax:
+    content: public ProjectNode ParentProject { get; }
+    parameters: []
+    return:
+      type: DulcisX.Nodes.ProjectNode
+    content.vb: Public ReadOnly Property ParentProject As ProjectNode
+  overload: DulcisX.Nodes.RemovedPhysicalNode`1.ParentProject*
+  nameWithType.vb: RemovedPhysicalNode(Of TFlag).ParentProject
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+  fullName.vb: DulcisX.Nodes.RemovedPhysicalNode(Of TFlag).ParentProject
+- uid: DulcisX.Nodes.RemovedPhysicalNode`1.FullName
+  commentId: P:DulcisX.Nodes.RemovedPhysicalNode`1.FullName
+  id: FullName
+  parent: DulcisX.Nodes.RemovedPhysicalNode`1
+  langs:
+  - csharp
+  - vb
+  name: FullName
+  nameWithType: RemovedPhysicalNode<TFlag>.FullName
+  fullName: DulcisX.Nodes.RemovedPhysicalNode<TFlag>.FullName
+  type: Property
+  source:
+    remote:
+      path: src/DulcisX/DulcisX/Nodes/RemovedPhysicalNode.cs
+      branch: master
+      repo: https://github.com/TwentyFourMinutes/DulcisX.git
+    id: FullName
+    path: ../../DulcisX - master/src/DulcisX/DulcisX/Nodes/RemovedPhysicalNode.cs
+    startLine: 18
+  assemblies:
+  - DulcisX
+  namespace: DulcisX.Nodes
+  summary: "\nGets a string which contains the full name of the removed <xref href=\"DulcisX.Nodes.IPhysicalNode\" data-throw-if-not-resolved=\"false\"></xref>.\n"
+  example: []
+  syntax:
+    content: public string FullName { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public ReadOnly Property FullName As String
+  overload: DulcisX.Nodes.RemovedPhysicalNode`1.FullName*
+  nameWithType.vb: RemovedPhysicalNode(Of TFlag).FullName
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+  fullName.vb: DulcisX.Nodes.RemovedPhysicalNode(Of TFlag).FullName
+- uid: DulcisX.Nodes.RemovedPhysicalNode`1.Flag
+  commentId: P:DulcisX.Nodes.RemovedPhysicalNode`1.Flag
+  id: Flag
+  parent: DulcisX.Nodes.RemovedPhysicalNode`1
+  langs:
+  - csharp
+  - vb
+  name: Flag
+  nameWithType: RemovedPhysicalNode<TFlag>.Flag
+  fullName: DulcisX.Nodes.RemovedPhysicalNode<TFlag>.Flag
+  type: Property
+  source:
+    remote:
+      path: src/DulcisX/DulcisX/Nodes/RemovedPhysicalNode.cs
+      branch: master
+      repo: https://github.com/TwentyFourMinutes/DulcisX.git
+    id: Flag
+    path: ../../DulcisX - master/src/DulcisX/DulcisX/Nodes/RemovedPhysicalNode.cs
+    startLine: 23
+  assemblies:
+  - DulcisX
+  namespace: DulcisX.Nodes
+  summary: "\nGets the enumeration which specifies what happend to the <xref href=\"DulcisX.Nodes.IPhysicalNode\" data-throw-if-not-resolved=\"false\"></xref>.\n"
+  example: []
+  syntax:
+    content: public TFlag Flag { get; }
+    parameters: []
+    return:
+      type: '{TFlag}'
+    content.vb: Public ReadOnly Property Flag As TFlag
+  overload: DulcisX.Nodes.RemovedPhysicalNode`1.Flag*
+  nameWithType.vb: RemovedPhysicalNode(Of TFlag).Flag
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+  fullName.vb: DulcisX.Nodes.RemovedPhysicalNode(Of TFlag).Flag
+references:
+- uid: DulcisX.Nodes.IPhysicalNode
+  commentId: T:DulcisX.Nodes.IPhysicalNode
+  parent: DulcisX.Nodes
+  name: IPhysicalNode
+  nameWithType: IPhysicalNode
+  fullName: DulcisX.Nodes.IPhysicalNode
+- uid: DulcisX.Nodes
+  commentId: N:DulcisX.Nodes
+  name: DulcisX.Nodes
+  nameWithType: DulcisX.Nodes
+  fullName: DulcisX.Nodes
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: DulcisX.Nodes.RemovedPhysicalNode`1.ParentProject*
+  commentId: Overload:DulcisX.Nodes.RemovedPhysicalNode`1.ParentProject
+  name: ParentProject
+  nameWithType: RemovedPhysicalNode<TFlag>.ParentProject
+  fullName: DulcisX.Nodes.RemovedPhysicalNode<TFlag>.ParentProject
+  nameWithType.vb: RemovedPhysicalNode(Of TFlag).ParentProject
+  fullName.vb: DulcisX.Nodes.RemovedPhysicalNode(Of TFlag).ParentProject
+- uid: DulcisX.Nodes.ProjectNode
+  commentId: T:DulcisX.Nodes.ProjectNode
+  parent: DulcisX.Nodes
+  name: ProjectNode
+  nameWithType: ProjectNode
+  fullName: DulcisX.Nodes.ProjectNode
+- uid: DulcisX.Nodes.RemovedPhysicalNode`1.FullName*
+  commentId: Overload:DulcisX.Nodes.RemovedPhysicalNode`1.FullName
+  name: FullName
+  nameWithType: RemovedPhysicalNode<TFlag>.FullName
+  fullName: DulcisX.Nodes.RemovedPhysicalNode<TFlag>.FullName
+  nameWithType.vb: RemovedPhysicalNode(Of TFlag).FullName
+  fullName.vb: DulcisX.Nodes.RemovedPhysicalNode(Of TFlag).FullName
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: DulcisX.Nodes.RemovedPhysicalNode`1.Flag*
+  commentId: Overload:DulcisX.Nodes.RemovedPhysicalNode`1.Flag
+  name: Flag
+  nameWithType: RemovedPhysicalNode<TFlag>.Flag
+  fullName: DulcisX.Nodes.RemovedPhysicalNode<TFlag>.Flag
+  nameWithType.vb: RemovedPhysicalNode(Of TFlag).Flag
+  fullName.vb: DulcisX.Nodes.RemovedPhysicalNode(Of TFlag).Flag
+- uid: '{TFlag}'
+  commentId: '!:TFlag'
+  definition: TFlag
+  name: TFlag
+  nameWithType: TFlag
+  fullName: TFlag
+- uid: TFlag
+  name: TFlag
+  nameWithType: TFlag
+  fullName: TFlag

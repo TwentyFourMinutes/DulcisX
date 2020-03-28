@@ -1,0 +1,152 @@
+### YamlMime:ManagedReference
+items:
+- uid: DulcisX.Core.Components
+  commentId: N:DulcisX.Core.Components
+  id: DulcisX.Core.Components
+  children:
+  - DulcisX.Core.Components.IBaseInfoMessageBuilder
+  - DulcisX.Core.Components.IButtonIdentifierInfoMessageBuilder
+  - DulcisX.Core.Components.IButtonIdentifierInfoMessageBuilder`1
+  - DulcisX.Core.Components.IButtonInfoMessageBuilder
+  - DulcisX.Core.Components.IContentInfoMessageBuilder
+  - DulcisX.Core.Components.IMoreContentInfoMessageBuilder
+  - DulcisX.Core.Components.InfoBar
+  - DulcisX.Core.Components.InfoBarHandle
+  - DulcisX.Core.Components.ResultInfoBarHandle`1
+  - DulcisX.Core.Components.WebBrowser
+  langs:
+  - csharp
+  - vb
+  name: DulcisX.Core.Components
+  nameWithType: DulcisX.Core.Components
+  fullName: DulcisX.Core.Components
+  type: Namespace
+  assemblies:
+  - DulcisX
+references:
+- uid: DulcisX.Core.Components.ResultInfoBarHandle`1
+  commentId: T:DulcisX.Core.Components.ResultInfoBarHandle`1
+  name: ResultInfoBarHandle<TIdentifier>
+  nameWithType: ResultInfoBarHandle<TIdentifier>
+  fullName: DulcisX.Core.Components.ResultInfoBarHandle<TIdentifier>
+  nameWithType.vb: ResultInfoBarHandle(Of TIdentifier)
+  fullName.vb: DulcisX.Core.Components.ResultInfoBarHandle(Of TIdentifier)
+  name.vb: ResultInfoBarHandle(Of TIdentifier)
+  spec.csharp:
+  - uid: DulcisX.Core.Components.ResultInfoBarHandle`1
+    name: ResultInfoBarHandle
+    nameWithType: ResultInfoBarHandle
+    fullName: DulcisX.Core.Components.ResultInfoBarHandle
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TIdentifier
+    nameWithType: TIdentifier
+    fullName: TIdentifier
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: DulcisX.Core.Components.ResultInfoBarHandle`1
+    name: ResultInfoBarHandle
+    nameWithType: ResultInfoBarHandle
+    fullName: DulcisX.Core.Components.ResultInfoBarHandle
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TIdentifier
+    nameWithType: TIdentifier
+    fullName: TIdentifier
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: DulcisX.Core.Components.IBaseInfoMessageBuilder
+  commentId: T:DulcisX.Core.Components.IBaseInfoMessageBuilder
+  parent: DulcisX.Core.Components
+  name: IBaseInfoMessageBuilder
+  nameWithType: IBaseInfoMessageBuilder
+  fullName: DulcisX.Core.Components.IBaseInfoMessageBuilder
+- uid: DulcisX.Core.Components.IContentInfoMessageBuilder
+  commentId: T:DulcisX.Core.Components.IContentInfoMessageBuilder
+  parent: DulcisX.Core.Components
+  name: IContentInfoMessageBuilder
+  nameWithType: IContentInfoMessageBuilder
+  fullName: DulcisX.Core.Components.IContentInfoMessageBuilder
+- uid: DulcisX.Core.Components.IButtonInfoMessageBuilder
+  commentId: T:DulcisX.Core.Components.IButtonInfoMessageBuilder
+  parent: DulcisX.Core.Components
+  name: IButtonInfoMessageBuilder
+  nameWithType: IButtonInfoMessageBuilder
+  fullName: DulcisX.Core.Components.IButtonInfoMessageBuilder
+- uid: DulcisX.Core.Components.IButtonIdentifierInfoMessageBuilder
+  commentId: T:DulcisX.Core.Components.IButtonIdentifierInfoMessageBuilder
+  parent: DulcisX.Core.Components
+  name: IButtonIdentifierInfoMessageBuilder
+  nameWithType: IButtonIdentifierInfoMessageBuilder
+  fullName: DulcisX.Core.Components.IButtonIdentifierInfoMessageBuilder
+- uid: DulcisX.Core.Components.IButtonIdentifierInfoMessageBuilder`1
+  commentId: T:DulcisX.Core.Components.IButtonIdentifierInfoMessageBuilder`1
+  parent: DulcisX.Core.Components
+  name: IButtonIdentifierInfoMessageBuilder<TIdentifier>
+  nameWithType: IButtonIdentifierInfoMessageBuilder<TIdentifier>
+  fullName: DulcisX.Core.Components.IButtonIdentifierInfoMessageBuilder<TIdentifier>
+  nameWithType.vb: IButtonIdentifierInfoMessageBuilder(Of TIdentifier)
+  fullName.vb: DulcisX.Core.Components.IButtonIdentifierInfoMessageBuilder(Of TIdentifier)
+  name.vb: IButtonIdentifierInfoMessageBuilder(Of TIdentifier)
+  spec.csharp:
+  - uid: DulcisX.Core.Components.IButtonIdentifierInfoMessageBuilder`1
+    name: IButtonIdentifierInfoMessageBuilder
+    nameWithType: IButtonIdentifierInfoMessageBuilder
+    fullName: DulcisX.Core.Components.IButtonIdentifierInfoMessageBuilder
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TIdentifier
+    nameWithType: TIdentifier
+    fullName: TIdentifier
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: DulcisX.Core.Components.IButtonIdentifierInfoMessageBuilder`1
+    name: IButtonIdentifierInfoMessageBuilder
+    nameWithType: IButtonIdentifierInfoMessageBuilder
+    fullName: DulcisX.Core.Components.IButtonIdentifierInfoMessageBuilder
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TIdentifier
+    nameWithType: TIdentifier
+    fullName: TIdentifier
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: DulcisX.Core.Components.IMoreContentInfoMessageBuilder
+  commentId: T:DulcisX.Core.Components.IMoreContentInfoMessageBuilder
+  parent: DulcisX.Core.Components
+  name: IMoreContentInfoMessageBuilder
+  nameWithType: IMoreContentInfoMessageBuilder
+  fullName: DulcisX.Core.Components.IMoreContentInfoMessageBuilder
+- uid: DulcisX.Core.Components.InfoBar
+  commentId: T:DulcisX.Core.Components.InfoBar
+  parent: DulcisX.Core.Components
+  name: InfoBar
+  nameWithType: InfoBar
+  fullName: DulcisX.Core.Components.InfoBar
+- uid: DulcisX.Core.Components.InfoBarHandle
+  commentId: T:DulcisX.Core.Components.InfoBarHandle
+  parent: DulcisX.Core.Components
+  name: InfoBarHandle
+  nameWithType: InfoBarHandle
+  fullName: DulcisX.Core.Components.InfoBarHandle
+- uid: DulcisX.Core.Components.WebBrowser
+  commentId: T:DulcisX.Core.Components.WebBrowser
+  parent: DulcisX.Core.Components
+  name: WebBrowser
+  nameWithType: WebBrowser
+  fullName: DulcisX.Core.Components.WebBrowser
+- uid: DulcisX.Core.Components
+  commentId: N:DulcisX.Core.Components
+  name: DulcisX.Core.Components
+  nameWithType: DulcisX.Core.Components
+  fullName: DulcisX.Core.Components

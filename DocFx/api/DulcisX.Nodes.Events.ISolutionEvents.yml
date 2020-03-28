@@ -1,0 +1,1294 @@
+### YamlMime:ManagedReference
+items:
+- uid: DulcisX.Nodes.Events.ISolutionEvents
+  commentId: T:DulcisX.Nodes.Events.ISolutionEvents
+  id: ISolutionEvents
+  parent: DulcisX.Nodes.Events
+  children:
+  - DulcisX.Nodes.Events.ISolutionEvents.OnProjectAdd
+  - DulcisX.Nodes.Events.ISolutionEvents.OnProjectClose
+  - DulcisX.Nodes.Events.ISolutionEvents.OnProjectLoaded
+  - DulcisX.Nodes.Events.ISolutionEvents.OnProjectOpened
+  - DulcisX.Nodes.Events.ISolutionEvents.OnProjectRemove
+  - DulcisX.Nodes.Events.ISolutionEvents.OnProjectRenamed
+  - DulcisX.Nodes.Events.ISolutionEvents.OnProjectUnload
+  - DulcisX.Nodes.Events.ISolutionEvents.OnQueryProjectClose
+  - DulcisX.Nodes.Events.ISolutionEvents.OnQueryProjectUnload
+  - DulcisX.Nodes.Events.ISolutionEvents.OnQuerySolutionClose
+  - DulcisX.Nodes.Events.ISolutionEvents.OnSolutionClose
+  - DulcisX.Nodes.Events.ISolutionEvents.OnSolutionClosed
+  - DulcisX.Nodes.Events.ISolutionEvents.OnSolutionOpened
+  - DulcisX.Nodes.Events.ISolutionEvents.OnSolutionRenamed
+  langs:
+  - csharp
+  - vb
+  name: ISolutionEvents
+  nameWithType: ISolutionEvents
+  fullName: DulcisX.Nodes.Events.ISolutionEvents
+  type: Interface
+  source:
+    remote:
+      path: src/DulcisX/DulcisX/Nodes/Events/ISolutionEvents.cs
+      branch: master
+      repo: https://github.com/TwentyFourMinutes/DulcisX.git
+    id: ISolutionEvents
+    path: ../../DulcisX - master/src/DulcisX/DulcisX/Nodes/Events/ISolutionEvents.cs
+    startLine: 7
+  assemblies:
+  - DulcisX
+  namespace: DulcisX.Nodes.Events
+  summary: "\nProvides generic events, which occur in a <xref href=\"DulcisX.Nodes.SolutionNode\" data-throw-if-not-resolved=\"false\"></xref>. Provided by the <xref href=\"Microsoft.VisualStudio.Shell.Interop.IVsSolutionEvents\" data-throw-if-not-resolved=\"false\"></xref> interface.\n"
+  example: []
+  syntax:
+    content: 'public interface ISolutionEvents : ISolutionLoadEvents'
+    content.vb: >-
+      Public Interface ISolutionEvents
+
+          Inherits ISolutionLoadEvents
+  inheritedMembers:
+  - DulcisX.Nodes.Events.ISolutionLoadEvents.OnBackgroundSolutionLoad
+  - DulcisX.Nodes.Events.ISolutionLoadEvents.OnBackgroundSolutionLoaded
+  modifiers.csharp:
+  - public
+  - interface
+  modifiers.vb:
+  - Public
+  - Interface
+- uid: DulcisX.Nodes.Events.ISolutionEvents.OnProjectOpened
+  commentId: P:DulcisX.Nodes.Events.ISolutionEvents.OnProjectOpened
+  id: OnProjectOpened
+  parent: DulcisX.Nodes.Events.ISolutionEvents
+  langs:
+  - csharp
+  - vb
+  name: OnProjectOpened
+  nameWithType: ISolutionEvents.OnProjectOpened
+  fullName: DulcisX.Nodes.Events.ISolutionEvents.OnProjectOpened
+  type: Property
+  source:
+    remote:
+      path: src/DulcisX/DulcisX/Nodes/Events/ISolutionEvents.cs
+      branch: master
+      repo: https://github.com/TwentyFourMinutes/DulcisX.git
+    id: OnProjectOpened
+    path: ../../DulcisX - master/src/DulcisX/DulcisX/Nodes/Events/ISolutionEvents.cs
+    startLine: 12
+  assemblies:
+  - DulcisX
+  namespace: DulcisX.Nodes.Events
+  summary: "\nOccurs when a <xref href=\"DulcisX.Nodes.ProjectNode\" data-throw-if-not-resolved=\"false\"></xref> gets opened in a <xref href=\"DulcisX.Nodes.SolutionNode\" data-throw-if-not-resolved=\"false\"></xref>. This either happens on Project reload or Project addition.\n"
+  example: []
+  syntax:
+    content: EventDistributor<Action<ProjectNode, bool>> OnProjectOpened { get; }
+    parameters: []
+    return:
+      type: DulcisX.Nodes.Events.EventDistributor{System.Action{DulcisX.Nodes.ProjectNode,System.Boolean}}
+    content.vb: ReadOnly Property OnProjectOpened As EventDistributor(Of Action(Of ProjectNode, Boolean))
+  overload: DulcisX.Nodes.Events.ISolutionEvents.OnProjectOpened*
+  modifiers.csharp:
+  - get
+  modifiers.vb:
+  - ReadOnly
+- uid: DulcisX.Nodes.Events.ISolutionEvents.OnQueryProjectClose
+  commentId: P:DulcisX.Nodes.Events.ISolutionEvents.OnQueryProjectClose
+  id: OnQueryProjectClose
+  parent: DulcisX.Nodes.Events.ISolutionEvents
+  langs:
+  - csharp
+  - vb
+  name: OnQueryProjectClose
+  nameWithType: ISolutionEvents.OnQueryProjectClose
+  fullName: DulcisX.Nodes.Events.ISolutionEvents.OnQueryProjectClose
+  type: Property
+  source:
+    remote:
+      path: src/DulcisX/DulcisX/Nodes/Events/ISolutionEvents.cs
+      branch: master
+      repo: https://github.com/TwentyFourMinutes/DulcisX.git
+    id: OnQueryProjectClose
+    path: ../../DulcisX - master/src/DulcisX/DulcisX/Nodes/Events/ISolutionEvents.cs
+    startLine: 17
+  assemblies:
+  - DulcisX
+  namespace: DulcisX.Nodes.Events
+  summary: "\nOccurs when someone asks to close a <xref href=\"DulcisX.Nodes.ProjectNode\" data-throw-if-not-resolved=\"false\"></xref>.\n"
+  example: []
+  syntax:
+    content: EventDistributor<Action<ProjectNode, bool, CancelTraslaterToken>> OnQueryProjectClose { get; }
+    parameters: []
+    return:
+      type: DulcisX.Nodes.Events.EventDistributor{System.Action{DulcisX.Nodes.ProjectNode,System.Boolean,DulcisX.Nodes.Events.CancelTraslaterToken}}
+    content.vb: ReadOnly Property OnQueryProjectClose As EventDistributor(Of Action(Of ProjectNode, Boolean, CancelTraslaterToken))
+  overload: DulcisX.Nodes.Events.ISolutionEvents.OnQueryProjectClose*
+  modifiers.csharp:
+  - get
+  modifiers.vb:
+  - ReadOnly
+- uid: DulcisX.Nodes.Events.ISolutionEvents.OnProjectClose
+  commentId: P:DulcisX.Nodes.Events.ISolutionEvents.OnProjectClose
+  id: OnProjectClose
+  parent: DulcisX.Nodes.Events.ISolutionEvents
+  langs:
+  - csharp
+  - vb
+  name: OnProjectClose
+  nameWithType: ISolutionEvents.OnProjectClose
+  fullName: DulcisX.Nodes.Events.ISolutionEvents.OnProjectClose
+  type: Property
+  source:
+    remote:
+      path: src/DulcisX/DulcisX/Nodes/Events/ISolutionEvents.cs
+      branch: master
+      repo: https://github.com/TwentyFourMinutes/DulcisX.git
+    id: OnProjectClose
+    path: ../../DulcisX - master/src/DulcisX/DulcisX/Nodes/Events/ISolutionEvents.cs
+    startLine: 22
+  assemblies:
+  - DulcisX
+  namespace: DulcisX.Nodes.Events
+  summary: "\nOccurs when a <xref href=\"DulcisX.Nodes.ProjectNode\" data-throw-if-not-resolved=\"false\"></xref> gets closed in a <xref href=\"DulcisX.Nodes.SolutionNode\" data-throw-if-not-resolved=\"false\"></xref>. This either happens on Project unload or Project removal.\n"
+  example: []
+  syntax:
+    content: EventDistributor<Action<ProjectNode, bool>> OnProjectClose { get; }
+    parameters: []
+    return:
+      type: DulcisX.Nodes.Events.EventDistributor{System.Action{DulcisX.Nodes.ProjectNode,System.Boolean}}
+    content.vb: ReadOnly Property OnProjectClose As EventDistributor(Of Action(Of ProjectNode, Boolean))
+  overload: DulcisX.Nodes.Events.ISolutionEvents.OnProjectClose*
+  modifiers.csharp:
+  - get
+  modifiers.vb:
+  - ReadOnly
+- uid: DulcisX.Nodes.Events.ISolutionEvents.OnProjectLoaded
+  commentId: P:DulcisX.Nodes.Events.ISolutionEvents.OnProjectLoaded
+  id: OnProjectLoaded
+  parent: DulcisX.Nodes.Events.ISolutionEvents
+  langs:
+  - csharp
+  - vb
+  name: OnProjectLoaded
+  nameWithType: ISolutionEvents.OnProjectLoaded
+  fullName: DulcisX.Nodes.Events.ISolutionEvents.OnProjectLoaded
+  type: Property
+  source:
+    remote:
+      path: src/DulcisX/DulcisX/Nodes/Events/ISolutionEvents.cs
+      branch: master
+      repo: https://github.com/TwentyFourMinutes/DulcisX.git
+    id: OnProjectLoaded
+    path: ../../DulcisX - master/src/DulcisX/DulcisX/Nodes/Events/ISolutionEvents.cs
+    startLine: 27
+  assemblies:
+  - DulcisX
+  namespace: DulcisX.Nodes.Events
+  summary: "\nOccurs when a <xref href=\"DulcisX.Nodes.ProjectNode\" data-throw-if-not-resolved=\"false\"></xref> got loaded.\n"
+  example: []
+  syntax:
+    content: EventDistributor<Action<ProjectNode, ProjectNode>> OnProjectLoaded { get; }
+    parameters: []
+    return:
+      type: DulcisX.Nodes.Events.EventDistributor{System.Action{DulcisX.Nodes.ProjectNode,DulcisX.Nodes.ProjectNode}}
+    content.vb: ReadOnly Property OnProjectLoaded As EventDistributor(Of Action(Of ProjectNode, ProjectNode))
+  overload: DulcisX.Nodes.Events.ISolutionEvents.OnProjectLoaded*
+  modifiers.csharp:
+  - get
+  modifiers.vb:
+  - ReadOnly
+- uid: DulcisX.Nodes.Events.ISolutionEvents.OnQueryProjectUnload
+  commentId: P:DulcisX.Nodes.Events.ISolutionEvents.OnQueryProjectUnload
+  id: OnQueryProjectUnload
+  parent: DulcisX.Nodes.Events.ISolutionEvents
+  langs:
+  - csharp
+  - vb
+  name: OnQueryProjectUnload
+  nameWithType: ISolutionEvents.OnQueryProjectUnload
+  fullName: DulcisX.Nodes.Events.ISolutionEvents.OnQueryProjectUnload
+  type: Property
+  source:
+    remote:
+      path: src/DulcisX/DulcisX/Nodes/Events/ISolutionEvents.cs
+      branch: master
+      repo: https://github.com/TwentyFourMinutes/DulcisX.git
+    id: OnQueryProjectUnload
+    path: ../../DulcisX - master/src/DulcisX/DulcisX/Nodes/Events/ISolutionEvents.cs
+    startLine: 32
+  assemblies:
+  - DulcisX
+  namespace: DulcisX.Nodes.Events
+  summary: "\nOccurs when someone asks to unload a <xref href=\"DulcisX.Nodes.ProjectNode\" data-throw-if-not-resolved=\"false\"></xref>.\n"
+  example: []
+  syntax:
+    content: EventDistributor<Action<ProjectNode, CancelTraslaterToken>> OnQueryProjectUnload { get; }
+    parameters: []
+    return:
+      type: DulcisX.Nodes.Events.EventDistributor{System.Action{DulcisX.Nodes.ProjectNode,DulcisX.Nodes.Events.CancelTraslaterToken}}
+    content.vb: ReadOnly Property OnQueryProjectUnload As EventDistributor(Of Action(Of ProjectNode, CancelTraslaterToken))
+  overload: DulcisX.Nodes.Events.ISolutionEvents.OnQueryProjectUnload*
+  modifiers.csharp:
+  - get
+  modifiers.vb:
+  - ReadOnly
+- uid: DulcisX.Nodes.Events.ISolutionEvents.OnProjectUnload
+  commentId: P:DulcisX.Nodes.Events.ISolutionEvents.OnProjectUnload
+  id: OnProjectUnload
+  parent: DulcisX.Nodes.Events.ISolutionEvents
+  langs:
+  - csharp
+  - vb
+  name: OnProjectUnload
+  nameWithType: ISolutionEvents.OnProjectUnload
+  fullName: DulcisX.Nodes.Events.ISolutionEvents.OnProjectUnload
+  type: Property
+  source:
+    remote:
+      path: src/DulcisX/DulcisX/Nodes/Events/ISolutionEvents.cs
+      branch: master
+      repo: https://github.com/TwentyFourMinutes/DulcisX.git
+    id: OnProjectUnload
+    path: ../../DulcisX - master/src/DulcisX/DulcisX/Nodes/Events/ISolutionEvents.cs
+    startLine: 37
+  assemblies:
+  - DulcisX
+  namespace: DulcisX.Nodes.Events
+  summary: "\nOccurs when a <xref href=\"DulcisX.Nodes.ProjectNode\" data-throw-if-not-resolved=\"false\"></xref> got unloaded.\n"
+  example: []
+  syntax:
+    content: EventDistributor<Action<ProjectNode, ProjectNode>> OnProjectUnload { get; }
+    parameters: []
+    return:
+      type: DulcisX.Nodes.Events.EventDistributor{System.Action{DulcisX.Nodes.ProjectNode,DulcisX.Nodes.ProjectNode}}
+    content.vb: ReadOnly Property OnProjectUnload As EventDistributor(Of Action(Of ProjectNode, ProjectNode))
+  overload: DulcisX.Nodes.Events.ISolutionEvents.OnProjectUnload*
+  modifiers.csharp:
+  - get
+  modifiers.vb:
+  - ReadOnly
+- uid: DulcisX.Nodes.Events.ISolutionEvents.OnProjectRenamed
+  commentId: P:DulcisX.Nodes.Events.ISolutionEvents.OnProjectRenamed
+  id: OnProjectRenamed
+  parent: DulcisX.Nodes.Events.ISolutionEvents
+  langs:
+  - csharp
+  - vb
+  name: OnProjectRenamed
+  nameWithType: ISolutionEvents.OnProjectRenamed
+  fullName: DulcisX.Nodes.Events.ISolutionEvents.OnProjectRenamed
+  type: Property
+  source:
+    remote:
+      path: src/DulcisX/DulcisX/Nodes/Events/ISolutionEvents.cs
+      branch: master
+      repo: https://github.com/TwentyFourMinutes/DulcisX.git
+    id: OnProjectRenamed
+    path: ../../DulcisX - master/src/DulcisX/DulcisX/Nodes/Events/ISolutionEvents.cs
+    startLine: 42
+  assemblies:
+  - DulcisX
+  namespace: DulcisX.Nodes.Events
+  summary: "\nOccurs when a <xref href=\"DulcisX.Nodes.ProjectNode\" data-throw-if-not-resolved=\"false\"></xref> got renamed.\n"
+  example: []
+  syntax:
+    content: EventDistributor<Action<ProjectNode>> OnProjectRenamed { get; }
+    parameters: []
+    return:
+      type: DulcisX.Nodes.Events.EventDistributor{System.Action{DulcisX.Nodes.ProjectNode}}
+    content.vb: ReadOnly Property OnProjectRenamed As EventDistributor(Of Action(Of ProjectNode))
+  overload: DulcisX.Nodes.Events.ISolutionEvents.OnProjectRenamed*
+  modifiers.csharp:
+  - get
+  modifiers.vb:
+  - ReadOnly
+- uid: DulcisX.Nodes.Events.ISolutionEvents.OnProjectAdd
+  commentId: E:DulcisX.Nodes.Events.ISolutionEvents.OnProjectAdd
+  id: OnProjectAdd
+  parent: DulcisX.Nodes.Events.ISolutionEvents
+  langs:
+  - csharp
+  - vb
+  name: OnProjectAdd
+  nameWithType: ISolutionEvents.OnProjectAdd
+  fullName: DulcisX.Nodes.Events.ISolutionEvents.OnProjectAdd
+  type: Event
+  source:
+    remote:
+      path: src/DulcisX/DulcisX/Nodes/Events/ISolutionEvents.cs
+      branch: master
+      repo: https://github.com/TwentyFourMinutes/DulcisX.git
+    id: OnProjectAdd
+    path: ../../DulcisX - master/src/DulcisX/DulcisX/Nodes/Events/ISolutionEvents.cs
+    startLine: 47
+  assemblies:
+  - DulcisX
+  namespace: DulcisX.Nodes.Events
+  summary: "\nOccurs when a <xref href=\"DulcisX.Nodes.ProjectNode\" data-throw-if-not-resolved=\"false\"></xref> got added to the <xref href=\"DulcisX.Nodes.SolutionNode\" data-throw-if-not-resolved=\"false\"></xref>.\n"
+  example: []
+  syntax:
+    content: event Action<ProjectNode> OnProjectAdd
+    return:
+      type: System.Action{DulcisX.Nodes.ProjectNode}
+    content.vb: Event OnProjectAdd As Action(Of ProjectNode)
+- uid: DulcisX.Nodes.Events.ISolutionEvents.OnProjectRemove
+  commentId: E:DulcisX.Nodes.Events.ISolutionEvents.OnProjectRemove
+  id: OnProjectRemove
+  parent: DulcisX.Nodes.Events.ISolutionEvents
+  langs:
+  - csharp
+  - vb
+  name: OnProjectRemove
+  nameWithType: ISolutionEvents.OnProjectRemove
+  fullName: DulcisX.Nodes.Events.ISolutionEvents.OnProjectRemove
+  type: Event
+  source:
+    remote:
+      path: src/DulcisX/DulcisX/Nodes/Events/ISolutionEvents.cs
+      branch: master
+      repo: https://github.com/TwentyFourMinutes/DulcisX.git
+    id: OnProjectRemove
+    path: ../../DulcisX - master/src/DulcisX/DulcisX/Nodes/Events/ISolutionEvents.cs
+    startLine: 52
+  assemblies:
+  - DulcisX
+  namespace: DulcisX.Nodes.Events
+  summary: "\nOccurs when a <xref href=\"DulcisX.Nodes.ProjectNode\" data-throw-if-not-resolved=\"false\"></xref> got removed to the <xref href=\"DulcisX.Nodes.SolutionNode\" data-throw-if-not-resolved=\"false\"></xref>.\n"
+  example: []
+  syntax:
+    content: event Action<ProjectNode> OnProjectRemove
+    return:
+      type: System.Action{DulcisX.Nodes.ProjectNode}
+    content.vb: Event OnProjectRemove As Action(Of ProjectNode)
+- uid: DulcisX.Nodes.Events.ISolutionEvents.OnSolutionOpened
+  commentId: E:DulcisX.Nodes.Events.ISolutionEvents.OnSolutionOpened
+  id: OnSolutionOpened
+  parent: DulcisX.Nodes.Events.ISolutionEvents
+  langs:
+  - csharp
+  - vb
+  name: OnSolutionOpened
+  nameWithType: ISolutionEvents.OnSolutionOpened
+  fullName: DulcisX.Nodes.Events.ISolutionEvents.OnSolutionOpened
+  type: Event
+  source:
+    remote:
+      path: src/DulcisX/DulcisX/Nodes/Events/ISolutionEvents.cs
+      branch: master
+      repo: https://github.com/TwentyFourMinutes/DulcisX.git
+    id: OnSolutionOpened
+    path: ../../DulcisX - master/src/DulcisX/DulcisX/Nodes/Events/ISolutionEvents.cs
+    startLine: 57
+  assemblies:
+  - DulcisX
+  namespace: DulcisX.Nodes.Events
+  summary: "\nOccurs when a the Solution opened.\n"
+  example: []
+  syntax:
+    content: event Action<bool> OnSolutionOpened
+    return:
+      type: System.Action{System.Boolean}
+    content.vb: Event OnSolutionOpened As Action(Of Boolean)
+- uid: DulcisX.Nodes.Events.ISolutionEvents.OnQuerySolutionClose
+  commentId: E:DulcisX.Nodes.Events.ISolutionEvents.OnQuerySolutionClose
+  id: OnQuerySolutionClose
+  parent: DulcisX.Nodes.Events.ISolutionEvents
+  langs:
+  - csharp
+  - vb
+  name: OnQuerySolutionClose
+  nameWithType: ISolutionEvents.OnQuerySolutionClose
+  fullName: DulcisX.Nodes.Events.ISolutionEvents.OnQuerySolutionClose
+  type: Event
+  source:
+    remote:
+      path: src/DulcisX/DulcisX/Nodes/Events/ISolutionEvents.cs
+      branch: master
+      repo: https://github.com/TwentyFourMinutes/DulcisX.git
+    id: OnQuerySolutionClose
+    path: ../../DulcisX - master/src/DulcisX/DulcisX/Nodes/Events/ISolutionEvents.cs
+    startLine: 62
+  assemblies:
+  - DulcisX
+  namespace: DulcisX.Nodes.Events
+  summary: "\nOccurs when someone asks to close the Solution.\n"
+  example: []
+  syntax:
+    content: event Action<CancelTraslaterToken> OnQuerySolutionClose
+    return:
+      type: System.Action{DulcisX.Nodes.Events.CancelTraslaterToken}
+    content.vb: Event OnQuerySolutionClose As Action(Of CancelTraslaterToken)
+- uid: DulcisX.Nodes.Events.ISolutionEvents.OnSolutionClose
+  commentId: E:DulcisX.Nodes.Events.ISolutionEvents.OnSolutionClose
+  id: OnSolutionClose
+  parent: DulcisX.Nodes.Events.ISolutionEvents
+  langs:
+  - csharp
+  - vb
+  name: OnSolutionClose
+  nameWithType: ISolutionEvents.OnSolutionClose
+  fullName: DulcisX.Nodes.Events.ISolutionEvents.OnSolutionClose
+  type: Event
+  source:
+    remote:
+      path: src/DulcisX/DulcisX/Nodes/Events/ISolutionEvents.cs
+      branch: master
+      repo: https://github.com/TwentyFourMinutes/DulcisX.git
+    id: OnSolutionClose
+    path: ../../DulcisX - master/src/DulcisX/DulcisX/Nodes/Events/ISolutionEvents.cs
+    startLine: 67
+  assemblies:
+  - DulcisX
+  namespace: DulcisX.Nodes.Events
+  summary: "\nOccurs when before the Solution closes.\n"
+  example: []
+  syntax:
+    content: event Action OnSolutionClose
+    return:
+      type: System.Action
+    content.vb: Event OnSolutionClose As Action
+- uid: DulcisX.Nodes.Events.ISolutionEvents.OnSolutionClosed
+  commentId: E:DulcisX.Nodes.Events.ISolutionEvents.OnSolutionClosed
+  id: OnSolutionClosed
+  parent: DulcisX.Nodes.Events.ISolutionEvents
+  langs:
+  - csharp
+  - vb
+  name: OnSolutionClosed
+  nameWithType: ISolutionEvents.OnSolutionClosed
+  fullName: DulcisX.Nodes.Events.ISolutionEvents.OnSolutionClosed
+  type: Event
+  source:
+    remote:
+      path: src/DulcisX/DulcisX/Nodes/Events/ISolutionEvents.cs
+      branch: master
+      repo: https://github.com/TwentyFourMinutes/DulcisX.git
+    id: OnSolutionClosed
+    path: ../../DulcisX - master/src/DulcisX/DulcisX/Nodes/Events/ISolutionEvents.cs
+    startLine: 72
+  assemblies:
+  - DulcisX
+  namespace: DulcisX.Nodes.Events
+  summary: "\nOccurs when the Solution closed.\n"
+  example: []
+  syntax:
+    content: event Action OnSolutionClosed
+    return:
+      type: System.Action
+    content.vb: Event OnSolutionClosed As Action
+- uid: DulcisX.Nodes.Events.ISolutionEvents.OnSolutionRenamed
+  commentId: E:DulcisX.Nodes.Events.ISolutionEvents.OnSolutionRenamed
+  id: OnSolutionRenamed
+  parent: DulcisX.Nodes.Events.ISolutionEvents
+  langs:
+  - csharp
+  - vb
+  name: OnSolutionRenamed
+  nameWithType: ISolutionEvents.OnSolutionRenamed
+  fullName: DulcisX.Nodes.Events.ISolutionEvents.OnSolutionRenamed
+  type: Event
+  source:
+    remote:
+      path: src/DulcisX/DulcisX/Nodes/Events/ISolutionEvents.cs
+      branch: master
+      repo: https://github.com/TwentyFourMinutes/DulcisX.git
+    id: OnSolutionRenamed
+    path: ../../DulcisX - master/src/DulcisX/DulcisX/Nodes/Events/ISolutionEvents.cs
+    startLine: 77
+  assemblies:
+  - DulcisX
+  namespace: DulcisX.Nodes.Events
+  summary: "\nOccurs when the Solution got renamed.\n"
+  example: []
+  syntax:
+    content: event Action<string, string> OnSolutionRenamed
+    return:
+      type: System.Action{System.String,System.String}
+    content.vb: Event OnSolutionRenamed As Action(Of String, String)
+references:
+- uid: DulcisX.Nodes.SolutionNode
+  commentId: T:DulcisX.Nodes.SolutionNode
+  parent: DulcisX.Nodes
+  name: SolutionNode
+  nameWithType: SolutionNode
+  fullName: DulcisX.Nodes.SolutionNode
+- uid: Microsoft.VisualStudio.Shell.Interop.IVsSolutionEvents
+  commentId: T:Microsoft.VisualStudio.Shell.Interop.IVsSolutionEvents
+  isExternal: true
+- uid: DulcisX.Nodes.Events
+  commentId: N:DulcisX.Nodes.Events
+  name: DulcisX.Nodes.Events
+  nameWithType: DulcisX.Nodes.Events
+  fullName: DulcisX.Nodes.Events
+- uid: DulcisX.Nodes.Events.ISolutionLoadEvents.OnBackgroundSolutionLoad
+  commentId: E:DulcisX.Nodes.Events.ISolutionLoadEvents.OnBackgroundSolutionLoad
+  parent: DulcisX.Nodes.Events.ISolutionLoadEvents
+  name: OnBackgroundSolutionLoad
+  nameWithType: ISolutionLoadEvents.OnBackgroundSolutionLoad
+  fullName: DulcisX.Nodes.Events.ISolutionLoadEvents.OnBackgroundSolutionLoad
+- uid: DulcisX.Nodes.Events.ISolutionLoadEvents.OnBackgroundSolutionLoaded
+  commentId: E:DulcisX.Nodes.Events.ISolutionLoadEvents.OnBackgroundSolutionLoaded
+  parent: DulcisX.Nodes.Events.ISolutionLoadEvents
+  name: OnBackgroundSolutionLoaded
+  nameWithType: ISolutionLoadEvents.OnBackgroundSolutionLoaded
+  fullName: DulcisX.Nodes.Events.ISolutionLoadEvents.OnBackgroundSolutionLoaded
+- uid: DulcisX.Nodes
+  commentId: N:DulcisX.Nodes
+  name: DulcisX.Nodes
+  nameWithType: DulcisX.Nodes
+  fullName: DulcisX.Nodes
+- uid: DulcisX.Nodes.Events.ISolutionLoadEvents
+  commentId: T:DulcisX.Nodes.Events.ISolutionLoadEvents
+  parent: DulcisX.Nodes.Events
+  name: ISolutionLoadEvents
+  nameWithType: ISolutionLoadEvents
+  fullName: DulcisX.Nodes.Events.ISolutionLoadEvents
+- uid: DulcisX.Nodes.ProjectNode
+  commentId: T:DulcisX.Nodes.ProjectNode
+  parent: DulcisX.Nodes
+  name: ProjectNode
+  nameWithType: ProjectNode
+  fullName: DulcisX.Nodes.ProjectNode
+- uid: DulcisX.Nodes.Events.ISolutionEvents.OnProjectOpened*
+  commentId: Overload:DulcisX.Nodes.Events.ISolutionEvents.OnProjectOpened
+  name: OnProjectOpened
+  nameWithType: ISolutionEvents.OnProjectOpened
+  fullName: DulcisX.Nodes.Events.ISolutionEvents.OnProjectOpened
+- uid: DulcisX.Nodes.Events.EventDistributor{System.Action{DulcisX.Nodes.ProjectNode,System.Boolean}}
+  commentId: T:DulcisX.Nodes.Events.EventDistributor{System.Action{DulcisX.Nodes.ProjectNode,System.Boolean}}
+  parent: DulcisX.Nodes.Events
+  definition: DulcisX.Nodes.Events.EventDistributor`1
+  name: EventDistributor<Action<ProjectNode, Boolean>>
+  nameWithType: EventDistributor<Action<ProjectNode, Boolean>>
+  fullName: DulcisX.Nodes.Events.EventDistributor<System.Action<DulcisX.Nodes.ProjectNode, System.Boolean>>
+  nameWithType.vb: EventDistributor(Of Action(Of ProjectNode, Boolean))
+  fullName.vb: DulcisX.Nodes.Events.EventDistributor(Of System.Action(Of DulcisX.Nodes.ProjectNode, System.Boolean))
+  name.vb: EventDistributor(Of Action(Of ProjectNode, Boolean))
+  spec.csharp:
+  - uid: DulcisX.Nodes.Events.EventDistributor`1
+    name: EventDistributor
+    nameWithType: EventDistributor
+    fullName: DulcisX.Nodes.Events.EventDistributor
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.Action`2
+    name: Action
+    nameWithType: Action
+    fullName: System.Action
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: DulcisX.Nodes.ProjectNode
+    name: ProjectNode
+    nameWithType: ProjectNode
+    fullName: DulcisX.Nodes.ProjectNode
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Boolean
+    name: Boolean
+    nameWithType: Boolean
+    fullName: System.Boolean
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: DulcisX.Nodes.Events.EventDistributor`1
+    name: EventDistributor
+    nameWithType: EventDistributor
+    fullName: DulcisX.Nodes.Events.EventDistributor
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.Action`2
+    name: Action
+    nameWithType: Action
+    fullName: System.Action
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: DulcisX.Nodes.ProjectNode
+    name: ProjectNode
+    nameWithType: ProjectNode
+    fullName: DulcisX.Nodes.ProjectNode
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Boolean
+    name: Boolean
+    nameWithType: Boolean
+    fullName: System.Boolean
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: DulcisX.Nodes.Events.EventDistributor`1
+  commentId: T:DulcisX.Nodes.Events.EventDistributor`1
+  name: EventDistributor<TDelegate>
+  nameWithType: EventDistributor<TDelegate>
+  fullName: DulcisX.Nodes.Events.EventDistributor<TDelegate>
+  nameWithType.vb: EventDistributor(Of TDelegate)
+  fullName.vb: DulcisX.Nodes.Events.EventDistributor(Of TDelegate)
+  name.vb: EventDistributor(Of TDelegate)
+  spec.csharp:
+  - uid: DulcisX.Nodes.Events.EventDistributor`1
+    name: EventDistributor
+    nameWithType: EventDistributor
+    fullName: DulcisX.Nodes.Events.EventDistributor
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TDelegate
+    nameWithType: TDelegate
+    fullName: TDelegate
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: DulcisX.Nodes.Events.EventDistributor`1
+    name: EventDistributor
+    nameWithType: EventDistributor
+    fullName: DulcisX.Nodes.Events.EventDistributor
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TDelegate
+    nameWithType: TDelegate
+    fullName: TDelegate
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: DulcisX.Nodes.Events.ISolutionEvents.OnQueryProjectClose*
+  commentId: Overload:DulcisX.Nodes.Events.ISolutionEvents.OnQueryProjectClose
+  name: OnQueryProjectClose
+  nameWithType: ISolutionEvents.OnQueryProjectClose
+  fullName: DulcisX.Nodes.Events.ISolutionEvents.OnQueryProjectClose
+- uid: DulcisX.Nodes.Events.EventDistributor{System.Action{DulcisX.Nodes.ProjectNode,System.Boolean,DulcisX.Nodes.Events.CancelTraslaterToken}}
+  commentId: T:DulcisX.Nodes.Events.EventDistributor{System.Action{DulcisX.Nodes.ProjectNode,System.Boolean,DulcisX.Nodes.Events.CancelTraslaterToken}}
+  parent: DulcisX.Nodes.Events
+  definition: DulcisX.Nodes.Events.EventDistributor`1
+  name: EventDistributor<Action<ProjectNode, Boolean, CancelTraslaterToken>>
+  nameWithType: EventDistributor<Action<ProjectNode, Boolean, CancelTraslaterToken>>
+  fullName: DulcisX.Nodes.Events.EventDistributor<System.Action<DulcisX.Nodes.ProjectNode, System.Boolean, DulcisX.Nodes.Events.CancelTraslaterToken>>
+  nameWithType.vb: EventDistributor(Of Action(Of ProjectNode, Boolean, CancelTraslaterToken))
+  fullName.vb: DulcisX.Nodes.Events.EventDistributor(Of System.Action(Of DulcisX.Nodes.ProjectNode, System.Boolean, DulcisX.Nodes.Events.CancelTraslaterToken))
+  name.vb: EventDistributor(Of Action(Of ProjectNode, Boolean, CancelTraslaterToken))
+  spec.csharp:
+  - uid: DulcisX.Nodes.Events.EventDistributor`1
+    name: EventDistributor
+    nameWithType: EventDistributor
+    fullName: DulcisX.Nodes.Events.EventDistributor
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.Action`3
+    name: Action
+    nameWithType: Action
+    fullName: System.Action
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: DulcisX.Nodes.ProjectNode
+    name: ProjectNode
+    nameWithType: ProjectNode
+    fullName: DulcisX.Nodes.ProjectNode
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Boolean
+    name: Boolean
+    nameWithType: Boolean
+    fullName: System.Boolean
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: DulcisX.Nodes.Events.CancelTraslaterToken
+    name: CancelTraslaterToken
+    nameWithType: CancelTraslaterToken
+    fullName: DulcisX.Nodes.Events.CancelTraslaterToken
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: DulcisX.Nodes.Events.EventDistributor`1
+    name: EventDistributor
+    nameWithType: EventDistributor
+    fullName: DulcisX.Nodes.Events.EventDistributor
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.Action`3
+    name: Action
+    nameWithType: Action
+    fullName: System.Action
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: DulcisX.Nodes.ProjectNode
+    name: ProjectNode
+    nameWithType: ProjectNode
+    fullName: DulcisX.Nodes.ProjectNode
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Boolean
+    name: Boolean
+    nameWithType: Boolean
+    fullName: System.Boolean
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: DulcisX.Nodes.Events.CancelTraslaterToken
+    name: CancelTraslaterToken
+    nameWithType: CancelTraslaterToken
+    fullName: DulcisX.Nodes.Events.CancelTraslaterToken
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: DulcisX.Nodes.Events.ISolutionEvents.OnProjectClose*
+  commentId: Overload:DulcisX.Nodes.Events.ISolutionEvents.OnProjectClose
+  name: OnProjectClose
+  nameWithType: ISolutionEvents.OnProjectClose
+  fullName: DulcisX.Nodes.Events.ISolutionEvents.OnProjectClose
+- uid: DulcisX.Nodes.Events.ISolutionEvents.OnProjectLoaded*
+  commentId: Overload:DulcisX.Nodes.Events.ISolutionEvents.OnProjectLoaded
+  name: OnProjectLoaded
+  nameWithType: ISolutionEvents.OnProjectLoaded
+  fullName: DulcisX.Nodes.Events.ISolutionEvents.OnProjectLoaded
+- uid: DulcisX.Nodes.Events.EventDistributor{System.Action{DulcisX.Nodes.ProjectNode,DulcisX.Nodes.ProjectNode}}
+  commentId: T:DulcisX.Nodes.Events.EventDistributor{System.Action{DulcisX.Nodes.ProjectNode,DulcisX.Nodes.ProjectNode}}
+  parent: DulcisX.Nodes.Events
+  definition: DulcisX.Nodes.Events.EventDistributor`1
+  name: EventDistributor<Action<ProjectNode, ProjectNode>>
+  nameWithType: EventDistributor<Action<ProjectNode, ProjectNode>>
+  fullName: DulcisX.Nodes.Events.EventDistributor<System.Action<DulcisX.Nodes.ProjectNode, DulcisX.Nodes.ProjectNode>>
+  nameWithType.vb: EventDistributor(Of Action(Of ProjectNode, ProjectNode))
+  fullName.vb: DulcisX.Nodes.Events.EventDistributor(Of System.Action(Of DulcisX.Nodes.ProjectNode, DulcisX.Nodes.ProjectNode))
+  name.vb: EventDistributor(Of Action(Of ProjectNode, ProjectNode))
+  spec.csharp:
+  - uid: DulcisX.Nodes.Events.EventDistributor`1
+    name: EventDistributor
+    nameWithType: EventDistributor
+    fullName: DulcisX.Nodes.Events.EventDistributor
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.Action`2
+    name: Action
+    nameWithType: Action
+    fullName: System.Action
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: DulcisX.Nodes.ProjectNode
+    name: ProjectNode
+    nameWithType: ProjectNode
+    fullName: DulcisX.Nodes.ProjectNode
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: DulcisX.Nodes.ProjectNode
+    name: ProjectNode
+    nameWithType: ProjectNode
+    fullName: DulcisX.Nodes.ProjectNode
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: DulcisX.Nodes.Events.EventDistributor`1
+    name: EventDistributor
+    nameWithType: EventDistributor
+    fullName: DulcisX.Nodes.Events.EventDistributor
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.Action`2
+    name: Action
+    nameWithType: Action
+    fullName: System.Action
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: DulcisX.Nodes.ProjectNode
+    name: ProjectNode
+    nameWithType: ProjectNode
+    fullName: DulcisX.Nodes.ProjectNode
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: DulcisX.Nodes.ProjectNode
+    name: ProjectNode
+    nameWithType: ProjectNode
+    fullName: DulcisX.Nodes.ProjectNode
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: DulcisX.Nodes.Events.ISolutionEvents.OnQueryProjectUnload*
+  commentId: Overload:DulcisX.Nodes.Events.ISolutionEvents.OnQueryProjectUnload
+  name: OnQueryProjectUnload
+  nameWithType: ISolutionEvents.OnQueryProjectUnload
+  fullName: DulcisX.Nodes.Events.ISolutionEvents.OnQueryProjectUnload
+- uid: DulcisX.Nodes.Events.EventDistributor{System.Action{DulcisX.Nodes.ProjectNode,DulcisX.Nodes.Events.CancelTraslaterToken}}
+  commentId: T:DulcisX.Nodes.Events.EventDistributor{System.Action{DulcisX.Nodes.ProjectNode,DulcisX.Nodes.Events.CancelTraslaterToken}}
+  parent: DulcisX.Nodes.Events
+  definition: DulcisX.Nodes.Events.EventDistributor`1
+  name: EventDistributor<Action<ProjectNode, CancelTraslaterToken>>
+  nameWithType: EventDistributor<Action<ProjectNode, CancelTraslaterToken>>
+  fullName: DulcisX.Nodes.Events.EventDistributor<System.Action<DulcisX.Nodes.ProjectNode, DulcisX.Nodes.Events.CancelTraslaterToken>>
+  nameWithType.vb: EventDistributor(Of Action(Of ProjectNode, CancelTraslaterToken))
+  fullName.vb: DulcisX.Nodes.Events.EventDistributor(Of System.Action(Of DulcisX.Nodes.ProjectNode, DulcisX.Nodes.Events.CancelTraslaterToken))
+  name.vb: EventDistributor(Of Action(Of ProjectNode, CancelTraslaterToken))
+  spec.csharp:
+  - uid: DulcisX.Nodes.Events.EventDistributor`1
+    name: EventDistributor
+    nameWithType: EventDistributor
+    fullName: DulcisX.Nodes.Events.EventDistributor
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.Action`2
+    name: Action
+    nameWithType: Action
+    fullName: System.Action
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: DulcisX.Nodes.ProjectNode
+    name: ProjectNode
+    nameWithType: ProjectNode
+    fullName: DulcisX.Nodes.ProjectNode
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: DulcisX.Nodes.Events.CancelTraslaterToken
+    name: CancelTraslaterToken
+    nameWithType: CancelTraslaterToken
+    fullName: DulcisX.Nodes.Events.CancelTraslaterToken
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: DulcisX.Nodes.Events.EventDistributor`1
+    name: EventDistributor
+    nameWithType: EventDistributor
+    fullName: DulcisX.Nodes.Events.EventDistributor
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.Action`2
+    name: Action
+    nameWithType: Action
+    fullName: System.Action
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: DulcisX.Nodes.ProjectNode
+    name: ProjectNode
+    nameWithType: ProjectNode
+    fullName: DulcisX.Nodes.ProjectNode
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: DulcisX.Nodes.Events.CancelTraslaterToken
+    name: CancelTraslaterToken
+    nameWithType: CancelTraslaterToken
+    fullName: DulcisX.Nodes.Events.CancelTraslaterToken
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: DulcisX.Nodes.Events.ISolutionEvents.OnProjectUnload*
+  commentId: Overload:DulcisX.Nodes.Events.ISolutionEvents.OnProjectUnload
+  name: OnProjectUnload
+  nameWithType: ISolutionEvents.OnProjectUnload
+  fullName: DulcisX.Nodes.Events.ISolutionEvents.OnProjectUnload
+- uid: DulcisX.Nodes.Events.ISolutionEvents.OnProjectRenamed*
+  commentId: Overload:DulcisX.Nodes.Events.ISolutionEvents.OnProjectRenamed
+  name: OnProjectRenamed
+  nameWithType: ISolutionEvents.OnProjectRenamed
+  fullName: DulcisX.Nodes.Events.ISolutionEvents.OnProjectRenamed
+- uid: DulcisX.Nodes.Events.EventDistributor{System.Action{DulcisX.Nodes.ProjectNode}}
+  commentId: T:DulcisX.Nodes.Events.EventDistributor{System.Action{DulcisX.Nodes.ProjectNode}}
+  parent: DulcisX.Nodes.Events
+  definition: DulcisX.Nodes.Events.EventDistributor`1
+  name: EventDistributor<Action<ProjectNode>>
+  nameWithType: EventDistributor<Action<ProjectNode>>
+  fullName: DulcisX.Nodes.Events.EventDistributor<System.Action<DulcisX.Nodes.ProjectNode>>
+  nameWithType.vb: EventDistributor(Of Action(Of ProjectNode))
+  fullName.vb: DulcisX.Nodes.Events.EventDistributor(Of System.Action(Of DulcisX.Nodes.ProjectNode))
+  name.vb: EventDistributor(Of Action(Of ProjectNode))
+  spec.csharp:
+  - uid: DulcisX.Nodes.Events.EventDistributor`1
+    name: EventDistributor
+    nameWithType: EventDistributor
+    fullName: DulcisX.Nodes.Events.EventDistributor
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.Action`1
+    name: Action
+    nameWithType: Action
+    fullName: System.Action
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: DulcisX.Nodes.ProjectNode
+    name: ProjectNode
+    nameWithType: ProjectNode
+    fullName: DulcisX.Nodes.ProjectNode
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: DulcisX.Nodes.Events.EventDistributor`1
+    name: EventDistributor
+    nameWithType: EventDistributor
+    fullName: DulcisX.Nodes.Events.EventDistributor
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.Action`1
+    name: Action
+    nameWithType: Action
+    fullName: System.Action
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: DulcisX.Nodes.ProjectNode
+    name: ProjectNode
+    nameWithType: ProjectNode
+    fullName: DulcisX.Nodes.ProjectNode
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Action{DulcisX.Nodes.ProjectNode}
+  commentId: T:System.Action{DulcisX.Nodes.ProjectNode}
+  parent: System
+  definition: System.Action`1
+  name: Action<ProjectNode>
+  nameWithType: Action<ProjectNode>
+  fullName: System.Action<DulcisX.Nodes.ProjectNode>
+  nameWithType.vb: Action(Of ProjectNode)
+  fullName.vb: System.Action(Of DulcisX.Nodes.ProjectNode)
+  name.vb: Action(Of ProjectNode)
+  spec.csharp:
+  - uid: System.Action`1
+    name: Action
+    nameWithType: Action
+    fullName: System.Action
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: DulcisX.Nodes.ProjectNode
+    name: ProjectNode
+    nameWithType: ProjectNode
+    fullName: DulcisX.Nodes.ProjectNode
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Action`1
+    name: Action
+    nameWithType: Action
+    fullName: System.Action
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: DulcisX.Nodes.ProjectNode
+    name: ProjectNode
+    nameWithType: ProjectNode
+    fullName: DulcisX.Nodes.ProjectNode
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Action`1
+  commentId: T:System.Action`1
+  isExternal: true
+  name: Action<T>
+  nameWithType: Action<T>
+  fullName: System.Action<T>
+  nameWithType.vb: Action(Of T)
+  fullName.vb: System.Action(Of T)
+  name.vb: Action(Of T)
+  spec.csharp:
+  - uid: System.Action`1
+    name: Action
+    nameWithType: Action
+    fullName: System.Action
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Action`1
+    name: Action
+    nameWithType: Action
+    fullName: System.Action
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.Action{System.Boolean}
+  commentId: T:System.Action{System.Boolean}
+  parent: System
+  definition: System.Action`1
+  name: Action<Boolean>
+  nameWithType: Action<Boolean>
+  fullName: System.Action<System.Boolean>
+  nameWithType.vb: Action(Of Boolean)
+  fullName.vb: System.Action(Of System.Boolean)
+  name.vb: Action(Of Boolean)
+  spec.csharp:
+  - uid: System.Action`1
+    name: Action
+    nameWithType: Action
+    fullName: System.Action
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.Boolean
+    name: Boolean
+    nameWithType: Boolean
+    fullName: System.Boolean
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Action`1
+    name: Action
+    nameWithType: Action
+    fullName: System.Action
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.Boolean
+    name: Boolean
+    nameWithType: Boolean
+    fullName: System.Boolean
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Action{DulcisX.Nodes.Events.CancelTraslaterToken}
+  commentId: T:System.Action{DulcisX.Nodes.Events.CancelTraslaterToken}
+  parent: System
+  definition: System.Action`1
+  name: Action<CancelTraslaterToken>
+  nameWithType: Action<CancelTraslaterToken>
+  fullName: System.Action<DulcisX.Nodes.Events.CancelTraslaterToken>
+  nameWithType.vb: Action(Of CancelTraslaterToken)
+  fullName.vb: System.Action(Of DulcisX.Nodes.Events.CancelTraslaterToken)
+  name.vb: Action(Of CancelTraslaterToken)
+  spec.csharp:
+  - uid: System.Action`1
+    name: Action
+    nameWithType: Action
+    fullName: System.Action
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: DulcisX.Nodes.Events.CancelTraslaterToken
+    name: CancelTraslaterToken
+    nameWithType: CancelTraslaterToken
+    fullName: DulcisX.Nodes.Events.CancelTraslaterToken
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Action`1
+    name: Action
+    nameWithType: Action
+    fullName: System.Action
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: DulcisX.Nodes.Events.CancelTraslaterToken
+    name: CancelTraslaterToken
+    nameWithType: CancelTraslaterToken
+    fullName: DulcisX.Nodes.Events.CancelTraslaterToken
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Action
+  commentId: T:System.Action
+  parent: System
+  isExternal: true
+  name: Action
+  nameWithType: Action
+  fullName: System.Action
+- uid: System.Action{System.String,System.String}
+  commentId: T:System.Action{System.String,System.String}
+  parent: System
+  definition: System.Action`2
+  name: Action<String, String>
+  nameWithType: Action<String, String>
+  fullName: System.Action<System.String, System.String>
+  nameWithType.vb: Action(Of String, String)
+  fullName.vb: System.Action(Of System.String, System.String)
+  name.vb: Action(Of String, String)
+  spec.csharp:
+  - uid: System.Action`2
+    name: Action
+    nameWithType: Action
+    fullName: System.Action
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Action`2
+    name: Action
+    nameWithType: Action
+    fullName: System.Action
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Action`2
+  commentId: T:System.Action`2
+  isExternal: true
+  name: Action<T1, T2>
+  nameWithType: Action<T1, T2>
+  fullName: System.Action<T1, T2>
+  nameWithType.vb: Action(Of T1, T2)
+  fullName.vb: System.Action(Of T1, T2)
+  name.vb: Action(Of T1, T2)
+  spec.csharp:
+  - uid: System.Action`2
+    name: Action
+    nameWithType: Action
+    fullName: System.Action
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T1
+    nameWithType: T1
+    fullName: T1
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T2
+    nameWithType: T2
+    fullName: T2
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Action`2
+    name: Action
+    nameWithType: Action
+    fullName: System.Action
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T1
+    nameWithType: T1
+    fullName: T1
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T2
+    nameWithType: T2
+    fullName: T2
+  - name: )
+    nameWithType: )
+    fullName: )
