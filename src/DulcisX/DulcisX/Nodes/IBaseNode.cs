@@ -41,7 +41,8 @@ namespace DulcisX.Nodes
         /// <summary>
         /// Returns the first parent Node of the current Node, matching the given <paramref name="nodeType"/>.
         /// </summary>
-        /// <returns>The matching parent if any any could be found, otherwise null.</returns>
+        /// <param name="nodeType">The Node type which should be serached for.</param>
+        /// <returns>The matching parent if any could be found, otherwise null.</returns>
         BaseNode GetParent(NodeTypes nodeType);
 
         /// <summary>

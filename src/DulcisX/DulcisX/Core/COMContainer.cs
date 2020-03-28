@@ -3,6 +3,7 @@
     /// <summary>
     /// Provides a simple container for a Com Type.
     /// </summary>
+    /// <typeparam name="TComType">The type of the Com Type.</typeparam>
     public class ComContainer<TComType>
     {
         /// <summary>
