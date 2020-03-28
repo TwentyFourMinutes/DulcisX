@@ -1,5 +1,4 @@
-﻿using DulcisX.Core.Models;
-using Microsoft.VisualStudio.Shell;
+﻿using Microsoft.VisualStudio.Shell;
 using SimpleInjector;
 
 namespace DulcisX.Core.Extensions

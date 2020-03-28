@@ -12,13 +12,23 @@ using System.Threading.Tasks;
 
 namespace DulcisX.Nodes
 {
+    /// <summary>
+    /// Represents the most basic <see cref="SolutionNode"/> children Node.
+    /// </summary>
     public abstract class SolutionItemNode : BaseNode
     {
+        /// <summary>
+        /// Initializes a new instance of the <see cref="SolutionItemNode"/> class.
+        /// </summary>
+        /// <param name="solution">The Solution in which the <see cref="SolutionItemNode"/> sits in.</param>
+        /// <param name="hierarchy">The Hierarchy of the <see cref="SolutionItemNode"/> itself.</param>
+        /// <param name="itemId">The Unique Identifier for the <see cref="SolutionItemNode"/> in the <paramref name="hierarchy"/>.</param>
         protected SolutionItemNode(SolutionNode solution, IVsHierarchy hierarchy, uint itemId) : base(solution, hierarchy, itemId)
         {
 
         }
 
+        /// <inheritdoc/>
         public override BaseNode GetParent()
         {
             if (!UnderlyingHierarchy.TryGetParentHierarchy(out var parentHierarchy))
@@ -29,6 +39,7 @@ namespace DulcisX.Nodes
             return NodeFactory.GetSolutionItemNode(ParentSolution, parentHierarchy, CommonNodeIds.Root);
         }
 
+        /// <inheritdoc/>
         public override IEnumerable<BaseNode> GetChildren()
         {
             var node = HierarchyUtilities.GetFirstChild(UnderlyingHierarchy, ItemId, true);
@@ -44,6 +55,12 @@ namespace DulcisX.Nodes
             }
         }
 
+        /// <summary>
+        /// Asynchronously gets a flat list of nodes that exist within the current node.
+        /// </summary>
+        /// <param name="ct">A cancellation token that can be used to cancel the asynchronous request.</param>
+        /// <returns> A task that when complete provides the flattened set of hierarchy items.</returns>
+        /// <remarks> This method will never return, if being called in an <see cref="Core.PackageX.OnInitializeAsync"/> callback. You should instead wrap it in an <see cref="Microsoft.VisualStudio.Threading.JoinableTaskFactory.RunAsync(Func{System.Threading.Tasks.Task})"/> call.</remarks>
         public async Task<IEnumerable<BaseNode>> GetAllChildrenAsync(CancellationToken ct = default)
         {
             var collectionProvider = ParentSolution.ServiceContainer.GetInstance<IVsHierarchyItemCollectionProvider>();
@@ -52,13 +69,20 @@ namespace DulcisX.Nodes
                                             .Select(hierarchyItem => NodeFactory.GetItemNode(ParentSolution, hierarchyItem));
         }
 
-        public async Task<IEnumerable<BaseNode>> GetAllChildrenAsync(Predicate<BaseNode> predicate, CancellationToken ct = default)
+        /// <summary>
+        /// Asynchronously gets a flat list of filtered nodes that exist within the current node.
+        /// </summary>
+        /// <param name="predicate">A function to test each node for a condition.</param>
+        /// <param name="cancellationToken">A cancellation token that can be used to cancel the asynchronous request.</param>
+        /// <returns> A task that when complete provides the flattened set of hierarchy items.</returns>
+        /// <remarks> This method will never return, if being called in an <see cref="Core.PackageX.OnInitializeAsync"/> callback. You should instead wrap it in an <see cref="Microsoft.VisualStudio.Threading.JoinableTaskFactory.RunAsync(Func{System.Threading.Tasks.Task})"/> call.</remarks>
+        public async Task<IEnumerable<BaseNode>> GetAllChildrenAsync(Predicate<BaseNode> predicate, CancellationToken cancellationToken = default)
         {
             var collectionProvider = ParentSolution.ServiceContainer.GetInstance<IVsHierarchyItemCollectionProvider>();
 
-            var hierarchyItems = await collectionProvider.GetDescendantsAsync(UnderlyingHierarchy, ct);
+            var hierarchyItems = await collectionProvider.GetDescendantsAsync(UnderlyingHierarchy, cancellationToken);
 
-            var filteredItems = await collectionProvider.GetFilteredHierarchyItemsAsync(hierarchyItems, hierarchyItem => predicate(NodeFactory.GetItemNode(ParentSolution, hierarchyItem)), ct);
+            var filteredItems = await collectionProvider.GetFilteredHierarchyItemsAsync(hierarchyItems, hierarchyItem => predicate(NodeFactory.GetItemNode(ParentSolution, hierarchyItem)), cancellationToken);
 
             var filteredNodes = filteredItems.Select(hierarchyItem => NodeFactory.GetItemNode(ParentSolution, hierarchyItem));
 

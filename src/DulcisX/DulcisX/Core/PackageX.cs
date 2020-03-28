@@ -1,6 +1,5 @@
 using DulcisX.Core.Components;
 using DulcisX.Core.Extensions;
-using DulcisX.Core.Models;
 using DulcisX.Nodes;
 using Microsoft.VisualStudio.Shell;
 using Microsoft.VisualStudio.Shell.Interop;
@@ -31,7 +30,7 @@ namespace DulcisX.Core
         private SolutionNode _solution;
 
         /// <summary>
-        /// Gets the current open Solution.
+        /// Gets the currently open Solution.
         /// </summary>
         public SolutionNode Solution
         {

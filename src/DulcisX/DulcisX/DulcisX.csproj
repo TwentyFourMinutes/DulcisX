@@ -79,7 +79,7 @@
     <Compile Include="Core\Enums\DocumentProperty.cs" />
     <Compile Include="Core\Enums\DocumentType.cs" />
     <Compile Include="Core\Enums\NodeTypes.cs" />
-    <Compile Include="Core\Enums\StartupOptions.cs" />
+    <Compile Include="Core\Enums\StartupOption.cs" />
     <Compile Include="Core\Enums\VisualStudio\CommonNodeIds.cs" />
     <Compile Include="Core\Enums\VisualStudio\CommonStatusCodes.cs" />
     <Compile Include="Core\Enums\VisualStudio\CommonStreamKeys.cs" />

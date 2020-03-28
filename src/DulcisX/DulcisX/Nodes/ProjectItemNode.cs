@@ -8,21 +8,39 @@ using System.Collections.Generic;
 
 namespace DulcisX.Nodes
 {
+    /// <summary>
+    /// Represents the most basic <see cref="ProjectNode"/> children Node.
+    /// </summary>
     public abstract class ProjectItemNode : BaseNode
     {
-
         private readonly ProjectNode _parentProject;
 
+        /// <summary>
+        /// Initializes a new instance of the <see cref="ProjectItemNode"/> class.
+        /// </summary>
+        /// <param name="solution">The Solution in which the Node sits in.</param>
+        /// <param name="project">The Project in which the Node sits in.</param>
+        /// <param name="itemId">The Unique Identifier for the Node in the <paramref name="project"/>.</param>
         protected ProjectItemNode(SolutionNode solution, ProjectNode project, uint itemId) : base(solution, project.UnderlyingHierarchy, itemId)
         {
             _parentProject = project;
         }
 
+        /// <summary>
+        /// Initializes a new instance of the <see cref="ProjectItemNode"/> class.
+        /// </summary>
+        /// <param name="solution">The Solution in which the Node sits in.</param>
+        /// <param name="hierarchy">The Hierarchy of the Project in which the <see cref="ProjectItemNode"/> sits in.</param>
+        /// <param name="itemId">The Unique Identifier for the <see cref="ProjectItemNode"/> in the <paramref name="hierarchy"/>.</param>
         protected ProjectItemNode(SolutionNode solution, IVsHierarchy hierarchy, uint itemId) : base(solution, hierarchy, itemId)
         {
 
         }
 
+        /// <summary>
+        /// Returns the Project in which the Nodes sits in.
+        /// </summary>
+        /// <returns>The parent Project in which the Nodes sits in.</returns>
         public ProjectNode GetParentProject()
         {
             if (_parentProject is object)
@@ -38,6 +56,7 @@ namespace DulcisX.Nodes
             return (ProjectNode)parentProject;
         }
 
+        /// <inheritdoc/>
         public override BaseNode GetParent()
         {
             var parentItemId = GetParentNodeId();
@@ -50,6 +69,7 @@ namespace DulcisX.Nodes
             return NodeFactory.GetProjectItemNode(ParentSolution, GetParentProject(), UnderlyingHierarchy, parentItemId);
         }
 
+        /// <inheritdoc/>
         public override BaseNode GetParent(NodeTypes nodeType)
         {
             if (nodeType == NodeTypes.Project)
@@ -60,6 +80,7 @@ namespace DulcisX.Nodes
             return base.GetParent(nodeType);
         }
 
+        /// <inheritdoc/>
         public override IEnumerable<BaseNode> GetChildren()
         {
             var node = HierarchyUtilities.GetFirstChild(UnderlyingHierarchy, ItemId, true);
@@ -72,6 +93,10 @@ namespace DulcisX.Nodes
             }
         }
 
+        /// <summary>
+        /// Returns the default namespace for the current Node.
+        /// </summary>
+        /// <returns>A string which contains the default namespace for the current Node.</returns>
         public string GetDefaultNamespace()
         {
             ThreadHelper.ThrowIfNotOnUIThread();

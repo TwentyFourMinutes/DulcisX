@@ -52,7 +52,7 @@ namespace DulcisX.Core.Components
         /// Asynchronously waits for an result which is produced by the user.
         /// </summary>
         /// <param name="ct"></param>
-        /// <returns></returns>
+        /// <returns>An <see cref="AsyncResult{TIdentifier}"/> containg the <typeparamref name="TIdentifier"/> of the clicked button.</returns>
         public async Task<AsyncResult<TIdentifier>> WaitForResultAsync(CancellationToken ct = default)
         {
             _semaphore = new SemaphoreSlim(0, 1);

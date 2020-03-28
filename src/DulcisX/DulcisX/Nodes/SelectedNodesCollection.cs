@@ -9,7 +9,10 @@ using System.Runtime.InteropServices;
 
 namespace DulcisX.Nodes
 {
-    public class SelectedNodes : IEnumerable<BaseNode>
+    /// <summary>
+    /// A wrapper for the <see cref="IVsMonitorSelection"/>, gets access to the selected nodes in the Solution Explorer.
+    /// </summary>
+    public class SelectedNodesCollection : IEnumerable<BaseNode>
     {
         private readonly SolutionNode _solution;
 
@@ -18,9 +21,10 @@ namespace DulcisX.Nodes
         private IVsMonitorSelection MonitorSelection
             => _monitorSelection ?? (_monitorSelection = _solution.ServiceContainer.GetCOMInstance<IVsMonitorSelection>());
 
-        internal SelectedNodes(SolutionNode solution)
+        internal SelectedNodesCollection(SolutionNode solution)
             => _solution = solution;
 
+        /// <inheritdoc/>
         public IEnumerator<BaseNode> GetEnumerator()
         {
             ThreadHelper.ThrowIfNotOnUIThread();
@@ -39,6 +43,14 @@ namespace DulcisX.Nodes
             }
         }
 
+        /// <summary>
+        /// Returns all selected nodes.
+        /// </summary>
+        /// <param name="multiSelect">The native <see cref="IVsMultiItemSelect"/> interface containg the selected Nodes.</param>
+        /// <param name="hierarchy">The hierarchy which could contain the selected Node.</param>
+        /// <param name="itemId">The potential Unique Identifier for the selected Node in the <paramref name="hierarchy"/>.</param>
+        /// <param name="solution">The Solution in which the Nodes sit in.</param>
+        /// <returns>An <see cref="IEnumerable{BaseNode}"/> with the selected Nodes.</returns>
         public static IEnumerable<BaseNode> GetSelection(IVsMultiItemSelect multiSelect, IVsHierarchy hierarchy, uint itemId, SolutionNode solution)
         {
             if (itemId == CommonNodeIds.MutlipleSelectedNodes)
@@ -54,6 +66,13 @@ namespace DulcisX.Nodes
             }
         }
 
+        /// <summary>
+        /// Returns the single selected node in the <see cref="IVsMultiItemSelect"/>.
+        /// </summary>
+        /// <param name="hierarchy">The hierarchy which contains the selected Node.</param>
+        /// <param name="itemId">The Unique Identifier for the selected Node in the <paramref name="hierarchy"/>.</param>
+        /// <param name="solution">The Solution in which the Nodes sit in.</param>
+        /// <returns>An <see cref="IEnumerable{BaseNode}"/> with the selected Nodes.</returns>
         public static BaseNode GetSingleSelection(IVsHierarchy hierarchy, uint itemId, SolutionNode solution)
         {
             if (hierarchy is null)
@@ -67,10 +86,15 @@ namespace DulcisX.Nodes
             else
             {
                 return NodeFactory.GetProjectItemNode(solution, null, hierarchy, itemId);
-                //Unknown ItemTypes
             }
         }
 
+        /// <summary>
+        /// Returns all selected nodes is an <see cref="IVsMultiItemSelect"/> in the <paramref name="multiSelect"/>.
+        /// </summary>
+        /// <param name="multiSelect">The native <see cref="IVsMultiItemSelect"/> interface containg the selected Nodes.</param>
+        /// <param name="solution">The Solution in which the Nodes sit in.</param>
+        /// <returns>An <see cref="IEnumerable{BaseNode}"/> with the selected Nodes.</returns>
         public static IEnumerable<BaseNode> GetMultiSelection(IVsMultiItemSelect multiSelect, SolutionNode solution)
         {
             ThreadHelper.ThrowIfNotOnUIThread();
@@ -93,6 +117,7 @@ namespace DulcisX.Nodes
             }
         }
 
+        /// <inheritdoc/>
         IEnumerator IEnumerable.GetEnumerator()
             => GetEnumerator();
     }

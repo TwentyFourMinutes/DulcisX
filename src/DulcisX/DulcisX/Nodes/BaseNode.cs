@@ -7,16 +7,28 @@ using System.Collections.Generic;
 
 namespace DulcisX.Nodes
 {
+    /// <summary>
+    /// Represents the most basic Hierarchy Node.
+    /// </summary>
     public abstract class BaseNode : INamedNode
     {
+        /// <inheritdoc/>
         public virtual SolutionNode ParentSolution { get; }
-
+        /// <inheritdoc/>
         public IVsHierarchy UnderlyingHierarchy { get; }
 
+        /// <inheritdoc/>
         public uint ItemId { get; }
 
+        /// <inheritdoc/>
         public abstract NodeTypes NodeType { get; }
 
+        /// <summary>
+        /// Initializes a new instance of the <see cref="BaseNode"/> class.
+        /// </summary>
+        /// <param name="solution">The Solution in which the Node sits in.</param>
+        /// <param name="hierarchy">The Hierarchy in which the Node sits in.<param>
+        /// <param name="itemId">The Unique Identifier for the Node in the <paramref name="hierarchy"/>.</param>
         protected BaseNode(SolutionNode solution, IVsHierarchy hierarchy, uint itemId)
         {
             ParentSolution = solution;
@@ -24,11 +36,14 @@ namespace DulcisX.Nodes
             ItemId = itemId;
         }
 
+        /// <inheritdoc/>
         public string GetDisplayName()
             => AsHierarchyItem().Text;
 
+        /// <inheritdoc/>
         public abstract BaseNode GetParent();
 
+        /// <inheritdoc/>
         public virtual BaseNode GetParent(NodeTypes nodeType)
         {
             if (nodeType.ContainsMultipleFlags())
@@ -54,6 +69,7 @@ namespace DulcisX.Nodes
         internal uint GetParentNodeId()
             => UnderlyingHierarchy.GetProperty(ItemId, (int)__VSHPROPID.VSHPROPID_Parent);
 
+        /// <inheritdoc/>
         public IVsHierarchyItem AsHierarchyItem()
         {
             var manager = ParentSolution.ServiceContainer.GetInstance<IVsHierarchyItemManager>();
@@ -61,8 +77,13 @@ namespace DulcisX.Nodes
             return manager.GetHierarchyItem(UnderlyingHierarchy, ItemId);
         }
 
+        /// <summary>
+        /// Returns all immediate children Nodes of the current Node.
+        /// </summary>
+        /// <returns>An <see cref="IEnumerable{BaseNode}"/> with the children.</returns>
         public abstract IEnumerable<BaseNode> GetChildren();
 
+        /// <inheritdoc/>
         public bool IsTypeMatching(NodeTypes nodeType)
             => NodeType == nodeType;
     }

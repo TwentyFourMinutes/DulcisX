@@ -1,7 +1,7 @@
 ﻿using Microsoft.VisualStudio.Shell;
 using System;
 
-namespace DulcisX.Core.Models
+namespace DulcisX.Core
 {
 
     /// <inheritdoc/>

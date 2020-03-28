@@ -7,19 +7,32 @@ using System.Collections.Generic;
 
 namespace DulcisX.Nodes
 {
+    /// <summary>
+    /// Represents a Node which couldn't be identified.
+    /// </summary>
     public class UnknownNode : BaseNode
     {
+        /// <inheritdoc/>
         public override NodeTypes NodeType => NodeTypes.Unknown;
 
+        /// <summary>
+        /// Initializes a new instance of the <see cref="UnknownNode"/> class.
+        /// </summary>
+        /// <param name="solution">The Solution in which the <see cref="UnknownNode"/> sits in.</param>
+        /// <param name="hierarchy">The Hierarchy in which the <see cref="UnknownNode"/> sits in.</param>
+        /// <param name="itemId">The Unique Identifier for the <see cref="UnknownNode"/> in the <paramref name="hierarchy"/>.</param>
         public UnknownNode(SolutionNode solution, IVsHierarchy hierarchy, uint itemId) : base(solution, hierarchy, itemId)
         {
         }
 
+        /// <inheritdoc/>
+        /// <remarks>A <see cref="UnknownNode"/> doesn't support the iteration of any children.</remarks>
         public override IEnumerable<BaseNode> GetChildren()
         {
             throw new NotSupportedException("Iterating over Unknown Node children is not supported.");
         }
 
+        /// <inheritdoc/>
         public override BaseNode GetParent()
         {
             if (ItemId == CommonNodeIds.Root)
