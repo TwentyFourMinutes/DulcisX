@@ -1,6 +1,9 @@
 ### YamlMime:XRefMap
 sorted: true
 references:
+- uid: API.Docs
+  name: API Documentation
+  href: api/index.html
 - uid: DulcisX.Core
   name: DulcisX.Core
   href: api/DulcisX.Core.html
