@@ -86,7 +86,8 @@
   
   <h1 id="DulcisX_Helpers_ExtendedHierarchyUtilities" data-uid="DulcisX.Helpers.ExtendedHierarchyUtilities" class="text-break">Class ExtendedHierarchyUtilities
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>Extends the <span class="xref">Microsoft.Internal.VisualStudio.PlatformUI.HierarchyUtilities</span> class.</p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
@@ -130,11 +131,12 @@
     <a href="https://github.com/TwentyFourMinutes/DulcisX/new/master/apiSpec/new?filename=DulcisX_Helpers_ExtendedHierarchyUtilities_IsMiscellaneousFilesProject_Microsoft_VisualStudio_Shell_Interop_IVsHierarchy_.md&amp;value=---%0Auid%3A%20DulcisX.Helpers.ExtendedHierarchyUtilities.IsMiscellaneousFilesProject(Microsoft.VisualStudio.Shell.Interop.IVsHierarchy)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/TwentyFourMinutes/DulcisX/blob/master/src/DulcisX/DulcisX/Helpers/ExtendedHierarchyUtilities.cs/#L15">View Source</a>
+    <a href="https://github.com/TwentyFourMinutes/DulcisX/blob/master/src/DulcisX/DulcisX/Helpers/ExtendedHierarchyUtilities.cs/#L28">View Source</a>
   </span>
   <a id="DulcisX_Helpers_ExtendedHierarchyUtilities_IsMiscellaneousFilesProject_" data-uid="DulcisX.Helpers.ExtendedHierarchyUtilities.IsMiscellaneousFilesProject*"></a>
   <h4 id="DulcisX_Helpers_ExtendedHierarchyUtilities_IsMiscellaneousFilesProject_Microsoft_VisualStudio_Shell_Interop_IVsHierarchy_" data-uid="DulcisX.Helpers.ExtendedHierarchyUtilities.IsMiscellaneousFilesProject(Microsoft.VisualStudio.Shell.Interop.IVsHierarchy)">IsMiscellaneousFilesProject(IVsHierarchy)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Gets a value indicating whether a <span class="xref">Microsoft.VisualStudio.Shell.Interop.IVsHierarchy</span> is a Miscellaneous Files Project.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -153,7 +155,8 @@
       <tr>
         <td><span class="xref">Microsoft.VisualStudio.Shell.Interop.IVsHierarchy</span></td>
         <td><span class="parametername">hierarchy</span></td>
-        <td></td>
+        <td><p>The hierarchy which should be tested.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -168,7 +171,8 @@
     <tbody>
       <tr>
         <td><span class="xref">System.Boolean</span></td>
-        <td></td>
+        <td><p><span class="xref">true</span> if the hierarchy is a Miscellaneous Files Project; otherwise <span class="xref">false</span>.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -177,15 +181,16 @@
     <a href="https://github.com/TwentyFourMinutes/DulcisX/new/master/apiSpec/new?filename=DulcisX_Helpers_ExtendedHierarchyUtilities_IsNodeType_Microsoft_VisualStudio_Shell_Interop_IVsHierarchy_System_Guid_.md&amp;value=---%0Auid%3A%20DulcisX.Helpers.ExtendedHierarchyUtilities.IsNodeType(Microsoft.VisualStudio.Shell.Interop.IVsHierarchy%2CSystem.Guid)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/TwentyFourMinutes/DulcisX/blob/master/src/DulcisX/DulcisX/Helpers/ExtendedHierarchyUtilities.cs/#L32">View Source</a>
+    <a href="https://github.com/TwentyFourMinutes/DulcisX/blob/master/src/DulcisX/DulcisX/Helpers/ExtendedHierarchyUtilities.cs/#L56">View Source</a>
   </span>
   <a id="DulcisX_Helpers_ExtendedHierarchyUtilities_IsNodeType_" data-uid="DulcisX.Helpers.ExtendedHierarchyUtilities.IsNodeType*"></a>
   <h4 id="DulcisX_Helpers_ExtendedHierarchyUtilities_IsNodeType_Microsoft_VisualStudio_Shell_Interop_IVsHierarchy_System_Guid_" data-uid="DulcisX.Helpers.ExtendedHierarchyUtilities.IsNodeType(Microsoft.VisualStudio.Shell.Interop.IVsHierarchy,System.Guid)">IsNodeType(IVsHierarchy, Guid)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Gets a value indicating whether a <span class="xref">Microsoft.VisualStudio.Shell.Interop.IVsHierarchy</span> matches a given <span class="xref">Microsoft.VisualStudio.VSConstants.CLSID</span>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static bool IsNodeType(IVsHierarchy hierarchy, Guid clisdGuid)</code></pre>
+    <pre><code class="lang-csharp hljs">public static bool IsNodeType(IVsHierarchy hierarchy, Guid clsidGuid)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -200,12 +205,14 @@
       <tr>
         <td><span class="xref">Microsoft.VisualStudio.Shell.Interop.IVsHierarchy</span></td>
         <td><span class="parametername">hierarchy</span></td>
-        <td></td>
+        <td><p>The hierarchy which should be tested.</p>
+</td>
       </tr>
       <tr>
         <td><span class="xref">System.Guid</span></td>
-        <td><span class="parametername">clisdGuid</span></td>
-        <td></td>
+        <td><span class="parametername">clsidGuid</span></td>
+        <td><p>The <span class="xref">Microsoft.VisualStudio.VSConstants.CLSID</span> guid which should be tested for.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -220,7 +227,8 @@
     <tbody>
       <tr>
         <td><span class="xref">System.Boolean</span></td>
-        <td></td>
+        <td><p><span class="xref">true</span> if the hierarchy matches the given <span class="xref">Microsoft.VisualStudio.VSConstants.CLSID</span>; otherwise <span class="xref">false</span>.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -229,11 +237,12 @@
     <a href="https://github.com/TwentyFourMinutes/DulcisX/new/master/apiSpec/new?filename=DulcisX_Helpers_ExtendedHierarchyUtilities_IsRealProject_Microsoft_VisualStudio_Shell_Interop_IVsHierarchy_.md&amp;value=---%0Auid%3A%20DulcisX.Helpers.ExtendedHierarchyUtilities.IsRealProject(Microsoft.VisualStudio.Shell.Interop.IVsHierarchy)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/TwentyFourMinutes/DulcisX/blob/master/src/DulcisX/DulcisX/Helpers/ExtendedHierarchyUtilities.cs/#L18">View Source</a>
+    <a href="https://github.com/TwentyFourMinutes/DulcisX/blob/master/src/DulcisX/DulcisX/Helpers/ExtendedHierarchyUtilities.cs/#L36">View Source</a>
   </span>
   <a id="DulcisX_Helpers_ExtendedHierarchyUtilities_IsRealProject_" data-uid="DulcisX.Helpers.ExtendedHierarchyUtilities.IsRealProject*"></a>
   <h4 id="DulcisX_Helpers_ExtendedHierarchyUtilities_IsRealProject_Microsoft_VisualStudio_Shell_Interop_IVsHierarchy_" data-uid="DulcisX.Helpers.ExtendedHierarchyUtilities.IsRealProject(Microsoft.VisualStudio.Shell.Interop.IVsHierarchy)">IsRealProject(IVsHierarchy)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Gets a value indicating whether a <span class="xref">Microsoft.VisualStudio.Shell.Interop.IVsHierarchy</span> is a real Project. The <span class="xref">Microsoft.Internal.VisualStudio.PlatformUI.HierarchyUtilities.IsProject(Microsoft.VisualStudio.Shell.IVsHierarchyItemIdentity)</span> method returns <span class="xref">true</span> for Solution Folders, which this method doesn't.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -252,7 +261,8 @@
       <tr>
         <td><span class="xref">Microsoft.VisualStudio.Shell.Interop.IVsHierarchy</span></td>
         <td><span class="parametername">hierarchy</span></td>
-        <td></td>
+        <td><p>The hierarchy which should be tested.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -267,7 +277,8 @@
     <tbody>
       <tr>
         <td><span class="xref">System.Boolean</span></td>
-        <td></td>
+        <td><p><span class="xref">true</span> if the hierarchy is a real Project; otherwise <span class="xref">false</span>.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -276,11 +287,12 @@
     <a href="https://github.com/TwentyFourMinutes/DulcisX/new/master/apiSpec/new?filename=DulcisX_Helpers_ExtendedHierarchyUtilities_IsSolutionItemsProject_Microsoft_VisualStudio_Shell_Interop_IVsHierarchy_.md&amp;value=---%0Auid%3A%20DulcisX.Helpers.ExtendedHierarchyUtilities.IsSolutionItemsProject(Microsoft.VisualStudio.Shell.Interop.IVsHierarchy)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/TwentyFourMinutes/DulcisX/blob/master/src/DulcisX/DulcisX/Helpers/ExtendedHierarchyUtilities.cs/#L12">View Source</a>
+    <a href="https://github.com/TwentyFourMinutes/DulcisX/blob/master/src/DulcisX/DulcisX/Helpers/ExtendedHierarchyUtilities.cs/#L20">View Source</a>
   </span>
   <a id="DulcisX_Helpers_ExtendedHierarchyUtilities_IsSolutionItemsProject_" data-uid="DulcisX.Helpers.ExtendedHierarchyUtilities.IsSolutionItemsProject*"></a>
   <h4 id="DulcisX_Helpers_ExtendedHierarchyUtilities_IsSolutionItemsProject_Microsoft_VisualStudio_Shell_Interop_IVsHierarchy_" data-uid="DulcisX.Helpers.ExtendedHierarchyUtilities.IsSolutionItemsProject(Microsoft.VisualStudio.Shell.Interop.IVsHierarchy)">IsSolutionItemsProject(IVsHierarchy)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Gets a value indicating whether a <span class="xref">Microsoft.VisualStudio.Shell.Interop.IVsHierarchy</span> is a Solution Items Project.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -299,7 +311,8 @@
       <tr>
         <td><span class="xref">Microsoft.VisualStudio.Shell.Interop.IVsHierarchy</span></td>
         <td><span class="parametername">hierarchy</span></td>
-        <td></td>
+        <td><p>The hierarchy which should be tested.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -314,7 +327,8 @@
     <tbody>
       <tr>
         <td><span class="xref">System.Boolean</span></td>
-        <td></td>
+        <td><p><span class="xref">true</span> if the hierarchy is a Solution Items Project; otherwise <span class="xref">false</span>.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -337,7 +351,7 @@
                     <a href="https://github.com/TwentyFourMinutes/DulcisX/new/master/apiSpec/new?filename=DulcisX_Helpers_ExtendedHierarchyUtilities.md&amp;value=---%0Auid%3A%20DulcisX.Helpers.ExtendedHierarchyUtilities%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/TwentyFourMinutes/DulcisX/blob/master/src/DulcisX/DulcisX/Helpers/ExtendedHierarchyUtilities.cs/#L10" class="contribution-link">View Source</a>
+                    <a href="https://github.com/TwentyFourMinutes/DulcisX/blob/master/src/DulcisX/DulcisX/Helpers/ExtendedHierarchyUtilities.cs/#L13" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

@@ -412,6 +412,19 @@ references:
   commentId: T:DulcisX.Core.Components.WebBrowser
   fullName: DulcisX.Core.Components.WebBrowser
   nameWithType: WebBrowser
+- uid: DulcisX.Core.Components.WebBrowser.GetInternalBrowserWindows
+  name: GetInternalBrowserWindows()
+  href: api/DulcisX.Core.Components.WebBrowser.html#DulcisX_Core_Components_WebBrowser_GetInternalBrowserWindows
+  commentId: M:DulcisX.Core.Components.WebBrowser.GetInternalBrowserWindows
+  fullName: DulcisX.Core.Components.WebBrowser.GetInternalBrowserWindows()
+  nameWithType: WebBrowser.GetInternalBrowserWindows()
+- uid: DulcisX.Core.Components.WebBrowser.GetInternalBrowserWindows*
+  name: GetInternalBrowserWindows
+  href: api/DulcisX.Core.Components.WebBrowser.html#DulcisX_Core_Components_WebBrowser_GetInternalBrowserWindows_
+  commentId: Overload:DulcisX.Core.Components.WebBrowser.GetInternalBrowserWindows
+  isSpec: "True"
+  fullName: DulcisX.Core.Components.WebBrowser.GetInternalBrowserWindows
+  nameWithType: WebBrowser.GetInternalBrowserWindows
 - uid: DulcisX.Core.Components.WebBrowser.OpenExternal(System.Uri,Microsoft.VisualStudio.Shell.Interop.__VSCREATEWEBBROWSER,Microsoft.VisualStudio.Shell.Interop.VSPREVIEWRESOLUTION)
   name: OpenExternal(Uri, __VSCREATEWEBBROWSER, VSPREVIEWRESOLUTION)
   href: api/DulcisX.Core.Components.WebBrowser.html#DulcisX_Core_Components_WebBrowser_OpenExternal_System_Uri_Microsoft_VisualStudio_Shell_Interop___VSCREATEWEBBROWSER_Microsoft_VisualStudio_Shell_Interop_VSPREVIEWRESOLUTION_
@@ -438,19 +451,6 @@ references:
   isSpec: "True"
   fullName: DulcisX.Core.Components.WebBrowser.OpenInternal
   nameWithType: WebBrowser.OpenInternal
-- uid: DulcisX.Core.Components.WebBrowser.OpenInternalBrowserWindows
-  name: OpenInternalBrowserWindows()
-  href: api/DulcisX.Core.Components.WebBrowser.html#DulcisX_Core_Components_WebBrowser_OpenInternalBrowserWindows
-  commentId: M:DulcisX.Core.Components.WebBrowser.OpenInternalBrowserWindows
-  fullName: DulcisX.Core.Components.WebBrowser.OpenInternalBrowserWindows()
-  nameWithType: WebBrowser.OpenInternalBrowserWindows()
-- uid: DulcisX.Core.Components.WebBrowser.OpenInternalBrowserWindows*
-  name: OpenInternalBrowserWindows
-  href: api/DulcisX.Core.Components.WebBrowser.html#DulcisX_Core_Components_WebBrowser_OpenInternalBrowserWindows_
-  commentId: Overload:DulcisX.Core.Components.WebBrowser.OpenInternalBrowserWindows
-  isSpec: "True"
-  fullName: DulcisX.Core.Components.WebBrowser.OpenInternalBrowserWindows
-  nameWithType: WebBrowser.OpenInternalBrowserWindows
 - uid: DulcisX.Core.Enums
   name: DulcisX.Core.Enums
   href: api/DulcisX.Core.Enums.html
@@ -577,30 +577,30 @@ references:
   commentId: F:DulcisX.Core.Enums.NodeTypes.VirtualProject
   fullName: DulcisX.Core.Enums.NodeTypes.VirtualProject
   nameWithType: NodeTypes.VirtualProject
-- uid: DulcisX.Core.Enums.StartupOptions
-  name: StartupOptions
-  href: api/DulcisX.Core.Enums.StartupOptions.html
-  commentId: T:DulcisX.Core.Enums.StartupOptions
-  fullName: DulcisX.Core.Enums.StartupOptions
-  nameWithType: StartupOptions
-- uid: DulcisX.Core.Enums.StartupOptions.None
+- uid: DulcisX.Core.Enums.StartupOption
+  name: StartupOption
+  href: api/DulcisX.Core.Enums.StartupOption.html
+  commentId: T:DulcisX.Core.Enums.StartupOption
+  fullName: DulcisX.Core.Enums.StartupOption
+  nameWithType: StartupOption
+- uid: DulcisX.Core.Enums.StartupOption.None
   name: None
-  href: api/DulcisX.Core.Enums.StartupOptions.html#DulcisX_Core_Enums_StartupOptions_None
-  commentId: F:DulcisX.Core.Enums.StartupOptions.None
-  fullName: DulcisX.Core.Enums.StartupOptions.None
-  nameWithType: StartupOptions.None
-- uid: DulcisX.Core.Enums.StartupOptions.Start
+  href: api/DulcisX.Core.Enums.StartupOption.html#DulcisX_Core_Enums_StartupOption_None
+  commentId: F:DulcisX.Core.Enums.StartupOption.None
+  fullName: DulcisX.Core.Enums.StartupOption.None
+  nameWithType: StartupOption.None
+- uid: DulcisX.Core.Enums.StartupOption.Start
   name: Start
-  href: api/DulcisX.Core.Enums.StartupOptions.html#DulcisX_Core_Enums_StartupOptions_Start
-  commentId: F:DulcisX.Core.Enums.StartupOptions.Start
-  fullName: DulcisX.Core.Enums.StartupOptions.Start
-  nameWithType: StartupOptions.Start
-- uid: DulcisX.Core.Enums.StartupOptions.StartWithDebugging
+  href: api/DulcisX.Core.Enums.StartupOption.html#DulcisX_Core_Enums_StartupOption_Start
+  commentId: F:DulcisX.Core.Enums.StartupOption.Start
+  fullName: DulcisX.Core.Enums.StartupOption.Start
+  nameWithType: StartupOption.Start
+- uid: DulcisX.Core.Enums.StartupOption.StartWithDebugging
   name: StartWithDebugging
-  href: api/DulcisX.Core.Enums.StartupOptions.html#DulcisX_Core_Enums_StartupOptions_StartWithDebugging
-  commentId: F:DulcisX.Core.Enums.StartupOptions.StartWithDebugging
-  fullName: DulcisX.Core.Enums.StartupOptions.StartWithDebugging
-  nameWithType: StartupOptions.StartWithDebugging
+  href: api/DulcisX.Core.Enums.StartupOption.html#DulcisX_Core_Enums_StartupOption_StartWithDebugging
+  commentId: F:DulcisX.Core.Enums.StartupOption.StartWithDebugging
+  fullName: DulcisX.Core.Enums.StartupOption.StartWithDebugging
+  nameWithType: StartupOption.StartWithDebugging
 - uid: DulcisX.Core.Enums.VisualStudio
   name: DulcisX.Core.Enums.VisualStudio
   href: api/DulcisX.Core.Enums.VisualStudio.html
@@ -751,18 +751,18 @@ references:
   commentId: F:DulcisX.Core.Enums.VisualStudio.OpenNodeAttribute.MkDocument
   fullName: DulcisX.Core.Enums.VisualStudio.OpenNodeAttribute.MkDocument
   nameWithType: OpenNodeAttribute.MkDocument
-- uid: DulcisX.Core.Enums.VisualStudio.OpenNodeAttribute.NOTIFYDOCCHANGEDEXMASK
-  name: NOTIFYDOCCHANGEDEXMASK
-  href: api/DulcisX.Core.Enums.VisualStudio.OpenNodeAttribute.html#DulcisX_Core_Enums_VisualStudio_OpenNodeAttribute_NOTIFYDOCCHANGEDEXMASK
-  commentId: F:DulcisX.Core.Enums.VisualStudio.OpenNodeAttribute.NOTIFYDOCCHANGEDEXMASK
-  fullName: DulcisX.Core.Enums.VisualStudio.OpenNodeAttribute.NOTIFYDOCCHANGEDEXMASK
-  nameWithType: OpenNodeAttribute.NOTIFYDOCCHANGEDEXMASK
 - uid: DulcisX.Core.Enums.VisualStudio.OpenNodeAttribute.NOTIFYDOCCHANGEDMASK
   name: NOTIFYDOCCHANGEDMASK
   href: api/DulcisX.Core.Enums.VisualStudio.OpenNodeAttribute.html#DulcisX_Core_Enums_VisualStudio_OpenNodeAttribute_NOTIFYDOCCHANGEDMASK
   commentId: F:DulcisX.Core.Enums.VisualStudio.OpenNodeAttribute.NOTIFYDOCCHANGEDMASK
   fullName: DulcisX.Core.Enums.VisualStudio.OpenNodeAttribute.NOTIFYDOCCHANGEDMASK
   nameWithType: OpenNodeAttribute.NOTIFYDOCCHANGEDMASK
+- uid: DulcisX.Core.Enums.VisualStudio.OpenNodeAttribute.NotifyDocChangedXMask
+  name: NotifyDocChangedXMask
+  href: api/DulcisX.Core.Enums.VisualStudio.OpenNodeAttribute.html#DulcisX_Core_Enums_VisualStudio_OpenNodeAttribute_NotifyDocChangedXMask
+  commentId: F:DulcisX.Core.Enums.VisualStudio.OpenNodeAttribute.NotifyDocChangedXMask
+  fullName: DulcisX.Core.Enums.VisualStudio.OpenNodeAttribute.NotifyDocChangedXMask
+  nameWithType: OpenNodeAttribute.NotifyDocChangedXMask
 - uid: DulcisX.Core.Enums.VisualStudio.PhysicalNodeRemovedFlags
   name: PhysicalNodeRemovedFlags
   href: api/DulcisX.Core.Enums.VisualStudio.PhysicalNodeRemovedFlags.html
@@ -861,13 +861,13 @@ references:
   isSpec: "True"
   fullName: DulcisX.Core.Extensions.ContainerExtensions.RegisterCOMInstance
   nameWithType: ContainerExtensions.RegisterCOMInstance
-- uid: DulcisX.Core.Extensions.ContainerExtensions.RegisterCOMInstance``2(SimpleInjector.Container,DulcisX.Core.Models.IServiceProviders)
+- uid: DulcisX.Core.Extensions.ContainerExtensions.RegisterCOMInstance``2(SimpleInjector.Container,DulcisX.Core.IServiceProviders)
   name: RegisterCOMInstance<TService, TInterface>(Container, IServiceProviders)
-  href: api/DulcisX.Core.Extensions.ContainerExtensions.html#DulcisX_Core_Extensions_ContainerExtensions_RegisterCOMInstance__2_SimpleInjector_Container_DulcisX_Core_Models_IServiceProviders_
-  commentId: M:DulcisX.Core.Extensions.ContainerExtensions.RegisterCOMInstance``2(SimpleInjector.Container,DulcisX.Core.Models.IServiceProviders)
+  href: api/DulcisX.Core.Extensions.ContainerExtensions.html#DulcisX_Core_Extensions_ContainerExtensions_RegisterCOMInstance__2_SimpleInjector_Container_DulcisX_Core_IServiceProviders_
+  commentId: M:DulcisX.Core.Extensions.ContainerExtensions.RegisterCOMInstance``2(SimpleInjector.Container,DulcisX.Core.IServiceProviders)
   name.vb: RegisterCOMInstance(Of TService, TInterface)(Container, IServiceProviders)
-  fullName: DulcisX.Core.Extensions.ContainerExtensions.RegisterCOMInstance<TService, TInterface>(SimpleInjector.Container, DulcisX.Core.Models.IServiceProviders)
-  fullName.vb: DulcisX.Core.Extensions.ContainerExtensions.RegisterCOMInstance(Of TService, TInterface)(SimpleInjector.Container, DulcisX.Core.Models.IServiceProviders)
+  fullName: DulcisX.Core.Extensions.ContainerExtensions.RegisterCOMInstance<TService, TInterface>(SimpleInjector.Container, DulcisX.Core.IServiceProviders)
+  fullName.vb: DulcisX.Core.Extensions.ContainerExtensions.RegisterCOMInstance(Of TService, TInterface)(SimpleInjector.Container, DulcisX.Core.IServiceProviders)
   nameWithType: ContainerExtensions.RegisterCOMInstance<TService, TInterface>(Container, IServiceProviders)
   nameWithType.vb: ContainerExtensions.RegisterCOMInstance(Of TService, TInterface)(Container, IServiceProviders)
 - uid: DulcisX.Core.Extensions.VsHierarchyExtensions
@@ -1048,50 +1048,12 @@ references:
   isSpec: "True"
   fullName: DulcisX.Core.IContainerConfiguration.ConfigureServices
   nameWithType: IContainerConfiguration.ConfigureServices
-- uid: DulcisX.Core.Models
-  name: DulcisX.Core.Models
-  href: api/DulcisX.Core.Models.html
-  commentId: N:DulcisX.Core.Models
-  fullName: DulcisX.Core.Models
-  nameWithType: DulcisX.Core.Models
-- uid: DulcisX.Core.Models.IServiceProviders
+- uid: DulcisX.Core.IServiceProviders
   name: IServiceProviders
-  href: api/DulcisX.Core.Models.IServiceProviders.html
-  commentId: T:DulcisX.Core.Models.IServiceProviders
-  fullName: DulcisX.Core.Models.IServiceProviders
+  href: api/DulcisX.Core.IServiceProviders.html
+  commentId: T:DulcisX.Core.IServiceProviders
+  fullName: DulcisX.Core.IServiceProviders
   nameWithType: IServiceProviders
-- uid: DulcisX.Core.NodeEventSink
-  name: NodeEventSink
-  href: api/DulcisX.Core.NodeEventSink.html
-  commentId: T:DulcisX.Core.NodeEventSink
-  fullName: DulcisX.Core.NodeEventSink
-  nameWithType: NodeEventSink
-- uid: DulcisX.Core.NodeEventSink.#ctor(DulcisX.Nodes.SolutionNode)
-  name: NodeEventSink(SolutionNode)
-  href: api/DulcisX.Core.NodeEventSink.html#DulcisX_Core_NodeEventSink__ctor_DulcisX_Nodes_SolutionNode_
-  commentId: M:DulcisX.Core.NodeEventSink.#ctor(DulcisX.Nodes.SolutionNode)
-  fullName: DulcisX.Core.NodeEventSink.NodeEventSink(DulcisX.Nodes.SolutionNode)
-  nameWithType: NodeEventSink.NodeEventSink(SolutionNode)
-- uid: DulcisX.Core.NodeEventSink.#ctor*
-  name: NodeEventSink
-  href: api/DulcisX.Core.NodeEventSink.html#DulcisX_Core_NodeEventSink__ctor_
-  commentId: Overload:DulcisX.Core.NodeEventSink.#ctor
-  isSpec: "True"
-  fullName: DulcisX.Core.NodeEventSink.NodeEventSink
-  nameWithType: NodeEventSink.NodeEventSink
-- uid: DulcisX.Core.NodeEventSink.Solution
-  name: Solution
-  href: api/DulcisX.Core.NodeEventSink.html#DulcisX_Core_NodeEventSink_Solution
-  commentId: P:DulcisX.Core.NodeEventSink.Solution
-  fullName: DulcisX.Core.NodeEventSink.Solution
-  nameWithType: NodeEventSink.Solution
-- uid: DulcisX.Core.NodeEventSink.Solution*
-  name: Solution
-  href: api/DulcisX.Core.NodeEventSink.html#DulcisX_Core_NodeEventSink_Solution_
-  commentId: Overload:DulcisX.Core.NodeEventSink.Solution
-  isSpec: "True"
-  fullName: DulcisX.Core.NodeEventSink.Solution
-  nameWithType: NodeEventSink.Solution
 - uid: DulcisX.Core.PackageX
   name: PackageX
   href: api/DulcisX.Core.PackageX.html
@@ -1574,38 +1536,38 @@ references:
   commentId: T:DulcisX.Helpers.VsConverter
   fullName: DulcisX.Helpers.VsConverter
   nameWithType: VsConverter
-- uid: DulcisX.Helpers.VsConverter.Boolean(System.Int32)
-  name: Boolean(Int32)
-  href: api/DulcisX.Helpers.VsConverter.html#DulcisX_Helpers_VsConverter_Boolean_System_Int32_
-  commentId: M:DulcisX.Helpers.VsConverter.Boolean(System.Int32)
-  fullName: DulcisX.Helpers.VsConverter.Boolean(System.Int32)
-  nameWithType: VsConverter.Boolean(Int32)
-- uid: DulcisX.Helpers.VsConverter.Boolean*
-  name: Boolean
-  href: api/DulcisX.Helpers.VsConverter.html#DulcisX_Helpers_VsConverter_Boolean_
-  commentId: Overload:DulcisX.Helpers.VsConverter.Boolean
+- uid: DulcisX.Helpers.VsConverter.AsBoolean(System.Int32)
+  name: AsBoolean(Int32)
+  href: api/DulcisX.Helpers.VsConverter.html#DulcisX_Helpers_VsConverter_AsBoolean_System_Int32_
+  commentId: M:DulcisX.Helpers.VsConverter.AsBoolean(System.Int32)
+  fullName: DulcisX.Helpers.VsConverter.AsBoolean(System.Int32)
+  nameWithType: VsConverter.AsBoolean(Int32)
+- uid: DulcisX.Helpers.VsConverter.AsBoolean*
+  name: AsBoolean
+  href: api/DulcisX.Helpers.VsConverter.html#DulcisX_Helpers_VsConverter_AsBoolean_
+  commentId: Overload:DulcisX.Helpers.VsConverter.AsBoolean
   isSpec: "True"
-  fullName: DulcisX.Helpers.VsConverter.Boolean
-  nameWithType: VsConverter.Boolean
+  fullName: DulcisX.Helpers.VsConverter.AsBoolean
+  nameWithType: VsConverter.AsBoolean
+- uid: DulcisX.Helpers.VsConverter.FromBoolean(System.Boolean)
+  name: FromBoolean(Boolean)
+  href: api/DulcisX.Helpers.VsConverter.html#DulcisX_Helpers_VsConverter_FromBoolean_System_Boolean_
+  commentId: M:DulcisX.Helpers.VsConverter.FromBoolean(System.Boolean)
+  fullName: DulcisX.Helpers.VsConverter.FromBoolean(System.Boolean)
+  nameWithType: VsConverter.FromBoolean(Boolean)
+- uid: DulcisX.Helpers.VsConverter.FromBoolean*
+  name: FromBoolean
+  href: api/DulcisX.Helpers.VsConverter.html#DulcisX_Helpers_VsConverter_FromBoolean_
+  commentId: Overload:DulcisX.Helpers.VsConverter.FromBoolean
+  isSpec: "True"
+  fullName: DulcisX.Helpers.VsConverter.FromBoolean
+  nameWithType: VsConverter.FromBoolean
 - uid: DulcisX.Helpers.VsHelper
   name: VsHelper
   href: api/DulcisX.Helpers.VsHelper.html
   commentId: T:DulcisX.Helpers.VsHelper
   fullName: DulcisX.Helpers.VsHelper
   nameWithType: VsHelper
-- uid: DulcisX.Helpers.VsHelper.IsFalse(System.Int32)
-  name: IsFalse(Int32)
-  href: api/DulcisX.Helpers.VsHelper.html#DulcisX_Helpers_VsHelper_IsFalse_System_Int32_
-  commentId: M:DulcisX.Helpers.VsHelper.IsFalse(System.Int32)
-  fullName: DulcisX.Helpers.VsHelper.IsFalse(System.Int32)
-  nameWithType: VsHelper.IsFalse(Int32)
-- uid: DulcisX.Helpers.VsHelper.IsFalse*
-  name: IsFalse
-  href: api/DulcisX.Helpers.VsHelper.html#DulcisX_Helpers_VsHelper_IsFalse_
-  commentId: Overload:DulcisX.Helpers.VsHelper.IsFalse
-  isSpec: "True"
-  fullName: DulcisX.Helpers.VsHelper.IsFalse
-  nameWithType: VsHelper.IsFalse
 - uid: DulcisX.Helpers.VsHelper.IsItemIdNil(System.UInt32)
   name: IsItemIdNil(UInt32)
   href: api/DulcisX.Helpers.VsHelper.html#DulcisX_Helpers_VsHelper_IsItemIdNil_System_UInt32_
@@ -1619,19 +1581,6 @@ references:
   isSpec: "True"
   fullName: DulcisX.Helpers.VsHelper.IsItemIdNil
   nameWithType: VsHelper.IsItemIdNil
-- uid: DulcisX.Helpers.VsHelper.IsTrue(System.Int32)
-  name: IsTrue(Int32)
-  href: api/DulcisX.Helpers.VsHelper.html#DulcisX_Helpers_VsHelper_IsTrue_System_Int32_
-  commentId: M:DulcisX.Helpers.VsHelper.IsTrue(System.Int32)
-  fullName: DulcisX.Helpers.VsHelper.IsTrue(System.Int32)
-  nameWithType: VsHelper.IsTrue(Int32)
-- uid: DulcisX.Helpers.VsHelper.IsTrue*
-  name: IsTrue
-  href: api/DulcisX.Helpers.VsHelper.html#DulcisX_Helpers_VsHelper_IsTrue_
-  commentId: Overload:DulcisX.Helpers.VsHelper.IsTrue
-  isSpec: "True"
-  fullName: DulcisX.Helpers.VsHelper.IsTrue
-  nameWithType: VsHelper.IsTrue
 - uid: DulcisX.Nodes
   name: DulcisX.Nodes
   href: api/DulcisX.Nodes.html
@@ -2045,28 +1994,6 @@ references:
   commentId: N:DulcisX.Nodes.Events
   fullName: DulcisX.Nodes.Events
   nameWithType: DulcisX.Nodes.Events
-- uid: DulcisX.Nodes.Events.CancelTranslaterFactory
-  name: CancelTranslaterFactory
-  href: api/DulcisX.Nodes.Events.CancelTranslaterFactory.html
-  commentId: T:DulcisX.Nodes.Events.CancelTranslaterFactory
-  fullName: DulcisX.Nodes.Events.CancelTranslaterFactory
-  nameWithType: CancelTranslaterFactory
-- uid: DulcisX.Nodes.Events.CancelTranslaterFactory.Create*
-  name: Create
-  href: api/DulcisX.Nodes.Events.CancelTranslaterFactory.html#DulcisX_Nodes_Events_CancelTranslaterFactory_Create_
-  commentId: Overload:DulcisX.Nodes.Events.CancelTranslaterFactory.Create
-  isSpec: "True"
-  fullName: DulcisX.Nodes.Events.CancelTranslaterFactory.Create
-  nameWithType: CancelTranslaterFactory.Create
-- uid: DulcisX.Nodes.Events.CancelTranslaterFactory.Create``1(``0,System.Int32@,System.Action{DulcisX.Nodes.Events.CancelTraslaterToken},System.Int32)
-  name: Create<TCallback>(TCallback, ref Int32, Action<CancelTraslaterToken>, Int32)
-  href: api/DulcisX.Nodes.Events.CancelTranslaterFactory.html#DulcisX_Nodes_Events_CancelTranslaterFactory_Create__1___0_System_Int32__System_Action_DulcisX_Nodes_Events_CancelTraslaterToken__System_Int32_
-  commentId: M:DulcisX.Nodes.Events.CancelTranslaterFactory.Create``1(``0,System.Int32@,System.Action{DulcisX.Nodes.Events.CancelTraslaterToken},System.Int32)
-  name.vb: Create(Of TCallback)(TCallback, ByRef Int32, Action(Of CancelTraslaterToken), Int32)
-  fullName: DulcisX.Nodes.Events.CancelTranslaterFactory.Create<TCallback>(TCallback, ref System.Int32, System.Action<DulcisX.Nodes.Events.CancelTraslaterToken>, System.Int32)
-  fullName.vb: DulcisX.Nodes.Events.CancelTranslaterFactory.Create(Of TCallback)(TCallback, ByRef System.Int32, System.Action(Of DulcisX.Nodes.Events.CancelTraslaterToken), System.Int32)
-  nameWithType: CancelTranslaterFactory.Create<TCallback>(TCallback, ref Int32, Action<CancelTraslaterToken>, Int32)
-  nameWithType.vb: CancelTranslaterFactory.Create(Of TCallback)(TCallback, ByRef Int32, Action(Of CancelTraslaterToken), Int32)
 - uid: DulcisX.Nodes.Events.CancelTraslaterToken
   name: CancelTraslaterToken
   href: api/DulcisX.Nodes.Events.CancelTraslaterToken.html
@@ -2374,12 +2301,6 @@ references:
   commentId: T:DulcisX.Nodes.Events.ISolutionBuildEvents
   fullName: DulcisX.Nodes.Events.ISolutionBuildEvents
   nameWithType: ISolutionBuildEvents
-- uid: DulcisX.Nodes.Events.ISolutionBuildEvents.OnProjectConfigurationBuild
-  name: OnProjectConfigurationBuild
-  href: api/DulcisX.Nodes.Events.ISolutionBuildEvents.html#DulcisX_Nodes_Events_ISolutionBuildEvents_OnProjectConfigurationBuild
-  commentId: E:DulcisX.Nodes.Events.ISolutionBuildEvents.OnProjectConfigurationBuild
-  fullName: DulcisX.Nodes.Events.ISolutionBuildEvents.OnProjectConfigurationBuild
-  nameWithType: ISolutionBuildEvents.OnProjectConfigurationBuild
 - uid: DulcisX.Nodes.Events.ISolutionBuildEvents.OnProjectConfigurationChanged
   name: OnProjectConfigurationChanged
   href: api/DulcisX.Nodes.Events.ISolutionBuildEvents.html#DulcisX_Nodes_Events_ISolutionBuildEvents_OnProjectConfigurationChanged
@@ -2393,6 +2314,12 @@ references:
   isSpec: "True"
   fullName: DulcisX.Nodes.Events.ISolutionBuildEvents.OnProjectConfigurationChanged
   nameWithType: ISolutionBuildEvents.OnProjectConfigurationChanged
+- uid: DulcisX.Nodes.Events.ISolutionBuildEvents.OnProjectsConfigurationBuild
+  name: OnProjectsConfigurationBuild
+  href: api/DulcisX.Nodes.Events.ISolutionBuildEvents.html#DulcisX_Nodes_Events_ISolutionBuildEvents_OnProjectsConfigurationBuild
+  commentId: E:DulcisX.Nodes.Events.ISolutionBuildEvents.OnProjectsConfigurationBuild
+  fullName: DulcisX.Nodes.Events.ISolutionBuildEvents.OnProjectsConfigurationBuild
+  nameWithType: ISolutionBuildEvents.OnProjectsConfigurationBuild
 - uid: DulcisX.Nodes.Events.ISolutionBuildEvents.OnSolutionBuild
   name: OnSolutionBuild
   href: api/DulcisX.Nodes.Events.ISolutionBuildEvents.html#DulcisX_Nodes_Events_ISolutionBuildEvents_OnSolutionBuild
@@ -2568,6 +2495,38 @@ references:
   commentId: E:DulcisX.Nodes.Events.ISolutionLoadEvents.OnBackgroundSolutionLoaded
   fullName: DulcisX.Nodes.Events.ISolutionLoadEvents.OnBackgroundSolutionLoaded
   nameWithType: ISolutionLoadEvents.OnBackgroundSolutionLoaded
+- uid: DulcisX.Nodes.Events.NodeEventSink
+  name: NodeEventSink
+  href: api/DulcisX.Nodes.Events.NodeEventSink.html
+  commentId: T:DulcisX.Nodes.Events.NodeEventSink
+  fullName: DulcisX.Nodes.Events.NodeEventSink
+  nameWithType: NodeEventSink
+- uid: DulcisX.Nodes.Events.NodeEventSink.#ctor(DulcisX.Nodes.SolutionNode)
+  name: NodeEventSink(SolutionNode)
+  href: api/DulcisX.Nodes.Events.NodeEventSink.html#DulcisX_Nodes_Events_NodeEventSink__ctor_DulcisX_Nodes_SolutionNode_
+  commentId: M:DulcisX.Nodes.Events.NodeEventSink.#ctor(DulcisX.Nodes.SolutionNode)
+  fullName: DulcisX.Nodes.Events.NodeEventSink.NodeEventSink(DulcisX.Nodes.SolutionNode)
+  nameWithType: NodeEventSink.NodeEventSink(SolutionNode)
+- uid: DulcisX.Nodes.Events.NodeEventSink.#ctor*
+  name: NodeEventSink
+  href: api/DulcisX.Nodes.Events.NodeEventSink.html#DulcisX_Nodes_Events_NodeEventSink__ctor_
+  commentId: Overload:DulcisX.Nodes.Events.NodeEventSink.#ctor
+  isSpec: "True"
+  fullName: DulcisX.Nodes.Events.NodeEventSink.NodeEventSink
+  nameWithType: NodeEventSink.NodeEventSink
+- uid: DulcisX.Nodes.Events.NodeEventSink.Solution
+  name: Solution
+  href: api/DulcisX.Nodes.Events.NodeEventSink.html#DulcisX_Nodes_Events_NodeEventSink_Solution
+  commentId: P:DulcisX.Nodes.Events.NodeEventSink.Solution
+  fullName: DulcisX.Nodes.Events.NodeEventSink.Solution
+  nameWithType: NodeEventSink.Solution
+- uid: DulcisX.Nodes.Events.NodeEventSink.Solution*
+  name: Solution
+  href: api/DulcisX.Nodes.Events.NodeEventSink.html#DulcisX_Nodes_Events_NodeEventSink_Solution_
+  commentId: Overload:DulcisX.Nodes.Events.NodeEventSink.Solution
+  isSpec: "True"
+  fullName: DulcisX.Nodes.Events.NodeEventSink.Solution
+  nameWithType: NodeEventSink.Solution
 - uid: DulcisX.Nodes.FolderNode
   name: FolderNode
   href: api/DulcisX.Nodes.FolderNode.html
@@ -3243,81 +3202,81 @@ references:
   fullName.vb: DulcisX.Nodes.RenamedPhysicalNode(Of TNodeType, TFlag).OldFullName
   nameWithType: RenamedPhysicalNode<TNodeType, TFlag>.OldFullName
   nameWithType.vb: RenamedPhysicalNode(Of TNodeType, TFlag).OldFullName
-- uid: DulcisX.Nodes.SelectedNodes
-  name: SelectedNodes
-  href: api/DulcisX.Nodes.SelectedNodes.html
-  commentId: T:DulcisX.Nodes.SelectedNodes
-  fullName: DulcisX.Nodes.SelectedNodes
-  nameWithType: SelectedNodes
-- uid: DulcisX.Nodes.SelectedNodes.GetEnumerator
+- uid: DulcisX.Nodes.SelectedNodesCollection
+  name: SelectedNodesCollection
+  href: api/DulcisX.Nodes.SelectedNodesCollection.html
+  commentId: T:DulcisX.Nodes.SelectedNodesCollection
+  fullName: DulcisX.Nodes.SelectedNodesCollection
+  nameWithType: SelectedNodesCollection
+- uid: DulcisX.Nodes.SelectedNodesCollection.GetEnumerator
   name: GetEnumerator()
-  href: api/DulcisX.Nodes.SelectedNodes.html#DulcisX_Nodes_SelectedNodes_GetEnumerator
-  commentId: M:DulcisX.Nodes.SelectedNodes.GetEnumerator
-  fullName: DulcisX.Nodes.SelectedNodes.GetEnumerator()
-  nameWithType: SelectedNodes.GetEnumerator()
-- uid: DulcisX.Nodes.SelectedNodes.GetEnumerator*
+  href: api/DulcisX.Nodes.SelectedNodesCollection.html#DulcisX_Nodes_SelectedNodesCollection_GetEnumerator
+  commentId: M:DulcisX.Nodes.SelectedNodesCollection.GetEnumerator
+  fullName: DulcisX.Nodes.SelectedNodesCollection.GetEnumerator()
+  nameWithType: SelectedNodesCollection.GetEnumerator()
+- uid: DulcisX.Nodes.SelectedNodesCollection.GetEnumerator*
   name: GetEnumerator
-  href: api/DulcisX.Nodes.SelectedNodes.html#DulcisX_Nodes_SelectedNodes_GetEnumerator_
-  commentId: Overload:DulcisX.Nodes.SelectedNodes.GetEnumerator
+  href: api/DulcisX.Nodes.SelectedNodesCollection.html#DulcisX_Nodes_SelectedNodesCollection_GetEnumerator_
+  commentId: Overload:DulcisX.Nodes.SelectedNodesCollection.GetEnumerator
   isSpec: "True"
-  fullName: DulcisX.Nodes.SelectedNodes.GetEnumerator
-  nameWithType: SelectedNodes.GetEnumerator
-- uid: DulcisX.Nodes.SelectedNodes.GetMultiSelection(Microsoft.VisualStudio.Shell.Interop.IVsMultiItemSelect,DulcisX.Nodes.SolutionNode)
+  fullName: DulcisX.Nodes.SelectedNodesCollection.GetEnumerator
+  nameWithType: SelectedNodesCollection.GetEnumerator
+- uid: DulcisX.Nodes.SelectedNodesCollection.GetMultiSelection(Microsoft.VisualStudio.Shell.Interop.IVsMultiItemSelect,DulcisX.Nodes.SolutionNode)
   name: GetMultiSelection(IVsMultiItemSelect, SolutionNode)
-  href: api/DulcisX.Nodes.SelectedNodes.html#DulcisX_Nodes_SelectedNodes_GetMultiSelection_Microsoft_VisualStudio_Shell_Interop_IVsMultiItemSelect_DulcisX_Nodes_SolutionNode_
-  commentId: M:DulcisX.Nodes.SelectedNodes.GetMultiSelection(Microsoft.VisualStudio.Shell.Interop.IVsMultiItemSelect,DulcisX.Nodes.SolutionNode)
-  fullName: DulcisX.Nodes.SelectedNodes.GetMultiSelection(Microsoft.VisualStudio.Shell.Interop.IVsMultiItemSelect, DulcisX.Nodes.SolutionNode)
-  nameWithType: SelectedNodes.GetMultiSelection(IVsMultiItemSelect, SolutionNode)
-- uid: DulcisX.Nodes.SelectedNodes.GetMultiSelection*
+  href: api/DulcisX.Nodes.SelectedNodesCollection.html#DulcisX_Nodes_SelectedNodesCollection_GetMultiSelection_Microsoft_VisualStudio_Shell_Interop_IVsMultiItemSelect_DulcisX_Nodes_SolutionNode_
+  commentId: M:DulcisX.Nodes.SelectedNodesCollection.GetMultiSelection(Microsoft.VisualStudio.Shell.Interop.IVsMultiItemSelect,DulcisX.Nodes.SolutionNode)
+  fullName: DulcisX.Nodes.SelectedNodesCollection.GetMultiSelection(Microsoft.VisualStudio.Shell.Interop.IVsMultiItemSelect, DulcisX.Nodes.SolutionNode)
+  nameWithType: SelectedNodesCollection.GetMultiSelection(IVsMultiItemSelect, SolutionNode)
+- uid: DulcisX.Nodes.SelectedNodesCollection.GetMultiSelection*
   name: GetMultiSelection
-  href: api/DulcisX.Nodes.SelectedNodes.html#DulcisX_Nodes_SelectedNodes_GetMultiSelection_
-  commentId: Overload:DulcisX.Nodes.SelectedNodes.GetMultiSelection
+  href: api/DulcisX.Nodes.SelectedNodesCollection.html#DulcisX_Nodes_SelectedNodesCollection_GetMultiSelection_
+  commentId: Overload:DulcisX.Nodes.SelectedNodesCollection.GetMultiSelection
   isSpec: "True"
-  fullName: DulcisX.Nodes.SelectedNodes.GetMultiSelection
-  nameWithType: SelectedNodes.GetMultiSelection
-- uid: DulcisX.Nodes.SelectedNodes.GetSelection(Microsoft.VisualStudio.Shell.Interop.IVsMultiItemSelect,Microsoft.VisualStudio.Shell.Interop.IVsHierarchy,System.UInt32,DulcisX.Nodes.SolutionNode)
+  fullName: DulcisX.Nodes.SelectedNodesCollection.GetMultiSelection
+  nameWithType: SelectedNodesCollection.GetMultiSelection
+- uid: DulcisX.Nodes.SelectedNodesCollection.GetSelection(Microsoft.VisualStudio.Shell.Interop.IVsMultiItemSelect,Microsoft.VisualStudio.Shell.Interop.IVsHierarchy,System.UInt32,DulcisX.Nodes.SolutionNode)
   name: GetSelection(IVsMultiItemSelect, IVsHierarchy, UInt32, SolutionNode)
-  href: api/DulcisX.Nodes.SelectedNodes.html#DulcisX_Nodes_SelectedNodes_GetSelection_Microsoft_VisualStudio_Shell_Interop_IVsMultiItemSelect_Microsoft_VisualStudio_Shell_Interop_IVsHierarchy_System_UInt32_DulcisX_Nodes_SolutionNode_
-  commentId: M:DulcisX.Nodes.SelectedNodes.GetSelection(Microsoft.VisualStudio.Shell.Interop.IVsMultiItemSelect,Microsoft.VisualStudio.Shell.Interop.IVsHierarchy,System.UInt32,DulcisX.Nodes.SolutionNode)
-  fullName: DulcisX.Nodes.SelectedNodes.GetSelection(Microsoft.VisualStudio.Shell.Interop.IVsMultiItemSelect, Microsoft.VisualStudio.Shell.Interop.IVsHierarchy, System.UInt32, DulcisX.Nodes.SolutionNode)
-  nameWithType: SelectedNodes.GetSelection(IVsMultiItemSelect, IVsHierarchy, UInt32, SolutionNode)
-- uid: DulcisX.Nodes.SelectedNodes.GetSelection*
+  href: api/DulcisX.Nodes.SelectedNodesCollection.html#DulcisX_Nodes_SelectedNodesCollection_GetSelection_Microsoft_VisualStudio_Shell_Interop_IVsMultiItemSelect_Microsoft_VisualStudio_Shell_Interop_IVsHierarchy_System_UInt32_DulcisX_Nodes_SolutionNode_
+  commentId: M:DulcisX.Nodes.SelectedNodesCollection.GetSelection(Microsoft.VisualStudio.Shell.Interop.IVsMultiItemSelect,Microsoft.VisualStudio.Shell.Interop.IVsHierarchy,System.UInt32,DulcisX.Nodes.SolutionNode)
+  fullName: DulcisX.Nodes.SelectedNodesCollection.GetSelection(Microsoft.VisualStudio.Shell.Interop.IVsMultiItemSelect, Microsoft.VisualStudio.Shell.Interop.IVsHierarchy, System.UInt32, DulcisX.Nodes.SolutionNode)
+  nameWithType: SelectedNodesCollection.GetSelection(IVsMultiItemSelect, IVsHierarchy, UInt32, SolutionNode)
+- uid: DulcisX.Nodes.SelectedNodesCollection.GetSelection*
   name: GetSelection
-  href: api/DulcisX.Nodes.SelectedNodes.html#DulcisX_Nodes_SelectedNodes_GetSelection_
-  commentId: Overload:DulcisX.Nodes.SelectedNodes.GetSelection
+  href: api/DulcisX.Nodes.SelectedNodesCollection.html#DulcisX_Nodes_SelectedNodesCollection_GetSelection_
+  commentId: Overload:DulcisX.Nodes.SelectedNodesCollection.GetSelection
   isSpec: "True"
-  fullName: DulcisX.Nodes.SelectedNodes.GetSelection
-  nameWithType: SelectedNodes.GetSelection
-- uid: DulcisX.Nodes.SelectedNodes.GetSingleSelection(Microsoft.VisualStudio.Shell.Interop.IVsHierarchy,System.UInt32,DulcisX.Nodes.SolutionNode)
+  fullName: DulcisX.Nodes.SelectedNodesCollection.GetSelection
+  nameWithType: SelectedNodesCollection.GetSelection
+- uid: DulcisX.Nodes.SelectedNodesCollection.GetSingleSelection(Microsoft.VisualStudio.Shell.Interop.IVsHierarchy,System.UInt32,DulcisX.Nodes.SolutionNode)
   name: GetSingleSelection(IVsHierarchy, UInt32, SolutionNode)
-  href: api/DulcisX.Nodes.SelectedNodes.html#DulcisX_Nodes_SelectedNodes_GetSingleSelection_Microsoft_VisualStudio_Shell_Interop_IVsHierarchy_System_UInt32_DulcisX_Nodes_SolutionNode_
-  commentId: M:DulcisX.Nodes.SelectedNodes.GetSingleSelection(Microsoft.VisualStudio.Shell.Interop.IVsHierarchy,System.UInt32,DulcisX.Nodes.SolutionNode)
-  fullName: DulcisX.Nodes.SelectedNodes.GetSingleSelection(Microsoft.VisualStudio.Shell.Interop.IVsHierarchy, System.UInt32, DulcisX.Nodes.SolutionNode)
-  nameWithType: SelectedNodes.GetSingleSelection(IVsHierarchy, UInt32, SolutionNode)
-- uid: DulcisX.Nodes.SelectedNodes.GetSingleSelection*
+  href: api/DulcisX.Nodes.SelectedNodesCollection.html#DulcisX_Nodes_SelectedNodesCollection_GetSingleSelection_Microsoft_VisualStudio_Shell_Interop_IVsHierarchy_System_UInt32_DulcisX_Nodes_SolutionNode_
+  commentId: M:DulcisX.Nodes.SelectedNodesCollection.GetSingleSelection(Microsoft.VisualStudio.Shell.Interop.IVsHierarchy,System.UInt32,DulcisX.Nodes.SolutionNode)
+  fullName: DulcisX.Nodes.SelectedNodesCollection.GetSingleSelection(Microsoft.VisualStudio.Shell.Interop.IVsHierarchy, System.UInt32, DulcisX.Nodes.SolutionNode)
+  nameWithType: SelectedNodesCollection.GetSingleSelection(IVsHierarchy, UInt32, SolutionNode)
+- uid: DulcisX.Nodes.SelectedNodesCollection.GetSingleSelection*
   name: GetSingleSelection
-  href: api/DulcisX.Nodes.SelectedNodes.html#DulcisX_Nodes_SelectedNodes_GetSingleSelection_
-  commentId: Overload:DulcisX.Nodes.SelectedNodes.GetSingleSelection
+  href: api/DulcisX.Nodes.SelectedNodesCollection.html#DulcisX_Nodes_SelectedNodesCollection_GetSingleSelection_
+  commentId: Overload:DulcisX.Nodes.SelectedNodesCollection.GetSingleSelection
   isSpec: "True"
-  fullName: DulcisX.Nodes.SelectedNodes.GetSingleSelection
-  nameWithType: SelectedNodes.GetSingleSelection
-- uid: DulcisX.Nodes.SelectedNodes.System#Collections#IEnumerable#GetEnumerator
+  fullName: DulcisX.Nodes.SelectedNodesCollection.GetSingleSelection
+  nameWithType: SelectedNodesCollection.GetSingleSelection
+- uid: DulcisX.Nodes.SelectedNodesCollection.System#Collections#IEnumerable#GetEnumerator
   name: IEnumerable.GetEnumerator()
-  href: api/DulcisX.Nodes.SelectedNodes.html#DulcisX_Nodes_SelectedNodes_System_Collections_IEnumerable_GetEnumerator
-  commentId: M:DulcisX.Nodes.SelectedNodes.System#Collections#IEnumerable#GetEnumerator
+  href: api/DulcisX.Nodes.SelectedNodesCollection.html#DulcisX_Nodes_SelectedNodesCollection_System_Collections_IEnumerable_GetEnumerator
+  commentId: M:DulcisX.Nodes.SelectedNodesCollection.System#Collections#IEnumerable#GetEnumerator
   name.vb: System.Collections.IEnumerable.GetEnumerator()
-  fullName: DulcisX.Nodes.SelectedNodes.System.Collections.IEnumerable.GetEnumerator()
-  nameWithType: SelectedNodes.IEnumerable.GetEnumerator()
-  nameWithType.vb: SelectedNodes.System.Collections.IEnumerable.GetEnumerator()
-- uid: DulcisX.Nodes.SelectedNodes.System#Collections#IEnumerable#GetEnumerator*
+  fullName: DulcisX.Nodes.SelectedNodesCollection.System.Collections.IEnumerable.GetEnumerator()
+  nameWithType: SelectedNodesCollection.IEnumerable.GetEnumerator()
+  nameWithType.vb: SelectedNodesCollection.System.Collections.IEnumerable.GetEnumerator()
+- uid: DulcisX.Nodes.SelectedNodesCollection.System#Collections#IEnumerable#GetEnumerator*
   name: IEnumerable.GetEnumerator
-  href: api/DulcisX.Nodes.SelectedNodes.html#DulcisX_Nodes_SelectedNodes_System_Collections_IEnumerable_GetEnumerator_
-  commentId: Overload:DulcisX.Nodes.SelectedNodes.System#Collections#IEnumerable#GetEnumerator
+  href: api/DulcisX.Nodes.SelectedNodesCollection.html#DulcisX_Nodes_SelectedNodesCollection_System_Collections_IEnumerable_GetEnumerator_
+  commentId: Overload:DulcisX.Nodes.SelectedNodesCollection.System#Collections#IEnumerable#GetEnumerator
   isSpec: "True"
   name.vb: System.Collections.IEnumerable.GetEnumerator
-  fullName: DulcisX.Nodes.SelectedNodes.System.Collections.IEnumerable.GetEnumerator
-  nameWithType: SelectedNodes.IEnumerable.GetEnumerator
-  nameWithType.vb: SelectedNodes.System.Collections.IEnumerable.GetEnumerator
+  fullName: DulcisX.Nodes.SelectedNodesCollection.System.Collections.IEnumerable.GetEnumerator
+  nameWithType: SelectedNodesCollection.IEnumerable.GetEnumerator
+  nameWithType.vb: SelectedNodesCollection.System.Collections.IEnumerable.GetEnumerator
 - uid: DulcisX.Nodes.SolutionFolderNode
   name: SolutionFolderNode
   href: api/DulcisX.Nodes.SolutionFolderNode.html
@@ -3423,11 +3382,11 @@ references:
   commentId: T:DulcisX.Nodes.SolutionNode
   fullName: DulcisX.Nodes.SolutionNode
   nameWithType: SolutionNode
-- uid: DulcisX.Nodes.SolutionNode.#ctor(Microsoft.VisualStudio.Shell.Interop.IVsSolution,DulcisX.Core.Models.IServiceProviders,SimpleInjector.Container)
+- uid: DulcisX.Nodes.SolutionNode.#ctor(Microsoft.VisualStudio.Shell.Interop.IVsSolution,DulcisX.Core.IServiceProviders,SimpleInjector.Container)
   name: SolutionNode(IVsSolution, IServiceProviders, Container)
-  href: api/DulcisX.Nodes.SolutionNode.html#DulcisX_Nodes_SolutionNode__ctor_Microsoft_VisualStudio_Shell_Interop_IVsSolution_DulcisX_Core_Models_IServiceProviders_SimpleInjector_Container_
-  commentId: M:DulcisX.Nodes.SolutionNode.#ctor(Microsoft.VisualStudio.Shell.Interop.IVsSolution,DulcisX.Core.Models.IServiceProviders,SimpleInjector.Container)
-  fullName: DulcisX.Nodes.SolutionNode.SolutionNode(Microsoft.VisualStudio.Shell.Interop.IVsSolution, DulcisX.Core.Models.IServiceProviders, SimpleInjector.Container)
+  href: api/DulcisX.Nodes.SolutionNode.html#DulcisX_Nodes_SolutionNode__ctor_Microsoft_VisualStudio_Shell_Interop_IVsSolution_DulcisX_Core_IServiceProviders_SimpleInjector_Container_
+  commentId: M:DulcisX.Nodes.SolutionNode.#ctor(Microsoft.VisualStudio.Shell.Interop.IVsSolution,DulcisX.Core.IServiceProviders,SimpleInjector.Container)
+  fullName: DulcisX.Nodes.SolutionNode.SolutionNode(Microsoft.VisualStudio.Shell.Interop.IVsSolution, DulcisX.Core.IServiceProviders, SimpleInjector.Container)
   nameWithType: SolutionNode.SolutionNode(IVsSolution, IServiceProviders, Container)
 - uid: DulcisX.Nodes.SolutionNode.#ctor*
   name: SolutionNode
@@ -3532,19 +3491,6 @@ references:
   isSpec: "True"
   fullName: DulcisX.Nodes.SolutionNode.GetStartupProjects
   nameWithType: SolutionNode.GetStartupProjects
-- uid: DulcisX.Nodes.SolutionNode.GetUserConfiguration(Microsoft.VisualStudio.Shell.Interop.IVsPersistSolutionOpts,System.String)
-  name: GetUserConfiguration(IVsPersistSolutionOpts, String)
-  href: api/DulcisX.Nodes.SolutionNode.html#DulcisX_Nodes_SolutionNode_GetUserConfiguration_Microsoft_VisualStudio_Shell_Interop_IVsPersistSolutionOpts_System_String_
-  commentId: M:DulcisX.Nodes.SolutionNode.GetUserConfiguration(Microsoft.VisualStudio.Shell.Interop.IVsPersistSolutionOpts,System.String)
-  fullName: DulcisX.Nodes.SolutionNode.GetUserConfiguration(Microsoft.VisualStudio.Shell.Interop.IVsPersistSolutionOpts, System.String)
-  nameWithType: SolutionNode.GetUserConfiguration(IVsPersistSolutionOpts, String)
-- uid: DulcisX.Nodes.SolutionNode.GetUserConfiguration*
-  name: GetUserConfiguration
-  href: api/DulcisX.Nodes.SolutionNode.html#DulcisX_Nodes_SolutionNode_GetUserConfiguration_
-  commentId: Overload:DulcisX.Nodes.SolutionNode.GetUserConfiguration
-  isSpec: "True"
-  fullName: DulcisX.Nodes.SolutionNode.GetUserConfiguration
-  nameWithType: SolutionNode.GetUserConfiguration
 - uid: DulcisX.Nodes.SolutionNode.IsSolutionFullyLoaded
   name: IsSolutionFullyLoaded()
   href: api/DulcisX.Nodes.SolutionNode.html#DulcisX_Nodes_SolutionNode_IsSolutionFullyLoaded
@@ -3571,6 +3517,19 @@ references:
   isSpec: "True"
   fullName: DulcisX.Nodes.SolutionNode.IsTempSolution
   nameWithType: SolutionNode.IsTempSolution
+- uid: DulcisX.Nodes.SolutionNode.LoadUserConfiguration(Microsoft.VisualStudio.Shell.Interop.IVsPersistSolutionOpts,System.String)
+  name: LoadUserConfiguration(IVsPersistSolutionOpts, String)
+  href: api/DulcisX.Nodes.SolutionNode.html#DulcisX_Nodes_SolutionNode_LoadUserConfiguration_Microsoft_VisualStudio_Shell_Interop_IVsPersistSolutionOpts_System_String_
+  commentId: M:DulcisX.Nodes.SolutionNode.LoadUserConfiguration(Microsoft.VisualStudio.Shell.Interop.IVsPersistSolutionOpts,System.String)
+  fullName: DulcisX.Nodes.SolutionNode.LoadUserConfiguration(Microsoft.VisualStudio.Shell.Interop.IVsPersistSolutionOpts, System.String)
+  nameWithType: SolutionNode.LoadUserConfiguration(IVsPersistSolutionOpts, String)
+- uid: DulcisX.Nodes.SolutionNode.LoadUserConfiguration*
+  name: LoadUserConfiguration
+  href: api/DulcisX.Nodes.SolutionNode.html#DulcisX_Nodes_SolutionNode_LoadUserConfiguration_
+  commentId: Overload:DulcisX.Nodes.SolutionNode.LoadUserConfiguration
+  isSpec: "True"
+  fullName: DulcisX.Nodes.SolutionNode.LoadUserConfiguration
+  nameWithType: SolutionNode.LoadUserConfiguration
 - uid: DulcisX.Nodes.SolutionNode.NodeSelectionEvents
   name: NodeSelectionEvents
   href: api/DulcisX.Nodes.SolutionNode.html#DulcisX_Nodes_SolutionNode_NodeSelectionEvents

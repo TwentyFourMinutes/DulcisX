@@ -86,7 +86,8 @@
   
   <h1 id="DulcisX_Core_Components_IButtonInfoMessageBuilder" data-uid="DulcisX.Core.Components.IButtonInfoMessageBuilder" class="text-break">Interface IButtonInfoMessageBuilder
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>Represents the button builder of an InfoBar message.</p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <h6><strong>Namespace</strong>: <a class="xref" href="DulcisX.Core.Components.html">DulcisX.Core.Components</a></h6>
   <h6><strong>Assembly</strong>: DulcisX.dll</h6>
@@ -101,11 +102,12 @@
     <a href="https://github.com/TwentyFourMinutes/DulcisX/new/master/apiSpec/new?filename=DulcisX_Core_Components_IButtonInfoMessageBuilder_Publish_System_Action_.md&amp;value=---%0Auid%3A%20DulcisX.Core.Components.IButtonInfoMessageBuilder.Publish(System.Action)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/TwentyFourMinutes/DulcisX/blob/master/src/DulcisX/DulcisX/Core/Components/InfoBar/IMessageBuilder.cs/#L25">View Source</a>
+    <a href="https://github.com/TwentyFourMinutes/DulcisX/blob/master/src/DulcisX/DulcisX/Core/Components/InfoBar/IMessageBuilder.cs/#L91">View Source</a>
   </span>
   <a id="DulcisX_Core_Components_IButtonInfoMessageBuilder_Publish_" data-uid="DulcisX.Core.Components.IButtonInfoMessageBuilder.Publish*"></a>
   <h4 id="DulcisX_Core_Components_IButtonInfoMessageBuilder_Publish_System_Action_" data-uid="DulcisX.Core.Components.IButtonInfoMessageBuilder.Publish(System.Action)">Publish(Action)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Displays the InfoBar message to the user.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -124,7 +126,8 @@
       <tr>
         <td><span class="xref">System.Action</span></td>
         <td><span class="parametername">cancelCallback</span></td>
-        <td></td>
+        <td><p>A callback action which gets called if the user clicks on the close ('x') button.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -139,7 +142,8 @@
     <tbody>
       <tr>
         <td><a class="xref" href="DulcisX.Core.Components.InfoBarHandle.html">InfoBarHandle</a></td>
-        <td></td>
+        <td><p>A new unique <a class="xref" href="DulcisX.Core.Components.InfoBarHandle.html">InfoBarHandle</a> instance pointing to the created InfoBar message. Used to manually remove the InfoBar message in <a class="xref" href="DulcisX.Core.Components.InfoBar.html#DulcisX_Core_Components_InfoBar_RemoveMessage_DulcisX_Core_Components_InfoBarHandle_">RemoveMessage(InfoBarHandle)</a>.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -148,11 +152,12 @@
     <a href="https://github.com/TwentyFourMinutes/DulcisX/new/master/apiSpec/new?filename=DulcisX_Core_Components_IButtonInfoMessageBuilder_WithButton_System_String_System_Action_System_Boolean_.md&amp;value=---%0Auid%3A%20DulcisX.Core.Components.IButtonInfoMessageBuilder.WithButton(System.String%2CSystem.Action%2CSystem.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/TwentyFourMinutes/DulcisX/blob/master/src/DulcisX/DulcisX/Core/Components/InfoBar/IMessageBuilder.cs/#L24">View Source</a>
+    <a href="https://github.com/TwentyFourMinutes/DulcisX/blob/master/src/DulcisX/DulcisX/Core/Components/InfoBar/IMessageBuilder.cs/#L84">View Source</a>
   </span>
   <a id="DulcisX_Core_Components_IButtonInfoMessageBuilder_WithButton_" data-uid="DulcisX.Core.Components.IButtonInfoMessageBuilder.WithButton*"></a>
   <h4 id="DulcisX_Core_Components_IButtonInfoMessageBuilder_WithButton_System_String_System_Action_System_Boolean_" data-uid="DulcisX.Core.Components.IButtonInfoMessageBuilder.WithButton(System.String,System.Action,System.Boolean)">WithButton(String, Action, Boolean)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Adds a button to the InfoBar message.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -171,17 +176,20 @@
       <tr>
         <td><span class="xref">System.String</span></td>
         <td><span class="parametername">text</span></td>
-        <td></td>
+        <td><p>The text to be displayed inside the button.</p>
+</td>
       </tr>
       <tr>
         <td><span class="xref">System.Action</span></td>
         <td><span class="parametername">callback</span></td>
-        <td></td>
+        <td><p>A callback action which gets called if the user clicks on the button.</p>
+</td>
       </tr>
       <tr>
         <td><span class="xref">System.Boolean</span></td>
         <td><span class="parametername">closeAfterClick</span></td>
-        <td></td>
+        <td><p>Specifies whether or not the InfoBar message should be removed after the user clicked the button.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -196,7 +204,8 @@
     <tbody>
       <tr>
         <td><a class="xref" href="DulcisX.Core.Components.IButtonInfoMessageBuilder.html">IButtonInfoMessageBuilder</a></td>
-        <td></td>
+        <td><p>An <a class="xref" href="DulcisX.Core.Components.IButtonInfoMessageBuilder.html">IButtonInfoMessageBuilder</a> instance.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -205,11 +214,12 @@
     <a href="https://github.com/TwentyFourMinutes/DulcisX/new/master/apiSpec/new?filename=DulcisX_Core_Components_IButtonInfoMessageBuilder_WithButton_System_String_System_Boolean_.md&amp;value=---%0Auid%3A%20DulcisX.Core.Components.IButtonInfoMessageBuilder.WithButton(System.String%2CSystem.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/TwentyFourMinutes/DulcisX/blob/master/src/DulcisX/DulcisX/Core/Components/InfoBar/IMessageBuilder.cs/#L23">View Source</a>
+    <a href="https://github.com/TwentyFourMinutes/DulcisX/blob/master/src/DulcisX/DulcisX/Core/Components/InfoBar/IMessageBuilder.cs/#L76">View Source</a>
   </span>
   <a id="DulcisX_Core_Components_IButtonInfoMessageBuilder_WithButton_" data-uid="DulcisX.Core.Components.IButtonInfoMessageBuilder.WithButton*"></a>
   <h4 id="DulcisX_Core_Components_IButtonInfoMessageBuilder_WithButton_System_String_System_Boolean_" data-uid="DulcisX.Core.Components.IButtonInfoMessageBuilder.WithButton(System.String,System.Boolean)">WithButton(String, Boolean)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Adds a button to the InfoBar message.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -228,12 +238,14 @@
       <tr>
         <td><span class="xref">System.String</span></td>
         <td><span class="parametername">text</span></td>
-        <td></td>
+        <td><p>The text to be displayed inside the button.</p>
+</td>
       </tr>
       <tr>
         <td><span class="xref">System.Boolean</span></td>
         <td><span class="parametername">closeAfterClick</span></td>
-        <td></td>
+        <td><p>Specifies whether or not the InfoBar message should be removed after the user clicked the button.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -248,7 +260,8 @@
     <tbody>
       <tr>
         <td><a class="xref" href="DulcisX.Core.Components.IButtonInfoMessageBuilder.html">IButtonInfoMessageBuilder</a></td>
-        <td></td>
+        <td><p>An <a class="xref" href="DulcisX.Core.Components.IButtonInfoMessageBuilder.html">IButtonInfoMessageBuilder</a> instance.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -271,7 +284,7 @@
                     <a href="https://github.com/TwentyFourMinutes/DulcisX/new/master/apiSpec/new?filename=DulcisX_Core_Components_IButtonInfoMessageBuilder.md&amp;value=---%0Auid%3A%20DulcisX.Core.Components.IButtonInfoMessageBuilder%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/TwentyFourMinutes/DulcisX/blob/master/src/DulcisX/DulcisX/Core/Components/InfoBar/IMessageBuilder.cs/#L21" class="contribution-link">View Source</a>
+                    <a href="https://github.com/TwentyFourMinutes/DulcisX/blob/master/src/DulcisX/DulcisX/Core/Components/InfoBar/IMessageBuilder.cs/#L68" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

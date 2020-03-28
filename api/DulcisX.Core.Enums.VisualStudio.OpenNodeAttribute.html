@@ -86,9 +86,7 @@
   
   <h1 id="DulcisX_Core_Enums_VisualStudio_OpenNodeAttribute" data-uid="DulcisX.Core.Enums.VisualStudio.OpenNodeAttribute" class="text-break">Enum OpenNodeAttribute
   </h1>
-  <div class="markdown level0 summary"><p><a href="https://docs.microsoft.com/en-us/dotnet/api/microsoft.visualstudio.shell.interop.__vsrdtattrib?view=visualstudiosdk-2017">https://docs.microsoft.com/en-us/dotnet/api/microsoft.visualstudio.shell.interop.__vsrdtattrib?view=visualstudiosdk-2017</a>
-<a href="https://docs.microsoft.com/en-us/dotnet/api/microsoft.visualstudio.shell.interop.__vsrdtattrib2?view=visualstudiosdk-2017">https://docs.microsoft.com/en-us/dotnet/api/microsoft.visualstudio.shell.interop.__vsrdtattrib2?view=visualstudiosdk-2017</a>
-<a href="https://docs.microsoft.com/en-us/dotnet/api/microsoft.visualstudio.shell.interop.__vsrdtattrib3?view=visualstudiosdk-2017">https://docs.microsoft.com/en-us/dotnet/api/microsoft.visualstudio.shell.interop.__vsrdtattrib3?view=visualstudiosdk-2017</a></p>
+  <div class="markdown level0 summary"><p>Used instead of <span class="xref">Microsoft.VisualStudio.Shell.Interop.__VSRDTATTRIB</span>, <span class="xref">Microsoft.VisualStudio.Shell.Interop.__VSRDTATTRIB2</span> and <span class="xref">Microsoft.VisualStudio.Shell.Interop.__VSRDTATTRIB3</span>. It unifies all of the listed enum members.</p>
 </div>
   <div class="markdown level0 conceptual"></div>
   <h6><strong>Namespace</strong>: <a class="xref" href="DulcisX.Core.Enums.VisualStudio.html">DulcisX.Core.Enums.VisualStudio</a></h6>
@@ -109,55 +107,68 @@
     <tbody>
       <tr>
         <td id="DulcisX_Core_Enums_VisualStudio_OpenNodeAttribute_AltHierarchyItemID">AltHierarchyItemID</td>
-        <td></td>
+        <td><p>This attribute event is fired by calling the <span class="xref">Microsoft.VisualStudio.Shell.Interop.IVsRunningDocumentTable.NotifyDocumentChanged(System.UInt32,System.UInt32)</span> method.</p>
+</td>
       </tr>
       <tr>
         <td id="DulcisX_Core_Enums_VisualStudio_OpenNodeAttribute_DocDataIsDirty">DocDataIsDirty</td>
-        <td></td>
+        <td><p>Flag indicates that the data of the document in the <span class="xref">Microsoft.VisualStudio.Shell.Interop.IVsRunningDocumentTable</span> has changed.</p>
+</td>
       </tr>
       <tr>
         <td id="DulcisX_Core_Enums_VisualStudio_OpenNodeAttribute_DocDataIsNotDirty">DocDataIsNotDirty</td>
-        <td></td>
+        <td><p>Flag indicates that the data of the document in the <span class="xref">Microsoft.VisualStudio.Shell.Interop.IVsRunningDocumentTable</span> has not changed.</p>
+</td>
       </tr>
       <tr>
         <td id="DulcisX_Core_Enums_VisualStudio_OpenNodeAttribute_DocDataIsNotReadOnly">DocDataIsNotReadOnly</td>
-        <td></td>
+        <td><p>The data of the document in the <span class="xref">Microsoft.VisualStudio.Shell.Interop.IVsRunningDocumentTable</span> is readable and writable.</p>
+</td>
       </tr>
       <tr>
         <td id="DulcisX_Core_Enums_VisualStudio_OpenNodeAttribute_DocDataIsReadOnly">DocDataIsReadOnly</td>
-        <td></td>
+        <td><p>The data of the document in the <span class="xref">Microsoft.VisualStudio.Shell.Interop.IVsRunningDocumentTable</span> is read-only.</p>
+</td>
       </tr>
       <tr>
         <td id="DulcisX_Core_Enums_VisualStudio_OpenNodeAttribute_DocDataReloaded">DocDataReloaded</td>
-        <td></td>
+        <td><p>This attribute event is fired by calling the <span class="xref">Microsoft.VisualStudio.Shell.Interop.IVsRunningDocumentTable.NotifyDocumentChanged(System.UInt32,System.UInt32)</span> method.</p>
+</td>
       </tr>
       <tr>
         <td id="DulcisX_Core_Enums_VisualStudio_OpenNodeAttribute_DocumentInitialized">DocumentInitialized</td>
-        <td></td>
+        <td><p>A document was added to the <span class="xref">Microsoft.VisualStudio.Shell.Interop.IVsRunningDocumentTable</span> in a fully-initialized state, or a document that had the property RDT_PendingInitialization has completed its initialization.</p>
+</td>
       </tr>
       <tr>
         <td id="DulcisX_Core_Enums_VisualStudio_OpenNodeAttribute_Hierarchy">Hierarchy</td>
-        <td></td>
+        <td><p>Hierarchical position of the document in the <span class="xref">Microsoft.VisualStudio.Shell.Interop.IVsRunningDocumentTable</span>.</p>
+</td>
       </tr>
       <tr>
         <td id="DulcisX_Core_Enums_VisualStudio_OpenNodeAttribute_HierarchyInitialized">HierarchyInitialized</td>
-        <td></td>
+        <td><p>A document that had the property RDT_PendingHierarchyInitialization has completed its hierarchy initialization.</p>
+</td>
       </tr>
       <tr>
         <td id="DulcisX_Core_Enums_VisualStudio_OpenNodeAttribute_ItemID">ItemID</td>
-        <td></td>
+        <td><p>Item identifier of the document in the <span class="xref">Microsoft.VisualStudio.Shell.Interop.IVsRunningDocumentTable</span>.</p>
+</td>
       </tr>
       <tr>
         <td id="DulcisX_Core_Enums_VisualStudio_OpenNodeAttribute_MkDocument">MkDocument</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td id="DulcisX_Core_Enums_VisualStudio_OpenNodeAttribute_NOTIFYDOCCHANGEDEXMASK">NOTIFYDOCCHANGEDEXMASK</td>
-        <td></td>
+        <td><p>Full path to the document in the <span class="xref">Microsoft.VisualStudio.Shell.Interop.IVsRunningDocumentTable</span>.</p>
+</td>
       </tr>
       <tr>
         <td id="DulcisX_Core_Enums_VisualStudio_OpenNodeAttribute_NOTIFYDOCCHANGEDMASK">NOTIFYDOCCHANGEDMASK</td>
-        <td></td>
+        <td><p>A mask for the flags passed to the <span class="xref">Microsoft.VisualStudio.Shell.Interop.IVsRunningDocumentTable.NotifyDocumentChanged(System.UInt32,System.UInt32)</span> method.</p>
+</td>
+      </tr>
+      <tr>
+        <td id="DulcisX_Core_Enums_VisualStudio_OpenNodeAttribute_NotifyDocChangedXMask">NotifyDocChangedXMask</td>
+        <td><p>A mask for the flags passed to the <span class="xref">Microsoft.VisualStudio.Shell.Interop.IVsRunningDocumentTable3.NotifyDocumentChangedEx(System.UInt32,System.UInt32)</span> method.</p>
+</td>
       </tr>
     </tbody>
   </thead></thead></table>
@@ -180,7 +191,7 @@
                     <a href="https://github.com/TwentyFourMinutes/DulcisX/new/master/apiSpec/new?filename=DulcisX_Core_Enums_VisualStudio_OpenNodeAttribute.md&amp;value=---%0Auid%3A%20DulcisX.Core.Enums.VisualStudio.OpenNodeAttribute%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/TwentyFourMinutes/DulcisX/blob/master/src/DulcisX/DulcisX/Core/Enums/VisualStudio/OpenNodeAttribute.cs/#L8" class="contribution-link">View Source</a>
+                    <a href="https://github.com/TwentyFourMinutes/DulcisX/blob/master/src/DulcisX/DulcisX/Core/Enums/VisualStudio/OpenNodeAttribute.cs/#L6" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

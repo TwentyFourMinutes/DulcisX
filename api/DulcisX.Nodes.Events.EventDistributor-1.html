@@ -86,7 +86,8 @@
   
   <h1 id="DulcisX_Nodes_Events_EventDistributor_1" data-uid="DulcisX.Nodes.Events.EventDistributor`1" class="text-break">Class EventDistributor&lt;TDelegate&gt;
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>Distributes native events between delegates given the <a class="xref" href="DulcisX.Core.Enums.NodeTypes.html">NodeTypes</a>. This is a wrapper around events.</p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
@@ -146,11 +147,12 @@
     <a href="https://github.com/TwentyFourMinutes/DulcisX/new/master/apiSpec/new?filename=DulcisX_Nodes_Events_EventDistributor_1_Hook_DulcisX_Core_Enums_NodeTypes__0_.md&amp;value=---%0Auid%3A%20DulcisX.Nodes.Events.EventDistributor%601.Hook(DulcisX.Core.Enums.NodeTypes%2C%600)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/TwentyFourMinutes/DulcisX/blob/master/src/DulcisX/DulcisX/Nodes/Events/EventDistributor.cs/#L19">View Source</a>
+    <a href="https://github.com/TwentyFourMinutes/DulcisX/blob/master/src/DulcisX/DulcisX/Nodes/Events/EventDistributor.cs/#L27">View Source</a>
   </span>
   <a id="DulcisX_Nodes_Events_EventDistributor_1_Hook_" data-uid="DulcisX.Nodes.Events.EventDistributor`1.Hook*"></a>
   <h4 id="DulcisX_Nodes_Events_EventDistributor_1_Hook_DulcisX_Core_Enums_NodeTypes__0_" data-uid="DulcisX.Nodes.Events.EventDistributor`1.Hook(DulcisX.Core.Enums.NodeTypes,`0)">Hook(NodeTypes, TDelegate)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Hooks a callback method to the event.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -169,12 +171,14 @@
       <tr>
         <td><a class="xref" href="DulcisX.Core.Enums.NodeTypes.html">NodeTypes</a></td>
         <td><span class="parametername">nodeTypes</span></td>
-        <td></td>
+        <td><p>The Node types on which to call the callback methods.</p>
+</td>
       </tr>
       <tr>
         <td><span class="xref">TDelegate</span></td>
         <td><span class="parametername">callback</span></td>
-        <td></td>
+        <td><p>The callback which should be called at the raise of the event.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -183,11 +187,12 @@
     <a href="https://github.com/TwentyFourMinutes/DulcisX/new/master/apiSpec/new?filename=DulcisX_Nodes_Events_EventDistributor_1_Hook_DulcisX_Core_Enums_NodeTypes__0___.md&amp;value=---%0Auid%3A%20DulcisX.Nodes.Events.EventDistributor%601.Hook(DulcisX.Core.Enums.NodeTypes%2C%600%5B%5D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/TwentyFourMinutes/DulcisX/blob/master/src/DulcisX/DulcisX/Nodes/Events/EventDistributor.cs/#L35">View Source</a>
+    <a href="https://github.com/TwentyFourMinutes/DulcisX/blob/master/src/DulcisX/DulcisX/Nodes/Events/EventDistributor.cs/#L48">View Source</a>
   </span>
   <a id="DulcisX_Nodes_Events_EventDistributor_1_Hook_" data-uid="DulcisX.Nodes.Events.EventDistributor`1.Hook*"></a>
   <h4 id="DulcisX_Nodes_Events_EventDistributor_1_Hook_DulcisX_Core_Enums_NodeTypes__0___" data-uid="DulcisX.Nodes.Events.EventDistributor`1.Hook(DulcisX.Core.Enums.NodeTypes,`0[])">Hook(NodeTypes, TDelegate[])</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Hooks callback methods to the event.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -206,12 +211,14 @@
       <tr>
         <td><a class="xref" href="DulcisX.Core.Enums.NodeTypes.html">NodeTypes</a></td>
         <td><span class="parametername">nodeTypes</span></td>
-        <td></td>
+        <td><p>The Node types on which to call the callback methods.</p>
+</td>
       </tr>
       <tr>
         <td>TDelegate[]</td>
         <td><span class="parametername">callbacks</span></td>
-        <td></td>
+        <td><p>A list of callbacks which should be called at the raise of the event.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -220,11 +227,12 @@
     <a href="https://github.com/TwentyFourMinutes/DulcisX/new/master/apiSpec/new?filename=DulcisX_Nodes_Events_EventDistributor_1_UnHook_DulcisX_Core_Enums_NodeTypes__0_.md&amp;value=---%0Auid%3A%20DulcisX.Nodes.Events.EventDistributor%601.UnHook(DulcisX.Core.Enums.NodeTypes%2C%600)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/TwentyFourMinutes/DulcisX/blob/master/src/DulcisX/DulcisX/Nodes/Events/EventDistributor.cs/#L50">View Source</a>
+    <a href="https://github.com/TwentyFourMinutes/DulcisX/blob/master/src/DulcisX/DulcisX/Nodes/Events/EventDistributor.cs/#L68">View Source</a>
   </span>
   <a id="DulcisX_Nodes_Events_EventDistributor_1_UnHook_" data-uid="DulcisX.Nodes.Events.EventDistributor`1.UnHook*"></a>
   <h4 id="DulcisX_Nodes_Events_EventDistributor_1_UnHook_DulcisX_Core_Enums_NodeTypes__0_" data-uid="DulcisX.Nodes.Events.EventDistributor`1.UnHook(DulcisX.Core.Enums.NodeTypes,`0)">UnHook(NodeTypes, TDelegate)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>UnHooks a callback method from the event.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -243,12 +251,14 @@
       <tr>
         <td><a class="xref" href="DulcisX.Core.Enums.NodeTypes.html">NodeTypes</a></td>
         <td><span class="parametername">nodeTypes</span></td>
-        <td></td>
+        <td><p>The Node types on which to remove the callback method.</p>
+</td>
       </tr>
       <tr>
         <td><span class="xref">TDelegate</span></td>
         <td><span class="parametername">callback</span></td>
-        <td></td>
+        <td><p>The callback which should be removed from the event.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -257,11 +267,12 @@
     <a href="https://github.com/TwentyFourMinutes/DulcisX/new/master/apiSpec/new?filename=DulcisX_Nodes_Events_EventDistributor_1_UnHook_DulcisX_Core_Enums_NodeTypes__0___.md&amp;value=---%0Auid%3A%20DulcisX.Nodes.Events.EventDistributor%601.UnHook(DulcisX.Core.Enums.NodeTypes%2C%600%5B%5D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/TwentyFourMinutes/DulcisX/blob/master/src/DulcisX/DulcisX/Nodes/Events/EventDistributor.cs/#L61">View Source</a>
+    <a href="https://github.com/TwentyFourMinutes/DulcisX/blob/master/src/DulcisX/DulcisX/Nodes/Events/EventDistributor.cs/#L84">View Source</a>
   </span>
   <a id="DulcisX_Nodes_Events_EventDistributor_1_UnHook_" data-uid="DulcisX.Nodes.Events.EventDistributor`1.UnHook*"></a>
   <h4 id="DulcisX_Nodes_Events_EventDistributor_1_UnHook_DulcisX_Core_Enums_NodeTypes__0___" data-uid="DulcisX.Nodes.Events.EventDistributor`1.UnHook(DulcisX.Core.Enums.NodeTypes,`0[])">UnHook(NodeTypes, TDelegate[])</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>UnHooks callback methods from the event.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -280,12 +291,14 @@
       <tr>
         <td><a class="xref" href="DulcisX.Core.Enums.NodeTypes.html">NodeTypes</a></td>
         <td><span class="parametername">nodeTypes</span></td>
-        <td></td>
+        <td><p>The Node types on which to remove the callback methods.</p>
+</td>
       </tr>
       <tr>
         <td>TDelegate[]</td>
         <td><span class="parametername">callbacks</span></td>
-        <td></td>
+        <td><p>The callbacks which should be removed from the event.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -294,11 +307,12 @@
     <a href="https://github.com/TwentyFourMinutes/DulcisX/new/master/apiSpec/new?filename=DulcisX_Nodes_Events_EventDistributor_1_UnHookAll.md&amp;value=---%0Auid%3A%20DulcisX.Nodes.Events.EventDistributor%601.UnHookAll%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/TwentyFourMinutes/DulcisX/blob/master/src/DulcisX/DulcisX/Nodes/Events/EventDistributor.cs/#L88">View Source</a>
+    <a href="https://github.com/TwentyFourMinutes/DulcisX/blob/master/src/DulcisX/DulcisX/Nodes/Events/EventDistributor.cs/#L103">View Source</a>
   </span>
   <a id="DulcisX_Nodes_Events_EventDistributor_1_UnHookAll_" data-uid="DulcisX.Nodes.Events.EventDistributor`1.UnHookAll*"></a>
   <h4 id="DulcisX_Nodes_Events_EventDistributor_1_UnHookAll" data-uid="DulcisX.Nodes.Events.EventDistributor`1.UnHookAll">UnHookAll()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>UnHooks all callback methods, from all Node type, from the event.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -309,11 +323,12 @@
     <a href="https://github.com/TwentyFourMinutes/DulcisX/new/master/apiSpec/new?filename=DulcisX_Nodes_Events_EventDistributor_1_UnHookAll_DulcisX_Core_Enums_NodeTypes_.md&amp;value=---%0Auid%3A%20DulcisX.Nodes.Events.EventDistributor%601.UnHookAll(DulcisX.Core.Enums.NodeTypes)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/TwentyFourMinutes/DulcisX/blob/master/src/DulcisX/DulcisX/Nodes/Events/EventDistributor.cs/#L77">View Source</a>
+    <a href="https://github.com/TwentyFourMinutes/DulcisX/blob/master/src/DulcisX/DulcisX/Nodes/Events/EventDistributor.cs/#L112">View Source</a>
   </span>
   <a id="DulcisX_Nodes_Events_EventDistributor_1_UnHookAll_" data-uid="DulcisX.Nodes.Events.EventDistributor`1.UnHookAll*"></a>
   <h4 id="DulcisX_Nodes_Events_EventDistributor_1_UnHookAll_DulcisX_Core_Enums_NodeTypes_" data-uid="DulcisX.Nodes.Events.EventDistributor`1.UnHookAll(DulcisX.Core.Enums.NodeTypes)">UnHookAll(NodeTypes)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>UnHooks all callback methods from the event.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -332,7 +347,8 @@
       <tr>
         <td><a class="xref" href="DulcisX.Core.Enums.NodeTypes.html">NodeTypes</a></td>
         <td><span class="parametername">nodeTypes</span></td>
-        <td></td>
+        <td><p>The Node types from which all callback methods should be removed.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -355,7 +371,7 @@
                     <a href="https://github.com/TwentyFourMinutes/DulcisX/new/master/apiSpec/new?filename=DulcisX_Nodes_Events_EventDistributor_1.md&amp;value=---%0Auid%3A%20DulcisX.Nodes.Events.EventDistributor%601%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/TwentyFourMinutes/DulcisX/blob/master/src/DulcisX/DulcisX/Nodes/Events/EventDistributor.cs/#L7" class="contribution-link">View Source</a>
+                    <a href="https://github.com/TwentyFourMinutes/DulcisX/blob/master/src/DulcisX/DulcisX/Nodes/Events/EventDistributor.cs/#L11" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

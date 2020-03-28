@@ -86,7 +86,8 @@
   
   <h1 id="DulcisX_Helpers_VsConverter" data-uid="DulcisX.Helpers.VsConverter" class="text-break">Class VsConverter
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>Converts native method value results to their appropriate .Net Type and vice versa.</p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
@@ -127,18 +128,19 @@
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/TwentyFourMinutes/DulcisX/new/master/apiSpec/new?filename=DulcisX_Helpers_VsConverter_Boolean_System_Int32_.md&amp;value=---%0Auid%3A%20DulcisX.Helpers.VsConverter.Boolean(System.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/TwentyFourMinutes/DulcisX/new/master/apiSpec/new?filename=DulcisX_Helpers_VsConverter_AsBoolean_System_Int32_.md&amp;value=---%0Auid%3A%20DulcisX.Helpers.VsConverter.AsBoolean(System.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/TwentyFourMinutes/DulcisX/blob/master/src/DulcisX/DulcisX/Helpers/VsConverter.cs/#L5">View Source</a>
+    <a href="https://github.com/TwentyFourMinutes/DulcisX/blob/master/src/DulcisX/DulcisX/Helpers/VsConverter.cs/#L13">View Source</a>
   </span>
-  <a id="DulcisX_Helpers_VsConverter_Boolean_" data-uid="DulcisX.Helpers.VsConverter.Boolean*"></a>
-  <h4 id="DulcisX_Helpers_VsConverter_Boolean_System_Int32_" data-uid="DulcisX.Helpers.VsConverter.Boolean(System.Int32)">Boolean(Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <a id="DulcisX_Helpers_VsConverter_AsBoolean_" data-uid="DulcisX.Helpers.VsConverter.AsBoolean*"></a>
+  <h4 id="DulcisX_Helpers_VsConverter_AsBoolean_System_Int32_" data-uid="DulcisX.Helpers.VsConverter.AsBoolean(System.Int32)">AsBoolean(Int32)</h4>
+  <div class="markdown level1 summary"><p>Converts an <span class="xref">System.Int32</span> to a <span class="xref">System.Boolean</span>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static bool Boolean(int value)</code></pre>
+    <pre><code class="lang-csharp hljs">public static bool AsBoolean(int value)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -153,7 +155,8 @@
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">value</span></td>
-        <td></td>
+        <td><p>The value which should be converted.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -168,7 +171,58 @@
     <tbody>
       <tr>
         <td><span class="xref">System.Boolean</span></td>
-        <td></td>
+        <td><p>A <span class="xref">System.Boolean</span> representation of the given <span class="xref">System.Int32</span>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/TwentyFourMinutes/DulcisX/new/master/apiSpec/new?filename=DulcisX_Helpers_VsConverter_FromBoolean_System_Boolean_.md&amp;value=---%0Auid%3A%20DulcisX.Helpers.VsConverter.FromBoolean(System.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/TwentyFourMinutes/DulcisX/blob/master/src/DulcisX/DulcisX/Helpers/VsConverter.cs/#L21">View Source</a>
+  </span>
+  <a id="DulcisX_Helpers_VsConverter_FromBoolean_" data-uid="DulcisX.Helpers.VsConverter.FromBoolean*"></a>
+  <h4 id="DulcisX_Helpers_VsConverter_FromBoolean_System_Boolean_" data-uid="DulcisX.Helpers.VsConverter.FromBoolean(System.Boolean)">FromBoolean(Boolean)</h4>
+  <div class="markdown level1 summary"><p>Converts a <span class="xref">System.Boolean</span> to an <span class="xref">System.Int32</span>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static int FromBoolean(bool value)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">value</span></td>
+        <td><p>The value which should be converted.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><p>An <span class="xref">System.Int32</span> representation of the given <span class="xref">System.Boolean</span>.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -191,7 +245,7 @@
                     <a href="https://github.com/TwentyFourMinutes/DulcisX/new/master/apiSpec/new?filename=DulcisX_Helpers_VsConverter.md&amp;value=---%0Auid%3A%20DulcisX.Helpers.VsConverter%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/TwentyFourMinutes/DulcisX/blob/master/src/DulcisX/DulcisX/Helpers/VsConverter.cs/#L3" class="contribution-link">View Source</a>
+                    <a href="https://github.com/TwentyFourMinutes/DulcisX/blob/master/src/DulcisX/DulcisX/Helpers/VsConverter.cs/#L6" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

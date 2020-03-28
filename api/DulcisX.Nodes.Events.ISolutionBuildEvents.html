@@ -86,7 +86,8 @@
   
   <h1 id="DulcisX_Nodes_Events_ISolutionBuildEvents" data-uid="DulcisX.Nodes.Events.ISolutionBuildEvents" class="text-break">Interface ISolutionBuildEvents
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>Provides events, which occur on build changes in a <a class="xref" href="DulcisX.Nodes.SolutionNode.html">SolutionNode</a>. Provided by the <span class="xref">Microsoft.VisualStudio.Shell.Interop.IVsUpdateSolutionEvents</span> interface.</p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <h6><strong>Namespace</strong>: <a class="xref" href="DulcisX.Nodes.Events.html">DulcisX.Nodes.Events</a></h6>
   <h6><strong>Assembly</strong>: DulcisX.dll</h6>
@@ -101,11 +102,12 @@
     <a href="https://github.com/TwentyFourMinutes/DulcisX/new/master/apiSpec/new?filename=DulcisX_Nodes_Events_ISolutionBuildEvents_OnProjectConfigurationChanged.md&amp;value=---%0Auid%3A%20DulcisX.Nodes.Events.ISolutionBuildEvents.OnProjectConfigurationChanged%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/TwentyFourMinutes/DulcisX/blob/master/src/DulcisX/DulcisX/Nodes/Events/ISolutionBuildEvents.cs/#L15">View Source</a>
+    <a href="https://github.com/TwentyFourMinutes/DulcisX/blob/master/src/DulcisX/DulcisX/Nodes/Events/ISolutionBuildEvents.cs/#L33">View Source</a>
   </span>
   <a id="DulcisX_Nodes_Events_ISolutionBuildEvents_OnProjectConfigurationChanged_" data-uid="DulcisX.Nodes.Events.ISolutionBuildEvents.OnProjectConfigurationChanged*"></a>
   <h4 id="DulcisX_Nodes_Events_ISolutionBuildEvents_OnProjectConfigurationChanged" data-uid="DulcisX.Nodes.Events.ISolutionBuildEvents.OnProjectConfigurationChanged">OnProjectConfigurationChanged</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Occurs when a <a class="xref" href="DulcisX.Nodes.ProjectNode.html">ProjectNode</a> build configuration changed.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -130,17 +132,18 @@
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/TwentyFourMinutes/DulcisX/new/master/apiSpec/new?filename=DulcisX_Nodes_Events_ISolutionBuildEvents_OnProjectConfigurationBuild.md&amp;value=---%0Auid%3A%20DulcisX.Nodes.Events.ISolutionBuildEvents.OnProjectConfigurationBuild%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/TwentyFourMinutes/DulcisX/new/master/apiSpec/new?filename=DulcisX_Nodes_Events_ISolutionBuildEvents_OnProjectsConfigurationBuild.md&amp;value=---%0Auid%3A%20DulcisX.Nodes.Events.ISolutionBuildEvents.OnProjectsConfigurationBuild%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/TwentyFourMinutes/DulcisX/blob/master/src/DulcisX/DulcisX/Nodes/Events/ISolutionBuildEvents.cs/#L13">View Source</a>
+    <a href="https://github.com/TwentyFourMinutes/DulcisX/blob/master/src/DulcisX/DulcisX/Nodes/Events/ISolutionBuildEvents.cs/#L28">View Source</a>
   </span>
-  <h4 id="DulcisX_Nodes_Events_ISolutionBuildEvents_OnProjectConfigurationBuild" data-uid="DulcisX.Nodes.Events.ISolutionBuildEvents.OnProjectConfigurationBuild">OnProjectConfigurationBuild</h4>
-  <div class="markdown level1 summary"></div>
+  <h4 id="DulcisX_Nodes_Events_ISolutionBuildEvents_OnProjectsConfigurationBuild" data-uid="DulcisX.Nodes.Events.ISolutionBuildEvents.OnProjectsConfigurationBuild">OnProjectsConfigurationBuild</h4>
+  <div class="markdown level1 summary"><p>Occurs before the first <a class="xref" href="DulcisX.Nodes.ProjectNode.html">ProjectNode</a> got build.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">event Action&lt;CancelTraslaterToken&gt; OnProjectConfigurationBuild</code></pre>
+    <pre><code class="lang-csharp hljs">event Action&lt;CancelTraslaterToken&gt; OnProjectsConfigurationBuild</code></pre>
   </div>
   <h5 class="eventType">Event Type</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -162,10 +165,11 @@
     <a href="https://github.com/TwentyFourMinutes/DulcisX/new/master/apiSpec/new?filename=DulcisX_Nodes_Events_ISolutionBuildEvents_OnSolutionBuild.md&amp;value=---%0Auid%3A%20DulcisX.Nodes.Events.ISolutionBuildEvents.OnSolutionBuild%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/TwentyFourMinutes/DulcisX/blob/master/src/DulcisX/DulcisX/Nodes/Events/ISolutionBuildEvents.cs/#L7">View Source</a>
+    <a href="https://github.com/TwentyFourMinutes/DulcisX/blob/master/src/DulcisX/DulcisX/Nodes/Events/ISolutionBuildEvents.cs/#L13">View Source</a>
   </span>
   <h4 id="DulcisX_Nodes_Events_ISolutionBuildEvents_OnSolutionBuild" data-uid="DulcisX.Nodes.Events.ISolutionBuildEvents.OnSolutionBuild">OnSolutionBuild</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Occurs before a <a class="xref" href="DulcisX.Nodes.SolutionNode.html">SolutionNode</a> gets build.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -191,10 +195,11 @@
     <a href="https://github.com/TwentyFourMinutes/DulcisX/new/master/apiSpec/new?filename=DulcisX_Nodes_Events_ISolutionBuildEvents_OnSolutionBuildCancel.md&amp;value=---%0Auid%3A%20DulcisX.Nodes.Events.ISolutionBuildEvents.OnSolutionBuildCancel%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/TwentyFourMinutes/DulcisX/blob/master/src/DulcisX/DulcisX/Nodes/Events/ISolutionBuildEvents.cs/#L11">View Source</a>
+    <a href="https://github.com/TwentyFourMinutes/DulcisX/blob/master/src/DulcisX/DulcisX/Nodes/Events/ISolutionBuildEvents.cs/#L23">View Source</a>
   </span>
   <h4 id="DulcisX_Nodes_Events_ISolutionBuildEvents_OnSolutionBuildCancel" data-uid="DulcisX.Nodes.Events.ISolutionBuildEvents.OnSolutionBuildCancel">OnSolutionBuildCancel</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Occurs when a <a class="xref" href="DulcisX.Nodes.SolutionNode.html">SolutionNode</a> build got cancled.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -220,10 +225,11 @@
     <a href="https://github.com/TwentyFourMinutes/DulcisX/new/master/apiSpec/new?filename=DulcisX_Nodes_Events_ISolutionBuildEvents_OnSolutionBuilt.md&amp;value=---%0Auid%3A%20DulcisX.Nodes.Events.ISolutionBuildEvents.OnSolutionBuilt%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/TwentyFourMinutes/DulcisX/blob/master/src/DulcisX/DulcisX/Nodes/Events/ISolutionBuildEvents.cs/#L9">View Source</a>
+    <a href="https://github.com/TwentyFourMinutes/DulcisX/blob/master/src/DulcisX/DulcisX/Nodes/Events/ISolutionBuildEvents.cs/#L18">View Source</a>
   </span>
   <h4 id="DulcisX_Nodes_Events_ISolutionBuildEvents_OnSolutionBuilt" data-uid="DulcisX.Nodes.Events.ISolutionBuildEvents.OnSolutionBuilt">OnSolutionBuilt</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Occurs when a <a class="xref" href="DulcisX.Nodes.SolutionNode.html">SolutionNode</a> got built.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -263,7 +269,7 @@
                     <a href="https://github.com/TwentyFourMinutes/DulcisX/new/master/apiSpec/new?filename=DulcisX_Nodes_Events_ISolutionBuildEvents.md&amp;value=---%0Auid%3A%20DulcisX.Nodes.Events.ISolutionBuildEvents%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/TwentyFourMinutes/DulcisX/blob/master/src/DulcisX/DulcisX/Nodes/Events/ISolutionBuildEvents.cs/#L5" class="contribution-link">View Source</a>
+                    <a href="https://github.com/TwentyFourMinutes/DulcisX/blob/master/src/DulcisX/DulcisX/Nodes/Events/ISolutionBuildEvents.cs/#L8" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

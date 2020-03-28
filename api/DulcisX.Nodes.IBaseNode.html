@@ -86,7 +86,8 @@
   
   <h1 id="DulcisX_Nodes_IBaseNode" data-uid="DulcisX.Nodes.IBaseNode" class="text-break">Interface IBaseNode
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>Represents the most basic Hierarchy Node.</p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <h6><strong>Namespace</strong>: <a class="xref" href="DulcisX.Nodes.html">DulcisX.Nodes</a></h6>
   <h6><strong>Assembly</strong>: DulcisX.dll</h6>
@@ -101,11 +102,12 @@
     <a href="https://github.com/TwentyFourMinutes/DulcisX/new/master/apiSpec/new?filename=DulcisX_Nodes_IBaseNode_ItemId.md&amp;value=---%0Auid%3A%20DulcisX.Nodes.IBaseNode.ItemId%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/TwentyFourMinutes/DulcisX/blob/master/src/DulcisX/DulcisX/Nodes/IBaseNode.cs/#L14">View Source</a>
+    <a href="https://github.com/TwentyFourMinutes/DulcisX/blob/master/src/DulcisX/DulcisX/Nodes/IBaseNode.cs/#L27">View Source</a>
   </span>
   <a id="DulcisX_Nodes_IBaseNode_ItemId_" data-uid="DulcisX.Nodes.IBaseNode.ItemId*"></a>
   <h4 id="DulcisX_Nodes_IBaseNode_ItemId" data-uid="DulcisX.Nodes.IBaseNode.ItemId">ItemId</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Gets the Unique Identifier for the Node in the <a class="xref" href="DulcisX.Nodes.IBaseNode.html#DulcisX_Nodes_IBaseNode_UnderlyingHierarchy">UnderlyingHierarchy</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -131,15 +133,17 @@
     <a href="https://github.com/TwentyFourMinutes/DulcisX/new/master/apiSpec/new?filename=DulcisX_Nodes_IBaseNode_NodeType.md&amp;value=---%0Auid%3A%20DulcisX.Nodes.IBaseNode.NodeType%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/TwentyFourMinutes/DulcisX/blob/master/src/DulcisX/DulcisX/Nodes/IBaseNode.cs/#L16">View Source</a>
+    <a href="https://github.com/TwentyFourMinutes/DulcisX/blob/master/src/DulcisX/DulcisX/Nodes/IBaseNode.cs/#L32">View Source</a>
   </span>
   <a id="DulcisX_Nodes_IBaseNode_NodeType_" data-uid="DulcisX.Nodes.IBaseNode.NodeType*"></a>
   <h4 id="DulcisX_Nodes_IBaseNode_NodeType" data-uid="DulcisX.Nodes.IBaseNode.NodeType">NodeType</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Gets the Type of current Node.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">NodeTypes NodeType { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">[Obsolete(&quot;This method should be replaced with type comparison.&quot;)]
+NodeTypes NodeType { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -161,11 +165,12 @@
     <a href="https://github.com/TwentyFourMinutes/DulcisX/new/master/apiSpec/new?filename=DulcisX_Nodes_IBaseNode_ParentSolution.md&amp;value=---%0Auid%3A%20DulcisX.Nodes.IBaseNode.ParentSolution%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/TwentyFourMinutes/DulcisX/blob/master/src/DulcisX/DulcisX/Nodes/IBaseNode.cs/#L10">View Source</a>
+    <a href="https://github.com/TwentyFourMinutes/DulcisX/blob/master/src/DulcisX/DulcisX/Nodes/IBaseNode.cs/#L17">View Source</a>
   </span>
   <a id="DulcisX_Nodes_IBaseNode_ParentSolution_" data-uid="DulcisX.Nodes.IBaseNode.ParentSolution*"></a>
   <h4 id="DulcisX_Nodes_IBaseNode_ParentSolution" data-uid="DulcisX.Nodes.IBaseNode.ParentSolution">ParentSolution</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Gets the Solution in which the Node sits in.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -191,11 +196,12 @@
     <a href="https://github.com/TwentyFourMinutes/DulcisX/new/master/apiSpec/new?filename=DulcisX_Nodes_IBaseNode_UnderlyingHierarchy.md&amp;value=---%0Auid%3A%20DulcisX.Nodes.IBaseNode.UnderlyingHierarchy%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/TwentyFourMinutes/DulcisX/blob/master/src/DulcisX/DulcisX/Nodes/IBaseNode.cs/#L12">View Source</a>
+    <a href="https://github.com/TwentyFourMinutes/DulcisX/blob/master/src/DulcisX/DulcisX/Nodes/IBaseNode.cs/#L22">View Source</a>
   </span>
   <a id="DulcisX_Nodes_IBaseNode_UnderlyingHierarchy_" data-uid="DulcisX.Nodes.IBaseNode.UnderlyingHierarchy*"></a>
   <h4 id="DulcisX_Nodes_IBaseNode_UnderlyingHierarchy" data-uid="DulcisX.Nodes.IBaseNode.UnderlyingHierarchy">UnderlyingHierarchy</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Gets the Hierarchy in which the Node sits in.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -223,11 +229,12 @@
     <a href="https://github.com/TwentyFourMinutes/DulcisX/new/master/apiSpec/new?filename=DulcisX_Nodes_IBaseNode_AsHierarchyItem.md&amp;value=---%0Auid%3A%20DulcisX.Nodes.IBaseNode.AsHierarchyItem%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/TwentyFourMinutes/DulcisX/blob/master/src/DulcisX/DulcisX/Nodes/IBaseNode.cs/#L22">View Source</a>
+    <a href="https://github.com/TwentyFourMinutes/DulcisX/blob/master/src/DulcisX/DulcisX/Nodes/IBaseNode.cs/#L51">View Source</a>
   </span>
   <a id="DulcisX_Nodes_IBaseNode_AsHierarchyItem_" data-uid="DulcisX.Nodes.IBaseNode.AsHierarchyItem*"></a>
   <h4 id="DulcisX_Nodes_IBaseNode_AsHierarchyItem" data-uid="DulcisX.Nodes.IBaseNode.AsHierarchyItem">AsHierarchyItem()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the <span class="xref">Microsoft.VisualStudio.Shell.IVsHierarchyItem</span> which represents the current Node.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -244,7 +251,8 @@
     <tbody>
       <tr>
         <td><span class="xref">Microsoft.VisualStudio.Shell.IVsHierarchyItem</span></td>
-        <td></td>
+        <td><p>The the matching <span class="xref">Microsoft.VisualStudio.Shell.IVsHierarchyItem</span>.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -253,11 +261,12 @@
     <a href="https://github.com/TwentyFourMinutes/DulcisX/new/master/apiSpec/new?filename=DulcisX_Nodes_IBaseNode_GetChildren.md&amp;value=---%0Auid%3A%20DulcisX.Nodes.IBaseNode.GetChildren%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/TwentyFourMinutes/DulcisX/blob/master/src/DulcisX/DulcisX/Nodes/IBaseNode.cs/#L24">View Source</a>
+    <a href="https://github.com/TwentyFourMinutes/DulcisX/blob/master/src/DulcisX/DulcisX/Nodes/IBaseNode.cs/#L57">View Source</a>
   </span>
   <a id="DulcisX_Nodes_IBaseNode_GetChildren_" data-uid="DulcisX.Nodes.IBaseNode.GetChildren*"></a>
   <h4 id="DulcisX_Nodes_IBaseNode_GetChildren" data-uid="DulcisX.Nodes.IBaseNode.GetChildren">GetChildren()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns all immediate children Nodes of the current Node.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -274,7 +283,8 @@
     <tbody>
       <tr>
         <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="DulcisX.Nodes.BaseNode.html">BaseNode</a>&gt;</td>
-        <td></td>
+        <td><p>An <span class="xref">System.Collections.Generic.IEnumerable&lt;T&gt;</span> with the children.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -283,11 +293,12 @@
     <a href="https://github.com/TwentyFourMinutes/DulcisX/new/master/apiSpec/new?filename=DulcisX_Nodes_IBaseNode_GetParent.md&amp;value=---%0Auid%3A%20DulcisX.Nodes.IBaseNode.GetParent%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/TwentyFourMinutes/DulcisX/blob/master/src/DulcisX/DulcisX/Nodes/IBaseNode.cs/#L18">View Source</a>
+    <a href="https://github.com/TwentyFourMinutes/DulcisX/blob/master/src/DulcisX/DulcisX/Nodes/IBaseNode.cs/#L39">View Source</a>
   </span>
   <a id="DulcisX_Nodes_IBaseNode_GetParent_" data-uid="DulcisX.Nodes.IBaseNode.GetParent*"></a>
   <h4 id="DulcisX_Nodes_IBaseNode_GetParent" data-uid="DulcisX.Nodes.IBaseNode.GetParent">GetParent()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the immediate parent Node of the current Node.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -304,7 +315,8 @@
     <tbody>
       <tr>
         <td><a class="xref" href="DulcisX.Nodes.BaseNode.html">BaseNode</a></td>
-        <td></td>
+        <td><p>The parent if any could be found, otherwise null.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -313,11 +325,12 @@
     <a href="https://github.com/TwentyFourMinutes/DulcisX/new/master/apiSpec/new?filename=DulcisX_Nodes_IBaseNode_GetParent_DulcisX_Core_Enums_NodeTypes_.md&amp;value=---%0Auid%3A%20DulcisX.Nodes.IBaseNode.GetParent(DulcisX.Core.Enums.NodeTypes)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/TwentyFourMinutes/DulcisX/blob/master/src/DulcisX/DulcisX/Nodes/IBaseNode.cs/#L20">View Source</a>
+    <a href="https://github.com/TwentyFourMinutes/DulcisX/blob/master/src/DulcisX/DulcisX/Nodes/IBaseNode.cs/#L45">View Source</a>
   </span>
   <a id="DulcisX_Nodes_IBaseNode_GetParent_" data-uid="DulcisX.Nodes.IBaseNode.GetParent*"></a>
   <h4 id="DulcisX_Nodes_IBaseNode_GetParent_DulcisX_Core_Enums_NodeTypes_" data-uid="DulcisX.Nodes.IBaseNode.GetParent(DulcisX.Core.Enums.NodeTypes)">GetParent(NodeTypes)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the first parent Node of the current Node, matching the given <code data-dev-comment-type="paramref" class="paramref">nodeType</code>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -351,7 +364,8 @@
     <tbody>
       <tr>
         <td><a class="xref" href="DulcisX.Nodes.BaseNode.html">BaseNode</a></td>
-        <td></td>
+        <td><p>The matching parent if any any could be found, otherwise null.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -360,7 +374,7 @@
     <a href="https://github.com/TwentyFourMinutes/DulcisX/new/master/apiSpec/new?filename=DulcisX_Nodes_IBaseNode_IsTypeMatching_DulcisX_Core_Enums_NodeTypes_.md&amp;value=---%0Auid%3A%20DulcisX.Nodes.IBaseNode.IsTypeMatching(DulcisX.Core.Enums.NodeTypes)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/TwentyFourMinutes/DulcisX/blob/master/src/DulcisX/DulcisX/Nodes/IBaseNode.cs/#L26">View Source</a>
+    <a href="https://github.com/TwentyFourMinutes/DulcisX/blob/master/src/DulcisX/DulcisX/Nodes/IBaseNode.cs/#L60">View Source</a>
   </span>
   <a id="DulcisX_Nodes_IBaseNode_IsTypeMatching_" data-uid="DulcisX.Nodes.IBaseNode.IsTypeMatching*"></a>
   <h4 id="DulcisX_Nodes_IBaseNode_IsTypeMatching_DulcisX_Core_Enums_NodeTypes_" data-uid="DulcisX.Nodes.IBaseNode.IsTypeMatching(DulcisX.Core.Enums.NodeTypes)">IsTypeMatching(NodeTypes)</h4>
@@ -368,7 +382,8 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">bool IsTypeMatching(NodeTypes nodeType)</code></pre>
+    <pre><code class="lang-csharp hljs">[Obsolete(&quot;This method should be replaced with type comparison.&quot;)]
+bool IsTypeMatching(NodeTypes nodeType)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -421,7 +436,7 @@
                     <a href="https://github.com/TwentyFourMinutes/DulcisX/new/master/apiSpec/new?filename=DulcisX_Nodes_IBaseNode.md&amp;value=---%0Auid%3A%20DulcisX.Nodes.IBaseNode%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/TwentyFourMinutes/DulcisX/blob/master/src/DulcisX/DulcisX/Nodes/IBaseNode.cs/#L8" class="contribution-link">View Source</a>
+                    <a href="https://github.com/TwentyFourMinutes/DulcisX/blob/master/src/DulcisX/DulcisX/Nodes/IBaseNode.cs/#L12" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>
