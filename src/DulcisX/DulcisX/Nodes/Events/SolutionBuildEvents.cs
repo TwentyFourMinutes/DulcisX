@@ -19,7 +19,7 @@ namespace DulcisX.Nodes.Events
         public event Action<CancelTraslaterToken> OnSolutionBuild;
         public event Action<bool, bool, bool> OnSolutionBuilt;
         public event Action OnSolutionBuildCancel;
-        public event Action<CancelTraslaterToken> OnProjectConfigurationBuild;
+        public event Action<CancelTraslaterToken> OnProjectsConfigurationBuild;
 
         #endregion
 
@@ -45,8 +45,8 @@ namespace DulcisX.Nodes.Events
 
         public int UpdateSolution_StartUpdate(ref int pfCancelUpdate)
         {
-            return CancelTranslaterFactory.Create(OnProjectConfigurationBuild, ref pfCancelUpdate,
-                token => OnProjectConfigurationBuild.Invoke(token));
+            return CancelTranslaterFactory.Create(OnProjectsConfigurationBuild, ref pfCancelUpdate,
+                token => OnProjectsConfigurationBuild.Invoke(token));
         }
 
         public int UpdateSolution_Cancel()

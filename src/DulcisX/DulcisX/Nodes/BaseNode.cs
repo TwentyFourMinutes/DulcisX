@@ -27,7 +27,7 @@ namespace DulcisX.Nodes
         /// Initializes a new instance of the <see cref="BaseNode"/> class.
         /// </summary>
         /// <param name="solution">The Solution in which the Node sits in.</param>
-        /// <param name="hierarchy">The Hierarchy in which the Node sits in.<param>
+        /// <param name="hierarchy">The Hierarchy in which the Node sits in.</param>
         /// <param name="itemId">The Unique Identifier for the Node in the <paramref name="hierarchy"/>.</param>
         protected BaseNode(SolutionNode solution, IVsHierarchy hierarchy, uint itemId)
         {

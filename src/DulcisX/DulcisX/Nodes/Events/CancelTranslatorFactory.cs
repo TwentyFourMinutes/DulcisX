@@ -4,9 +4,9 @@ using System.Threading;
 
 namespace DulcisX.Nodes.Events
 {
-    public static class CancelTranslaterFactory
+    internal static class CancelTranslaterFactory
     {
-        public static int Create<TCallback>(TCallback callback, ref int cancel, Action<CancelTraslaterToken> action, int statusCode = CommonStatusCodes.Success) where TCallback : class
+        internal static int Create<TCallback>(TCallback callback, ref int cancel, Action<CancelTraslaterToken> action, int statusCode = CommonStatusCodes.Success) where TCallback : class
         {
             if (callback is object)
             {
@@ -21,6 +21,9 @@ namespace DulcisX.Nodes.Events
         }
     }
 
+    /// <summary>
+    /// Allows for cancellation of an operation.
+    /// </summary>
     public class CancelTraslaterToken
     {
         private int _cancelRequested = 0;
@@ -37,11 +40,17 @@ namespace DulcisX.Nodes.Events
             }
         }
 
+        /// <summary>
+        /// Gets a value indicating whether the operation was requested to cancel or not.
+        /// </summary>
         public bool CancelRequested
         {
             get => CancelRequestedValue == 1;
         }
 
+        /// <summary>
+        /// Reuqests to cancel the current operation.
+        /// </summary>
         public void Cancel()
         {
             CancelRequestedValue = 1;

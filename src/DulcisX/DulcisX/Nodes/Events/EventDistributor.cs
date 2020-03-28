@@ -4,10 +4,13 @@ using System.Collections.Generic;
 
 namespace DulcisX.Nodes.Events
 {
+    /// <summary>
+    /// Distributes native events between delegates given the <see cref="NodeTypes"/>. This is a wrapper around events.
+    /// </summary>
+    /// <typeparam name="TDelegate"></typeparam>
     public sealed class EventDistributor<TDelegate> where TDelegate : Delegate
     {
         private delegate void CallAction(dynamic action);
-        private delegate void CancebleCallAction(dynamic action, ref bool shouldCancel);
 
         private readonly Dictionary<int, Delegate> _cache;
 
@@ -16,6 +19,11 @@ namespace DulcisX.Nodes.Events
             _cache = new Dictionary<int, Delegate>();
         }
 
+        /// <summary>
+        /// Hooks a callback method to the event.
+        /// </summary>
+        /// <param name="nodeTypes">The Node types on which to call the callback methods.</param>
+        /// <param name="callback">The callback which should be called at the raise of the event.</param>
         public void Hook(NodeTypes nodeTypes, TDelegate callback)
         {
             DoByTypes(nodeTypes, i =>
@@ -32,6 +40,11 @@ namespace DulcisX.Nodes.Events
             });
         }
 
+        /// <summary>
+        /// Hooks callback methods to the event.
+        /// </summary>
+        /// <param name="nodeTypes">The Node types on which to call the callback methods.</param>
+        /// <param name="callbacks">A list of callbacks which should be called at the raise of the event.</param>
         public void Hook(NodeTypes nodeTypes, params TDelegate[] callbacks)
         {
             DoByTypes(nodeTypes, i =>
@@ -47,6 +60,11 @@ namespace DulcisX.Nodes.Events
             });
         }
 
+        /// <summary>
+        /// UnHooks a callback method from the event.
+        /// </summary>
+        /// <param name="nodeTypes">The Node types on which to remove the callback method.</param>
+        /// <param name="callback">The callback which should be removed from the event.</param>
         public void UnHook(NodeTypes nodeTypes, TDelegate callback)
         {
             DoByTypes(nodeTypes, i =>
@@ -58,6 +76,11 @@ namespace DulcisX.Nodes.Events
             });
         }
 
+        /// <summary>
+        /// UnHooks callback methods from the event.
+        /// </summary>
+        /// <param name="nodeTypes">The Node types on which to remove the callback methods.</param>
+        /// <param name="callbacks">The callbacks which should be removed from the event.</param>
         public void UnHook(NodeTypes nodeTypes, params TDelegate[] callbacks)
         {
             DoByTypes(nodeTypes, i =>
@@ -74,6 +97,18 @@ namespace DulcisX.Nodes.Events
             });
         }
 
+        /// <summary>
+        /// UnHooks all callback methods, from all Node type, from the event.
+        /// </summary>
+        public void UnHookAll()
+        {
+            _cache.Clear();
+        }
+
+        /// <summary>
+        /// UnHooks all callback methods from the event.
+        /// </summary>
+        /// <param name="nodeTypes">The Node types from which all callback methods should be removed.</param>
         public void UnHookAll(NodeTypes nodeTypes)
         {
             DoByTypes(nodeTypes, i =>
@@ -85,10 +120,6 @@ namespace DulcisX.Nodes.Events
             });
         }
 
-        public void UnHookAll()
-        {
-            _cache.Clear();
-        }
 
         #region Invoke
         internal void Invoke(NodeTypes nodeTypes)

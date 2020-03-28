@@ -131,7 +131,7 @@
     <Compile Include="Nodes\ProjectNode.cs" />
     <Compile Include="Nodes\RenamedPhysicalNode.cs" />
     <Compile Include="Nodes\ChangedPhysicalSccNode.cs" />
-    <Compile Include="Nodes\SelectedNodes.cs" />
+    <Compile Include="Nodes\SelectedNodesCollection.cs" />
     <Compile Include="Nodes\SolutionItemNode.cs" />
     <Compile Include="Nodes\SolutionNode.cs" />
     <Compile Include="Nodes\SolutionNodeConfiguration.cs" />

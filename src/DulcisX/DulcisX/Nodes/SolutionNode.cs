@@ -24,26 +24,41 @@ namespace DulcisX.Nodes
 
         private ISolutionEvents _solutionEvents;
 
+        /// <summary>
+        /// Provides access to a <see cref="IVsSolutionEvents"/> instance.
+        /// </summary>
         public ISolutionEvents SolutionEvents
             => _solutionEvents ?? (_solutionEvents = ServiceContainer.GetInstance<ISolutionEvents>());
 
         private ISolutionBuildEvents _solutionBuildEvents;
 
+        /// <summary>
+        /// Provides access to a <see cref="IVsSolutionEvents"/> instance.
+        /// </summary>
         public ISolutionBuildEvents SolutionBuildEvents
             => _solutionBuildEvents ?? (_solutionBuildEvents = ServiceContainer.GetInstance<ISolutionBuildEvents>());
 
         private IOpenNodeEvents _openNodeEvents;
 
+        /// <summary>
+        /// Provides access to a <see cref="IOpenNodeEvents"/> instance.
+        /// </summary>
         public IOpenNodeEvents OpenNodeEvents
             => _openNodeEvents ?? (_openNodeEvents = ServiceContainer.GetInstance<IOpenNodeEvents>());
 
         private INodeSelectionEvents _nodeSelectionEvents;
 
+        /// <summary>
+        /// Provides access to a <see cref="INodeSelectionEvents"/> instance.
+        /// </summary>
         public INodeSelectionEvents NodeSelectionEvents
             => _nodeSelectionEvents ?? (_nodeSelectionEvents = ServiceContainer.GetInstance<INodeSelectionEvents>());
 
         private IProjectNodeChangeEvents _projectNodeChangedEvents;
 
+        /// <summary>
+        /// Provides access to a <see cref="IProjectNodeChangeEvents"/> instance.
+        /// </summary>
         public IProjectNodeChangeEvents ProjectNodeChangedEvents
             => _projectNodeChangedEvents ?? (_projectNodeChangedEvents = ServiceContainer.GetInstance<IProjectNodeChangeEvents>());
 
