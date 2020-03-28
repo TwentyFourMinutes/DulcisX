@@ -3,15 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29721.120
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DulcisX.TestVSIX", "DulcisX.TestVSIX\DulcisX.TestVSIX.csproj", "{66D1DF94-9F1F-486D-8DA8-8099A6C3BB98}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DulcisX.Analyzer", "DulcisX.Analyzer\DulcisX.Analyzer\DulcisX.Analyzer.csproj", "{9AB94C09-E154-442E-A7BF-9ECE035874DD}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DulcisX.Analyzer.Vsix", "DulcisX.Analyzer\DulcisX.Analyzer.Vsix\DulcisX.Analyzer.Vsix.csproj", "{F0CB3C59-C675-433F-8342-77DB75191396}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Analyzer", "Analyzer", "{19A10DA4-8EF3-4618-88C3-2C0922B1BE44}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DulcisX", "DulcisX\DulcisX.csproj", "{51CAD32F-3AFD-469B-8DA3-E563577768F1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DulcisX.SDKTesting", "DulcisX.SDKTesting\DulcisX.SDKTesting.csproj", "{16261E7E-89C9-4775-BC37-6B0F6F24E326}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -19,29 +13,17 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{66D1DF94-9F1F-486D-8DA8-8099A6C3BB98}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{66D1DF94-9F1F-486D-8DA8-8099A6C3BB98}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{66D1DF94-9F1F-486D-8DA8-8099A6C3BB98}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{66D1DF94-9F1F-486D-8DA8-8099A6C3BB98}.Release|Any CPU.Build.0 = Release|Any CPU
-		{9AB94C09-E154-442E-A7BF-9ECE035874DD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{9AB94C09-E154-442E-A7BF-9ECE035874DD}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{9AB94C09-E154-442E-A7BF-9ECE035874DD}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{9AB94C09-E154-442E-A7BF-9ECE035874DD}.Release|Any CPU.Build.0 = Release|Any CPU
-		{F0CB3C59-C675-433F-8342-77DB75191396}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{F0CB3C59-C675-433F-8342-77DB75191396}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{F0CB3C59-C675-433F-8342-77DB75191396}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{F0CB3C59-C675-433F-8342-77DB75191396}.Release|Any CPU.Build.0 = Release|Any CPU
 		{51CAD32F-3AFD-469B-8DA3-E563577768F1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{51CAD32F-3AFD-469B-8DA3-E563577768F1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{51CAD32F-3AFD-469B-8DA3-E563577768F1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{51CAD32F-3AFD-469B-8DA3-E563577768F1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{16261E7E-89C9-4775-BC37-6B0F6F24E326}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{16261E7E-89C9-4775-BC37-6B0F6F24E326}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{16261E7E-89C9-4775-BC37-6B0F6F24E326}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{16261E7E-89C9-4775-BC37-6B0F6F24E326}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
-	EndGlobalSection
-	GlobalSection(NestedProjects) = preSolution
-		{9AB94C09-E154-442E-A7BF-9ECE035874DD} = {19A10DA4-8EF3-4618-88C3-2C0922B1BE44}
-		{F0CB3C59-C675-433F-8342-77DB75191396} = {19A10DA4-8EF3-4618-88C3-2C0922B1BE44}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {BBB3A6ED-8D61-40C7-8157-DAB17A71A15E}
