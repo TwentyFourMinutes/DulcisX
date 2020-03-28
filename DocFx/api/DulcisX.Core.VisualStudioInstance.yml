@@ -1,0 +1,734 @@
+### YamlMime:ManagedReference
+items:
+- uid: DulcisX.Core.VisualStudioInstance
+  commentId: T:DulcisX.Core.VisualStudioInstance
+  id: VisualStudioInstance
+  parent: DulcisX.Core
+  children:
+  - DulcisX.Core.VisualStudioInstance.GetInstallDirectory
+  - DulcisX.Core.VisualStudioInstance.GetLocalAppDataDirectory
+  - DulcisX.Core.VisualStudioInstance.GetProjectDirectory
+  - DulcisX.Core.VisualStudioInstance.GetReleaseDescription
+  - DulcisX.Core.VisualStudioInstance.GetReleaseVersion
+  - DulcisX.Core.VisualStudioInstance.GetVisualStudioDirectory
+  - DulcisX.Core.VisualStudioInstance.IsElevatedInstance
+  - DulcisX.Core.VisualStudioInstance.IsPrereleaseVersion
+  - DulcisX.Core.VisualStudioInstance.RestartInstance(System.Boolean)
+  langs:
+  - csharp
+  - vb
+  name: VisualStudioInstance
+  nameWithType: VisualStudioInstance
+  fullName: DulcisX.Core.VisualStudioInstance
+  type: Class
+  source:
+    remote:
+      path: src/DulcisX/DulcisX/Core/VisualStudioInstance.cs
+      branch: master
+      repo: https://github.com/TwentyFourMinutes/DulcisX.git
+    id: VisualStudioInstance
+    path: ../../DulcisX - master/src/DulcisX/DulcisX/Core/VisualStudioInstance.cs
+    startLine: 9
+  assemblies:
+  - DulcisX
+  namespace: DulcisX.Core
+  summary: "\nRepresents the current Visual Studio Instance.\n"
+  example: []
+  syntax:
+    content: public class VisualStudioInstance
+    content.vb: Public Class VisualStudioInstance
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: DulcisX.Core.VisualStudioInstance.IsElevatedInstance
+  commentId: M:DulcisX.Core.VisualStudioInstance.IsElevatedInstance
+  id: IsElevatedInstance
+  parent: DulcisX.Core.VisualStudioInstance
+  langs:
+  - csharp
+  - vb
+  name: IsElevatedInstance()
+  nameWithType: VisualStudioInstance.IsElevatedInstance()
+  fullName: DulcisX.Core.VisualStudioInstance.IsElevatedInstance()
+  type: Method
+  source:
+    remote:
+      path: src/DulcisX/DulcisX/Core/VisualStudioInstance.cs
+      branch: master
+      repo: https://github.com/TwentyFourMinutes/DulcisX.git
+    id: IsElevatedInstance
+    path: ../../DulcisX - master/src/DulcisX/DulcisX/Core/VisualStudioInstance.cs
+    startLine: 22
+  assemblies:
+  - DulcisX
+  namespace: DulcisX.Core
+  summary: "\nGets a value indicating whether the current <xref href=\"DulcisX.Core.VisualStudioInstance\" data-throw-if-not-resolved=\"false\"></xref> is running as an elevated process.\n"
+  example: []
+  syntax:
+    content: public bool IsElevatedInstance()
+    return:
+      type: System.Boolean
+      description: <xref uid="langword_csharp_true" name="true" href=""></xref> if the process is elevated; otherwise <xref uid="langword_csharp_false" name="false" href=""></xref>.
+    content.vb: Public Function IsElevatedInstance As Boolean
+  overload: DulcisX.Core.VisualStudioInstance.IsElevatedInstance*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: DulcisX.Core.VisualStudioInstance.RestartInstance(System.Boolean)
+  commentId: M:DulcisX.Core.VisualStudioInstance.RestartInstance(System.Boolean)
+  id: RestartInstance(System.Boolean)
+  parent: DulcisX.Core.VisualStudioInstance
+  langs:
+  - csharp
+  - vb
+  name: RestartInstance(Boolean)
+  nameWithType: VisualStudioInstance.RestartInstance(Boolean)
+  fullName: DulcisX.Core.VisualStudioInstance.RestartInstance(System.Boolean)
+  type: Method
+  source:
+    remote:
+      path: src/DulcisX/DulcisX/Core/VisualStudioInstance.cs
+      branch: master
+      repo: https://github.com/TwentyFourMinutes/DulcisX.git
+    id: RestartInstance
+    path: ../../DulcisX - master/src/DulcisX/DulcisX/Core/VisualStudioInstance.cs
+    startLine: 39
+  assemblies:
+  - DulcisX
+  namespace: DulcisX.Core
+  summary: "\nRestarts the current <xref href=\"DulcisX.Core.VisualStudioInstance\" data-throw-if-not-resolved=\"false\"></xref>.\n"
+  example: []
+  syntax:
+    content: public void RestartInstance(bool restartAsElevated = false)
+    parameters:
+    - id: restartAsElevated
+      type: System.Boolean
+      description: Determines whether the new instance should be elevated or not.
+    content.vb: Public Sub RestartInstance(restartAsElevated As Boolean = False)
+  overload: DulcisX.Core.VisualStudioInstance.RestartInstance*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: DulcisX.Core.VisualStudioInstance.GetInstallDirectory
+  commentId: M:DulcisX.Core.VisualStudioInstance.GetInstallDirectory
+  id: GetInstallDirectory
+  parent: DulcisX.Core.VisualStudioInstance
+  langs:
+  - csharp
+  - vb
+  name: GetInstallDirectory()
+  nameWithType: VisualStudioInstance.GetInstallDirectory()
+  fullName: DulcisX.Core.VisualStudioInstance.GetInstallDirectory()
+  type: Method
+  source:
+    remote:
+      path: src/DulcisX/DulcisX/Core/VisualStudioInstance.cs
+      branch: master
+      repo: https://github.com/TwentyFourMinutes/DulcisX.git
+    id: GetInstallDirectory
+    path: ../../DulcisX - master/src/DulcisX/DulcisX/Core/VisualStudioInstance.cs
+    startLine: 54
+  assemblies:
+  - DulcisX
+  namespace: DulcisX.Core
+  summary: "\nGets the Install Directory of the current <xref href=\"DulcisX.Core.VisualStudioInstance\" data-throw-if-not-resolved=\"false\"></xref>.\n"
+  example: []
+  syntax:
+    content: public string GetInstallDirectory()
+    return:
+      type: System.String
+      description: A string that contains the absolute path of the Install Directory.
+    content.vb: Public Function GetInstallDirectory As String
+  overload: DulcisX.Core.VisualStudioInstance.GetInstallDirectory*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: DulcisX.Core.VisualStudioInstance.GetProjectDirectory
+  commentId: M:DulcisX.Core.VisualStudioInstance.GetProjectDirectory
+  id: GetProjectDirectory
+  parent: DulcisX.Core.VisualStudioInstance
+  langs:
+  - csharp
+  - vb
+  name: GetProjectDirectory()
+  nameWithType: VisualStudioInstance.GetProjectDirectory()
+  fullName: DulcisX.Core.VisualStudioInstance.GetProjectDirectory()
+  type: Method
+  source:
+    remote:
+      path: src/DulcisX/DulcisX/Core/VisualStudioInstance.cs
+      branch: master
+      repo: https://github.com/TwentyFourMinutes/DulcisX.git
+    id: GetProjectDirectory
+    path: ../../DulcisX - master/src/DulcisX/DulcisX/Core/VisualStudioInstance.cs
+    startLine: 69
+  assemblies:
+  - DulcisX
+  namespace: DulcisX.Core
+  summary: "\nGets the Project Directory of the current <xref href=\"DulcisX.Core.VisualStudioInstance\" data-throw-if-not-resolved=\"false\"></xref>.\n"
+  example: []
+  syntax:
+    content: public string GetProjectDirectory()
+    return:
+      type: System.String
+      description: A string that contains the absolute path of the Project Directory.
+    content.vb: Public Function GetProjectDirectory As String
+  overload: DulcisX.Core.VisualStudioInstance.GetProjectDirectory*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: DulcisX.Core.VisualStudioInstance.GetVisualStudioDirectory
+  commentId: M:DulcisX.Core.VisualStudioInstance.GetVisualStudioDirectory
+  id: GetVisualStudioDirectory
+  parent: DulcisX.Core.VisualStudioInstance
+  langs:
+  - csharp
+  - vb
+  name: GetVisualStudioDirectory()
+  nameWithType: VisualStudioInstance.GetVisualStudioDirectory()
+  fullName: DulcisX.Core.VisualStudioInstance.GetVisualStudioDirectory()
+  type: Method
+  source:
+    remote:
+      path: src/DulcisX/DulcisX/Core/VisualStudioInstance.cs
+      branch: master
+      repo: https://github.com/TwentyFourMinutes/DulcisX.git
+    id: GetVisualStudioDirectory
+    path: ../../DulcisX - master/src/DulcisX/DulcisX/Core/VisualStudioInstance.cs
+    startLine: 84
+  assemblies:
+  - DulcisX
+  namespace: DulcisX.Core
+  summary: "\nGets the Visual Studio Directory of the current <xref href=\"DulcisX.Core.VisualStudioInstance\" data-throw-if-not-resolved=\"false\"></xref>.\n"
+  example: []
+  syntax:
+    content: public string GetVisualStudioDirectory()
+    return:
+      type: System.String
+      description: A string that contains the absolute path of the Visual Studio Directory.
+    content.vb: Public Function GetVisualStudioDirectory As String
+  overload: DulcisX.Core.VisualStudioInstance.GetVisualStudioDirectory*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: DulcisX.Core.VisualStudioInstance.GetLocalAppDataDirectory
+  commentId: M:DulcisX.Core.VisualStudioInstance.GetLocalAppDataDirectory
+  id: GetLocalAppDataDirectory
+  parent: DulcisX.Core.VisualStudioInstance
+  langs:
+  - csharp
+  - vb
+  name: GetLocalAppDataDirectory()
+  nameWithType: VisualStudioInstance.GetLocalAppDataDirectory()
+  fullName: DulcisX.Core.VisualStudioInstance.GetLocalAppDataDirectory()
+  type: Method
+  source:
+    remote:
+      path: src/DulcisX/DulcisX/Core/VisualStudioInstance.cs
+      branch: master
+      repo: https://github.com/TwentyFourMinutes/DulcisX.git
+    id: GetLocalAppDataDirectory
+    path: ../../DulcisX - master/src/DulcisX/DulcisX/Core/VisualStudioInstance.cs
+    startLine: 99
+  assemblies:
+  - DulcisX
+  namespace: DulcisX.Core
+  summary: "\nGets the Local AppData Directory of the current <xref href=\"DulcisX.Core.VisualStudioInstance\" data-throw-if-not-resolved=\"false\"></xref>.\n"
+  example: []
+  syntax:
+    content: public string GetLocalAppDataDirectory()
+    return:
+      type: System.String
+      description: A string that contains the absolute path of the Local AppData Directory.
+    content.vb: Public Function GetLocalAppDataDirectory As String
+  overload: DulcisX.Core.VisualStudioInstance.GetLocalAppDataDirectory*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: DulcisX.Core.VisualStudioInstance.GetReleaseVersion
+  commentId: M:DulcisX.Core.VisualStudioInstance.GetReleaseVersion
+  id: GetReleaseVersion
+  parent: DulcisX.Core.VisualStudioInstance
+  langs:
+  - csharp
+  - vb
+  name: GetReleaseVersion()
+  nameWithType: VisualStudioInstance.GetReleaseVersion()
+  fullName: DulcisX.Core.VisualStudioInstance.GetReleaseVersion()
+  type: Method
+  source:
+    remote:
+      path: src/DulcisX/DulcisX/Core/VisualStudioInstance.cs
+      branch: master
+      repo: https://github.com/TwentyFourMinutes/DulcisX.git
+    id: GetReleaseVersion
+    path: ../../DulcisX - master/src/DulcisX/DulcisX/Core/VisualStudioInstance.cs
+    startLine: 114
+  assemblies:
+  - DulcisX
+  namespace: DulcisX.Core
+  summary: "\nGets the Release Version of the current <xref href=\"DulcisX.Core.VisualStudioInstance\" data-throw-if-not-resolved=\"false\"></xref>.\n"
+  example: []
+  syntax:
+    content: public string GetReleaseVersion()
+    return:
+      type: System.String
+      description: A string that contains the Release Version.
+    content.vb: Public Function GetReleaseVersion As String
+  overload: DulcisX.Core.VisualStudioInstance.GetReleaseVersion*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: DulcisX.Core.VisualStudioInstance.GetReleaseDescription
+  commentId: M:DulcisX.Core.VisualStudioInstance.GetReleaseDescription
+  id: GetReleaseDescription
+  parent: DulcisX.Core.VisualStudioInstance
+  langs:
+  - csharp
+  - vb
+  name: GetReleaseDescription()
+  nameWithType: VisualStudioInstance.GetReleaseDescription()
+  fullName: DulcisX.Core.VisualStudioInstance.GetReleaseDescription()
+  type: Method
+  source:
+    remote:
+      path: src/DulcisX/DulcisX/Core/VisualStudioInstance.cs
+      branch: master
+      repo: https://github.com/TwentyFourMinutes/DulcisX.git
+    id: GetReleaseDescription
+    path: ../../DulcisX - master/src/DulcisX/DulcisX/Core/VisualStudioInstance.cs
+    startLine: 129
+  assemblies:
+  - DulcisX
+  namespace: DulcisX.Core
+  summary: "\nGets the Release Description of the current <xref href=\"DulcisX.Core.VisualStudioInstance\" data-throw-if-not-resolved=\"false\"></xref>.\n"
+  example: []
+  syntax:
+    content: public string GetReleaseDescription()
+    return:
+      type: System.String
+      description: A string that contains the Release Description.
+    content.vb: Public Function GetReleaseDescription As String
+  overload: DulcisX.Core.VisualStudioInstance.GetReleaseDescription*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: DulcisX.Core.VisualStudioInstance.IsPrereleaseVersion
+  commentId: M:DulcisX.Core.VisualStudioInstance.IsPrereleaseVersion
+  id: IsPrereleaseVersion
+  parent: DulcisX.Core.VisualStudioInstance
+  langs:
+  - csharp
+  - vb
+  name: IsPrereleaseVersion()
+  nameWithType: VisualStudioInstance.IsPrereleaseVersion()
+  fullName: DulcisX.Core.VisualStudioInstance.IsPrereleaseVersion()
+  type: Method
+  source:
+    remote:
+      path: src/DulcisX/DulcisX/Core/VisualStudioInstance.cs
+      branch: master
+      repo: https://github.com/TwentyFourMinutes/DulcisX.git
+    id: IsPrereleaseVersion
+    path: ../../DulcisX - master/src/DulcisX/DulcisX/Core/VisualStudioInstance.cs
+    startLine: 144
+  assemblies:
+  - DulcisX
+  namespace: DulcisX.Core
+  summary: "\nGets a value indicating whether the version of the current <xref href=\"DulcisX.Core.VisualStudioInstance\" data-throw-if-not-resolved=\"false\"></xref> is a pre-release version.\n"
+  example: []
+  syntax:
+    content: public bool IsPrereleaseVersion()
+    return:
+      type: System.Boolean
+      description: <xref uid="langword_csharp_true" name="true" href=""></xref> if the instance a pre-release version; otherwise <xref uid="langword_csharp_false" name="false" href=""></xref>.
+    content.vb: Public Function IsPrereleaseVersion As Boolean
+  overload: DulcisX.Core.VisualStudioInstance.IsPrereleaseVersion*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: DulcisX.Core
+  commentId: N:DulcisX.Core
+  name: DulcisX.Core
+  nameWithType: DulcisX.Core
+  fullName: DulcisX.Core
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: DulcisX.Core.VisualStudioInstance
+  commentId: T:DulcisX.Core.VisualStudioInstance
+  parent: DulcisX.Core
+  name: VisualStudioInstance
+  nameWithType: VisualStudioInstance
+  fullName: DulcisX.Core.VisualStudioInstance
+- uid: DulcisX.Core.VisualStudioInstance.IsElevatedInstance*
+  commentId: Overload:DulcisX.Core.VisualStudioInstance.IsElevatedInstance
+  name: IsElevatedInstance
+  nameWithType: VisualStudioInstance.IsElevatedInstance
+  fullName: DulcisX.Core.VisualStudioInstance.IsElevatedInstance
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: DulcisX.Core.VisualStudioInstance.RestartInstance*
+  commentId: Overload:DulcisX.Core.VisualStudioInstance.RestartInstance
+  name: RestartInstance
+  nameWithType: VisualStudioInstance.RestartInstance
+  fullName: DulcisX.Core.VisualStudioInstance.RestartInstance
+- uid: DulcisX.Core.VisualStudioInstance.GetInstallDirectory*
+  commentId: Overload:DulcisX.Core.VisualStudioInstance.GetInstallDirectory
+  name: GetInstallDirectory
+  nameWithType: VisualStudioInstance.GetInstallDirectory
+  fullName: DulcisX.Core.VisualStudioInstance.GetInstallDirectory
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: DulcisX.Core.VisualStudioInstance.GetProjectDirectory*
+  commentId: Overload:DulcisX.Core.VisualStudioInstance.GetProjectDirectory
+  name: GetProjectDirectory
+  nameWithType: VisualStudioInstance.GetProjectDirectory
+  fullName: DulcisX.Core.VisualStudioInstance.GetProjectDirectory
+- uid: DulcisX.Core.VisualStudioInstance.GetVisualStudioDirectory*
+  commentId: Overload:DulcisX.Core.VisualStudioInstance.GetVisualStudioDirectory
+  name: GetVisualStudioDirectory
+  nameWithType: VisualStudioInstance.GetVisualStudioDirectory
+  fullName: DulcisX.Core.VisualStudioInstance.GetVisualStudioDirectory
+- uid: DulcisX.Core.VisualStudioInstance.GetLocalAppDataDirectory*
+  commentId: Overload:DulcisX.Core.VisualStudioInstance.GetLocalAppDataDirectory
+  name: GetLocalAppDataDirectory
+  nameWithType: VisualStudioInstance.GetLocalAppDataDirectory
+  fullName: DulcisX.Core.VisualStudioInstance.GetLocalAppDataDirectory
+- uid: DulcisX.Core.VisualStudioInstance.GetReleaseVersion*
+  commentId: Overload:DulcisX.Core.VisualStudioInstance.GetReleaseVersion
+  name: GetReleaseVersion
+  nameWithType: VisualStudioInstance.GetReleaseVersion
+  fullName: DulcisX.Core.VisualStudioInstance.GetReleaseVersion
+- uid: DulcisX.Core.VisualStudioInstance.GetReleaseDescription*
+  commentId: Overload:DulcisX.Core.VisualStudioInstance.GetReleaseDescription
+  name: GetReleaseDescription
+  nameWithType: VisualStudioInstance.GetReleaseDescription
+  fullName: DulcisX.Core.VisualStudioInstance.GetReleaseDescription
+- uid: DulcisX.Core.VisualStudioInstance.IsPrereleaseVersion*
+  commentId: Overload:DulcisX.Core.VisualStudioInstance.IsPrereleaseVersion
+  name: IsPrereleaseVersion
+  nameWithType: VisualStudioInstance.IsPrereleaseVersion
+  fullName: DulcisX.Core.VisualStudioInstance.IsPrereleaseVersion

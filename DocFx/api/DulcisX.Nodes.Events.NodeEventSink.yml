@@ -1,0 +1,550 @@
+### YamlMime:ManagedReference
+items:
+- uid: DulcisX.Nodes.Events.NodeEventSink
+  commentId: T:DulcisX.Nodes.Events.NodeEventSink
+  id: NodeEventSink
+  parent: DulcisX.Nodes.Events
+  children:
+  - DulcisX.Nodes.Events.NodeEventSink.#ctor(DulcisX.Nodes.SolutionNode)
+  - DulcisX.Nodes.Events.NodeEventSink.Solution
+  langs:
+  - csharp
+  - vb
+  name: NodeEventSink
+  nameWithType: NodeEventSink
+  fullName: DulcisX.Nodes.Events.NodeEventSink
+  type: Class
+  source:
+    remote:
+      path: src/DulcisX/DulcisX/Nodes/Events/NodeEventSink.cs
+      branch: master
+      repo: https://github.com/TwentyFourMinutes/DulcisX.git
+    id: NodeEventSink
+    path: ../../DulcisX - master/src/DulcisX/DulcisX/Nodes/Events/NodeEventSink.cs
+    startLine: 7
+  assemblies:
+  - DulcisX
+  namespace: DulcisX.Nodes.Events
+  summary: "\nProvides basic logic for the inheritance of native Visual Studio Node Events.\n"
+  example: []
+  syntax:
+    content: 'public abstract class NodeEventSink : EventSink, IDisposable'
+    content.vb: >-
+      Public MustInherit Class NodeEventSink
+
+          Inherits EventSink
+
+          Implements IDisposable
+  inheritance:
+  - System.Object
+  - DulcisX.Core.EventSink
+  implements:
+  - System.IDisposable
+  inheritedMembers:
+  - DulcisX.Core.EventSink.Cookie
+  - DulcisX.Core.EventSink.SetCookie(System.UInt32)
+  - DulcisX.Core.EventSink.Dispose
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  modifiers.csharp:
+  - public
+  - abstract
+  - class
+  modifiers.vb:
+  - Public
+  - MustInherit
+  - Class
+- uid: DulcisX.Nodes.Events.NodeEventSink.Solution
+  commentId: P:DulcisX.Nodes.Events.NodeEventSink.Solution
+  id: Solution
+  parent: DulcisX.Nodes.Events.NodeEventSink
+  langs:
+  - csharp
+  - vb
+  name: Solution
+  nameWithType: NodeEventSink.Solution
+  fullName: DulcisX.Nodes.Events.NodeEventSink.Solution
+  type: Property
+  source:
+    remote:
+      path: src/DulcisX/DulcisX/Nodes/Events/NodeEventSink.cs
+      branch: master
+      repo: https://github.com/TwentyFourMinutes/DulcisX.git
+    id: Solution
+    path: ../../DulcisX - master/src/DulcisX/DulcisX/Nodes/Events/NodeEventSink.cs
+    startLine: 12
+  assemblies:
+  - DulcisX
+  namespace: DulcisX.Nodes.Events
+  summary: "\nGets the Solution Node of the Solution Explorer.\n"
+  example: []
+  syntax:
+    content: protected SolutionNode Solution { get; }
+    parameters: []
+    return:
+      type: DulcisX.Nodes.SolutionNode
+    content.vb: Protected ReadOnly Property Solution As SolutionNode
+  overload: DulcisX.Nodes.Events.NodeEventSink.Solution*
+  modifiers.csharp:
+  - protected
+  - get
+  modifiers.vb:
+  - Protected
+  - ReadOnly
+- uid: DulcisX.Nodes.Events.NodeEventSink.#ctor(DulcisX.Nodes.SolutionNode)
+  commentId: M:DulcisX.Nodes.Events.NodeEventSink.#ctor(DulcisX.Nodes.SolutionNode)
+  id: '#ctor(DulcisX.Nodes.SolutionNode)'
+  parent: DulcisX.Nodes.Events.NodeEventSink
+  langs:
+  - csharp
+  - vb
+  name: NodeEventSink(SolutionNode)
+  nameWithType: NodeEventSink.NodeEventSink(SolutionNode)
+  fullName: DulcisX.Nodes.Events.NodeEventSink.NodeEventSink(DulcisX.Nodes.SolutionNode)
+  type: Constructor
+  source:
+    remote:
+      path: src/DulcisX/DulcisX/Nodes/Events/NodeEventSink.cs
+      branch: master
+      repo: https://github.com/TwentyFourMinutes/DulcisX.git
+    id: .ctor
+    path: ../../DulcisX - master/src/DulcisX/DulcisX/Nodes/Events/NodeEventSink.cs
+    startLine: 19
+  assemblies:
+  - DulcisX
+  namespace: DulcisX.Nodes.Events
+  summary: "\nInitializes a new instance of the <xref href=\"DulcisX.Nodes.FolderNode\" data-throw-if-not-resolved=\"false\"></xref> class.\n"
+  example: []
+  syntax:
+    content: protected NodeEventSink(SolutionNode solution)
+    parameters:
+    - id: solution
+      type: DulcisX.Nodes.SolutionNode
+      description: The Solution Node of the Solution Explorer.
+    content.vb: Protected Sub New(solution As SolutionNode)
+  overload: DulcisX.Nodes.Events.NodeEventSink.#ctor*
+  modifiers.csharp:
+  - protected
+  modifiers.vb:
+  - Protected
+references:
+- uid: DulcisX.Nodes.Events
+  commentId: N:DulcisX.Nodes.Events
+  name: DulcisX.Nodes.Events
+  nameWithType: DulcisX.Nodes.Events
+  fullName: DulcisX.Nodes.Events
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: DulcisX.Core.EventSink
+  commentId: T:DulcisX.Core.EventSink
+  parent: DulcisX.Core
+  name: EventSink
+  nameWithType: EventSink
+  fullName: DulcisX.Core.EventSink
+- uid: System.IDisposable
+  commentId: T:System.IDisposable
+  parent: System
+  isExternal: true
+  name: IDisposable
+  nameWithType: IDisposable
+  fullName: System.IDisposable
+- uid: DulcisX.Core.EventSink.Cookie
+  commentId: P:DulcisX.Core.EventSink.Cookie
+  parent: DulcisX.Core.EventSink
+  name: Cookie
+  nameWithType: EventSink.Cookie
+  fullName: DulcisX.Core.EventSink.Cookie
+- uid: DulcisX.Core.EventSink.SetCookie(System.UInt32)
+  commentId: M:DulcisX.Core.EventSink.SetCookie(System.UInt32)
+  parent: DulcisX.Core.EventSink
+  isExternal: true
+  name: SetCookie(UInt32)
+  nameWithType: EventSink.SetCookie(UInt32)
+  fullName: DulcisX.Core.EventSink.SetCookie(System.UInt32)
+  spec.csharp:
+  - uid: DulcisX.Core.EventSink.SetCookie(System.UInt32)
+    name: SetCookie
+    nameWithType: EventSink.SetCookie
+    fullName: DulcisX.Core.EventSink.SetCookie
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.UInt32
+    name: UInt32
+    nameWithType: UInt32
+    fullName: System.UInt32
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: DulcisX.Core.EventSink.SetCookie(System.UInt32)
+    name: SetCookie
+    nameWithType: EventSink.SetCookie
+    fullName: DulcisX.Core.EventSink.SetCookie
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.UInt32
+    name: UInt32
+    nameWithType: UInt32
+    fullName: System.UInt32
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: DulcisX.Core.EventSink.Dispose
+  commentId: M:DulcisX.Core.EventSink.Dispose
+  parent: DulcisX.Core.EventSink
+  name: Dispose()
+  nameWithType: EventSink.Dispose()
+  fullName: DulcisX.Core.EventSink.Dispose()
+  spec.csharp:
+  - uid: DulcisX.Core.EventSink.Dispose
+    name: Dispose
+    nameWithType: EventSink.Dispose
+    fullName: DulcisX.Core.EventSink.Dispose
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: DulcisX.Core.EventSink.Dispose
+    name: Dispose
+    nameWithType: EventSink.Dispose
+    fullName: DulcisX.Core.EventSink.Dispose
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: DulcisX.Core
+  commentId: N:DulcisX.Core
+  name: DulcisX.Core
+  nameWithType: DulcisX.Core
+  fullName: DulcisX.Core
+- uid: DulcisX.Nodes.Events.NodeEventSink.Solution*
+  commentId: Overload:DulcisX.Nodes.Events.NodeEventSink.Solution
+  name: Solution
+  nameWithType: NodeEventSink.Solution
+  fullName: DulcisX.Nodes.Events.NodeEventSink.Solution
+- uid: DulcisX.Nodes.SolutionNode
+  commentId: T:DulcisX.Nodes.SolutionNode
+  parent: DulcisX.Nodes
+  name: SolutionNode
+  nameWithType: SolutionNode
+  fullName: DulcisX.Nodes.SolutionNode
+- uid: DulcisX.Nodes
+  commentId: N:DulcisX.Nodes
+  name: DulcisX.Nodes
+  nameWithType: DulcisX.Nodes
+  fullName: DulcisX.Nodes
+- uid: DulcisX.Nodes.FolderNode
+  commentId: T:DulcisX.Nodes.FolderNode
+  parent: DulcisX.Nodes
+  name: FolderNode
+  nameWithType: FolderNode
+  fullName: DulcisX.Nodes.FolderNode
+- uid: DulcisX.Nodes.Events.NodeEventSink.#ctor*
+  commentId: Overload:DulcisX.Nodes.Events.NodeEventSink.#ctor
+  name: NodeEventSink
+  nameWithType: NodeEventSink.NodeEventSink
+  fullName: DulcisX.Nodes.Events.NodeEventSink.NodeEventSink

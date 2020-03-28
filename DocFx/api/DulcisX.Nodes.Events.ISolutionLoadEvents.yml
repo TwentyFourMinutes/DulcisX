@@ -1,0 +1,212 @@
+### YamlMime:ManagedReference
+items:
+- uid: DulcisX.Nodes.Events.ISolutionLoadEvents
+  commentId: T:DulcisX.Nodes.Events.ISolutionLoadEvents
+  id: ISolutionLoadEvents
+  parent: DulcisX.Nodes.Events
+  children:
+  - DulcisX.Nodes.Events.ISolutionLoadEvents.OnBackgroundSolutionLoad
+  - DulcisX.Nodes.Events.ISolutionLoadEvents.OnBackgroundSolutionLoaded
+  langs:
+  - csharp
+  - vb
+  name: ISolutionLoadEvents
+  nameWithType: ISolutionLoadEvents
+  fullName: DulcisX.Nodes.Events.ISolutionLoadEvents
+  type: Interface
+  source:
+    remote:
+      path: src/DulcisX/DulcisX/Nodes/Events/ISolutionLoadEvents.cs
+      branch: master
+      repo: https://github.com/TwentyFourMinutes/DulcisX.git
+    id: ISolutionLoadEvents
+    path: ../../DulcisX - master/src/DulcisX/DulcisX/Nodes/Events/ISolutionLoadEvents.cs
+    startLine: 7
+  assemblies:
+  - DulcisX
+  namespace: DulcisX.Nodes.Events
+  summary: "\nProvides events, which occur on <xref href=\"DulcisX.Nodes.SolutionNode\" data-throw-if-not-resolved=\"false\"></xref> load. Provided by the <xref href=\"Microsoft.VisualStudio.Shell.Interop.IVsSolutionLoadEvents\" data-throw-if-not-resolved=\"false\"></xref> interface.\n"
+  example: []
+  syntax:
+    content: public interface ISolutionLoadEvents
+    content.vb: Public Interface ISolutionLoadEvents
+  modifiers.csharp:
+  - public
+  - interface
+  modifiers.vb:
+  - Public
+  - Interface
+- uid: DulcisX.Nodes.Events.ISolutionLoadEvents.OnBackgroundSolutionLoad
+  commentId: E:DulcisX.Nodes.Events.ISolutionLoadEvents.OnBackgroundSolutionLoad
+  id: OnBackgroundSolutionLoad
+  parent: DulcisX.Nodes.Events.ISolutionLoadEvents
+  langs:
+  - csharp
+  - vb
+  name: OnBackgroundSolutionLoad
+  nameWithType: ISolutionLoadEvents.OnBackgroundSolutionLoad
+  fullName: DulcisX.Nodes.Events.ISolutionLoadEvents.OnBackgroundSolutionLoad
+  type: Event
+  source:
+    remote:
+      path: src/DulcisX/DulcisX/Nodes/Events/ISolutionLoadEvents.cs
+      branch: master
+      repo: https://github.com/TwentyFourMinutes/DulcisX.git
+    id: OnBackgroundSolutionLoad
+    path: ../../DulcisX - master/src/DulcisX/DulcisX/Nodes/Events/ISolutionLoadEvents.cs
+    startLine: 12
+  assemblies:
+  - DulcisX
+  namespace: DulcisX.Nodes.Events
+  summary: "\nOccurs when the solution starts loading in the background.\n"
+  example: []
+  syntax:
+    content: event Action<string> OnBackgroundSolutionLoad
+    return:
+      type: System.Action{System.String}
+    content.vb: Event OnBackgroundSolutionLoad As Action(Of String)
+- uid: DulcisX.Nodes.Events.ISolutionLoadEvents.OnBackgroundSolutionLoaded
+  commentId: E:DulcisX.Nodes.Events.ISolutionLoadEvents.OnBackgroundSolutionLoaded
+  id: OnBackgroundSolutionLoaded
+  parent: DulcisX.Nodes.Events.ISolutionLoadEvents
+  langs:
+  - csharp
+  - vb
+  name: OnBackgroundSolutionLoaded
+  nameWithType: ISolutionLoadEvents.OnBackgroundSolutionLoaded
+  fullName: DulcisX.Nodes.Events.ISolutionLoadEvents.OnBackgroundSolutionLoaded
+  type: Event
+  source:
+    remote:
+      path: src/DulcisX/DulcisX/Nodes/Events/ISolutionLoadEvents.cs
+      branch: master
+      repo: https://github.com/TwentyFourMinutes/DulcisX.git
+    id: OnBackgroundSolutionLoaded
+    path: ../../DulcisX - master/src/DulcisX/DulcisX/Nodes/Events/ISolutionLoadEvents.cs
+    startLine: 17
+  assemblies:
+  - DulcisX
+  namespace: DulcisX.Nodes.Events
+  summary: "\nOccurs when the solution completed loading in the background.\n"
+  example: []
+  syntax:
+    content: event Action OnBackgroundSolutionLoaded
+    return:
+      type: System.Action
+    content.vb: Event OnBackgroundSolutionLoaded As Action
+references:
+- uid: DulcisX.Nodes.SolutionNode
+  commentId: T:DulcisX.Nodes.SolutionNode
+  parent: DulcisX.Nodes
+  name: SolutionNode
+  nameWithType: SolutionNode
+  fullName: DulcisX.Nodes.SolutionNode
+- uid: Microsoft.VisualStudio.Shell.Interop.IVsSolutionLoadEvents
+  commentId: T:Microsoft.VisualStudio.Shell.Interop.IVsSolutionLoadEvents
+  isExternal: true
+- uid: DulcisX.Nodes.Events
+  commentId: N:DulcisX.Nodes.Events
+  name: DulcisX.Nodes.Events
+  nameWithType: DulcisX.Nodes.Events
+  fullName: DulcisX.Nodes.Events
+- uid: DulcisX.Nodes
+  commentId: N:DulcisX.Nodes
+  name: DulcisX.Nodes
+  nameWithType: DulcisX.Nodes
+  fullName: DulcisX.Nodes
+- uid: System.Action{System.String}
+  commentId: T:System.Action{System.String}
+  parent: System
+  definition: System.Action`1
+  name: Action<String>
+  nameWithType: Action<String>
+  fullName: System.Action<System.String>
+  nameWithType.vb: Action(Of String)
+  fullName.vb: System.Action(Of System.String)
+  name.vb: Action(Of String)
+  spec.csharp:
+  - uid: System.Action`1
+    name: Action
+    nameWithType: Action
+    fullName: System.Action
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Action`1
+    name: Action
+    nameWithType: Action
+    fullName: System.Action
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Action`1
+  commentId: T:System.Action`1
+  isExternal: true
+  name: Action<T>
+  nameWithType: Action<T>
+  fullName: System.Action<T>
+  nameWithType.vb: Action(Of T)
+  fullName.vb: System.Action(Of T)
+  name.vb: Action(Of T)
+  spec.csharp:
+  - uid: System.Action`1
+    name: Action
+    nameWithType: Action
+    fullName: System.Action
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Action`1
+    name: Action
+    nameWithType: Action
+    fullName: System.Action
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.Action
+  commentId: T:System.Action
+  parent: System
+  isExternal: true
+  name: Action
+  nameWithType: Action
+  fullName: System.Action

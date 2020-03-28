@@ -1,0 +1,343 @@
+### YamlMime:ManagedReference
+items:
+- uid: DulcisX.Nodes
+  commentId: N:DulcisX.Nodes
+  id: DulcisX.Nodes
+  children:
+  - DulcisX.Nodes.AddedPhysicalNode`2
+  - DulcisX.Nodes.BaseNode
+  - DulcisX.Nodes.ChangedNodeBase`2
+  - DulcisX.Nodes.ChangedPhysicalSccNode`2
+  - DulcisX.Nodes.DocumentNode
+  - DulcisX.Nodes.FolderNode
+  - DulcisX.Nodes.IBaseNode
+  - DulcisX.Nodes.INamedNode
+  - DulcisX.Nodes.IPhysicalNode
+  - DulcisX.Nodes.ProjectItemNode
+  - DulcisX.Nodes.ProjectNode
+  - DulcisX.Nodes.RemovedPhysicalNode`1
+  - DulcisX.Nodes.RenamedPhysicalNode`2
+  - DulcisX.Nodes.SelectedNodesCollection
+  - DulcisX.Nodes.SolutionFolderNode
+  - DulcisX.Nodes.SolutionItemNode
+  - DulcisX.Nodes.SolutionNode
+  - DulcisX.Nodes.UnknownNode
+  langs:
+  - csharp
+  - vb
+  name: DulcisX.Nodes
+  nameWithType: DulcisX.Nodes
+  fullName: DulcisX.Nodes
+  type: Namespace
+  assemblies:
+  - DulcisX
+references:
+- uid: DulcisX.Nodes.ChangedNodeBase`2
+  commentId: T:DulcisX.Nodes.ChangedNodeBase`2
+  name: ChangedNodeBase<TNodeType, TFlag>
+  nameWithType: ChangedNodeBase<TNodeType, TFlag>
+  fullName: DulcisX.Nodes.ChangedNodeBase<TNodeType, TFlag>
+  nameWithType.vb: ChangedNodeBase(Of TNodeType, TFlag)
+  fullName.vb: DulcisX.Nodes.ChangedNodeBase(Of TNodeType, TFlag)
+  name.vb: ChangedNodeBase(Of TNodeType, TFlag)
+  spec.csharp:
+  - uid: DulcisX.Nodes.ChangedNodeBase`2
+    name: ChangedNodeBase
+    nameWithType: ChangedNodeBase
+    fullName: DulcisX.Nodes.ChangedNodeBase
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TNodeType
+    nameWithType: TNodeType
+    fullName: TNodeType
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TFlag
+    nameWithType: TFlag
+    fullName: TFlag
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: DulcisX.Nodes.ChangedNodeBase`2
+    name: ChangedNodeBase
+    nameWithType: ChangedNodeBase
+    fullName: DulcisX.Nodes.ChangedNodeBase
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TNodeType
+    nameWithType: TNodeType
+    fullName: TNodeType
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TFlag
+    nameWithType: TFlag
+    fullName: TFlag
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: DulcisX.Nodes.RemovedPhysicalNode`1
+  commentId: T:DulcisX.Nodes.RemovedPhysicalNode`1
+  name: RemovedPhysicalNode<TFlag>
+  nameWithType: RemovedPhysicalNode<TFlag>
+  fullName: DulcisX.Nodes.RemovedPhysicalNode<TFlag>
+  nameWithType.vb: RemovedPhysicalNode(Of TFlag)
+  fullName.vb: DulcisX.Nodes.RemovedPhysicalNode(Of TFlag)
+  name.vb: RemovedPhysicalNode(Of TFlag)
+  spec.csharp:
+  - uid: DulcisX.Nodes.RemovedPhysicalNode`1
+    name: RemovedPhysicalNode
+    nameWithType: RemovedPhysicalNode
+    fullName: DulcisX.Nodes.RemovedPhysicalNode
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TFlag
+    nameWithType: TFlag
+    fullName: TFlag
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: DulcisX.Nodes.RemovedPhysicalNode`1
+    name: RemovedPhysicalNode
+    nameWithType: RemovedPhysicalNode
+    fullName: DulcisX.Nodes.RemovedPhysicalNode
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TFlag
+    nameWithType: TFlag
+    fullName: TFlag
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: DulcisX.Nodes.BaseNode
+  commentId: T:DulcisX.Nodes.BaseNode
+  parent: DulcisX.Nodes
+  name: BaseNode
+  nameWithType: BaseNode
+  fullName: DulcisX.Nodes.BaseNode
+- uid: DulcisX.Nodes.DocumentNode
+  commentId: T:DulcisX.Nodes.DocumentNode
+  parent: DulcisX.Nodes
+  name: DocumentNode
+  nameWithType: DocumentNode
+  fullName: DulcisX.Nodes.DocumentNode
+- uid: DulcisX.Nodes.AddedPhysicalNode`2
+  commentId: T:DulcisX.Nodes.AddedPhysicalNode`2
+  name: AddedPhysicalNode<TNodeType, TFlag>
+  nameWithType: AddedPhysicalNode<TNodeType, TFlag>
+  fullName: DulcisX.Nodes.AddedPhysicalNode<TNodeType, TFlag>
+  nameWithType.vb: AddedPhysicalNode(Of TNodeType, TFlag)
+  fullName.vb: DulcisX.Nodes.AddedPhysicalNode(Of TNodeType, TFlag)
+  name.vb: AddedPhysicalNode(Of TNodeType, TFlag)
+  spec.csharp:
+  - uid: DulcisX.Nodes.AddedPhysicalNode`2
+    name: AddedPhysicalNode
+    nameWithType: AddedPhysicalNode
+    fullName: DulcisX.Nodes.AddedPhysicalNode
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TNodeType
+    nameWithType: TNodeType
+    fullName: TNodeType
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TFlag
+    nameWithType: TFlag
+    fullName: TFlag
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: DulcisX.Nodes.AddedPhysicalNode`2
+    name: AddedPhysicalNode
+    nameWithType: AddedPhysicalNode
+    fullName: DulcisX.Nodes.AddedPhysicalNode
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TNodeType
+    nameWithType: TNodeType
+    fullName: TNodeType
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TFlag
+    nameWithType: TFlag
+    fullName: TFlag
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: DulcisX.Nodes.FolderNode
+  commentId: T:DulcisX.Nodes.FolderNode
+  parent: DulcisX.Nodes
+  name: FolderNode
+  nameWithType: FolderNode
+  fullName: DulcisX.Nodes.FolderNode
+- uid: DulcisX.Nodes.IBaseNode
+  commentId: T:DulcisX.Nodes.IBaseNode
+  parent: DulcisX.Nodes
+  name: IBaseNode
+  nameWithType: IBaseNode
+  fullName: DulcisX.Nodes.IBaseNode
+- uid: DulcisX.Nodes.INamedNode
+  commentId: T:DulcisX.Nodes.INamedNode
+  parent: DulcisX.Nodes
+  name: INamedNode
+  nameWithType: INamedNode
+  fullName: DulcisX.Nodes.INamedNode
+- uid: DulcisX.Nodes.IPhysicalNode
+  commentId: T:DulcisX.Nodes.IPhysicalNode
+  parent: DulcisX.Nodes
+  name: IPhysicalNode
+  nameWithType: IPhysicalNode
+  fullName: DulcisX.Nodes.IPhysicalNode
+- uid: DulcisX.Nodes.ProjectItemNode
+  commentId: T:DulcisX.Nodes.ProjectItemNode
+  parent: DulcisX.Nodes
+  name: ProjectItemNode
+  nameWithType: ProjectItemNode
+  fullName: DulcisX.Nodes.ProjectItemNode
+- uid: DulcisX.Nodes.ProjectNode
+  commentId: T:DulcisX.Nodes.ProjectNode
+  parent: DulcisX.Nodes
+  name: ProjectNode
+  nameWithType: ProjectNode
+  fullName: DulcisX.Nodes.ProjectNode
+- uid: DulcisX.Nodes.RenamedPhysicalNode`2
+  commentId: T:DulcisX.Nodes.RenamedPhysicalNode`2
+  name: RenamedPhysicalNode<TNodeType, TFlag>
+  nameWithType: RenamedPhysicalNode<TNodeType, TFlag>
+  fullName: DulcisX.Nodes.RenamedPhysicalNode<TNodeType, TFlag>
+  nameWithType.vb: RenamedPhysicalNode(Of TNodeType, TFlag)
+  fullName.vb: DulcisX.Nodes.RenamedPhysicalNode(Of TNodeType, TFlag)
+  name.vb: RenamedPhysicalNode(Of TNodeType, TFlag)
+  spec.csharp:
+  - uid: DulcisX.Nodes.RenamedPhysicalNode`2
+    name: RenamedPhysicalNode
+    nameWithType: RenamedPhysicalNode
+    fullName: DulcisX.Nodes.RenamedPhysicalNode
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TNodeType
+    nameWithType: TNodeType
+    fullName: TNodeType
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TFlag
+    nameWithType: TFlag
+    fullName: TFlag
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: DulcisX.Nodes.RenamedPhysicalNode`2
+    name: RenamedPhysicalNode
+    nameWithType: RenamedPhysicalNode
+    fullName: DulcisX.Nodes.RenamedPhysicalNode
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TNodeType
+    nameWithType: TNodeType
+    fullName: TNodeType
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TFlag
+    nameWithType: TFlag
+    fullName: TFlag
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: DulcisX.Nodes.ChangedPhysicalSccNode`2
+  commentId: T:DulcisX.Nodes.ChangedPhysicalSccNode`2
+  name: ChangedPhysicalSccNode<TNodeType, TFlag>
+  nameWithType: ChangedPhysicalSccNode<TNodeType, TFlag>
+  fullName: DulcisX.Nodes.ChangedPhysicalSccNode<TNodeType, TFlag>
+  nameWithType.vb: ChangedPhysicalSccNode(Of TNodeType, TFlag)
+  fullName.vb: DulcisX.Nodes.ChangedPhysicalSccNode(Of TNodeType, TFlag)
+  name.vb: ChangedPhysicalSccNode(Of TNodeType, TFlag)
+  spec.csharp:
+  - uid: DulcisX.Nodes.ChangedPhysicalSccNode`2
+    name: ChangedPhysicalSccNode
+    nameWithType: ChangedPhysicalSccNode
+    fullName: DulcisX.Nodes.ChangedPhysicalSccNode
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TNodeType
+    nameWithType: TNodeType
+    fullName: TNodeType
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TFlag
+    nameWithType: TFlag
+    fullName: TFlag
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: DulcisX.Nodes.ChangedPhysicalSccNode`2
+    name: ChangedPhysicalSccNode
+    nameWithType: ChangedPhysicalSccNode
+    fullName: DulcisX.Nodes.ChangedPhysicalSccNode
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TNodeType
+    nameWithType: TNodeType
+    fullName: TNodeType
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TFlag
+    nameWithType: TFlag
+    fullName: TFlag
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: DulcisX.Nodes.SelectedNodesCollection
+  commentId: T:DulcisX.Nodes.SelectedNodesCollection
+  parent: DulcisX.Nodes
+  name: SelectedNodesCollection
+  nameWithType: SelectedNodesCollection
+  fullName: DulcisX.Nodes.SelectedNodesCollection
+- uid: DulcisX.Nodes.SolutionItemNode
+  commentId: T:DulcisX.Nodes.SolutionItemNode
+  parent: DulcisX.Nodes
+  name: SolutionItemNode
+  nameWithType: SolutionItemNode
+  fullName: DulcisX.Nodes.SolutionItemNode
+- uid: DulcisX.Nodes.SolutionNode
+  commentId: T:DulcisX.Nodes.SolutionNode
+  parent: DulcisX.Nodes
+  name: SolutionNode
+  nameWithType: SolutionNode
+  fullName: DulcisX.Nodes.SolutionNode
+- uid: DulcisX.Nodes.UnknownNode
+  commentId: T:DulcisX.Nodes.UnknownNode
+  name: UnknownNode
+  nameWithType: UnknownNode
+  fullName: DulcisX.Nodes.UnknownNode
+- uid: DulcisX.Nodes.SolutionFolderNode
+  commentId: T:DulcisX.Nodes.SolutionFolderNode
+  name: SolutionFolderNode
+  nameWithType: SolutionFolderNode
+  fullName: DulcisX.Nodes.SolutionFolderNode
+- uid: DulcisX.Nodes
+  commentId: N:DulcisX.Nodes
+  name: DulcisX.Nodes
+  nameWithType: DulcisX.Nodes
+  fullName: DulcisX.Nodes

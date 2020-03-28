@@ -1,0 +1,663 @@
+### YamlMime:ManagedReference
+items:
+- uid: DulcisX.Nodes.Events.EventDistributor`1
+  commentId: T:DulcisX.Nodes.Events.EventDistributor`1
+  id: EventDistributor`1
+  parent: DulcisX.Nodes.Events
+  children:
+  - DulcisX.Nodes.Events.EventDistributor`1.Hook(DulcisX.Core.Enums.NodeTypes,`0)
+  - DulcisX.Nodes.Events.EventDistributor`1.Hook(DulcisX.Core.Enums.NodeTypes,`0[])
+  - DulcisX.Nodes.Events.EventDistributor`1.UnHook(DulcisX.Core.Enums.NodeTypes,`0)
+  - DulcisX.Nodes.Events.EventDistributor`1.UnHook(DulcisX.Core.Enums.NodeTypes,`0[])
+  - DulcisX.Nodes.Events.EventDistributor`1.UnHookAll
+  - DulcisX.Nodes.Events.EventDistributor`1.UnHookAll(DulcisX.Core.Enums.NodeTypes)
+  langs:
+  - csharp
+  - vb
+  name: EventDistributor<TDelegate>
+  nameWithType: EventDistributor<TDelegate>
+  fullName: DulcisX.Nodes.Events.EventDistributor<TDelegate>
+  type: Class
+  source:
+    remote:
+      path: src/DulcisX/DulcisX/Nodes/Events/EventDistributor.cs
+      branch: master
+      repo: https://github.com/TwentyFourMinutes/DulcisX.git
+    id: EventDistributor
+    path: ../../DulcisX - master/src/DulcisX/DulcisX/Nodes/Events/EventDistributor.cs
+    startLine: 10
+  assemblies:
+  - DulcisX
+  namespace: DulcisX.Nodes.Events
+  summary: "\nDistributes native events between delegates given the <xref href=\"DulcisX.Core.Enums.NodeTypes\" data-throw-if-not-resolved=\"false\"></xref>. This is a wrapper around events.\n"
+  example: []
+  syntax:
+    content: >-
+      public sealed class EventDistributor<TDelegate>
+
+          where TDelegate : Delegate
+    typeParameters:
+    - id: TDelegate
+      description: ''
+    content.vb: Public NotInheritable Class EventDistributor(Of TDelegate As  Delegate)
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  nameWithType.vb: EventDistributor(Of TDelegate)
+  modifiers.csharp:
+  - public
+  - sealed
+  - class
+  modifiers.vb:
+  - Public
+  - NotInheritable
+  - Class
+  fullName.vb: DulcisX.Nodes.Events.EventDistributor(Of TDelegate)
+  name.vb: EventDistributor(Of TDelegate)
+- uid: DulcisX.Nodes.Events.EventDistributor`1.Hook(DulcisX.Core.Enums.NodeTypes,`0)
+  commentId: M:DulcisX.Nodes.Events.EventDistributor`1.Hook(DulcisX.Core.Enums.NodeTypes,`0)
+  id: Hook(DulcisX.Core.Enums.NodeTypes,`0)
+  parent: DulcisX.Nodes.Events.EventDistributor`1
+  langs:
+  - csharp
+  - vb
+  name: Hook(NodeTypes, TDelegate)
+  nameWithType: EventDistributor<TDelegate>.Hook(NodeTypes, TDelegate)
+  fullName: DulcisX.Nodes.Events.EventDistributor<TDelegate>.Hook(DulcisX.Core.Enums.NodeTypes, TDelegate)
+  type: Method
+  source:
+    remote:
+      path: src/DulcisX/DulcisX/Nodes/Events/EventDistributor.cs
+      branch: master
+      repo: https://github.com/TwentyFourMinutes/DulcisX.git
+    id: Hook
+    path: ../../DulcisX - master/src/DulcisX/DulcisX/Nodes/Events/EventDistributor.cs
+    startLine: 26
+  assemblies:
+  - DulcisX
+  namespace: DulcisX.Nodes.Events
+  summary: "\nHooks a callback method to the event.\n"
+  example: []
+  syntax:
+    content: public void Hook(NodeTypes nodeTypes, TDelegate callback)
+    parameters:
+    - id: nodeTypes
+      type: DulcisX.Core.Enums.NodeTypes
+      description: The Node types on which to call the callback methods.
+    - id: callback
+      type: '{TDelegate}'
+      description: The callback which should be called at the raise of the event.
+    content.vb: Public Sub Hook(nodeTypes As NodeTypes, callback As TDelegate)
+  overload: DulcisX.Nodes.Events.EventDistributor`1.Hook*
+  nameWithType.vb: EventDistributor(Of TDelegate).Hook(NodeTypes, TDelegate)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: DulcisX.Nodes.Events.EventDistributor(Of TDelegate).Hook(DulcisX.Core.Enums.NodeTypes, TDelegate)
+- uid: DulcisX.Nodes.Events.EventDistributor`1.Hook(DulcisX.Core.Enums.NodeTypes,`0[])
+  commentId: M:DulcisX.Nodes.Events.EventDistributor`1.Hook(DulcisX.Core.Enums.NodeTypes,`0[])
+  id: Hook(DulcisX.Core.Enums.NodeTypes,`0[])
+  parent: DulcisX.Nodes.Events.EventDistributor`1
+  langs:
+  - csharp
+  - vb
+  name: Hook(NodeTypes, TDelegate[])
+  nameWithType: EventDistributor<TDelegate>.Hook(NodeTypes, TDelegate[])
+  fullName: DulcisX.Nodes.Events.EventDistributor<TDelegate>.Hook(DulcisX.Core.Enums.NodeTypes, TDelegate[])
+  type: Method
+  source:
+    remote:
+      path: src/DulcisX/DulcisX/Nodes/Events/EventDistributor.cs
+      branch: master
+      repo: https://github.com/TwentyFourMinutes/DulcisX.git
+    id: Hook
+    path: ../../DulcisX - master/src/DulcisX/DulcisX/Nodes/Events/EventDistributor.cs
+    startLine: 47
+  assemblies:
+  - DulcisX
+  namespace: DulcisX.Nodes.Events
+  summary: "\nHooks callback methods to the event.\n"
+  example: []
+  syntax:
+    content: public void Hook(NodeTypes nodeTypes, params TDelegate[] callbacks)
+    parameters:
+    - id: nodeTypes
+      type: DulcisX.Core.Enums.NodeTypes
+      description: The Node types on which to call the callback methods.
+    - id: callbacks
+      type: '{TDelegate}[]'
+      description: A list of callbacks which should be called at the raise of the event.
+    content.vb: Public Sub Hook(nodeTypes As NodeTypes, ParamArray callbacks As TDelegate())
+  overload: DulcisX.Nodes.Events.EventDistributor`1.Hook*
+  nameWithType.vb: EventDistributor(Of TDelegate).Hook(NodeTypes, TDelegate())
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: DulcisX.Nodes.Events.EventDistributor(Of TDelegate).Hook(DulcisX.Core.Enums.NodeTypes, TDelegate())
+  name.vb: Hook(NodeTypes, TDelegate())
+- uid: DulcisX.Nodes.Events.EventDistributor`1.UnHook(DulcisX.Core.Enums.NodeTypes,`0)
+  commentId: M:DulcisX.Nodes.Events.EventDistributor`1.UnHook(DulcisX.Core.Enums.NodeTypes,`0)
+  id: UnHook(DulcisX.Core.Enums.NodeTypes,`0)
+  parent: DulcisX.Nodes.Events.EventDistributor`1
+  langs:
+  - csharp
+  - vb
+  name: UnHook(NodeTypes, TDelegate)
+  nameWithType: EventDistributor<TDelegate>.UnHook(NodeTypes, TDelegate)
+  fullName: DulcisX.Nodes.Events.EventDistributor<TDelegate>.UnHook(DulcisX.Core.Enums.NodeTypes, TDelegate)
+  type: Method
+  source:
+    remote:
+      path: src/DulcisX/DulcisX/Nodes/Events/EventDistributor.cs
+      branch: master
+      repo: https://github.com/TwentyFourMinutes/DulcisX.git
+    id: UnHook
+    path: ../../DulcisX - master/src/DulcisX/DulcisX/Nodes/Events/EventDistributor.cs
+    startLine: 67
+  assemblies:
+  - DulcisX
+  namespace: DulcisX.Nodes.Events
+  summary: "\nUnHooks a callback method from the event.\n"
+  example: []
+  syntax:
+    content: public void UnHook(NodeTypes nodeTypes, TDelegate callback)
+    parameters:
+    - id: nodeTypes
+      type: DulcisX.Core.Enums.NodeTypes
+      description: The Node types on which to remove the callback method.
+    - id: callback
+      type: '{TDelegate}'
+      description: The callback which should be removed from the event.
+    content.vb: Public Sub UnHook(nodeTypes As NodeTypes, callback As TDelegate)
+  overload: DulcisX.Nodes.Events.EventDistributor`1.UnHook*
+  nameWithType.vb: EventDistributor(Of TDelegate).UnHook(NodeTypes, TDelegate)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: DulcisX.Nodes.Events.EventDistributor(Of TDelegate).UnHook(DulcisX.Core.Enums.NodeTypes, TDelegate)
+- uid: DulcisX.Nodes.Events.EventDistributor`1.UnHook(DulcisX.Core.Enums.NodeTypes,`0[])
+  commentId: M:DulcisX.Nodes.Events.EventDistributor`1.UnHook(DulcisX.Core.Enums.NodeTypes,`0[])
+  id: UnHook(DulcisX.Core.Enums.NodeTypes,`0[])
+  parent: DulcisX.Nodes.Events.EventDistributor`1
+  langs:
+  - csharp
+  - vb
+  name: UnHook(NodeTypes, TDelegate[])
+  nameWithType: EventDistributor<TDelegate>.UnHook(NodeTypes, TDelegate[])
+  fullName: DulcisX.Nodes.Events.EventDistributor<TDelegate>.UnHook(DulcisX.Core.Enums.NodeTypes, TDelegate[])
+  type: Method
+  source:
+    remote:
+      path: src/DulcisX/DulcisX/Nodes/Events/EventDistributor.cs
+      branch: master
+      repo: https://github.com/TwentyFourMinutes/DulcisX.git
+    id: UnHook
+    path: ../../DulcisX - master/src/DulcisX/DulcisX/Nodes/Events/EventDistributor.cs
+    startLine: 83
+  assemblies:
+  - DulcisX
+  namespace: DulcisX.Nodes.Events
+  summary: "\nUnHooks callback methods from the event.\n"
+  example: []
+  syntax:
+    content: public void UnHook(NodeTypes nodeTypes, params TDelegate[] callbacks)
+    parameters:
+    - id: nodeTypes
+      type: DulcisX.Core.Enums.NodeTypes
+      description: The Node types on which to remove the callback methods.
+    - id: callbacks
+      type: '{TDelegate}[]'
+      description: The callbacks which should be removed from the event.
+    content.vb: Public Sub UnHook(nodeTypes As NodeTypes, ParamArray callbacks As TDelegate())
+  overload: DulcisX.Nodes.Events.EventDistributor`1.UnHook*
+  nameWithType.vb: EventDistributor(Of TDelegate).UnHook(NodeTypes, TDelegate())
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: DulcisX.Nodes.Events.EventDistributor(Of TDelegate).UnHook(DulcisX.Core.Enums.NodeTypes, TDelegate())
+  name.vb: UnHook(NodeTypes, TDelegate())
+- uid: DulcisX.Nodes.Events.EventDistributor`1.UnHookAll
+  commentId: M:DulcisX.Nodes.Events.EventDistributor`1.UnHookAll
+  id: UnHookAll
+  parent: DulcisX.Nodes.Events.EventDistributor`1
+  langs:
+  - csharp
+  - vb
+  name: UnHookAll()
+  nameWithType: EventDistributor<TDelegate>.UnHookAll()
+  fullName: DulcisX.Nodes.Events.EventDistributor<TDelegate>.UnHookAll()
+  type: Method
+  source:
+    remote:
+      path: src/DulcisX/DulcisX/Nodes/Events/EventDistributor.cs
+      branch: master
+      repo: https://github.com/TwentyFourMinutes/DulcisX.git
+    id: UnHookAll
+    path: ../../DulcisX - master/src/DulcisX/DulcisX/Nodes/Events/EventDistributor.cs
+    startLine: 102
+  assemblies:
+  - DulcisX
+  namespace: DulcisX.Nodes.Events
+  summary: "\nUnHooks all callback methods, from all Node type, from the event.\n"
+  example: []
+  syntax:
+    content: public void UnHookAll()
+    content.vb: Public Sub UnHookAll
+  overload: DulcisX.Nodes.Events.EventDistributor`1.UnHookAll*
+  nameWithType.vb: EventDistributor(Of TDelegate).UnHookAll()
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: DulcisX.Nodes.Events.EventDistributor(Of TDelegate).UnHookAll()
+- uid: DulcisX.Nodes.Events.EventDistributor`1.UnHookAll(DulcisX.Core.Enums.NodeTypes)
+  commentId: M:DulcisX.Nodes.Events.EventDistributor`1.UnHookAll(DulcisX.Core.Enums.NodeTypes)
+  id: UnHookAll(DulcisX.Core.Enums.NodeTypes)
+  parent: DulcisX.Nodes.Events.EventDistributor`1
+  langs:
+  - csharp
+  - vb
+  name: UnHookAll(NodeTypes)
+  nameWithType: EventDistributor<TDelegate>.UnHookAll(NodeTypes)
+  fullName: DulcisX.Nodes.Events.EventDistributor<TDelegate>.UnHookAll(DulcisX.Core.Enums.NodeTypes)
+  type: Method
+  source:
+    remote:
+      path: src/DulcisX/DulcisX/Nodes/Events/EventDistributor.cs
+      branch: master
+      repo: https://github.com/TwentyFourMinutes/DulcisX.git
+    id: UnHookAll
+    path: ../../DulcisX - master/src/DulcisX/DulcisX/Nodes/Events/EventDistributor.cs
+    startLine: 111
+  assemblies:
+  - DulcisX
+  namespace: DulcisX.Nodes.Events
+  summary: "\nUnHooks all callback methods from the event.\n"
+  example: []
+  syntax:
+    content: public void UnHookAll(NodeTypes nodeTypes)
+    parameters:
+    - id: nodeTypes
+      type: DulcisX.Core.Enums.NodeTypes
+      description: The Node types from which all callback methods should be removed.
+    content.vb: Public Sub UnHookAll(nodeTypes As NodeTypes)
+  overload: DulcisX.Nodes.Events.EventDistributor`1.UnHookAll*
+  nameWithType.vb: EventDistributor(Of TDelegate).UnHookAll(NodeTypes)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: DulcisX.Nodes.Events.EventDistributor(Of TDelegate).UnHookAll(DulcisX.Core.Enums.NodeTypes)
+references:
+- uid: DulcisX.Core.Enums.NodeTypes
+  commentId: T:DulcisX.Core.Enums.NodeTypes
+  parent: DulcisX.Core.Enums
+  name: NodeTypes
+  nameWithType: NodeTypes
+  fullName: DulcisX.Core.Enums.NodeTypes
+- uid: DulcisX.Nodes.Events
+  commentId: N:DulcisX.Nodes.Events
+  name: DulcisX.Nodes.Events
+  nameWithType: DulcisX.Nodes.Events
+  fullName: DulcisX.Nodes.Events
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: DulcisX.Core.Enums
+  commentId: N:DulcisX.Core.Enums
+  name: DulcisX.Core.Enums
+  nameWithType: DulcisX.Core.Enums
+  fullName: DulcisX.Core.Enums
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: DulcisX.Nodes.Events.EventDistributor`1.Hook*
+  commentId: Overload:DulcisX.Nodes.Events.EventDistributor`1.Hook
+  name: Hook
+  nameWithType: EventDistributor<TDelegate>.Hook
+  fullName: DulcisX.Nodes.Events.EventDistributor<TDelegate>.Hook
+  nameWithType.vb: EventDistributor(Of TDelegate).Hook
+  fullName.vb: DulcisX.Nodes.Events.EventDistributor(Of TDelegate).Hook
+- uid: '{TDelegate}'
+  commentId: '!:TDelegate'
+  definition: TDelegate
+  name: TDelegate
+  nameWithType: TDelegate
+  fullName: TDelegate
+- uid: TDelegate
+  name: TDelegate
+  nameWithType: TDelegate
+  fullName: TDelegate
+- uid: '{TDelegate}[]'
+  isExternal: true
+  name: TDelegate[]
+  nameWithType: TDelegate[]
+  fullName: TDelegate[]
+  nameWithType.vb: TDelegate()
+  fullName.vb: TDelegate()
+  name.vb: TDelegate()
+  spec.csharp:
+  - name: TDelegate
+    nameWithType: TDelegate
+    fullName: TDelegate
+  - name: '[]'
+    nameWithType: '[]'
+    fullName: '[]'
+  spec.vb:
+  - name: TDelegate
+    nameWithType: TDelegate
+    fullName: TDelegate
+  - name: ()
+    nameWithType: ()
+    fullName: ()
+- uid: DulcisX.Nodes.Events.EventDistributor`1.UnHook*
+  commentId: Overload:DulcisX.Nodes.Events.EventDistributor`1.UnHook
+  name: UnHook
+  nameWithType: EventDistributor<TDelegate>.UnHook
+  fullName: DulcisX.Nodes.Events.EventDistributor<TDelegate>.UnHook
+  nameWithType.vb: EventDistributor(Of TDelegate).UnHook
+  fullName.vb: DulcisX.Nodes.Events.EventDistributor(Of TDelegate).UnHook
+- uid: DulcisX.Nodes.Events.EventDistributor`1.UnHookAll*
+  commentId: Overload:DulcisX.Nodes.Events.EventDistributor`1.UnHookAll
+  name: UnHookAll
+  nameWithType: EventDistributor<TDelegate>.UnHookAll
+  fullName: DulcisX.Nodes.Events.EventDistributor<TDelegate>.UnHookAll
+  nameWithType.vb: EventDistributor(Of TDelegate).UnHookAll
+  fullName.vb: DulcisX.Nodes.Events.EventDistributor(Of TDelegate).UnHookAll

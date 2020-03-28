@@ -1,0 +1,482 @@
+### YamlMime:ManagedReference
+items:
+- uid: DulcisX.Core.ComContainer
+  commentId: T:DulcisX.Core.ComContainer
+  id: ComContainer
+  parent: DulcisX.Core
+  children:
+  - DulcisX.Core.ComContainer.Create``1(``0)
+  langs:
+  - csharp
+  - vb
+  name: ComContainer
+  nameWithType: ComContainer
+  fullName: DulcisX.Core.ComContainer
+  type: Class
+  source:
+    remote:
+      path: src/DulcisX/DulcisX/Core/ComContainer.cs
+      branch: master
+      repo: https://github.com/TwentyFourMinutes/DulcisX.git
+    id: ComContainer
+    path: ../../DulcisX - master/src/DulcisX/DulcisX/Core/ComContainer.cs
+    startLine: 21
+  assemblies:
+  - DulcisX
+  namespace: DulcisX.Core
+  summary: "\nProvides a simple container for a Com Type.\n"
+  example: []
+  syntax:
+    content: public static class ComContainer
+    content.vb: Public Module ComContainer
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  modifiers.csharp:
+  - public
+  - static
+  - class
+  modifiers.vb:
+  - Public
+  - Module
+- uid: DulcisX.Core.ComContainer.Create``1(``0)
+  commentId: M:DulcisX.Core.ComContainer.Create``1(``0)
+  id: Create``1(``0)
+  parent: DulcisX.Core.ComContainer
+  langs:
+  - csharp
+  - vb
+  name: Create<TComType>(TComType)
+  nameWithType: ComContainer.Create<TComType>(TComType)
+  fullName: DulcisX.Core.ComContainer.Create<TComType>(TComType)
+  type: Method
+  source:
+    remote:
+      path: src/DulcisX/DulcisX/Core/ComContainer.cs
+      branch: master
+      repo: https://github.com/TwentyFourMinutes/DulcisX.git
+    id: Create
+    path: ../../DulcisX - master/src/DulcisX/DulcisX/Core/ComContainer.cs
+    startLine: 29
+  assemblies:
+  - DulcisX
+  namespace: DulcisX.Core
+  summary: "\nCreates a new <xref href=\"DulcisX.Core.ComContainer%601\" data-throw-if-not-resolved=\"false\"></xref> instance.\n"
+  example: []
+  syntax:
+    content: public static ComContainer<TComType> Create<TComType>(TComType comType)
+    parameters:
+    - id: comType
+      type: '{TComType}'
+      description: The instance which should wrapped.
+    typeParameters:
+    - id: TComType
+      description: The type of the Com Type.
+    return:
+      type: DulcisX.Core.ComContainer{{TComType}}
+      description: A new <xref href="DulcisX.Core.ComContainer%601" data-throw-if-not-resolved="false"></xref> instance with the provided <code data-dev-comment-type="paramref" class="paramref">comType</code>.
+    content.vb: Public Shared Function Create(Of TComType)(comType As TComType) As ComContainer(Of TComType)
+  overload: DulcisX.Core.ComContainer.Create*
+  nameWithType.vb: ComContainer.Create(Of TComType)(TComType)
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: DulcisX.Core.ComContainer.Create(Of TComType)(TComType)
+  name.vb: Create(Of TComType)(TComType)
+references:
+- uid: DulcisX.Core
+  commentId: N:DulcisX.Core
+  name: DulcisX.Core
+  nameWithType: DulcisX.Core
+  fullName: DulcisX.Core
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: DulcisX.Core.ComContainer`1
+  commentId: T:DulcisX.Core.ComContainer`1
+  name: ComContainer<TComType>
+  nameWithType: ComContainer<TComType>
+  fullName: DulcisX.Core.ComContainer<TComType>
+  nameWithType.vb: ComContainer(Of TComType)
+  fullName.vb: DulcisX.Core.ComContainer(Of TComType)
+  name.vb: ComContainer(Of TComType)
+  spec.csharp:
+  - uid: DulcisX.Core.ComContainer`1
+    name: ComContainer
+    nameWithType: ComContainer
+    fullName: DulcisX.Core.ComContainer
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TComType
+    nameWithType: TComType
+    fullName: TComType
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: DulcisX.Core.ComContainer`1
+    name: ComContainer
+    nameWithType: ComContainer
+    fullName: DulcisX.Core.ComContainer
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TComType
+    nameWithType: TComType
+    fullName: TComType
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: DulcisX.Core.ComContainer.Create*
+  commentId: Overload:DulcisX.Core.ComContainer.Create
+  name: Create
+  nameWithType: ComContainer.Create
+  fullName: DulcisX.Core.ComContainer.Create
+- uid: '{TComType}'
+  commentId: '!:TComType'
+  definition: TComType
+  name: TComType
+  nameWithType: TComType
+  fullName: TComType
+- uid: DulcisX.Core.ComContainer{{TComType}}
+  commentId: T:DulcisX.Core.ComContainer{``0}
+  parent: DulcisX.Core
+  definition: DulcisX.Core.ComContainer`1
+  name: ComContainer<TComType>
+  nameWithType: ComContainer<TComType>
+  fullName: DulcisX.Core.ComContainer<TComType>
+  nameWithType.vb: ComContainer(Of TComType)
+  fullName.vb: DulcisX.Core.ComContainer(Of TComType)
+  name.vb: ComContainer(Of TComType)
+  spec.csharp:
+  - uid: DulcisX.Core.ComContainer`1
+    name: ComContainer
+    nameWithType: ComContainer
+    fullName: DulcisX.Core.ComContainer
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TComType
+    nameWithType: TComType
+    fullName: TComType
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: DulcisX.Core.ComContainer`1
+    name: ComContainer
+    nameWithType: ComContainer
+    fullName: DulcisX.Core.ComContainer
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TComType
+    nameWithType: TComType
+    fullName: TComType
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: TComType
+  name: TComType
+  nameWithType: TComType
+  fullName: TComType

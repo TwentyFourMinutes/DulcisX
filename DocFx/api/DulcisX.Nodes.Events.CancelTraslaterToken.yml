@@ -1,0 +1,432 @@
+### YamlMime:ManagedReference
+items:
+- uid: DulcisX.Nodes.Events.CancelTraslaterToken
+  commentId: T:DulcisX.Nodes.Events.CancelTraslaterToken
+  id: CancelTraslaterToken
+  parent: DulcisX.Nodes.Events
+  children:
+  - DulcisX.Nodes.Events.CancelTraslaterToken.Cancel
+  - DulcisX.Nodes.Events.CancelTraslaterToken.CancelRequested
+  langs:
+  - csharp
+  - vb
+  name: CancelTraslaterToken
+  nameWithType: CancelTraslaterToken
+  fullName: DulcisX.Nodes.Events.CancelTraslaterToken
+  type: Class
+  source:
+    remote:
+      path: src/DulcisX/DulcisX/Nodes/Events/CancelTranslatorFactory.cs
+      branch: master
+      repo: https://github.com/TwentyFourMinutes/DulcisX.git
+    id: CancelTraslaterToken
+    path: ../../DulcisX - master/src/DulcisX/DulcisX/Nodes/Events/CancelTranslatorFactory.cs
+    startLine: 26
+  assemblies:
+  - DulcisX
+  namespace: DulcisX.Nodes.Events
+  summary: "\nAllows for cancellation of an operation.\n"
+  example: []
+  syntax:
+    content: public class CancelTraslaterToken
+    content.vb: Public Class CancelTraslaterToken
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: DulcisX.Nodes.Events.CancelTraslaterToken.CancelRequested
+  commentId: P:DulcisX.Nodes.Events.CancelTraslaterToken.CancelRequested
+  id: CancelRequested
+  parent: DulcisX.Nodes.Events.CancelTraslaterToken
+  langs:
+  - csharp
+  - vb
+  name: CancelRequested
+  nameWithType: CancelTraslaterToken.CancelRequested
+  fullName: DulcisX.Nodes.Events.CancelTraslaterToken.CancelRequested
+  type: Property
+  source:
+    remote:
+      path: src/DulcisX/DulcisX/Nodes/Events/CancelTranslatorFactory.cs
+      branch: master
+      repo: https://github.com/TwentyFourMinutes/DulcisX.git
+    id: CancelRequested
+    path: ../../DulcisX - master/src/DulcisX/DulcisX/Nodes/Events/CancelTranslatorFactory.cs
+    startLine: 45
+  assemblies:
+  - DulcisX
+  namespace: DulcisX.Nodes.Events
+  summary: "\nGets a value indicating whether the operation was requested to cancel or not.\n"
+  example: []
+  syntax:
+    content: public bool CancelRequested { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property CancelRequested As Boolean
+  overload: DulcisX.Nodes.Events.CancelTraslaterToken.CancelRequested*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: DulcisX.Nodes.Events.CancelTraslaterToken.Cancel
+  commentId: M:DulcisX.Nodes.Events.CancelTraslaterToken.Cancel
+  id: Cancel
+  parent: DulcisX.Nodes.Events.CancelTraslaterToken
+  langs:
+  - csharp
+  - vb
+  name: Cancel()
+  nameWithType: CancelTraslaterToken.Cancel()
+  fullName: DulcisX.Nodes.Events.CancelTraslaterToken.Cancel()
+  type: Method
+  source:
+    remote:
+      path: src/DulcisX/DulcisX/Nodes/Events/CancelTranslatorFactory.cs
+      branch: master
+      repo: https://github.com/TwentyFourMinutes/DulcisX.git
+    id: Cancel
+    path: ../../DulcisX - master/src/DulcisX/DulcisX/Nodes/Events/CancelTranslatorFactory.cs
+    startLine: 53
+  assemblies:
+  - DulcisX
+  namespace: DulcisX.Nodes.Events
+  summary: "\nReuqests to cancel the current operation.\n"
+  example: []
+  syntax:
+    content: public void Cancel()
+    content.vb: Public Sub Cancel
+  overload: DulcisX.Nodes.Events.CancelTraslaterToken.Cancel*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: DulcisX.Nodes.Events
+  commentId: N:DulcisX.Nodes.Events
+  name: DulcisX.Nodes.Events
+  nameWithType: DulcisX.Nodes.Events
+  fullName: DulcisX.Nodes.Events
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: DulcisX.Nodes.Events.CancelTraslaterToken.CancelRequested*
+  commentId: Overload:DulcisX.Nodes.Events.CancelTraslaterToken.CancelRequested
+  name: CancelRequested
+  nameWithType: CancelTraslaterToken.CancelRequested
+  fullName: DulcisX.Nodes.Events.CancelTraslaterToken.CancelRequested
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: DulcisX.Nodes.Events.CancelTraslaterToken.Cancel*
+  commentId: Overload:DulcisX.Nodes.Events.CancelTraslaterToken.Cancel
+  name: Cancel
+  nameWithType: CancelTraslaterToken.Cancel
+  fullName: DulcisX.Nodes.Events.CancelTraslaterToken.Cancel

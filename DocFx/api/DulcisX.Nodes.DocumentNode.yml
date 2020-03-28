@@ -1,0 +1,1396 @@
+### YamlMime:ManagedReference
+items:
+- uid: DulcisX.Nodes.DocumentNode
+  commentId: T:DulcisX.Nodes.DocumentNode
+  id: DocumentNode
+  parent: DulcisX.Nodes
+  children:
+  - DulcisX.Nodes.DocumentNode.#ctor(DulcisX.Nodes.SolutionNode,DulcisX.Nodes.ProjectNode,System.UInt32)
+  - DulcisX.Nodes.DocumentNode.#ctor(DulcisX.Nodes.SolutionNode,Microsoft.VisualStudio.Shell.Interop.IVsHierarchy,System.UInt32)
+  - DulcisX.Nodes.DocumentNode.ChangedSinceLastUserSave
+  - DulcisX.Nodes.DocumentNode.ChangeExtension(System.String)
+  - DulcisX.Nodes.DocumentNode.GetBuildAction
+  - DulcisX.Nodes.DocumentNode.GetCopyToOutputDirectory
+  - DulcisX.Nodes.DocumentNode.GetDocumentType
+  - DulcisX.Nodes.DocumentNode.GetFileName
+  - DulcisX.Nodes.DocumentNode.GetFullName
+  - DulcisX.Nodes.DocumentNode.IsReadonly
+  - DulcisX.Nodes.DocumentNode.NodeType
+  - DulcisX.Nodes.DocumentNode.Rename(System.String)
+  - DulcisX.Nodes.DocumentNode.Save(System.Boolean)
+  - DulcisX.Nodes.DocumentNode.SetCopyToOutputDirectory(DulcisX.Core.Enums.CopyToOutputDirectory)
+  langs:
+  - csharp
+  - vb
+  name: DocumentNode
+  nameWithType: DocumentNode
+  fullName: DulcisX.Nodes.DocumentNode
+  type: Class
+  source:
+    remote:
+      path: src/DulcisX/DulcisX/Nodes/DocumentNode.cs
+      branch: master
+      repo: https://github.com/TwentyFourMinutes/DulcisX.git
+    id: DocumentNode
+    path: ../../DulcisX - master/src/DulcisX/DulcisX/Nodes/DocumentNode.cs
+    startLine: 14
+  assemblies:
+  - DulcisX
+  namespace: DulcisX.Nodes
+  summary: "\nRepresents a document within a <xref href=\"DulcisX.Nodes.ProjectNode\" data-throw-if-not-resolved=\"false\"></xref>.\n"
+  example: []
+  syntax:
+    content: 'public class DocumentNode : ProjectItemNode, IPhysicalNode, INamedNode, IBaseNode'
+    content.vb: >-
+      Public Class DocumentNode
+
+          Inherits ProjectItemNode
+
+          Implements IPhysicalNode, INamedNode, IBaseNode
+  inheritance:
+  - System.Object
+  - DulcisX.Nodes.BaseNode
+  - DulcisX.Nodes.ProjectItemNode
+  implements:
+  - DulcisX.Nodes.IPhysicalNode
+  - DulcisX.Nodes.INamedNode
+  - DulcisX.Nodes.IBaseNode
+  inheritedMembers:
+  - DulcisX.Nodes.ProjectItemNode.GetParentProject
+  - DulcisX.Nodes.ProjectItemNode.GetParent
+  - DulcisX.Nodes.ProjectItemNode.GetParent(DulcisX.Core.Enums.NodeTypes)
+  - DulcisX.Nodes.ProjectItemNode.GetChildren
+  - DulcisX.Nodes.ProjectItemNode.GetDefaultNamespace
+  - DulcisX.Nodes.BaseNode.ParentSolution
+  - DulcisX.Nodes.BaseNode.UnderlyingHierarchy
+  - DulcisX.Nodes.BaseNode.ItemId
+  - DulcisX.Nodes.BaseNode.GetDisplayName
+  - DulcisX.Nodes.BaseNode.AsHierarchyItem
+  - DulcisX.Nodes.BaseNode.IsTypeMatching(DulcisX.Core.Enums.NodeTypes)
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: DulcisX.Nodes.DocumentNode.NodeType
+  commentId: P:DulcisX.Nodes.DocumentNode.NodeType
+  id: NodeType
+  parent: DulcisX.Nodes.DocumentNode
+  langs:
+  - csharp
+  - vb
+  name: NodeType
+  nameWithType: DocumentNode.NodeType
+  fullName: DulcisX.Nodes.DocumentNode.NodeType
+  type: Property
+  source:
+    remote:
+      path: src/DulcisX/DulcisX/Nodes/DocumentNode.cs
+      branch: master
+      repo: https://github.com/TwentyFourMinutes/DulcisX.git
+    id: NodeType
+    path: ../../DulcisX - master/src/DulcisX/DulcisX/Nodes/DocumentNode.cs
+    startLine: 17
+  assemblies:
+  - DulcisX
+  namespace: DulcisX.Nodes
+  example: []
+  syntax:
+    content: public override NodeTypes NodeType { get; }
+    parameters: []
+    return:
+      type: DulcisX.Core.Enums.NodeTypes
+    content.vb: Public Overrides ReadOnly Property NodeType As NodeTypes
+  overridden: DulcisX.Nodes.BaseNode.NodeType
+  overload: DulcisX.Nodes.DocumentNode.NodeType*
+  implements:
+  - DulcisX.Nodes.IBaseNode.NodeType
+  modifiers.csharp:
+  - public
+  - override
+  - get
+  modifiers.vb:
+  - Public
+  - Overrides
+  - ReadOnly
+- uid: DulcisX.Nodes.DocumentNode.#ctor(DulcisX.Nodes.SolutionNode,DulcisX.Nodes.ProjectNode,System.UInt32)
+  commentId: M:DulcisX.Nodes.DocumentNode.#ctor(DulcisX.Nodes.SolutionNode,DulcisX.Nodes.ProjectNode,System.UInt32)
+  id: '#ctor(DulcisX.Nodes.SolutionNode,DulcisX.Nodes.ProjectNode,System.UInt32)'
+  parent: DulcisX.Nodes.DocumentNode
+  langs:
+  - csharp
+  - vb
+  name: DocumentNode(SolutionNode, ProjectNode, UInt32)
+  nameWithType: DocumentNode.DocumentNode(SolutionNode, ProjectNode, UInt32)
+  fullName: DulcisX.Nodes.DocumentNode.DocumentNode(DulcisX.Nodes.SolutionNode, DulcisX.Nodes.ProjectNode, System.UInt32)
+  type: Constructor
+  source:
+    remote:
+      path: src/DulcisX/DulcisX/Nodes/DocumentNode.cs
+      branch: master
+      repo: https://github.com/TwentyFourMinutes/DulcisX.git
+    id: .ctor
+    path: ../../DulcisX - master/src/DulcisX/DulcisX/Nodes/DocumentNode.cs
+    startLine: 25
+  assemblies:
+  - DulcisX
+  namespace: DulcisX.Nodes
+  summary: "\nInitializes a new instance of the <xref href=\"DulcisX.Nodes.DocumentNode\" data-throw-if-not-resolved=\"false\"></xref> class.\n"
+  example: []
+  syntax:
+    content: public DocumentNode(SolutionNode solution, ProjectNode project, uint itemId)
+    parameters:
+    - id: solution
+      type: DulcisX.Nodes.SolutionNode
+      description: The Solution in which the <xref href="DulcisX.Nodes.DocumentNode" data-throw-if-not-resolved="false"></xref> sits in.
+    - id: project
+      type: DulcisX.Nodes.ProjectNode
+      description: The Project in which the <xref href="DulcisX.Nodes.DocumentNode" data-throw-if-not-resolved="false"></xref> sits in.
+    - id: itemId
+      type: System.UInt32
+      description: The Unique Identifier for the <xref href="DulcisX.Nodes.DocumentNode" data-throw-if-not-resolved="false"></xref> in the <code data-dev-comment-type="paramref" class="paramref">project</code>.
+    content.vb: Public Sub New(solution As SolutionNode, project As ProjectNode, itemId As UInteger)
+  overload: DulcisX.Nodes.DocumentNode.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: DulcisX.Nodes.DocumentNode.#ctor(DulcisX.Nodes.SolutionNode,Microsoft.VisualStudio.Shell.Interop.IVsHierarchy,System.UInt32)
+  commentId: M:DulcisX.Nodes.DocumentNode.#ctor(DulcisX.Nodes.SolutionNode,Microsoft.VisualStudio.Shell.Interop.IVsHierarchy,System.UInt32)
+  id: '#ctor(DulcisX.Nodes.SolutionNode,Microsoft.VisualStudio.Shell.Interop.IVsHierarchy,System.UInt32)'
+  parent: DulcisX.Nodes.DocumentNode
+  langs:
+  - csharp
+  - vb
+  name: DocumentNode(SolutionNode, IVsHierarchy, UInt32)
+  nameWithType: DocumentNode.DocumentNode(SolutionNode, IVsHierarchy, UInt32)
+  fullName: DulcisX.Nodes.DocumentNode.DocumentNode(DulcisX.Nodes.SolutionNode, Microsoft.VisualStudio.Shell.Interop.IVsHierarchy, System.UInt32)
+  type: Constructor
+  source:
+    remote:
+      path: src/DulcisX/DulcisX/Nodes/DocumentNode.cs
+      branch: master
+      repo: https://github.com/TwentyFourMinutes/DulcisX.git
+    id: .ctor
+    path: ../../DulcisX - master/src/DulcisX/DulcisX/Nodes/DocumentNode.cs
+    startLine: 35
+  assemblies:
+  - DulcisX
+  namespace: DulcisX.Nodes
+  summary: "\nInitializes a new instance of the <xref href=\"DulcisX.Nodes.DocumentNode\" data-throw-if-not-resolved=\"false\"></xref> class.\n"
+  example: []
+  syntax:
+    content: public DocumentNode(SolutionNode solution, IVsHierarchy hierarchy, uint itemId)
+    parameters:
+    - id: solution
+      type: DulcisX.Nodes.SolutionNode
+      description: The Solution in which the <xref href="DulcisX.Nodes.DocumentNode" data-throw-if-not-resolved="false"></xref> sits in.
+    - id: hierarchy
+      type: Microsoft.VisualStudio.Shell.Interop.IVsHierarchy
+      description: The Hierarchy of the Project in which the <xref href="DulcisX.Nodes.DocumentNode" data-throw-if-not-resolved="false"></xref> sits in.
+    - id: itemId
+      type: System.UInt32
+      description: The Unique Identifier for the <xref href="DulcisX.Nodes.DocumentNode" data-throw-if-not-resolved="false"></xref> in the <code data-dev-comment-type="paramref" class="paramref">hierarchy</code>.
+    content.vb: Public Sub New(solution As SolutionNode, hierarchy As IVsHierarchy, itemId As UInteger)
+  overload: DulcisX.Nodes.DocumentNode.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: DulcisX.Nodes.DocumentNode.GetFileName
+  commentId: M:DulcisX.Nodes.DocumentNode.GetFileName
+  id: GetFileName
+  parent: DulcisX.Nodes.DocumentNode
+  langs:
+  - csharp
+  - vb
+  name: GetFileName()
+  nameWithType: DocumentNode.GetFileName()
+  fullName: DulcisX.Nodes.DocumentNode.GetFileName()
+  type: Method
+  source:
+    remote:
+      path: src/DulcisX/DulcisX/Nodes/DocumentNode.cs
+      branch: master
+      repo: https://github.com/TwentyFourMinutes/DulcisX.git
+    id: GetFileName
+    path: ../../DulcisX - master/src/DulcisX/DulcisX/Nodes/DocumentNode.cs
+    startLine: 40
+  assemblies:
+  - DulcisX
+  namespace: DulcisX.Nodes
+  example: []
+  syntax:
+    content: public string GetFileName()
+    return:
+      type: System.String
+    content.vb: Public Function GetFileName As String
+  overload: DulcisX.Nodes.DocumentNode.GetFileName*
+  implements:
+  - DulcisX.Nodes.IPhysicalNode.GetFileName
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: DulcisX.Nodes.DocumentNode.GetFullName
+  commentId: M:DulcisX.Nodes.DocumentNode.GetFullName
+  id: GetFullName
+  parent: DulcisX.Nodes.DocumentNode
+  langs:
+  - csharp
+  - vb
+  name: GetFullName()
+  nameWithType: DocumentNode.GetFullName()
+  fullName: DulcisX.Nodes.DocumentNode.GetFullName()
+  type: Method
+  source:
+    remote:
+      path: src/DulcisX/DulcisX/Nodes/DocumentNode.cs
+      branch: master
+      repo: https://github.com/TwentyFourMinutes/DulcisX.git
+    id: GetFullName
+    path: ../../DulcisX - master/src/DulcisX/DulcisX/Nodes/DocumentNode.cs
+    startLine: 48
+  assemblies:
+  - DulcisX
+  namespace: DulcisX.Nodes
+  example: []
+  syntax:
+    content: public string GetFullName()
+    return:
+      type: System.String
+    content.vb: Public Function GetFullName As String
+  overload: DulcisX.Nodes.DocumentNode.GetFullName*
+  implements:
+  - DulcisX.Nodes.IPhysicalNode.GetFullName
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: DulcisX.Nodes.DocumentNode.GetBuildAction
+  commentId: M:DulcisX.Nodes.DocumentNode.GetBuildAction
+  id: GetBuildAction
+  parent: DulcisX.Nodes.DocumentNode
+  langs:
+  - csharp
+  - vb
+  name: GetBuildAction()
+  nameWithType: DocumentNode.GetBuildAction()
+  fullName: DulcisX.Nodes.DocumentNode.GetBuildAction()
+  type: Method
+  source:
+    remote:
+      path: src/DulcisX/DulcisX/Nodes/DocumentNode.cs
+      branch: master
+      repo: https://github.com/TwentyFourMinutes/DulcisX.git
+    id: GetBuildAction
+    path: ../../DulcisX - master/src/DulcisX/DulcisX/Nodes/DocumentNode.cs
+    startLine: 63
+  assemblies:
+  - DulcisX
+  namespace: DulcisX.Nodes
+  summary: "\nReturns the Build Action for the current <xref href=\"DulcisX.Nodes.DocumentNode\" data-throw-if-not-resolved=\"false\"></xref>.\n"
+  example: []
+  syntax:
+    content: public string GetBuildAction()
+    return:
+      type: System.String
+      description: A string containing the Build Action value.
+    content.vb: Public Function GetBuildAction As String
+  overload: DulcisX.Nodes.DocumentNode.GetBuildAction*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: DulcisX.Nodes.DocumentNode.GetCopyToOutputDirectory
+  commentId: M:DulcisX.Nodes.DocumentNode.GetCopyToOutputDirectory
+  id: GetCopyToOutputDirectory
+  parent: DulcisX.Nodes.DocumentNode
+  langs:
+  - csharp
+  - vb
+  name: GetCopyToOutputDirectory()
+  nameWithType: DocumentNode.GetCopyToOutputDirectory()
+  fullName: DulcisX.Nodes.DocumentNode.GetCopyToOutputDirectory()
+  type: Method
+  source:
+    remote:
+      path: src/DulcisX/DulcisX/Nodes/DocumentNode.cs
+      branch: master
+      repo: https://github.com/TwentyFourMinutes/DulcisX.git
+    id: GetCopyToOutputDirectory
+    path: ../../DulcisX - master/src/DulcisX/DulcisX/Nodes/DocumentNode.cs
+    startLine: 70
+  assemblies:
+  - DulcisX
+  namespace: DulcisX.Nodes
+  summary: "\nReturns the <xref href=\"DulcisX.Core.Enums.CopyToOutputDirectory\" data-throw-if-not-resolved=\"false\"></xref> for the current <xref href=\"DulcisX.Nodes.DocumentNode\" data-throw-if-not-resolved=\"false\"></xref>.\n"
+  example: []
+  syntax:
+    content: public CopyToOutputDirectory GetCopyToOutputDirectory()
+    return:
+      type: DulcisX.Core.Enums.CopyToOutputDirectory
+      description: An <xref href="DulcisX.Core.Enums.CopyToOutputDirectory" data-throw-if-not-resolved="false"></xref> enumeration with the current value.
+    content.vb: Public Function GetCopyToOutputDirectory As CopyToOutputDirectory
+  overload: DulcisX.Nodes.DocumentNode.GetCopyToOutputDirectory*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: DulcisX.Nodes.DocumentNode.SetCopyToOutputDirectory(DulcisX.Core.Enums.CopyToOutputDirectory)
+  commentId: M:DulcisX.Nodes.DocumentNode.SetCopyToOutputDirectory(DulcisX.Core.Enums.CopyToOutputDirectory)
+  id: SetCopyToOutputDirectory(DulcisX.Core.Enums.CopyToOutputDirectory)
+  parent: DulcisX.Nodes.DocumentNode
+  langs:
+  - csharp
+  - vb
+  name: SetCopyToOutputDirectory(CopyToOutputDirectory)
+  nameWithType: DocumentNode.SetCopyToOutputDirectory(CopyToOutputDirectory)
+  fullName: DulcisX.Nodes.DocumentNode.SetCopyToOutputDirectory(DulcisX.Core.Enums.CopyToOutputDirectory)
+  type: Method
+  source:
+    remote:
+      path: src/DulcisX/DulcisX/Nodes/DocumentNode.cs
+      branch: master
+      repo: https://github.com/TwentyFourMinutes/DulcisX.git
+    id: SetCopyToOutputDirectory
+    path: ../../DulcisX - master/src/DulcisX/DulcisX/Nodes/DocumentNode.cs
+    startLine: 83
+  assemblies:
+  - DulcisX
+  namespace: DulcisX.Nodes
+  summary: "\nSets the current Output Directory settings.\n"
+  example: []
+  syntax:
+    content: public void SetCopyToOutputDirectory(CopyToOutputDirectory copyToOutputDirectory)
+    parameters:
+    - id: copyToOutputDirectory
+      type: DulcisX.Core.Enums.CopyToOutputDirectory
+      description: The <xref href="DulcisX.Core.Enums.CopyToOutputDirectory" data-throw-if-not-resolved="false"></xref> settings.
+    content.vb: Public Sub SetCopyToOutputDirectory(copyToOutputDirectory As CopyToOutputDirectory)
+  overload: DulcisX.Nodes.DocumentNode.SetCopyToOutputDirectory*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: DulcisX.Nodes.DocumentNode.Rename(System.String)
+  commentId: M:DulcisX.Nodes.DocumentNode.Rename(System.String)
+  id: Rename(System.String)
+  parent: DulcisX.Nodes.DocumentNode
+  langs:
+  - csharp
+  - vb
+  name: Rename(String)
+  nameWithType: DocumentNode.Rename(String)
+  fullName: DulcisX.Nodes.DocumentNode.Rename(System.String)
+  type: Method
+  source:
+    remote:
+      path: src/DulcisX/DulcisX/Nodes/DocumentNode.cs
+      branch: master
+      repo: https://github.com/TwentyFourMinutes/DulcisX.git
+    id: Rename
+    path: ../../DulcisX - master/src/DulcisX/DulcisX/Nodes/DocumentNode.cs
+    startLine: 95
+  assemblies:
+  - DulcisX
+  namespace: DulcisX.Nodes
+  summary: "\nRenames the physical file of the current <xref href=\"DulcisX.Nodes.DocumentNode\" data-throw-if-not-resolved=\"false\"></xref> and updates the name in the Solution Explorer.\n"
+  example: []
+  syntax:
+    content: public DocumentNode Rename(string newName)
+    parameters:
+    - id: newName
+      type: System.String
+      description: A string containg the new name of the file. Can include extension of the file, but not necessarily.
+    return:
+      type: DulcisX.Nodes.DocumentNode
+      description: <xref uid="langword_csharp_true" name="true" href=""></xref> if the operation suceeded a result; otherwise <xref uid="langword_csharp_false" name="false" href=""></xref>.
+    content.vb: Public Function Rename(newName As String) As DocumentNode
+  overload: DulcisX.Nodes.DocumentNode.Rename*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: DulcisX.Nodes.DocumentNode.ChangeExtension(System.String)
+  commentId: M:DulcisX.Nodes.DocumentNode.ChangeExtension(System.String)
+  id: ChangeExtension(System.String)
+  parent: DulcisX.Nodes.DocumentNode
+  langs:
+  - csharp
+  - vb
+  name: ChangeExtension(String)
+  nameWithType: DocumentNode.ChangeExtension(String)
+  fullName: DulcisX.Nodes.DocumentNode.ChangeExtension(System.String)
+  type: Method
+  source:
+    remote:
+      path: src/DulcisX/DulcisX/Nodes/DocumentNode.cs
+      branch: master
+      repo: https://github.com/TwentyFourMinutes/DulcisX.git
+    id: ChangeExtension
+    path: ../../DulcisX - master/src/DulcisX/DulcisX/Nodes/DocumentNode.cs
+    startLine: 116
+  assemblies:
+  - DulcisX
+  namespace: DulcisX.Nodes
+  summary: "\nChanges the extension of the physical file of the current <xref href=\"DulcisX.Nodes.DocumentNode\" data-throw-if-not-resolved=\"false\"></xref> and updates the name in the Solution Explorer.\n"
+  example: []
+  syntax:
+    content: public DocumentNode ChangeExtension(string extension)
+    parameters:
+    - id: extension
+      type: System.String
+      description: A string containg the new extension of the file.
+    return:
+      type: DulcisX.Nodes.DocumentNode
+      description: A new instance of a <xref href="DulcisX.Nodes.DocumentNode" data-throw-if-not-resolved="false"></xref> representing the renamed Document.
+    content.vb: Public Function ChangeExtension(extension As String) As DocumentNode
+  overload: DulcisX.Nodes.DocumentNode.ChangeExtension*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: DulcisX.Nodes.DocumentNode.ChangedSinceLastUserSave
+  commentId: M:DulcisX.Nodes.DocumentNode.ChangedSinceLastUserSave
+  id: ChangedSinceLastUserSave
+  parent: DulcisX.Nodes.DocumentNode
+  langs:
+  - csharp
+  - vb
+  name: ChangedSinceLastUserSave()
+  nameWithType: DocumentNode.ChangedSinceLastUserSave()
+  fullName: DulcisX.Nodes.DocumentNode.ChangedSinceLastUserSave()
+  type: Method
+  source:
+    remote:
+      path: src/DulcisX/DulcisX/Nodes/DocumentNode.cs
+      branch: master
+      repo: https://github.com/TwentyFourMinutes/DulcisX.git
+    id: ChangedSinceLastUserSave
+    path: ../../DulcisX - master/src/DulcisX/DulcisX/Nodes/DocumentNode.cs
+    startLine: 156
+  assemblies:
+  - DulcisX
+  namespace: DulcisX.Nodes
+  summary: "\nGets a value indicating whether the current <xref href=\"DulcisX.Nodes.DocumentNode\" data-throw-if-not-resolved=\"false\"></xref> was renamed since the last save in Visual Studio.\n"
+  example: []
+  syntax:
+    content: public bool ChangedSinceLastUserSave()
+    return:
+      type: System.Boolean
+      description: <xref uid="langword_csharp_true" name="true" href=""></xref> if the <xref href="DulcisX.Nodes.DocumentNode" data-throw-if-not-resolved="false"></xref> was renamed; otherwise <xref uid="langword_csharp_false" name="false" href=""></xref>.
+    content.vb: Public Function ChangedSinceLastUserSave As Boolean
+  overload: DulcisX.Nodes.DocumentNode.ChangedSinceLastUserSave*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: DulcisX.Nodes.DocumentNode.IsReadonly
+  commentId: M:DulcisX.Nodes.DocumentNode.IsReadonly
+  id: IsReadonly
+  parent: DulcisX.Nodes.DocumentNode
+  langs:
+  - csharp
+  - vb
+  name: IsReadonly()
+  nameWithType: DocumentNode.IsReadonly()
+  fullName: DulcisX.Nodes.DocumentNode.IsReadonly()
+  type: Method
+  source:
+    remote:
+      path: src/DulcisX/DulcisX/Nodes/DocumentNode.cs
+      branch: master
+      repo: https://github.com/TwentyFourMinutes/DulcisX.git
+    id: IsReadonly
+    path: ../../DulcisX - master/src/DulcisX/DulcisX/Nodes/DocumentNode.cs
+    startLine: 169
+  assemblies:
+  - DulcisX
+  namespace: DulcisX.Nodes
+  summary: "\nGets a value indicating whether the current <xref href=\"DulcisX.Nodes.DocumentNode\" data-throw-if-not-resolved=\"false\"></xref> is read-only.\n"
+  example: []
+  syntax:
+    content: public bool IsReadonly()
+    return:
+      type: System.Boolean
+      description: <xref uid="langword_csharp_true" name="true" href=""></xref> if the <xref href="DulcisX.Nodes.DocumentNode" data-throw-if-not-resolved="false"></xref> is read-only; otherwise <xref uid="langword_csharp_false" name="false" href=""></xref>.
+    content.vb: Public Function IsReadonly As Boolean
+  overload: DulcisX.Nodes.DocumentNode.IsReadonly*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: DulcisX.Nodes.DocumentNode.Save(System.Boolean)
+  commentId: M:DulcisX.Nodes.DocumentNode.Save(System.Boolean)
+  id: Save(System.Boolean)
+  parent: DulcisX.Nodes.DocumentNode
+  langs:
+  - csharp
+  - vb
+  name: Save(Boolean)
+  nameWithType: DocumentNode.Save(Boolean)
+  fullName: DulcisX.Nodes.DocumentNode.Save(System.Boolean)
+  type: Method
+  source:
+    remote:
+      path: src/DulcisX/DulcisX/Nodes/DocumentNode.cs
+      branch: master
+      repo: https://github.com/TwentyFourMinutes/DulcisX.git
+    id: Save
+    path: ../../DulcisX - master/src/DulcisX/DulcisX/Nodes/DocumentNode.cs
+    startLine: 182
+  assemblies:
+  - DulcisX
+  namespace: DulcisX.Nodes
+  summary: "\nSaves any changes to the current <xref href=\"DulcisX.Nodes.DocumentNode\" data-throw-if-not-resolved=\"false\"></xref> content of the file.\n"
+  example: []
+  syntax:
+    content: public void Save(bool forceSave = false)
+    parameters:
+    - id: forceSave
+      type: System.Boolean
+      description: Determines whether to force the file save operation or not.
+    content.vb: Public Sub Save(forceSave As Boolean = False)
+  overload: DulcisX.Nodes.DocumentNode.Save*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: DulcisX.Nodes.DocumentNode.GetDocumentType
+  commentId: M:DulcisX.Nodes.DocumentNode.GetDocumentType
+  id: GetDocumentType
+  parent: DulcisX.Nodes.DocumentNode
+  langs:
+  - csharp
+  - vb
+  name: GetDocumentType()
+  nameWithType: DocumentNode.GetDocumentType()
+  fullName: DulcisX.Nodes.DocumentNode.GetDocumentType()
+  type: Method
+  source:
+    remote:
+      path: src/DulcisX/DulcisX/Nodes/DocumentNode.cs
+      branch: master
+      repo: https://github.com/TwentyFourMinutes/DulcisX.git
+    id: GetDocumentType
+    path: ../../DulcisX - master/src/DulcisX/DulcisX/Nodes/DocumentNode.cs
+    startLine: 195
+  assemblies:
+  - DulcisX
+  namespace: DulcisX.Nodes
+  summary: "\nReturns the type of the current <xref href=\"DulcisX.Nodes.DocumentNode\" data-throw-if-not-resolved=\"false\"></xref>, determined by the extension of the file.\n"
+  example: []
+  syntax:
+    content: public DocumentType GetDocumentType()
+    return:
+      type: DulcisX.Core.Enums.DocumentType
+      description: A <xref href="DulcisX.Core.Enums.DocumentType" data-throw-if-not-resolved="false"></xref> enumeration.
+    content.vb: Public Function GetDocumentType As DocumentType
+  overload: DulcisX.Nodes.DocumentNode.GetDocumentType*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: DulcisX.Nodes.ProjectNode
+  commentId: T:DulcisX.Nodes.ProjectNode
+  parent: DulcisX.Nodes
+  name: ProjectNode
+  nameWithType: ProjectNode
+  fullName: DulcisX.Nodes.ProjectNode
+- uid: DulcisX.Nodes
+  commentId: N:DulcisX.Nodes
+  name: DulcisX.Nodes
+  nameWithType: DulcisX.Nodes
+  fullName: DulcisX.Nodes
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: DulcisX.Nodes.BaseNode
+  commentId: T:DulcisX.Nodes.BaseNode
+  parent: DulcisX.Nodes
+  name: BaseNode
+  nameWithType: BaseNode
+  fullName: DulcisX.Nodes.BaseNode
+- uid: DulcisX.Nodes.ProjectItemNode
+  commentId: T:DulcisX.Nodes.ProjectItemNode
+  parent: DulcisX.Nodes
+  name: ProjectItemNode
+  nameWithType: ProjectItemNode
+  fullName: DulcisX.Nodes.ProjectItemNode
+- uid: DulcisX.Nodes.IPhysicalNode
+  commentId: T:DulcisX.Nodes.IPhysicalNode
+  parent: DulcisX.Nodes
+  name: IPhysicalNode
+  nameWithType: IPhysicalNode
+  fullName: DulcisX.Nodes.IPhysicalNode
+- uid: DulcisX.Nodes.INamedNode
+  commentId: T:DulcisX.Nodes.INamedNode
+  parent: DulcisX.Nodes
+  name: INamedNode
+  nameWithType: INamedNode
+  fullName: DulcisX.Nodes.INamedNode
+- uid: DulcisX.Nodes.IBaseNode
+  commentId: T:DulcisX.Nodes.IBaseNode
+  parent: DulcisX.Nodes
+  name: IBaseNode
+  nameWithType: IBaseNode
+  fullName: DulcisX.Nodes.IBaseNode
+- uid: DulcisX.Nodes.ProjectItemNode.GetParentProject
+  commentId: M:DulcisX.Nodes.ProjectItemNode.GetParentProject
+  parent: DulcisX.Nodes.ProjectItemNode
+  name: GetParentProject()
+  nameWithType: ProjectItemNode.GetParentProject()
+  fullName: DulcisX.Nodes.ProjectItemNode.GetParentProject()
+  spec.csharp:
+  - uid: DulcisX.Nodes.ProjectItemNode.GetParentProject
+    name: GetParentProject
+    nameWithType: ProjectItemNode.GetParentProject
+    fullName: DulcisX.Nodes.ProjectItemNode.GetParentProject
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: DulcisX.Nodes.ProjectItemNode.GetParentProject
+    name: GetParentProject
+    nameWithType: ProjectItemNode.GetParentProject
+    fullName: DulcisX.Nodes.ProjectItemNode.GetParentProject
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: DulcisX.Nodes.ProjectItemNode.GetParent
+  commentId: M:DulcisX.Nodes.ProjectItemNode.GetParent
+  parent: DulcisX.Nodes.ProjectItemNode
+  name: GetParent()
+  nameWithType: ProjectItemNode.GetParent()
+  fullName: DulcisX.Nodes.ProjectItemNode.GetParent()
+  spec.csharp:
+  - uid: DulcisX.Nodes.ProjectItemNode.GetParent
+    name: GetParent
+    nameWithType: ProjectItemNode.GetParent
+    fullName: DulcisX.Nodes.ProjectItemNode.GetParent
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: DulcisX.Nodes.ProjectItemNode.GetParent
+    name: GetParent
+    nameWithType: ProjectItemNode.GetParent
+    fullName: DulcisX.Nodes.ProjectItemNode.GetParent
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: DulcisX.Nodes.ProjectItemNode.GetParent(DulcisX.Core.Enums.NodeTypes)
+  commentId: M:DulcisX.Nodes.ProjectItemNode.GetParent(DulcisX.Core.Enums.NodeTypes)
+  parent: DulcisX.Nodes.ProjectItemNode
+  name: GetParent(NodeTypes)
+  nameWithType: ProjectItemNode.GetParent(NodeTypes)
+  fullName: DulcisX.Nodes.ProjectItemNode.GetParent(DulcisX.Core.Enums.NodeTypes)
+  spec.csharp:
+  - uid: DulcisX.Nodes.ProjectItemNode.GetParent(DulcisX.Core.Enums.NodeTypes)
+    name: GetParent
+    nameWithType: ProjectItemNode.GetParent
+    fullName: DulcisX.Nodes.ProjectItemNode.GetParent
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: DulcisX.Core.Enums.NodeTypes
+    name: NodeTypes
+    nameWithType: NodeTypes
+    fullName: DulcisX.Core.Enums.NodeTypes
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: DulcisX.Nodes.ProjectItemNode.GetParent(DulcisX.Core.Enums.NodeTypes)
+    name: GetParent
+    nameWithType: ProjectItemNode.GetParent
+    fullName: DulcisX.Nodes.ProjectItemNode.GetParent
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: DulcisX.Core.Enums.NodeTypes
+    name: NodeTypes
+    nameWithType: NodeTypes
+    fullName: DulcisX.Core.Enums.NodeTypes
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: DulcisX.Nodes.ProjectItemNode.GetChildren
+  commentId: M:DulcisX.Nodes.ProjectItemNode.GetChildren
+  parent: DulcisX.Nodes.ProjectItemNode
+  name: GetChildren()
+  nameWithType: ProjectItemNode.GetChildren()
+  fullName: DulcisX.Nodes.ProjectItemNode.GetChildren()
+  spec.csharp:
+  - uid: DulcisX.Nodes.ProjectItemNode.GetChildren
+    name: GetChildren
+    nameWithType: ProjectItemNode.GetChildren
+    fullName: DulcisX.Nodes.ProjectItemNode.GetChildren
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: DulcisX.Nodes.ProjectItemNode.GetChildren
+    name: GetChildren
+    nameWithType: ProjectItemNode.GetChildren
+    fullName: DulcisX.Nodes.ProjectItemNode.GetChildren
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: DulcisX.Nodes.ProjectItemNode.GetDefaultNamespace
+  commentId: M:DulcisX.Nodes.ProjectItemNode.GetDefaultNamespace
+  parent: DulcisX.Nodes.ProjectItemNode
+  name: GetDefaultNamespace()
+  nameWithType: ProjectItemNode.GetDefaultNamespace()
+  fullName: DulcisX.Nodes.ProjectItemNode.GetDefaultNamespace()
+  spec.csharp:
+  - uid: DulcisX.Nodes.ProjectItemNode.GetDefaultNamespace
+    name: GetDefaultNamespace
+    nameWithType: ProjectItemNode.GetDefaultNamespace
+    fullName: DulcisX.Nodes.ProjectItemNode.GetDefaultNamespace
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: DulcisX.Nodes.ProjectItemNode.GetDefaultNamespace
+    name: GetDefaultNamespace
+    nameWithType: ProjectItemNode.GetDefaultNamespace
+    fullName: DulcisX.Nodes.ProjectItemNode.GetDefaultNamespace
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: DulcisX.Nodes.BaseNode.ParentSolution
+  commentId: P:DulcisX.Nodes.BaseNode.ParentSolution
+  parent: DulcisX.Nodes.BaseNode
+  name: ParentSolution
+  nameWithType: BaseNode.ParentSolution
+  fullName: DulcisX.Nodes.BaseNode.ParentSolution
+- uid: DulcisX.Nodes.BaseNode.UnderlyingHierarchy
+  commentId: P:DulcisX.Nodes.BaseNode.UnderlyingHierarchy
+  parent: DulcisX.Nodes.BaseNode
+  name: UnderlyingHierarchy
+  nameWithType: BaseNode.UnderlyingHierarchy
+  fullName: DulcisX.Nodes.BaseNode.UnderlyingHierarchy
+- uid: DulcisX.Nodes.BaseNode.ItemId
+  commentId: P:DulcisX.Nodes.BaseNode.ItemId
+  parent: DulcisX.Nodes.BaseNode
+  name: ItemId
+  nameWithType: BaseNode.ItemId
+  fullName: DulcisX.Nodes.BaseNode.ItemId
+- uid: DulcisX.Nodes.BaseNode.GetDisplayName
+  commentId: M:DulcisX.Nodes.BaseNode.GetDisplayName
+  parent: DulcisX.Nodes.BaseNode
+  name: GetDisplayName()
+  nameWithType: BaseNode.GetDisplayName()
+  fullName: DulcisX.Nodes.BaseNode.GetDisplayName()
+  spec.csharp:
+  - uid: DulcisX.Nodes.BaseNode.GetDisplayName
+    name: GetDisplayName
+    nameWithType: BaseNode.GetDisplayName
+    fullName: DulcisX.Nodes.BaseNode.GetDisplayName
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: DulcisX.Nodes.BaseNode.GetDisplayName
+    name: GetDisplayName
+    nameWithType: BaseNode.GetDisplayName
+    fullName: DulcisX.Nodes.BaseNode.GetDisplayName
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: DulcisX.Nodes.BaseNode.AsHierarchyItem
+  commentId: M:DulcisX.Nodes.BaseNode.AsHierarchyItem
+  parent: DulcisX.Nodes.BaseNode
+  name: AsHierarchyItem()
+  nameWithType: BaseNode.AsHierarchyItem()
+  fullName: DulcisX.Nodes.BaseNode.AsHierarchyItem()
+  spec.csharp:
+  - uid: DulcisX.Nodes.BaseNode.AsHierarchyItem
+    name: AsHierarchyItem
+    nameWithType: BaseNode.AsHierarchyItem
+    fullName: DulcisX.Nodes.BaseNode.AsHierarchyItem
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: DulcisX.Nodes.BaseNode.AsHierarchyItem
+    name: AsHierarchyItem
+    nameWithType: BaseNode.AsHierarchyItem
+    fullName: DulcisX.Nodes.BaseNode.AsHierarchyItem
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: DulcisX.Nodes.BaseNode.IsTypeMatching(DulcisX.Core.Enums.NodeTypes)
+  commentId: M:DulcisX.Nodes.BaseNode.IsTypeMatching(DulcisX.Core.Enums.NodeTypes)
+  parent: DulcisX.Nodes.BaseNode
+  name: IsTypeMatching(NodeTypes)
+  nameWithType: BaseNode.IsTypeMatching(NodeTypes)
+  fullName: DulcisX.Nodes.BaseNode.IsTypeMatching(DulcisX.Core.Enums.NodeTypes)
+  spec.csharp:
+  - uid: DulcisX.Nodes.BaseNode.IsTypeMatching(DulcisX.Core.Enums.NodeTypes)
+    name: IsTypeMatching
+    nameWithType: BaseNode.IsTypeMatching
+    fullName: DulcisX.Nodes.BaseNode.IsTypeMatching
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: DulcisX.Core.Enums.NodeTypes
+    name: NodeTypes
+    nameWithType: NodeTypes
+    fullName: DulcisX.Core.Enums.NodeTypes
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: DulcisX.Nodes.BaseNode.IsTypeMatching(DulcisX.Core.Enums.NodeTypes)
+    name: IsTypeMatching
+    nameWithType: BaseNode.IsTypeMatching
+    fullName: DulcisX.Nodes.BaseNode.IsTypeMatching
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: DulcisX.Core.Enums.NodeTypes
+    name: NodeTypes
+    nameWithType: NodeTypes
+    fullName: DulcisX.Core.Enums.NodeTypes
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: DulcisX.Nodes.BaseNode.NodeType
+  commentId: P:DulcisX.Nodes.BaseNode.NodeType
+  parent: DulcisX.Nodes.BaseNode
+  name: NodeType
+  nameWithType: BaseNode.NodeType
+  fullName: DulcisX.Nodes.BaseNode.NodeType
+- uid: DulcisX.Nodes.DocumentNode.NodeType*
+  commentId: Overload:DulcisX.Nodes.DocumentNode.NodeType
+  name: NodeType
+  nameWithType: DocumentNode.NodeType
+  fullName: DulcisX.Nodes.DocumentNode.NodeType
+- uid: DulcisX.Nodes.IBaseNode.NodeType
+  commentId: P:DulcisX.Nodes.IBaseNode.NodeType
+  parent: DulcisX.Nodes.IBaseNode
+  name: NodeType
+  nameWithType: IBaseNode.NodeType
+  fullName: DulcisX.Nodes.IBaseNode.NodeType
+- uid: DulcisX.Core.Enums.NodeTypes
+  commentId: T:DulcisX.Core.Enums.NodeTypes
+  parent: DulcisX.Core.Enums
+  name: NodeTypes
+  nameWithType: NodeTypes
+  fullName: DulcisX.Core.Enums.NodeTypes
+- uid: DulcisX.Core.Enums
+  commentId: N:DulcisX.Core.Enums
+  name: DulcisX.Core.Enums
+  nameWithType: DulcisX.Core.Enums
+  fullName: DulcisX.Core.Enums
+- uid: DulcisX.Nodes.DocumentNode
+  commentId: T:DulcisX.Nodes.DocumentNode
+  parent: DulcisX.Nodes
+  name: DocumentNode
+  nameWithType: DocumentNode
+  fullName: DulcisX.Nodes.DocumentNode
+- uid: DulcisX.Nodes.DocumentNode.#ctor*
+  commentId: Overload:DulcisX.Nodes.DocumentNode.#ctor
+  name: DocumentNode
+  nameWithType: DocumentNode.DocumentNode
+  fullName: DulcisX.Nodes.DocumentNode.DocumentNode
+- uid: DulcisX.Nodes.SolutionNode
+  commentId: T:DulcisX.Nodes.SolutionNode
+  parent: DulcisX.Nodes
+  name: SolutionNode
+  nameWithType: SolutionNode
+  fullName: DulcisX.Nodes.SolutionNode
+- uid: System.UInt32
+  commentId: T:System.UInt32
+  parent: System
+  isExternal: true
+  name: UInt32
+  nameWithType: UInt32
+  fullName: System.UInt32
+- uid: Microsoft.VisualStudio.Shell.Interop.IVsHierarchy
+  commentId: T:Microsoft.VisualStudio.Shell.Interop.IVsHierarchy
+  parent: Microsoft.VisualStudio.Shell.Interop
+  isExternal: true
+  name: IVsHierarchy
+  nameWithType: IVsHierarchy
+  fullName: Microsoft.VisualStudio.Shell.Interop.IVsHierarchy
+- uid: Microsoft.VisualStudio.Shell.Interop
+  commentId: N:Microsoft.VisualStudio.Shell.Interop
+  isExternal: true
+  name: Microsoft.VisualStudio.Shell.Interop
+  nameWithType: Microsoft.VisualStudio.Shell.Interop
+  fullName: Microsoft.VisualStudio.Shell.Interop
+- uid: DulcisX.Nodes.DocumentNode.GetFileName*
+  commentId: Overload:DulcisX.Nodes.DocumentNode.GetFileName
+  name: GetFileName
+  nameWithType: DocumentNode.GetFileName
+  fullName: DulcisX.Nodes.DocumentNode.GetFileName
+- uid: DulcisX.Nodes.IPhysicalNode.GetFileName
+  commentId: M:DulcisX.Nodes.IPhysicalNode.GetFileName
+  parent: DulcisX.Nodes.IPhysicalNode
+  name: GetFileName()
+  nameWithType: IPhysicalNode.GetFileName()
+  fullName: DulcisX.Nodes.IPhysicalNode.GetFileName()
+  spec.csharp:
+  - uid: DulcisX.Nodes.IPhysicalNode.GetFileName
+    name: GetFileName
+    nameWithType: IPhysicalNode.GetFileName
+    fullName: DulcisX.Nodes.IPhysicalNode.GetFileName
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: DulcisX.Nodes.IPhysicalNode.GetFileName
+    name: GetFileName
+    nameWithType: IPhysicalNode.GetFileName
+    fullName: DulcisX.Nodes.IPhysicalNode.GetFileName
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: DulcisX.Nodes.DocumentNode.GetFullName*
+  commentId: Overload:DulcisX.Nodes.DocumentNode.GetFullName
+  name: GetFullName
+  nameWithType: DocumentNode.GetFullName
+  fullName: DulcisX.Nodes.DocumentNode.GetFullName
+- uid: DulcisX.Nodes.IPhysicalNode.GetFullName
+  commentId: M:DulcisX.Nodes.IPhysicalNode.GetFullName
+  parent: DulcisX.Nodes.IPhysicalNode
+  name: GetFullName()
+  nameWithType: IPhysicalNode.GetFullName()
+  fullName: DulcisX.Nodes.IPhysicalNode.GetFullName()
+  spec.csharp:
+  - uid: DulcisX.Nodes.IPhysicalNode.GetFullName
+    name: GetFullName
+    nameWithType: IPhysicalNode.GetFullName
+    fullName: DulcisX.Nodes.IPhysicalNode.GetFullName
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: DulcisX.Nodes.IPhysicalNode.GetFullName
+    name: GetFullName
+    nameWithType: IPhysicalNode.GetFullName
+    fullName: DulcisX.Nodes.IPhysicalNode.GetFullName
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: DulcisX.Nodes.DocumentNode.GetBuildAction*
+  commentId: Overload:DulcisX.Nodes.DocumentNode.GetBuildAction
+  name: GetBuildAction
+  nameWithType: DocumentNode.GetBuildAction
+  fullName: DulcisX.Nodes.DocumentNode.GetBuildAction
+- uid: DulcisX.Core.Enums.CopyToOutputDirectory
+  commentId: T:DulcisX.Core.Enums.CopyToOutputDirectory
+  parent: DulcisX.Core.Enums
+  name: CopyToOutputDirectory
+  nameWithType: CopyToOutputDirectory
+  fullName: DulcisX.Core.Enums.CopyToOutputDirectory
+- uid: DulcisX.Nodes.DocumentNode.GetCopyToOutputDirectory*
+  commentId: Overload:DulcisX.Nodes.DocumentNode.GetCopyToOutputDirectory
+  name: GetCopyToOutputDirectory
+  nameWithType: DocumentNode.GetCopyToOutputDirectory
+  fullName: DulcisX.Nodes.DocumentNode.GetCopyToOutputDirectory
+- uid: DulcisX.Nodes.DocumentNode.SetCopyToOutputDirectory*
+  commentId: Overload:DulcisX.Nodes.DocumentNode.SetCopyToOutputDirectory
+  name: SetCopyToOutputDirectory
+  nameWithType: DocumentNode.SetCopyToOutputDirectory
+  fullName: DulcisX.Nodes.DocumentNode.SetCopyToOutputDirectory
+- uid: DulcisX.Nodes.DocumentNode.Rename*
+  commentId: Overload:DulcisX.Nodes.DocumentNode.Rename
+  name: Rename
+  nameWithType: DocumentNode.Rename
+  fullName: DulcisX.Nodes.DocumentNode.Rename
+- uid: DulcisX.Nodes.DocumentNode.ChangeExtension*
+  commentId: Overload:DulcisX.Nodes.DocumentNode.ChangeExtension
+  name: ChangeExtension
+  nameWithType: DocumentNode.ChangeExtension
+  fullName: DulcisX.Nodes.DocumentNode.ChangeExtension
+- uid: DulcisX.Nodes.DocumentNode.ChangedSinceLastUserSave*
+  commentId: Overload:DulcisX.Nodes.DocumentNode.ChangedSinceLastUserSave
+  name: ChangedSinceLastUserSave
+  nameWithType: DocumentNode.ChangedSinceLastUserSave
+  fullName: DulcisX.Nodes.DocumentNode.ChangedSinceLastUserSave
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: DulcisX.Nodes.DocumentNode.IsReadonly*
+  commentId: Overload:DulcisX.Nodes.DocumentNode.IsReadonly
+  name: IsReadonly
+  nameWithType: DocumentNode.IsReadonly
+  fullName: DulcisX.Nodes.DocumentNode.IsReadonly
+- uid: DulcisX.Nodes.DocumentNode.Save*
+  commentId: Overload:DulcisX.Nodes.DocumentNode.Save
+  name: Save
+  nameWithType: DocumentNode.Save
+  fullName: DulcisX.Nodes.DocumentNode.Save
+- uid: DulcisX.Core.Enums.DocumentType
+  commentId: T:DulcisX.Core.Enums.DocumentType
+  parent: DulcisX.Core.Enums
+  name: DocumentType
+  nameWithType: DocumentType
+  fullName: DulcisX.Core.Enums.DocumentType
+- uid: DulcisX.Nodes.DocumentNode.GetDocumentType*
+  commentId: Overload:DulcisX.Nodes.DocumentNode.GetDocumentType
+  name: GetDocumentType
+  nameWithType: DocumentNode.GetDocumentType
+  fullName: DulcisX.Nodes.DocumentNode.GetDocumentType
