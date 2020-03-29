@@ -54,9 +54,7 @@ items:
     content: 'public class SolutionNode : SolutionItemNode, IPhysicalNode, INamedNode, IBaseNode'
     content.vb: >-
       Public Class SolutionNode
-
           Inherits SolutionItemNode
-
           Implements IPhysicalNode, INamedNode, IBaseNode
   inheritance:
   - System.Object
@@ -369,6 +367,7 @@ items:
   assemblies:
   - DulcisX
   namespace: DulcisX.Nodes
+  summary: "\nGets the Type of current Node.\n"
   example: []
   syntax:
     content: public override NodeTypes NodeType { get; }
@@ -410,6 +409,7 @@ items:
   assemblies:
   - DulcisX
   namespace: DulcisX.Nodes
+  summary: "\nGets the Solution in which the Node sits in.\n"
   example: []
   syntax:
     content: public override SolutionNode ParentSolution { get; }
@@ -567,11 +567,13 @@ items:
   assemblies:
   - DulcisX
   namespace: DulcisX.Nodes
+  summary: "\nReturns the name of the file, including the extension.\n"
   example: []
   syntax:
     content: public string GetFileName()
     return:
       type: System.String
+      description: A string containg the name of the file.
     content.vb: Public Function GetFileName As String
   overload: DulcisX.Nodes.SolutionNode.GetFileName*
   implements:
@@ -602,11 +604,13 @@ items:
   assemblies:
   - DulcisX
   namespace: DulcisX.Nodes
+  summary: "\nReturns the full name of the file.\n"
   example: []
   syntax:
     content: public string GetFullName()
     return:
       type: System.String
+      description: A string containg the full name of the file.
     content.vb: Public Function GetFullName As String
   overload: DulcisX.Nodes.SolutionNode.GetFullName*
   implements:
@@ -637,12 +641,14 @@ items:
   assemblies:
   - DulcisX
   namespace: DulcisX.Nodes
+  summary: "\nReturns the immediate parent Node of the current Node.\n"
   remarks: This method will always return null. A <xref href="DulcisX.Nodes.SolutionNode" data-throw-if-not-resolved="false"></xref> can&apos;t have any parents.
   example: []
   syntax:
     content: public override BaseNode GetParent()
     return:
       type: DulcisX.Nodes.BaseNode
+      description: The parent if any could be found, otherwise null.
     content.vb: Public Overrides Function GetParent As BaseNode
   overridden: DulcisX.Nodes.SolutionItemNode.GetParent
   overload: DulcisX.Nodes.SolutionNode.GetParent*
@@ -676,6 +682,7 @@ items:
   assemblies:
   - DulcisX
   namespace: DulcisX.Nodes
+  summary: "\nReturns the first parent Node of the current Node, matching the given <code data-dev-comment-type=\"paramref\" class=\"paramref\">nodeType</code>.\n"
   remarks: This method will always return null. A <xref href="DulcisX.Nodes.SolutionNode" data-throw-if-not-resolved="false"></xref> can&apos;t have any parents.
   example: []
   syntax:
@@ -683,8 +690,10 @@ items:
     parameters:
     - id: nodeType
       type: DulcisX.Core.Enums.NodeTypes
+      description: The Node type which should be serached for.
     return:
       type: DulcisX.Nodes.BaseNode
+      description: The matching parent if any could be found, otherwise null.
     content.vb: Public Overrides Function GetParent(nodeType As NodeTypes) As BaseNode
   overridden: DulcisX.Nodes.BaseNode.GetParent(DulcisX.Core.Enums.NodeTypes)
   overload: DulcisX.Nodes.SolutionNode.GetParent*

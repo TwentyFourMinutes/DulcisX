@@ -5,6 +5,6 @@ title: Home
 
 # DulcisX Documentation
 
-![Nuget](https://img.shields.io/nuget/dt/DulcisX?style=flat-square) <img alt="GitHub issues" src="https://img.shields.io/github/issues-raw/TwentyFourMinutes/DulcisX?style=flat-square"> <img alt="GitHub release (latest by date including pre-releases)" src="https://img.shields.io/github/v/release/TwentyFourMinutes/DulcisX?include_prereleases&style=flat-square"> ![GitHub](https://img.shields.io/github/license/TwentyFourMinutes/DulcisX?style=flat-square)
+<a href="https://www.nuget.org/packages/DulcisX"><img alt="Nuget" src="https://img.shields.io/nuget/v/DulcisX"></a> <a href="https://www.nuget.org/packages/DulcisX"><img alt="Nuget" src="https://img.shields.io/nuget/dt/DulcisX"></a> <a href="https://github.com/TwentyFourMinutes/DulcisX/issues"><img alt="GitHub issues" src="https://img.shields.io/github/issues-raw/TwentyFourMinutes/DulcisX"></a> <a href="https://github.com/TwentyFourMinutes/DulcisX/blob/master/LICENSE"><img alt="GitHub" src="https://img.shields.io/github/license/TwentyFourMinutes/DulcisX"></a> <a href="https://discordapp.com/invite/EYKxkce"><img alt="Discord" src="https://discordapp.com/api/guilds/275377268728135680/widget.png"></a>
 
 DulcisX translates to _Sweet Extension_ and this is the goal for this Project, making the experience of developing Visual Studio Extensions sweat. It allows you to get your extension done faster and doesn't bother you with ugly or missing API's.

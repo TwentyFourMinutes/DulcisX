@@ -34,9 +34,7 @@ items:
     content: 'public class FolderNode : ProjectItemNode, IPhysicalNode, INamedNode, IBaseNode'
     content.vb: >-
       Public Class FolderNode
-
           Inherits ProjectItemNode
-
           Implements IPhysicalNode, INamedNode, IBaseNode
   inheritance:
   - System.Object
@@ -93,6 +91,7 @@ items:
   assemblies:
   - DulcisX
   namespace: DulcisX.Nodes
+  summary: "\nGets the Type of current Node.\n"
   example: []
   syntax:
     content: public override NodeTypes NodeType { get; }
@@ -218,11 +217,13 @@ items:
   assemblies:
   - DulcisX
   namespace: DulcisX.Nodes
+  summary: "\nReturns the name of the file, including the extension.\n"
   example: []
   syntax:
     content: public string GetFileName()
     return:
       type: System.String
+      description: A string containg the name of the file.
     content.vb: Public Function GetFileName As String
   overload: DulcisX.Nodes.FolderNode.GetFileName*
   implements:
@@ -253,11 +254,13 @@ items:
   assemblies:
   - DulcisX
   namespace: DulcisX.Nodes
+  summary: "\nReturns the full name of the file.\n"
   example: []
   syntax:
     content: public string GetFullName()
     return:
       type: System.String
+      description: A string containg the full name of the file.
     content.vb: Public Function GetFullName As String
   overload: DulcisX.Nodes.FolderNode.GetFullName*
   implements:

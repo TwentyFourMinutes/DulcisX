@@ -1,0 +1,235 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Installing DulcisX </title>
+    <meta name="viewport" content="width=device-width">
+    <meta property="og:title" content="Installing DulcisX ">
+    
+    <meta property="og:locale" content="en-us">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="DulcisX Docs">
+    <meta property="og:image" content="">
+    <meta property="og:image:alt" content="DulcisX Logo">
+    <meta name="theme-color" content="#995EA7">
+    <meta name="generator" content="docfx 2.51.0.0">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="../toc.html">
+    <meta id="docfx-style:rel" content="../../">
+    <link rel="preload" href="../../styles/search-worker.js" as="script">
+    <link rel="preload" href="../../fonts/glyphicons-halflings-regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.minify.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/master.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <link rel="stylesheet" href="../../styles/material.css">
+    <link rel="stylesheet" href="../../styles/theme-switcher.css">
+    <link href="https://cdn.rawgit.com/noelboss/featherlight/1.7.6/release/featherlight.min.css" type="text/css" rel="stylesheet">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../index.html">
+                <img id="logo" class="svg" src="../../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Guides.GettingStarted.Installation">
+<h1 id="dulcisx-installation">DulcisX Installation</h1>
+
+<h2 id="supported-platforms">Supported Platforms</h2>
+<p>DulcisX targets <code>.Net Framework 4.8</code>, that means that all projects which use this package need to target <code>.Net Framework 4.8</code> as well. Unfortunately the <code>VSIX Project</code> template targets <code>.Net Framework 4.7.2</code>, therefor you will need to change that.</p>
+<div class="tabGroup" id="tabgroup_CeZOj-G++Q">
+<ul role="tablist">
+<li role="presentation">
+<a href="#tabpanel_CeZOj-G++Q_property-page-edit" role="tab" aria-controls="tabpanel_CeZOj-G++Q_property-page-edit" data-tab="property-page-edit" tabindex="0" aria-selected="true">Editing the .csproj properties page</a>
+</li>
+<li role="presentation">
+<a href="#tabpanel_CeZOj-G++Q_file-edit" role="tab" aria-controls="tabpanel_CeZOj-G++Q_file-edit" data-tab="file-edit" tabindex="-1">Editing the .csproj file</a>
+</li>
+</ul>
+<section id="tabpanel_CeZOj-G++Q_property-page-edit" role="tabpanel" data-tab="property-page-edit">
+
+<ol>
+<li><p>Right click the Project file and click on 'Properties'</p>
+<p><img src="images/open-properties.png" alt="Step 1"></p>
+</li>
+<li><p>Select the 'Application' tab</p>
+</li>
+<li><p>Change the 'Target Framework' to <code>.Net Framework 4.7.2</code>. If you don't see that option, you can install it from <a href="https://dotnet.microsoft.com/download/dotnet-framework/net48">here</a>.</p>
+<p><img src="images/change-framework.png" alt="Step 3"></p>
+</li>
+</ol>
+</section>
+<section id="tabpanel_CeZOj-G++Q_file-edit" role="tabpanel" data-tab="file-edit" aria-hidden="true" hidden="hidden">
+
+<ol>
+<li><p>Open the <code>.csproj</code> file</p>
+</li>
+<li><p>Change <code>&lt;TargetFrameworkVersion&gt;v4.7.2&lt;/TargetFrameworkVersion&gt;</code> to <code>&lt;TargetFrameworkVersion&gt;v4.8&lt;/TargetFrameworkVersion&gt;</code></p>
+</li>
+<li><p>Save</p>
+<pre><code name="Sample .csproj">&lt;!-- The following content might differ to yours. --&gt;
+
+&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;
+&lt;Project ToolsVersion=&quot;15.0&quot; xmlns=&quot;http://schemas.microsoft.com/developer/msbuild/2003&quot;&gt;
+  &lt;!--...--&gt;
+  &lt;PropertyGroup&gt;
+    &lt;Configuration Condition=&quot; '$(Configuration)' == '' &quot;&gt;Debug&lt;/Configuration&gt;
+    &lt;Platform Condition=&quot; '$(Platform)' == '' &quot;&gt;AnyCPU&lt;/Platform&gt;
+    &lt;SchemaVersion&gt;2.0&lt;/SchemaVersion&gt;
+    &lt;ProjectTypeGuids&gt;&lt;!--Your Guid--&gt;&lt;/ProjectTypeGuids&gt;
+    &lt;ProjectGuid&gt;&lt;!--Your Guid--&gt;&lt;/ProjectGuid&gt;
+    &lt;OutputType&gt;Library&lt;/OutputType&gt;
+    &lt;AppDesignerFolder&gt;Properties&lt;/AppDesignerFolder&gt;
+    &lt;RootNamespace&gt;&lt;!--Your Name--&gt;&lt;/RootNamespace&gt;
+    &lt;AssemblyName&gt;&lt;!--Your Name--&gt;&lt;/AssemblyName&gt;
+    
+    &lt;!--Change this:--&gt;
+    &lt;TargetFrameworkVersion&gt;v4.7.2&lt;/TargetFrameworkVersion&gt;
+    
+    &lt;!--To This:--&gt;
+    &lt;TargetFrameworkVersion&gt;v4.8&lt;/TargetFrameworkVersion&gt;
+    
+    &lt;GeneratePkgDefFile&gt;true&lt;/GeneratePkgDefFile&gt;
+    &lt;UseCodebase&gt;true&lt;/UseCodebase&gt;
+    &lt;IncludeAssemblyInVSIXContainer&gt;true&lt;/IncludeAssemblyInVSIXContainer&gt;
+    &lt;IncludeDebugSymbolsInVSIXContainer&gt;false&lt;/IncludeDebugSymbolsInVSIXContainer&gt;
+    &lt;IncludeDebugSymbolsInLocalVSIXDeployment&gt;false&lt;/IncludeDebugSymbolsInLocalVSIXDeployment&gt;
+    &lt;CopyBuildOutputToOutputDirectory&gt;true&lt;/CopyBuildOutputToOutputDirectory&gt;
+    &lt;CopyOutputSymbolsToOutputDirectory&gt;true&lt;/CopyOutputSymbolsToOutputDirectory&gt;
+    &lt;StartAction&gt;Program&lt;/StartAction&gt;
+    &lt;StartProgram Condition=&quot;'$(DevEnvDir)' != ''&quot;&gt;$(DevEnvDir)devenv.exe&lt;/StartProgram&gt;
+    &lt;StartArguments&gt;/rootsuffix Exp&lt;/StartArguments&gt;
+  &lt;/PropertyGroup&gt;
+  &lt;!--...--&gt;
+&lt;/Project&gt;
+</code></pre></li>
+</ol>
+</section>
+</div>
+<h2 id="installation-from-nuget">Installation from NuGet</h2>
+<div class="tabGroup" id="tabgroup_CeZOj-G++Q-1">
+<ul role="tablist">
+<li role="presentation">
+<a href="#tabpanel_CeZOj-G++Q-1_visualstudio-install" role="tab" aria-controls="tabpanel_CeZOj-G++Q-1_visualstudio-install" data-tab="visualstudio-install" tabindex="0" aria-selected="true">Using Visual Studio</a>
+</li>
+<li role="presentation">
+<a href="#tabpanel_CeZOj-G++Q-1_npm-install" role="tab" aria-controls="tabpanel_CeZOj-G++Q-1_npm-install" data-tab="npm-install" tabindex="-1">Using the Nuget Package Manager</a>
+</li>
+</ul>
+<section id="tabpanel_CeZOj-G++Q-1_visualstudio-install" role="tabpanel" data-tab="visualstudio-install">
+
+<ol>
+<li><p>Right click on 'References', and select 'Manage NuGet packages'</p>
+<p><img src="images/open-npm.png" alt="Step 1"></p>
+</li>
+<li><p>Check the 'include prerelease' checkbox</p>
+</li>
+<li><p>In the &quot;Browse&quot; tab, search for DulcisX</p>
+</li>
+<li><p>Click install.</p>
+<p><img src="images/install.png" alt="Step 2"></p>
+</li>
+</ol>
+</section>
+<section id="tabpanel_CeZOj-G++Q-1_npm-install" role="tabpanel" data-tab="npm-install" aria-hidden="true" hidden="hidden">
+
+<ol>
+<li>Click on 'Tools', 'Nuget Package Manager' and 'Package Manager Console'</li>
+<li>Enter <code>Install-Package DulcisX</code></li>
+</ol>
+</section>
+</div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="theme-switch-field">
+                <p>Theme</p>
+                <select id="theme-switcher">
+                  <option value="dark">Dark
+                  <option value="gray">Gray
+                  <option value="light">Light
+                </select>
+              </div>
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/TwentyFourMinutes/DulcisX//blob/gh-pages/DocFx/guides/getting_started/installation.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            <span>Copyright © 2020 Twenty</span>
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+    <script type="text/javascript" src="../../styles/styleswitcher.js"></script>  </body>
+</html>

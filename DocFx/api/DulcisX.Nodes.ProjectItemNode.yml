@@ -36,9 +36,7 @@ items:
     content: 'public abstract class ProjectItemNode : BaseNode, INamedNode, IBaseNode'
     content.vb: >-
       Public MustInherit Class ProjectItemNode
-
           Inherits BaseNode
-
           Implements INamedNode, IBaseNode
   inheritance:
   - System.Object
@@ -213,11 +211,13 @@ items:
   assemblies:
   - DulcisX
   namespace: DulcisX.Nodes
+  summary: "\nReturns the immediate parent Node of the current Node.\n"
   example: []
   syntax:
     content: public override BaseNode GetParent()
     return:
       type: DulcisX.Nodes.BaseNode
+      description: The parent if any could be found, otherwise null.
     content.vb: Public Overrides Function GetParent As BaseNode
   overridden: DulcisX.Nodes.BaseNode.GetParent
   overload: DulcisX.Nodes.ProjectItemNode.GetParent*
@@ -249,14 +249,17 @@ items:
   assemblies:
   - DulcisX
   namespace: DulcisX.Nodes
+  summary: "\nReturns the first parent Node of the current Node, matching the given <code data-dev-comment-type=\"paramref\" class=\"paramref\">nodeType</code>.\n"
   example: []
   syntax:
     content: public override BaseNode GetParent(NodeTypes nodeType)
     parameters:
     - id: nodeType
       type: DulcisX.Core.Enums.NodeTypes
+      description: The Node type which should be serached for.
     return:
       type: DulcisX.Nodes.BaseNode
+      description: The matching parent if any could be found, otherwise null.
     content.vb: Public Overrides Function GetParent(nodeType As NodeTypes) As BaseNode
   overridden: DulcisX.Nodes.BaseNode.GetParent(DulcisX.Core.Enums.NodeTypes)
   overload: DulcisX.Nodes.ProjectItemNode.GetParent*
@@ -288,11 +291,13 @@ items:
   assemblies:
   - DulcisX
   namespace: DulcisX.Nodes
+  summary: "\nReturns all immediate children Nodes of the current Node.\n"
   example: []
   syntax:
     content: public override IEnumerable<BaseNode> GetChildren()
     return:
       type: System.Collections.Generic.IEnumerable{DulcisX.Nodes.BaseNode}
+      description: An <xref href="System.Collections.Generic.IEnumerable%601" data-throw-if-not-resolved="false"></xref> with the children.
     content.vb: Public Overrides Function GetChildren As IEnumerable(Of BaseNode)
   overridden: DulcisX.Nodes.BaseNode.GetChildren
   overload: DulcisX.Nodes.ProjectItemNode.GetChildren*

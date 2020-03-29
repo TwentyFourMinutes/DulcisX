@@ -34,7 +34,6 @@ items:
   syntax:
     content: >-
       public sealed class EventDistributor<TDelegate>
-
           where TDelegate : Delegate
     typeParameters:
     - id: TDelegate

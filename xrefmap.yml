@@ -3744,6 +3744,15 @@ references:
   isSpec: "True"
   fullName: DulcisX.Nodes.UnknownNode.NodeType
   nameWithType: UnknownNode.NodeType
+- uid: Guides.GettingStarted.FirstExtension
+  name: Your First Extension
+  href: guides/getting_started/first-extension.html
+- uid: Guides.GettingStarted.Installation
+  name: Installing DulcisX
+  href: guides/getting_started/installation.html
+- uid: Guides.Introduction
+  name: Introduction to DulcisX
+  href: guides/introduction/intro.html
 - uid: Root.Landing
   name: Home
   href: index.html

@@ -40,7 +40,6 @@ items:
     content: 'public abstract class BaseNode : INamedNode, IBaseNode'
     content.vb: >-
       Public MustInherit Class BaseNode
-
           Implements INamedNode, IBaseNode
   inheritance:
   - System.Object
@@ -89,6 +88,7 @@ items:
   assemblies:
   - DulcisX
   namespace: DulcisX.Nodes
+  summary: "\nGets the Solution in which the Node sits in.\n"
   example: []
   syntax:
     content: public virtual SolutionNode ParentSolution { get; }
@@ -129,6 +129,7 @@ items:
   assemblies:
   - DulcisX
   namespace: DulcisX.Nodes
+  summary: "\nGets the Hierarchy in which the Node sits in.\n"
   example: []
   syntax:
     content: public IVsHierarchy UnderlyingHierarchy { get; }
@@ -167,6 +168,7 @@ items:
   assemblies:
   - DulcisX
   namespace: DulcisX.Nodes
+  summary: "\nGets the Unique Identifier for the Node in the <xref href=\"DulcisX.Nodes.IBaseNode.UnderlyingHierarchy\" data-throw-if-not-resolved=\"false\"></xref>.\n"
   example: []
   syntax:
     content: public uint ItemId { get; }
@@ -205,6 +207,7 @@ items:
   assemblies:
   - DulcisX
   namespace: DulcisX.Nodes
+  summary: "\nGets the Type of current Node.\n"
   example: []
   syntax:
     content: public abstract NodeTypes NodeType { get; }
@@ -287,11 +290,13 @@ items:
   assemblies:
   - DulcisX
   namespace: DulcisX.Nodes
+  summary: "\nReturns the name displayed in the Visual Studio Solution Explorer.\n"
   example: []
   syntax:
     content: public string GetDisplayName()
     return:
       type: System.String
+      description: A string containg the display name of the Node.
     content.vb: Public Function GetDisplayName As String
   overload: DulcisX.Nodes.BaseNode.GetDisplayName*
   implements:
@@ -322,11 +327,13 @@ items:
   assemblies:
   - DulcisX
   namespace: DulcisX.Nodes
+  summary: "\nReturns the immediate parent Node of the current Node.\n"
   example: []
   syntax:
     content: public abstract BaseNode GetParent()
     return:
       type: DulcisX.Nodes.BaseNode
+      description: The parent if any could be found, otherwise null.
     content.vb: Public MustOverride Function GetParent As BaseNode
   overload: DulcisX.Nodes.BaseNode.GetParent*
   implements:
@@ -359,14 +366,17 @@ items:
   assemblies:
   - DulcisX
   namespace: DulcisX.Nodes
+  summary: "\nReturns the first parent Node of the current Node, matching the given <code data-dev-comment-type=\"paramref\" class=\"paramref\">nodeType</code>.\n"
   example: []
   syntax:
     content: public virtual BaseNode GetParent(NodeTypes nodeType)
     parameters:
     - id: nodeType
       type: DulcisX.Core.Enums.NodeTypes
+      description: The Node type which should be serached for.
     return:
       type: DulcisX.Nodes.BaseNode
+      description: The matching parent if any could be found, otherwise null.
     content.vb: Public Overridable Function GetParent(nodeType As NodeTypes) As BaseNode
   overload: DulcisX.Nodes.BaseNode.GetParent*
   implements:
@@ -399,11 +409,13 @@ items:
   assemblies:
   - DulcisX
   namespace: DulcisX.Nodes
+  summary: "\nReturns the <xref href=\"Microsoft.VisualStudio.Shell.IVsHierarchyItem\" data-throw-if-not-resolved=\"false\"></xref> which represents the current Node.\n"
   example: []
   syntax:
     content: public IVsHierarchyItem AsHierarchyItem()
     return:
       type: Microsoft.VisualStudio.Shell.IVsHierarchyItem
+      description: The the matching <xref href="Microsoft.VisualStudio.Shell.IVsHierarchyItem" data-throw-if-not-resolved="false"></xref>.
     content.vb: Public Function AsHierarchyItem As IVsHierarchyItem
   overload: DulcisX.Nodes.BaseNode.AsHierarchyItem*
   implements:

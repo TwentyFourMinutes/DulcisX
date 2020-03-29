@@ -31,7 +31,6 @@ items:
     content: 'public interface IPhysicalNode : INamedNode, IBaseNode'
     content.vb: >-
       Public Interface IPhysicalNode
-
           Inherits INamedNode
   inheritedMembers:
   - DulcisX.Nodes.INamedNode.GetDisplayName

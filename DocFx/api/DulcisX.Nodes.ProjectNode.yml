@@ -49,9 +49,7 @@ items:
     content: 'public class ProjectNode : SolutionItemNode, IPhysicalNode, INamedNode, IBaseNode'
     content.vb: >-
       Public Class ProjectNode
-
           Inherits SolutionItemNode
-
           Implements IPhysicalNode, INamedNode, IBaseNode
   inheritance:
   - System.Object
@@ -181,6 +179,7 @@ items:
   assemblies:
   - DulcisX
   namespace: DulcisX.Nodes
+  summary: "\nGets the Type of current Node.\n"
   example: []
   syntax:
     content: public override NodeTypes NodeType { get; }
@@ -299,11 +298,13 @@ items:
   assemblies:
   - DulcisX
   namespace: DulcisX.Nodes
+  summary: "\nReturns the name of the file, including the extension.\n"
   example: []
   syntax:
     content: public string GetFileName()
     return:
       type: System.String
+      description: A string containg the name of the file.
     content.vb: Public Function GetFileName As String
   overload: DulcisX.Nodes.ProjectNode.GetFileName*
   implements:
@@ -334,11 +335,13 @@ items:
   assemblies:
   - DulcisX
   namespace: DulcisX.Nodes
+  summary: "\nReturns the full name of the file.\n"
   example: []
   syntax:
     content: public string GetFullName()
     return:
       type: System.String
+      description: A string containg the full name of the file.
     content.vb: Public Function GetFullName As String
   overload: DulcisX.Nodes.ProjectNode.GetFullName*
   implements:
@@ -559,11 +562,13 @@ items:
   assemblies:
   - DulcisX
   namespace: DulcisX.Nodes
+  summary: "\nReturns all immediate children Nodes of the current Node.\n"
   example: []
   syntax:
     content: public override IEnumerable<BaseNode> GetChildren()
     return:
       type: System.Collections.Generic.IEnumerable{DulcisX.Nodes.BaseNode}
+      description: An <xref href="System.Collections.Generic.IEnumerable%601" data-throw-if-not-resolved="false"></xref> with the children.
     content.vb: Public Overrides Function GetChildren As IEnumerable(Of BaseNode)
   overridden: DulcisX.Nodes.SolutionItemNode.GetChildren
   overload: DulcisX.Nodes.ProjectNode.GetChildren*
@@ -809,7 +814,6 @@ items:
   syntax:
     content: >-
       public bool TryGetPhysicalNode<TNode>(string fullName, out TNode node)
-
           where TNode : class, IPhysicalNode
     parameters:
     - id: fullName

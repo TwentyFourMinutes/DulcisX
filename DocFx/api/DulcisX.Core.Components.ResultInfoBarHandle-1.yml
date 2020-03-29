@@ -34,7 +34,6 @@ items:
       description: The type of the button identifier.
     content.vb: >-
       Public Class ResultInfoBarHandle(Of TIdentifier)
-
           Inherits InfoBarHandle
   inheritance:
   - System.Object

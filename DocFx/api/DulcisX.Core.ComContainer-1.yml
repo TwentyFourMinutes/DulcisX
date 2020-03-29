@@ -20,7 +20,7 @@ items:
       repo: https://github.com/TwentyFourMinutes/DulcisX.git
     id: ComContainer
     path: ../../DulcisX - master/src/DulcisX/DulcisX/Core/ComContainer.cs
-    startLine: 5
+    startLine: 6
   assemblies:
   - DulcisX
   namespace: DulcisX.Core
@@ -30,6 +30,7 @@ items:
     content: public class ComContainer<TComType>
     typeParameters:
     - id: TComType
+      description: The type of the Com Type.
     content.vb: Public Class ComContainer(Of TComType)
   inheritance:
   - System.Object
@@ -68,7 +69,7 @@ items:
       repo: https://github.com/TwentyFourMinutes/DulcisX.git
     id: Value
     path: ../../DulcisX - master/src/DulcisX/DulcisX/Core/ComContainer.cs
-    startLine: 10
+    startLine: 11
   assemblies:
   - DulcisX
   namespace: DulcisX.Core

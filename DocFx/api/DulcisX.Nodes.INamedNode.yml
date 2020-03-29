@@ -30,7 +30,6 @@ items:
     content: 'public interface INamedNode : IBaseNode'
     content.vb: >-
       Public Interface INamedNode
-
           Inherits IBaseNode
   inheritedMembers:
   - DulcisX.Nodes.IBaseNode.ParentSolution

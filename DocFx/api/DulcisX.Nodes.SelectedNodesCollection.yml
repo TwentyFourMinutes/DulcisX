@@ -34,7 +34,6 @@ items:
     content: 'public class SelectedNodesCollection : IEnumerable<BaseNode>, IEnumerable'
     content.vb: >-
       Public Class SelectedNodesCollection
-
           Implements IEnumerable(Of BaseNode), IEnumerable
   inheritance:
   - System.Object

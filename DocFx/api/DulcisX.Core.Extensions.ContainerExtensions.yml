@@ -126,7 +126,6 @@ items:
   syntax:
     content: >-
       public static void RegisterCOMInstance<TService, TInterface>(this Container container, IServiceProviders providers)
-
           where TInterface : class
     parameters:
     - id: container

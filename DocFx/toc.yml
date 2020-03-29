@@ -1,5 +1,5 @@
-- name: Articles
-  href: articles/
+- name: Guides
+  topicUid: Guides.Introduction
 - name: API Documentation
   href: api/
   topicUid: API.Docs

@@ -43,9 +43,7 @@ items:
     content: 'public abstract class PackageX : AsyncPackage, IVsPackage, IServiceProvider, IOleCommandTarget, IVsPersistSolutionOpts, IServiceContainer, IVsUserSettings, IVsUserSettingsMigration, IVsUserSettingsQuery, IVsToolWindowFactory, IVsToolboxItemProvider, IVsToolboxItemProvider2, IAsyncServiceProvider, IAsyncLoadablePackageInitialize, IAsyncServiceProvider2, IAsyncServiceContainer, IVsAsyncToolWindowFactory, IVsAsyncToolWindowFactoryProvider, IServiceProviders, IServiceProvider, IAsyncServiceProvider'
     content.vb: >-
       Public MustInherit Class PackageX
-
           Inherits AsyncPackage
-
           Implements IVsPackage, IServiceProvider, IOleCommandTarget, IVsPersistSolutionOpts, IServiceContainer, IVsUserSettings, IVsUserSettingsMigration, IVsUserSettingsQuery, IVsToolWindowFactory, IVsToolboxItemProvider, IVsToolboxItemProvider2, IAsyncServiceProvider, IAsyncLoadablePackageInitialize, IAsyncServiceProvider2, IAsyncServiceContainer, IVsAsyncToolWindowFactory, IVsAsyncToolWindowFactoryProvider, IServiceProviders, IServiceProvider, IAsyncServiceProvider
   inheritance:
   - System.Object
@@ -599,7 +597,6 @@ items:
   syntax:
     content: >-
       public TService GetGlobalService<TService>()
-
           where TService : class
     typeParameters:
     - id: TService
@@ -643,7 +640,6 @@ items:
   syntax:
     content: >-
       public TService GetGlobalService<TBaseService, TService>()
-
           where TBaseService : class where TService : class
     typeParameters:
     - id: TBaseService

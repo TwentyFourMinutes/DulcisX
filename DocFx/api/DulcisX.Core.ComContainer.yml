@@ -20,7 +20,7 @@ items:
       repo: https://github.com/TwentyFourMinutes/DulcisX.git
     id: ComContainer
     path: ../../DulcisX - master/src/DulcisX/DulcisX/Core/ComContainer.cs
-    startLine: 21
+    startLine: 22
   assemblies:
   - DulcisX
   namespace: DulcisX.Core
@@ -64,7 +64,7 @@ items:
       repo: https://github.com/TwentyFourMinutes/DulcisX.git
     id: Create
     path: ../../DulcisX - master/src/DulcisX/DulcisX/Core/ComContainer.cs
-    startLine: 29
+    startLine: 30
   assemblies:
   - DulcisX
   namespace: DulcisX.Core

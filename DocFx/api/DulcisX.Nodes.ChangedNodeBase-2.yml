@@ -31,7 +31,6 @@ items:
   syntax:
     content: >-
       public abstract class ChangedNodeBase<TNodeType, TFlag>
-
           where TNodeType : INamedNode where TFlag : struct, Enum
     typeParameters:
     - id: TNodeType

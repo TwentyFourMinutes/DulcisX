@@ -38,9 +38,7 @@ items:
       <Serializable>
 
       Public Class OperationNotSuccessfulException
-
           Inherits Exception
-
           Implements ISerializable, _Exception
   inheritance:
   - System.Object

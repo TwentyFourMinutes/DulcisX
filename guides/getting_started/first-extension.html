@@ -1,0 +1,219 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Your First Extension </title>
+    <meta name="viewport" content="width=device-width">
+    <meta property="og:title" content="Your First Extension ">
+    
+    <meta property="og:locale" content="en-us">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="DulcisX Docs">
+    <meta property="og:image" content="">
+    <meta property="og:image:alt" content="DulcisX Logo">
+    <meta name="theme-color" content="#995EA7">
+    <meta name="generator" content="docfx 2.51.0.0">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="../toc.html">
+    <meta id="docfx-style:rel" content="../../">
+    <link rel="preload" href="../../styles/search-worker.js" as="script">
+    <link rel="preload" href="../../fonts/glyphicons-halflings-regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.minify.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/master.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <link rel="stylesheet" href="../../styles/material.css">
+    <link rel="stylesheet" href="../../styles/theme-switcher.css">
+    <link href="https://cdn.rawgit.com/noelboss/featherlight/1.7.6/release/featherlight.min.css" type="text/css" rel="stylesheet">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../index.html">
+                <img id="logo" class="svg" src="../../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Guides.GettingStarted.FirstExtension">
+<h1 id="making-your-fist-extension-with-dulcisx">Making your fist Extension with DulcisX</h1>
+
+<p>In this example you will learn how you make your first extension with this package. The extension will listen on File saves and will show a message upon the raise of this event.</p>
+<h2 id="what-you-will-learn">What you will learn?</h2>
+<ul>
+<li>In this example you will learn how to hook callback methods to events which are provided by DulcisX.</li>
+<li>Using the Hierarchy system of the Visual Studio Solution Explorer.</li>
+<li>Displaying messages to the user in the InfoBar.</li>
+</ul>
+<h2 id="step-1-setting-up-the-environment">Step 1: Setting up the environment</h2>
+<p>If you have already installed the 'Visual Studio Extension development' module to Visual Studio, you can skip to Step 2.</p>
+<p>Open up the Windows Search and enter 'Visual Studio Installer', next up identify your version of Visual Studio which you want to use for Extension development. After you have have identified your version you want to modify click on 'Modify' and scroll to the very bottom of the appearing window. If not already ticked, check the 'Visual Studio extension development' box and click on 'Modify' in the bottom right corner.</p>
+<h2 id="step-2-creating-the-new-project">Step 2: Creating the new Project</h2>
+<p>Now open up Visual Studio and click on 'Create a new project'. On the appearance of the window enter 'VSIX Project C#' and select the first result. Enter a name for your Project, in my case I'll use 'MyFirstExtension'. Next up open up the 'MyFirstExtensionPackage.cs' file, this is the heart of your extension.</p>
+<h2 id="step-3-understanding-the-template">Step 3: Understanding the template</h2>
+<p>The <code>PackageRegistration</code> attribute tells Visual Studio that this is the entry point for your extension, where as the <code>Guid</code> attribute uniquely identifies the extension between all the others.
+The <code>InitializeAsync</code> method is the start of your application. It will get called after the package got loaded by the Visual Studio environment.</p>
+<h2 id="step-4-configure-the-template">Step 4: Configure the template</h2>
+<p>At the very top of your file add a using statement to <code>DulcisX.Core</code> and instead of inheriting from <code>Package</code>, inherit from <code>PackageX</code>. This will provide you access to all the DulcisX API's.
+For now you can delete the <code>Package Members</code> region, as we will be using custom events from <code>PackageX</code>.</p>
+<p>Add a constructor to your class in which we will append our file save event. Place the following code in your class:</p>
+<pre><code name="Sample constructor">public MyFirstExtensionPackage()
+{
+    this.Solution.OpenNodeEvents.OnSaved.Hook(NodeTypes.Document, OnDocumentSaved);
+}
+
+private void OnDocumentSaved(IPhysicalNode node)
+{
+
+}
+</code></pre>
+<div class="NOTE">
+<h5>Note</h5>
+<p>Normally in C# appending a callback method to an event is done with the <code>+=</code> operator, however for some events in DulcisX this is not the case. The file save operation can occur for different types of Nodes. Therefore the first parameter of the <code>.Hook</code> method restricts the Nodes which can invoke the provided callback. This ensures that the <code>IPhysicalNode</code> of the callback parameter is always of the type(s) passed as the first parameter.</p>
+</div>
+<p>Also you should add the <code>ProvideAutoLoad</code> attribute to your class, in order to allow your extension to be automatically loaded in the background by Visual Studio. This would look something like this <code>[ProvideAutoLoad(VSConstants.UICONTEXT.SolutionExists_string, PackageAutoLoadFlags.BackgroundLoad)]</code>, additionally it will ensure that the extension is only loaded if a Solution exists.</p>
+<h2 id="step-5-show-the-message-upon-file-save">Step 5: Show the message upon File Save</h2>
+<p><code>PackageX</code> exposes the <code>InfoBar</code> property which allows you to publish messages in the Visual Studio InfoBar. This package uses a Builder construct to construct the message, which would look something like the following. You should place this in the <code>OnDocumentSaved</code> callback method.</p>
+<pre><code name="Sample message">this.InfoBar.NewMessage()
+            .WithInfoImage()
+            .WithText(&quot;The &quot;)
+            .WithText(node.GetFullName(), underline: true)
+            .WithText(&quot; file got saved.&quot;)
+            .WithButton(&quot;Okay&quot;)
+            .Publish();
+</code></pre>
+<p>This would result in something like you can see below.</p>
+<p><img src="images/message.png" alt="Message in InfoBar"></p>
+<h3 id="the-full-code">The full Code</h3>
+<p>Below you can see what we end up with, the code will of course differ to yours.</p>
+<pre><code name="Full sample">using DulcisX.Core;
+using DulcisX.Core.Enums;
+using DulcisX.Nodes;
+using Microsoft.VisualStudio;
+using Microsoft.VisualStudio.Shell;
+using System.Runtime.InteropServices;
+
+namespace DulcisX.SDKTesting
+{
+    [PackageRegistration(UseManagedResourcesOnly = true, AllowsBackgroundLoading = true)]
+    [Guid(PackageGuidString)]
+    [ProvideAutoLoad(VSConstants.UICONTEXT.SolutionExists_string, PackageAutoLoadFlags.BackgroundLoad)]
+    public sealed class MyFirstExtensionPackage : PackageX
+    {
+        public const string PackageGuidString = &quot;8a3d2f48-ee2b-4b8e-aa2b-430e3e2fc24e&quot;;
+
+        public MyFirstExtensionPackage()
+        {
+            this.Solution.OpenNodeEvents.OnSaved.Hook(NodeTypes.Document, OnDocumentSaved);
+        }
+
+        private void OnDocumentSaved(IPhysicalNode node)
+        {
+            this.InfoBar.NewMessage()
+                        .WithInfoImage()
+                        .WithText(&quot;The &quot;)
+                        .WithText(node.GetFullName(), underline: true)
+                        .WithText(&quot; file got saved.&quot;)
+                        .WithButton(&quot;Okay&quot;)
+                        .Publish();
+        }
+    }
+}
+</code></pre><h2 id="step-6-start-and-debug-your-extension">Step 6: Start and Debug your Extension</h2>
+<p>You can just Start/Debug a Visual Studio Extension as any other .Net Application, by clicking 'Start' in Visual Studio. This will start a <em>Visual Studio Experimental</em> instance which will not interfere with any current settings to your current Visual Studio settings.</p>
+<p>You will now want to open any project in which you want to test your extension. That's it, your first extension up and running. It wasn't that hard right?</p>
+<div class="NOTE">
+<h5>Note</h5>
+<p>If you click in the bottom left corner on the loading symbol, you can see the loading progress of your Extension.</p>
+</div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="theme-switch-field">
+                <p>Theme</p>
+                <select id="theme-switcher">
+                  <option value="dark">Dark
+                  <option value="gray">Gray
+                  <option value="light">Light
+                </select>
+              </div>
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/TwentyFourMinutes/DulcisX//blob/gh-pages/DocFx/guides/getting_started/first-extension.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            <span>Copyright © 2020 Twenty</span>
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+    <script type="text/javascript" src="../../styles/styleswitcher.js"></script>  </body>
+</html>

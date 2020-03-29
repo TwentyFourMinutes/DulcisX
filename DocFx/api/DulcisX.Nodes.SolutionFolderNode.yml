@@ -31,9 +31,7 @@ items:
     content: 'public class SolutionFolderNode : SolutionItemNode, INamedNode, IBaseNode'
     content.vb: >-
       Public Class SolutionFolderNode
-
           Inherits SolutionItemNode
-
           Implements INamedNode, IBaseNode
   inheritance:
   - System.Object
@@ -89,6 +87,7 @@ items:
   assemblies:
   - DulcisX
   namespace: DulcisX.Nodes
+  summary: "\nGets the Type of current Node.\n"
   example: []
   syntax:
     content: public override NodeTypes NodeType { get; }

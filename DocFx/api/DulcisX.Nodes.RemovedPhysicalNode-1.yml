@@ -31,7 +31,6 @@ items:
   syntax:
     content: >-
       public class RemovedPhysicalNode<TFlag>
-
           where TFlag : struct, Enum
     typeParameters:
     - id: TFlag

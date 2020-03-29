@@ -32,7 +32,6 @@ items:
     content: 'public abstract class EventSink : IDisposable'
     content.vb: >-
       Public MustInherit Class EventSink
-
           Implements IDisposable
   inheritance:
   - System.Object

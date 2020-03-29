@@ -33,9 +33,7 @@ items:
     content: 'public class UnknownNode : BaseNode, INamedNode, IBaseNode'
     content.vb: >-
       Public Class UnknownNode
-
           Inherits BaseNode
-
           Implements INamedNode, IBaseNode
   inheritance:
   - System.Object
@@ -86,6 +84,7 @@ items:
   assemblies:
   - DulcisX
   namespace: DulcisX.Nodes
+  summary: "\nGets the Type of current Node.\n"
   example: []
   syntax:
     content: public override NodeTypes NodeType { get; }
@@ -167,12 +166,14 @@ items:
   assemblies:
   - DulcisX
   namespace: DulcisX.Nodes
+  summary: "\nReturns all immediate children Nodes of the current Node.\n"
   remarks: A <xref href="DulcisX.Nodes.UnknownNode" data-throw-if-not-resolved="false"></xref> doesn&apos;t support the iteration of any children.
   example: []
   syntax:
     content: public override IEnumerable<BaseNode> GetChildren()
     return:
       type: System.Collections.Generic.IEnumerable{DulcisX.Nodes.BaseNode}
+      description: An <xref href="System.Collections.Generic.IEnumerable%601" data-throw-if-not-resolved="false"></xref> with the children.
     content.vb: Public Overrides Function GetChildren As IEnumerable(Of BaseNode)
   overridden: DulcisX.Nodes.BaseNode.GetChildren
   overload: DulcisX.Nodes.UnknownNode.GetChildren*
@@ -204,11 +205,13 @@ items:
   assemblies:
   - DulcisX
   namespace: DulcisX.Nodes
+  summary: "\nReturns the immediate parent Node of the current Node.\n"
   example: []
   syntax:
     content: public override BaseNode GetParent()
     return:
       type: DulcisX.Nodes.BaseNode
+      description: The parent if any could be found, otherwise null.
     content.vb: Public Overrides Function GetParent As BaseNode
   overridden: DulcisX.Nodes.BaseNode.GetParent
   overload: DulcisX.Nodes.UnknownNode.GetParent*

@@ -1,0 +1,8 @@
+- name: Introduction
+  topicUid: Guides.Introduction
+- name: Getting Started
+  items:
+    - name: Installation
+      topicUid: Guides.GettingStarted.Installation
+    - name: Your First Extension
+      topicUid: Guides.GettingStarted.FirstExtension

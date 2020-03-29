@@ -36,9 +36,7 @@ items:
       <AttributeUsage(AttributeTargets.Class Or AttributeTargets.Method Or AttributeTargets.Property Or AttributeTargets.Event, Inherited:=False, AllowMultiple:=False)>
 
       Public NotInheritable Class NotImplementedAttribute
-
           Inherits Attribute
-
           Implements _Attribute
   inheritance:
   - System.Object
