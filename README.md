@@ -38,6 +38,10 @@ Please note, that the package is currently in the pre-release state. This indica
 
 For a more detailed description on how to install this package please take [this guide](https://twentyfourminutes.github.io/DulcisX/guides/getting_started/installation.html?tabs=property-page-edit%2Cvisualstudio-install) from the packages wiki.
 
+### Getting Started
+
+There is a simple guide over on the [Documentation](https://twentyfourminutes.github.io/DulcisX/guides/getting_started/first-extension.html) which provides a step by step tutorial, on how to get started with Extension development and DulcisX.
+
 ## Documentation
 
 DuclisX build upon a solid Documentation, which is very important for such a huge topic. Therefor the project hosts its own Documentation site, which can be found [here]().
