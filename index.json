@@ -402,7 +402,7 @@
   "index.html": {
     "href": "index.html",
     "title": "Home | DulcisX Documentation",
-    "keywords": "DulcisX Documentation DulcisX translates to Sweet Extension and this is the goal for this Project, making the experience of developing Visual Studio Extensions sweat. It allows you to get your extension done faster and doesn't bother you with ugly or missing API's."
+    "keywords": "DulcisX Documentation DulcisX translates to Sweet Extension and this is the goal for this Project, making the experience of developing Visual Studio Extensions sweat. It allows you to get your extension done faster and doesn't bother you with ugly or missing API's. What you can find here? This project tries not only to provide guides and a solid documentation for the DulcisX API, but also to help you create a better understating of the Visual Studio SDK itself. You can find here anything from useful classes to lists of helpful resources for the development itself. Anything wrong? The documentation relies on the community, therefore any help is appreciated. If you want to create a new page, spot anything wrong or similar, feel free to create an issue over on GitHub."
   },
   "sdk/helper_classes/com-utilities.html": {
     "href": "sdk/helper_classes/com-utilities.html",

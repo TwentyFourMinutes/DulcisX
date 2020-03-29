@@ -12,3 +12,7 @@ DulcisX translates to _Sweet Extension_ and this is the goal for this Project, m
 ## What you can find here?
 
 This project tries not only to provide guides and a solid documentation for the DulcisX API, but also to help you create a better understating of the Visual Studio SDK itself. You can find here anything from useful classes to lists of helpful resources for the development itself. 
+
+## Anything wrong?
+
+The documentation relies on the community, therefore any help is appreciated. If you want to create a new page, spot anything wrong or similar, feel free to create an [issue](https://github.com/TwentyFourMinutes/DulcisX/issues/new/choose) over on GitHub.
