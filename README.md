@@ -24,9 +24,9 @@ If you want to collaborate on this project more, than creating issues and PR's, 
 
 ## Installation
 
-You can either get this package by downloading it from the NuGet Package Manager built in Visual Studio, in the [releases](https://github.com/TwentyFourMinutes/DulcisX/releases) tab or from the official [nuget.org](https://www.nuget.org/packages/DulcisX) website. 
+You can either get this package by downloading it from the NuGet Package Manager built in Visual Studio or from the official [nuget.org](https://www.nuget.org/packages/DulcisX) website. 
 
-Also, DulcisX targets `.Net Framework 4.8`, so make sure that your projects targets the correct Framework version. You can change this in the _Property_ window of the Project under _Application_ > _Target Framework_ > _.Net Framework 4.8_.
+Also, DulcisX targets `.Net Framework 4.8`, so make sure that your projects targets the correct Framework version. 
 
 Also you can install it via the **P**ackage **M**anager **C**onsole:
 
@@ -36,11 +36,13 @@ PM> Install-Package DulcisX
 
 Please note, that the package is currently in the pre-release state. This indicates that the version is not yet production ready.
 
+For a more detailed description on how to install this package please take [this guide](https://twentyfourminutes.github.io/DulcisX/guides/getting_started/installation.html?tabs=property-page-edit%2Cvisualstudio-install) from the packages wiki.
+
 ## Documentation
 
-DulcisX provides a better and more detailed overview over the Visual Studio SDK. It hoists things such as Helper and Utility Classes, varies enums and other interesting stuff, which is hard to find on the official Microsoft Documentation.  
+DuclisX build upon a solid Documentation, which is very important for such a huge topic. Therefor the project hosts its own Documentation site, which can be found [here]().
 
-You can find the documentation [here](https://github.com/TwentyFourMinutes/DulcisX/wiki) or by clicking on the 'Wiki' tab.
+Moreover DulcisX tries to provide a more detailed overview over the Visual Studio SDK. It hoists things such as Utility classes and other interesting stuff, which is hard to find on the official Microsoft Documentation.  
 
 ## Coverage
 
