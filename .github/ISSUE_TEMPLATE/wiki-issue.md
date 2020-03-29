@@ -12,4 +12,3 @@ assignees: TwentyFourMinutes
 **What is the problem with the current page?**
 
 **How could it be fixed?**
-
