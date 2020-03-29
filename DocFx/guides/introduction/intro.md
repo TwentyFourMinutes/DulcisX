@@ -15,4 +15,5 @@ In the guides section you can find information on how to install DulcisX and art
 
 ## You need more help?
 
-Feel free to create a [GitHub issue](https://github.com/TwentyFourMinutes/DulcisX/issues/new?assignees=TwentyFourMinutes&labels=question&template=question.md&title=) or join the Discord Server <a href="https://discordapp.com/invite/EYKxkce"><img alt="Discord" src="https://discordapp.com/api/guilds/275377268728135680/widget.png"></a>.
+Feel free to create a [GitHub issue](https://github.com/TwentyFourMinutes/DulcisX/issues/new?assignees=TwentyFourMinutes&labels=question&template=question.md&title=) or join the Discord Server <a href="https://discordapp.com/invite/EYKxkce"><img alt="Discord" src="https://discordapp.com/api/guilds/275377268728135680/widget.png" style="margin: 0; vertical-align: middle; "></a>.
+

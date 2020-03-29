@@ -1,0 +1,12 @@
+- name: SDK Documentation
+  topicUid: SDK.Introduction
+- name: Helper Classes
+  items:
+    - name: HierarchyUtilities
+      topicUid: SDK.HelperClasses.HierarchyUtilities
+    - name: ComUtilities
+      topicUid: SDK.HelperClasses.ComUtilities
+    - name: ErrorHandler
+      topicUid: SDK.HelperClasses.ErrorHandler
+- name: Status Codes
+  topicUid: SDK.StatusCodes

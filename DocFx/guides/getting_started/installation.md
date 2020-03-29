@@ -16,7 +16,7 @@ DulcisX targets `.Net Framework 4.8`, that means that all projects which use thi
 	![Step 1](images/open-properties.png)
 	
 2. Select the 'Application' tab
-3. Change the 'Target Framework' to `.Net Framework 4.7.2`. If you don't see that option, you can install it from [here](https://dotnet.microsoft.com/download/dotnet-framework/net48).
+3. Change the 'Target Framework' to `.Net Framework 4.8`. If you don't see that option, you can install it from [here](https://dotnet.microsoft.com/download/dotnet-framework/net48).
 	
 	![Step 3](images/change-framework.png)
 	
@@ -33,6 +33,11 @@ DulcisX targets `.Net Framework 4.8`, that means that all projects which use thi
 ***
 
 ## Installation from NuGet
+
+DulcisX is distributed through the official NuGet feed as a lot of the other packages, which makes its install as easy as its get.
+
+> [!WARNING] 
+> For now DuclisX is published under the _pre-release_ tag and might still contain bugs or other issues, if you encounter something please create an [issue](https://github.com/TwentyFourMinutes/DulcisX/issues/new/choose) over on GitHub.
 
 ### [Using Visual Studio](#tab/visualstudio-install)
 

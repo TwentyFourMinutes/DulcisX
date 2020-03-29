@@ -22,10 +22,20 @@
       },
       {
         "files": [
-          "guides/**.md",
-          "guides/**/toc.yml",
           "toc.yml",
-          "*.md"
+          "index.md"
+        ]
+      },
+	  {
+		"files":[
+			"guides/**.md",
+			"guides/**/toc.yml"
+		]
+	  },
+	  {
+        "files": [
+          "sdk/**.md",
+          "sdk/**/toc.yml",
         ]
       }
     ],
@@ -39,26 +49,26 @@
     ],
     "overwrite": [
       {
-        "files": [
-          "apidoc/**.md"
-        ],
         "exclude": [
-          "obj/**",
-          "_site/**"
+          "obj/**"
         ]
       }
     ],
     "dest": "../",
     "globalMetadataFiles": [],
 	"globalMetadata": {
-		"_appFooter": "<span>Copyright © 2020 Twenty</span>"
+	    "_appTitle": "DulcisX Documentation",
+		"_appFooter": "<span>Copyright © 2020 Twenty</span>",
+		"_enableSearch": "true"
 	},
     "fileMetadataFiles": [],
     "template": [
       "default",
 	  "templates/light-dark-theme"
     ],
-    "postProcessors": [],
+    "postProcessors": [ 
+		"ExtractSearchIndex" 
+	],
     "markdownEngineName": "markdig",
     "noLangKeyword": false,
     "keepFileLink": false,

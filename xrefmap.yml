@@ -3750,9 +3750,27 @@ references:
 - uid: Guides.GettingStarted.Installation
   name: Installing DulcisX
   href: guides/getting_started/installation.html
+- uid: Guides.GettingStarted.Principles
+  name: DulcisX Principles
+  href: guides/getting_started/principles.html
 - uid: Guides.Introduction
   name: Introduction to DulcisX
   href: guides/introduction/intro.html
 - uid: Root.Landing
   name: Home
   href: index.html
+- uid: SDK.HelperClasses.ComUtilities
+  name: ComUtilities
+  href: sdk/helper_classes/com-utilities.html
+- uid: SDK.HelperClasses.ErrorHandler
+  name: ErrorHandler
+  href: sdk/helper_classes/error-handler.html
+- uid: SDK.HelperClasses.HierarchyUtilities
+  name: HierarchyUtilities
+  href: sdk/helper_classes/hierachy-utilities.html
+- uid: SDK.Introduction
+  name: Introduction to the SDK Documentation
+  href: sdk/introduction/intro.html
+- uid: SDK.StatusCodes
+  name: SDK Status Codes
+  href: sdk/status_codes/status-codes.html

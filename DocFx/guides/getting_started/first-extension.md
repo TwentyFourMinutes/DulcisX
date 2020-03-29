@@ -7,7 +7,7 @@ title: Your First Extension
 
 In this example you will learn how you make your first extension with this package. The extension will listen on File saves and will show a message upon the raise of this event.
 
-## What you will learn?
+## What will you learn?
 
 - In this example you will learn how to hook callback methods to events which are provided by DulcisX.
 - Using the Hierarchy system of the Visual Studio Solution Explorer.
@@ -40,7 +40,14 @@ Add a constructor to your class in which we will append our file save event. Pla
 > [!NOTE]
 > Normally in C# appending a callback method to an event is done with the `+=` operator, however for some events in DulcisX this is not the case. The file save operation can occur for different types of Nodes. Therefore the first parameter of the `.Hook` method restricts the Nodes which can invoke the provided callback. This ensures that the `IPhysicalNode` of the callback parameter is always of the type(s) passed as the first parameter.
 
-Also you should add the `ProvideAutoLoad` attribute to your class, in order to allow your extension to be automatically loaded in the background by Visual Studio. This would look something like this `[ProvideAutoLoad(VSConstants.UICONTEXT.SolutionExists_string, PackageAutoLoadFlags.BackgroundLoad)]`, additionally it will ensure that the extension is only loaded if a Solution exists.
+Also you should add the `ProvideAutoLoad` attribute to your class, in order to allow your extension to be automatically loaded in the background by Visual Studio. This would look something like the folllowing.
+
+
+```cs
+[ProvideAutoLoad(VSConstants.UICONTEXT.SolutionExists_string, PackageAutoLoadFlags.BackgroundLoad)]
+```
+
+Additionally it will ensure that the extension is only loaded if a Solution exists.
 
 ## Step 5: Show the message upon File Save
 

@@ -1,0 +1,161 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>DulcisX Principles | DulcisX Documentation </title>
+    <meta name="viewport" content="width=device-width">
+    <meta property="og:title" content="DulcisX Principles | DulcisX Documentation ">
+    
+    <meta property="og:locale" content="en-us">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="DulcisX Docs">
+    <meta property="og:image" content="">
+    <meta property="og:image:alt" content="DulcisX Logo">
+    <meta name="theme-color" content="#995EA7">
+    <meta name="generator" content="docfx 2.51.0.0">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="../toc.html">
+    <meta id="docfx-style:rel" content="../../">
+    <link rel="preload" href="../../styles/search-worker.js" as="script">
+    <link rel="preload" href="../../fonts/glyphicons-halflings-regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.minify.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/master.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <link rel="stylesheet" href="../../styles/material.css">
+    <link rel="stylesheet" href="../../styles/theme-switcher.css">
+    <link href="https://cdn.rawgit.com/noelboss/featherlight/1.7.6/release/featherlight.min.css" type="text/css" rel="stylesheet">
+    
+    <meta property="docfx:rel" content="../../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../index.html">
+                <img id="logo" class="svg" src="../../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Guides.GettingStarted.Principles">
+<h1 id="principles">Principles</h1>
+
+<h2 id="solution-explorerhierarchy-system">Solution Explorer/Hierarchy System</h2>
+<p>All nodes provided by DuclisX <strong>only represent the current position of the node in the Hierarchy</strong>. This means that when a document gets renamed or the location gets changed, <strong>the given instance becomes invalid</strong>.</p>
+<p><strong>Also comparing Nodes is not save</strong>. DuclisX doesn't cache any Nodes nor any of its properties. A Node returned by an event will never be the same as any other instance of a Node returned by a method or other class members.</p>
+<div class="NOTE">
+<h5>Note</h5>
+<p>If you want to still compare two nodes with each other, you can either try comparing the results of <code>GetFullPath</code> for <code>IPhysicalNodes</code> or comparing the <code>ItemId</code> and the <code>UnderlyingHierarchy</code>.</p>
+</div>
+<div class="NOTE">
+<h5>Note</h5>
+<p>The <code>SoltionNode</code> class is the only Node, which will always update itself on changes to itself. Therefore comparing two Solution instances returned by DulcisX are <em>always</em> equal.</p>
+</div>
+<h2 id="creation-of-objects">Creation of Objects</h2>
+<p><strong>All the API's exposed by DulcisX utilize lazy initialization</strong>, this ensures that instantiating a new object is a relatively inexpensive operation. Additionally for that reason, parts of the package you do not use, don't allocate any additional memory.</p>
+<h2 id="caching-of-methods-and-properties">Caching of Methods and Properties</h2>
+<p>DuclisX doesn't use Properties for detailed information about the state of the object, since this would require the package to keep track of changes to objects. Therefor such information is exposed through methods. This also means, that <strong>you should temporarily store information returned by methods on your own</strong>.</p>
+<p>Properties on the other hands, will never retrieve their value for every request. It will usually load its value on the first value request. This basically means, that Properties cache their values and there is <strong>no need</strong> to temporarily store its value.</p>
+<div class="NOTE">
+<h5>Note</h5>
+<p>Events provided by DuclisX, provide access to an <code>IEnumerable&lt;T&gt;</code> which is internally cached. This means, that reiterating an already visited item, <strong>will not re-evaluate</strong> the value of the item and instead return a cached version.</p>
+</div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="theme-switch-field">
+                <p>Theme</p>
+                <select id="theme-switcher">
+                  <option value="dark">Dark
+                  <option value="gray">Gray
+                  <option value="light">Light
+                </select>
+              </div>
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/TwentyFourMinutes/DulcisX//blob/gh-pages/DocFx/guides/getting_started/principles.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            <span>Copyright © 2020 Twenty</span>
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+    <script type="text/javascript" src="../../styles/styleswitcher.js"></script>  </body>
+</html>

@@ -5,9 +5,9 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Your First Extension </title>
+    <title>Your First Extension | DulcisX Documentation </title>
     <meta name="viewport" content="width=device-width">
-    <meta property="og:title" content="Your First Extension ">
+    <meta property="og:title" content="Your First Extension | DulcisX Documentation ">
     
     <meta property="og:locale" content="en-us">
     <meta property="og:type" content="website">
@@ -30,7 +30,7 @@
     <link rel="stylesheet" href="../../styles/theme-switcher.css">
     <link href="https://cdn.rawgit.com/noelboss/featherlight/1.7.6/release/featherlight.min.css" type="text/css" rel="stylesheet">
     
-    
+    <meta property="docfx:rel" content="../../">
     
   </head>
   <body data-spy="scroll" data-target="#affix" data-offset="120">
@@ -69,6 +69,16 @@
           </div>
         </div>
       </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
       <div role="main" class="container body-content hide-when-search">
         
         <div class="sidenav hide-when-search">
@@ -83,7 +93,7 @@
 <h1 id="making-your-fist-extension-with-dulcisx">Making your fist Extension with DulcisX</h1>
 
 <p>In this example you will learn how you make your first extension with this package. The extension will listen on File saves and will show a message upon the raise of this event.</p>
-<h2 id="what-you-will-learn">What you will learn?</h2>
+<h2 id="what-will-you-learn">What will you learn?</h2>
 <ul>
 <li>In this example you will learn how to hook callback methods to events which are provided by DulcisX.</li>
 <li>Using the Hierarchy system of the Visual Studio Solution Explorer.</li>
@@ -115,7 +125,10 @@ private void OnDocumentSaved(IPhysicalNode node)
 <h5>Note</h5>
 <p>Normally in C# appending a callback method to an event is done with the <code>+=</code> operator, however for some events in DulcisX this is not the case. The file save operation can occur for different types of Nodes. Therefore the first parameter of the <code>.Hook</code> method restricts the Nodes which can invoke the provided callback. This ensures that the <code>IPhysicalNode</code> of the callback parameter is always of the type(s) passed as the first parameter.</p>
 </div>
-<p>Also you should add the <code>ProvideAutoLoad</code> attribute to your class, in order to allow your extension to be automatically loaded in the background by Visual Studio. This would look something like this <code>[ProvideAutoLoad(VSConstants.UICONTEXT.SolutionExists_string, PackageAutoLoadFlags.BackgroundLoad)]</code>, additionally it will ensure that the extension is only loaded if a Solution exists.</p>
+<p>Also you should add the <code>ProvideAutoLoad</code> attribute to your class, in order to allow your extension to be automatically loaded in the background by Visual Studio. This would look something like the folllowing.</p>
+<pre><code class="lang-cs">[ProvideAutoLoad(VSConstants.UICONTEXT.SolutionExists_string, PackageAutoLoadFlags.BackgroundLoad)]
+</code></pre>
+<p>Additionally it will ensure that the extension is only loaded if a Solution exists.</p>
 <h2 id="step-5-show-the-message-upon-file-save">Step 5: Show the message upon File Save</h2>
 <p><code>PackageX</code> exposes the <code>InfoBar</code> property which allows you to publish messages in the Visual Studio InfoBar. This package uses a Builder construct to construct the message, which would look something like the following. You should place this in the <code>OnDocumentSaved</code> callback method.</p>
 <pre><code name="Sample message">this.InfoBar.NewMessage()

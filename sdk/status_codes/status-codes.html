@@ -1,0 +1,934 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>SDK Status Codes | DulcisX Documentation </title>
+    <meta name="viewport" content="width=device-width">
+    <meta property="og:title" content="SDK Status Codes | DulcisX Documentation ">
+    
+    <meta property="og:locale" content="en-us">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="DulcisX Docs">
+    <meta property="og:image" content="">
+    <meta property="og:image:alt" content="DulcisX Logo">
+    <meta name="theme-color" content="#995EA7">
+    <meta name="generator" content="docfx 2.51.0.0">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="../toc.html">
+    <meta id="docfx-style:rel" content="../../">
+    <link rel="preload" href="../../styles/search-worker.js" as="script">
+    <link rel="preload" href="../../fonts/glyphicons-halflings-regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.minify.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/master.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <link rel="stylesheet" href="../../styles/material.css">
+    <link rel="stylesheet" href="../../styles/theme-switcher.css">
+    <link href="https://cdn.rawgit.com/noelboss/featherlight/1.7.6/release/featherlight.min.css" type="text/css" rel="stylesheet">
+    
+    <meta property="docfx:rel" content="../../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../index.html">
+                <img id="logo" class="svg" src="../../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="SDK.StatusCodes">
+<h2 id="sdk-status-codes">SDK Status Codes</h2>
+
+<p>The Visual Studio SDK return status codes such called <code>HResult</code>'s all over the place in form of integers. These status codes will also be occasionally returned by the package. Anyhow these status codes are not very well documented, so here is the full known list of these status codes.</p>
+<p>This information was collected from the official docs, which are available <a href="https://docs.microsoft.com/en-us/dotnet/api/microsoft.visualstudio.vsconstants?view=visualstudiosdk-2017">here</a>.</p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+<th>StatusCode</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>VS_E_PROJECTALREADYEXISTS</td>
+<td>VS specific error HRESULT for &quot;Project already exists&quot;.</td>
+<td>-2147213344</td>
+</tr>
+<tr>
+<td>VS_E_PACKAGENOTLOADED</td>
+<td>VS specific error HRESULT for &quot;Package not loaded&quot;.</td>
+<td>-2147213343</td>
+</tr>
+<tr>
+<td>VS_E_PROJECTNOTLOADED</td>
+<td>VS specific error HRESULT for &quot;Project not loaded&quot;.</td>
+<td>-2147213342</td>
+</tr>
+<tr>
+<td>VS_E_SOLUTIONNOTOPEN</td>
+<td>VS specific error HRESULT for &quot;Solution not open&quot;.</td>
+<td>-2147213341</td>
+</tr>
+<tr>
+<td>VS_E_SOLUTIONALREADYOPEN</td>
+<td>VS specific error HRESULT for &quot;Solution already open&quot;.</td>
+<td>-2147213340</td>
+</tr>
+<tr>
+<td>VS_E_PROJECTMIGRATIONFAILED</td>
+<td>VS specific error HRESULT for &quot;Project configuration failed&quot;.</td>
+<td>-2147213339</td>
+</tr>
+<tr>
+<td>VS_E_INCOMPATIBLEDOCDATA</td>
+<td>VS specific error HRESULT for &quot;Incompatible document data&quot;.</td>
+<td>-2147213334</td>
+</tr>
+<tr>
+<td>VS_E_UNSUPPORTEDFORMAT</td>
+<td>VS specific error HRESULT for &quot;Unsupported format&quot;.</td>
+<td>-2147213333</td>
+</tr>
+<tr>
+<td>VS_E_WIZARDBACKBUTTONPRESS</td>
+<td>VS specific error HRESULT for &quot;Wizard back button pressed&quot;.</td>
+<td>-2147213313</td>
+</tr>
+<tr>
+<td>VS_S_PROJECTFORWARDED</td>
+<td>VS specific success HRESULT for &quot;Project forwarded&quot;.</td>
+<td>270320</td>
+</tr>
+<tr>
+<td>VS_S_TBXMARKER</td>
+<td>VS specific success HRESULT for &quot;Toolbox marker&quot;.</td>
+<td>270321</td>
+</tr>
+<tr>
+<td>VS_E_INCOMPATIBLEPROJECT</td>
+<td>VS Specific error HRESULT for a project not supported by current edition of the product</td>
+<td>-2147213309</td>
+</tr>
+<tr>
+<td>VS_E_INCOMPATIBLECLASSICPROJECT</td>
+<td>VS Specific error HRESULT for a non-Windows Store app project, which is not supported by the VS Express SKU</td>
+<td>-2147213308</td>
+</tr>
+<tr>
+<td>VS_E_INCOMPATIBLEPROJECT_UNSUPPORTED_OS</td>
+<td>VS Specific error HRESULT for a project not supported in the current OS version, for example Windows Store app projects require Windows 8 or higher</td>
+<td>-2147213307</td>
+</tr>
+<tr>
+<td>VS_E_PROMPTREQUIRED</td>
+<td>VS specific error HRESULT code returned when an attempt to do a save using RDTSAVEOPT_SileSave fails because source control requires a UI prompt in order to make the file to be saved editable</td>
+<td>-2147213306</td>
+</tr>
+<tr>
+<td>VS_E_CIRCULARTASKDEPENDENCY</td>
+<td>VS specific error HRESULT code returned when an attempt to do a task wait operation would result in a deadlock due to circular dependency</td>
+<td>-2147213305</td>
+</tr>
+<tr>
+<td>VS_S_PROJECT_SAFEREPAIRREQUIRED</td>
+<td>VS specific success HRESULT returned when a safe-repair is required. A safe-repair is one which is not a real full upgrade but merely a repair to make the project asset compatible without the risk of issues being encountered by the previous versions of the product</td>
+<td>270322</td>
+</tr>
+<tr>
+<td>VS_S_PROJECT_UNSAFEREPAIRREQUIRED</td>
+<td>VS specific success HRESULT returned when an unsafe-repair is required. An usafe-repair is one which is not a full upgrade, but with a risk of issues being encountered by the newer or previous version of the product. For example if a newer dependent SDK is not currently installed</td>
+<td>270323</td>
+</tr>
+<tr>
+<td>VS_S_PROJECT_ONEWAYUPGRADEREQUIRED</td>
+<td>VS specific success HRESULT returned when a one-way upgrade is required. A one-way upgrade is a full upgrade which will make the project incompatible with the previous version of the product</td>
+<td>270324</td>
+</tr>
+<tr>
+<td>VS_S_INCOMPATIBLEPROJECT</td>
+<td>VS specific success HRESULT returned when a project is not supported by current edition of the product</td>
+<td>270325</td>
+</tr>
+<tr>
+<td>OLE_E_OLEVERB</td>
+<td>A legacy OLE error.</td>
+<td>-2147221504</td>
+</tr>
+<tr>
+<td>OLE_E_ADVF</td>
+<td>A legacy OLE error.</td>
+<td>-2147221503</td>
+</tr>
+<tr>
+<td>OLE_E_ENUM_NOMORE</td>
+<td>A legacy OLE error.</td>
+<td>-2147221502</td>
+</tr>
+<tr>
+<td>OLE_E_ADVISENOTSUPPORTED</td>
+<td>A legacy OLE error.</td>
+<td>-2147221501</td>
+</tr>
+<tr>
+<td>OLE_E_NOCONNECTION</td>
+<td>A legacy OLE error.</td>
+<td>-2147221500</td>
+</tr>
+<tr>
+<td>OLE_E_NOTRUNNING</td>
+<td>A legacy OLE error.</td>
+<td>-2147221499</td>
+</tr>
+<tr>
+<td>OLE_E_NOCACHE</td>
+<td>A legacy OLE error.</td>
+<td>-2147221498</td>
+</tr>
+<tr>
+<td>OLE_E_BLANK</td>
+<td>A legacy OLE error.</td>
+<td>-2147221497</td>
+</tr>
+<tr>
+<td>OLE_E_CLASSDIFF</td>
+<td>A legacy OLE error.</td>
+<td>-2147221496</td>
+</tr>
+<tr>
+<td>OLE_E_CANT_GETMONIKER</td>
+<td>A legacy OLE error.</td>
+<td>-2147221495</td>
+</tr>
+<tr>
+<td>OLE_E_CANT_BINDTOSOURCE</td>
+<td>A legacy OLE error.</td>
+<td>-2147221494</td>
+</tr>
+<tr>
+<td>OLE_E_STATIC</td>
+<td>The cache is for a static object and it already has a cache node.</td>
+<td>-2147221493</td>
+</tr>
+<tr>
+<td>OLE_E_PROMPTSAVECANCELLED</td>
+<td>The user was prompted to save but chose the Cancel button from the prompt message box.</td>
+<td>-2147221492</td>
+</tr>
+<tr>
+<td>OLE_E_INVALIDRECT</td>
+<td>A legacy OLE error.</td>
+<td>-2147221491</td>
+</tr>
+<tr>
+<td>OLE_E_WRONGCOMPOBJ</td>
+<td>The versions of COMPOBJ.DLL and OLE2.DLL on your machine are incompatible with each other.</td>
+<td>-2147221490</td>
+</tr>
+<tr>
+<td>OLE_E_INVALIDHWND</td>
+<td>A legacy OLE error.</td>
+<td>-2147221489</td>
+</tr>
+<tr>
+<td>OLE_E_NOT_INPLACEACTIVE</td>
+<td>A legacy OLE error.</td>
+<td>-2147221488</td>
+</tr>
+<tr>
+<td>OLE_E_CANTCONVERT</td>
+<td>A legacy OLE error.</td>
+<td>-2147221487</td>
+</tr>
+<tr>
+<td>OLE_E_NOSTORAGE</td>
+<td>A legacy OLE error.</td>
+<td>-2147221486</td>
+</tr>
+<tr>
+<td>DISP_E_UNKNOWNINTERFACE</td>
+<td>A return value that indicates that the interface identifier passed in riid is not equal to IID_NULL.</td>
+<td>-2147352575</td>
+</tr>
+<tr>
+<td>DISP_E_MEMBERNOTFOUND</td>
+<td>A return value indicating that the requested member does not exist, or the call to Invoke tried to set the value of a read-only property.</td>
+<td>-2147352573</td>
+</tr>
+<tr>
+<td>DISP_E_PARAMNOTFOUND</td>
+<td>A return value that indicates that one of the parameter DISPIDs does not correspond to a parameter on the method.</td>
+<td>-2147352572</td>
+</tr>
+<tr>
+<td>DISP_E_TYPEMISMATCH</td>
+<td>A return value that indicates that one or more of the parameters could not be coerced.</td>
+<td>-2147352571</td>
+</tr>
+<tr>
+<td>DISP_E_UNKNOWNNAME</td>
+<td>A return value that indicates that one or more of the names were not known. The returned DISPIDs contain DISPID_UNKNOWN for each entry that corresponds to an unknown name.</td>
+<td>-2147352570</td>
+</tr>
+<tr>
+<td>DISP_E_NONAMEDARGS</td>
+<td>A return value indicating that the invoked implementation of IDispatch does not support named arguments.</td>
+<td>-2147352569</td>
+</tr>
+<tr>
+<td>DISP_E_BADVARTYPE</td>
+<td>One of the method arguments is not a valid variant type.</td>
+<td>-2147352568</td>
+</tr>
+<tr>
+<td>DISP_E_EXCEPTION</td>
+<td>This return value indicates that the call generated an exception. The usual implementation is to specify that an argument of the method that returned this error is a pointer to a structure that contains exception information.</td>
+<td>-2147352567</td>
+</tr>
+<tr>
+<td>DISP_E_OVERFLOW</td>
+<td>An error that indicates that a value could not be coerced to its expected representation.</td>
+<td>-2147352566</td>
+</tr>
+<tr>
+<td>DISP_E_BADINDEX</td>
+<td>A return value that indicates subscript out of range.</td>
+<td>-2147352565</td>
+</tr>
+<tr>
+<td>DISP_E_UNKNOWNLCID</td>
+<td>A return value that indicates that the member being invoked interprets string arguments according to the Locale ID (LCID), and the LCID is not recognized. If the LCID is not needed to interpret arguments, this error should not be returned.</td>
+<td>-2147352564</td>
+</tr>
+<tr>
+<td>DISP_E_ARRAYISLOCKED</td>
+<td>An HRESULT that indicates that the array is currently locked.</td>
+<td>-2147352563</td>
+</tr>
+<tr>
+<td>DISP_E_BADPARAMCOUNT</td>
+<td>An error return value that indicates that the number of elements provided to the method is different from the number of arguments accepted by the method.</td>
+<td>-2147352562</td>
+</tr>
+<tr>
+<td>DISP_E_PARAMNOTOPTIONAL</td>
+<td>A return value that indicates that a required parameter was omitted.</td>
+<td>-2147352561</td>
+</tr>
+<tr>
+<td>DISP_E_BADCALLEE</td>
+<td>A COM return value.</td>
+<td>-2147352560</td>
+</tr>
+<tr>
+<td>DISP_E_NOTACOLLECTION</td>
+<td>A return value indicating an unexpected argument type.</td>
+<td>-2147352559</td>
+</tr>
+<tr>
+<td>DISP_E_DIVBYZERO</td>
+<td>A return error that indicates a divide by zero error.</td>
+<td>-2147352558</td>
+</tr>
+<tr>
+<td>DISP_E_BUFFERTOOSMALL</td>
+<td>A return error that indicates the destination token buffer is too small.</td>
+<td>-2147352557</td>
+</tr>
+<tr>
+<td>RPC_E_CALL_REJECTED</td>
+<td></td>
+<td>-2147418111</td>
+</tr>
+<tr>
+<td>RPC_E_CALL_CANCELED</td>
+<td></td>
+<td>-2147418110</td>
+</tr>
+<tr>
+<td>RPC_E_CANTPOST_INSENDCALL</td>
+<td></td>
+<td>-2147418109</td>
+</tr>
+<tr>
+<td>RPC_E_CANTCALLOUT_INASYNCCALL</td>
+<td></td>
+<td>-2147418108</td>
+</tr>
+<tr>
+<td>RPC_E_CANTCALLOUT_INEXTERNALCALL</td>
+<td></td>
+<td>-2147418107</td>
+</tr>
+<tr>
+<td>RPC_E_CONNECTION_TERMINATED</td>
+<td></td>
+<td>-2147418106</td>
+</tr>
+<tr>
+<td>RPC_E_SERVER_DIED</td>
+<td></td>
+<td>-2147418105</td>
+</tr>
+<tr>
+<td>RPC_E_CLIENT_DIED</td>
+<td></td>
+<td>-2147418104</td>
+</tr>
+<tr>
+<td>RPC_E_INVALID_DATAPACKET</td>
+<td></td>
+<td>-2147418103</td>
+</tr>
+<tr>
+<td>RPC_E_CANTTRANSMIT_CALL</td>
+<td></td>
+<td>-2147418102</td>
+</tr>
+<tr>
+<td>RPC_E_CLIENT_CANTMARSHAL_DATA</td>
+<td></td>
+<td>-2147418101</td>
+</tr>
+<tr>
+<td>RPC_E_CLIENT_CANTUNMARSHAL_DATA</td>
+<td></td>
+<td>-2147418100</td>
+</tr>
+<tr>
+<td>RPC_E_SERVER_CANTMARSHAL_DATA</td>
+<td></td>
+<td>-2147418099</td>
+</tr>
+<tr>
+<td>RPC_E_SERVER_CANTUNMARSHAL_DATA</td>
+<td></td>
+<td>-2147418098</td>
+</tr>
+<tr>
+<td>RPC_E_INVALID_DATA</td>
+<td></td>
+<td>-2147418097</td>
+</tr>
+<tr>
+<td>RPC_E_INVALID_PARAMETER</td>
+<td></td>
+<td>-2147418096</td>
+</tr>
+<tr>
+<td>RPC_E_CANTCALLOUT_AGAIN</td>
+<td></td>
+<td>-2147418095</td>
+</tr>
+<tr>
+<td>RPC_E_SERVER_DIED_DNE</td>
+<td></td>
+<td>-2147418094</td>
+</tr>
+<tr>
+<td>RPC_E_SYS_CALL_FAILED</td>
+<td></td>
+<td>-2147417856</td>
+</tr>
+<tr>
+<td>RPC_E_OUT_OF_RESOURCES</td>
+<td></td>
+<td>-2147417855</td>
+</tr>
+<tr>
+<td>RPC_E_ATTEMPTED_MULTITHREAD</td>
+<td></td>
+<td>-2147417854</td>
+</tr>
+<tr>
+<td>RPC_E_NOT_REGISTERED</td>
+<td></td>
+<td>-2147417853</td>
+</tr>
+<tr>
+<td>RPC_E_FAULT</td>
+<td></td>
+<td>-2147417852</td>
+</tr>
+<tr>
+<td>RPC_E_SERVERFAULT</td>
+<td></td>
+<td>-2147417851</td>
+</tr>
+<tr>
+<td>RPC_E_CHANGED_MODE</td>
+<td></td>
+<td>-2147417850</td>
+</tr>
+<tr>
+<td>RPC_E_INVALIDMETHOD</td>
+<td></td>
+<td>-2147417849</td>
+</tr>
+<tr>
+<td>RPC_E_DISCONNECTED</td>
+<td></td>
+<td>-2147417848</td>
+</tr>
+<tr>
+<td>RPC_E_RETRY</td>
+<td></td>
+<td>-2147417847</td>
+</tr>
+<tr>
+<td>RPC_E_SERVERCALL_RETRYLATER</td>
+<td></td>
+<td>-2147417846</td>
+</tr>
+<tr>
+<td>RPC_E_SERVERCALL_REJECTED</td>
+<td></td>
+<td>-2147417845</td>
+</tr>
+<tr>
+<td>RPC_E_INVALID_CALLDATA</td>
+<td></td>
+<td>-2147417844</td>
+</tr>
+<tr>
+<td>RPC_E_CANTCALLOUT_ININPUTSYNCCALL</td>
+<td></td>
+<td>-2147417843</td>
+</tr>
+<tr>
+<td>RPC_E_WRONG_THREAD</td>
+<td></td>
+<td>-2147417842</td>
+</tr>
+<tr>
+<td>RPC_E_THREAD_NOT_INIT</td>
+<td></td>
+<td>-2147417841</td>
+</tr>
+<tr>
+<td>RPC_E_VERSION_MISMATCH</td>
+<td></td>
+<td>-2147417840</td>
+</tr>
+<tr>
+<td>RPC_E_INVALID_HEADER</td>
+<td></td>
+<td>-2147417839</td>
+</tr>
+<tr>
+<td>RPC_E_INVALID_EXTENSION</td>
+<td></td>
+<td>-2147417838</td>
+</tr>
+<tr>
+<td>RPC_E_INVALID_IPID</td>
+<td></td>
+<td>-2147417837</td>
+</tr>
+<tr>
+<td>RPC_E_INVALID_OBJECT</td>
+<td></td>
+<td>-2147417836</td>
+</tr>
+<tr>
+<td>RPC_S_CALLPENDING</td>
+<td></td>
+<td>-2147417835</td>
+</tr>
+<tr>
+<td>RPC_S_WAITONTIMER</td>
+<td></td>
+<td>-2147417834</td>
+</tr>
+<tr>
+<td>RPC_E_CALL_COMPLETE</td>
+<td></td>
+<td>-2147417833</td>
+</tr>
+<tr>
+<td>RPC_E_UNSECURE_CALL</td>
+<td></td>
+<td>-2147417832</td>
+</tr>
+<tr>
+<td>RPC_E_TOO_LATE</td>
+<td></td>
+<td>-2147417831</td>
+</tr>
+<tr>
+<td>RPC_E_NO_GOOD_SECURITY_PACKAGES</td>
+<td></td>
+<td>-2147417830</td>
+</tr>
+<tr>
+<td>RPC_E_ACCESS_DENIED</td>
+<td></td>
+<td>-2147417829</td>
+</tr>
+<tr>
+<td>RPC_E_REMOTE_DISABLED</td>
+<td></td>
+<td>-2147417828</td>
+</tr>
+<tr>
+<td>RPC_E_INVALID_OBJREF</td>
+<td></td>
+<td>-2147417827</td>
+</tr>
+<tr>
+<td>RPC_E_NO_CONTEXT</td>
+<td></td>
+<td>-2147417826</td>
+</tr>
+<tr>
+<td>RPC_E_TIMEOUT</td>
+<td></td>
+<td>-2147417825</td>
+</tr>
+<tr>
+<td>RPC_E_NO_SYNC</td>
+<td></td>
+<td>-2147417824</td>
+</tr>
+<tr>
+<td>RPC_E_FULLSIC_REQUIRED</td>
+<td></td>
+<td>-2147417823</td>
+</tr>
+<tr>
+<td>RPC_E_INVALID_STD_NAME</td>
+<td></td>
+<td>-2147417822</td>
+</tr>
+<tr>
+<td>CO_E_FAILEDTOIMPERSONATE</td>
+<td></td>
+<td>-2147417821</td>
+</tr>
+<tr>
+<td>CO_E_FAILEDTOGETSECCTX</td>
+<td></td>
+<td>-2147417820</td>
+</tr>
+<tr>
+<td>CO_E_FAILEDTOOPENTHREADTOKEN</td>
+<td></td>
+<td>-2147417819</td>
+</tr>
+<tr>
+<td>CO_E_FAILEDTOGETTOKENINFO</td>
+<td></td>
+<td>-2147417818</td>
+</tr>
+<tr>
+<td>CO_E_TRUSTEEDOESNTMATCHCLIENT</td>
+<td></td>
+<td>-2147417817</td>
+</tr>
+<tr>
+<td>CO_E_FAILEDTOQUERYCLIENTBLANKET</td>
+<td></td>
+<td>-2147417816</td>
+</tr>
+<tr>
+<td>CO_E_FAILEDTOSETDACL</td>
+<td></td>
+<td>-2147417815</td>
+</tr>
+<tr>
+<td>CO_E_ACCESSCHECKFAILED</td>
+<td></td>
+<td>-2147417814</td>
+</tr>
+<tr>
+<td>CO_E_NETACCESSAPIFAILED</td>
+<td></td>
+<td>-2147417813</td>
+</tr>
+<tr>
+<td>CO_E_WRONGTRUSTEENAMESYNTAX</td>
+<td></td>
+<td>-2147417812</td>
+</tr>
+<tr>
+<td>CO_E_INVALIDSID</td>
+<td></td>
+<td>-2147417811</td>
+</tr>
+<tr>
+<td>CO_E_CONVERSIONFAILED</td>
+<td></td>
+<td>-2147417810</td>
+</tr>
+<tr>
+<td>CO_E_NOMATCHINGSIDFOUND</td>
+<td></td>
+<td>-2147417809</td>
+</tr>
+<tr>
+<td>CO_E_LOOKUPACCSIDFAILED</td>
+<td></td>
+<td>-2147417808</td>
+</tr>
+<tr>
+<td>CO_E_NOMATCHINGNAMEFOUND</td>
+<td></td>
+<td>-2147417807</td>
+</tr>
+<tr>
+<td>CO_E_LOOKUPACCNAMEFAILED</td>
+<td></td>
+<td>-2147417806</td>
+</tr>
+<tr>
+<td>CO_E_SETSERLHNDLFAILED</td>
+<td></td>
+<td>-2147417805</td>
+</tr>
+<tr>
+<td>CO_E_FAILEDTOGETWINDIR</td>
+<td></td>
+<td>-2147417804</td>
+</tr>
+<tr>
+<td>CO_E_PATHTOOLONG</td>
+<td></td>
+<td>-2147417803</td>
+</tr>
+<tr>
+<td>CO_E_FAILEDTOGENUUID</td>
+<td></td>
+<td>-2147417802</td>
+</tr>
+<tr>
+<td>CO_E_FAILEDTOCREATEFILE</td>
+<td></td>
+<td>-2147417801</td>
+</tr>
+<tr>
+<td>CO_E_FAILEDTOCLOSEHANDLE</td>
+<td></td>
+<td>-2147417800</td>
+</tr>
+<tr>
+<td>CO_E_EXCEEDSYSACLLIMIT</td>
+<td></td>
+<td>-2147417799</td>
+</tr>
+<tr>
+<td>CO_E_ACESINWRONGORDER</td>
+<td></td>
+<td>-2147417798</td>
+</tr>
+<tr>
+<td>CO_E_INCOMPATIBLESTREAMVERSION</td>
+<td></td>
+<td>-2147417797</td>
+</tr>
+<tr>
+<td>CO_E_FAILEDTOOPENPROCESSTOKEN</td>
+<td></td>
+<td>-2147417796</td>
+</tr>
+<tr>
+<td>CO_E_DECODEFAILED</td>
+<td></td>
+<td>-2147417795</td>
+</tr>
+<tr>
+<td>CO_E_ACNOTINITIALIZED</td>
+<td></td>
+<td>-2147417793</td>
+</tr>
+<tr>
+<td>CO_E_CANCEL_DISABLED</td>
+<td></td>
+<td>-2147417792</td>
+</tr>
+<tr>
+<td>RPC_E_UNEXPECTED</td>
+<td></td>
+<td>-2147352577</td>
+</tr>
+<tr>
+<td>VS_E_BUSY</td>
+<td>VS specific error HRESULT returned by interfaces to asynchronous behavior when the object in question in already busy.</td>
+<td>-2147220992</td>
+</tr>
+<tr>
+<td>VS_E_SPECIFYING_OUTPUT_UNSUPPORTED</td>
+<td>Is returned by build interfaces that have parameters for specifying an array of IVsOutput's but the implementation can only apply the method to all outputs.</td>
+<td>-2147220991</td>
+</tr>
+<tr>
+<td>S_FALSE</td>
+<td>HRESULT for FALSE (not an error).</td>
+<td>1</td>
+</tr>
+<tr>
+<td>S_OK</td>
+<td>HRESULT for generic success.</td>
+<td>0</td>
+</tr>
+<tr>
+<td>UNDO_E_CLIENTABORT</td>
+<td>Error HRESULT for a client abort.</td>
+<td>-2147205119</td>
+</tr>
+<tr>
+<td>E_OUTOFMEMORY</td>
+<td>Error HRESULT for out of memory.</td>
+<td>-2147024882</td>
+</tr>
+<tr>
+<td>E_INVALIDARG</td>
+<td>Error HRESULT for an invalid argument.</td>
+<td>-2147024809</td>
+</tr>
+<tr>
+<td>E_FAIL</td>
+<td>Error HRESULT for a generic failure.</td>
+<td>-2147467259</td>
+</tr>
+<tr>
+<td>E_NOINTERFACE</td>
+<td>Error HRESULT for the request of a not implemented interface.</td>
+<td>-2147467262</td>
+</tr>
+<tr>
+<td>E_NOTIMPL</td>
+<td>Error HRESULT for the call to a not implemented method.</td>
+<td>-2147467263</td>
+</tr>
+<tr>
+<td>E_UNEXPECTED</td>
+<td>Error HRESULT for an unexpected condition.</td>
+<td>-2147418113</td>
+</tr>
+<tr>
+<td>E_POINTER</td>
+<td>Error HRESULT for a null or invalid pointer.</td>
+<td>-2147467261</td>
+</tr>
+<tr>
+<td>E_HANDLE</td>
+<td>Error HRESULT for an invalid HANDLE.</td>
+<td>-2147024890</td>
+</tr>
+<tr>
+<td>E_ABORT</td>
+<td>Error HRESULT for an abort.</td>
+<td>-2147467260</td>
+</tr>
+<tr>
+<td>E_ACCESSDENIED</td>
+<td>Error HRESULT for an access denied.</td>
+<td>-2147024891</td>
+</tr>
+<tr>
+<td>E_PENDING</td>
+<td>Error HRESULT for a pending condition.</td>
+<td>-2147483638</td>
+</tr>
+</tbody>
+</table>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="theme-switch-field">
+                <p>Theme</p>
+                <select id="theme-switcher">
+                  <option value="dark">Dark
+                  <option value="gray">Gray
+                  <option value="light">Light
+                </select>
+              </div>
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/TwentyFourMinutes/DulcisX//blob/gh-pages/DocFx/sdk/status_codes/status-codes.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            <span>Copyright © 2020 Twenty</span>
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+    <script type="text/javascript" src="../../styles/styleswitcher.js"></script>  </body>
+</html>

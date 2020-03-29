@@ -6,3 +6,5 @@
       topicUid: Guides.GettingStarted.Installation
     - name: Your First Extension
       topicUid: Guides.GettingStarted.FirstExtension
+    - name: DulcisX Principles
+      topicUid: Guides.GettingStarted.Principles

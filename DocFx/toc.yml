@@ -3,3 +3,6 @@
 - name: API Documentation
   href: api/
   topicUid: API.Docs
+- name: SDK Documentation
+  href: sdk/
+  topicUid: SDK.Introduction
