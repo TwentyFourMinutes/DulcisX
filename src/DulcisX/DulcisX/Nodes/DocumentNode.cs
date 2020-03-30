@@ -106,7 +106,7 @@ namespace DulcisX.Nodes
 
             var newFullName = Path.Combine(Path.GetDirectoryName(fullName), newName);
 
-            return GetParentProject().Move(this, newFullName);
+            return GetParentProject().MoveNodeInsideProject(this, newFullName);
         }
 
         /// <summary>
@@ -118,7 +118,7 @@ namespace DulcisX.Nodes
         {
             ThreadHelper.ThrowIfNotOnUIThread();
 
-            return GetParentProject().Move(this, Path.ChangeExtension(GetFullName(), extension));
+            return GetParentProject().MoveNodeInsideProject(this, Path.ChangeExtension(GetFullName(), extension));
         }
 
         /// <summary>

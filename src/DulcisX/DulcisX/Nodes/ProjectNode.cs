@@ -1,4 +1,4 @@
-﻿using DulcisX.Core.Enums;
+using DulcisX.Core.Enums;
 using DulcisX.Exceptions;
 using DulcisX.Helpers;
 using Microsoft.Internal.VisualStudio.PlatformUI;
@@ -312,7 +312,9 @@ namespace DulcisX.Nodes
             ErrorHandler.ThrowOnFailure(result);
         }
 
-        internal DocumentNode Move(DocumentNode node, string newFullName)
+        public DocumentNode MoveNodeInsideProject(FolderNode destination, DocumentNode node)
+            => MoveNodeInsideProject(node, Path.Combine(destination.GetFullName(), node.GetFileName()));
+        internal DocumentNode MoveNodeInsideProject(DocumentNode node, string newFullName)
         {
             ThreadHelper.ThrowIfNotOnUIThread();
 

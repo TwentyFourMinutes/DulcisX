@@ -9,7 +9,7 @@ namespace DulcisX.Nodes
     /// <summary>
     /// Represents the most basic Hierarchy Node.
     /// </summary>
-    public interface IBaseNode
+    public interface IBaseNode : IEquatable<IBaseNode>
     {
         /// <summary>
         /// Gets the Solution in which the Node sits in.
