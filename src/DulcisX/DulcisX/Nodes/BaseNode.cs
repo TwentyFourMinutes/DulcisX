@@ -86,5 +86,90 @@ namespace DulcisX.Nodes
         /// <inheritdoc/>
         public bool IsTypeMatching(NodeTypes nodeType)
             => NodeType == nodeType;
+
+        #region Equality Comparison
+
+        /// <inheritdoc/>
+        public static bool operator ==(BaseNode node1, BaseNode node2)
+            => Compare(node1, node2);
+
+        /// <inheritdoc/>
+        public static bool operator ==(IBaseNode node1, BaseNode node2)
+            => Compare(node1, node2);
+
+        /// <inheritdoc/>
+        public static bool operator ==(BaseNode node1, IBaseNode node2)
+            => Compare(node1, node2);
+
+        /// <inheritdoc/>
+        public static bool operator !=(BaseNode node1, BaseNode node2)
+            => !Compare(node1, node2);
+
+        /// <inheritdoc/>
+        public static bool operator !=(IBaseNode node1, BaseNode node2)
+            => !Compare(node1, node2);
+
+        /// <inheritdoc/>
+        public static bool operator !=(BaseNode node1, IBaseNode node2)
+             => !Compare(node1, node2);
+
+        private static bool Compare(IBaseNode node1, IBaseNode node2)
+        {
+            if (ReferenceEquals(node1, node2))
+            {
+                return true;
+            }
+
+            if (ReferenceEquals(node1, null) ||
+                ReferenceEquals(node2, null))
+            {
+                return false;
+            }
+
+            return node1.ItemId.Equals(node1.ItemId)
+                   && node1.UnderlyingHierarchy.Equals(node2.UnderlyingHierarchy);
+        }
+
+        /// <inheritdoc/>
+        public virtual bool Equals(IBaseNode other)
+        {
+            if (ReferenceEquals(null, other))
+            {
+                return false;
+            }
+            if (ReferenceEquals(this, other))
+            {
+                return true;
+            }
+
+            return ItemId.Equals(other.ItemId)
+                   && UnderlyingHierarchy.Equals(other.UnderlyingHierarchy);
+        }
+
+        /// <inheritdoc/>
+        public sealed override bool Equals(object obj)
+        {
+            if (ReferenceEquals(null, obj))
+            {
+                return false;
+            }
+            if (ReferenceEquals(this, obj))
+            {
+                return true;
+            }
+
+            return obj.GetType() == GetType() && Equals((BaseNode)obj);
+        }
+
+        /// <inheritdoc/>
+        public sealed override int GetHashCode()
+        {
+            var hashCode1 = UnderlyingHierarchy.GetHashCode();
+            var hashCode2 = ItemId.GetHashCode();
+
+            return ((hashCode1 << 5) + hashCode1) ^ hashCode2;
+        }
+
+        #endregion
     }
 }
