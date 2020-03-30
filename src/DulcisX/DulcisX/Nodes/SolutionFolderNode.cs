@@ -1,5 +1,4 @@
 ﻿using DulcisX.Core.Enums;
-using DulcisX.Core.Enums.VisualStudio;
 using Microsoft.VisualStudio.Shell.Interop;
 
 namespace DulcisX.Nodes

@@ -1,6 +1,6 @@
 ﻿using Microsoft.VisualStudio;
 
-namespace DulcisX.Core.Enums.VisualStudio
+namespace DulcisX.Core.Enums
 {
     /// <summary>
     /// Common nodes inside an <see cref="Microsoft.VisualStudio.Shell.Interop.IVsHierarchy"/>.

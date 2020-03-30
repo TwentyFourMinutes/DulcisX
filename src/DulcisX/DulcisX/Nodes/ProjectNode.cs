@@ -1,5 +1,4 @@
 ﻿using DulcisX.Core.Enums;
-using DulcisX.Core.Enums.VisualStudio;
 using DulcisX.Exceptions;
 using DulcisX.Helpers;
 using Microsoft.Internal.VisualStudio.PlatformUI;

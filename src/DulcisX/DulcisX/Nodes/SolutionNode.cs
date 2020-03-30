@@ -1,6 +1,5 @@
 using DulcisX.Core.Extensions;
 using DulcisX.Core.Enums;
-using DulcisX.Core.Enums.VisualStudio;
 using DulcisX.Nodes.Events;
 using Microsoft.VisualStudio;
 using Microsoft.VisualStudio.PlatformUI;

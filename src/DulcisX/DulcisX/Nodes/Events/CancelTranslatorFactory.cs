@@ -1,4 +1,4 @@
-﻿using DulcisX.Core.Enums.VisualStudio;
+﻿using DulcisX.Core.Enums;
 using System;
 using System.Threading;
 

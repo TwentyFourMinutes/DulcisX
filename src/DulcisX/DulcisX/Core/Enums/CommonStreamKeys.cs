@@ -1,4 +1,4 @@
-﻿namespace DulcisX.Core.Enums.VisualStudio
+﻿namespace DulcisX.Core.Enums
 {
     /// <summary>
     /// Common stream keys in the .suo file. Passed to <see cref="Nodes.SolutionNode.LoadUserConfiguration(Microsoft.VisualStudio.Shell.Interop.IVsPersistSolutionOpts, string)"/>.

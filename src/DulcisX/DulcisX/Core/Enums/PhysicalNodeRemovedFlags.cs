@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace DulcisX.Core.Enums.VisualStudio
+namespace DulcisX.Core.Enums
 {
     /// <summary>
     /// Used instead of <see cref="Microsoft.VisualStudio.Shell.Interop.__VSREMOVEFILEFLAGS2"/>.
