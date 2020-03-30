@@ -311,5 +311,32 @@ namespace DulcisX.Nodes
 
             ErrorHandler.ThrowOnFailure(result);
         }
+
+        internal DocumentNode Move(DocumentNode node, string newFullName)
+        {
+            ThreadHelper.ThrowIfNotOnUIThread();
+
+            var fullName = node.GetFullName();
+
+            File.Move(fullName, newFullName);
+
+            if (!this.TryRemoveChildren(node, out var code))
+            {
+                ErrorHandler.ThrowOnFailure(code);
+            }
+
+            var parentId = this.GetParentNodeId();
+
+            var success = this.AddExistingDocument(parentId, newFullName);
+
+            if (success != VSADDRESULT.ADDRESULT_Success)
+            {
+                throw new OperationNotSuccessfulException($"Couldn't re-add the file to the project. AddResult: '{success}'.");
+            }
+
+            this.TryGetPhysicalNode<DocumentNode>(newFullName, out var document);
+
+            return document;
+        }
     }
 }

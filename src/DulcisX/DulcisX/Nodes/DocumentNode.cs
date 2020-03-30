@@ -106,7 +106,7 @@ namespace DulcisX.Nodes
 
             var newFullName = Path.Combine(Path.GetDirectoryName(fullName), newName);
 
-            return Move(newFullName);
+            return GetParentProject().Move(this, newFullName);
         }
 
         /// <summary>
@@ -118,36 +118,7 @@ namespace DulcisX.Nodes
         {
             ThreadHelper.ThrowIfNotOnUIThread();
 
-            return Move(Path.ChangeExtension(GetFullName(), extension));
-        }
-
-        private DocumentNode Move(string newFullName)
-        {
-            ThreadHelper.ThrowIfNotOnUIThread();
-
-            var fullName = GetFullName();
-
-            File.Move(fullName, newFullName);
-
-            var project = GetParentProject();
-
-            if (!project.TryRemoveChildren(this, out var code))
-            {
-                ErrorHandler.ThrowOnFailure(code);
-            }
-
-            var parentId = this.GetParentNodeId();
-
-            var success = project.AddExistingDocument(parentId, newFullName);
-
-            if (success != VSADDRESULT.ADDRESULT_Success)
-            {
-                throw new OperationNotSuccessfulException($"Couldn't re-add the file to the project. AddResult: '{success}'.");
-            }
-
-            GetParentProject().TryGetPhysicalNode<DocumentNode>(newFullName, out var document);
-
-            return document;
+            return GetParentProject().Move(this, Path.ChangeExtension(GetFullName(), extension));
         }
 
         /// <summary>
