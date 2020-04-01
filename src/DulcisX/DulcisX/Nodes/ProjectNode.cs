@@ -295,6 +295,19 @@ namespace DulcisX.Nodes
             return node is object;
         }
 
+        public bool ContainsPhysicalNode(string fullName)
+        {
+            ThreadHelper.ThrowIfNotOnUIThread();
+
+            var priority = new VSDOCUMENTPRIORITY[1];
+
+            var result = UnderlyingProject.IsDocumentInProject(fullName, out var found, priority, out _);
+
+            ErrorHandler.ThrowOnFailure(result);
+
+            return VsConverter.AsBoolean(found);
+        }
+
         internal uint GetDocumentCookie(DocumentNode document)
         {
             ThreadHelper.ThrowIfNotOnUIThread();
