@@ -326,5 +326,21 @@ namespace DulcisX.Nodes
 
             ErrorHandler.ThrowOnFailure(result);
         }
+
+        public string GetRelativePath<TNode>(TNode node) where TNode : IPhysicalNode
+        {
+            var nodePath = node.GetFullName();
+
+            var rootPath = this.GetDirectoryName();
+
+            if (nodePath.StartsWith(rootPath, StringComparison.Ordinal))
+            {
+                return nodePath.Substring(rootPath.Length).TrimStart('\\');
+            }
+            else
+            {
+                throw new ArgumentException("The provided node is not a child of the Project.", nameof(node));
+            }
+        }
     }
 }

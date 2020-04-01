@@ -308,6 +308,27 @@ namespace DulcisX.Nodes
             return VsConverter.AsBoolean(found);
         }
 
+        public string GetRelativePath<TNode>(TNode node) where TNode : ProjectItemNode, IPhysicalNode
+        {
+            var nodePath = node.GetFullName();
+
+            return GetRelativePath(nodePath);
+        }
+
+        internal string GetRelativePath(string fullName)
+        {
+            var rootPath = this.GetDirectoryName();
+
+            if (fullName.StartsWith(rootPath, StringComparison.Ordinal))
+            {
+                return fullName.Substring(rootPath.Length).TrimStart('\\');
+            }
+            else
+            {
+                throw new ArgumentException("The provided node is not a child of the Project.", nameof(fullName));
+            }
+        }
+
         internal uint GetDocumentCookie(DocumentNode document)
         {
             ThreadHelper.ThrowIfNotOnUIThread();
