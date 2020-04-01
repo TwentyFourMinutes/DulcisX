@@ -58,7 +58,7 @@ namespace DulcisX.Nodes
 
             BaseNode parent = this.GetParent();
 
-            while (parent.IsTypeMatching(nodeType))
+            while (!parent.IsTypeMatching(nodeType) && parent is object)
             {
                 parent = parent.GetParent();
             }
