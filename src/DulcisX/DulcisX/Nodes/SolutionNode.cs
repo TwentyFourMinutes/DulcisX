@@ -136,6 +136,17 @@ namespace DulcisX.Nodes
             return (string)fullName;
         }
 
+        public string GetDirectoryName()
+        {
+            ThreadHelper.ThrowIfNotOnUIThread();
+
+            var result = UnderlyingSolution.GetProperty((int)__VSPROPID.VSPROPID_SolutionDirectory, out var directoryName);
+
+            ErrorHandler.ThrowOnFailure(result);
+
+            return (string)directoryName;
+        }
+
         /// <inheritdoc/>
         /// <remarks>This method will always return null. A <see cref="SolutionNode"/> can't have any parents.</remarks>
         public override BaseNode GetParent()

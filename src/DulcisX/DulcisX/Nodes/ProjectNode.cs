@@ -104,6 +104,13 @@ namespace DulcisX.Nodes
             return fullName;
         }
 
+        public string GetDirectoryName()
+        {
+            ThreadHelper.ThrowIfNotOnUIThread();
+
+            return HierarchyUtilities.GetHierarchyProperty<string>(UnderlyingHierarchy, CommonNodeIds.Project, (int)__VSHPROPID.VSHPROPID_ProjectDir);
+        }
+
         /// <summary>
         /// Gets a value indicating whether the current <see cref="ProjectNode"/> is loaded.
         /// </summary>

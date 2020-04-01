@@ -54,5 +54,8 @@ namespace DulcisX.Nodes
 
             return fullName;
         }
+
+        public string GetDirectoryName()
+            => GetFullName();
     }
 }

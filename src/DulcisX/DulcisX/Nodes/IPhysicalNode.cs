@@ -15,5 +15,7 @@
         /// </summary>
         /// <returns>A string containg the full name of the file.</returns>
         string GetFullName();
+
+        string GetDirectoryName();
     }
 }

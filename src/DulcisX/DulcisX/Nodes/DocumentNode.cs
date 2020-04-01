@@ -57,6 +57,9 @@ namespace DulcisX.Nodes
             return fullName;
         }
 
+        public string GetDirectoryName()
+            => Path.GetDirectoryName(GetFullName());
+
         /// <summary>
         /// Returns the Build Action for the current <see cref="DocumentNode"/>.
         /// </summary>
