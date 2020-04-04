@@ -273,7 +273,7 @@ namespace DulcisX.Nodes
         /// <param name="fullName">A string containg the full name aka. the document moniker.</param>
         /// <param name="node">The <see cref="IPhysicalNode"/> with the given <paramref name="fullName"/>.</param>
         /// <returns>A return value indicates whether the operation succeeded.</returns>
-        public bool TryGetPhysicalNode<TNode>(string fullName, out TNode node) where TNode : class, IPhysicalNode
+        public bool TryGetPhysicalNode<TNode>(string fullName, out TNode node) where TNode : class, IPhysicalProjectItemNode
         {
             ThreadHelper.ThrowIfNotOnUIThread();
 
@@ -289,9 +289,8 @@ namespace DulcisX.Nodes
                 return false;
             }
 
-            var baseNode = NodeFactory.GetProjectItemNode(ParentSolution, this, this.UnderlyingHierarchy, item);
+            node = NodeFactory.GetProjectItemNode(ParentSolution, this, this.UnderlyingHierarchy, item) as TNode;
 
-            node = baseNode as TNode;
             return node is object;
         }
 
@@ -308,7 +307,7 @@ namespace DulcisX.Nodes
             return VsConverter.AsBoolean(found);
         }
 
-        public string GetRelativePath<TNode>(TNode node) where TNode : ProjectItemNode, IPhysicalNode
+        public string GetRelativePath(IPhysicalProjectItemNode node)
         {
             var nodePath = node.GetFullName();
 

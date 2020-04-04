@@ -41,8 +41,8 @@ namespace DulcisX.Nodes.Events
         event Action<IEnumerable<RenamedPhysicalNode<FolderNode, VSRENAMEDIRECTORYFLAGS>>> OnFoldersRenamed;
 
         /// <summary>
-        /// Occurs when the source control status of <see cref="IPhysicalNode"/>(s) change.
+        /// Occurs when the source control status of <see cref="IPhysicalProjectItemNode"/>(s) change.
         /// </summary>
-        event Action<IEnumerable<ChangedPhysicalSccNode<IPhysicalNode, __SccStatus>>> OnDocumentSccStatusChanged;
+        event Action<IEnumerable<ChangedPhysicalSccNode<IPhysicalProjectItemNode, __SccStatus>>> OnDocumentSccStatusChanged;
     }
 }

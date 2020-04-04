@@ -9,7 +9,7 @@ namespace DulcisX.Nodes
     /// <summary>
     /// Represents a folder within a <see cref="ProjectNode"/>.
     /// </summary>
-    public class FolderNode : ProjectItemNode, IPhysicalNode
+    public class FolderNode : ProjectItemNode, IPhysicalProjectItemNode
     {
         /// <inheritdoc/>
         public override NodeTypes NodeType => NodeTypes.Folder;

@@ -10,7 +10,7 @@ namespace DulcisX.Nodes
     /// <summary>
     /// Represents the most basic <see cref="ProjectNode"/> children Node.
     /// </summary>
-    public abstract class ProjectItemNode : BaseNode
+    public abstract class ProjectItemNode : BaseNode, IProjectItemNode
     {
         private readonly ProjectNode _parentProject;
 

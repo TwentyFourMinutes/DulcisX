@@ -22,7 +22,7 @@ namespace DulcisX.Nodes.Events
 
         public event Action<IEnumerable<RenamedPhysicalNode<FolderNode, VSRENAMEDIRECTORYFLAGS>>> OnFoldersRenamed;
 
-        public event Action<IEnumerable<ChangedPhysicalSccNode<IPhysicalNode, __SccStatus>>> OnDocumentSccStatusChanged;
+        public event Action<IEnumerable<ChangedPhysicalSccNode<IPhysicalProjectItemNode, __SccStatus>>> OnDocumentSccStatusChanged;
 
         private readonly IVsTrackProjectDocuments2 _trackProjectDocuments;
 
@@ -111,12 +111,12 @@ namespace DulcisX.Nodes.Events
         {
             OnDocumentSccStatusChanged?.Invoke(NodesChanged(rgpProjects, rgFirstIndices, rgpszMkDocuments.Length, (projectNode, iterator) =>
             {
-                if (!projectNode.TryGetPhysicalNode<IPhysicalNode>(rgpszMkDocuments[iterator], out var physicalNode))
+                if (!projectNode.TryGetPhysicalNode<IPhysicalProjectItemNode>(rgpszMkDocuments[iterator], out var physicalNode))
                 {
                     throw new InvalidOperationException();
                 }
 
-                return new ChangedPhysicalSccNode<IPhysicalNode, __SccStatus>(physicalNode, (__SccStatus)rgdwSccStatus[iterator]);
+                return new ChangedPhysicalSccNode<IPhysicalProjectItemNode, __SccStatus>(physicalNode, (__SccStatus)rgdwSccStatus[iterator]);
             }).ToCachingEnumerable());
 
             return CommonStatusCodes.Success;

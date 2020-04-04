@@ -1,5 +1,4 @@
 using DulcisX.Core.Enums;
-using DulcisX.Exceptions;
 using Microsoft.Internal.VisualStudio.PlatformUI;
 using Microsoft.VisualStudio;
 using Microsoft.VisualStudio.Shell;
@@ -12,7 +11,7 @@ namespace DulcisX.Nodes
     /// <summary>
     /// Represents a document within a <see cref="ProjectNode"/>.
     /// </summary>
-    public class DocumentNode : ProjectItemNode, IPhysicalNode
+    public class DocumentNode : ProjectItemNode, IPhysicalProjectItemNode
     {
         /// <inheritdoc/>
         public override NodeTypes NodeType => NodeTypes.Document;
