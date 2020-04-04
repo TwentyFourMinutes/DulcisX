@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="..\packages\Microsoft.CodeAnalysis.BannedApiAnalyzers.2.9.4\build\Microsoft.CodeAnalysis.BannedApiAnalyzers.props" Condition="Exists('..\packages\Microsoft.CodeAnalysis.BannedApiAnalyzers.2.9.4\build\Microsoft.CodeAnalysis.BannedApiAnalyzers.props')" />
   <Import Project="..\packages\Microsoft.CodeAnalysis.FxCopAnalyzers.2.6.3\build\Microsoft.CodeAnalysis.FxCopAnalyzers.props" Condition="Exists('..\packages\Microsoft.CodeAnalysis.FxCopAnalyzers.2.6.3\build\Microsoft.CodeAnalysis.FxCopAnalyzers.props')" />
@@ -78,6 +78,7 @@
     <Compile Include="Core\Enums\CopyToOutputDirectory.cs" />
     <Compile Include="Core\Enums\DocumentProperty.cs" />
     <Compile Include="Core\Enums\DocumentType.cs" />
+    <Compile Include="Core\Enums\ModifyHierarchyType.cs" />
     <Compile Include="Core\Enums\NodeTypes.cs" />
     <Compile Include="Core\Enums\StartupOption.cs" />
     <Compile Include="Core\Enums\CommonNodeIds.cs" />
@@ -104,8 +105,10 @@
     <Compile Include="Helpers\VsConverter.cs" />
     <Compile Include="Helpers\VSHelper.cs" />
     <Compile Include="Nodes\ChangedNodeBase.cs" />
+    <Compile Include="Nodes\Events\ModifyHierarchyEvents.cs" />
     <Compile Include="Nodes\IProjectItemNode.cs" />
     <Compile Include="Nodes\IPhysicalProjectItemNode.cs" />
+    <Compile Include="Nodes\ModifyProjectDocument.cs" />
     <Compile Include="Nodes\RemovedPhysicalNode.cs" />
     <Compile Include="Nodes\BaseNode.cs" />
     <Compile Include="Nodes\DocumentNode.cs" />
@@ -471,6 +474,7 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
     <Reference Include="UIAutomationProvider" />
     <Reference Include="VSLangProj, Version=7.0.3300.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
       <HintPath>..\packages\VSLangProj.7.0.3301\lib\net10\VSLangProj.dll</HintPath>
@@ -514,7 +518,6 @@
     </Reference>
     <Reference Include="WindowsBase" />
   </ItemGroup>
-  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>

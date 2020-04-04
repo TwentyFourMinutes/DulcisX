@@ -7,7 +7,7 @@ namespace DulcisX.Nodes
     /// </summary>
     /// <typeparam name="TNodeType">The type of the node which got changed.</typeparam>
     /// <typeparam name="TFlag">The enumeration which specifies what happend to the <see cref="INamedNode"/>.</typeparam>
-    public abstract class ChangedNodeBase<TNodeType, TFlag> where TNodeType : IProjectItemNode
+    public abstract class ChangedNodeBase<TNodeType, TFlag> where TNodeType : IPhysicalNode
                                                             where TFlag : struct, Enum
     {
         /// <summary>

@@ -9,6 +9,7 @@ using Microsoft.VisualStudio.Shell.Interop;
 using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Threading.Tasks;
 
 namespace DulcisX.Nodes
 {
@@ -247,6 +248,26 @@ namespace DulcisX.Nodes
             ErrorHandler.ThrowOnFailure(result);
 
             return addResult[0];
+        }
+
+        public ValueTask<bool> ModifyAndWaitAsync(Action<ModifyProjectDocument> modifier, TimeSpan? timeout = null)
+            => ModifyBase(modifier).SaveChangesAsync(timeout);
+
+        public void Modify(Action<ModifyProjectDocument> modifier)
+            => ModifyBase(modifier).SaveChanges();
+
+        private ModifyProjectDocument ModifyBase(Action<ModifyProjectDocument> modifier)
+        {
+            if (modifier is null)
+            {
+                throw new ArgumentNullException(nameof(modifier));
+            }
+
+            var modifyingProjectNode = new ModifyProjectDocument(this);
+
+            modifier.Invoke(modifyingProjectNode);
+
+            return modifyingProjectNode;
         }
 
         /// <summary>
