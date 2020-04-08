@@ -102,15 +102,15 @@ namespace DulcisX.Nodes
             }
             else if (HierarchyUtilities.IsVirtualProject(hierarchyIdentity))
             {
-                return new ProjectNode(solution, hierarchy, NodeTypes.VirtualProject);
+                return new ProjectNode(solution, hierarchy, ProjectNodeType.VirtualProject);
             }
             else if (ExtendedHierarchyUtilities.IsMiscellaneousFilesProject(hierarchy))
             {
-                return new ProjectNode(solution, hierarchy, NodeTypes.MiscellaneousFilesProject);
+                return new ProjectNode(solution, hierarchy, ProjectNodeType.MiscellaneousFilesProject);
             }
             else if (ExtendedHierarchyUtilities.IsSolutionItemsProject(hierarchy))
             {
-                return new ProjectNode(solution, hierarchy, NodeTypes.SolutionItemsProject);
+                return new ProjectNode(solution, hierarchy, ProjectNodeType.SolutionItemsProject);
             }
 
             return null;

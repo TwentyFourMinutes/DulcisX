@@ -13,9 +13,6 @@ namespace DulcisX.Nodes
     /// </summary>
     public class DocumentNode : ProjectItemNode, IPhysicalProjectItemNode
     {
-        /// <inheritdoc/>
-        public override NodeTypes NodeType => NodeTypes.Document;
-
         /// <summary>
         /// Initializes a new instance of the <see cref="DocumentNode"/> class.
         /// </summary>

@@ -11,9 +11,6 @@ namespace DulcisX.Nodes
     /// </summary>
     public class FolderNode : ProjectItemNode, IPhysicalProjectItemNode
     {
-        /// <inheritdoc/>
-        public override NodeTypes NodeType => NodeTypes.Folder;
-
         /// <summary>
         /// Initializes a new instance of the <see cref="FolderNode"/> class.
         /// </summary>

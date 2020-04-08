@@ -63,7 +63,7 @@ namespace DulcisX.Nodes.Events
             {
                 var node = _documentTable.GetNode(docCookie, Solution);
 
-                _onNodeLocked.Invoke(node.NodeType, node, (_VSRDTFLAGS)dwRDTLockType, dwReadLocksRemaining, dwEditLocksRemaining);
+                _onNodeLocked.Invoke(node.GetNodeType(), node, (_VSRDTFLAGS)dwRDTLockType, dwReadLocksRemaining, dwEditLocksRemaining);
             }
 
             return CommonStatusCodes.Success;
@@ -75,7 +75,7 @@ namespace DulcisX.Nodes.Events
             {
                 var node = _documentTable.GetNode(docCookie, Solution);
 
-                _onNodeUnlocked.Invoke(node.NodeType, node, (_VSRDTFLAGS)dwRDTLockType, dwReadLocksRemaining, dwEditLocksRemaining);
+                _onNodeUnlocked.Invoke(node.GetNodeType(), node, (_VSRDTFLAGS)dwRDTLockType, dwReadLocksRemaining, dwEditLocksRemaining);
             }
 
             return CommonStatusCodes.Success;
@@ -87,7 +87,7 @@ namespace DulcisX.Nodes.Events
             {
                 var node = _documentTable.GetNode(docCookie, Solution);
 
-                _onSaved.Invoke(node.NodeType, node);
+                _onSaved.Invoke(node.GetNodeType(), node);
             }
 
             return CommonStatusCodes.Success;
@@ -102,7 +102,7 @@ namespace DulcisX.Nodes.Events
             {
                 var node = _documentTable.GetNode(docCookie, Solution);
 
-                _onNodeWindowShow.Invoke(node.NodeType, node, fFirstShow != 0, pFrame);
+                _onNodeWindowShow.Invoke(node.GetNodeType(), node, fFirstShow != 0, pFrame);
             }
 
             return CommonStatusCodes.Success;
@@ -114,7 +114,7 @@ namespace DulcisX.Nodes.Events
             {
                 var node = _documentTable.GetNode(docCookie, Solution);
 
-                _onNodeWindowHidden.Invoke(node.NodeType, node, pFrame);
+                _onNodeWindowHidden.Invoke(node.GetNodeType(), node, pFrame);
             }
 
             return CommonStatusCodes.Success;
@@ -126,7 +126,7 @@ namespace DulcisX.Nodes.Events
 
             var attribute = (OpenNodeAttribute)grfAttribs;
 
-            _onAttributeChanged?.Invoke(node.Value.NodeType, node.Value, attribute);
+            _onAttributeChanged?.Invoke(node.Value.GetNodeType(), node.Value, attribute);
 
             if (_onRenamed is null && _onMoved is null)
                 return CommonStatusCodes.Success;
@@ -149,7 +149,7 @@ namespace DulcisX.Nodes.Events
             if (_onRenamed is object &&
                 oldFileName != newFileName)
             {
-                _onRenamed.Invoke(node.Value.NodeType, node.Value, oldFileName, newFileName);
+                _onRenamed.Invoke(node.Value.GetNodeType(), node.Value, oldFileName, newFileName);
                 return;
             }
 
@@ -159,7 +159,7 @@ namespace DulcisX.Nodes.Events
             if (_onMoved is object &&
                 oldFilePath != newFilePath)
             {
-                _onMoved.Invoke(node.Value.NodeType, node.Value, oldFilePath, newFilePath);
+                _onMoved.Invoke(node.Value.GetNodeType(), node.Value, oldFilePath, newFilePath);
             }
         }
 
@@ -169,7 +169,7 @@ namespace DulcisX.Nodes.Events
             {
                 var node = _documentTable.GetNode(docCookie, Solution);
 
-                _onSave.Invoke(node.NodeType, node);
+                _onSave.Invoke(node.GetNodeType(), node);
             }
 
             return CommonStatusCodes.Success;

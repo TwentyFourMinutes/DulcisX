@@ -62,7 +62,7 @@ namespace DulcisX.Nodes.Events
             {
                 var project = Solution.GetProject(pIVsHierarchy);
 
-                _onProjectConfigurationChanged.Invoke(project.NodeType, project);
+                _onProjectConfigurationChanged.Invoke(project.GetNodeType(), project);
             }
 
             return CommonStatusCodes.Success;

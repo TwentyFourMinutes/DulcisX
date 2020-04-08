@@ -1,4 +1,5 @@
 ﻿using DulcisX.Core.Enums;
+using DulcisX.Core.Extensions;
 using DulcisX.Helpers;
 using Microsoft.VisualStudio;
 using Microsoft.VisualStudio.Shell;
@@ -105,7 +106,7 @@ namespace DulcisX.Nodes.Events
 
                 if (projectOpenedListener)
                 {
-                    _onProjectOpened.Invoke(project.NodeType, project, VsConverter.AsBoolean(fAdded));
+                    _onProjectOpened.Invoke(project.GetNodeType(), project, VsConverter.AsBoolean(fAdded));
                 }
 
                 if (projectAddListener &&
@@ -124,7 +125,7 @@ namespace DulcisX.Nodes.Events
             {
                 var project = Solution.GetProject(pHierarchy);
 
-                _onQueryProjectClose.Invoke(project.NodeType, VsConverter.AsBoolean(fRemoving), token);
+                _onQueryProjectClose.Invoke(project.GetNodeType(), VsConverter.AsBoolean(fRemoving), token);
             });
         }
 
@@ -139,7 +140,7 @@ namespace DulcisX.Nodes.Events
 
                 if (projectCloseListener)
                 {
-                    _onProjectClose.Invoke(project.NodeType, project, VsConverter.AsBoolean(fRemoved));
+                    _onProjectClose.Invoke(project.GetNodeType(), project, VsConverter.AsBoolean(fRemoved));
                 }
 
                 if (projectRemoveListener &&
@@ -159,7 +160,7 @@ namespace DulcisX.Nodes.Events
                 var oldProject = Solution.GetProject(pStubHierarchy);
                 var newProject = Solution.GetProject(pRealHierarchy);
 
-                _onProjectLoaded.Invoke(newProject.NodeType, oldProject, newProject);
+                _onProjectLoaded.Invoke(newProject.GetNodeType(), oldProject, newProject);
             }
 
             return CommonStatusCodes.Success;
@@ -171,7 +172,7 @@ namespace DulcisX.Nodes.Events
             {
                 var project = Solution.GetProject(pRealHierarchy);
 
-                _onQueryProjectUnload.Invoke(project.NodeType, project, token);
+                _onQueryProjectUnload.Invoke(project.GetNodeType(), project, token);
             });
         }
 
@@ -188,7 +189,7 @@ namespace DulcisX.Nodes.Events
                 {
                     var oldProject = Solution.GetProject(pRealHierarchy);
 
-                    _onProjectUnload.Invoke(newProject.NodeType, oldProject, newProject);
+                    _onProjectUnload.Invoke(newProject.GetNodeType(), oldProject, newProject);
                 }
 
                 if (projectRemoveListener)
@@ -233,7 +234,7 @@ namespace DulcisX.Nodes.Events
             {
                 var project = Solution.GetProject(pHierarchy);
 
-                _onProjectRenamed.Invoke(project.NodeType, project);
+                _onProjectRenamed.Invoke(project.GetNodeType(), project);
             }
 
             return CommonStatusCodes.Success;

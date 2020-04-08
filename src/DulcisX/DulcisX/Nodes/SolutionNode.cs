@@ -75,9 +75,6 @@ namespace DulcisX.Nodes
         public IVsSolution UnderlyingSolution { get; }
 
         /// <inheritdoc/>
-        public override NodeTypes NodeType => NodeTypes.Solution;
-
-        /// <inheritdoc/>
         public override SolutionNode ParentSolution => this;
 
         /// <summary>

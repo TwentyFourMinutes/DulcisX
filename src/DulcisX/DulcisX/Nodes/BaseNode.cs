@@ -1,4 +1,4 @@
-﻿using DulcisX.Core.Extensions;
+using DulcisX.Core.Extensions;
 using DulcisX.Core.Enums;
 using DulcisX.Exceptions;
 using Microsoft.VisualStudio.Shell;
@@ -19,9 +19,6 @@ namespace DulcisX.Nodes
 
         /// <inheritdoc/>
         public uint ItemId { get; }
-
-        /// <inheritdoc/>
-        public abstract NodeTypes NodeType { get; }
 
         /// <summary>
         /// Initializes a new instance of the <see cref="BaseNode"/> class.
@@ -50,7 +47,6 @@ namespace DulcisX.Nodes
             {
                 throw new NoFlagsAllowedException(nameof(NodeTypes));
             }
-
             else if (nodeType == NodeTypes.Solution)
             {
                 return ParentSolution;
@@ -82,10 +78,6 @@ namespace DulcisX.Nodes
         /// </summary>
         /// <returns>An <see cref="IEnumerable{BaseNode}"/> with the children.</returns>
         public abstract IEnumerable<BaseNode> GetChildren();
-
-        /// <inheritdoc/>
-        public bool IsTypeMatching(NodeTypes nodeType)
-            => NodeType == nodeType;
 
         #region Equality Comparison
 

@@ -1,4 +1,4 @@
-﻿using DulcisX.Core.Enums;
+using DulcisX.Core.Enums;
 using Microsoft.VisualStudio.Shell;
 using Microsoft.VisualStudio.Shell.Interop;
 using System;
@@ -27,12 +27,6 @@ namespace DulcisX.Nodes
         uint ItemId { get; }
 
         /// <summary>
-        /// Gets the Type of current Node.
-        /// </summary>
-        [Obsolete("This method should be replaced with type comparison.")]
-        NodeTypes NodeType { get; }
-
-        /// <summary>
         /// Returns the immediate parent Node of the current Node.
         /// </summary>
         /// <returns>The parent if any could be found, otherwise null.</returns>
@@ -56,9 +50,5 @@ namespace DulcisX.Nodes
         /// </summary>
         /// <returns>An <see cref="IEnumerable{BaseNode}"/> with the children.</returns>
         IEnumerable<BaseNode> GetChildren();
-
-
-        [Obsolete("This method should be replaced with type comparison.")]
-        bool IsTypeMatching(NodeTypes nodeType);
     }
 }

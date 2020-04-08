@@ -57,17 +57,17 @@ namespace DulcisX.Nodes
         }
 
         /// <inheritdoc/>
-        public override NodeTypes NodeType { get; }
+        public ProjectNodeType ProjectNodeType { get; }
 
         /// <summary>
         /// Initializes a new instance of the <see cref="ProjectNode"/> class.
         /// </summary>
         /// <param name="solution">The Solution in which the <see cref="ProjectNode"/> sits in.</param>
         /// <param name="hierarchy">The Hierarchy of the Project.</param>
-        /// <param name="nodeType">The type of the current Project.</param>
-        public ProjectNode(SolutionNode solution, IVsHierarchy hierarchy, NodeTypes nodeType = NodeTypes.Project) : base(solution, hierarchy, CommonNodeIds.Project)
+        /// <param name="projectType">The type of the current Project.</param>
+        public ProjectNode(SolutionNode solution, IVsHierarchy hierarchy, ProjectNodeType projectType = ProjectNodeType.Project) : base(solution, hierarchy, CommonNodeIds.Project)
         {
-            NodeType = nodeType;
+            ProjectNodeType = projectType;
         }
 
         /// <summary>

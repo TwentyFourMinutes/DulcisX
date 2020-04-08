@@ -1,8 +1,13 @@
 ﻿using DulcisX.Core;
 using DulcisX.Core.Enums;
 using DulcisX.Nodes;
+using EnvDTE;
+using EnvDTE80;
 using Microsoft.VisualStudio;
 using Microsoft.VisualStudio.Shell;
+using Microsoft.VisualStudio.Shell.Interop;
+using System;
+using System.Linq;
 using System.Runtime.InteropServices;
 
 namespace DulcisX.SDKTesting
@@ -16,18 +21,22 @@ namespace DulcisX.SDKTesting
 
         public MyFirstExtensionPackage()
         {
+            this.OnInitializeAsync += MyFirstExtensionPackage_OnInitializeAsync;
+        }
+
+        private async System.Threading.Tasks.Task MyFirstExtensionPackage_OnInitializeAsync(System.Threading.CancellationToken arg1, System.IProgress<ServiceProgressData> arg2)
+        {
+            await ThreadHelper.JoinableTaskFactory.SwitchToMainThreadAsync();
+
             this.Solution.OpenNodeEvents.OnSaved.Hook(NodeTypes.Document, OnDocumentSaved);
         }
 
-        private void OnDocumentSaved(IPhysicalNode node)
+        private async void OnDocumentSaved(IPhysicalNode node)
         {
-            this.InfoBar.NewMessage()
-                        .WithInfoImage()
-                        .WithText("The ")
-                        .WithText(node.GetFullName(), underline: true)
-                        .WithText(" file got saved.")
-                        .WithButton("Okay")
-                        .Publish();
+            var n = ((DocumentNode)node);
+
+
         }
+
     }
 }

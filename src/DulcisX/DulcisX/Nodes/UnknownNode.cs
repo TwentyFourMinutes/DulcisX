@@ -11,9 +11,6 @@ namespace DulcisX.Nodes
     /// </summary>
     public class UnknownNode : BaseNode
     {
-        /// <inheritdoc/>
-        public override NodeTypes NodeType => NodeTypes.Unknown;
-
         /// <summary>
         /// Initializes a new instance of the <see cref="UnknownNode"/> class.
         /// </summary>

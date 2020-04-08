@@ -8,9 +8,6 @@ namespace DulcisX.Nodes
     /// </summary>
     public class SolutionFolderNode : SolutionItemNode
     {
-        /// <inheritdoc/>
-        public override NodeTypes NodeType => NodeTypes.SolutionFolder;
-
         /// <summary>
         /// Initializes a new instance of the <see cref="SolutionFolderNode"/> class.
         /// </summary>
