@@ -25,14 +25,16 @@ namespace DulcisX.SDKTesting
         {
             await ThreadHelper.JoinableTaskFactory.SwitchToMainThreadAsync();
 
-            this.Solution.OpenNodeEvents.OnSaved.Hook(NodeTypes.Document, OnDocumentSaved);
+            this.SolutionExplorer.OpenNodeEvents.OnSaved.Hook(NodeTypes.Document, OnDocumentSaved);
         }
 
         private async void OnDocumentSaved(IPhysicalNode node)
         {
             var n = ((DocumentNode)node);
 
-            Solution.GetChildren().OfType<SolutionFolderNode>().First().SaveAllChildren();
+            var value = SolutionExplorer.IsInOpenFolderMode();
+
+            var test = UserInterface.ShowMessageBox("test", value.ToString(), MessageBoxButton.Ok);
         }
     }
 }

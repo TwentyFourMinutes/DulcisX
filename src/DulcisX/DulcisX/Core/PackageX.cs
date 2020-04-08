@@ -26,26 +26,6 @@ namespace DulcisX.Core
         /// </summary>
         public event Action OnDisposing;
 
-        private SolutionNode _solution;
-
-        /// <summary>
-        /// Gets the currently open Solution.
-        /// </summary>
-        public SolutionNode Solution
-        {
-            get
-            {
-                if (_solution is null)
-                {
-                    var solution = ServiceContainer.GetCOMInstance<IVsSolution>();
-
-                    _solution = new SolutionNode(solution, this, ServiceContainer);
-                }
-
-                return _solution;
-            }
-        }
-
         private VisualStudioInstance _vsInstance;
 
         /// <summary>
@@ -79,6 +59,24 @@ namespace DulcisX.Core
                 }
 
                 return _userInterface;
+            }
+        }
+
+        private SolutionExplorer _solutionExplorer;
+
+        /// <summary>
+        /// Gets the <see cref="VisualStudioUIInstance"/> of the environment.
+        /// </summary>
+        public SolutionExplorer SolutionExplorer
+        {
+            get
+            {
+                if (_solutionExplorer is null)
+                {
+                    _solutionExplorer = new SolutionExplorer(ServiceContainer);
+                }
+
+                return _solutionExplorer;
             }
         }
 

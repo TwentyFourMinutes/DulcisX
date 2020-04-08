@@ -1,6 +1,5 @@
 using DulcisX.Core.Extensions;
 using DulcisX.Core.Enums;
-using DulcisX.Nodes.Events;
 using Microsoft.VisualStudio;
 using Microsoft.VisualStudio.PlatformUI;
 using Microsoft.VisualStudio.Shell;
@@ -20,54 +19,6 @@ namespace DulcisX.Nodes
     /// </summary>
     public class SolutionNode : SolutionItemNode, IPhysicalNode
     {
-        #region Events
-
-        private ISolutionEvents _solutionEvents;
-
-        /// <summary>
-        /// Provides access to a <see cref="IVsSolutionEvents"/> instance.
-        /// </summary>
-        public ISolutionEvents SolutionEvents
-            => _solutionEvents ?? (_solutionEvents = ServiceContainer.GetInstance<ISolutionEvents>());
-
-        private ISolutionBuildEvents _solutionBuildEvents;
-
-        /// <summary>
-        /// Provides access to a <see cref="IVsSolutionEvents"/> instance.
-        /// </summary>
-        public ISolutionBuildEvents SolutionBuildEvents
-            => _solutionBuildEvents ?? (_solutionBuildEvents = ServiceContainer.GetInstance<ISolutionBuildEvents>());
-
-        private IOpenNodeEvents _openNodeEvents;
-
-        /// <summary>
-        /// Provides access to a <see cref="IOpenNodeEvents"/> instance.
-        /// </summary>
-        public IOpenNodeEvents OpenNodeEvents
-            => _openNodeEvents ?? (_openNodeEvents = ServiceContainer.GetInstance<IOpenNodeEvents>());
-
-        private INodeSelectionEvents _nodeSelectionEvents;
-
-        /// <summary>
-        /// Provides access to a <see cref="INodeSelectionEvents"/> instance.
-        /// </summary>
-        public INodeSelectionEvents NodeSelectionEvents
-            => _nodeSelectionEvents ?? (_nodeSelectionEvents = ServiceContainer.GetInstance<INodeSelectionEvents>());
-
-        private IProjectNodeChangeEvents _projectNodeChangedEvents;
-
-        /// <summary>
-        /// Provides access to a <see cref="IProjectNodeChangeEvents"/> instance.
-        /// </summary>
-        public IProjectNodeChangeEvents ProjectNodeChangedEvents
-            => _projectNodeChangedEvents ?? (_projectNodeChangedEvents = ServiceContainer.GetInstance<IProjectNodeChangeEvents>());
-
-        #endregion
-
-        /// <summary>
-        /// Gets a <see cref="SelectedNodes"/> instance for the current Solution Explorer.
-        /// </summary>
-        public SelectedNodesCollection SelectedNodes { get; }
 
         /// <summary>
         /// Gets the native <see cref="IVsSolution"/> for the current <see cref="SolutionNode"/>.
@@ -111,8 +62,6 @@ namespace DulcisX.Nodes
         /// <param name="container">A Conainer which holds package and user specifc services.</param>
         public SolutionNode(IVsSolution solution, IServiceProviders serviceProviders, Container container) : base(null, (IVsHierarchy)solution, CommonNodeIds.Solution)
         {
-            SelectedNodes = new SelectedNodesCollection(this);
-
             UnderlyingSolution = solution;
             ServiceProviders = serviceProviders;
             ServiceContainer = container;

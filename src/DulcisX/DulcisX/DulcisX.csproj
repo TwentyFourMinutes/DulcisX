@@ -102,6 +102,7 @@
     <Compile Include="Core\IServiceProviders.cs" />
     <Compile Include="Core\PackageConfiguration.cs" />
     <Compile Include="Core\PackageX.cs" />
+    <Compile Include="Core\SolutionExplorer.cs" />
     <Compile Include="Core\VisualStudioInstance.cs" />
     <Compile Include="Core\VisualStudioUIInstance.cs" />
     <Compile Include="Exceptions\InvalidHierarchyItemException.cs" />
@@ -145,7 +146,7 @@
     <Compile Include="Nodes\SelectedNodesCollection.cs" />
     <Compile Include="Nodes\SolutionItemNode.cs" />
     <Compile Include="Nodes\SolutionNode.cs" />
-    <Compile Include="Nodes\SolutionNodeConfiguration.cs" />
+    <Compile Include="Core\SolutionExplorerConfiguration.cs" />
     <Compile Include="Nodes\UnknownNode.cs" />
     <Compile Include="Nodes\SolutionFolderNode.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
