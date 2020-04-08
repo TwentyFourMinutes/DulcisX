@@ -15,5 +15,9 @@ namespace DulcisX.Core.Enums
         /// Represents a HResult which indicates the generic failure of a native method.
         /// </summary>
         public const int Failure = VSConstants.E_FAIL;
+        /// <summary>
+        /// Represents a HResult which indicates that a method is not implemented.
+        /// </summary>
+        public const int NotImplemented = VSConstants.E_NOTIMPL;
     }
 }

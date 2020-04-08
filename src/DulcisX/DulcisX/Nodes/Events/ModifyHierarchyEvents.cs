@@ -58,7 +58,7 @@ namespace DulcisX.Nodes
 
         public int OnItemsAppended(uint itemidParent)
         {
-            return CommonStatusCodes.Success;
+            return CommonStatusCodes.NotImplemented;
         }
 
         public int OnItemDeleted(uint itemid)
@@ -77,12 +77,12 @@ namespace DulcisX.Nodes
 
         public int OnInvalidateItems(uint itemidParent)
         {
-            return CommonStatusCodes.Success;
+            return CommonStatusCodes.NotImplemented;
         }
 
         public int OnInvalidateIcon(IntPtr hicon)
         {
-            return CommonStatusCodes.Success;
+            return CommonStatusCodes.NotImplemented;
         }
 
         private void HandleHierarchyChange(uint itemId)

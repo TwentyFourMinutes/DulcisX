@@ -32,12 +32,12 @@ namespace DulcisX.Nodes.Events
 
         public int OnElementValueChanged(uint elementid, object varValueOld, object varValueNew)
         {
-            return CommonStatusCodes.Success;
+            return CommonStatusCodes.NotImplemented;
         }
 
         public int OnCmdUIContextChanged(uint dwCmdUICookie, int fActive)
         {
-            return CommonStatusCodes.Success;
+            return CommonStatusCodes.NotImplemented;
         }
 
         internal static INodeSelectionEvents Create(SolutionNode solution)

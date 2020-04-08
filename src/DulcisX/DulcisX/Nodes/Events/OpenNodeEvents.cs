@@ -94,7 +94,7 @@ namespace DulcisX.Nodes.Events
         }
 
         public int OnAfterAttributeChange(uint docCookie, uint grfAttribs)
-            => CommonStatusCodes.Success;
+            => CommonStatusCodes.NotImplemented;
 
         public int OnBeforeDocumentWindowShow(uint docCookie, int fFirstShow, IVsWindowFrame pFrame)
         {

@@ -67,24 +67,24 @@ namespace DulcisX.Nodes.Events
 
         public int OnBeforeBackgroundSolutionLoadBegins()
         {
-            return CommonStatusCodes.Success;
+            return CommonStatusCodes.NotImplemented;
         }
 
         public int OnQueryBackgroundLoadProjectBatch(out bool pfShouldDelayLoadToNextIdle)
         {
             pfShouldDelayLoadToNextIdle = false;
 
-            return CommonStatusCodes.Success;
+            return CommonStatusCodes.NotImplemented;
         }
 
         public int OnBeforeLoadProjectBatch(bool fIsBackgroundIdleBatch)
         {
-            return CommonStatusCodes.Success;
+            return CommonStatusCodes.NotImplemented;
         }
 
         public int OnAfterLoadProjectBatch(bool fIsBackgroundIdleBatch)
         {
-            return CommonStatusCodes.Success;
+            return CommonStatusCodes.NotImplemented;
         }
 
         public int OnAfterBackgroundSolutionLoadComplete()
@@ -241,17 +241,17 @@ namespace DulcisX.Nodes.Events
 
         public int OnQueryChangeProjectParent(IVsHierarchy pHierarchy, IVsHierarchy pNewParentHier, ref int pfCancel)
         {
-            return CommonStatusCodes.Success;
+            return CommonStatusCodes.NotImplemented;
         }
 
         public int OnAfterChangeProjectParent(IVsHierarchy pHierarchy)
         {
-            return CommonStatusCodes.Success;
+            return CommonStatusCodes.NotImplemented;
         }
 
         public int OnAfterAsynchOpenProject(IVsHierarchy pHierarchy, int fAdded)
         {
-            return CommonStatusCodes.Success;
+            return CommonStatusCodes.NotImplemented;
         }
 
         public void OnAfterRenameSolution(string oldName, string newName)

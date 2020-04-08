@@ -126,12 +126,12 @@ namespace DulcisX.Nodes.Events
 
         public int OnAfterRemoveFiles(int cProjects, int cFiles, IVsProject[] rgpProjects, int[] rgFirstIndices, string[] rgpszMkDocuments, VSREMOVEFILEFLAGS[] rgFlags)
         {
-            return CommonStatusCodes.Success;
+            return CommonStatusCodes.NotImplemented;
         }
 
         public int OnAfterRemoveDirectories(int cProjects, int cDirectories, IVsProject[] rgpProjects, int[] rgFirstIndices, string[] rgpszMkDocuments, VSREMOVEDIRECTORYFLAGS[] rgFlags)
         {
-            return CommonStatusCodes.Success;
+            return CommonStatusCodes.NotImplemented;
         }
 
         #endregion
