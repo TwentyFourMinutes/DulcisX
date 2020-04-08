@@ -349,30 +349,6 @@ namespace DulcisX.Nodes
             }
         }
 
-        internal uint GetDocumentCookie(DocumentNode document)
-        {
-            ThreadHelper.ThrowIfNotOnUIThread();
-
-            var result = UnderlyingProject.GetMkDocument(document.ItemId, out var fullName);
-
-            ErrorHandler.ThrowOnFailure(result);
-
-            return ((IVsRunningDocumentTable4)ParentSolution.RunningDocumentTable).GetDocumentCookie(fullName);
-        }
-
-        /// <summary>
-        /// Saves the project file and all children within the current <see cref="ProjectNode"/>.
-        /// </summary>
-        /// <param name="forceSave">Determines whether to force the file save operation or not.</param>
-        public void SaveAllChildren(bool forceSave = false)
-        {
-            ThreadHelper.ThrowIfNotOnUIThread();
-
-            var result = ParentSolution.UnderlyingSolution.SaveSolutionElement(forceSave ? (uint)__VSSLNSAVEOPTIONS.SLNSAVEOPT_ForceSave : (uint)__VSSLNSAVEOPTIONS.SLNSAVEOPT_SaveIfDirty, UnderlyingHierarchy, 0);
-
-            ErrorHandler.ThrowOnFailure(result);
-        }
-
         public DocumentNode MoveNodeInsideProject(FolderNode destination, DocumentNode node)
             => MoveNodeInsideProject(node, Path.Combine(destination.GetFullName(), node.GetFileName()));
         internal DocumentNode MoveNodeInsideProject(DocumentNode node, string newFullName)

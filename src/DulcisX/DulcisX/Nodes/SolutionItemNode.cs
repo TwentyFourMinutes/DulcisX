@@ -9,6 +9,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
+using Microsoft.VisualStudio;
 
 namespace DulcisX.Nodes
 {
@@ -89,6 +90,19 @@ namespace DulcisX.Nodes
             filteredItems.Dispose();
 
             return filteredNodes;
+        }
+
+        /// <summary>
+        /// Saves the files and all children within the current <see cref="SolutionItemNode"/>.
+        /// </summary>
+        /// <param name="forceSave">Determines whether to force the file save operation or not.</param>
+        public virtual void SaveAllChildren(bool forceSave = false)
+        {
+            ThreadHelper.ThrowIfNotOnUIThread();
+
+            var result = ParentSolution.UnderlyingSolution.SaveSolutionElement(forceSave ? (uint)__VSSLNSAVEOPTIONS.SLNSAVEOPT_ForceSave : (uint)__VSSLNSAVEOPTIONS.SLNSAVEOPT_SaveIfDirty, UnderlyingHierarchy, 0);
+
+            ErrorHandler.ThrowOnFailure(result);
         }
     }
 }

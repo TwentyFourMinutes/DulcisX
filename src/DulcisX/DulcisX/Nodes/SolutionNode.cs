@@ -316,7 +316,7 @@ namespace DulcisX.Nodes
         /// Saves the solution file and all children within the current <see cref="SolutionNode"/>.
         /// </summary>
         /// <param name="forceSave">Determines whether to force the file save operation or not.</param>
-        public void SaveAllChildren(bool forceSave = false)
+        public override void SaveAllChildren(bool forceSave = false)
         {
             ThreadHelper.ThrowIfNotOnUIThread();
 
@@ -339,6 +339,17 @@ namespace DulcisX.Nodes
             {
                 throw new ArgumentException("The provided node is not a child of the Project.", nameof(node));
             }
+        }
+
+        internal uint GetDocumentCookie(DocumentNode document)
+        {
+            ThreadHelper.ThrowIfNotOnUIThread();
+
+            var result = document.GetParentProject().UnderlyingProject.GetMkDocument(document.ItemId, out var fullName);
+
+            ErrorHandler.ThrowOnFailure(result);
+
+            return ((IVsRunningDocumentTable4)RunningDocumentTable).GetDocumentCookie(fullName);
         }
     }
 }

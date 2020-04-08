@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PackageManifest Version="2.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2011" xmlns:d="http://schemas.microsoft.com/developer/vsx-schema-design/2011">
     <Metadata>
-        <Identity Id="DulcisX.SDKTesting.a1409631-97dc-4cc9-9ef0-f381dfc73ae9" Version="1.4" Language="en-US" Publisher="Paul HAGSPIEL" />
+        <Identity Id="DulcisX.SDKTesting.a1409631-97dc-4cc9-9ef0-f381dfc73ae9" Version="1.5" Language="en-US" Publisher="Twenty" />
         <DisplayName>DulcisX.SDKTesting</DisplayName>
         <Description xml:space="preserve">Empty VSIX Project.</Description>
     </Metadata>

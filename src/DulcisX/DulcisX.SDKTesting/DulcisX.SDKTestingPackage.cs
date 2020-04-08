@@ -1,4 +1,4 @@
-﻿using DulcisX.Core;
+using DulcisX.Core;
 using DulcisX.Core.Enums;
 using DulcisX.Nodes;
 using EnvDTE;
@@ -28,15 +28,7 @@ namespace DulcisX.SDKTesting
         {
             await ThreadHelper.JoinableTaskFactory.SwitchToMainThreadAsync();
 
-            this.Solution.OpenNodeEvents.OnSaved.Hook(NodeTypes.Document, OnDocumentSaved);
-        }
-
-        private async void OnDocumentSaved(IPhysicalNode node)
-        {
-            var n = ((DocumentNode)node);
-
 
         }
-
     }
 }

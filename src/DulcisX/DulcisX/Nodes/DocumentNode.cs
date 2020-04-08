@@ -128,7 +128,7 @@ namespace DulcisX.Nodes
         {
             ThreadHelper.ThrowIfNotOnUIThread();
 
-            var docCookie = GetParentProject().GetDocumentCookie(this);
+            var docCookie = GetDocumentCookie();
 
             return ((IVsRunningDocumentTable3)ParentSolution.RunningDocumentTable).IsDocumentDirty(docCookie);
         }
@@ -141,7 +141,7 @@ namespace DulcisX.Nodes
         {
             ThreadHelper.ThrowIfNotOnUIThread();
 
-            var docCookie = GetParentProject().GetDocumentCookie(this);
+            var docCookie = GetDocumentCookie();
 
             return ((IVsRunningDocumentTable3)ParentSolution.RunningDocumentTable).IsDocumentReadOnly(docCookie);
         }
@@ -154,7 +154,7 @@ namespace DulcisX.Nodes
         {
             ThreadHelper.ThrowIfNotOnUIThread();
 
-            var result = ParentSolution.UnderlyingSolution.SaveSolutionElement(forceSave ? (uint)__VSSLNSAVEOPTIONS.SLNSAVEOPT_ForceSave : (uint)__VSSLNSAVEOPTIONS.SLNSAVEOPT_SaveIfDirty, UnderlyingHierarchy, GetParentProject().GetDocumentCookie(this));
+            var result = ParentSolution.UnderlyingSolution.SaveSolutionElement(forceSave ? (uint)__VSSLNSAVEOPTIONS.SLNSAVEOPT_ForceSave : (uint)__VSSLNSAVEOPTIONS.SLNSAVEOPT_SaveIfDirty, UnderlyingHierarchy, GetDocumentCookie());
 
             ErrorHandler.ThrowOnFailure(result);
         }
@@ -183,6 +183,13 @@ namespace DulcisX.Nodes
                 default:
                     return DocumentType.Text;
             }
+        }
+
+        internal uint GetDocumentCookie()
+        {
+            ThreadHelper.ThrowIfNotOnUIThread();
+
+            return ParentSolution.GetDocumentCookie(this);
         }
     }
 }
