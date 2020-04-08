@@ -86,7 +86,7 @@
     <Compile Include="Core\Enums\StartupOption.cs" />
     <Compile Include="Core\Enums\CommonNodeIds.cs" />
     <Compile Include="Core\Enums\CommonStatusCodes.cs" />
-    <Compile Include="Core\Enums\CommonStreamKeys.cs" />
+    <Compile Include="Core\Enums\CommonStreamKey.cs" />
     <Compile Include="Core\Enums\OpenNodeAttribute.cs" />
     <Compile Include="Core\Enums\PhysicalNodeRemovedFlags.cs" />
     <Compile Include="Core\EventSink.cs" />

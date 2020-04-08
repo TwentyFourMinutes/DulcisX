@@ -11,6 +11,7 @@ using System.Collections.Generic;
 using DulcisX.Core.Components;
 using System.IO;
 using DulcisX.Core;
+using StringyEnums;
 
 namespace DulcisX.Nodes
 {
@@ -211,7 +212,7 @@ namespace DulcisX.Nodes
 
             var solutionConfiguration = new SolutionConfigurationOptions();
 
-            LoadUserConfiguration(solutionConfiguration, CommonStreamKeys.SolutionConfiguration);
+            LoadUserConfiguration(solutionConfiguration, CommonStreamKey.SolutionConfiguration.GetRepresentation());
 
             if (solutionConfiguration.IsMultiStartup)
             {
@@ -272,7 +273,7 @@ namespace DulcisX.Nodes
         /// Loads the user configuration specified in the .suo file.
         /// </summary>
         /// <param name="persistanceSolutionOptions">The <see cref="IVsPersistSolutionOpts"/> instance which handels all persistance operations.</param>
-        /// <param name="streamKey">The identifier for the stream to load. Usually any of the values in the <see cref="CommonStreamKeys"/> class.</param>
+        /// <param name="streamKey">The identifier for the stream to load. Usually any of the values in the <see cref="CommonStreamKey"/> class.</param>
         public void LoadUserConfiguration(IVsPersistSolutionOpts persistanceSolutionOptions, string streamKey)
         {
             ThreadHelper.ThrowIfNotOnUIThread();
