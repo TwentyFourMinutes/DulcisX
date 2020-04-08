@@ -1,18 +1,79 @@
-﻿using DulcisX.Core.Enums;
+﻿using DulcisX.Core.Components;
+using DulcisX.Core.Enums;
+using DulcisX.Core.Extensions;
 using Microsoft.VisualStudio;
 using Microsoft.VisualStudio.Shell;
 using Microsoft.VisualStudio.Shell.Interop;
+using SimpleInjector;
 using System;
 
 namespace DulcisX.Core
 {
     public class VisualStudioUIInstance
     {
+        private IVsStatusbar _statusBar;
+
+        /// <summary>
+        /// Gets the <see cref="IVsStatusbar"/> of the environment.
+        /// </summary>
+        public IVsStatusbar StatusBar
+        {
+            get
+            {
+                if (_statusBar is null)
+                {
+                    _statusBar = _serviceContainer.GetCOMInstance<IVsStatusbar>();
+                }
+
+                return _statusBar;
+            }
+        }
+
+        private InfoBar _infoBar;
+
+        /// <summary>
+        /// Gets the InfoBar of the environment.
+        /// </summary>
+        public InfoBar InfoBar
+        {
+            get
+            {
+                if (_infoBar is null)
+                {
+                    _infoBar = new InfoBar(_serviceContainer.GetCOMInstance<IVsInfoBarUIFactory>(),
+                                           _serviceContainer.GetCOMInstance<IVsInfoBarHost>(),
+                                           WebBrowser);
+                }
+
+                return _infoBar;
+            }
+        }
+
+        private WebBrowser _webBrowser;
+
+        /// <summary>
+        /// Gets the WebBrowser of the environment.
+        /// </summary>
+        public WebBrowser WebBrowser
+        {
+            get
+            {
+                if (_webBrowser is null)
+                {
+                    _webBrowser = new WebBrowser(_serviceContainer.GetCOMInstance<IVsWebBrowsingService>());
+                }
+
+                return _webBrowser;
+            }
+        }
+
+        private readonly Container _serviceContainer;
         private readonly IVsUIShell _shell;
 
-        internal VisualStudioUIInstance(IVsUIShell shell)
+        internal VisualStudioUIInstance(Container container)
         {
-            _shell = shell;
+            _serviceContainer = container;
+            _shell = _serviceContainer.GetCOMInstance<IVsUIShell>();
         }
 
         public MessageBoxResult ShowMessageBox(string title, string message, MessageBoxButton buttons, int selectedButtonIndex = 0, MessageBoxIcon icon = MessageBoxIcon.Info)

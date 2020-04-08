@@ -1,4 +1,3 @@
-using DulcisX.Core.Components;
 using DulcisX.Core.Extensions;
 using DulcisX.Nodes;
 using Microsoft.VisualStudio.Shell;
@@ -47,62 +46,6 @@ namespace DulcisX.Core
             }
         }
 
-        private IVsStatusbar _statusBar;
-
-        /// <summary>
-        /// Gets the <see cref="IVsStatusbar"/> of the environment.
-        /// </summary>
-        public IVsStatusbar StatusBar
-        {
-            get
-            {
-                if (_statusBar is null)
-                {
-                    _statusBar = ServiceContainer.GetCOMInstance<IVsStatusbar>();
-                }
-
-                return _statusBar;
-            }
-        }
-
-        private InfoBar _infoBar;
-
-        /// <summary>
-        /// Gets the InfoBar of the environment.
-        /// </summary>
-        public InfoBar InfoBar
-        {
-            get
-            {
-                if (_infoBar is null)
-                {
-                    _infoBar = new InfoBar(ServiceContainer.GetCOMInstance<IVsInfoBarUIFactory>(),
-                                           ServiceContainer.GetCOMInstance<IVsInfoBarHost>(),
-                                           WebBrowser);
-                }
-
-                return _infoBar;
-            }
-        }
-
-        private WebBrowser _webBrowser;
-
-        /// <summary>
-        /// Gets the WebBrowser of the environment.
-        /// </summary>
-        public WebBrowser WebBrowser
-        {
-            get
-            {
-                if (_webBrowser is null)
-                {
-                    _webBrowser = new WebBrowser(ServiceContainer.GetCOMInstance<IVsWebBrowsingService>());
-                }
-
-                return _webBrowser;
-            }
-        }
-
         private VisualStudioInstance _vsInstance;
 
         /// <summary>
@@ -114,28 +57,28 @@ namespace DulcisX.Core
             {
                 if (_vsInstance is null)
                 {
-                    _vsInstance = new VisualStudioInstance(ServiceContainer.GetCOMInstance<IVsShell>());
+                    _vsInstance = new VisualStudioInstance(ServiceContainer);
                 }
 
                 return _vsInstance;
             }
         }
 
-        private VisualStudioUIInstance _vsUIInstance;
+        private VisualStudioUIInstance _userInterface;
 
         /// <summary>
         /// Gets the <see cref="VisualStudioUIInstance"/> of the environment.
         /// </summary>
-        public VisualStudioUIInstance VSUIInstance
+        public VisualStudioUIInstance UserInterface
         {
             get
             {
-                if (_vsUIInstance is null)
+                if (_userInterface is null)
                 {
-                    _vsUIInstance = new VisualStudioUIInstance(ServiceContainer.GetCOMInstance<IVsUIShell>());
+                    _userInterface = new VisualStudioUIInstance(ServiceContainer);
                 }
 
-                return _vsUIInstance;
+                return _userInterface;
             }
         }
 

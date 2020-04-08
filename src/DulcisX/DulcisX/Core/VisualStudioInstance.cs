@@ -1,6 +1,8 @@
-﻿using Microsoft.VisualStudio;
+﻿using DulcisX.Core.Extensions;
+using Microsoft.VisualStudio;
 using Microsoft.VisualStudio.Shell;
 using Microsoft.VisualStudio.Shell.Interop;
+using SimpleInjector;
 
 namespace DulcisX.Core
 {
@@ -9,11 +11,13 @@ namespace DulcisX.Core
     /// </summary>
     public class VisualStudioInstance
     {
+        private readonly Container _serviceContainer;
         private readonly IVsShell _shell;
 
-        internal VisualStudioInstance(IVsShell shell)
+        internal VisualStudioInstance(Container container)
         {
-            _shell = shell;
+            _serviceContainer = container;
+            _shell = _serviceContainer.GetCOMInstance<IVsShell>();
         }
 
         /// <summary>

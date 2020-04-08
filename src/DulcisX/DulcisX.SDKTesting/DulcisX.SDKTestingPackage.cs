@@ -1,11 +1,8 @@
 using DulcisX.Core;
 using DulcisX.Core.Enums;
 using DulcisX.Nodes;
-using EnvDTE;
-using EnvDTE80;
 using Microsoft.VisualStudio;
 using Microsoft.VisualStudio.Shell;
-using Microsoft.VisualStudio.Shell.Interop;
 using System;
 using System.Linq;
 using System.Runtime.InteropServices;
@@ -28,7 +25,14 @@ namespace DulcisX.SDKTesting
         {
             await ThreadHelper.JoinableTaskFactory.SwitchToMainThreadAsync();
 
+            this.Solution.OpenNodeEvents.OnSaved.Hook(NodeTypes.Document, OnDocumentSaved);
+        }
 
+        private async void OnDocumentSaved(IPhysicalNode node)
+        {
+            var n = ((DocumentNode)node);
+
+            Solution.GetChildren().OfType<SolutionFolderNode>().First().SaveAllChildren();
         }
     }
 }

@@ -1,7 +1,6 @@
 ﻿using DulcisX.Core.Enums;
 using DulcisX.Exceptions;
 using DulcisX.Nodes;
-using EnvDTE;
 using EnvDTE80;
 
 namespace DulcisX.Core.Extensions
