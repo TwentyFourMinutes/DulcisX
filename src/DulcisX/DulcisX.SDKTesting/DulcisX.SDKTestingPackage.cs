@@ -30,11 +30,7 @@ namespace DulcisX.SDKTesting
 
         private async void OnDocumentSaved(IPhysicalNode node)
         {
-            var n = ((DocumentNode)node);
-
-            var value = SolutionExplorer.IsInOpenFolderMode();
-
-            var test = UserInterface.ShowMessageBox("test", value.ToString(), MessageBoxButton.Ok);
+            SolutionExplorer.CloseSolution();
         }
     }
 }

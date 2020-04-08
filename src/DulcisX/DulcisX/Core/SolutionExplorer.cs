@@ -1,10 +1,13 @@
 ﻿using DulcisX.Core.Extensions;
+using DulcisX.Helpers;
 using DulcisX.Nodes;
 using DulcisX.Nodes.Events;
 using Microsoft.VisualStudio;
 using Microsoft.VisualStudio.Shell;
 using Microsoft.VisualStudio.Shell.Interop;
+using Microsoft.Win32;
 using SimpleInjector;
+using System.IO;
 
 namespace DulcisX.Core
 {
@@ -109,6 +112,64 @@ namespace DulcisX.Core
             ErrorHandler.ThrowOnFailure(result);
 
             return (bool)isOpenFolderModeObj;
+        }
+
+        public void OpenSolution(string fullName)
+        {
+            ThreadHelper.ThrowIfNotOnUIThread();
+
+            if (!File.Exists(fullName))
+            {
+                throw new FileNotFoundException("The specified soltion could not be found.", fullName);
+            }
+
+            var result = _solutionBase.OpenSolutionFile(0, fullName);
+
+            ErrorHandler.ThrowOnFailure(result);
+        }
+
+        public bool TryOpenSolutionWithDialog(string startDirectory, bool solutionAsFilter = true)
+        {
+            ThreadHelper.ThrowIfNotOnUIThread();
+
+            if (!Directory.Exists(startDirectory))
+            {
+                throw new DirectoryNotFoundException("The specified directory could not be found.");
+            }
+
+            var result = _solutionBase.OpenSolutionViaDlg(startDirectory, VsConverter.FromBoolean(solutionAsFilter));
+
+            return ErrorHandler.Succeeded(result);
+        }
+
+        public bool TryOpenSolutionWithDialog(OpenFileDialog fileDialog)
+        {
+            ThreadHelper.ThrowIfNotOnUIThread();
+
+            var success = fileDialog.ShowDialog();
+
+            if (!success.HasValue || !success.Value)
+            {
+                return false;
+            }
+
+            if (!File.Exists(fileDialog.FileName))
+            {
+                throw new FileNotFoundException("The specified file could not be found.", fileDialog.FileName);
+            }
+
+            var result = _solutionBase.OpenSolutionFile(0, fileDialog.FileName);
+
+            return ErrorHandler.Succeeded(result);
+        }
+
+        public void CloseSolution()
+        {
+            ThreadHelper.ThrowIfNotOnUIThread();
+
+            var result = _solutionBase.CloseSolutionElement((uint)__VSSLNCLOSEOPTIONS.SLNCLOSEOPT_SLNSAVEOPT_MASK, null, 0);
+
+            ErrorHandler.ThrowOnFailure(result);
         }
     }
 }

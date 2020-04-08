@@ -19,5 +19,7 @@ namespace DulcisX.Core.Enums
         /// Represents a HResult which indicates that a method is not implemented.
         /// </summary>
         public const int NotImplemented = VSConstants.E_NOTIMPL;
+
+        public const int CanceledByUser = VSConstants.OLE_E_PROMPTSAVECANCELLED;
     }
 }
