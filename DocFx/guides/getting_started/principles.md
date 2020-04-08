@@ -9,13 +9,13 @@ title: DulcisX Principles
 
 All nodes provided by DuclisX **only represent the current position of the node in the Hierarchy**. This means that when a document gets renamed or the location gets changed, **the given instance becomes invalid**.
 
-**Also comparing Nodes is not save**. DuclisX doesn't cache any Nodes nor any of its properties. A Node returned by an event will never be the same as any other instance of a Node returned by a method or other class members.
+**Also comparing Nodes by reference is not save**. DuclisX doesn't cache any Nodes nor any of its properties. A Node returned by an event will never be the same as any other instance of a Node returned by a method or other class members.
 
 > [!NOTE]
-> If you want to still compare two nodes with each other, you can either try comparing the results of `GetFullPath` for `IPhysicalNodes` or comparing the `ItemId` and the `UnderlyingHierarchy`.
+> However comparing two Nodes with each other using the `==` operator or the `Equals` method returns true, of course only if the Nodes are identical in terms of the location in the Solution Explorer. Though it won't guarantee reference equality for the reasons named above.
 
 > [!NOTE]
-> The `SoltionNode` class is the only Node, which will always update itself on changes to itself. Therefore comparing two Solution instances returned by DulcisX are _always_ equal. 
+> The `SoltionNode` class is the only Node, which will always update itself on changes to itself. Therefore comparing two Solution references returned by DulcisX are _always_ equal. 
 
 ## Creation of Objects
 

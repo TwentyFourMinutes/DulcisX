@@ -29,6 +29,7 @@ items:
     content: 'public interface IMoreContentInfoMessageBuilder : IContentInfoMessageBuilder, IButtonInfoMessageBuilder, IButtonIdentifierInfoMessageBuilder'
     content.vb: >-
       Public Interface IMoreContentInfoMessageBuilder
+
           Inherits IContentInfoMessageBuilder, IButtonInfoMessageBuilder, IButtonIdentifierInfoMessageBuilder
   inheritedMembers:
   - DulcisX.Core.Components.IContentInfoMessageBuilder.WithText(System.String,System.Boolean,System.Boolean,System.Boolean)

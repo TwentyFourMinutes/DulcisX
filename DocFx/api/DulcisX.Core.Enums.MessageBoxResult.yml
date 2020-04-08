@@ -1,0 +1,409 @@
+### YamlMime:ManagedReference
+items:
+- uid: DulcisX.Core.Enums.MessageBoxResult
+  commentId: T:DulcisX.Core.Enums.MessageBoxResult
+  id: MessageBoxResult
+  parent: DulcisX.Core.Enums
+  children:
+  - DulcisX.Core.Enums.MessageBoxResult.Abort
+  - DulcisX.Core.Enums.MessageBoxResult.Cancel
+  - DulcisX.Core.Enums.MessageBoxResult.Close
+  - DulcisX.Core.Enums.MessageBoxResult.Continue
+  - DulcisX.Core.Enums.MessageBoxResult.Help
+  - DulcisX.Core.Enums.MessageBoxResult.Ignore
+  - DulcisX.Core.Enums.MessageBoxResult.No
+  - DulcisX.Core.Enums.MessageBoxResult.Ok
+  - DulcisX.Core.Enums.MessageBoxResult.Retry
+  - DulcisX.Core.Enums.MessageBoxResult.TryAgain
+  - DulcisX.Core.Enums.MessageBoxResult.Yes
+  langs:
+  - csharp
+  - vb
+  name: MessageBoxResult
+  nameWithType: MessageBoxResult
+  fullName: DulcisX.Core.Enums.MessageBoxResult
+  type: Enum
+  source:
+    remote:
+      path: src/DulcisX/DulcisX/Core/Enums/MessageBoxResult.cs
+      branch: master
+      repo: https://github.com/TwentyFourMinutes/DulcisX.git
+    id: MessageBoxResult
+    path: ../../DulcisX - master/src/DulcisX/DulcisX/Core/Enums/MessageBoxResult.cs
+    startLine: 2
+  assemblies:
+  - DulcisX
+  namespace: DulcisX.Core.Enums
+  syntax:
+    content: public enum MessageBoxResult
+    content.vb: Public Enum MessageBoxResult
+  modifiers.csharp:
+  - public
+  - enum
+  modifiers.vb:
+  - Public
+  - Enum
+- uid: DulcisX.Core.Enums.MessageBoxResult.Ok
+  commentId: F:DulcisX.Core.Enums.MessageBoxResult.Ok
+  id: Ok
+  parent: DulcisX.Core.Enums.MessageBoxResult
+  langs:
+  - csharp
+  - vb
+  name: Ok
+  nameWithType: MessageBoxResult.Ok
+  fullName: DulcisX.Core.Enums.MessageBoxResult.Ok
+  type: Field
+  source:
+    remote:
+      path: src/DulcisX/DulcisX/Core/Enums/MessageBoxResult.cs
+      branch: master
+      repo: https://github.com/TwentyFourMinutes/DulcisX.git
+    id: Ok
+    path: ../../DulcisX - master/src/DulcisX/DulcisX/Core/Enums/MessageBoxResult.cs
+    startLine: 4
+  assemblies:
+  - DulcisX
+  namespace: DulcisX.Core.Enums
+  syntax:
+    content: Ok = 1
+    return:
+      type: DulcisX.Core.Enums.MessageBoxResult
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: DulcisX.Core.Enums.MessageBoxResult.Cancel
+  commentId: F:DulcisX.Core.Enums.MessageBoxResult.Cancel
+  id: Cancel
+  parent: DulcisX.Core.Enums.MessageBoxResult
+  langs:
+  - csharp
+  - vb
+  name: Cancel
+  nameWithType: MessageBoxResult.Cancel
+  fullName: DulcisX.Core.Enums.MessageBoxResult.Cancel
+  type: Field
+  source:
+    remote:
+      path: src/DulcisX/DulcisX/Core/Enums/MessageBoxResult.cs
+      branch: master
+      repo: https://github.com/TwentyFourMinutes/DulcisX.git
+    id: Cancel
+    path: ../../DulcisX - master/src/DulcisX/DulcisX/Core/Enums/MessageBoxResult.cs
+    startLine: 5
+  assemblies:
+  - DulcisX
+  namespace: DulcisX.Core.Enums
+  syntax:
+    content: Cancel = 2
+    return:
+      type: DulcisX.Core.Enums.MessageBoxResult
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: DulcisX.Core.Enums.MessageBoxResult.Abort
+  commentId: F:DulcisX.Core.Enums.MessageBoxResult.Abort
+  id: Abort
+  parent: DulcisX.Core.Enums.MessageBoxResult
+  langs:
+  - csharp
+  - vb
+  name: Abort
+  nameWithType: MessageBoxResult.Abort
+  fullName: DulcisX.Core.Enums.MessageBoxResult.Abort
+  type: Field
+  source:
+    remote:
+      path: src/DulcisX/DulcisX/Core/Enums/MessageBoxResult.cs
+      branch: master
+      repo: https://github.com/TwentyFourMinutes/DulcisX.git
+    id: Abort
+    path: ../../DulcisX - master/src/DulcisX/DulcisX/Core/Enums/MessageBoxResult.cs
+    startLine: 6
+  assemblies:
+  - DulcisX
+  namespace: DulcisX.Core.Enums
+  syntax:
+    content: Abort = 3
+    return:
+      type: DulcisX.Core.Enums.MessageBoxResult
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: DulcisX.Core.Enums.MessageBoxResult.Retry
+  commentId: F:DulcisX.Core.Enums.MessageBoxResult.Retry
+  id: Retry
+  parent: DulcisX.Core.Enums.MessageBoxResult
+  langs:
+  - csharp
+  - vb
+  name: Retry
+  nameWithType: MessageBoxResult.Retry
+  fullName: DulcisX.Core.Enums.MessageBoxResult.Retry
+  type: Field
+  source:
+    remote:
+      path: src/DulcisX/DulcisX/Core/Enums/MessageBoxResult.cs
+      branch: master
+      repo: https://github.com/TwentyFourMinutes/DulcisX.git
+    id: Retry
+    path: ../../DulcisX - master/src/DulcisX/DulcisX/Core/Enums/MessageBoxResult.cs
+    startLine: 7
+  assemblies:
+  - DulcisX
+  namespace: DulcisX.Core.Enums
+  syntax:
+    content: Retry = 4
+    return:
+      type: DulcisX.Core.Enums.MessageBoxResult
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: DulcisX.Core.Enums.MessageBoxResult.Ignore
+  commentId: F:DulcisX.Core.Enums.MessageBoxResult.Ignore
+  id: Ignore
+  parent: DulcisX.Core.Enums.MessageBoxResult
+  langs:
+  - csharp
+  - vb
+  name: Ignore
+  nameWithType: MessageBoxResult.Ignore
+  fullName: DulcisX.Core.Enums.MessageBoxResult.Ignore
+  type: Field
+  source:
+    remote:
+      path: src/DulcisX/DulcisX/Core/Enums/MessageBoxResult.cs
+      branch: master
+      repo: https://github.com/TwentyFourMinutes/DulcisX.git
+    id: Ignore
+    path: ../../DulcisX - master/src/DulcisX/DulcisX/Core/Enums/MessageBoxResult.cs
+    startLine: 8
+  assemblies:
+  - DulcisX
+  namespace: DulcisX.Core.Enums
+  syntax:
+    content: Ignore = 5
+    return:
+      type: DulcisX.Core.Enums.MessageBoxResult
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: DulcisX.Core.Enums.MessageBoxResult.Yes
+  commentId: F:DulcisX.Core.Enums.MessageBoxResult.Yes
+  id: Yes
+  parent: DulcisX.Core.Enums.MessageBoxResult
+  langs:
+  - csharp
+  - vb
+  name: Yes
+  nameWithType: MessageBoxResult.Yes
+  fullName: DulcisX.Core.Enums.MessageBoxResult.Yes
+  type: Field
+  source:
+    remote:
+      path: src/DulcisX/DulcisX/Core/Enums/MessageBoxResult.cs
+      branch: master
+      repo: https://github.com/TwentyFourMinutes/DulcisX.git
+    id: Yes
+    path: ../../DulcisX - master/src/DulcisX/DulcisX/Core/Enums/MessageBoxResult.cs
+    startLine: 9
+  assemblies:
+  - DulcisX
+  namespace: DulcisX.Core.Enums
+  syntax:
+    content: Yes = 6
+    return:
+      type: DulcisX.Core.Enums.MessageBoxResult
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: DulcisX.Core.Enums.MessageBoxResult.No
+  commentId: F:DulcisX.Core.Enums.MessageBoxResult.No
+  id: No
+  parent: DulcisX.Core.Enums.MessageBoxResult
+  langs:
+  - csharp
+  - vb
+  name: No
+  nameWithType: MessageBoxResult.No
+  fullName: DulcisX.Core.Enums.MessageBoxResult.No
+  type: Field
+  source:
+    remote:
+      path: src/DulcisX/DulcisX/Core/Enums/MessageBoxResult.cs
+      branch: master
+      repo: https://github.com/TwentyFourMinutes/DulcisX.git
+    id: No
+    path: ../../DulcisX - master/src/DulcisX/DulcisX/Core/Enums/MessageBoxResult.cs
+    startLine: 10
+  assemblies:
+  - DulcisX
+  namespace: DulcisX.Core.Enums
+  syntax:
+    content: No = 7
+    return:
+      type: DulcisX.Core.Enums.MessageBoxResult
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: DulcisX.Core.Enums.MessageBoxResult.Close
+  commentId: F:DulcisX.Core.Enums.MessageBoxResult.Close
+  id: Close
+  parent: DulcisX.Core.Enums.MessageBoxResult
+  langs:
+  - csharp
+  - vb
+  name: Close
+  nameWithType: MessageBoxResult.Close
+  fullName: DulcisX.Core.Enums.MessageBoxResult.Close
+  type: Field
+  source:
+    remote:
+      path: src/DulcisX/DulcisX/Core/Enums/MessageBoxResult.cs
+      branch: master
+      repo: https://github.com/TwentyFourMinutes/DulcisX.git
+    id: Close
+    path: ../../DulcisX - master/src/DulcisX/DulcisX/Core/Enums/MessageBoxResult.cs
+    startLine: 11
+  assemblies:
+  - DulcisX
+  namespace: DulcisX.Core.Enums
+  syntax:
+    content: Close = 8
+    return:
+      type: DulcisX.Core.Enums.MessageBoxResult
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: DulcisX.Core.Enums.MessageBoxResult.Help
+  commentId: F:DulcisX.Core.Enums.MessageBoxResult.Help
+  id: Help
+  parent: DulcisX.Core.Enums.MessageBoxResult
+  langs:
+  - csharp
+  - vb
+  name: Help
+  nameWithType: MessageBoxResult.Help
+  fullName: DulcisX.Core.Enums.MessageBoxResult.Help
+  type: Field
+  source:
+    remote:
+      path: src/DulcisX/DulcisX/Core/Enums/MessageBoxResult.cs
+      branch: master
+      repo: https://github.com/TwentyFourMinutes/DulcisX.git
+    id: Help
+    path: ../../DulcisX - master/src/DulcisX/DulcisX/Core/Enums/MessageBoxResult.cs
+    startLine: 12
+  assemblies:
+  - DulcisX
+  namespace: DulcisX.Core.Enums
+  syntax:
+    content: Help = 9
+    return:
+      type: DulcisX.Core.Enums.MessageBoxResult
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: DulcisX.Core.Enums.MessageBoxResult.TryAgain
+  commentId: F:DulcisX.Core.Enums.MessageBoxResult.TryAgain
+  id: TryAgain
+  parent: DulcisX.Core.Enums.MessageBoxResult
+  langs:
+  - csharp
+  - vb
+  name: TryAgain
+  nameWithType: MessageBoxResult.TryAgain
+  fullName: DulcisX.Core.Enums.MessageBoxResult.TryAgain
+  type: Field
+  source:
+    remote:
+      path: src/DulcisX/DulcisX/Core/Enums/MessageBoxResult.cs
+      branch: master
+      repo: https://github.com/TwentyFourMinutes/DulcisX.git
+    id: TryAgain
+    path: ../../DulcisX - master/src/DulcisX/DulcisX/Core/Enums/MessageBoxResult.cs
+    startLine: 13
+  assemblies:
+  - DulcisX
+  namespace: DulcisX.Core.Enums
+  syntax:
+    content: TryAgain = 10
+    return:
+      type: DulcisX.Core.Enums.MessageBoxResult
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: DulcisX.Core.Enums.MessageBoxResult.Continue
+  commentId: F:DulcisX.Core.Enums.MessageBoxResult.Continue
+  id: Continue
+  parent: DulcisX.Core.Enums.MessageBoxResult
+  langs:
+  - csharp
+  - vb
+  name: Continue
+  nameWithType: MessageBoxResult.Continue
+  fullName: DulcisX.Core.Enums.MessageBoxResult.Continue
+  type: Field
+  source:
+    remote:
+      path: src/DulcisX/DulcisX/Core/Enums/MessageBoxResult.cs
+      branch: master
+      repo: https://github.com/TwentyFourMinutes/DulcisX.git
+    id: Continue
+    path: ../../DulcisX - master/src/DulcisX/DulcisX/Core/Enums/MessageBoxResult.cs
+    startLine: 14
+  assemblies:
+  - DulcisX
+  namespace: DulcisX.Core.Enums
+  syntax:
+    content: Continue = 11
+    return:
+      type: DulcisX.Core.Enums.MessageBoxResult
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+references:
+- uid: DulcisX.Core.Enums
+  commentId: N:DulcisX.Core.Enums
+  name: DulcisX.Core.Enums
+  nameWithType: DulcisX.Core.Enums
+  fullName: DulcisX.Core.Enums
+- uid: DulcisX.Core.Enums.MessageBoxResult
+  commentId: T:DulcisX.Core.Enums.MessageBoxResult
+  parent: DulcisX.Core.Enums
+  name: MessageBoxResult
+  nameWithType: MessageBoxResult
+  fullName: DulcisX.Core.Enums.MessageBoxResult

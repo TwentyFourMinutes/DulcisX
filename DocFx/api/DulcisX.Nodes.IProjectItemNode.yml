@@ -1,0 +1,478 @@
+### YamlMime:ManagedReference
+items:
+- uid: DulcisX.Nodes.IProjectItemNode
+  commentId: T:DulcisX.Nodes.IProjectItemNode
+  id: IProjectItemNode
+  parent: DulcisX.Nodes
+  children:
+  - DulcisX.Nodes.IProjectItemNode.GetDefaultNamespace
+  - DulcisX.Nodes.IProjectItemNode.GetParentProject
+  langs:
+  - csharp
+  - vb
+  name: IProjectItemNode
+  nameWithType: IProjectItemNode
+  fullName: DulcisX.Nodes.IProjectItemNode
+  type: Interface
+  source:
+    remote:
+      path: src/DulcisX/DulcisX/Nodes/IProjectItemNode.cs
+      branch: master
+      repo: https://github.com/TwentyFourMinutes/DulcisX.git
+    id: IProjectItemNode
+    path: ../../DulcisX - master/src/DulcisX/DulcisX/Nodes/IProjectItemNode.cs
+    startLine: 2
+  assemblies:
+  - DulcisX
+  namespace: DulcisX.Nodes
+  syntax:
+    content: 'public interface IProjectItemNode : INamedNode, IBaseNode, IEquatable<IBaseNode>'
+    content.vb: >-
+      Public Interface IProjectItemNode
+
+          Inherits INamedNode
+  inheritedMembers:
+  - DulcisX.Nodes.INamedNode.GetDisplayName
+  - DulcisX.Nodes.IBaseNode.ParentSolution
+  - DulcisX.Nodes.IBaseNode.UnderlyingHierarchy
+  - DulcisX.Nodes.IBaseNode.ItemId
+  - DulcisX.Nodes.IBaseNode.GetParent
+  - DulcisX.Nodes.IBaseNode.GetParent(DulcisX.Core.Enums.NodeTypes)
+  - DulcisX.Nodes.IBaseNode.AsHierarchyItem
+  - DulcisX.Nodes.IBaseNode.GetChildren
+  - System.IEquatable{DulcisX.Nodes.IBaseNode}.Equals(DulcisX.Nodes.IBaseNode)
+  modifiers.csharp:
+  - public
+  - interface
+  modifiers.vb:
+  - Public
+  - Interface
+- uid: DulcisX.Nodes.IProjectItemNode.GetParentProject
+  commentId: M:DulcisX.Nodes.IProjectItemNode.GetParentProject
+  id: GetParentProject
+  parent: DulcisX.Nodes.IProjectItemNode
+  langs:
+  - csharp
+  - vb
+  name: GetParentProject()
+  nameWithType: IProjectItemNode.GetParentProject()
+  fullName: DulcisX.Nodes.IProjectItemNode.GetParentProject()
+  type: Method
+  source:
+    remote:
+      path: src/DulcisX/DulcisX/Nodes/IProjectItemNode.cs
+      branch: master
+      repo: https://github.com/TwentyFourMinutes/DulcisX.git
+    id: GetParentProject
+    path: ../../DulcisX - master/src/DulcisX/DulcisX/Nodes/IProjectItemNode.cs
+    startLine: 4
+  assemblies:
+  - DulcisX
+  namespace: DulcisX.Nodes
+  syntax:
+    content: ProjectNode GetParentProject()
+    return:
+      type: DulcisX.Nodes.ProjectNode
+    content.vb: Function GetParentProject As ProjectNode
+  overload: DulcisX.Nodes.IProjectItemNode.GetParentProject*
+- uid: DulcisX.Nodes.IProjectItemNode.GetDefaultNamespace
+  commentId: M:DulcisX.Nodes.IProjectItemNode.GetDefaultNamespace
+  id: GetDefaultNamespace
+  parent: DulcisX.Nodes.IProjectItemNode
+  langs:
+  - csharp
+  - vb
+  name: GetDefaultNamespace()
+  nameWithType: IProjectItemNode.GetDefaultNamespace()
+  fullName: DulcisX.Nodes.IProjectItemNode.GetDefaultNamespace()
+  type: Method
+  source:
+    remote:
+      path: src/DulcisX/DulcisX/Nodes/IProjectItemNode.cs
+      branch: master
+      repo: https://github.com/TwentyFourMinutes/DulcisX.git
+    id: GetDefaultNamespace
+    path: ../../DulcisX - master/src/DulcisX/DulcisX/Nodes/IProjectItemNode.cs
+    startLine: 5
+  assemblies:
+  - DulcisX
+  namespace: DulcisX.Nodes
+  syntax:
+    content: string GetDefaultNamespace()
+    return:
+      type: System.String
+    content.vb: Function GetDefaultNamespace As String
+  overload: DulcisX.Nodes.IProjectItemNode.GetDefaultNamespace*
+references:
+- uid: DulcisX.Nodes
+  commentId: N:DulcisX.Nodes
+  name: DulcisX.Nodes
+  nameWithType: DulcisX.Nodes
+  fullName: DulcisX.Nodes
+- uid: DulcisX.Nodes.INamedNode.GetDisplayName
+  commentId: M:DulcisX.Nodes.INamedNode.GetDisplayName
+  parent: DulcisX.Nodes.INamedNode
+  name: GetDisplayName()
+  nameWithType: INamedNode.GetDisplayName()
+  fullName: DulcisX.Nodes.INamedNode.GetDisplayName()
+  spec.csharp:
+  - uid: DulcisX.Nodes.INamedNode.GetDisplayName
+    name: GetDisplayName
+    nameWithType: INamedNode.GetDisplayName
+    fullName: DulcisX.Nodes.INamedNode.GetDisplayName
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: DulcisX.Nodes.INamedNode.GetDisplayName
+    name: GetDisplayName
+    nameWithType: INamedNode.GetDisplayName
+    fullName: DulcisX.Nodes.INamedNode.GetDisplayName
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: DulcisX.Nodes.IBaseNode.ParentSolution
+  commentId: P:DulcisX.Nodes.IBaseNode.ParentSolution
+  parent: DulcisX.Nodes.IBaseNode
+  name: ParentSolution
+  nameWithType: IBaseNode.ParentSolution
+  fullName: DulcisX.Nodes.IBaseNode.ParentSolution
+- uid: DulcisX.Nodes.IBaseNode.UnderlyingHierarchy
+  commentId: P:DulcisX.Nodes.IBaseNode.UnderlyingHierarchy
+  parent: DulcisX.Nodes.IBaseNode
+  name: UnderlyingHierarchy
+  nameWithType: IBaseNode.UnderlyingHierarchy
+  fullName: DulcisX.Nodes.IBaseNode.UnderlyingHierarchy
+- uid: DulcisX.Nodes.IBaseNode.ItemId
+  commentId: P:DulcisX.Nodes.IBaseNode.ItemId
+  parent: DulcisX.Nodes.IBaseNode
+  name: ItemId
+  nameWithType: IBaseNode.ItemId
+  fullName: DulcisX.Nodes.IBaseNode.ItemId
+- uid: DulcisX.Nodes.IBaseNode.GetParent
+  commentId: M:DulcisX.Nodes.IBaseNode.GetParent
+  parent: DulcisX.Nodes.IBaseNode
+  name: GetParent()
+  nameWithType: IBaseNode.GetParent()
+  fullName: DulcisX.Nodes.IBaseNode.GetParent()
+  spec.csharp:
+  - uid: DulcisX.Nodes.IBaseNode.GetParent
+    name: GetParent
+    nameWithType: IBaseNode.GetParent
+    fullName: DulcisX.Nodes.IBaseNode.GetParent
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: DulcisX.Nodes.IBaseNode.GetParent
+    name: GetParent
+    nameWithType: IBaseNode.GetParent
+    fullName: DulcisX.Nodes.IBaseNode.GetParent
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: DulcisX.Nodes.IBaseNode.GetParent(DulcisX.Core.Enums.NodeTypes)
+  commentId: M:DulcisX.Nodes.IBaseNode.GetParent(DulcisX.Core.Enums.NodeTypes)
+  parent: DulcisX.Nodes.IBaseNode
+  name: GetParent(NodeTypes)
+  nameWithType: IBaseNode.GetParent(NodeTypes)
+  fullName: DulcisX.Nodes.IBaseNode.GetParent(DulcisX.Core.Enums.NodeTypes)
+  spec.csharp:
+  - uid: DulcisX.Nodes.IBaseNode.GetParent(DulcisX.Core.Enums.NodeTypes)
+    name: GetParent
+    nameWithType: IBaseNode.GetParent
+    fullName: DulcisX.Nodes.IBaseNode.GetParent
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: DulcisX.Core.Enums.NodeTypes
+    name: NodeTypes
+    nameWithType: NodeTypes
+    fullName: DulcisX.Core.Enums.NodeTypes
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: DulcisX.Nodes.IBaseNode.GetParent(DulcisX.Core.Enums.NodeTypes)
+    name: GetParent
+    nameWithType: IBaseNode.GetParent
+    fullName: DulcisX.Nodes.IBaseNode.GetParent
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: DulcisX.Core.Enums.NodeTypes
+    name: NodeTypes
+    nameWithType: NodeTypes
+    fullName: DulcisX.Core.Enums.NodeTypes
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: DulcisX.Nodes.IBaseNode.AsHierarchyItem
+  commentId: M:DulcisX.Nodes.IBaseNode.AsHierarchyItem
+  parent: DulcisX.Nodes.IBaseNode
+  name: AsHierarchyItem()
+  nameWithType: IBaseNode.AsHierarchyItem()
+  fullName: DulcisX.Nodes.IBaseNode.AsHierarchyItem()
+  spec.csharp:
+  - uid: DulcisX.Nodes.IBaseNode.AsHierarchyItem
+    name: AsHierarchyItem
+    nameWithType: IBaseNode.AsHierarchyItem
+    fullName: DulcisX.Nodes.IBaseNode.AsHierarchyItem
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: DulcisX.Nodes.IBaseNode.AsHierarchyItem
+    name: AsHierarchyItem
+    nameWithType: IBaseNode.AsHierarchyItem
+    fullName: DulcisX.Nodes.IBaseNode.AsHierarchyItem
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: DulcisX.Nodes.IBaseNode.GetChildren
+  commentId: M:DulcisX.Nodes.IBaseNode.GetChildren
+  parent: DulcisX.Nodes.IBaseNode
+  name: GetChildren()
+  nameWithType: IBaseNode.GetChildren()
+  fullName: DulcisX.Nodes.IBaseNode.GetChildren()
+  spec.csharp:
+  - uid: DulcisX.Nodes.IBaseNode.GetChildren
+    name: GetChildren
+    nameWithType: IBaseNode.GetChildren
+    fullName: DulcisX.Nodes.IBaseNode.GetChildren
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: DulcisX.Nodes.IBaseNode.GetChildren
+    name: GetChildren
+    nameWithType: IBaseNode.GetChildren
+    fullName: DulcisX.Nodes.IBaseNode.GetChildren
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.IEquatable{DulcisX.Nodes.IBaseNode}.Equals(DulcisX.Nodes.IBaseNode)
+  commentId: M:System.IEquatable{DulcisX.Nodes.IBaseNode}.Equals(DulcisX.Nodes.IBaseNode)
+  parent: System.IEquatable{DulcisX.Nodes.IBaseNode}
+  definition: System.IEquatable`1.Equals(`0)
+  name: Equals(IBaseNode)
+  nameWithType: IEquatable<IBaseNode>.Equals(IBaseNode)
+  fullName: System.IEquatable<DulcisX.Nodes.IBaseNode>.Equals(DulcisX.Nodes.IBaseNode)
+  nameWithType.vb: IEquatable(Of IBaseNode).Equals(IBaseNode)
+  fullName.vb: System.IEquatable(Of DulcisX.Nodes.IBaseNode).Equals(DulcisX.Nodes.IBaseNode)
+  spec.csharp:
+  - uid: System.IEquatable`1.Equals(`0)
+    name: Equals
+    nameWithType: IEquatable<IBaseNode>.Equals
+    fullName: System.IEquatable<DulcisX.Nodes.IBaseNode>.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: DulcisX.Nodes.IBaseNode
+    name: IBaseNode
+    nameWithType: IBaseNode
+    fullName: DulcisX.Nodes.IBaseNode
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.IEquatable`1.Equals(`0)
+    name: Equals
+    nameWithType: IEquatable(Of IBaseNode).Equals
+    fullName: System.IEquatable(Of DulcisX.Nodes.IBaseNode).Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: DulcisX.Nodes.IBaseNode
+    name: IBaseNode
+    nameWithType: IBaseNode
+    fullName: DulcisX.Nodes.IBaseNode
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: DulcisX.Nodes.INamedNode
+  commentId: T:DulcisX.Nodes.INamedNode
+  parent: DulcisX.Nodes
+  name: INamedNode
+  nameWithType: INamedNode
+  fullName: DulcisX.Nodes.INamedNode
+- uid: DulcisX.Nodes.IBaseNode
+  commentId: T:DulcisX.Nodes.IBaseNode
+  parent: DulcisX.Nodes
+  name: IBaseNode
+  nameWithType: IBaseNode
+  fullName: DulcisX.Nodes.IBaseNode
+- uid: System.IEquatable`1.Equals(`0)
+  commentId: M:System.IEquatable`1.Equals(`0)
+  isExternal: true
+  name: Equals(T)
+  nameWithType: IEquatable<T>.Equals(T)
+  fullName: System.IEquatable<T>.Equals(T)
+  nameWithType.vb: IEquatable(Of T).Equals(T)
+  fullName.vb: System.IEquatable(Of T).Equals(T)
+  spec.csharp:
+  - uid: System.IEquatable`1.Equals(`0)
+    name: Equals
+    nameWithType: IEquatable<T>.Equals
+    fullName: System.IEquatable<T>.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.IEquatable`1.Equals(`0)
+    name: Equals
+    nameWithType: IEquatable(Of T).Equals
+    fullName: System.IEquatable(Of T).Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.IEquatable{DulcisX.Nodes.IBaseNode}
+  commentId: T:System.IEquatable{DulcisX.Nodes.IBaseNode}
+  parent: System
+  definition: System.IEquatable`1
+  name: IEquatable<IBaseNode>
+  nameWithType: IEquatable<IBaseNode>
+  fullName: System.IEquatable<DulcisX.Nodes.IBaseNode>
+  nameWithType.vb: IEquatable(Of IBaseNode)
+  fullName.vb: System.IEquatable(Of DulcisX.Nodes.IBaseNode)
+  name.vb: IEquatable(Of IBaseNode)
+  spec.csharp:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    nameWithType: IEquatable
+    fullName: System.IEquatable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: DulcisX.Nodes.IBaseNode
+    name: IBaseNode
+    nameWithType: IBaseNode
+    fullName: DulcisX.Nodes.IBaseNode
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    nameWithType: IEquatable
+    fullName: System.IEquatable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: DulcisX.Nodes.IBaseNode
+    name: IBaseNode
+    nameWithType: IBaseNode
+    fullName: DulcisX.Nodes.IBaseNode
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.IEquatable`1
+  commentId: T:System.IEquatable`1
+  isExternal: true
+  name: IEquatable<T>
+  nameWithType: IEquatable<T>
+  fullName: System.IEquatable<T>
+  nameWithType.vb: IEquatable(Of T)
+  fullName.vb: System.IEquatable(Of T)
+  name.vb: IEquatable(Of T)
+  spec.csharp:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    nameWithType: IEquatable
+    fullName: System.IEquatable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    nameWithType: IEquatable
+    fullName: System.IEquatable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: DulcisX.Nodes.IProjectItemNode.GetParentProject*
+  commentId: Overload:DulcisX.Nodes.IProjectItemNode.GetParentProject
+  name: GetParentProject
+  nameWithType: IProjectItemNode.GetParentProject
+  fullName: DulcisX.Nodes.IProjectItemNode.GetParentProject
+- uid: DulcisX.Nodes.ProjectNode
+  commentId: T:DulcisX.Nodes.ProjectNode
+  parent: DulcisX.Nodes
+  name: ProjectNode
+  nameWithType: ProjectNode
+  fullName: DulcisX.Nodes.ProjectNode
+- uid: DulcisX.Nodes.IProjectItemNode.GetDefaultNamespace*
+  commentId: Overload:DulcisX.Nodes.IProjectItemNode.GetDefaultNamespace
+  name: GetDefaultNamespace
+  nameWithType: IProjectItemNode.GetDefaultNamespace
+  fullName: DulcisX.Nodes.IProjectItemNode.GetDefaultNamespace
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String

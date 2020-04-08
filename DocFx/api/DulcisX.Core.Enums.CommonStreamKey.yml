@@ -1,0 +1,99 @@
+### YamlMime:ManagedReference
+items:
+- uid: DulcisX.Core.Enums.CommonStreamKey
+  commentId: T:DulcisX.Core.Enums.CommonStreamKey
+  id: CommonStreamKey
+  parent: DulcisX.Core.Enums
+  children:
+  - DulcisX.Core.Enums.CommonStreamKey.SolutionConfiguration
+  langs:
+  - csharp
+  - vb
+  name: CommonStreamKey
+  nameWithType: CommonStreamKey
+  fullName: DulcisX.Core.Enums.CommonStreamKey
+  type: Enum
+  source:
+    remote:
+      path: src/DulcisX/DulcisX/Core/Enums/CommonStreamKey.cs
+      branch: master
+      repo: https://github.com/TwentyFourMinutes/DulcisX.git
+    id: CommonStreamKey
+    path: ../../DulcisX - master/src/DulcisX/DulcisX/Core/Enums/CommonStreamKey.cs
+    startLine: 7
+  assemblies:
+  - DulcisX
+  namespace: DulcisX.Core.Enums
+  summary: "\nCommon stream keys in the .suo file. Passed to <xref href=\"DulcisX.Nodes.SolutionNode.LoadUserConfiguration(Microsoft.VisualStudio.Shell.Interop.IVsPersistSolutionOpts%2cSystem.String)\" data-throw-if-not-resolved=\"false\"></xref>.\n"
+  example: []
+  syntax:
+    content: public enum CommonStreamKey
+    content.vb: Public Enum CommonStreamKey
+  modifiers.csharp:
+  - public
+  - enum
+  modifiers.vb:
+  - Public
+  - Enum
+- uid: DulcisX.Core.Enums.CommonStreamKey.SolutionConfiguration
+  commentId: F:DulcisX.Core.Enums.CommonStreamKey.SolutionConfiguration
+  id: SolutionConfiguration
+  parent: DulcisX.Core.Enums.CommonStreamKey
+  langs:
+  - csharp
+  - vb
+  name: SolutionConfiguration
+  nameWithType: CommonStreamKey.SolutionConfiguration
+  fullName: DulcisX.Core.Enums.CommonStreamKey.SolutionConfiguration
+  type: Field
+  source:
+    remote:
+      path: src/DulcisX/DulcisX/Core/Enums/CommonStreamKey.cs
+      branch: master
+      repo: https://github.com/TwentyFourMinutes/DulcisX.git
+    id: SolutionConfiguration
+    path: ../../DulcisX - master/src/DulcisX/DulcisX/Core/Enums/CommonStreamKey.cs
+    startLine: 12
+  assemblies:
+  - DulcisX
+  namespace: DulcisX.Core.Enums
+  summary: "\nSpecifies the solution configuration strean inside the .suo file.\n"
+  example: []
+  syntax:
+    content: >-
+      [StringRepresentation("SolutionConfiguration")]
+
+      SolutionConfiguration = 0
+    return:
+      type: DulcisX.Core.Enums.CommonStreamKey
+    content.vb: >-
+      <StringRepresentation("SolutionConfiguration")>
+
+      SolutionConfiguration = 0
+  attributes:
+  - type: StringyEnums.StringRepresentationAttribute
+    ctor: StringyEnums.StringRepresentationAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: SolutionConfiguration
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+references:
+- uid: DulcisX.Nodes.SolutionNode.LoadUserConfiguration(Microsoft.VisualStudio.Shell.Interop.IVsPersistSolutionOpts,System.String)
+  commentId: M:DulcisX.Nodes.SolutionNode.LoadUserConfiguration(Microsoft.VisualStudio.Shell.Interop.IVsPersistSolutionOpts,System.String)
+  isExternal: true
+- uid: DulcisX.Core.Enums
+  commentId: N:DulcisX.Core.Enums
+  name: DulcisX.Core.Enums
+  nameWithType: DulcisX.Core.Enums
+  fullName: DulcisX.Core.Enums
+- uid: DulcisX.Core.Enums.CommonStreamKey
+  commentId: T:DulcisX.Core.Enums.CommonStreamKey
+  parent: DulcisX.Core.Enums
+  name: CommonStreamKey
+  nameWithType: CommonStreamKey
+  fullName: DulcisX.Core.Enums.CommonStreamKey

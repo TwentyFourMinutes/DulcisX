@@ -1,0 +1,178 @@
+### YamlMime:ManagedReference
+items:
+- uid: DulcisX.Core.Enums.ProjectNodeType
+  commentId: T:DulcisX.Core.Enums.ProjectNodeType
+  id: ProjectNodeType
+  parent: DulcisX.Core.Enums
+  children:
+  - DulcisX.Core.Enums.ProjectNodeType.MiscellaneousFilesProject
+  - DulcisX.Core.Enums.ProjectNodeType.Project
+  - DulcisX.Core.Enums.ProjectNodeType.SolutionItemsProject
+  - DulcisX.Core.Enums.ProjectNodeType.VirtualProject
+  langs:
+  - csharp
+  - vb
+  name: ProjectNodeType
+  nameWithType: ProjectNodeType
+  fullName: DulcisX.Core.Enums.ProjectNodeType
+  type: Enum
+  source:
+    remote:
+      path: src/DulcisX/DulcisX/Core/Enums/ProjectNodeType.cs
+      branch: master
+      repo: https://github.com/TwentyFourMinutes/DulcisX.git
+    id: ProjectNodeType
+    path: ../../DulcisX - master/src/DulcisX/DulcisX/Core/Enums/ProjectNodeType.cs
+    startLine: 8
+  assemblies:
+  - DulcisX
+  namespace: DulcisX.Core.Enums
+  syntax:
+    content: public enum ProjectNodeType
+    content.vb: Public Enum ProjectNodeType
+  modifiers.csharp:
+  - public
+  - enum
+  modifiers.vb:
+  - Public
+  - Enum
+- uid: DulcisX.Core.Enums.ProjectNodeType.Project
+  commentId: F:DulcisX.Core.Enums.ProjectNodeType.Project
+  id: Project
+  parent: DulcisX.Core.Enums.ProjectNodeType
+  langs:
+  - csharp
+  - vb
+  name: Project
+  nameWithType: ProjectNodeType.Project
+  fullName: DulcisX.Core.Enums.ProjectNodeType.Project
+  type: Field
+  source:
+    remote:
+      path: src/DulcisX/DulcisX/Core/Enums/ProjectNodeType.cs
+      branch: master
+      repo: https://github.com/TwentyFourMinutes/DulcisX.git
+    id: Project
+    path: ../../DulcisX - master/src/DulcisX/DulcisX/Core/Enums/ProjectNodeType.cs
+    startLine: 10
+  assemblies:
+  - DulcisX
+  namespace: DulcisX.Core.Enums
+  syntax:
+    content: Project = 0
+    return:
+      type: DulcisX.Core.Enums.ProjectNodeType
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: DulcisX.Core.Enums.ProjectNodeType.MiscellaneousFilesProject
+  commentId: F:DulcisX.Core.Enums.ProjectNodeType.MiscellaneousFilesProject
+  id: MiscellaneousFilesProject
+  parent: DulcisX.Core.Enums.ProjectNodeType
+  langs:
+  - csharp
+  - vb
+  name: MiscellaneousFilesProject
+  nameWithType: ProjectNodeType.MiscellaneousFilesProject
+  fullName: DulcisX.Core.Enums.ProjectNodeType.MiscellaneousFilesProject
+  type: Field
+  source:
+    remote:
+      path: src/DulcisX/DulcisX/Core/Enums/ProjectNodeType.cs
+      branch: master
+      repo: https://github.com/TwentyFourMinutes/DulcisX.git
+    id: MiscellaneousFilesProject
+    path: ../../DulcisX - master/src/DulcisX/DulcisX/Core/Enums/ProjectNodeType.cs
+    startLine: 11
+  assemblies:
+  - DulcisX
+  namespace: DulcisX.Core.Enums
+  syntax:
+    content: MiscellaneousFilesProject = 1
+    return:
+      type: DulcisX.Core.Enums.ProjectNodeType
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: DulcisX.Core.Enums.ProjectNodeType.SolutionItemsProject
+  commentId: F:DulcisX.Core.Enums.ProjectNodeType.SolutionItemsProject
+  id: SolutionItemsProject
+  parent: DulcisX.Core.Enums.ProjectNodeType
+  langs:
+  - csharp
+  - vb
+  name: SolutionItemsProject
+  nameWithType: ProjectNodeType.SolutionItemsProject
+  fullName: DulcisX.Core.Enums.ProjectNodeType.SolutionItemsProject
+  type: Field
+  source:
+    remote:
+      path: src/DulcisX/DulcisX/Core/Enums/ProjectNodeType.cs
+      branch: master
+      repo: https://github.com/TwentyFourMinutes/DulcisX.git
+    id: SolutionItemsProject
+    path: ../../DulcisX - master/src/DulcisX/DulcisX/Core/Enums/ProjectNodeType.cs
+    startLine: 12
+  assemblies:
+  - DulcisX
+  namespace: DulcisX.Core.Enums
+  syntax:
+    content: SolutionItemsProject = 2
+    return:
+      type: DulcisX.Core.Enums.ProjectNodeType
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: DulcisX.Core.Enums.ProjectNodeType.VirtualProject
+  commentId: F:DulcisX.Core.Enums.ProjectNodeType.VirtualProject
+  id: VirtualProject
+  parent: DulcisX.Core.Enums.ProjectNodeType
+  langs:
+  - csharp
+  - vb
+  name: VirtualProject
+  nameWithType: ProjectNodeType.VirtualProject
+  fullName: DulcisX.Core.Enums.ProjectNodeType.VirtualProject
+  type: Field
+  source:
+    remote:
+      path: src/DulcisX/DulcisX/Core/Enums/ProjectNodeType.cs
+      branch: master
+      repo: https://github.com/TwentyFourMinutes/DulcisX.git
+    id: VirtualProject
+    path: ../../DulcisX - master/src/DulcisX/DulcisX/Core/Enums/ProjectNodeType.cs
+    startLine: 13
+  assemblies:
+  - DulcisX
+  namespace: DulcisX.Core.Enums
+  syntax:
+    content: VirtualProject = 3
+    return:
+      type: DulcisX.Core.Enums.ProjectNodeType
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+references:
+- uid: DulcisX.Core.Enums
+  commentId: N:DulcisX.Core.Enums
+  name: DulcisX.Core.Enums
+  nameWithType: DulcisX.Core.Enums
+  fullName: DulcisX.Core.Enums
+- uid: DulcisX.Core.Enums.ProjectNodeType
+  commentId: T:DulcisX.Core.Enums.ProjectNodeType
+  parent: DulcisX.Core.Enums
+  name: ProjectNodeType
+  nameWithType: ProjectNodeType
+  fullName: DulcisX.Core.Enums.ProjectNodeType

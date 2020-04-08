@@ -5,19 +5,25 @@ items:
   id: ProjectNode
   parent: DulcisX.Nodes
   children:
-  - DulcisX.Nodes.ProjectNode.#ctor(DulcisX.Nodes.SolutionNode,Microsoft.VisualStudio.Shell.Interop.IVsHierarchy,DulcisX.Core.Enums.NodeTypes)
+  - DulcisX.Nodes.ProjectNode.#ctor(DulcisX.Nodes.SolutionNode,Microsoft.VisualStudio.Shell.Interop.IVsHierarchy,DulcisX.Core.Enums.ProjectNodeType)
   - DulcisX.Nodes.ProjectNode.AddExistingDocument(DulcisX.Nodes.FolderNode,System.String)
   - DulcisX.Nodes.ProjectNode.AddExistingDocument(System.String)
+  - DulcisX.Nodes.ProjectNode.ContainsPhysicalNode(System.String)
   - DulcisX.Nodes.ProjectNode.CreateDocument(DulcisX.Nodes.FolderNode,System.String)
   - DulcisX.Nodes.ProjectNode.CreateDocument(System.String)
   - DulcisX.Nodes.ProjectNode.GetChildren
+  - DulcisX.Nodes.ProjectNode.GetDirectoryName
   - DulcisX.Nodes.ProjectNode.GetFileName
   - DulcisX.Nodes.ProjectNode.GetFullName
   - DulcisX.Nodes.ProjectNode.GetGuid
   - DulcisX.Nodes.ProjectNode.GetItemProperty(System.UInt32,DulcisX.Core.Enums.DocumentProperty)
   - DulcisX.Nodes.ProjectNode.GetOutputTypeAction
+  - DulcisX.Nodes.ProjectNode.GetRelativePath(DulcisX.Nodes.IPhysicalProjectItemNode)
   - DulcisX.Nodes.ProjectNode.IsLoaded
-  - DulcisX.Nodes.ProjectNode.NodeType
+  - DulcisX.Nodes.ProjectNode.Modify(System.Action{DulcisX.Nodes.ModifyProjectDocument})
+  - DulcisX.Nodes.ProjectNode.ModifyAndWaitAsync(System.Action{DulcisX.Nodes.ModifyProjectDocument},System.Nullable{System.TimeSpan})
+  - DulcisX.Nodes.ProjectNode.MoveNodeInsideProject(DulcisX.Nodes.FolderNode,DulcisX.Nodes.DocumentNode)
+  - DulcisX.Nodes.ProjectNode.ProjectNodeType
   - DulcisX.Nodes.ProjectNode.SaveAllChildren(System.Boolean)
   - DulcisX.Nodes.ProjectNode.SetItemProperty(System.UInt32,DulcisX.Core.Enums.DocumentProperty,System.String)
   - DulcisX.Nodes.ProjectNode.SetOutputTypeAction(Microsoft.VisualStudio.Shell.Interop.__VSPROJOUTPUTTYPE)
@@ -46,11 +52,13 @@ items:
   summary: "\nRepresents a project within a <xref href=\"DulcisX.Nodes.SolutionNode\" data-throw-if-not-resolved=\"false\"></xref>.\n"
   example: []
   syntax:
-    content: 'public class ProjectNode : SolutionItemNode, IPhysicalNode, INamedNode, IBaseNode'
+    content: 'public class ProjectNode : SolutionItemNode, IPhysicalNode, INamedNode, IBaseNode, IEquatable<IBaseNode>'
     content.vb: >-
       Public Class ProjectNode
+
           Inherits SolutionItemNode
-          Implements IPhysicalNode, INamedNode, IBaseNode
+
+          Implements IPhysicalNode, INamedNode, IBaseNode, IEquatable(Of IBaseNode)
   inheritance:
   - System.Object
   - DulcisX.Nodes.BaseNode
@@ -59,6 +67,7 @@ items:
   - DulcisX.Nodes.IPhysicalNode
   - DulcisX.Nodes.INamedNode
   - DulcisX.Nodes.IBaseNode
+  - System.IEquatable{DulcisX.Nodes.IBaseNode}
   inheritedMembers:
   - DulcisX.Nodes.SolutionItemNode.GetParent
   - DulcisX.Nodes.SolutionItemNode.GetAllChildrenAsync(System.Threading.CancellationToken)
@@ -69,12 +78,12 @@ items:
   - DulcisX.Nodes.BaseNode.GetDisplayName
   - DulcisX.Nodes.BaseNode.GetParent(DulcisX.Core.Enums.NodeTypes)
   - DulcisX.Nodes.BaseNode.AsHierarchyItem
-  - DulcisX.Nodes.BaseNode.IsTypeMatching(DulcisX.Core.Enums.NodeTypes)
+  - DulcisX.Nodes.BaseNode.Equals(DulcisX.Nodes.IBaseNode)
+  - DulcisX.Nodes.BaseNode.Equals(System.Object)
+  - DulcisX.Nodes.BaseNode.GetHashCode
   - System.Object.ToString
-  - System.Object.Equals(System.Object)
   - System.Object.Equals(System.Object,System.Object)
   - System.Object.ReferenceEquals(System.Object,System.Object)
-  - System.Object.GetHashCode
   - System.Object.GetType
   - System.Object.MemberwiseClone
   modifiers.csharp:
@@ -157,58 +166,52 @@ items:
   modifiers.vb:
   - Public
   - ReadOnly
-- uid: DulcisX.Nodes.ProjectNode.NodeType
-  commentId: P:DulcisX.Nodes.ProjectNode.NodeType
-  id: NodeType
+- uid: DulcisX.Nodes.ProjectNode.ProjectNodeType
+  commentId: P:DulcisX.Nodes.ProjectNode.ProjectNodeType
+  id: ProjectNodeType
   parent: DulcisX.Nodes.ProjectNode
   langs:
   - csharp
   - vb
-  name: NodeType
-  nameWithType: ProjectNode.NodeType
-  fullName: DulcisX.Nodes.ProjectNode.NodeType
+  name: ProjectNodeType
+  nameWithType: ProjectNode.ProjectNodeType
+  fullName: DulcisX.Nodes.ProjectNode.ProjectNodeType
   type: Property
   source:
     remote:
       path: src/DulcisX/DulcisX/Nodes/ProjectNode.cs
       branch: master
       repo: https://github.com/TwentyFourMinutes/DulcisX.git
-    id: NodeType
+    id: ProjectNodeType
     path: ../../DulcisX - master/src/DulcisX/DulcisX/Nodes/ProjectNode.cs
     startLine: 59
   assemblies:
   - DulcisX
   namespace: DulcisX.Nodes
-  summary: "\nGets the Type of current Node.\n"
   example: []
   syntax:
-    content: public override NodeTypes NodeType { get; }
+    content: public ProjectNodeType ProjectNodeType { get; }
     parameters: []
     return:
-      type: DulcisX.Core.Enums.NodeTypes
-    content.vb: Public Overrides ReadOnly Property NodeType As NodeTypes
-  overridden: DulcisX.Nodes.BaseNode.NodeType
-  overload: DulcisX.Nodes.ProjectNode.NodeType*
-  implements:
-  - DulcisX.Nodes.IBaseNode.NodeType
+      type: DulcisX.Core.Enums.ProjectNodeType
+    content.vb: Public ReadOnly Property ProjectNodeType As ProjectNodeType
+  overload: DulcisX.Nodes.ProjectNode.ProjectNodeType*
   modifiers.csharp:
   - public
-  - override
   - get
   modifiers.vb:
   - Public
-  - Overrides
   - ReadOnly
-- uid: DulcisX.Nodes.ProjectNode.#ctor(DulcisX.Nodes.SolutionNode,Microsoft.VisualStudio.Shell.Interop.IVsHierarchy,DulcisX.Core.Enums.NodeTypes)
-  commentId: M:DulcisX.Nodes.ProjectNode.#ctor(DulcisX.Nodes.SolutionNode,Microsoft.VisualStudio.Shell.Interop.IVsHierarchy,DulcisX.Core.Enums.NodeTypes)
-  id: '#ctor(DulcisX.Nodes.SolutionNode,Microsoft.VisualStudio.Shell.Interop.IVsHierarchy,DulcisX.Core.Enums.NodeTypes)'
+- uid: DulcisX.Nodes.ProjectNode.#ctor(DulcisX.Nodes.SolutionNode,Microsoft.VisualStudio.Shell.Interop.IVsHierarchy,DulcisX.Core.Enums.ProjectNodeType)
+  commentId: M:DulcisX.Nodes.ProjectNode.#ctor(DulcisX.Nodes.SolutionNode,Microsoft.VisualStudio.Shell.Interop.IVsHierarchy,DulcisX.Core.Enums.ProjectNodeType)
+  id: '#ctor(DulcisX.Nodes.SolutionNode,Microsoft.VisualStudio.Shell.Interop.IVsHierarchy,DulcisX.Core.Enums.ProjectNodeType)'
   parent: DulcisX.Nodes.ProjectNode
   langs:
   - csharp
   - vb
-  name: ProjectNode(SolutionNode, IVsHierarchy, NodeTypes)
-  nameWithType: ProjectNode.ProjectNode(SolutionNode, IVsHierarchy, NodeTypes)
-  fullName: DulcisX.Nodes.ProjectNode.ProjectNode(DulcisX.Nodes.SolutionNode, Microsoft.VisualStudio.Shell.Interop.IVsHierarchy, DulcisX.Core.Enums.NodeTypes)
+  name: ProjectNode(SolutionNode, IVsHierarchy, ProjectNodeType)
+  nameWithType: ProjectNode.ProjectNode(SolutionNode, IVsHierarchy, ProjectNodeType)
+  fullName: DulcisX.Nodes.ProjectNode.ProjectNode(DulcisX.Nodes.SolutionNode, Microsoft.VisualStudio.Shell.Interop.IVsHierarchy, DulcisX.Core.Enums.ProjectNodeType)
   type: Constructor
   source:
     remote:
@@ -224,7 +227,7 @@ items:
   summary: "\nInitializes a new instance of the <xref href=\"DulcisX.Nodes.ProjectNode\" data-throw-if-not-resolved=\"false\"></xref> class.\n"
   example: []
   syntax:
-    content: public ProjectNode(SolutionNode solution, IVsHierarchy hierarchy, NodeTypes nodeType = NodeTypes.Project)
+    content: public ProjectNode(SolutionNode solution, IVsHierarchy hierarchy, ProjectNodeType projectType = ProjectNodeType.Project)
     parameters:
     - id: solution
       type: DulcisX.Nodes.SolutionNode
@@ -232,10 +235,10 @@ items:
     - id: hierarchy
       type: Microsoft.VisualStudio.Shell.Interop.IVsHierarchy
       description: The Hierarchy of the Project.
-    - id: nodeType
-      type: DulcisX.Core.Enums.NodeTypes
+    - id: projectType
+      type: DulcisX.Core.Enums.ProjectNodeType
       description: The type of the current Project.
-    content.vb: Public Sub New(solution As SolutionNode, hierarchy As IVsHierarchy, nodeType As NodeTypes = NodeTypes.Project)
+    content.vb: Public Sub New(solution As SolutionNode, hierarchy As IVsHierarchy, projectType As ProjectNodeType = ProjectNodeType.Project)
   overload: DulcisX.Nodes.ProjectNode.#ctor*
   modifiers.csharp:
   - public
@@ -298,13 +301,11 @@ items:
   assemblies:
   - DulcisX
   namespace: DulcisX.Nodes
-  summary: "\nReturns the name of the file, including the extension.\n"
   example: []
   syntax:
     content: public string GetFileName()
     return:
       type: System.String
-      description: A string containg the name of the file.
     content.vb: Public Function GetFileName As String
   overload: DulcisX.Nodes.ProjectNode.GetFileName*
   implements:
@@ -335,17 +336,49 @@ items:
   assemblies:
   - DulcisX
   namespace: DulcisX.Nodes
-  summary: "\nReturns the full name of the file.\n"
   example: []
   syntax:
     content: public string GetFullName()
     return:
       type: System.String
-      description: A string containg the full name of the file.
     content.vb: Public Function GetFullName As String
   overload: DulcisX.Nodes.ProjectNode.GetFullName*
   implements:
   - DulcisX.Nodes.IPhysicalNode.GetFullName
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: DulcisX.Nodes.ProjectNode.GetDirectoryName
+  commentId: M:DulcisX.Nodes.ProjectNode.GetDirectoryName
+  id: GetDirectoryName
+  parent: DulcisX.Nodes.ProjectNode
+  langs:
+  - csharp
+  - vb
+  name: GetDirectoryName()
+  nameWithType: ProjectNode.GetDirectoryName()
+  fullName: DulcisX.Nodes.ProjectNode.GetDirectoryName()
+  type: Method
+  source:
+    remote:
+      path: src/DulcisX/DulcisX/Nodes/ProjectNode.cs
+      branch: master
+      repo: https://github.com/TwentyFourMinutes/DulcisX.git
+    id: GetDirectoryName
+    path: ../../DulcisX - master/src/DulcisX/DulcisX/Nodes/ProjectNode.cs
+    startLine: 107
+  assemblies:
+  - DulcisX
+  namespace: DulcisX.Nodes
+  syntax:
+    content: public string GetDirectoryName()
+    return:
+      type: System.String
+    content.vb: Public Function GetDirectoryName As String
+  overload: DulcisX.Nodes.ProjectNode.GetDirectoryName*
+  implements:
+  - DulcisX.Nodes.IPhysicalNode.GetDirectoryName
   modifiers.csharp:
   - public
   modifiers.vb:
@@ -368,7 +401,7 @@ items:
       repo: https://github.com/TwentyFourMinutes/DulcisX.git
     id: IsLoaded
     path: ../../DulcisX - master/src/DulcisX/DulcisX/Nodes/ProjectNode.cs
-    startLine: 111
+    startLine: 118
   assemblies:
   - DulcisX
   namespace: DulcisX.Nodes
@@ -403,7 +436,7 @@ items:
       repo: https://github.com/TwentyFourMinutes/DulcisX.git
     id: GetOutputTypeAction
     path: ../../DulcisX - master/src/DulcisX/DulcisX/Nodes/ProjectNode.cs
-    startLine: 120
+    startLine: 127
   assemblies:
   - DulcisX
   namespace: DulcisX.Nodes
@@ -438,7 +471,7 @@ items:
       repo: https://github.com/TwentyFourMinutes/DulcisX.git
     id: SetOutputTypeAction
     path: ../../DulcisX - master/src/DulcisX/DulcisX/Nodes/ProjectNode.cs
-    startLine: 127
+    startLine: 134
   assemblies:
   - DulcisX
   namespace: DulcisX.Nodes
@@ -474,7 +507,7 @@ items:
       repo: https://github.com/TwentyFourMinutes/DulcisX.git
     id: GetItemProperty
     path: ../../DulcisX - master/src/DulcisX/DulcisX/Nodes/ProjectNode.cs
-    startLine: 141
+    startLine: 148
   assemblies:
   - DulcisX
   namespace: DulcisX.Nodes
@@ -516,7 +549,7 @@ items:
       repo: https://github.com/TwentyFourMinutes/DulcisX.git
     id: SetItemProperty
     path: ../../DulcisX - master/src/DulcisX/DulcisX/Nodes/ProjectNode.cs
-    startLine: 158
+    startLine: 165
   assemblies:
   - DulcisX
   namespace: DulcisX.Nodes
@@ -558,17 +591,15 @@ items:
       repo: https://github.com/TwentyFourMinutes/DulcisX.git
     id: GetChildren
     path: ../../DulcisX - master/src/DulcisX/DulcisX/Nodes/ProjectNode.cs
-    startLine: 168
+    startLine: 175
   assemblies:
   - DulcisX
   namespace: DulcisX.Nodes
-  summary: "\nReturns all immediate children Nodes of the current Node.\n"
   example: []
   syntax:
     content: public override IEnumerable<BaseNode> GetChildren()
     return:
       type: System.Collections.Generic.IEnumerable{DulcisX.Nodes.BaseNode}
-      description: An <xref href="System.Collections.Generic.IEnumerable%601" data-throw-if-not-resolved="false"></xref> with the children.
     content.vb: Public Overrides Function GetChildren As IEnumerable(Of BaseNode)
   overridden: DulcisX.Nodes.SolutionItemNode.GetChildren
   overload: DulcisX.Nodes.ProjectNode.GetChildren*
@@ -598,7 +629,7 @@ items:
       repo: https://github.com/TwentyFourMinutes/DulcisX.git
     id: CreateDocument
     path: ../../DulcisX - master/src/DulcisX/DulcisX/Nodes/ProjectNode.cs
-    startLine: 185
+    startLine: 192
   assemblies:
   - DulcisX
   namespace: DulcisX.Nodes
@@ -637,7 +668,7 @@ items:
       repo: https://github.com/TwentyFourMinutes/DulcisX.git
     id: CreateDocument
     path: ../../DulcisX - master/src/DulcisX/DulcisX/Nodes/ProjectNode.cs
-    startLine: 194
+    startLine: 201
   assemblies:
   - DulcisX
   namespace: DulcisX.Nodes
@@ -679,7 +710,7 @@ items:
       repo: https://github.com/TwentyFourMinutes/DulcisX.git
     id: AddExistingDocument
     path: ../../DulcisX - master/src/DulcisX/DulcisX/Nodes/ProjectNode.cs
-    startLine: 215
+    startLine: 222
   assemblies:
   - DulcisX
   namespace: DulcisX.Nodes
@@ -718,7 +749,7 @@ items:
       repo: https://github.com/TwentyFourMinutes/DulcisX.git
     id: AddExistingDocument
     path: ../../DulcisX - master/src/DulcisX/DulcisX/Nodes/ProjectNode.cs
-    startLine: 224
+    startLine: 231
   assemblies:
   - DulcisX
   namespace: DulcisX.Nodes
@@ -742,6 +773,82 @@ items:
   - public
   modifiers.vb:
   - Public
+- uid: DulcisX.Nodes.ProjectNode.ModifyAndWaitAsync(System.Action{DulcisX.Nodes.ModifyProjectDocument},System.Nullable{System.TimeSpan})
+  commentId: M:DulcisX.Nodes.ProjectNode.ModifyAndWaitAsync(System.Action{DulcisX.Nodes.ModifyProjectDocument},System.Nullable{System.TimeSpan})
+  id: ModifyAndWaitAsync(System.Action{DulcisX.Nodes.ModifyProjectDocument},System.Nullable{System.TimeSpan})
+  parent: DulcisX.Nodes.ProjectNode
+  langs:
+  - csharp
+  - vb
+  name: ModifyAndWaitAsync(Action<ModifyProjectDocument>, Nullable<TimeSpan>)
+  nameWithType: ProjectNode.ModifyAndWaitAsync(Action<ModifyProjectDocument>, Nullable<TimeSpan>)
+  fullName: DulcisX.Nodes.ProjectNode.ModifyAndWaitAsync(System.Action<DulcisX.Nodes.ModifyProjectDocument>, System.Nullable<System.TimeSpan>)
+  type: Method
+  source:
+    remote:
+      path: src/DulcisX/DulcisX/Nodes/ProjectNode.cs
+      branch: master
+      repo: https://github.com/TwentyFourMinutes/DulcisX.git
+    id: ModifyAndWaitAsync
+    path: ../../DulcisX - master/src/DulcisX/DulcisX/Nodes/ProjectNode.cs
+    startLine: 252
+  assemblies:
+  - DulcisX
+  namespace: DulcisX.Nodes
+  syntax:
+    content: public ValueTask<bool> ModifyAndWaitAsync(Action<ModifyProjectDocument> modifier, TimeSpan? timeout = default(TimeSpan? ))
+    parameters:
+    - id: modifier
+      type: System.Action{DulcisX.Nodes.ModifyProjectDocument}
+    - id: timeout
+      type: System.Nullable{System.TimeSpan}
+    return:
+      type: System.Threading.Tasks.ValueTask{System.Boolean}
+    content.vb: Public Function ModifyAndWaitAsync(modifier As Action(Of ModifyProjectDocument), timeout As TimeSpan? = Nothing) As ValueTask(Of Boolean)
+  overload: DulcisX.Nodes.ProjectNode.ModifyAndWaitAsync*
+  nameWithType.vb: ProjectNode.ModifyAndWaitAsync(Action(Of ModifyProjectDocument), Nullable(Of TimeSpan))
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: DulcisX.Nodes.ProjectNode.ModifyAndWaitAsync(System.Action(Of DulcisX.Nodes.ModifyProjectDocument), System.Nullable(Of System.TimeSpan))
+  name.vb: ModifyAndWaitAsync(Action(Of ModifyProjectDocument), Nullable(Of TimeSpan))
+- uid: DulcisX.Nodes.ProjectNode.Modify(System.Action{DulcisX.Nodes.ModifyProjectDocument})
+  commentId: M:DulcisX.Nodes.ProjectNode.Modify(System.Action{DulcisX.Nodes.ModifyProjectDocument})
+  id: Modify(System.Action{DulcisX.Nodes.ModifyProjectDocument})
+  parent: DulcisX.Nodes.ProjectNode
+  langs:
+  - csharp
+  - vb
+  name: Modify(Action<ModifyProjectDocument>)
+  nameWithType: ProjectNode.Modify(Action<ModifyProjectDocument>)
+  fullName: DulcisX.Nodes.ProjectNode.Modify(System.Action<DulcisX.Nodes.ModifyProjectDocument>)
+  type: Method
+  source:
+    remote:
+      path: src/DulcisX/DulcisX/Nodes/ProjectNode.cs
+      branch: master
+      repo: https://github.com/TwentyFourMinutes/DulcisX.git
+    id: Modify
+    path: ../../DulcisX - master/src/DulcisX/DulcisX/Nodes/ProjectNode.cs
+    startLine: 255
+  assemblies:
+  - DulcisX
+  namespace: DulcisX.Nodes
+  syntax:
+    content: public void Modify(Action<ModifyProjectDocument> modifier)
+    parameters:
+    - id: modifier
+      type: System.Action{DulcisX.Nodes.ModifyProjectDocument}
+    content.vb: Public Sub Modify(modifier As Action(Of ModifyProjectDocument))
+  overload: DulcisX.Nodes.ProjectNode.Modify*
+  nameWithType.vb: ProjectNode.Modify(Action(Of ModifyProjectDocument))
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: DulcisX.Nodes.ProjectNode.Modify(System.Action(Of DulcisX.Nodes.ModifyProjectDocument))
+  name.vb: Modify(Action(Of ModifyProjectDocument))
 - uid: DulcisX.Nodes.ProjectNode.TryRemoveChildren(DulcisX.Nodes.ProjectItemNode,System.Int32@)
   commentId: M:DulcisX.Nodes.ProjectNode.TryRemoveChildren(DulcisX.Nodes.ProjectItemNode,System.Int32@)
   id: TryRemoveChildren(DulcisX.Nodes.ProjectItemNode,System.Int32@)
@@ -760,7 +867,7 @@ items:
       repo: https://github.com/TwentyFourMinutes/DulcisX.git
     id: TryRemoveChildren
     path: ../../DulcisX - master/src/DulcisX/DulcisX/Nodes/ProjectNode.cs
-    startLine: 251
+    startLine: 278
   assemblies:
   - DulcisX
   namespace: DulcisX.Nodes
@@ -805,7 +912,7 @@ items:
       repo: https://github.com/TwentyFourMinutes/DulcisX.git
     id: TryGetPhysicalNode
     path: ../../DulcisX - master/src/DulcisX/DulcisX/Nodes/ProjectNode.cs
-    startLine: 269
+    startLine: 296
   assemblies:
   - DulcisX
   namespace: DulcisX.Nodes
@@ -814,7 +921,8 @@ items:
   syntax:
     content: >-
       public bool TryGetPhysicalNode<TNode>(string fullName, out TNode node)
-          where TNode : class, IPhysicalNode
+
+          where TNode : class, IPhysicalProjectItemNode
     parameters:
     - id: fullName
       type: System.String
@@ -828,7 +936,7 @@ items:
     return:
       type: System.Boolean
       description: A return value indicates whether the operation succeeded.
-    content.vb: Public Function TryGetPhysicalNode(Of TNode As {Class, IPhysicalNode})(fullName As String, ByRef node As TNode) As Boolean
+    content.vb: Public Function TryGetPhysicalNode(Of TNode As {Class, IPhysicalProjectItemNode})(fullName As String, ByRef node As TNode) As Boolean
   overload: DulcisX.Nodes.ProjectNode.TryGetPhysicalNode*
   nameWithType.vb: ProjectNode.TryGetPhysicalNode(Of TNode)(String, ByRef TNode)
   modifiers.csharp:
@@ -837,6 +945,76 @@ items:
   - Public
   fullName.vb: DulcisX.Nodes.ProjectNode.TryGetPhysicalNode(Of TNode)(System.String, ByRef TNode)
   name.vb: TryGetPhysicalNode(Of TNode)(String, ByRef TNode)
+- uid: DulcisX.Nodes.ProjectNode.ContainsPhysicalNode(System.String)
+  commentId: M:DulcisX.Nodes.ProjectNode.ContainsPhysicalNode(System.String)
+  id: ContainsPhysicalNode(System.String)
+  parent: DulcisX.Nodes.ProjectNode
+  langs:
+  - csharp
+  - vb
+  name: ContainsPhysicalNode(String)
+  nameWithType: ProjectNode.ContainsPhysicalNode(String)
+  fullName: DulcisX.Nodes.ProjectNode.ContainsPhysicalNode(System.String)
+  type: Method
+  source:
+    remote:
+      path: src/DulcisX/DulcisX/Nodes/ProjectNode.cs
+      branch: master
+      repo: https://github.com/TwentyFourMinutes/DulcisX.git
+    id: ContainsPhysicalNode
+    path: ../../DulcisX - master/src/DulcisX/DulcisX/Nodes/ProjectNode.cs
+    startLine: 317
+  assemblies:
+  - DulcisX
+  namespace: DulcisX.Nodes
+  syntax:
+    content: public bool ContainsPhysicalNode(string fullName)
+    parameters:
+    - id: fullName
+      type: System.String
+    return:
+      type: System.Boolean
+    content.vb: Public Function ContainsPhysicalNode(fullName As String) As Boolean
+  overload: DulcisX.Nodes.ProjectNode.ContainsPhysicalNode*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: DulcisX.Nodes.ProjectNode.GetRelativePath(DulcisX.Nodes.IPhysicalProjectItemNode)
+  commentId: M:DulcisX.Nodes.ProjectNode.GetRelativePath(DulcisX.Nodes.IPhysicalProjectItemNode)
+  id: GetRelativePath(DulcisX.Nodes.IPhysicalProjectItemNode)
+  parent: DulcisX.Nodes.ProjectNode
+  langs:
+  - csharp
+  - vb
+  name: GetRelativePath(IPhysicalProjectItemNode)
+  nameWithType: ProjectNode.GetRelativePath(IPhysicalProjectItemNode)
+  fullName: DulcisX.Nodes.ProjectNode.GetRelativePath(DulcisX.Nodes.IPhysicalProjectItemNode)
+  type: Method
+  source:
+    remote:
+      path: src/DulcisX/DulcisX/Nodes/ProjectNode.cs
+      branch: master
+      repo: https://github.com/TwentyFourMinutes/DulcisX.git
+    id: GetRelativePath
+    path: ../../DulcisX - master/src/DulcisX/DulcisX/Nodes/ProjectNode.cs
+    startLine: 330
+  assemblies:
+  - DulcisX
+  namespace: DulcisX.Nodes
+  syntax:
+    content: public string GetRelativePath(IPhysicalProjectItemNode node)
+    parameters:
+    - id: node
+      type: DulcisX.Nodes.IPhysicalProjectItemNode
+    return:
+      type: System.String
+    content.vb: Public Function GetRelativePath(node As IPhysicalProjectItemNode) As String
+  overload: DulcisX.Nodes.ProjectNode.GetRelativePath*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
 - uid: DulcisX.Nodes.ProjectNode.SaveAllChildren(System.Boolean)
   commentId: M:DulcisX.Nodes.ProjectNode.SaveAllChildren(System.Boolean)
   id: SaveAllChildren(System.Boolean)
@@ -855,7 +1033,7 @@ items:
       repo: https://github.com/TwentyFourMinutes/DulcisX.git
     id: SaveAllChildren
     path: ../../DulcisX - master/src/DulcisX/DulcisX/Nodes/ProjectNode.cs
-    startLine: 306
+    startLine: 366
   assemblies:
   - DulcisX
   namespace: DulcisX.Nodes
@@ -869,6 +1047,43 @@ items:
       description: Determines whether to force the file save operation or not.
     content.vb: Public Sub SaveAllChildren(forceSave As Boolean = False)
   overload: DulcisX.Nodes.ProjectNode.SaveAllChildren*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: DulcisX.Nodes.ProjectNode.MoveNodeInsideProject(DulcisX.Nodes.FolderNode,DulcisX.Nodes.DocumentNode)
+  commentId: M:DulcisX.Nodes.ProjectNode.MoveNodeInsideProject(DulcisX.Nodes.FolderNode,DulcisX.Nodes.DocumentNode)
+  id: MoveNodeInsideProject(DulcisX.Nodes.FolderNode,DulcisX.Nodes.DocumentNode)
+  parent: DulcisX.Nodes.ProjectNode
+  langs:
+  - csharp
+  - vb
+  name: MoveNodeInsideProject(FolderNode, DocumentNode)
+  nameWithType: ProjectNode.MoveNodeInsideProject(FolderNode, DocumentNode)
+  fullName: DulcisX.Nodes.ProjectNode.MoveNodeInsideProject(DulcisX.Nodes.FolderNode, DulcisX.Nodes.DocumentNode)
+  type: Method
+  source:
+    remote:
+      path: src/DulcisX/DulcisX/Nodes/ProjectNode.cs
+      branch: master
+      repo: https://github.com/TwentyFourMinutes/DulcisX.git
+    id: MoveNodeInsideProject
+    path: ../../DulcisX - master/src/DulcisX/DulcisX/Nodes/ProjectNode.cs
+    startLine: 375
+  assemblies:
+  - DulcisX
+  namespace: DulcisX.Nodes
+  syntax:
+    content: public DocumentNode MoveNodeInsideProject(FolderNode destination, DocumentNode node)
+    parameters:
+    - id: destination
+      type: DulcisX.Nodes.FolderNode
+    - id: node
+      type: DulcisX.Nodes.DocumentNode
+    return:
+      type: DulcisX.Nodes.DocumentNode
+    content.vb: Public Function MoveNodeInsideProject(destination As FolderNode, node As DocumentNode) As DocumentNode
+  overload: DulcisX.Nodes.ProjectNode.MoveNodeInsideProject*
   modifiers.csharp:
   - public
   modifiers.vb:
@@ -922,6 +1137,48 @@ references:
   name: IBaseNode
   nameWithType: IBaseNode
   fullName: DulcisX.Nodes.IBaseNode
+- uid: System.IEquatable{DulcisX.Nodes.IBaseNode}
+  commentId: T:System.IEquatable{DulcisX.Nodes.IBaseNode}
+  parent: System
+  definition: System.IEquatable`1
+  name: IEquatable<IBaseNode>
+  nameWithType: IEquatable<IBaseNode>
+  fullName: System.IEquatable<DulcisX.Nodes.IBaseNode>
+  nameWithType.vb: IEquatable(Of IBaseNode)
+  fullName.vb: System.IEquatable(Of DulcisX.Nodes.IBaseNode)
+  name.vb: IEquatable(Of IBaseNode)
+  spec.csharp:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    nameWithType: IEquatable
+    fullName: System.IEquatable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: DulcisX.Nodes.IBaseNode
+    name: IBaseNode
+    nameWithType: IBaseNode
+    fullName: DulcisX.Nodes.IBaseNode
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    nameWithType: IEquatable
+    fullName: System.IEquatable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: DulcisX.Nodes.IBaseNode
+    name: IBaseNode
+    nameWithType: IBaseNode
+    fullName: DulcisX.Nodes.IBaseNode
+  - name: )
+    nameWithType: )
+    fullName: )
 - uid: DulcisX.Nodes.SolutionItemNode.GetParent
   commentId: M:DulcisX.Nodes.SolutionItemNode.GetParent
   parent: DulcisX.Nodes.SolutionItemNode
@@ -1177,39 +1434,106 @@ references:
   - name: )
     nameWithType: )
     fullName: )
-- uid: DulcisX.Nodes.BaseNode.IsTypeMatching(DulcisX.Core.Enums.NodeTypes)
-  commentId: M:DulcisX.Nodes.BaseNode.IsTypeMatching(DulcisX.Core.Enums.NodeTypes)
+- uid: DulcisX.Nodes.BaseNode.Equals(DulcisX.Nodes.IBaseNode)
+  commentId: M:DulcisX.Nodes.BaseNode.Equals(DulcisX.Nodes.IBaseNode)
   parent: DulcisX.Nodes.BaseNode
-  name: IsTypeMatching(NodeTypes)
-  nameWithType: BaseNode.IsTypeMatching(NodeTypes)
-  fullName: DulcisX.Nodes.BaseNode.IsTypeMatching(DulcisX.Core.Enums.NodeTypes)
+  name: Equals(IBaseNode)
+  nameWithType: BaseNode.Equals(IBaseNode)
+  fullName: DulcisX.Nodes.BaseNode.Equals(DulcisX.Nodes.IBaseNode)
   spec.csharp:
-  - uid: DulcisX.Nodes.BaseNode.IsTypeMatching(DulcisX.Core.Enums.NodeTypes)
-    name: IsTypeMatching
-    nameWithType: BaseNode.IsTypeMatching
-    fullName: DulcisX.Nodes.BaseNode.IsTypeMatching
+  - uid: DulcisX.Nodes.BaseNode.Equals(DulcisX.Nodes.IBaseNode)
+    name: Equals
+    nameWithType: BaseNode.Equals
+    fullName: DulcisX.Nodes.BaseNode.Equals
   - name: (
     nameWithType: (
     fullName: (
-  - uid: DulcisX.Core.Enums.NodeTypes
-    name: NodeTypes
-    nameWithType: NodeTypes
-    fullName: DulcisX.Core.Enums.NodeTypes
+  - uid: DulcisX.Nodes.IBaseNode
+    name: IBaseNode
+    nameWithType: IBaseNode
+    fullName: DulcisX.Nodes.IBaseNode
   - name: )
     nameWithType: )
     fullName: )
   spec.vb:
-  - uid: DulcisX.Nodes.BaseNode.IsTypeMatching(DulcisX.Core.Enums.NodeTypes)
-    name: IsTypeMatching
-    nameWithType: BaseNode.IsTypeMatching
-    fullName: DulcisX.Nodes.BaseNode.IsTypeMatching
+  - uid: DulcisX.Nodes.BaseNode.Equals(DulcisX.Nodes.IBaseNode)
+    name: Equals
+    nameWithType: BaseNode.Equals
+    fullName: DulcisX.Nodes.BaseNode.Equals
   - name: (
     nameWithType: (
     fullName: (
-  - uid: DulcisX.Core.Enums.NodeTypes
-    name: NodeTypes
-    nameWithType: NodeTypes
-    fullName: DulcisX.Core.Enums.NodeTypes
+  - uid: DulcisX.Nodes.IBaseNode
+    name: IBaseNode
+    nameWithType: IBaseNode
+    fullName: DulcisX.Nodes.IBaseNode
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: DulcisX.Nodes.BaseNode.Equals(System.Object)
+  commentId: M:DulcisX.Nodes.BaseNode.Equals(System.Object)
+  parent: DulcisX.Nodes.BaseNode
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: BaseNode.Equals(Object)
+  fullName: DulcisX.Nodes.BaseNode.Equals(System.Object)
+  spec.csharp:
+  - uid: DulcisX.Nodes.BaseNode.Equals(System.Object)
+    name: Equals
+    nameWithType: BaseNode.Equals
+    fullName: DulcisX.Nodes.BaseNode.Equals
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: DulcisX.Nodes.BaseNode.Equals(System.Object)
+    name: Equals
+    nameWithType: BaseNode.Equals
+    fullName: DulcisX.Nodes.BaseNode.Equals
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: DulcisX.Nodes.BaseNode.GetHashCode
+  commentId: M:DulcisX.Nodes.BaseNode.GetHashCode
+  parent: DulcisX.Nodes.BaseNode
+  name: GetHashCode()
+  nameWithType: BaseNode.GetHashCode()
+  fullName: DulcisX.Nodes.BaseNode.GetHashCode()
+  spec.csharp:
+  - uid: DulcisX.Nodes.BaseNode.GetHashCode
+    name: GetHashCode
+    nameWithType: BaseNode.GetHashCode
+    fullName: DulcisX.Nodes.BaseNode.GetHashCode
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: DulcisX.Nodes.BaseNode.GetHashCode
+    name: GetHashCode
+    nameWithType: BaseNode.GetHashCode
+    fullName: DulcisX.Nodes.BaseNode.GetHashCode
+  - name: (
+    nameWithType: (
+    fullName: (
   - name: )
     nameWithType: )
     fullName: )
@@ -1241,47 +1565,6 @@ references:
   - name: (
     nameWithType: (
     fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
-- uid: System.Object.Equals(System.Object)
-  commentId: M:System.Object.Equals(System.Object)
-  parent: System.Object
-  isExternal: true
-  name: Equals(Object)
-  nameWithType: Object.Equals(Object)
-  fullName: System.Object.Equals(System.Object)
-  spec.csharp:
-  - uid: System.Object.Equals(System.Object)
-    name: Equals
-    nameWithType: Object.Equals
-    fullName: System.Object.Equals
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: System.Object.Equals(System.Object)
-    name: Equals
-    nameWithType: Object.Equals
-    fullName: System.Object.Equals
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
   - name: )
     nameWithType: )
     fullName: )
@@ -1399,37 +1682,6 @@ references:
   - name: )
     nameWithType: )
     fullName: )
-- uid: System.Object.GetHashCode
-  commentId: M:System.Object.GetHashCode
-  parent: System.Object
-  isExternal: true
-  name: GetHashCode()
-  nameWithType: Object.GetHashCode()
-  fullName: System.Object.GetHashCode()
-  spec.csharp:
-  - uid: System.Object.GetHashCode
-    name: GetHashCode
-    nameWithType: Object.GetHashCode
-    fullName: System.Object.GetHashCode
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: System.Object.GetHashCode
-    name: GetHashCode
-    nameWithType: Object.GetHashCode
-    fullName: System.Object.GetHashCode
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
 - uid: System.Object.GetType
   commentId: M:System.Object.GetType
   parent: System.Object
@@ -1498,6 +1750,45 @@ references:
   name: System
   nameWithType: System
   fullName: System
+- uid: System.IEquatable`1
+  commentId: T:System.IEquatable`1
+  isExternal: true
+  name: IEquatable<T>
+  nameWithType: IEquatable<T>
+  fullName: System.IEquatable<T>
+  nameWithType.vb: IEquatable(Of T)
+  fullName.vb: System.IEquatable(Of T)
+  name.vb: IEquatable(Of T)
+  spec.csharp:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    nameWithType: IEquatable
+    fullName: System.IEquatable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    nameWithType: IEquatable
+    fullName: System.IEquatable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
 - uid: Microsoft.VisualStudio.Shell.Interop.IVsBuildPropertyStorage
   commentId: T:Microsoft.VisualStudio.Shell.Interop.IVsBuildPropertyStorage
   parent: Microsoft.VisualStudio.Shell.Interop
@@ -1534,29 +1825,17 @@ references:
   name: UnderlyingProject
   nameWithType: ProjectNode.UnderlyingProject
   fullName: DulcisX.Nodes.ProjectNode.UnderlyingProject
-- uid: DulcisX.Nodes.BaseNode.NodeType
-  commentId: P:DulcisX.Nodes.BaseNode.NodeType
-  parent: DulcisX.Nodes.BaseNode
-  name: NodeType
-  nameWithType: BaseNode.NodeType
-  fullName: DulcisX.Nodes.BaseNode.NodeType
-- uid: DulcisX.Nodes.ProjectNode.NodeType*
-  commentId: Overload:DulcisX.Nodes.ProjectNode.NodeType
-  name: NodeType
-  nameWithType: ProjectNode.NodeType
-  fullName: DulcisX.Nodes.ProjectNode.NodeType
-- uid: DulcisX.Nodes.IBaseNode.NodeType
-  commentId: P:DulcisX.Nodes.IBaseNode.NodeType
-  parent: DulcisX.Nodes.IBaseNode
-  name: NodeType
-  nameWithType: IBaseNode.NodeType
-  fullName: DulcisX.Nodes.IBaseNode.NodeType
-- uid: DulcisX.Core.Enums.NodeTypes
-  commentId: T:DulcisX.Core.Enums.NodeTypes
+- uid: DulcisX.Nodes.ProjectNode.ProjectNodeType*
+  commentId: Overload:DulcisX.Nodes.ProjectNode.ProjectNodeType
+  name: ProjectNodeType
+  nameWithType: ProjectNode.ProjectNodeType
+  fullName: DulcisX.Nodes.ProjectNode.ProjectNodeType
+- uid: DulcisX.Core.Enums.ProjectNodeType
+  commentId: T:DulcisX.Core.Enums.ProjectNodeType
   parent: DulcisX.Core.Enums
-  name: NodeTypes
-  nameWithType: NodeTypes
-  fullName: DulcisX.Core.Enums.NodeTypes
+  name: ProjectNodeType
+  nameWithType: ProjectNodeType
+  fullName: DulcisX.Core.Enums.ProjectNodeType
 - uid: DulcisX.Core.Enums
   commentId: N:DulcisX.Core.Enums
   name: DulcisX.Core.Enums
@@ -1653,6 +1932,39 @@ references:
     name: GetFullName
     nameWithType: IPhysicalNode.GetFullName
     fullName: DulcisX.Nodes.IPhysicalNode.GetFullName
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: DulcisX.Nodes.ProjectNode.GetDirectoryName*
+  commentId: Overload:DulcisX.Nodes.ProjectNode.GetDirectoryName
+  name: GetDirectoryName
+  nameWithType: ProjectNode.GetDirectoryName
+  fullName: DulcisX.Nodes.ProjectNode.GetDirectoryName
+- uid: DulcisX.Nodes.IPhysicalNode.GetDirectoryName
+  commentId: M:DulcisX.Nodes.IPhysicalNode.GetDirectoryName
+  parent: DulcisX.Nodes.IPhysicalNode
+  name: GetDirectoryName()
+  nameWithType: IPhysicalNode.GetDirectoryName()
+  fullName: DulcisX.Nodes.IPhysicalNode.GetDirectoryName()
+  spec.csharp:
+  - uid: DulcisX.Nodes.IPhysicalNode.GetDirectoryName
+    name: GetDirectoryName
+    nameWithType: IPhysicalNode.GetDirectoryName
+    fullName: DulcisX.Nodes.IPhysicalNode.GetDirectoryName
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: DulcisX.Nodes.IPhysicalNode.GetDirectoryName
+    name: GetDirectoryName
+    nameWithType: IPhysicalNode.GetDirectoryName
+    fullName: DulcisX.Nodes.IPhysicalNode.GetDirectoryName
   - name: (
     nameWithType: (
     fullName: (
@@ -1894,6 +2206,269 @@ references:
   name: AddExistingDocument
   nameWithType: ProjectNode.AddExistingDocument
   fullName: DulcisX.Nodes.ProjectNode.AddExistingDocument
+- uid: DulcisX.Nodes.ProjectNode.ModifyAndWaitAsync*
+  commentId: Overload:DulcisX.Nodes.ProjectNode.ModifyAndWaitAsync
+  name: ModifyAndWaitAsync
+  nameWithType: ProjectNode.ModifyAndWaitAsync
+  fullName: DulcisX.Nodes.ProjectNode.ModifyAndWaitAsync
+- uid: System.Action{DulcisX.Nodes.ModifyProjectDocument}
+  commentId: T:System.Action{DulcisX.Nodes.ModifyProjectDocument}
+  parent: System
+  definition: System.Action`1
+  name: Action<ModifyProjectDocument>
+  nameWithType: Action<ModifyProjectDocument>
+  fullName: System.Action<DulcisX.Nodes.ModifyProjectDocument>
+  nameWithType.vb: Action(Of ModifyProjectDocument)
+  fullName.vb: System.Action(Of DulcisX.Nodes.ModifyProjectDocument)
+  name.vb: Action(Of ModifyProjectDocument)
+  spec.csharp:
+  - uid: System.Action`1
+    name: Action
+    nameWithType: Action
+    fullName: System.Action
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: DulcisX.Nodes.ModifyProjectDocument
+    name: ModifyProjectDocument
+    nameWithType: ModifyProjectDocument
+    fullName: DulcisX.Nodes.ModifyProjectDocument
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Action`1
+    name: Action
+    nameWithType: Action
+    fullName: System.Action
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: DulcisX.Nodes.ModifyProjectDocument
+    name: ModifyProjectDocument
+    nameWithType: ModifyProjectDocument
+    fullName: DulcisX.Nodes.ModifyProjectDocument
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Nullable{System.TimeSpan}
+  commentId: T:System.Nullable{System.TimeSpan}
+  parent: System
+  definition: System.Nullable`1
+  name: Nullable<TimeSpan>
+  nameWithType: Nullable<TimeSpan>
+  fullName: System.Nullable<System.TimeSpan>
+  nameWithType.vb: Nullable(Of TimeSpan)
+  fullName.vb: System.Nullable(Of System.TimeSpan)
+  name.vb: Nullable(Of TimeSpan)
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.TimeSpan
+    name: TimeSpan
+    nameWithType: TimeSpan
+    fullName: System.TimeSpan
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.TimeSpan
+    name: TimeSpan
+    nameWithType: TimeSpan
+    fullName: System.TimeSpan
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Threading.Tasks.ValueTask{System.Boolean}
+  commentId: T:System.Threading.Tasks.ValueTask{System.Boolean}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.ValueTask`1
+  name: ValueTask<Boolean>
+  nameWithType: ValueTask<Boolean>
+  fullName: System.Threading.Tasks.ValueTask<System.Boolean>
+  nameWithType.vb: ValueTask(Of Boolean)
+  fullName.vb: System.Threading.Tasks.ValueTask(Of System.Boolean)
+  name.vb: ValueTask(Of Boolean)
+  spec.csharp:
+  - uid: System.Threading.Tasks.ValueTask`1
+    name: ValueTask
+    nameWithType: ValueTask
+    fullName: System.Threading.Tasks.ValueTask
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.Boolean
+    name: Boolean
+    nameWithType: Boolean
+    fullName: System.Boolean
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.ValueTask`1
+    name: ValueTask
+    nameWithType: ValueTask
+    fullName: System.Threading.Tasks.ValueTask
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.Boolean
+    name: Boolean
+    nameWithType: Boolean
+    fullName: System.Boolean
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Action`1
+  commentId: T:System.Action`1
+  isExternal: true
+  name: Action<T>
+  nameWithType: Action<T>
+  fullName: System.Action<T>
+  nameWithType.vb: Action(Of T)
+  fullName.vb: System.Action(Of T)
+  name.vb: Action(Of T)
+  spec.csharp:
+  - uid: System.Action`1
+    name: Action
+    nameWithType: Action
+    fullName: System.Action
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Action`1
+    name: Action
+    nameWithType: Action
+    fullName: System.Action
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Nullable`1
+  commentId: T:System.Nullable`1
+  isExternal: true
+  name: Nullable<T>
+  nameWithType: Nullable<T>
+  fullName: System.Nullable<T>
+  nameWithType.vb: Nullable(Of T)
+  fullName.vb: System.Nullable(Of T)
+  name.vb: Nullable(Of T)
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Threading.Tasks.ValueTask`1
+  commentId: T:System.Threading.Tasks.ValueTask`1
+  isExternal: true
+  name: ValueTask<TResult>
+  nameWithType: ValueTask<TResult>
+  fullName: System.Threading.Tasks.ValueTask<TResult>
+  nameWithType.vb: ValueTask(Of TResult)
+  fullName.vb: System.Threading.Tasks.ValueTask(Of TResult)
+  name.vb: ValueTask(Of TResult)
+  spec.csharp:
+  - uid: System.Threading.Tasks.ValueTask`1
+    name: ValueTask
+    nameWithType: ValueTask
+    fullName: System.Threading.Tasks.ValueTask
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TResult
+    nameWithType: TResult
+    fullName: TResult
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.ValueTask`1
+    name: ValueTask
+    nameWithType: ValueTask
+    fullName: System.Threading.Tasks.ValueTask
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TResult
+    nameWithType: TResult
+    fullName: TResult
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Threading.Tasks
+  commentId: N:System.Threading.Tasks
+  isExternal: true
+  name: System.Threading.Tasks
+  nameWithType: System.Threading.Tasks
+  fullName: System.Threading.Tasks
+- uid: DulcisX.Nodes.ProjectNode.Modify*
+  commentId: Overload:DulcisX.Nodes.ProjectNode.Modify
+  name: Modify
+  nameWithType: ProjectNode.Modify
+  fullName: DulcisX.Nodes.ProjectNode.Modify
 - uid: DulcisX.Nodes.ProjectNode.TryRemoveChildren*
   commentId: Overload:DulcisX.Nodes.ProjectNode.TryRemoveChildren
   name: TryRemoveChildren
@@ -1918,12 +2493,32 @@ references:
   nameWithType: TNode
   fullName: TNode
 - uid: TNode
-  commentId: '!:TNode'
   name: TNode
   nameWithType: TNode
   fullName: TNode
+- uid: DulcisX.Nodes.ProjectNode.ContainsPhysicalNode*
+  commentId: Overload:DulcisX.Nodes.ProjectNode.ContainsPhysicalNode
+  name: ContainsPhysicalNode
+  nameWithType: ProjectNode.ContainsPhysicalNode
+  fullName: DulcisX.Nodes.ProjectNode.ContainsPhysicalNode
+- uid: DulcisX.Nodes.ProjectNode.GetRelativePath*
+  commentId: Overload:DulcisX.Nodes.ProjectNode.GetRelativePath
+  name: GetRelativePath
+  nameWithType: ProjectNode.GetRelativePath
+  fullName: DulcisX.Nodes.ProjectNode.GetRelativePath
+- uid: DulcisX.Nodes.IPhysicalProjectItemNode
+  commentId: T:DulcisX.Nodes.IPhysicalProjectItemNode
+  parent: DulcisX.Nodes
+  name: IPhysicalProjectItemNode
+  nameWithType: IPhysicalProjectItemNode
+  fullName: DulcisX.Nodes.IPhysicalProjectItemNode
 - uid: DulcisX.Nodes.ProjectNode.SaveAllChildren*
   commentId: Overload:DulcisX.Nodes.ProjectNode.SaveAllChildren
   name: SaveAllChildren
   nameWithType: ProjectNode.SaveAllChildren
   fullName: DulcisX.Nodes.ProjectNode.SaveAllChildren
+- uid: DulcisX.Nodes.ProjectNode.MoveNodeInsideProject*
+  commentId: Overload:DulcisX.Nodes.ProjectNode.MoveNodeInsideProject
+  name: MoveNodeInsideProject
+  nameWithType: ProjectNode.MoveNodeInsideProject
+  fullName: DulcisX.Nodes.ProjectNode.MoveNodeInsideProject

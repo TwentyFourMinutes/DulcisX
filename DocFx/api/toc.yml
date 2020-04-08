@@ -20,6 +20,8 @@
     name: PackageX
   - uid: DulcisX.Core.VisualStudioInstance
     name: VisualStudioInstance
+  - uid: DulcisX.Core.VisualStudioUIInstance
+    name: VisualStudioUIInstance
 - uid: DulcisX.Core.Attributes
   name: DulcisX.Core.Attributes
   items:
@@ -53,29 +55,34 @@
 - uid: DulcisX.Core.Enums
   name: DulcisX.Core.Enums
   items:
+  - uid: DulcisX.Core.Enums.CommonNodeIds
+    name: CommonNodeIds
+  - uid: DulcisX.Core.Enums.CommonStatusCodes
+    name: CommonStatusCodes
+  - uid: DulcisX.Core.Enums.CommonStreamKey
+    name: CommonStreamKey
   - uid: DulcisX.Core.Enums.CopyToOutputDirectory
     name: CopyToOutputDirectory
   - uid: DulcisX.Core.Enums.DocumentProperty
     name: DocumentProperty
   - uid: DulcisX.Core.Enums.DocumentType
     name: DocumentType
+  - uid: DulcisX.Core.Enums.MessageBoxButton
+    name: MessageBoxButton
+  - uid: DulcisX.Core.Enums.MessageBoxIcon
+    name: MessageBoxIcon
+  - uid: DulcisX.Core.Enums.MessageBoxResult
+    name: MessageBoxResult
   - uid: DulcisX.Core.Enums.NodeTypes
     name: NodeTypes
+  - uid: DulcisX.Core.Enums.OpenNodeAttribute
+    name: OpenNodeAttribute
+  - uid: DulcisX.Core.Enums.PhysicalNodeRemovedFlags
+    name: PhysicalNodeRemovedFlags
+  - uid: DulcisX.Core.Enums.ProjectNodeType
+    name: ProjectNodeType
   - uid: DulcisX.Core.Enums.StartupOption
     name: StartupOption
-- uid: DulcisX.Core.Enums.VisualStudio
-  name: DulcisX.Core.Enums.VisualStudio
-  items:
-  - uid: DulcisX.Core.Enums.VisualStudio.CommonNodeIds
-    name: CommonNodeIds
-  - uid: DulcisX.Core.Enums.VisualStudio.CommonStatusCodes
-    name: CommonStatusCodes
-  - uid: DulcisX.Core.Enums.VisualStudio.CommonStreamKeys
-    name: CommonStreamKeys
-  - uid: DulcisX.Core.Enums.VisualStudio.OpenNodeAttribute
-    name: OpenNodeAttribute
-  - uid: DulcisX.Core.Enums.VisualStudio.PhysicalNodeRemovedFlags
-    name: PhysicalNodeRemovedFlags
 - uid: DulcisX.Core.Extensions
   name: DulcisX.Core.Extensions
   items:
@@ -127,6 +134,12 @@
     name: INamedNode
   - uid: DulcisX.Nodes.IPhysicalNode
     name: IPhysicalNode
+  - uid: DulcisX.Nodes.IPhysicalProjectItemNode
+    name: IPhysicalProjectItemNode
+  - uid: DulcisX.Nodes.IProjectItemNode
+    name: IProjectItemNode
+  - uid: DulcisX.Nodes.ModifyProjectDocument
+    name: ModifyProjectDocument
   - uid: DulcisX.Nodes.ProjectItemNode
     name: ProjectItemNode
   - uid: DulcisX.Nodes.ProjectNode

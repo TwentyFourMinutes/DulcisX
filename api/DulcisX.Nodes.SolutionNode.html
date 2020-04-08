@@ -111,6 +111,7 @@
     <div><a class="xref" href="DulcisX.Nodes.IPhysicalNode.html">IPhysicalNode</a></div>
     <div><a class="xref" href="DulcisX.Nodes.INamedNode.html">INamedNode</a></div>
     <div><a class="xref" href="DulcisX.Nodes.IBaseNode.html">IBaseNode</a></div>
+    <div><span class="xref">System.IEquatable</span>&lt;<a class="xref" href="DulcisX.Nodes.IBaseNode.html">IBaseNode</a>&gt;</div>
   </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
@@ -136,22 +137,22 @@
       <a class="xref" href="DulcisX.Nodes.BaseNode.html#DulcisX_Nodes_BaseNode_AsHierarchyItem">BaseNode.AsHierarchyItem()</a>
     </div>
     <div>
-      <a class="xref" href="DulcisX.Nodes.BaseNode.html#DulcisX_Nodes_BaseNode_IsTypeMatching_DulcisX_Core_Enums_NodeTypes_">BaseNode.IsTypeMatching(NodeTypes)</a>
+      <a class="xref" href="DulcisX.Nodes.BaseNode.html#DulcisX_Nodes_BaseNode_Equals_DulcisX_Nodes_IBaseNode_">BaseNode.Equals(IBaseNode)</a>
+    </div>
+    <div>
+      <a class="xref" href="DulcisX.Nodes.BaseNode.html#DulcisX_Nodes_BaseNode_Equals_System_Object_">BaseNode.Equals(Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="DulcisX.Nodes.BaseNode.html#DulcisX_Nodes_BaseNode_GetHashCode">BaseNode.GetHashCode()</a>
     </div>
     <div>
       <span class="xref">System.Object.ToString()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
     </div>
     <div>
       <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
     </div>
     <div>
       <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
     </div>
     <div>
       <span class="xref">System.Object.GetType()</span>
@@ -164,7 +165,7 @@
   <h6><strong>Assembly</strong>: DulcisX.dll</h6>
   <h5 id="DulcisX_Nodes_SolutionNode_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class SolutionNode : SolutionItemNode, IPhysicalNode, INamedNode, IBaseNode</code></pre>
+    <pre><code class="lang-csharp hljs">public class SolutionNode : SolutionItemNode, IPhysicalNode, INamedNode, IBaseNode, IEquatable&lt;IBaseNode&gt;</code></pre>
   </div>
   <h3 id="constructors">Constructors
   </h3>
@@ -173,7 +174,7 @@
     <a href="https://github.com/TwentyFourMinutes/DulcisX/new/master/apiSpec/new?filename=DulcisX_Nodes_SolutionNode__ctor_Microsoft_VisualStudio_Shell_Interop_IVsSolution_DulcisX_Core_IServiceProviders_SimpleInjector_Container_.md&amp;value=---%0Auid%3A%20DulcisX.Nodes.SolutionNode.%23ctor(Microsoft.VisualStudio.Shell.Interop.IVsSolution%2CDulcisX.Core.IServiceProviders%2CSimpleInjector.Container)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/TwentyFourMinutes/DulcisX/blob/master/src/DulcisX/DulcisX/Nodes/SolutionNode.cs/#L115">View Source</a>
+    <a href="https://github.com/TwentyFourMinutes/DulcisX/blob/master/src/DulcisX/DulcisX/Nodes/SolutionNode.cs/#L112">View Source</a>
   </span>
   <a id="DulcisX_Nodes_SolutionNode__ctor_" data-uid="DulcisX.Nodes.SolutionNode.#ctor*"></a>
   <h4 id="DulcisX_Nodes_SolutionNode__ctor_Microsoft_VisualStudio_Shell_Interop_IVsSolution_DulcisX_Core_IServiceProviders_SimpleInjector_Container_" data-uid="DulcisX.Nodes.SolutionNode.#ctor(Microsoft.VisualStudio.Shell.Interop.IVsSolution,DulcisX.Core.IServiceProviders,SimpleInjector.Container)">SolutionNode(IVsSolution, IServiceProviders, Container)</h4>
@@ -249,39 +250,6 @@
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/TwentyFourMinutes/DulcisX/new/master/apiSpec/new?filename=DulcisX_Nodes_SolutionNode_NodeType.md&amp;value=---%0Auid%3A%20DulcisX.Nodes.SolutionNode.NodeType%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/TwentyFourMinutes/DulcisX/blob/master/src/DulcisX/DulcisX/Nodes/SolutionNode.cs/#L78">View Source</a>
-  </span>
-  <a id="DulcisX_Nodes_SolutionNode_NodeType_" data-uid="DulcisX.Nodes.SolutionNode.NodeType*"></a>
-  <h4 id="DulcisX_Nodes_SolutionNode_NodeType" data-uid="DulcisX.Nodes.SolutionNode.NodeType">NodeType</h4>
-  <div class="markdown level1 summary"><p>Gets the Type of current Node.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public override NodeTypes NodeType { get; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="DulcisX.Core.Enums.NodeTypes.html">NodeTypes</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="overrides">Overrides</h5>
-  <div><a class="xref" href="DulcisX.Nodes.BaseNode.html#DulcisX_Nodes_BaseNode_NodeType">BaseNode.NodeType</a></div>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
     <a href="https://github.com/TwentyFourMinutes/DulcisX/new/master/apiSpec/new?filename=DulcisX_Nodes_SolutionNode_OpenNodeEvents.md&amp;value=---%0Auid%3A%20DulcisX.Nodes.SolutionNode.OpenNodeEvents%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
@@ -316,12 +284,11 @@
     <a href="https://github.com/TwentyFourMinutes/DulcisX/new/master/apiSpec/new?filename=DulcisX_Nodes_SolutionNode_ParentSolution.md&amp;value=---%0Auid%3A%20DulcisX.Nodes.SolutionNode.ParentSolution%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/TwentyFourMinutes/DulcisX/blob/master/src/DulcisX/DulcisX/Nodes/SolutionNode.cs/#L81">View Source</a>
+    <a href="https://github.com/TwentyFourMinutes/DulcisX/blob/master/src/DulcisX/DulcisX/Nodes/SolutionNode.cs/#L78">View Source</a>
   </span>
   <a id="DulcisX_Nodes_SolutionNode_ParentSolution_" data-uid="DulcisX.Nodes.SolutionNode.ParentSolution*"></a>
   <h4 id="DulcisX_Nodes_SolutionNode_ParentSolution" data-uid="DulcisX.Nodes.SolutionNode.ParentSolution">ParentSolution</h4>
-  <div class="markdown level1 summary"><p>Gets the Solution in which the Node sits in.</p>
-</div>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -411,7 +378,7 @@
     <a href="https://github.com/TwentyFourMinutes/DulcisX/new/master/apiSpec/new?filename=DulcisX_Nodes_SolutionNode_ServiceContainer.md&amp;value=---%0Auid%3A%20DulcisX.Nodes.SolutionNode.ServiceContainer%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/TwentyFourMinutes/DulcisX/blob/master/src/DulcisX/DulcisX/Nodes/SolutionNode.cs/#L86">View Source</a>
+    <a href="https://github.com/TwentyFourMinutes/DulcisX/blob/master/src/DulcisX/DulcisX/Nodes/SolutionNode.cs/#L83">View Source</a>
   </span>
   <a id="DulcisX_Nodes_SolutionNode_ServiceContainer_" data-uid="DulcisX.Nodes.SolutionNode.ServiceContainer*"></a>
   <h4 id="DulcisX_Nodes_SolutionNode_ServiceContainer" data-uid="DulcisX.Nodes.SolutionNode.ServiceContainer">ServiceContainer</h4>
@@ -442,7 +409,7 @@
     <a href="https://github.com/TwentyFourMinutes/DulcisX/new/master/apiSpec/new?filename=DulcisX_Nodes_SolutionNode_ServiceProviders.md&amp;value=---%0Auid%3A%20DulcisX.Nodes.SolutionNode.ServiceProviders%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/TwentyFourMinutes/DulcisX/blob/master/src/DulcisX/DulcisX/Nodes/SolutionNode.cs/#L91">View Source</a>
+    <a href="https://github.com/TwentyFourMinutes/DulcisX/blob/master/src/DulcisX/DulcisX/Nodes/SolutionNode.cs/#L88">View Source</a>
   </span>
   <a id="DulcisX_Nodes_SolutionNode_ServiceProviders_" data-uid="DulcisX.Nodes.SolutionNode.ServiceProviders*"></a>
   <h4 id="DulcisX_Nodes_SolutionNode_ServiceProviders" data-uid="DulcisX.Nodes.SolutionNode.ServiceProviders">ServiceProviders</h4>
@@ -568,7 +535,7 @@
     <a href="https://github.com/TwentyFourMinutes/DulcisX/new/master/apiSpec/new?filename=DulcisX_Nodes_SolutionNode_GetAllProjects.md&amp;value=---%0Auid%3A%20DulcisX.Nodes.SolutionNode.GetAllProjects%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/TwentyFourMinutes/DulcisX/blob/master/src/DulcisX/DulcisX/Nodes/SolutionNode.cs/#L231">View Source</a>
+    <a href="https://github.com/TwentyFourMinutes/DulcisX/blob/master/src/DulcisX/DulcisX/Nodes/SolutionNode.cs/#L239">View Source</a>
   </span>
   <a id="DulcisX_Nodes_SolutionNode_GetAllProjects_" data-uid="DulcisX.Nodes.SolutionNode.GetAllProjects*"></a>
   <h4 id="DulcisX_Nodes_SolutionNode_GetAllProjects" data-uid="DulcisX.Nodes.SolutionNode.GetAllProjects">GetAllProjects()</h4>
@@ -597,15 +564,44 @@
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
+    <a href="https://github.com/TwentyFourMinutes/DulcisX/new/master/apiSpec/new?filename=DulcisX_Nodes_SolutionNode_GetDirectoryName.md&amp;value=---%0Auid%3A%20DulcisX.Nodes.SolutionNode.GetDirectoryName%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/TwentyFourMinutes/DulcisX/blob/master/src/DulcisX/DulcisX/Nodes/SolutionNode.cs/#L137">View Source</a>
+  </span>
+  <a id="DulcisX_Nodes_SolutionNode_GetDirectoryName_" data-uid="DulcisX.Nodes.SolutionNode.GetDirectoryName*"></a>
+  <h4 id="DulcisX_Nodes_SolutionNode_GetDirectoryName" data-uid="DulcisX.Nodes.SolutionNode.GetDirectoryName">GetDirectoryName()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string GetDirectoryName()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
     <a href="https://github.com/TwentyFourMinutes/DulcisX/new/master/apiSpec/new?filename=DulcisX_Nodes_SolutionNode_GetFileName.md&amp;value=---%0Auid%3A%20DulcisX.Nodes.SolutionNode.GetFileName%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/TwentyFourMinutes/DulcisX/blob/master/src/DulcisX/DulcisX/Nodes/SolutionNode.cs/#L125">View Source</a>
+    <a href="https://github.com/TwentyFourMinutes/DulcisX/blob/master/src/DulcisX/DulcisX/Nodes/SolutionNode.cs/#L122">View Source</a>
   </span>
   <a id="DulcisX_Nodes_SolutionNode_GetFileName_" data-uid="DulcisX.Nodes.SolutionNode.GetFileName*"></a>
   <h4 id="DulcisX_Nodes_SolutionNode_GetFileName" data-uid="DulcisX.Nodes.SolutionNode.GetFileName">GetFileName()</h4>
-  <div class="markdown level1 summary"><p>Returns the name of the file, including the extension.</p>
-</div>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -622,8 +618,7 @@
     <tbody>
       <tr>
         <td><span class="xref">System.String</span></td>
-        <td><p>A string containg the name of the file.</p>
-</td>
+        <td></td>
       </tr>
     </tbody>
   </table>
@@ -632,12 +627,11 @@
     <a href="https://github.com/TwentyFourMinutes/DulcisX/new/master/apiSpec/new?filename=DulcisX_Nodes_SolutionNode_GetFullName.md&amp;value=---%0Auid%3A%20DulcisX.Nodes.SolutionNode.GetFullName%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/TwentyFourMinutes/DulcisX/blob/master/src/DulcisX/DulcisX/Nodes/SolutionNode.cs/#L129">View Source</a>
+    <a href="https://github.com/TwentyFourMinutes/DulcisX/blob/master/src/DulcisX/DulcisX/Nodes/SolutionNode.cs/#L126">View Source</a>
   </span>
   <a id="DulcisX_Nodes_SolutionNode_GetFullName_" data-uid="DulcisX.Nodes.SolutionNode.GetFullName*"></a>
   <h4 id="DulcisX_Nodes_SolutionNode_GetFullName" data-uid="DulcisX.Nodes.SolutionNode.GetFullName">GetFullName()</h4>
-  <div class="markdown level1 summary"><p>Returns the full name of the file.</p>
-</div>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -654,8 +648,7 @@
     <tbody>
       <tr>
         <td><span class="xref">System.String</span></td>
-        <td><p>A string containg the full name of the file.</p>
-</td>
+        <td></td>
       </tr>
     </tbody>
   </table>
@@ -664,12 +657,11 @@
     <a href="https://github.com/TwentyFourMinutes/DulcisX/new/master/apiSpec/new?filename=DulcisX_Nodes_SolutionNode_GetParent.md&amp;value=---%0Auid%3A%20DulcisX.Nodes.SolutionNode.GetParent%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/TwentyFourMinutes/DulcisX/blob/master/src/DulcisX/DulcisX/Nodes/SolutionNode.cs/#L142">View Source</a>
+    <a href="https://github.com/TwentyFourMinutes/DulcisX/blob/master/src/DulcisX/DulcisX/Nodes/SolutionNode.cs/#L150">View Source</a>
   </span>
   <a id="DulcisX_Nodes_SolutionNode_GetParent_" data-uid="DulcisX.Nodes.SolutionNode.GetParent*"></a>
   <h4 id="DulcisX_Nodes_SolutionNode_GetParent" data-uid="DulcisX.Nodes.SolutionNode.GetParent">GetParent()</h4>
-  <div class="markdown level1 summary"><p>Returns the immediate parent Node of the current Node.</p>
-</div>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -686,8 +678,7 @@
     <tbody>
       <tr>
         <td><a class="xref" href="DulcisX.Nodes.BaseNode.html">BaseNode</a></td>
-        <td><p>The parent if any could be found, otherwise null.</p>
-</td>
+        <td></td>
       </tr>
     </tbody>
   </table>
@@ -701,12 +692,11 @@
     <a href="https://github.com/TwentyFourMinutes/DulcisX/new/master/apiSpec/new?filename=DulcisX_Nodes_SolutionNode_GetParent_DulcisX_Core_Enums_NodeTypes_.md&amp;value=---%0Auid%3A%20DulcisX.Nodes.SolutionNode.GetParent(DulcisX.Core.Enums.NodeTypes)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/TwentyFourMinutes/DulcisX/blob/master/src/DulcisX/DulcisX/Nodes/SolutionNode.cs/#L147">View Source</a>
+    <a href="https://github.com/TwentyFourMinutes/DulcisX/blob/master/src/DulcisX/DulcisX/Nodes/SolutionNode.cs/#L155">View Source</a>
   </span>
   <a id="DulcisX_Nodes_SolutionNode_GetParent_" data-uid="DulcisX.Nodes.SolutionNode.GetParent*"></a>
   <h4 id="DulcisX_Nodes_SolutionNode_GetParent_DulcisX_Core_Enums_NodeTypes_" data-uid="DulcisX.Nodes.SolutionNode.GetParent(DulcisX.Core.Enums.NodeTypes)">GetParent(NodeTypes)</h4>
-  <div class="markdown level1 summary"><p>Returns the first parent Node of the current Node, matching the given <code data-dev-comment-type="paramref" class="paramref">nodeType</code>.</p>
-</div>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -725,8 +715,7 @@
       <tr>
         <td><a class="xref" href="DulcisX.Core.Enums.NodeTypes.html">NodeTypes</a></td>
         <td><span class="parametername">nodeType</span></td>
-        <td><p>The Node type which should be serached for.</p>
-</td>
+        <td></td>
       </tr>
     </tbody>
   </table>
@@ -741,8 +730,7 @@
     <tbody>
       <tr>
         <td><a class="xref" href="DulcisX.Nodes.BaseNode.html">BaseNode</a></td>
-        <td><p>The matching parent if any could be found, otherwise null.</p>
-</td>
+        <td></td>
       </tr>
     </tbody>
   </table>
@@ -756,7 +744,7 @@
     <a href="https://github.com/TwentyFourMinutes/DulcisX/new/master/apiSpec/new?filename=DulcisX_Nodes_SolutionNode_GetProject_Microsoft_VisualStudio_Shell_Interop_IVsHierarchy_.md&amp;value=---%0Auid%3A%20DulcisX.Nodes.SolutionNode.GetProject(Microsoft.VisualStudio.Shell.Interop.IVsHierarchy)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/TwentyFourMinutes/DulcisX/blob/master/src/DulcisX/DulcisX/Nodes/SolutionNode.cs/#L187">View Source</a>
+    <a href="https://github.com/TwentyFourMinutes/DulcisX/blob/master/src/DulcisX/DulcisX/Nodes/SolutionNode.cs/#L195">View Source</a>
   </span>
   <a id="DulcisX_Nodes_SolutionNode_GetProject_" data-uid="DulcisX.Nodes.SolutionNode.GetProject*"></a>
   <h4 id="DulcisX_Nodes_SolutionNode_GetProject_Microsoft_VisualStudio_Shell_Interop_IVsHierarchy_" data-uid="DulcisX.Nodes.SolutionNode.GetProject(Microsoft.VisualStudio.Shell.Interop.IVsHierarchy)">GetProject(IVsHierarchy)</h4>
@@ -806,7 +794,7 @@
     <a href="https://github.com/TwentyFourMinutes/DulcisX/new/master/apiSpec/new?filename=DulcisX_Nodes_SolutionNode_GetProject_System_Guid_.md&amp;value=---%0Auid%3A%20DulcisX.Nodes.SolutionNode.GetProject(System.Guid)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/TwentyFourMinutes/DulcisX/blob/master/src/DulcisX/DulcisX/Nodes/SolutionNode.cs/#L172">View Source</a>
+    <a href="https://github.com/TwentyFourMinutes/DulcisX/blob/master/src/DulcisX/DulcisX/Nodes/SolutionNode.cs/#L180">View Source</a>
   </span>
   <a id="DulcisX_Nodes_SolutionNode_GetProject_" data-uid="DulcisX.Nodes.SolutionNode.GetProject*"></a>
   <h4 id="DulcisX_Nodes_SolutionNode_GetProject_System_Guid_" data-uid="DulcisX.Nodes.SolutionNode.GetProject(System.Guid)">GetProject(Guid)</h4>
@@ -856,7 +844,7 @@
     <a href="https://github.com/TwentyFourMinutes/DulcisX/new/master/apiSpec/new?filename=DulcisX_Nodes_SolutionNode_GetProject_System_String_.md&amp;value=---%0Auid%3A%20DulcisX.Nodes.SolutionNode.GetProject(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/TwentyFourMinutes/DulcisX/blob/master/src/DulcisX/DulcisX/Nodes/SolutionNode.cs/#L157">View Source</a>
+    <a href="https://github.com/TwentyFourMinutes/DulcisX/blob/master/src/DulcisX/DulcisX/Nodes/SolutionNode.cs/#L165">View Source</a>
   </span>
   <a id="DulcisX_Nodes_SolutionNode_GetProject_" data-uid="DulcisX.Nodes.SolutionNode.GetProject*"></a>
   <h4 id="DulcisX_Nodes_SolutionNode_GetProject_System_String_" data-uid="DulcisX.Nodes.SolutionNode.GetProject(System.String)">GetProject(String)</h4>
@@ -903,10 +891,74 @@
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
+    <a href="https://github.com/TwentyFourMinutes/DulcisX/new/master/apiSpec/new?filename=DulcisX_Nodes_SolutionNode_GetRelativePath__1___0_.md&amp;value=---%0Auid%3A%20DulcisX.Nodes.SolutionNode.GetRelativePath%60%601(%60%600)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/TwentyFourMinutes/DulcisX/blob/master/src/DulcisX/DulcisX/Nodes/SolutionNode.cs/#L328">View Source</a>
+  </span>
+  <a id="DulcisX_Nodes_SolutionNode_GetRelativePath_" data-uid="DulcisX.Nodes.SolutionNode.GetRelativePath*"></a>
+  <h4 id="DulcisX_Nodes_SolutionNode_GetRelativePath__1___0_" data-uid="DulcisX.Nodes.SolutionNode.GetRelativePath``1(``0)">GetRelativePath&lt;TNode&gt;(TNode)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string GetRelativePath&lt;TNode&gt;(TNode node)
+
+    where TNode : IPhysicalNode</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">TNode</span></td>
+        <td><span class="parametername">node</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">TNode</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
     <a href="https://github.com/TwentyFourMinutes/DulcisX/new/master/apiSpec/new?filename=DulcisX_Nodes_SolutionNode_GetStartupProjects.md&amp;value=---%0Auid%3A%20DulcisX.Nodes.SolutionNode.GetStartupProjects%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/TwentyFourMinutes/DulcisX/blob/master/src/DulcisX/DulcisX/Nodes/SolutionNode.cs/#L198">View Source</a>
+    <a href="https://github.com/TwentyFourMinutes/DulcisX/blob/master/src/DulcisX/DulcisX/Nodes/SolutionNode.cs/#L206">View Source</a>
   </span>
   <a id="DulcisX_Nodes_SolutionNode_GetStartupProjects_" data-uid="DulcisX.Nodes.SolutionNode.GetStartupProjects*"></a>
   <h4 id="DulcisX_Nodes_SolutionNode_GetStartupProjects" data-uid="DulcisX.Nodes.SolutionNode.GetStartupProjects">GetStartupProjects()</h4>
@@ -938,7 +990,7 @@
     <a href="https://github.com/TwentyFourMinutes/DulcisX/new/master/apiSpec/new?filename=DulcisX_Nodes_SolutionNode_IsSolutionFullyLoaded.md&amp;value=---%0Auid%3A%20DulcisX.Nodes.SolutionNode.IsSolutionFullyLoaded%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/TwentyFourMinutes/DulcisX/blob/master/src/DulcisX/DulcisX/Nodes/SolutionNode.cs/#L283">View Source</a>
+    <a href="https://github.com/TwentyFourMinutes/DulcisX/blob/master/src/DulcisX/DulcisX/Nodes/SolutionNode.cs/#L291">View Source</a>
   </span>
   <a id="DulcisX_Nodes_SolutionNode_IsSolutionFullyLoaded_" data-uid="DulcisX.Nodes.SolutionNode.IsSolutionFullyLoaded*"></a>
   <h4 id="DulcisX_Nodes_SolutionNode_IsSolutionFullyLoaded" data-uid="DulcisX.Nodes.SolutionNode.IsSolutionFullyLoaded">IsSolutionFullyLoaded()</h4>
@@ -970,7 +1022,7 @@
     <a href="https://github.com/TwentyFourMinutes/DulcisX/new/master/apiSpec/new?filename=DulcisX_Nodes_SolutionNode_IsTempSolution.md&amp;value=---%0Auid%3A%20DulcisX.Nodes.SolutionNode.IsTempSolution%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/TwentyFourMinutes/DulcisX/blob/master/src/DulcisX/DulcisX/Nodes/SolutionNode.cs/#L298">View Source</a>
+    <a href="https://github.com/TwentyFourMinutes/DulcisX/blob/master/src/DulcisX/DulcisX/Nodes/SolutionNode.cs/#L306">View Source</a>
   </span>
   <a id="DulcisX_Nodes_SolutionNode_IsTempSolution_" data-uid="DulcisX.Nodes.SolutionNode.IsTempSolution*"></a>
   <h4 id="DulcisX_Nodes_SolutionNode_IsTempSolution" data-uid="DulcisX.Nodes.SolutionNode.IsTempSolution">IsTempSolution()</h4>
@@ -1002,7 +1054,7 @@
     <a href="https://github.com/TwentyFourMinutes/DulcisX/new/master/apiSpec/new?filename=DulcisX_Nodes_SolutionNode_LoadUserConfiguration_Microsoft_VisualStudio_Shell_Interop_IVsPersistSolutionOpts_System_String_.md&amp;value=---%0Auid%3A%20DulcisX.Nodes.SolutionNode.LoadUserConfiguration(Microsoft.VisualStudio.Shell.Interop.IVsPersistSolutionOpts%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/TwentyFourMinutes/DulcisX/blob/master/src/DulcisX/DulcisX/Nodes/SolutionNode.cs/#L266">View Source</a>
+    <a href="https://github.com/TwentyFourMinutes/DulcisX/blob/master/src/DulcisX/DulcisX/Nodes/SolutionNode.cs/#L274">View Source</a>
   </span>
   <a id="DulcisX_Nodes_SolutionNode_LoadUserConfiguration_" data-uid="DulcisX.Nodes.SolutionNode.LoadUserConfiguration*"></a>
   <h4 id="DulcisX_Nodes_SolutionNode_LoadUserConfiguration_Microsoft_VisualStudio_Shell_Interop_IVsPersistSolutionOpts_System_String_" data-uid="DulcisX.Nodes.SolutionNode.LoadUserConfiguration(Microsoft.VisualStudio.Shell.Interop.IVsPersistSolutionOpts,System.String)">LoadUserConfiguration(IVsPersistSolutionOpts, String)</h4>
@@ -1032,7 +1084,7 @@
       <tr>
         <td><span class="xref">System.String</span></td>
         <td><span class="parametername">streamKey</span></td>
-        <td><p>The identifier for the stream to load. Usually any of the values in the <a class="xref" href="DulcisX.Core.Enums.VisualStudio.CommonStreamKeys.html">CommonStreamKeys</a> class.</p>
+        <td><p>The identifier for the stream to load. Usually any of the values in the <a class="xref" href="DulcisX.Core.Enums.CommonStreamKey.html">CommonStreamKey</a> class.</p>
 </td>
       </tr>
     </tbody>
@@ -1042,7 +1094,7 @@
     <a href="https://github.com/TwentyFourMinutes/DulcisX/new/master/apiSpec/new?filename=DulcisX_Nodes_SolutionNode_SaveAllChildren_System_Boolean_.md&amp;value=---%0Auid%3A%20DulcisX.Nodes.SolutionNode.SaveAllChildren(System.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/TwentyFourMinutes/DulcisX/blob/master/src/DulcisX/DulcisX/Nodes/SolutionNode.cs/#L311">View Source</a>
+    <a href="https://github.com/TwentyFourMinutes/DulcisX/blob/master/src/DulcisX/DulcisX/Nodes/SolutionNode.cs/#L319">View Source</a>
   </span>
   <a id="DulcisX_Nodes_SolutionNode_SaveAllChildren_" data-uid="DulcisX.Nodes.SolutionNode.SaveAllChildren*"></a>
   <h4 id="DulcisX_Nodes_SolutionNode_SaveAllChildren_System_Boolean_" data-uid="DulcisX.Nodes.SolutionNode.SaveAllChildren(System.Boolean)">SaveAllChildren(Boolean)</h4>
@@ -1080,6 +1132,9 @@
   </div>
   <div>
       <a class="xref" href="DulcisX.Nodes.IBaseNode.html">IBaseNode</a>
+  </div>
+  <div>
+      <span class="xref">System.IEquatable&lt;T&gt;</span>
   </div>
 </article>
           </div>

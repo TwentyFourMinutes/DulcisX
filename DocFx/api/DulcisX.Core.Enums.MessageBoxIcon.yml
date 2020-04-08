@@ -1,0 +1,211 @@
+### YamlMime:ManagedReference
+items:
+- uid: DulcisX.Core.Enums.MessageBoxIcon
+  commentId: T:DulcisX.Core.Enums.MessageBoxIcon
+  id: MessageBoxIcon
+  parent: DulcisX.Core.Enums
+  children:
+  - DulcisX.Core.Enums.MessageBoxIcon.Cirtical
+  - DulcisX.Core.Enums.MessageBoxIcon.Info
+  - DulcisX.Core.Enums.MessageBoxIcon.None
+  - DulcisX.Core.Enums.MessageBoxIcon.Query
+  - DulcisX.Core.Enums.MessageBoxIcon.Warning
+  langs:
+  - csharp
+  - vb
+  name: MessageBoxIcon
+  nameWithType: MessageBoxIcon
+  fullName: DulcisX.Core.Enums.MessageBoxIcon
+  type: Enum
+  source:
+    remote:
+      path: src/DulcisX/DulcisX/Core/Enums/MessageBoxIcon.cs
+      branch: master
+      repo: https://github.com/TwentyFourMinutes/DulcisX.git
+    id: MessageBoxIcon
+    path: ../../DulcisX - master/src/DulcisX/DulcisX/Core/Enums/MessageBoxIcon.cs
+    startLine: 2
+  assemblies:
+  - DulcisX
+  namespace: DulcisX.Core.Enums
+  syntax:
+    content: public enum MessageBoxIcon
+    content.vb: Public Enum MessageBoxIcon
+  modifiers.csharp:
+  - public
+  - enum
+  modifiers.vb:
+  - Public
+  - Enum
+- uid: DulcisX.Core.Enums.MessageBoxIcon.None
+  commentId: F:DulcisX.Core.Enums.MessageBoxIcon.None
+  id: None
+  parent: DulcisX.Core.Enums.MessageBoxIcon
+  langs:
+  - csharp
+  - vb
+  name: None
+  nameWithType: MessageBoxIcon.None
+  fullName: DulcisX.Core.Enums.MessageBoxIcon.None
+  type: Field
+  source:
+    remote:
+      path: src/DulcisX/DulcisX/Core/Enums/MessageBoxIcon.cs
+      branch: master
+      repo: https://github.com/TwentyFourMinutes/DulcisX.git
+    id: None
+    path: ../../DulcisX - master/src/DulcisX/DulcisX/Core/Enums/MessageBoxIcon.cs
+    startLine: 4
+  assemblies:
+  - DulcisX
+  namespace: DulcisX.Core.Enums
+  syntax:
+    content: None = 0
+    return:
+      type: DulcisX.Core.Enums.MessageBoxIcon
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: DulcisX.Core.Enums.MessageBoxIcon.Cirtical
+  commentId: F:DulcisX.Core.Enums.MessageBoxIcon.Cirtical
+  id: Cirtical
+  parent: DulcisX.Core.Enums.MessageBoxIcon
+  langs:
+  - csharp
+  - vb
+  name: Cirtical
+  nameWithType: MessageBoxIcon.Cirtical
+  fullName: DulcisX.Core.Enums.MessageBoxIcon.Cirtical
+  type: Field
+  source:
+    remote:
+      path: src/DulcisX/DulcisX/Core/Enums/MessageBoxIcon.cs
+      branch: master
+      repo: https://github.com/TwentyFourMinutes/DulcisX.git
+    id: Cirtical
+    path: ../../DulcisX - master/src/DulcisX/DulcisX/Core/Enums/MessageBoxIcon.cs
+    startLine: 5
+  assemblies:
+  - DulcisX
+  namespace: DulcisX.Core.Enums
+  syntax:
+    content: Cirtical = 1
+    return:
+      type: DulcisX.Core.Enums.MessageBoxIcon
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: DulcisX.Core.Enums.MessageBoxIcon.Query
+  commentId: F:DulcisX.Core.Enums.MessageBoxIcon.Query
+  id: Query
+  parent: DulcisX.Core.Enums.MessageBoxIcon
+  langs:
+  - csharp
+  - vb
+  name: Query
+  nameWithType: MessageBoxIcon.Query
+  fullName: DulcisX.Core.Enums.MessageBoxIcon.Query
+  type: Field
+  source:
+    remote:
+      path: src/DulcisX/DulcisX/Core/Enums/MessageBoxIcon.cs
+      branch: master
+      repo: https://github.com/TwentyFourMinutes/DulcisX.git
+    id: Query
+    path: ../../DulcisX - master/src/DulcisX/DulcisX/Core/Enums/MessageBoxIcon.cs
+    startLine: 6
+  assemblies:
+  - DulcisX
+  namespace: DulcisX.Core.Enums
+  syntax:
+    content: Query = 2
+    return:
+      type: DulcisX.Core.Enums.MessageBoxIcon
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: DulcisX.Core.Enums.MessageBoxIcon.Warning
+  commentId: F:DulcisX.Core.Enums.MessageBoxIcon.Warning
+  id: Warning
+  parent: DulcisX.Core.Enums.MessageBoxIcon
+  langs:
+  - csharp
+  - vb
+  name: Warning
+  nameWithType: MessageBoxIcon.Warning
+  fullName: DulcisX.Core.Enums.MessageBoxIcon.Warning
+  type: Field
+  source:
+    remote:
+      path: src/DulcisX/DulcisX/Core/Enums/MessageBoxIcon.cs
+      branch: master
+      repo: https://github.com/TwentyFourMinutes/DulcisX.git
+    id: Warning
+    path: ../../DulcisX - master/src/DulcisX/DulcisX/Core/Enums/MessageBoxIcon.cs
+    startLine: 7
+  assemblies:
+  - DulcisX
+  namespace: DulcisX.Core.Enums
+  syntax:
+    content: Warning = 3
+    return:
+      type: DulcisX.Core.Enums.MessageBoxIcon
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: DulcisX.Core.Enums.MessageBoxIcon.Info
+  commentId: F:DulcisX.Core.Enums.MessageBoxIcon.Info
+  id: Info
+  parent: DulcisX.Core.Enums.MessageBoxIcon
+  langs:
+  - csharp
+  - vb
+  name: Info
+  nameWithType: MessageBoxIcon.Info
+  fullName: DulcisX.Core.Enums.MessageBoxIcon.Info
+  type: Field
+  source:
+    remote:
+      path: src/DulcisX/DulcisX/Core/Enums/MessageBoxIcon.cs
+      branch: master
+      repo: https://github.com/TwentyFourMinutes/DulcisX.git
+    id: Info
+    path: ../../DulcisX - master/src/DulcisX/DulcisX/Core/Enums/MessageBoxIcon.cs
+    startLine: 8
+  assemblies:
+  - DulcisX
+  namespace: DulcisX.Core.Enums
+  syntax:
+    content: Info = 4
+    return:
+      type: DulcisX.Core.Enums.MessageBoxIcon
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+references:
+- uid: DulcisX.Core.Enums
+  commentId: N:DulcisX.Core.Enums
+  name: DulcisX.Core.Enums
+  nameWithType: DulcisX.Core.Enums
+  fullName: DulcisX.Core.Enums
+- uid: DulcisX.Core.Enums.MessageBoxIcon
+  commentId: T:DulcisX.Core.Enums.MessageBoxIcon
+  parent: DulcisX.Core.Enums
+  name: MessageBoxIcon
+  nameWithType: MessageBoxIcon
+  fullName: DulcisX.Core.Enums.MessageBoxIcon

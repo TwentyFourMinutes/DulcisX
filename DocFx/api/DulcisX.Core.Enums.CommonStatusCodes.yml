@@ -1,34 +1,36 @@
 ### YamlMime:ManagedReference
 items:
-- uid: DulcisX.Core.Enums.VisualStudio.CommonStreamKeys
-  commentId: T:DulcisX.Core.Enums.VisualStudio.CommonStreamKeys
-  id: CommonStreamKeys
-  parent: DulcisX.Core.Enums.VisualStudio
+- uid: DulcisX.Core.Enums.CommonStatusCodes
+  commentId: T:DulcisX.Core.Enums.CommonStatusCodes
+  id: CommonStatusCodes
+  parent: DulcisX.Core.Enums
   children:
-  - DulcisX.Core.Enums.VisualStudio.CommonStreamKeys.SolutionConfiguration
+  - DulcisX.Core.Enums.CommonStatusCodes.Failure
+  - DulcisX.Core.Enums.CommonStatusCodes.NotImplemented
+  - DulcisX.Core.Enums.CommonStatusCodes.Success
   langs:
   - csharp
   - vb
-  name: CommonStreamKeys
-  nameWithType: CommonStreamKeys
-  fullName: DulcisX.Core.Enums.VisualStudio.CommonStreamKeys
+  name: CommonStatusCodes
+  nameWithType: CommonStatusCodes
+  fullName: DulcisX.Core.Enums.CommonStatusCodes
   type: Class
   source:
     remote:
-      path: src/DulcisX/DulcisX/Core/Enums/VisualStudio/CommonStreamKeys.cs
+      path: src/DulcisX/DulcisX/Core/Enums/CommonStatusCodes.cs
       branch: master
       repo: https://github.com/TwentyFourMinutes/DulcisX.git
-    id: CommonStreamKeys
-    path: ../../DulcisX - master/src/DulcisX/DulcisX/Core/Enums/VisualStudio/CommonStreamKeys.cs
-    startLine: 5
+    id: CommonStatusCodes
+    path: ../../DulcisX - master/src/DulcisX/DulcisX/Core/Enums/CommonStatusCodes.cs
+    startLine: 7
   assemblies:
   - DulcisX
-  namespace: DulcisX.Core.Enums.VisualStudio
-  summary: "\nCommon stream keys in the .suo file. Passed to <xref href=\"DulcisX.Nodes.SolutionNode.LoadUserConfiguration(Microsoft.VisualStudio.Shell.Interop.IVsPersistSolutionOpts%2cSystem.String)\" data-throw-if-not-resolved=\"false\"></xref>.\n"
+  namespace: DulcisX.Core.Enums
+  summary: "\nCommon HResults of native methods.\n"
   example: []
   syntax:
-    content: public static class CommonStreamKeys
-    content.vb: Public Module CommonStreamKeys
+    content: public static class CommonStatusCodes
+    content.vb: Public Module CommonStatusCodes
   inheritance:
   - System.Object
   inheritedMembers:
@@ -46,35 +48,105 @@ items:
   modifiers.vb:
   - Public
   - Module
-- uid: DulcisX.Core.Enums.VisualStudio.CommonStreamKeys.SolutionConfiguration
-  commentId: F:DulcisX.Core.Enums.VisualStudio.CommonStreamKeys.SolutionConfiguration
-  id: SolutionConfiguration
-  parent: DulcisX.Core.Enums.VisualStudio.CommonStreamKeys
+- uid: DulcisX.Core.Enums.CommonStatusCodes.Success
+  commentId: F:DulcisX.Core.Enums.CommonStatusCodes.Success
+  id: Success
+  parent: DulcisX.Core.Enums.CommonStatusCodes
   langs:
   - csharp
   - vb
-  name: SolutionConfiguration
-  nameWithType: CommonStreamKeys.SolutionConfiguration
-  fullName: DulcisX.Core.Enums.VisualStudio.CommonStreamKeys.SolutionConfiguration
+  name: Success
+  nameWithType: CommonStatusCodes.Success
+  fullName: DulcisX.Core.Enums.CommonStatusCodes.Success
   type: Field
   source:
     remote:
-      path: src/DulcisX/DulcisX/Core/Enums/VisualStudio/CommonStreamKeys.cs
+      path: src/DulcisX/DulcisX/Core/Enums/CommonStatusCodes.cs
       branch: master
       repo: https://github.com/TwentyFourMinutes/DulcisX.git
-    id: SolutionConfiguration
-    path: ../../DulcisX - master/src/DulcisX/DulcisX/Core/Enums/VisualStudio/CommonStreamKeys.cs
-    startLine: 10
+    id: Success
+    path: ../../DulcisX - master/src/DulcisX/DulcisX/Core/Enums/CommonStatusCodes.cs
+    startLine: 12
   assemblies:
   - DulcisX
-  namespace: DulcisX.Core.Enums.VisualStudio
-  summary: "\nSpecifies the solution configuration strean inside the .suo file.\n"
+  namespace: DulcisX.Core.Enums
+  summary: "\nRepresents a HResult which indicates the generic success of a native method.\n"
   example: []
   syntax:
-    content: public const string SolutionConfiguration = "SolutionConfiguration"
+    content: public const int Success = 0
     return:
-      type: System.String
-    content.vb: Public Const SolutionConfiguration As String = "SolutionConfiguration"
+      type: System.Int32
+    content.vb: Public Const Success As Integer = 0
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: DulcisX.Core.Enums.CommonStatusCodes.Failure
+  commentId: F:DulcisX.Core.Enums.CommonStatusCodes.Failure
+  id: Failure
+  parent: DulcisX.Core.Enums.CommonStatusCodes
+  langs:
+  - csharp
+  - vb
+  name: Failure
+  nameWithType: CommonStatusCodes.Failure
+  fullName: DulcisX.Core.Enums.CommonStatusCodes.Failure
+  type: Field
+  source:
+    remote:
+      path: src/DulcisX/DulcisX/Core/Enums/CommonStatusCodes.cs
+      branch: master
+      repo: https://github.com/TwentyFourMinutes/DulcisX.git
+    id: Failure
+    path: ../../DulcisX - master/src/DulcisX/DulcisX/Core/Enums/CommonStatusCodes.cs
+    startLine: 16
+  assemblies:
+  - DulcisX
+  namespace: DulcisX.Core.Enums
+  summary: "\nRepresents a HResult which indicates the generic failure of a native method.\n"
+  example: []
+  syntax:
+    content: public const int Failure = -2147467259
+    return:
+      type: System.Int32
+    content.vb: Public Const Failure As Integer = -2147467259
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: DulcisX.Core.Enums.CommonStatusCodes.NotImplemented
+  commentId: F:DulcisX.Core.Enums.CommonStatusCodes.NotImplemented
+  id: NotImplemented
+  parent: DulcisX.Core.Enums.CommonStatusCodes
+  langs:
+  - csharp
+  - vb
+  name: NotImplemented
+  nameWithType: CommonStatusCodes.NotImplemented
+  fullName: DulcisX.Core.Enums.CommonStatusCodes.NotImplemented
+  type: Field
+  source:
+    remote:
+      path: src/DulcisX/DulcisX/Core/Enums/CommonStatusCodes.cs
+      branch: master
+      repo: https://github.com/TwentyFourMinutes/DulcisX.git
+    id: NotImplemented
+    path: ../../DulcisX - master/src/DulcisX/DulcisX/Core/Enums/CommonStatusCodes.cs
+    startLine: 20
+  assemblies:
+  - DulcisX
+  namespace: DulcisX.Core.Enums
+  summary: "\nRepresents a HResult which indicates that a method is not implemented.\n"
+  example: []
+  syntax:
+    content: public const int NotImplemented = -2147467263
+    return:
+      type: System.Int32
+    content.vb: Public Const NotImplemented As Integer = -2147467263
   modifiers.csharp:
   - public
   - const
@@ -82,14 +154,11 @@ items:
   - Public
   - Const
 references:
-- uid: DulcisX.Nodes.SolutionNode.LoadUserConfiguration(Microsoft.VisualStudio.Shell.Interop.IVsPersistSolutionOpts,System.String)
-  commentId: M:DulcisX.Nodes.SolutionNode.LoadUserConfiguration(Microsoft.VisualStudio.Shell.Interop.IVsPersistSolutionOpts,System.String)
-  isExternal: true
-- uid: DulcisX.Core.Enums.VisualStudio
-  commentId: N:DulcisX.Core.Enums.VisualStudio
-  name: DulcisX.Core.Enums.VisualStudio
-  nameWithType: DulcisX.Core.Enums.VisualStudio
-  fullName: DulcisX.Core.Enums.VisualStudio
+- uid: DulcisX.Core.Enums
+  commentId: N:DulcisX.Core.Enums
+  name: DulcisX.Core.Enums
+  nameWithType: DulcisX.Core.Enums
+  fullName: DulcisX.Core.Enums
 - uid: System.Object
   commentId: T:System.Object
   parent: System
@@ -382,10 +451,10 @@ references:
   name: System
   nameWithType: System
   fullName: System
-- uid: System.String
-  commentId: T:System.String
+- uid: System.Int32
+  commentId: T:System.Int32
   parent: System
   isExternal: true
-  name: String
-  nameWithType: String
-  fullName: System.String
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32

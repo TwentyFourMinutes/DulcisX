@@ -94,14 +94,14 @@
 
 <h2 id="solution-explorerhierarchy-system">Solution Explorer/Hierarchy System</h2>
 <p>All nodes provided by DuclisX <strong>only represent the current position of the node in the Hierarchy</strong>. This means that when a document gets renamed or the location gets changed, <strong>the given instance becomes invalid</strong>.</p>
-<p><strong>Also comparing Nodes is not save</strong>. DuclisX doesn't cache any Nodes nor any of its properties. A Node returned by an event will never be the same as any other instance of a Node returned by a method or other class members.</p>
+<p><strong>Also comparing Nodes by reference is not save</strong>. DuclisX doesn't cache any Nodes nor any of its properties. A Node returned by an event will never be the same as any other instance of a Node returned by a method or other class members.</p>
 <div class="NOTE">
 <h5>Note</h5>
-<p>If you want to still compare two nodes with each other, you can either try comparing the results of <code>GetFullPath</code> for <code>IPhysicalNodes</code> or comparing the <code>ItemId</code> and the <code>UnderlyingHierarchy</code>.</p>
+<p>However comparing two Nodes with each other using the <code>==</code> operator or the <code>Equals</code> method returns true, of course only if the Nodes are identical in terms of the location in the Solution Explorer. Though it won't guarantee reference equality for the reasons named above.</p>
 </div>
 <div class="NOTE">
 <h5>Note</h5>
-<p>The <code>SoltionNode</code> class is the only Node, which will always update itself on changes to itself. Therefore comparing two Solution instances returned by DulcisX are <em>always</em> equal.</p>
+<p>The <code>SoltionNode</code> class is the only Node, which will always update itself on changes to itself. Therefore comparing two Solution references returned by DulcisX are <em>always</em> equal.</p>
 </div>
 <h2 id="creation-of-objects">Creation of Objects</h2>
 <p><strong>All the API's exposed by DulcisX utilize lazy initialization</strong>, this ensures that instantiating a new object is a relatively inexpensive operation. Additionally for that reason, parts of the package you do not use, don't allocate any additional memory.</p>

@@ -43,6 +43,7 @@ items:
     content: 'public interface ISolutionEvents : ISolutionLoadEvents'
     content.vb: >-
       Public Interface ISolutionEvents
+
           Inherits ISolutionLoadEvents
   inheritedMembers:
   - DulcisX.Nodes.Events.ISolutionLoadEvents.OnBackgroundSolutionLoad

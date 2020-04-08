@@ -1,0 +1,277 @@
+### YamlMime:ManagedReference
+items:
+- uid: DulcisX.Core.Enums.MessageBoxButton
+  commentId: T:DulcisX.Core.Enums.MessageBoxButton
+  id: MessageBoxButton
+  parent: DulcisX.Core.Enums
+  children:
+  - DulcisX.Core.Enums.MessageBoxButton.AbortRetryIgnore
+  - DulcisX.Core.Enums.MessageBoxButton.Ok
+  - DulcisX.Core.Enums.MessageBoxButton.OkCancel
+  - DulcisX.Core.Enums.MessageBoxButton.RetryCancel
+  - DulcisX.Core.Enums.MessageBoxButton.YesAllNoCancel
+  - DulcisX.Core.Enums.MessageBoxButton.YesNo
+  - DulcisX.Core.Enums.MessageBoxButton.YesNoCancel
+  langs:
+  - csharp
+  - vb
+  name: MessageBoxButton
+  nameWithType: MessageBoxButton
+  fullName: DulcisX.Core.Enums.MessageBoxButton
+  type: Enum
+  source:
+    remote:
+      path: src/DulcisX/DulcisX/Core/Enums/MessageBoxButton.cs
+      branch: master
+      repo: https://github.com/TwentyFourMinutes/DulcisX.git
+    id: MessageBoxButton
+    path: ../../DulcisX - master/src/DulcisX/DulcisX/Core/Enums/MessageBoxButton.cs
+    startLine: 2
+  assemblies:
+  - DulcisX
+  namespace: DulcisX.Core.Enums
+  syntax:
+    content: public enum MessageBoxButton
+    content.vb: Public Enum MessageBoxButton
+  modifiers.csharp:
+  - public
+  - enum
+  modifiers.vb:
+  - Public
+  - Enum
+- uid: DulcisX.Core.Enums.MessageBoxButton.Ok
+  commentId: F:DulcisX.Core.Enums.MessageBoxButton.Ok
+  id: Ok
+  parent: DulcisX.Core.Enums.MessageBoxButton
+  langs:
+  - csharp
+  - vb
+  name: Ok
+  nameWithType: MessageBoxButton.Ok
+  fullName: DulcisX.Core.Enums.MessageBoxButton.Ok
+  type: Field
+  source:
+    remote:
+      path: src/DulcisX/DulcisX/Core/Enums/MessageBoxButton.cs
+      branch: master
+      repo: https://github.com/TwentyFourMinutes/DulcisX.git
+    id: Ok
+    path: ../../DulcisX - master/src/DulcisX/DulcisX/Core/Enums/MessageBoxButton.cs
+    startLine: 4
+  assemblies:
+  - DulcisX
+  namespace: DulcisX.Core.Enums
+  syntax:
+    content: Ok = 0
+    return:
+      type: DulcisX.Core.Enums.MessageBoxButton
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: DulcisX.Core.Enums.MessageBoxButton.OkCancel
+  commentId: F:DulcisX.Core.Enums.MessageBoxButton.OkCancel
+  id: OkCancel
+  parent: DulcisX.Core.Enums.MessageBoxButton
+  langs:
+  - csharp
+  - vb
+  name: OkCancel
+  nameWithType: MessageBoxButton.OkCancel
+  fullName: DulcisX.Core.Enums.MessageBoxButton.OkCancel
+  type: Field
+  source:
+    remote:
+      path: src/DulcisX/DulcisX/Core/Enums/MessageBoxButton.cs
+      branch: master
+      repo: https://github.com/TwentyFourMinutes/DulcisX.git
+    id: OkCancel
+    path: ../../DulcisX - master/src/DulcisX/DulcisX/Core/Enums/MessageBoxButton.cs
+    startLine: 5
+  assemblies:
+  - DulcisX
+  namespace: DulcisX.Core.Enums
+  syntax:
+    content: OkCancel = 1
+    return:
+      type: DulcisX.Core.Enums.MessageBoxButton
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: DulcisX.Core.Enums.MessageBoxButton.AbortRetryIgnore
+  commentId: F:DulcisX.Core.Enums.MessageBoxButton.AbortRetryIgnore
+  id: AbortRetryIgnore
+  parent: DulcisX.Core.Enums.MessageBoxButton
+  langs:
+  - csharp
+  - vb
+  name: AbortRetryIgnore
+  nameWithType: MessageBoxButton.AbortRetryIgnore
+  fullName: DulcisX.Core.Enums.MessageBoxButton.AbortRetryIgnore
+  type: Field
+  source:
+    remote:
+      path: src/DulcisX/DulcisX/Core/Enums/MessageBoxButton.cs
+      branch: master
+      repo: https://github.com/TwentyFourMinutes/DulcisX.git
+    id: AbortRetryIgnore
+    path: ../../DulcisX - master/src/DulcisX/DulcisX/Core/Enums/MessageBoxButton.cs
+    startLine: 6
+  assemblies:
+  - DulcisX
+  namespace: DulcisX.Core.Enums
+  syntax:
+    content: AbortRetryIgnore = 2
+    return:
+      type: DulcisX.Core.Enums.MessageBoxButton
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: DulcisX.Core.Enums.MessageBoxButton.YesNoCancel
+  commentId: F:DulcisX.Core.Enums.MessageBoxButton.YesNoCancel
+  id: YesNoCancel
+  parent: DulcisX.Core.Enums.MessageBoxButton
+  langs:
+  - csharp
+  - vb
+  name: YesNoCancel
+  nameWithType: MessageBoxButton.YesNoCancel
+  fullName: DulcisX.Core.Enums.MessageBoxButton.YesNoCancel
+  type: Field
+  source:
+    remote:
+      path: src/DulcisX/DulcisX/Core/Enums/MessageBoxButton.cs
+      branch: master
+      repo: https://github.com/TwentyFourMinutes/DulcisX.git
+    id: YesNoCancel
+    path: ../../DulcisX - master/src/DulcisX/DulcisX/Core/Enums/MessageBoxButton.cs
+    startLine: 7
+  assemblies:
+  - DulcisX
+  namespace: DulcisX.Core.Enums
+  syntax:
+    content: YesNoCancel = 3
+    return:
+      type: DulcisX.Core.Enums.MessageBoxButton
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: DulcisX.Core.Enums.MessageBoxButton.YesNo
+  commentId: F:DulcisX.Core.Enums.MessageBoxButton.YesNo
+  id: YesNo
+  parent: DulcisX.Core.Enums.MessageBoxButton
+  langs:
+  - csharp
+  - vb
+  name: YesNo
+  nameWithType: MessageBoxButton.YesNo
+  fullName: DulcisX.Core.Enums.MessageBoxButton.YesNo
+  type: Field
+  source:
+    remote:
+      path: src/DulcisX/DulcisX/Core/Enums/MessageBoxButton.cs
+      branch: master
+      repo: https://github.com/TwentyFourMinutes/DulcisX.git
+    id: YesNo
+    path: ../../DulcisX - master/src/DulcisX/DulcisX/Core/Enums/MessageBoxButton.cs
+    startLine: 8
+  assemblies:
+  - DulcisX
+  namespace: DulcisX.Core.Enums
+  syntax:
+    content: YesNo = 4
+    return:
+      type: DulcisX.Core.Enums.MessageBoxButton
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: DulcisX.Core.Enums.MessageBoxButton.RetryCancel
+  commentId: F:DulcisX.Core.Enums.MessageBoxButton.RetryCancel
+  id: RetryCancel
+  parent: DulcisX.Core.Enums.MessageBoxButton
+  langs:
+  - csharp
+  - vb
+  name: RetryCancel
+  nameWithType: MessageBoxButton.RetryCancel
+  fullName: DulcisX.Core.Enums.MessageBoxButton.RetryCancel
+  type: Field
+  source:
+    remote:
+      path: src/DulcisX/DulcisX/Core/Enums/MessageBoxButton.cs
+      branch: master
+      repo: https://github.com/TwentyFourMinutes/DulcisX.git
+    id: RetryCancel
+    path: ../../DulcisX - master/src/DulcisX/DulcisX/Core/Enums/MessageBoxButton.cs
+    startLine: 9
+  assemblies:
+  - DulcisX
+  namespace: DulcisX.Core.Enums
+  syntax:
+    content: RetryCancel = 5
+    return:
+      type: DulcisX.Core.Enums.MessageBoxButton
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: DulcisX.Core.Enums.MessageBoxButton.YesAllNoCancel
+  commentId: F:DulcisX.Core.Enums.MessageBoxButton.YesAllNoCancel
+  id: YesAllNoCancel
+  parent: DulcisX.Core.Enums.MessageBoxButton
+  langs:
+  - csharp
+  - vb
+  name: YesAllNoCancel
+  nameWithType: MessageBoxButton.YesAllNoCancel
+  fullName: DulcisX.Core.Enums.MessageBoxButton.YesAllNoCancel
+  type: Field
+  source:
+    remote:
+      path: src/DulcisX/DulcisX/Core/Enums/MessageBoxButton.cs
+      branch: master
+      repo: https://github.com/TwentyFourMinutes/DulcisX.git
+    id: YesAllNoCancel
+    path: ../../DulcisX - master/src/DulcisX/DulcisX/Core/Enums/MessageBoxButton.cs
+    startLine: 10
+  assemblies:
+  - DulcisX
+  namespace: DulcisX.Core.Enums
+  syntax:
+    content: YesAllNoCancel = 6
+    return:
+      type: DulcisX.Core.Enums.MessageBoxButton
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+references:
+- uid: DulcisX.Core.Enums
+  commentId: N:DulcisX.Core.Enums
+  name: DulcisX.Core.Enums
+  nameWithType: DulcisX.Core.Enums
+  fullName: DulcisX.Core.Enums
+- uid: DulcisX.Core.Enums.MessageBoxButton
+  commentId: T:DulcisX.Core.Enums.MessageBoxButton
+  parent: DulcisX.Core.Enums
+  name: MessageBoxButton
+  nameWithType: MessageBoxButton
+  fullName: DulcisX.Core.Enums.MessageBoxButton

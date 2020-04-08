@@ -7,13 +7,20 @@ items:
   children:
   - DulcisX.Nodes.BaseNode.#ctor(DulcisX.Nodes.SolutionNode,Microsoft.VisualStudio.Shell.Interop.IVsHierarchy,System.UInt32)
   - DulcisX.Nodes.BaseNode.AsHierarchyItem
+  - DulcisX.Nodes.BaseNode.Equals(DulcisX.Nodes.IBaseNode)
+  - DulcisX.Nodes.BaseNode.Equals(System.Object)
   - DulcisX.Nodes.BaseNode.GetChildren
   - DulcisX.Nodes.BaseNode.GetDisplayName
+  - DulcisX.Nodes.BaseNode.GetHashCode
   - DulcisX.Nodes.BaseNode.GetParent
   - DulcisX.Nodes.BaseNode.GetParent(DulcisX.Core.Enums.NodeTypes)
-  - DulcisX.Nodes.BaseNode.IsTypeMatching(DulcisX.Core.Enums.NodeTypes)
   - DulcisX.Nodes.BaseNode.ItemId
-  - DulcisX.Nodes.BaseNode.NodeType
+  - DulcisX.Nodes.BaseNode.op_Equality(DulcisX.Nodes.BaseNode,DulcisX.Nodes.BaseNode)
+  - DulcisX.Nodes.BaseNode.op_Equality(DulcisX.Nodes.BaseNode,DulcisX.Nodes.IBaseNode)
+  - DulcisX.Nodes.BaseNode.op_Equality(DulcisX.Nodes.IBaseNode,DulcisX.Nodes.BaseNode)
+  - DulcisX.Nodes.BaseNode.op_Inequality(DulcisX.Nodes.BaseNode,DulcisX.Nodes.BaseNode)
+  - DulcisX.Nodes.BaseNode.op_Inequality(DulcisX.Nodes.BaseNode,DulcisX.Nodes.IBaseNode)
+  - DulcisX.Nodes.BaseNode.op_Inequality(DulcisX.Nodes.IBaseNode,DulcisX.Nodes.BaseNode)
   - DulcisX.Nodes.BaseNode.ParentSolution
   - DulcisX.Nodes.BaseNode.UnderlyingHierarchy
   langs:
@@ -37,10 +44,11 @@ items:
   summary: "\nRepresents the most basic Hierarchy Node.\n"
   example: []
   syntax:
-    content: 'public abstract class BaseNode : INamedNode, IBaseNode'
+    content: 'public abstract class BaseNode : INamedNode, IBaseNode, IEquatable<IBaseNode>'
     content.vb: >-
       Public MustInherit Class BaseNode
-          Implements INamedNode, IBaseNode
+
+          Implements INamedNode, IBaseNode, IEquatable(Of IBaseNode)
   inheritance:
   - System.Object
   derivedClasses:
@@ -50,12 +58,11 @@ items:
   implements:
   - DulcisX.Nodes.INamedNode
   - DulcisX.Nodes.IBaseNode
+  - System.IEquatable{DulcisX.Nodes.IBaseNode}
   inheritedMembers:
   - System.Object.ToString
-  - System.Object.Equals(System.Object)
   - System.Object.Equals(System.Object,System.Object)
   - System.Object.ReferenceEquals(System.Object,System.Object)
-  - System.Object.GetHashCode
   - System.Object.GetType
   - System.Object.MemberwiseClone
   modifiers.csharp:
@@ -88,7 +95,6 @@ items:
   assemblies:
   - DulcisX
   namespace: DulcisX.Nodes
-  summary: "\nGets the Solution in which the Node sits in.\n"
   example: []
   syntax:
     content: public virtual SolutionNode ParentSolution { get; }
@@ -129,7 +135,6 @@ items:
   assemblies:
   - DulcisX
   namespace: DulcisX.Nodes
-  summary: "\nGets the Hierarchy in which the Node sits in.\n"
   example: []
   syntax:
     content: public IVsHierarchy UnderlyingHierarchy { get; }
@@ -168,7 +173,6 @@ items:
   assemblies:
   - DulcisX
   namespace: DulcisX.Nodes
-  summary: "\nGets the Unique Identifier for the Node in the <xref href=\"DulcisX.Nodes.IBaseNode.UnderlyingHierarchy\" data-throw-if-not-resolved=\"false\"></xref>.\n"
   example: []
   syntax:
     content: public uint ItemId { get; }
@@ -184,47 +188,6 @@ items:
   - get
   modifiers.vb:
   - Public
-  - ReadOnly
-- uid: DulcisX.Nodes.BaseNode.NodeType
-  commentId: P:DulcisX.Nodes.BaseNode.NodeType
-  id: NodeType
-  parent: DulcisX.Nodes.BaseNode
-  langs:
-  - csharp
-  - vb
-  name: NodeType
-  nameWithType: BaseNode.NodeType
-  fullName: DulcisX.Nodes.BaseNode.NodeType
-  type: Property
-  source:
-    remote:
-      path: src/DulcisX/DulcisX/Nodes/BaseNode.cs
-      branch: master
-      repo: https://github.com/TwentyFourMinutes/DulcisX.git
-    id: NodeType
-    path: ../../DulcisX - master/src/DulcisX/DulcisX/Nodes/BaseNode.cs
-    startLine: 23
-  assemblies:
-  - DulcisX
-  namespace: DulcisX.Nodes
-  summary: "\nGets the Type of current Node.\n"
-  example: []
-  syntax:
-    content: public abstract NodeTypes NodeType { get; }
-    parameters: []
-    return:
-      type: DulcisX.Core.Enums.NodeTypes
-    content.vb: Public MustOverride ReadOnly Property NodeType As NodeTypes
-  overload: DulcisX.Nodes.BaseNode.NodeType*
-  implements:
-  - DulcisX.Nodes.IBaseNode.NodeType
-  modifiers.csharp:
-  - public
-  - abstract
-  - get
-  modifiers.vb:
-  - Public
-  - MustOverride
   - ReadOnly
 - uid: DulcisX.Nodes.BaseNode.#ctor(DulcisX.Nodes.SolutionNode,Microsoft.VisualStudio.Shell.Interop.IVsHierarchy,System.UInt32)
   commentId: M:DulcisX.Nodes.BaseNode.#ctor(DulcisX.Nodes.SolutionNode,Microsoft.VisualStudio.Shell.Interop.IVsHierarchy,System.UInt32)
@@ -244,7 +207,7 @@ items:
       repo: https://github.com/TwentyFourMinutes/DulcisX.git
     id: .ctor
     path: ../../DulcisX - master/src/DulcisX/DulcisX/Nodes/BaseNode.cs
-    startLine: 31
+    startLine: 28
   assemblies:
   - DulcisX
   namespace: DulcisX.Nodes
@@ -286,17 +249,15 @@ items:
       repo: https://github.com/TwentyFourMinutes/DulcisX.git
     id: GetDisplayName
     path: ../../DulcisX - master/src/DulcisX/DulcisX/Nodes/BaseNode.cs
-    startLine: 39
+    startLine: 36
   assemblies:
   - DulcisX
   namespace: DulcisX.Nodes
-  summary: "\nReturns the name displayed in the Visual Studio Solution Explorer.\n"
   example: []
   syntax:
     content: public string GetDisplayName()
     return:
       type: System.String
-      description: A string containg the display name of the Node.
     content.vb: Public Function GetDisplayName As String
   overload: DulcisX.Nodes.BaseNode.GetDisplayName*
   implements:
@@ -323,17 +284,15 @@ items:
       repo: https://github.com/TwentyFourMinutes/DulcisX.git
     id: GetParent
     path: ../../DulcisX - master/src/DulcisX/DulcisX/Nodes/BaseNode.cs
-    startLine: 43
+    startLine: 40
   assemblies:
   - DulcisX
   namespace: DulcisX.Nodes
-  summary: "\nReturns the immediate parent Node of the current Node.\n"
   example: []
   syntax:
     content: public abstract BaseNode GetParent()
     return:
       type: DulcisX.Nodes.BaseNode
-      description: The parent if any could be found, otherwise null.
     content.vb: Public MustOverride Function GetParent As BaseNode
   overload: DulcisX.Nodes.BaseNode.GetParent*
   implements:
@@ -362,21 +321,18 @@ items:
       repo: https://github.com/TwentyFourMinutes/DulcisX.git
     id: GetParent
     path: ../../DulcisX - master/src/DulcisX/DulcisX/Nodes/BaseNode.cs
-    startLine: 46
+    startLine: 43
   assemblies:
   - DulcisX
   namespace: DulcisX.Nodes
-  summary: "\nReturns the first parent Node of the current Node, matching the given <code data-dev-comment-type=\"paramref\" class=\"paramref\">nodeType</code>.\n"
   example: []
   syntax:
     content: public virtual BaseNode GetParent(NodeTypes nodeType)
     parameters:
     - id: nodeType
       type: DulcisX.Core.Enums.NodeTypes
-      description: The Node type which should be serached for.
     return:
       type: DulcisX.Nodes.BaseNode
-      description: The matching parent if any could be found, otherwise null.
     content.vb: Public Overridable Function GetParent(nodeType As NodeTypes) As BaseNode
   overload: DulcisX.Nodes.BaseNode.GetParent*
   implements:
@@ -405,17 +361,15 @@ items:
       repo: https://github.com/TwentyFourMinutes/DulcisX.git
     id: AsHierarchyItem
     path: ../../DulcisX - master/src/DulcisX/DulcisX/Nodes/BaseNode.cs
-    startLine: 72
+    startLine: 68
   assemblies:
   - DulcisX
   namespace: DulcisX.Nodes
-  summary: "\nReturns the <xref href=\"Microsoft.VisualStudio.Shell.IVsHierarchyItem\" data-throw-if-not-resolved=\"false\"></xref> which represents the current Node.\n"
   example: []
   syntax:
     content: public IVsHierarchyItem AsHierarchyItem()
     return:
       type: Microsoft.VisualStudio.Shell.IVsHierarchyItem
-      description: The the matching <xref href="Microsoft.VisualStudio.Shell.IVsHierarchyItem" data-throw-if-not-resolved="false"></xref>.
     content.vb: Public Function AsHierarchyItem As IVsHierarchyItem
   overload: DulcisX.Nodes.BaseNode.AsHierarchyItem*
   implements:
@@ -442,7 +396,7 @@ items:
       repo: https://github.com/TwentyFourMinutes/DulcisX.git
     id: GetChildren
     path: ../../DulcisX - master/src/DulcisX/DulcisX/Nodes/BaseNode.cs
-    startLine: 83
+    startLine: 79
   assemblies:
   - DulcisX
   namespace: DulcisX.Nodes
@@ -463,44 +417,365 @@ items:
   modifiers.vb:
   - Public
   - MustOverride
-- uid: DulcisX.Nodes.BaseNode.IsTypeMatching(DulcisX.Core.Enums.NodeTypes)
-  commentId: M:DulcisX.Nodes.BaseNode.IsTypeMatching(DulcisX.Core.Enums.NodeTypes)
-  id: IsTypeMatching(DulcisX.Core.Enums.NodeTypes)
+- uid: DulcisX.Nodes.BaseNode.op_Equality(DulcisX.Nodes.BaseNode,DulcisX.Nodes.BaseNode)
+  commentId: M:DulcisX.Nodes.BaseNode.op_Equality(DulcisX.Nodes.BaseNode,DulcisX.Nodes.BaseNode)
+  id: op_Equality(DulcisX.Nodes.BaseNode,DulcisX.Nodes.BaseNode)
   parent: DulcisX.Nodes.BaseNode
   langs:
   - csharp
   - vb
-  name: IsTypeMatching(NodeTypes)
-  nameWithType: BaseNode.IsTypeMatching(NodeTypes)
-  fullName: DulcisX.Nodes.BaseNode.IsTypeMatching(DulcisX.Core.Enums.NodeTypes)
+  name: Equality(BaseNode, BaseNode)
+  nameWithType: BaseNode.Equality(BaseNode, BaseNode)
+  fullName: DulcisX.Nodes.BaseNode.Equality(DulcisX.Nodes.BaseNode, DulcisX.Nodes.BaseNode)
+  type: Operator
+  source:
+    remote:
+      path: src/DulcisX/DulcisX/Nodes/BaseNode.cs
+      branch: master
+      repo: https://github.com/TwentyFourMinutes/DulcisX.git
+    id: op_Equality
+    path: ../../DulcisX - master/src/DulcisX/DulcisX/Nodes/BaseNode.cs
+    startLine: 84
+  assemblies:
+  - DulcisX
+  namespace: DulcisX.Nodes
+  example: []
+  syntax:
+    content: public static bool operator ==(BaseNode node1, BaseNode node2)
+    parameters:
+    - id: node1
+      type: DulcisX.Nodes.BaseNode
+    - id: node2
+      type: DulcisX.Nodes.BaseNode
+    return:
+      type: System.Boolean
+    content.vb: Public Shared Operator =(node1 As BaseNode, node2 As BaseNode) As Boolean
+  overload: DulcisX.Nodes.BaseNode.op_Equality*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: DulcisX.Nodes.BaseNode.op_Equality(DulcisX.Nodes.IBaseNode,DulcisX.Nodes.BaseNode)
+  commentId: M:DulcisX.Nodes.BaseNode.op_Equality(DulcisX.Nodes.IBaseNode,DulcisX.Nodes.BaseNode)
+  id: op_Equality(DulcisX.Nodes.IBaseNode,DulcisX.Nodes.BaseNode)
+  parent: DulcisX.Nodes.BaseNode
+  langs:
+  - csharp
+  - vb
+  name: Equality(IBaseNode, BaseNode)
+  nameWithType: BaseNode.Equality(IBaseNode, BaseNode)
+  fullName: DulcisX.Nodes.BaseNode.Equality(DulcisX.Nodes.IBaseNode, DulcisX.Nodes.BaseNode)
+  type: Operator
+  source:
+    remote:
+      path: src/DulcisX/DulcisX/Nodes/BaseNode.cs
+      branch: master
+      repo: https://github.com/TwentyFourMinutes/DulcisX.git
+    id: op_Equality
+    path: ../../DulcisX - master/src/DulcisX/DulcisX/Nodes/BaseNode.cs
+    startLine: 88
+  assemblies:
+  - DulcisX
+  namespace: DulcisX.Nodes
+  example: []
+  syntax:
+    content: public static bool operator ==(IBaseNode node1, BaseNode node2)
+    parameters:
+    - id: node1
+      type: DulcisX.Nodes.IBaseNode
+    - id: node2
+      type: DulcisX.Nodes.BaseNode
+    return:
+      type: System.Boolean
+    content.vb: Public Shared Operator =(node1 As IBaseNode, node2 As BaseNode) As Boolean
+  overload: DulcisX.Nodes.BaseNode.op_Equality*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: DulcisX.Nodes.BaseNode.op_Equality(DulcisX.Nodes.BaseNode,DulcisX.Nodes.IBaseNode)
+  commentId: M:DulcisX.Nodes.BaseNode.op_Equality(DulcisX.Nodes.BaseNode,DulcisX.Nodes.IBaseNode)
+  id: op_Equality(DulcisX.Nodes.BaseNode,DulcisX.Nodes.IBaseNode)
+  parent: DulcisX.Nodes.BaseNode
+  langs:
+  - csharp
+  - vb
+  name: Equality(BaseNode, IBaseNode)
+  nameWithType: BaseNode.Equality(BaseNode, IBaseNode)
+  fullName: DulcisX.Nodes.BaseNode.Equality(DulcisX.Nodes.BaseNode, DulcisX.Nodes.IBaseNode)
+  type: Operator
+  source:
+    remote:
+      path: src/DulcisX/DulcisX/Nodes/BaseNode.cs
+      branch: master
+      repo: https://github.com/TwentyFourMinutes/DulcisX.git
+    id: op_Equality
+    path: ../../DulcisX - master/src/DulcisX/DulcisX/Nodes/BaseNode.cs
+    startLine: 92
+  assemblies:
+  - DulcisX
+  namespace: DulcisX.Nodes
+  example: []
+  syntax:
+    content: public static bool operator ==(BaseNode node1, IBaseNode node2)
+    parameters:
+    - id: node1
+      type: DulcisX.Nodes.BaseNode
+    - id: node2
+      type: DulcisX.Nodes.IBaseNode
+    return:
+      type: System.Boolean
+    content.vb: Public Shared Operator =(node1 As BaseNode, node2 As IBaseNode) As Boolean
+  overload: DulcisX.Nodes.BaseNode.op_Equality*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: DulcisX.Nodes.BaseNode.op_Inequality(DulcisX.Nodes.BaseNode,DulcisX.Nodes.BaseNode)
+  commentId: M:DulcisX.Nodes.BaseNode.op_Inequality(DulcisX.Nodes.BaseNode,DulcisX.Nodes.BaseNode)
+  id: op_Inequality(DulcisX.Nodes.BaseNode,DulcisX.Nodes.BaseNode)
+  parent: DulcisX.Nodes.BaseNode
+  langs:
+  - csharp
+  - vb
+  name: Inequality(BaseNode, BaseNode)
+  nameWithType: BaseNode.Inequality(BaseNode, BaseNode)
+  fullName: DulcisX.Nodes.BaseNode.Inequality(DulcisX.Nodes.BaseNode, DulcisX.Nodes.BaseNode)
+  type: Operator
+  source:
+    remote:
+      path: src/DulcisX/DulcisX/Nodes/BaseNode.cs
+      branch: master
+      repo: https://github.com/TwentyFourMinutes/DulcisX.git
+    id: op_Inequality
+    path: ../../DulcisX - master/src/DulcisX/DulcisX/Nodes/BaseNode.cs
+    startLine: 96
+  assemblies:
+  - DulcisX
+  namespace: DulcisX.Nodes
+  example: []
+  syntax:
+    content: public static bool operator !=(BaseNode node1, BaseNode node2)
+    parameters:
+    - id: node1
+      type: DulcisX.Nodes.BaseNode
+    - id: node2
+      type: DulcisX.Nodes.BaseNode
+    return:
+      type: System.Boolean
+    content.vb: Public Shared Operator <>(node1 As BaseNode, node2 As BaseNode) As Boolean
+  overload: DulcisX.Nodes.BaseNode.op_Inequality*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: DulcisX.Nodes.BaseNode.op_Inequality(DulcisX.Nodes.IBaseNode,DulcisX.Nodes.BaseNode)
+  commentId: M:DulcisX.Nodes.BaseNode.op_Inequality(DulcisX.Nodes.IBaseNode,DulcisX.Nodes.BaseNode)
+  id: op_Inequality(DulcisX.Nodes.IBaseNode,DulcisX.Nodes.BaseNode)
+  parent: DulcisX.Nodes.BaseNode
+  langs:
+  - csharp
+  - vb
+  name: Inequality(IBaseNode, BaseNode)
+  nameWithType: BaseNode.Inequality(IBaseNode, BaseNode)
+  fullName: DulcisX.Nodes.BaseNode.Inequality(DulcisX.Nodes.IBaseNode, DulcisX.Nodes.BaseNode)
+  type: Operator
+  source:
+    remote:
+      path: src/DulcisX/DulcisX/Nodes/BaseNode.cs
+      branch: master
+      repo: https://github.com/TwentyFourMinutes/DulcisX.git
+    id: op_Inequality
+    path: ../../DulcisX - master/src/DulcisX/DulcisX/Nodes/BaseNode.cs
+    startLine: 100
+  assemblies:
+  - DulcisX
+  namespace: DulcisX.Nodes
+  example: []
+  syntax:
+    content: public static bool operator !=(IBaseNode node1, BaseNode node2)
+    parameters:
+    - id: node1
+      type: DulcisX.Nodes.IBaseNode
+    - id: node2
+      type: DulcisX.Nodes.BaseNode
+    return:
+      type: System.Boolean
+    content.vb: Public Shared Operator <>(node1 As IBaseNode, node2 As BaseNode) As Boolean
+  overload: DulcisX.Nodes.BaseNode.op_Inequality*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: DulcisX.Nodes.BaseNode.op_Inequality(DulcisX.Nodes.BaseNode,DulcisX.Nodes.IBaseNode)
+  commentId: M:DulcisX.Nodes.BaseNode.op_Inequality(DulcisX.Nodes.BaseNode,DulcisX.Nodes.IBaseNode)
+  id: op_Inequality(DulcisX.Nodes.BaseNode,DulcisX.Nodes.IBaseNode)
+  parent: DulcisX.Nodes.BaseNode
+  langs:
+  - csharp
+  - vb
+  name: Inequality(BaseNode, IBaseNode)
+  nameWithType: BaseNode.Inequality(BaseNode, IBaseNode)
+  fullName: DulcisX.Nodes.BaseNode.Inequality(DulcisX.Nodes.BaseNode, DulcisX.Nodes.IBaseNode)
+  type: Operator
+  source:
+    remote:
+      path: src/DulcisX/DulcisX/Nodes/BaseNode.cs
+      branch: master
+      repo: https://github.com/TwentyFourMinutes/DulcisX.git
+    id: op_Inequality
+    path: ../../DulcisX - master/src/DulcisX/DulcisX/Nodes/BaseNode.cs
+    startLine: 104
+  assemblies:
+  - DulcisX
+  namespace: DulcisX.Nodes
+  example: []
+  syntax:
+    content: public static bool operator !=(BaseNode node1, IBaseNode node2)
+    parameters:
+    - id: node1
+      type: DulcisX.Nodes.BaseNode
+    - id: node2
+      type: DulcisX.Nodes.IBaseNode
+    return:
+      type: System.Boolean
+    content.vb: Public Shared Operator <>(node1 As BaseNode, node2 As IBaseNode) As Boolean
+  overload: DulcisX.Nodes.BaseNode.op_Inequality*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: DulcisX.Nodes.BaseNode.Equals(DulcisX.Nodes.IBaseNode)
+  commentId: M:DulcisX.Nodes.BaseNode.Equals(DulcisX.Nodes.IBaseNode)
+  id: Equals(DulcisX.Nodes.IBaseNode)
+  parent: DulcisX.Nodes.BaseNode
+  langs:
+  - csharp
+  - vb
+  name: Equals(IBaseNode)
+  nameWithType: BaseNode.Equals(IBaseNode)
+  fullName: DulcisX.Nodes.BaseNode.Equals(DulcisX.Nodes.IBaseNode)
   type: Method
   source:
     remote:
       path: src/DulcisX/DulcisX/Nodes/BaseNode.cs
       branch: master
       repo: https://github.com/TwentyFourMinutes/DulcisX.git
-    id: IsTypeMatching
+    id: Equals
     path: ../../DulcisX - master/src/DulcisX/DulcisX/Nodes/BaseNode.cs
-    startLine: 86
+    startLine: 125
   assemblies:
   - DulcisX
   namespace: DulcisX.Nodes
   example: []
   syntax:
-    content: public bool IsTypeMatching(NodeTypes nodeType)
+    content: public virtual bool Equals(IBaseNode other)
     parameters:
-    - id: nodeType
-      type: DulcisX.Core.Enums.NodeTypes
+    - id: other
+      type: DulcisX.Nodes.IBaseNode
     return:
       type: System.Boolean
-    content.vb: Public Function IsTypeMatching(nodeType As NodeTypes) As Boolean
-  overload: DulcisX.Nodes.BaseNode.IsTypeMatching*
+    content.vb: Public Overridable Function Equals(other As IBaseNode) As Boolean
+  overload: DulcisX.Nodes.BaseNode.Equals*
   implements:
-  - DulcisX.Nodes.IBaseNode.IsTypeMatching(DulcisX.Core.Enums.NodeTypes)
+  - System.IEquatable{DulcisX.Nodes.IBaseNode}.Equals(DulcisX.Nodes.IBaseNode)
   modifiers.csharp:
   - public
+  - virtual
   modifiers.vb:
   - Public
+  - Overridable
+- uid: DulcisX.Nodes.BaseNode.Equals(System.Object)
+  commentId: M:DulcisX.Nodes.BaseNode.Equals(System.Object)
+  id: Equals(System.Object)
+  parent: DulcisX.Nodes.BaseNode
+  langs:
+  - csharp
+  - vb
+  name: Equals(Object)
+  nameWithType: BaseNode.Equals(Object)
+  fullName: DulcisX.Nodes.BaseNode.Equals(System.Object)
+  type: Method
+  source:
+    remote:
+      path: src/DulcisX/DulcisX/Nodes/BaseNode.cs
+      branch: master
+      repo: https://github.com/TwentyFourMinutes/DulcisX.git
+    id: Equals
+    path: ../../DulcisX - master/src/DulcisX/DulcisX/Nodes/BaseNode.cs
+    startLine: 141
+  assemblies:
+  - DulcisX
+  namespace: DulcisX.Nodes
+  example: []
+  syntax:
+    content: public override sealed bool Equals(object obj)
+    parameters:
+    - id: obj
+      type: System.Object
+    return:
+      type: System.Boolean
+    content.vb: Public NotOverridable Overrides Function Equals(obj As Object) As Boolean
+  overridden: System.Object.Equals(System.Object)
+  overload: DulcisX.Nodes.BaseNode.Equals*
+  modifiers.csharp:
+  - public
+  - override
+  - sealed
+  modifiers.vb:
+  - Public
+  - Overrides
+  - NotOverridable
+- uid: DulcisX.Nodes.BaseNode.GetHashCode
+  commentId: M:DulcisX.Nodes.BaseNode.GetHashCode
+  id: GetHashCode
+  parent: DulcisX.Nodes.BaseNode
+  langs:
+  - csharp
+  - vb
+  name: GetHashCode()
+  nameWithType: BaseNode.GetHashCode()
+  fullName: DulcisX.Nodes.BaseNode.GetHashCode()
+  type: Method
+  source:
+    remote:
+      path: src/DulcisX/DulcisX/Nodes/BaseNode.cs
+      branch: master
+      repo: https://github.com/TwentyFourMinutes/DulcisX.git
+    id: GetHashCode
+    path: ../../DulcisX - master/src/DulcisX/DulcisX/Nodes/BaseNode.cs
+    startLine: 156
+  assemblies:
+  - DulcisX
+  namespace: DulcisX.Nodes
+  example: []
+  syntax:
+    content: public override sealed int GetHashCode()
+    return:
+      type: System.Int32
+    content.vb: Public NotOverridable Overrides Function GetHashCode As Integer
+  overridden: System.Object.GetHashCode
+  overload: DulcisX.Nodes.BaseNode.GetHashCode*
+  modifiers.csharp:
+  - public
+  - override
+  - sealed
+  modifiers.vb:
+  - Public
+  - Overrides
+  - NotOverridable
 references:
 - uid: DulcisX.Nodes
   commentId: N:DulcisX.Nodes
@@ -526,6 +801,48 @@ references:
   name: IBaseNode
   nameWithType: IBaseNode
   fullName: DulcisX.Nodes.IBaseNode
+- uid: System.IEquatable{DulcisX.Nodes.IBaseNode}
+  commentId: T:System.IEquatable{DulcisX.Nodes.IBaseNode}
+  parent: System
+  definition: System.IEquatable`1
+  name: IEquatable<IBaseNode>
+  nameWithType: IEquatable<IBaseNode>
+  fullName: System.IEquatable<DulcisX.Nodes.IBaseNode>
+  nameWithType.vb: IEquatable(Of IBaseNode)
+  fullName.vb: System.IEquatable(Of DulcisX.Nodes.IBaseNode)
+  name.vb: IEquatable(Of IBaseNode)
+  spec.csharp:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    nameWithType: IEquatable
+    fullName: System.IEquatable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: DulcisX.Nodes.IBaseNode
+    name: IBaseNode
+    nameWithType: IBaseNode
+    fullName: DulcisX.Nodes.IBaseNode
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    nameWithType: IEquatable
+    fullName: System.IEquatable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: DulcisX.Nodes.IBaseNode
+    name: IBaseNode
+    nameWithType: IBaseNode
+    fullName: DulcisX.Nodes.IBaseNode
+  - name: )
+    nameWithType: )
+    fullName: )
 - uid: System.Object.ToString
   commentId: M:System.Object.ToString
   parent: System.Object
@@ -554,47 +871,6 @@ references:
   - name: (
     nameWithType: (
     fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
-- uid: System.Object.Equals(System.Object)
-  commentId: M:System.Object.Equals(System.Object)
-  parent: System.Object
-  isExternal: true
-  name: Equals(Object)
-  nameWithType: Object.Equals(Object)
-  fullName: System.Object.Equals(System.Object)
-  spec.csharp:
-  - uid: System.Object.Equals(System.Object)
-    name: Equals
-    nameWithType: Object.Equals
-    fullName: System.Object.Equals
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: System.Object.Equals(System.Object)
-    name: Equals
-    nameWithType: Object.Equals
-    fullName: System.Object.Equals
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
   - name: )
     nameWithType: )
     fullName: )
@@ -712,37 +988,6 @@ references:
   - name: )
     nameWithType: )
     fullName: )
-- uid: System.Object.GetHashCode
-  commentId: M:System.Object.GetHashCode
-  parent: System.Object
-  isExternal: true
-  name: GetHashCode()
-  nameWithType: Object.GetHashCode()
-  fullName: System.Object.GetHashCode()
-  spec.csharp:
-  - uid: System.Object.GetHashCode
-    name: GetHashCode
-    nameWithType: Object.GetHashCode
-    fullName: System.Object.GetHashCode
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: System.Object.GetHashCode
-    name: GetHashCode
-    nameWithType: Object.GetHashCode
-    fullName: System.Object.GetHashCode
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
 - uid: System.Object.GetType
   commentId: M:System.Object.GetType
   parent: System.Object
@@ -811,6 +1056,45 @@ references:
   name: System
   nameWithType: System
   fullName: System
+- uid: System.IEquatable`1
+  commentId: T:System.IEquatable`1
+  isExternal: true
+  name: IEquatable<T>
+  nameWithType: IEquatable<T>
+  fullName: System.IEquatable<T>
+  nameWithType.vb: IEquatable(Of T)
+  fullName.vb: System.IEquatable(Of T)
+  name.vb: IEquatable(Of T)
+  spec.csharp:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    nameWithType: IEquatable
+    fullName: System.IEquatable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    nameWithType: IEquatable
+    fullName: System.IEquatable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
 - uid: DulcisX.Nodes.BaseNode.ParentSolution*
   commentId: Overload:DulcisX.Nodes.BaseNode.ParentSolution
   name: ParentSolution
@@ -870,28 +1154,6 @@ references:
   name: UInt32
   nameWithType: UInt32
   fullName: System.UInt32
-- uid: DulcisX.Nodes.BaseNode.NodeType*
-  commentId: Overload:DulcisX.Nodes.BaseNode.NodeType
-  name: NodeType
-  nameWithType: BaseNode.NodeType
-  fullName: DulcisX.Nodes.BaseNode.NodeType
-- uid: DulcisX.Nodes.IBaseNode.NodeType
-  commentId: P:DulcisX.Nodes.IBaseNode.NodeType
-  parent: DulcisX.Nodes.IBaseNode
-  name: NodeType
-  nameWithType: IBaseNode.NodeType
-  fullName: DulcisX.Nodes.IBaseNode.NodeType
-- uid: DulcisX.Core.Enums.NodeTypes
-  commentId: T:DulcisX.Core.Enums.NodeTypes
-  parent: DulcisX.Core.Enums
-  name: NodeTypes
-  nameWithType: NodeTypes
-  fullName: DulcisX.Core.Enums.NodeTypes
-- uid: DulcisX.Core.Enums
-  commentId: N:DulcisX.Core.Enums
-  name: DulcisX.Core.Enums
-  nameWithType: DulcisX.Core.Enums
-  fullName: DulcisX.Core.Enums
 - uid: DulcisX.Nodes.BaseNode
   commentId: T:DulcisX.Nodes.BaseNode
   parent: DulcisX.Nodes
@@ -1012,6 +1274,17 @@ references:
   - name: )
     nameWithType: )
     fullName: )
+- uid: DulcisX.Core.Enums.NodeTypes
+  commentId: T:DulcisX.Core.Enums.NodeTypes
+  parent: DulcisX.Core.Enums
+  name: NodeTypes
+  nameWithType: NodeTypes
+  fullName: DulcisX.Core.Enums.NodeTypes
+- uid: DulcisX.Core.Enums
+  commentId: N:DulcisX.Core.Enums
+  name: DulcisX.Core.Enums
+  nameWithType: DulcisX.Core.Enums
+  fullName: DulcisX.Core.Enums
 - uid: DulcisX.Nodes.BaseNode.AsHierarchyItem*
   commentId: Overload:DulcisX.Nodes.BaseNode.AsHierarchyItem
   name: AsHierarchyItem
@@ -1178,47 +1451,11 @@ references:
   name: System.Collections.Generic
   nameWithType: System.Collections.Generic
   fullName: System.Collections.Generic
-- uid: DulcisX.Nodes.BaseNode.IsTypeMatching*
-  commentId: Overload:DulcisX.Nodes.BaseNode.IsTypeMatching
-  name: IsTypeMatching
-  nameWithType: BaseNode.IsTypeMatching
-  fullName: DulcisX.Nodes.BaseNode.IsTypeMatching
-- uid: DulcisX.Nodes.IBaseNode.IsTypeMatching(DulcisX.Core.Enums.NodeTypes)
-  commentId: M:DulcisX.Nodes.IBaseNode.IsTypeMatching(DulcisX.Core.Enums.NodeTypes)
-  parent: DulcisX.Nodes.IBaseNode
-  name: IsTypeMatching(NodeTypes)
-  nameWithType: IBaseNode.IsTypeMatching(NodeTypes)
-  fullName: DulcisX.Nodes.IBaseNode.IsTypeMatching(DulcisX.Core.Enums.NodeTypes)
-  spec.csharp:
-  - uid: DulcisX.Nodes.IBaseNode.IsTypeMatching(DulcisX.Core.Enums.NodeTypes)
-    name: IsTypeMatching
-    nameWithType: IBaseNode.IsTypeMatching
-    fullName: DulcisX.Nodes.IBaseNode.IsTypeMatching
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: DulcisX.Core.Enums.NodeTypes
-    name: NodeTypes
-    nameWithType: NodeTypes
-    fullName: DulcisX.Core.Enums.NodeTypes
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: DulcisX.Nodes.IBaseNode.IsTypeMatching(DulcisX.Core.Enums.NodeTypes)
-    name: IsTypeMatching
-    nameWithType: IBaseNode.IsTypeMatching
-    fullName: DulcisX.Nodes.IBaseNode.IsTypeMatching
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: DulcisX.Core.Enums.NodeTypes
-    name: NodeTypes
-    nameWithType: NodeTypes
-    fullName: DulcisX.Core.Enums.NodeTypes
-  - name: )
-    nameWithType: )
-    fullName: )
+- uid: DulcisX.Nodes.BaseNode.op_Equality*
+  commentId: Overload:DulcisX.Nodes.BaseNode.op_Equality
+  name: Equality
+  nameWithType: BaseNode.Equality
+  fullName: DulcisX.Nodes.BaseNode.Equality
 - uid: System.Boolean
   commentId: T:System.Boolean
   parent: System
@@ -1226,3 +1463,176 @@ references:
   name: Boolean
   nameWithType: Boolean
   fullName: System.Boolean
+- uid: DulcisX.Nodes.BaseNode.op_Inequality*
+  commentId: Overload:DulcisX.Nodes.BaseNode.op_Inequality
+  name: Inequality
+  nameWithType: BaseNode.Inequality
+  fullName: DulcisX.Nodes.BaseNode.Inequality
+- uid: DulcisX.Nodes.BaseNode.Equals*
+  commentId: Overload:DulcisX.Nodes.BaseNode.Equals
+  name: Equals
+  nameWithType: BaseNode.Equals
+  fullName: DulcisX.Nodes.BaseNode.Equals
+- uid: System.IEquatable{DulcisX.Nodes.IBaseNode}.Equals(DulcisX.Nodes.IBaseNode)
+  commentId: M:System.IEquatable{DulcisX.Nodes.IBaseNode}.Equals(DulcisX.Nodes.IBaseNode)
+  parent: System.IEquatable{DulcisX.Nodes.IBaseNode}
+  definition: System.IEquatable`1.Equals(`0)
+  name: Equals(IBaseNode)
+  nameWithType: IEquatable<IBaseNode>.Equals(IBaseNode)
+  fullName: System.IEquatable<DulcisX.Nodes.IBaseNode>.Equals(DulcisX.Nodes.IBaseNode)
+  nameWithType.vb: IEquatable(Of IBaseNode).Equals(IBaseNode)
+  fullName.vb: System.IEquatable(Of DulcisX.Nodes.IBaseNode).Equals(DulcisX.Nodes.IBaseNode)
+  spec.csharp:
+  - uid: System.IEquatable`1.Equals(`0)
+    name: Equals
+    nameWithType: IEquatable<IBaseNode>.Equals
+    fullName: System.IEquatable<DulcisX.Nodes.IBaseNode>.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: DulcisX.Nodes.IBaseNode
+    name: IBaseNode
+    nameWithType: IBaseNode
+    fullName: DulcisX.Nodes.IBaseNode
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.IEquatable`1.Equals(`0)
+    name: Equals
+    nameWithType: IEquatable(Of IBaseNode).Equals
+    fullName: System.IEquatable(Of DulcisX.Nodes.IBaseNode).Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: DulcisX.Nodes.IBaseNode
+    name: IBaseNode
+    nameWithType: IBaseNode
+    fullName: DulcisX.Nodes.IBaseNode
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.IEquatable`1.Equals(`0)
+  commentId: M:System.IEquatable`1.Equals(`0)
+  isExternal: true
+  name: Equals(T)
+  nameWithType: IEquatable<T>.Equals(T)
+  fullName: System.IEquatable<T>.Equals(T)
+  nameWithType.vb: IEquatable(Of T).Equals(T)
+  fullName.vb: System.IEquatable(Of T).Equals(T)
+  spec.csharp:
+  - uid: System.IEquatable`1.Equals(`0)
+    name: Equals
+    nameWithType: IEquatable<T>.Equals
+    fullName: System.IEquatable<T>.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.IEquatable`1.Equals(`0)
+    name: Equals
+    nameWithType: IEquatable(Of T).Equals
+    fullName: System.IEquatable(Of T).Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: DulcisX.Nodes.BaseNode.GetHashCode*
+  commentId: Overload:DulcisX.Nodes.BaseNode.GetHashCode
+  name: GetHashCode
+  nameWithType: BaseNode.GetHashCode
+  fullName: DulcisX.Nodes.BaseNode.GetHashCode
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32

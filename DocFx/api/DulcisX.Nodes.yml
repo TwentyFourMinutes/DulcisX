@@ -13,6 +13,9 @@ items:
   - DulcisX.Nodes.IBaseNode
   - DulcisX.Nodes.INamedNode
   - DulcisX.Nodes.IPhysicalNode
+  - DulcisX.Nodes.IPhysicalProjectItemNode
+  - DulcisX.Nodes.IProjectItemNode
+  - DulcisX.Nodes.ModifyProjectDocument
   - DulcisX.Nodes.ProjectItemNode
   - DulcisX.Nodes.ProjectNode
   - DulcisX.Nodes.RemovedPhysicalNode`1
@@ -80,6 +83,23 @@ references:
   - name: )
     nameWithType: )
     fullName: )
+- uid: DulcisX.Nodes.IProjectItemNode
+  commentId: T:DulcisX.Nodes.IProjectItemNode
+  parent: DulcisX.Nodes
+  name: IProjectItemNode
+  nameWithType: IProjectItemNode
+  fullName: DulcisX.Nodes.IProjectItemNode
+- uid: DulcisX.Nodes.IPhysicalProjectItemNode
+  commentId: T:DulcisX.Nodes.IPhysicalProjectItemNode
+  parent: DulcisX.Nodes
+  name: IPhysicalProjectItemNode
+  nameWithType: IPhysicalProjectItemNode
+  fullName: DulcisX.Nodes.IPhysicalProjectItemNode
+- uid: DulcisX.Nodes.ModifyProjectDocument
+  commentId: T:DulcisX.Nodes.ModifyProjectDocument
+  name: ModifyProjectDocument
+  nameWithType: ModifyProjectDocument
+  fullName: DulcisX.Nodes.ModifyProjectDocument
 - uid: DulcisX.Nodes.RemovedPhysicalNode`1
   commentId: T:DulcisX.Nodes.RemovedPhysicalNode`1
   name: RemovedPhysicalNode<TFlag>

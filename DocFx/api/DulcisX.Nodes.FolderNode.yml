@@ -7,9 +7,9 @@ items:
   children:
   - DulcisX.Nodes.FolderNode.#ctor(DulcisX.Nodes.SolutionNode,DulcisX.Nodes.ProjectNode,System.UInt32)
   - DulcisX.Nodes.FolderNode.#ctor(DulcisX.Nodes.SolutionNode,Microsoft.VisualStudio.Shell.Interop.IVsHierarchy,System.UInt32)
+  - DulcisX.Nodes.FolderNode.GetDirectoryName
   - DulcisX.Nodes.FolderNode.GetFileName
   - DulcisX.Nodes.FolderNode.GetFullName
-  - DulcisX.Nodes.FolderNode.NodeType
   langs:
   - csharp
   - vb
@@ -31,19 +31,24 @@ items:
   summary: "\nRepresents a folder within a <xref href=\"DulcisX.Nodes.ProjectNode\" data-throw-if-not-resolved=\"false\"></xref>.\n"
   example: []
   syntax:
-    content: 'public class FolderNode : ProjectItemNode, IPhysicalNode, INamedNode, IBaseNode'
+    content: 'public class FolderNode : ProjectItemNode, IPhysicalProjectItemNode, IProjectItemNode, IPhysicalNode, INamedNode, IBaseNode, IEquatable<IBaseNode>'
     content.vb: >-
       Public Class FolderNode
+
           Inherits ProjectItemNode
-          Implements IPhysicalNode, INamedNode, IBaseNode
+
+          Implements IPhysicalProjectItemNode, IProjectItemNode, IPhysicalNode, INamedNode, IBaseNode, IEquatable(Of IBaseNode)
   inheritance:
   - System.Object
   - DulcisX.Nodes.BaseNode
   - DulcisX.Nodes.ProjectItemNode
   implements:
+  - DulcisX.Nodes.IPhysicalProjectItemNode
+  - DulcisX.Nodes.IProjectItemNode
   - DulcisX.Nodes.IPhysicalNode
   - DulcisX.Nodes.INamedNode
   - DulcisX.Nodes.IBaseNode
+  - System.IEquatable{DulcisX.Nodes.IBaseNode}
   inheritedMembers:
   - DulcisX.Nodes.ProjectItemNode.GetParentProject
   - DulcisX.Nodes.ProjectItemNode.GetParent
@@ -55,12 +60,12 @@ items:
   - DulcisX.Nodes.BaseNode.ItemId
   - DulcisX.Nodes.BaseNode.GetDisplayName
   - DulcisX.Nodes.BaseNode.AsHierarchyItem
-  - DulcisX.Nodes.BaseNode.IsTypeMatching(DulcisX.Core.Enums.NodeTypes)
+  - DulcisX.Nodes.BaseNode.Equals(DulcisX.Nodes.IBaseNode)
+  - DulcisX.Nodes.BaseNode.Equals(System.Object)
+  - DulcisX.Nodes.BaseNode.GetHashCode
   - System.Object.ToString
-  - System.Object.Equals(System.Object)
   - System.Object.Equals(System.Object,System.Object)
   - System.Object.ReferenceEquals(System.Object,System.Object)
-  - System.Object.GetHashCode
   - System.Object.GetType
   - System.Object.MemberwiseClone
   modifiers.csharp:
@@ -69,48 +74,6 @@ items:
   modifiers.vb:
   - Public
   - Class
-- uid: DulcisX.Nodes.FolderNode.NodeType
-  commentId: P:DulcisX.Nodes.FolderNode.NodeType
-  id: NodeType
-  parent: DulcisX.Nodes.FolderNode
-  langs:
-  - csharp
-  - vb
-  name: NodeType
-  nameWithType: FolderNode.NodeType
-  fullName: DulcisX.Nodes.FolderNode.NodeType
-  type: Property
-  source:
-    remote:
-      path: src/DulcisX/DulcisX/Nodes/FolderNode.cs
-      branch: master
-      repo: https://github.com/TwentyFourMinutes/DulcisX.git
-    id: NodeType
-    path: ../../DulcisX - master/src/DulcisX/DulcisX/Nodes/FolderNode.cs
-    startLine: 14
-  assemblies:
-  - DulcisX
-  namespace: DulcisX.Nodes
-  summary: "\nGets the Type of current Node.\n"
-  example: []
-  syntax:
-    content: public override NodeTypes NodeType { get; }
-    parameters: []
-    return:
-      type: DulcisX.Core.Enums.NodeTypes
-    content.vb: Public Overrides ReadOnly Property NodeType As NodeTypes
-  overridden: DulcisX.Nodes.BaseNode.NodeType
-  overload: DulcisX.Nodes.FolderNode.NodeType*
-  implements:
-  - DulcisX.Nodes.IBaseNode.NodeType
-  modifiers.csharp:
-  - public
-  - override
-  - get
-  modifiers.vb:
-  - Public
-  - Overrides
-  - ReadOnly
 - uid: DulcisX.Nodes.FolderNode.#ctor(DulcisX.Nodes.SolutionNode,DulcisX.Nodes.ProjectNode,System.UInt32)
   commentId: M:DulcisX.Nodes.FolderNode.#ctor(DulcisX.Nodes.SolutionNode,DulcisX.Nodes.ProjectNode,System.UInt32)
   id: '#ctor(DulcisX.Nodes.SolutionNode,DulcisX.Nodes.ProjectNode,System.UInt32)'
@@ -129,7 +92,7 @@ items:
       repo: https://github.com/TwentyFourMinutes/DulcisX.git
     id: .ctor
     path: ../../DulcisX - master/src/DulcisX/DulcisX/Nodes/FolderNode.cs
-    startLine: 22
+    startLine: 19
   assemblies:
   - DulcisX
   namespace: DulcisX.Nodes
@@ -171,7 +134,7 @@ items:
       repo: https://github.com/TwentyFourMinutes/DulcisX.git
     id: .ctor
     path: ../../DulcisX - master/src/DulcisX/DulcisX/Nodes/FolderNode.cs
-    startLine: 33
+    startLine: 30
   assemblies:
   - DulcisX
   namespace: DulcisX.Nodes
@@ -213,17 +176,15 @@ items:
       repo: https://github.com/TwentyFourMinutes/DulcisX.git
     id: GetFileName
     path: ../../DulcisX - master/src/DulcisX/DulcisX/Nodes/FolderNode.cs
-    startLine: 38
+    startLine: 35
   assemblies:
   - DulcisX
   namespace: DulcisX.Nodes
-  summary: "\nReturns the name of the file, including the extension.\n"
   example: []
   syntax:
     content: public string GetFileName()
     return:
       type: System.String
-      description: A string containg the name of the file.
     content.vb: Public Function GetFileName As String
   overload: DulcisX.Nodes.FolderNode.GetFileName*
   implements:
@@ -250,21 +211,53 @@ items:
       repo: https://github.com/TwentyFourMinutes/DulcisX.git
     id: GetFullName
     path: ../../DulcisX - master/src/DulcisX/DulcisX/Nodes/FolderNode.cs
-    startLine: 46
+    startLine: 43
   assemblies:
   - DulcisX
   namespace: DulcisX.Nodes
-  summary: "\nReturns the full name of the file.\n"
   example: []
   syntax:
     content: public string GetFullName()
     return:
       type: System.String
-      description: A string containg the full name of the file.
     content.vb: Public Function GetFullName As String
   overload: DulcisX.Nodes.FolderNode.GetFullName*
   implements:
   - DulcisX.Nodes.IPhysicalNode.GetFullName
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: DulcisX.Nodes.FolderNode.GetDirectoryName
+  commentId: M:DulcisX.Nodes.FolderNode.GetDirectoryName
+  id: GetDirectoryName
+  parent: DulcisX.Nodes.FolderNode
+  langs:
+  - csharp
+  - vb
+  name: GetDirectoryName()
+  nameWithType: FolderNode.GetDirectoryName()
+  fullName: DulcisX.Nodes.FolderNode.GetDirectoryName()
+  type: Method
+  source:
+    remote:
+      path: src/DulcisX/DulcisX/Nodes/FolderNode.cs
+      branch: master
+      repo: https://github.com/TwentyFourMinutes/DulcisX.git
+    id: GetDirectoryName
+    path: ../../DulcisX - master/src/DulcisX/DulcisX/Nodes/FolderNode.cs
+    startLine: 54
+  assemblies:
+  - DulcisX
+  namespace: DulcisX.Nodes
+  syntax:
+    content: public string GetDirectoryName()
+    return:
+      type: System.String
+    content.vb: Public Function GetDirectoryName As String
+  overload: DulcisX.Nodes.FolderNode.GetDirectoryName*
+  implements:
+  - DulcisX.Nodes.IPhysicalNode.GetDirectoryName
   modifiers.csharp:
   - public
   modifiers.vb:
@@ -300,6 +293,18 @@ references:
   name: ProjectItemNode
   nameWithType: ProjectItemNode
   fullName: DulcisX.Nodes.ProjectItemNode
+- uid: DulcisX.Nodes.IPhysicalProjectItemNode
+  commentId: T:DulcisX.Nodes.IPhysicalProjectItemNode
+  parent: DulcisX.Nodes
+  name: IPhysicalProjectItemNode
+  nameWithType: IPhysicalProjectItemNode
+  fullName: DulcisX.Nodes.IPhysicalProjectItemNode
+- uid: DulcisX.Nodes.IProjectItemNode
+  commentId: T:DulcisX.Nodes.IProjectItemNode
+  parent: DulcisX.Nodes
+  name: IProjectItemNode
+  nameWithType: IProjectItemNode
+  fullName: DulcisX.Nodes.IProjectItemNode
 - uid: DulcisX.Nodes.IPhysicalNode
   commentId: T:DulcisX.Nodes.IPhysicalNode
   parent: DulcisX.Nodes
@@ -318,6 +323,48 @@ references:
   name: IBaseNode
   nameWithType: IBaseNode
   fullName: DulcisX.Nodes.IBaseNode
+- uid: System.IEquatable{DulcisX.Nodes.IBaseNode}
+  commentId: T:System.IEquatable{DulcisX.Nodes.IBaseNode}
+  parent: System
+  definition: System.IEquatable`1
+  name: IEquatable<IBaseNode>
+  nameWithType: IEquatable<IBaseNode>
+  fullName: System.IEquatable<DulcisX.Nodes.IBaseNode>
+  nameWithType.vb: IEquatable(Of IBaseNode)
+  fullName.vb: System.IEquatable(Of DulcisX.Nodes.IBaseNode)
+  name.vb: IEquatable(Of IBaseNode)
+  spec.csharp:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    nameWithType: IEquatable
+    fullName: System.IEquatable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: DulcisX.Nodes.IBaseNode
+    name: IBaseNode
+    nameWithType: IBaseNode
+    fullName: DulcisX.Nodes.IBaseNode
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    nameWithType: IEquatable
+    fullName: System.IEquatable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: DulcisX.Nodes.IBaseNode
+    name: IBaseNode
+    nameWithType: IBaseNode
+    fullName: DulcisX.Nodes.IBaseNode
+  - name: )
+    nameWithType: )
+    fullName: )
 - uid: DulcisX.Nodes.ProjectItemNode.GetParentProject
   commentId: M:DulcisX.Nodes.ProjectItemNode.GetParentProject
   parent: DulcisX.Nodes.ProjectItemNode
@@ -540,39 +587,106 @@ references:
   - name: )
     nameWithType: )
     fullName: )
-- uid: DulcisX.Nodes.BaseNode.IsTypeMatching(DulcisX.Core.Enums.NodeTypes)
-  commentId: M:DulcisX.Nodes.BaseNode.IsTypeMatching(DulcisX.Core.Enums.NodeTypes)
+- uid: DulcisX.Nodes.BaseNode.Equals(DulcisX.Nodes.IBaseNode)
+  commentId: M:DulcisX.Nodes.BaseNode.Equals(DulcisX.Nodes.IBaseNode)
   parent: DulcisX.Nodes.BaseNode
-  name: IsTypeMatching(NodeTypes)
-  nameWithType: BaseNode.IsTypeMatching(NodeTypes)
-  fullName: DulcisX.Nodes.BaseNode.IsTypeMatching(DulcisX.Core.Enums.NodeTypes)
+  name: Equals(IBaseNode)
+  nameWithType: BaseNode.Equals(IBaseNode)
+  fullName: DulcisX.Nodes.BaseNode.Equals(DulcisX.Nodes.IBaseNode)
   spec.csharp:
-  - uid: DulcisX.Nodes.BaseNode.IsTypeMatching(DulcisX.Core.Enums.NodeTypes)
-    name: IsTypeMatching
-    nameWithType: BaseNode.IsTypeMatching
-    fullName: DulcisX.Nodes.BaseNode.IsTypeMatching
+  - uid: DulcisX.Nodes.BaseNode.Equals(DulcisX.Nodes.IBaseNode)
+    name: Equals
+    nameWithType: BaseNode.Equals
+    fullName: DulcisX.Nodes.BaseNode.Equals
   - name: (
     nameWithType: (
     fullName: (
-  - uid: DulcisX.Core.Enums.NodeTypes
-    name: NodeTypes
-    nameWithType: NodeTypes
-    fullName: DulcisX.Core.Enums.NodeTypes
+  - uid: DulcisX.Nodes.IBaseNode
+    name: IBaseNode
+    nameWithType: IBaseNode
+    fullName: DulcisX.Nodes.IBaseNode
   - name: )
     nameWithType: )
     fullName: )
   spec.vb:
-  - uid: DulcisX.Nodes.BaseNode.IsTypeMatching(DulcisX.Core.Enums.NodeTypes)
-    name: IsTypeMatching
-    nameWithType: BaseNode.IsTypeMatching
-    fullName: DulcisX.Nodes.BaseNode.IsTypeMatching
+  - uid: DulcisX.Nodes.BaseNode.Equals(DulcisX.Nodes.IBaseNode)
+    name: Equals
+    nameWithType: BaseNode.Equals
+    fullName: DulcisX.Nodes.BaseNode.Equals
   - name: (
     nameWithType: (
     fullName: (
-  - uid: DulcisX.Core.Enums.NodeTypes
-    name: NodeTypes
-    nameWithType: NodeTypes
-    fullName: DulcisX.Core.Enums.NodeTypes
+  - uid: DulcisX.Nodes.IBaseNode
+    name: IBaseNode
+    nameWithType: IBaseNode
+    fullName: DulcisX.Nodes.IBaseNode
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: DulcisX.Nodes.BaseNode.Equals(System.Object)
+  commentId: M:DulcisX.Nodes.BaseNode.Equals(System.Object)
+  parent: DulcisX.Nodes.BaseNode
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: BaseNode.Equals(Object)
+  fullName: DulcisX.Nodes.BaseNode.Equals(System.Object)
+  spec.csharp:
+  - uid: DulcisX.Nodes.BaseNode.Equals(System.Object)
+    name: Equals
+    nameWithType: BaseNode.Equals
+    fullName: DulcisX.Nodes.BaseNode.Equals
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: DulcisX.Nodes.BaseNode.Equals(System.Object)
+    name: Equals
+    nameWithType: BaseNode.Equals
+    fullName: DulcisX.Nodes.BaseNode.Equals
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: DulcisX.Nodes.BaseNode.GetHashCode
+  commentId: M:DulcisX.Nodes.BaseNode.GetHashCode
+  parent: DulcisX.Nodes.BaseNode
+  name: GetHashCode()
+  nameWithType: BaseNode.GetHashCode()
+  fullName: DulcisX.Nodes.BaseNode.GetHashCode()
+  spec.csharp:
+  - uid: DulcisX.Nodes.BaseNode.GetHashCode
+    name: GetHashCode
+    nameWithType: BaseNode.GetHashCode
+    fullName: DulcisX.Nodes.BaseNode.GetHashCode
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: DulcisX.Nodes.BaseNode.GetHashCode
+    name: GetHashCode
+    nameWithType: BaseNode.GetHashCode
+    fullName: DulcisX.Nodes.BaseNode.GetHashCode
+  - name: (
+    nameWithType: (
+    fullName: (
   - name: )
     nameWithType: )
     fullName: )
@@ -604,47 +718,6 @@ references:
   - name: (
     nameWithType: (
     fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
-- uid: System.Object.Equals(System.Object)
-  commentId: M:System.Object.Equals(System.Object)
-  parent: System.Object
-  isExternal: true
-  name: Equals(Object)
-  nameWithType: Object.Equals(Object)
-  fullName: System.Object.Equals(System.Object)
-  spec.csharp:
-  - uid: System.Object.Equals(System.Object)
-    name: Equals
-    nameWithType: Object.Equals
-    fullName: System.Object.Equals
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: System.Object.Equals(System.Object)
-    name: Equals
-    nameWithType: Object.Equals
-    fullName: System.Object.Equals
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
   - name: )
     nameWithType: )
     fullName: )
@@ -762,37 +835,6 @@ references:
   - name: )
     nameWithType: )
     fullName: )
-- uid: System.Object.GetHashCode
-  commentId: M:System.Object.GetHashCode
-  parent: System.Object
-  isExternal: true
-  name: GetHashCode()
-  nameWithType: Object.GetHashCode()
-  fullName: System.Object.GetHashCode()
-  spec.csharp:
-  - uid: System.Object.GetHashCode
-    name: GetHashCode
-    nameWithType: Object.GetHashCode
-    fullName: System.Object.GetHashCode
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: System.Object.GetHashCode
-    name: GetHashCode
-    nameWithType: Object.GetHashCode
-    fullName: System.Object.GetHashCode
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
 - uid: System.Object.GetType
   commentId: M:System.Object.GetType
   parent: System.Object
@@ -861,34 +903,45 @@ references:
   name: System
   nameWithType: System
   fullName: System
-- uid: DulcisX.Nodes.BaseNode.NodeType
-  commentId: P:DulcisX.Nodes.BaseNode.NodeType
-  parent: DulcisX.Nodes.BaseNode
-  name: NodeType
-  nameWithType: BaseNode.NodeType
-  fullName: DulcisX.Nodes.BaseNode.NodeType
-- uid: DulcisX.Nodes.FolderNode.NodeType*
-  commentId: Overload:DulcisX.Nodes.FolderNode.NodeType
-  name: NodeType
-  nameWithType: FolderNode.NodeType
-  fullName: DulcisX.Nodes.FolderNode.NodeType
-- uid: DulcisX.Nodes.IBaseNode.NodeType
-  commentId: P:DulcisX.Nodes.IBaseNode.NodeType
-  parent: DulcisX.Nodes.IBaseNode
-  name: NodeType
-  nameWithType: IBaseNode.NodeType
-  fullName: DulcisX.Nodes.IBaseNode.NodeType
-- uid: DulcisX.Core.Enums.NodeTypes
-  commentId: T:DulcisX.Core.Enums.NodeTypes
-  parent: DulcisX.Core.Enums
-  name: NodeTypes
-  nameWithType: NodeTypes
-  fullName: DulcisX.Core.Enums.NodeTypes
-- uid: DulcisX.Core.Enums
-  commentId: N:DulcisX.Core.Enums
-  name: DulcisX.Core.Enums
-  nameWithType: DulcisX.Core.Enums
-  fullName: DulcisX.Core.Enums
+- uid: System.IEquatable`1
+  commentId: T:System.IEquatable`1
+  isExternal: true
+  name: IEquatable<T>
+  nameWithType: IEquatable<T>
+  fullName: System.IEquatable<T>
+  nameWithType.vb: IEquatable(Of T)
+  fullName.vb: System.IEquatable(Of T)
+  name.vb: IEquatable(Of T)
+  spec.csharp:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    nameWithType: IEquatable
+    fullName: System.IEquatable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    nameWithType: IEquatable
+    fullName: System.IEquatable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
 - uid: DulcisX.Nodes.FolderNode
   commentId: T:DulcisX.Nodes.FolderNode
   parent: DulcisX.Nodes
@@ -993,6 +1046,39 @@ references:
     name: GetFullName
     nameWithType: IPhysicalNode.GetFullName
     fullName: DulcisX.Nodes.IPhysicalNode.GetFullName
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: DulcisX.Nodes.FolderNode.GetDirectoryName*
+  commentId: Overload:DulcisX.Nodes.FolderNode.GetDirectoryName
+  name: GetDirectoryName
+  nameWithType: FolderNode.GetDirectoryName
+  fullName: DulcisX.Nodes.FolderNode.GetDirectoryName
+- uid: DulcisX.Nodes.IPhysicalNode.GetDirectoryName
+  commentId: M:DulcisX.Nodes.IPhysicalNode.GetDirectoryName
+  parent: DulcisX.Nodes.IPhysicalNode
+  name: GetDirectoryName()
+  nameWithType: IPhysicalNode.GetDirectoryName()
+  fullName: DulcisX.Nodes.IPhysicalNode.GetDirectoryName()
+  spec.csharp:
+  - uid: DulcisX.Nodes.IPhysicalNode.GetDirectoryName
+    name: GetDirectoryName
+    nameWithType: IPhysicalNode.GetDirectoryName
+    fullName: DulcisX.Nodes.IPhysicalNode.GetDirectoryName
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: DulcisX.Nodes.IPhysicalNode.GetDirectoryName
+    name: GetDirectoryName
+    nameWithType: IPhysicalNode.GetDirectoryName
+    fullName: DulcisX.Nodes.IPhysicalNode.GetDirectoryName
   - name: (
     nameWithType: (
     fullName: (

@@ -4,10 +4,19 @@ items:
   commentId: N:DulcisX.Core.Enums
   id: DulcisX.Core.Enums
   children:
+  - DulcisX.Core.Enums.CommonNodeIds
+  - DulcisX.Core.Enums.CommonStatusCodes
+  - DulcisX.Core.Enums.CommonStreamKey
   - DulcisX.Core.Enums.CopyToOutputDirectory
   - DulcisX.Core.Enums.DocumentProperty
   - DulcisX.Core.Enums.DocumentType
+  - DulcisX.Core.Enums.MessageBoxButton
+  - DulcisX.Core.Enums.MessageBoxIcon
+  - DulcisX.Core.Enums.MessageBoxResult
   - DulcisX.Core.Enums.NodeTypes
+  - DulcisX.Core.Enums.OpenNodeAttribute
+  - DulcisX.Core.Enums.PhysicalNodeRemovedFlags
+  - DulcisX.Core.Enums.ProjectNodeType
   - DulcisX.Core.Enums.StartupOption
   langs:
   - csharp
@@ -37,18 +46,70 @@ references:
   name: DocumentType
   nameWithType: DocumentType
   fullName: DulcisX.Core.Enums.DocumentType
+- uid: DulcisX.Core.Enums.MessageBoxButton
+  commentId: T:DulcisX.Core.Enums.MessageBoxButton
+  parent: DulcisX.Core.Enums
+  name: MessageBoxButton
+  nameWithType: MessageBoxButton
+  fullName: DulcisX.Core.Enums.MessageBoxButton
+- uid: DulcisX.Core.Enums.MessageBoxIcon
+  commentId: T:DulcisX.Core.Enums.MessageBoxIcon
+  parent: DulcisX.Core.Enums
+  name: MessageBoxIcon
+  nameWithType: MessageBoxIcon
+  fullName: DulcisX.Core.Enums.MessageBoxIcon
+- uid: DulcisX.Core.Enums.MessageBoxResult
+  commentId: T:DulcisX.Core.Enums.MessageBoxResult
+  parent: DulcisX.Core.Enums
+  name: MessageBoxResult
+  nameWithType: MessageBoxResult
+  fullName: DulcisX.Core.Enums.MessageBoxResult
 - uid: DulcisX.Core.Enums.NodeTypes
   commentId: T:DulcisX.Core.Enums.NodeTypes
   parent: DulcisX.Core.Enums
   name: NodeTypes
   nameWithType: NodeTypes
   fullName: DulcisX.Core.Enums.NodeTypes
+- uid: DulcisX.Core.Enums.ProjectNodeType
+  commentId: T:DulcisX.Core.Enums.ProjectNodeType
+  parent: DulcisX.Core.Enums
+  name: ProjectNodeType
+  nameWithType: ProjectNodeType
+  fullName: DulcisX.Core.Enums.ProjectNodeType
 - uid: DulcisX.Core.Enums.StartupOption
   commentId: T:DulcisX.Core.Enums.StartupOption
   parent: DulcisX.Core.Enums
   name: StartupOption
   nameWithType: StartupOption
   fullName: DulcisX.Core.Enums.StartupOption
+- uid: DulcisX.Core.Enums.CommonNodeIds
+  commentId: T:DulcisX.Core.Enums.CommonNodeIds
+  name: CommonNodeIds
+  nameWithType: CommonNodeIds
+  fullName: DulcisX.Core.Enums.CommonNodeIds
+- uid: DulcisX.Core.Enums.CommonStatusCodes
+  commentId: T:DulcisX.Core.Enums.CommonStatusCodes
+  name: CommonStatusCodes
+  nameWithType: CommonStatusCodes
+  fullName: DulcisX.Core.Enums.CommonStatusCodes
+- uid: DulcisX.Core.Enums.CommonStreamKey
+  commentId: T:DulcisX.Core.Enums.CommonStreamKey
+  parent: DulcisX.Core.Enums
+  name: CommonStreamKey
+  nameWithType: CommonStreamKey
+  fullName: DulcisX.Core.Enums.CommonStreamKey
+- uid: DulcisX.Core.Enums.OpenNodeAttribute
+  commentId: T:DulcisX.Core.Enums.OpenNodeAttribute
+  parent: DulcisX.Core.Enums
+  name: OpenNodeAttribute
+  nameWithType: OpenNodeAttribute
+  fullName: DulcisX.Core.Enums.OpenNodeAttribute
+- uid: DulcisX.Core.Enums.PhysicalNodeRemovedFlags
+  commentId: T:DulcisX.Core.Enums.PhysicalNodeRemovedFlags
+  parent: DulcisX.Core.Enums
+  name: PhysicalNodeRemovedFlags
+  nameWithType: PhysicalNodeRemovedFlags
+  fullName: DulcisX.Core.Enums.PhysicalNodeRemovedFlags
 - uid: DulcisX.Core.Enums
   commentId: N:DulcisX.Core.Enums
   name: DulcisX.Core.Enums

@@ -126,7 +126,7 @@ items:
   syntax:
     content: event Action<IEnumerable<RemovedPhysicalNode<PhysicalNodeRemovedFlags>>> OnDocumentsRemoved
     return:
-      type: System.Action{System.Collections.Generic.IEnumerable{DulcisX.Nodes.RemovedPhysicalNode{DulcisX.Core.Enums.VisualStudio.PhysicalNodeRemovedFlags}}}
+      type: System.Action{System.Collections.Generic.IEnumerable{DulcisX.Nodes.RemovedPhysicalNode{DulcisX.Core.Enums.PhysicalNodeRemovedFlags}}}
     content.vb: Event OnDocumentsRemoved As Action(Of IEnumerable(Of RemovedPhysicalNode(Of PhysicalNodeRemovedFlags)))
 - uid: DulcisX.Nodes.Events.IProjectNodeChangeEvents.OnFoldersRemoved
   commentId: E:DulcisX.Nodes.Events.IProjectNodeChangeEvents.OnFoldersRemoved
@@ -155,7 +155,7 @@ items:
   syntax:
     content: event Action<IEnumerable<RemovedPhysicalNode<PhysicalNodeRemovedFlags>>> OnFoldersRemoved
     return:
-      type: System.Action{System.Collections.Generic.IEnumerable{DulcisX.Nodes.RemovedPhysicalNode{DulcisX.Core.Enums.VisualStudio.PhysicalNodeRemovedFlags}}}
+      type: System.Action{System.Collections.Generic.IEnumerable{DulcisX.Nodes.RemovedPhysicalNode{DulcisX.Core.Enums.PhysicalNodeRemovedFlags}}}
     content.vb: Event OnFoldersRemoved As Action(Of IEnumerable(Of RemovedPhysicalNode(Of PhysicalNodeRemovedFlags)))
 - uid: DulcisX.Nodes.Events.IProjectNodeChangeEvents.OnDocumentsRenamed
   commentId: E:DulcisX.Nodes.Events.IProjectNodeChangeEvents.OnDocumentsRenamed
@@ -237,13 +237,13 @@ items:
   assemblies:
   - DulcisX
   namespace: DulcisX.Nodes.Events
-  summary: "\nOccurs when the source control status of <xref href=\"DulcisX.Nodes.IPhysicalNode\" data-throw-if-not-resolved=\"false\"></xref>(s) change.\n"
+  summary: "\nOccurs when the source control status of <xref href=\"DulcisX.Nodes.IPhysicalProjectItemNode\" data-throw-if-not-resolved=\"false\"></xref>(s) change.\n"
   example: []
   syntax:
-    content: event Action<IEnumerable<ChangedPhysicalSccNode<IPhysicalNode, __SccStatus>>> OnDocumentSccStatusChanged
+    content: event Action<IEnumerable<ChangedPhysicalSccNode<IPhysicalProjectItemNode, __SccStatus>>> OnDocumentSccStatusChanged
     return:
-      type: System.Action{System.Collections.Generic.IEnumerable{DulcisX.Nodes.ChangedPhysicalSccNode{DulcisX.Nodes.IPhysicalNode,Microsoft.VisualStudio.Shell.Interop.__SccStatus}}}
-    content.vb: Event OnDocumentSccStatusChanged As Action(Of IEnumerable(Of ChangedPhysicalSccNode(Of IPhysicalNode, __SccStatus)))
+      type: System.Action{System.Collections.Generic.IEnumerable{DulcisX.Nodes.ChangedPhysicalSccNode{DulcisX.Nodes.IPhysicalProjectItemNode,Microsoft.VisualStudio.Shell.Interop.__SccStatus}}}
+    content.vb: Event OnDocumentSccStatusChanged As Action(Of IEnumerable(Of ChangedPhysicalSccNode(Of IPhysicalProjectItemNode, __SccStatus)))
 references:
 - uid: DulcisX.Nodes.ProjectItemNode
   commentId: T:DulcisX.Nodes.ProjectItemNode
@@ -527,15 +527,15 @@ references:
   - name: )
     nameWithType: )
     fullName: )
-- uid: System.Action{System.Collections.Generic.IEnumerable{DulcisX.Nodes.RemovedPhysicalNode{DulcisX.Core.Enums.VisualStudio.PhysicalNodeRemovedFlags}}}
-  commentId: T:System.Action{System.Collections.Generic.IEnumerable{DulcisX.Nodes.RemovedPhysicalNode{DulcisX.Core.Enums.VisualStudio.PhysicalNodeRemovedFlags}}}
+- uid: System.Action{System.Collections.Generic.IEnumerable{DulcisX.Nodes.RemovedPhysicalNode{DulcisX.Core.Enums.PhysicalNodeRemovedFlags}}}
+  commentId: T:System.Action{System.Collections.Generic.IEnumerable{DulcisX.Nodes.RemovedPhysicalNode{DulcisX.Core.Enums.PhysicalNodeRemovedFlags}}}
   parent: System
   definition: System.Action`1
   name: Action<IEnumerable<RemovedPhysicalNode<PhysicalNodeRemovedFlags>>>
   nameWithType: Action<IEnumerable<RemovedPhysicalNode<PhysicalNodeRemovedFlags>>>
-  fullName: System.Action<System.Collections.Generic.IEnumerable<DulcisX.Nodes.RemovedPhysicalNode<DulcisX.Core.Enums.VisualStudio.PhysicalNodeRemovedFlags>>>
+  fullName: System.Action<System.Collections.Generic.IEnumerable<DulcisX.Nodes.RemovedPhysicalNode<DulcisX.Core.Enums.PhysicalNodeRemovedFlags>>>
   nameWithType.vb: Action(Of IEnumerable(Of RemovedPhysicalNode(Of PhysicalNodeRemovedFlags)))
-  fullName.vb: System.Action(Of System.Collections.Generic.IEnumerable(Of DulcisX.Nodes.RemovedPhysicalNode(Of DulcisX.Core.Enums.VisualStudio.PhysicalNodeRemovedFlags)))
+  fullName.vb: System.Action(Of System.Collections.Generic.IEnumerable(Of DulcisX.Nodes.RemovedPhysicalNode(Of DulcisX.Core.Enums.PhysicalNodeRemovedFlags)))
   name.vb: Action(Of IEnumerable(Of RemovedPhysicalNode(Of PhysicalNodeRemovedFlags)))
   spec.csharp:
   - uid: System.Action`1
@@ -561,10 +561,10 @@ references:
   - name: <
     nameWithType: <
     fullName: <
-  - uid: DulcisX.Core.Enums.VisualStudio.PhysicalNodeRemovedFlags
+  - uid: DulcisX.Core.Enums.PhysicalNodeRemovedFlags
     name: PhysicalNodeRemovedFlags
     nameWithType: PhysicalNodeRemovedFlags
-    fullName: DulcisX.Core.Enums.VisualStudio.PhysicalNodeRemovedFlags
+    fullName: DulcisX.Core.Enums.PhysicalNodeRemovedFlags
   - name: '>'
     nameWithType: '>'
     fullName: '>'
@@ -598,10 +598,10 @@ references:
   - name: '(Of '
     nameWithType: '(Of '
     fullName: '(Of '
-  - uid: DulcisX.Core.Enums.VisualStudio.PhysicalNodeRemovedFlags
+  - uid: DulcisX.Core.Enums.PhysicalNodeRemovedFlags
     name: PhysicalNodeRemovedFlags
     nameWithType: PhysicalNodeRemovedFlags
-    fullName: DulcisX.Core.Enums.VisualStudio.PhysicalNodeRemovedFlags
+    fullName: DulcisX.Core.Enums.PhysicalNodeRemovedFlags
   - name: )
     nameWithType: )
     fullName: )
@@ -811,22 +811,22 @@ references:
   - name: )
     nameWithType: )
     fullName: )
-- uid: DulcisX.Nodes.IPhysicalNode
-  commentId: T:DulcisX.Nodes.IPhysicalNode
+- uid: DulcisX.Nodes.IPhysicalProjectItemNode
+  commentId: T:DulcisX.Nodes.IPhysicalProjectItemNode
   parent: DulcisX.Nodes
-  name: IPhysicalNode
-  nameWithType: IPhysicalNode
-  fullName: DulcisX.Nodes.IPhysicalNode
-- uid: System.Action{System.Collections.Generic.IEnumerable{DulcisX.Nodes.ChangedPhysicalSccNode{DulcisX.Nodes.IPhysicalNode,Microsoft.VisualStudio.Shell.Interop.__SccStatus}}}
-  commentId: T:System.Action{System.Collections.Generic.IEnumerable{DulcisX.Nodes.ChangedPhysicalSccNode{DulcisX.Nodes.IPhysicalNode,Microsoft.VisualStudio.Shell.Interop.__SccStatus}}}
+  name: IPhysicalProjectItemNode
+  nameWithType: IPhysicalProjectItemNode
+  fullName: DulcisX.Nodes.IPhysicalProjectItemNode
+- uid: System.Action{System.Collections.Generic.IEnumerable{DulcisX.Nodes.ChangedPhysicalSccNode{DulcisX.Nodes.IPhysicalProjectItemNode,Microsoft.VisualStudio.Shell.Interop.__SccStatus}}}
+  commentId: T:System.Action{System.Collections.Generic.IEnumerable{DulcisX.Nodes.ChangedPhysicalSccNode{DulcisX.Nodes.IPhysicalProjectItemNode,Microsoft.VisualStudio.Shell.Interop.__SccStatus}}}
   parent: System
   definition: System.Action`1
-  name: Action<IEnumerable<ChangedPhysicalSccNode<IPhysicalNode, __SccStatus>>>
-  nameWithType: Action<IEnumerable<ChangedPhysicalSccNode<IPhysicalNode, __SccStatus>>>
-  fullName: System.Action<System.Collections.Generic.IEnumerable<DulcisX.Nodes.ChangedPhysicalSccNode<DulcisX.Nodes.IPhysicalNode, Microsoft.VisualStudio.Shell.Interop.__SccStatus>>>
-  nameWithType.vb: Action(Of IEnumerable(Of ChangedPhysicalSccNode(Of IPhysicalNode, __SccStatus)))
-  fullName.vb: System.Action(Of System.Collections.Generic.IEnumerable(Of DulcisX.Nodes.ChangedPhysicalSccNode(Of DulcisX.Nodes.IPhysicalNode, Microsoft.VisualStudio.Shell.Interop.__SccStatus)))
-  name.vb: Action(Of IEnumerable(Of ChangedPhysicalSccNode(Of IPhysicalNode, __SccStatus)))
+  name: Action<IEnumerable<ChangedPhysicalSccNode<IPhysicalProjectItemNode, __SccStatus>>>
+  nameWithType: Action<IEnumerable<ChangedPhysicalSccNode<IPhysicalProjectItemNode, __SccStatus>>>
+  fullName: System.Action<System.Collections.Generic.IEnumerable<DulcisX.Nodes.ChangedPhysicalSccNode<DulcisX.Nodes.IPhysicalProjectItemNode, Microsoft.VisualStudio.Shell.Interop.__SccStatus>>>
+  nameWithType.vb: Action(Of IEnumerable(Of ChangedPhysicalSccNode(Of IPhysicalProjectItemNode, __SccStatus)))
+  fullName.vb: System.Action(Of System.Collections.Generic.IEnumerable(Of DulcisX.Nodes.ChangedPhysicalSccNode(Of DulcisX.Nodes.IPhysicalProjectItemNode, Microsoft.VisualStudio.Shell.Interop.__SccStatus)))
+  name.vb: Action(Of IEnumerable(Of ChangedPhysicalSccNode(Of IPhysicalProjectItemNode, __SccStatus)))
   spec.csharp:
   - uid: System.Action`1
     name: Action
@@ -851,10 +851,10 @@ references:
   - name: <
     nameWithType: <
     fullName: <
-  - uid: DulcisX.Nodes.IPhysicalNode
-    name: IPhysicalNode
-    nameWithType: IPhysicalNode
-    fullName: DulcisX.Nodes.IPhysicalNode
+  - uid: DulcisX.Nodes.IPhysicalProjectItemNode
+    name: IPhysicalProjectItemNode
+    nameWithType: IPhysicalProjectItemNode
+    fullName: DulcisX.Nodes.IPhysicalProjectItemNode
   - name: ', '
     nameWithType: ', '
     fullName: ', '
@@ -896,10 +896,10 @@ references:
   - name: '(Of '
     nameWithType: '(Of '
     fullName: '(Of '
-  - uid: DulcisX.Nodes.IPhysicalNode
-    name: IPhysicalNode
-    nameWithType: IPhysicalNode
-    fullName: DulcisX.Nodes.IPhysicalNode
+  - uid: DulcisX.Nodes.IPhysicalProjectItemNode
+    name: IPhysicalProjectItemNode
+    nameWithType: IPhysicalProjectItemNode
+    fullName: DulcisX.Nodes.IPhysicalProjectItemNode
   - name: ', '
     nameWithType: ', '
     fullName: ', '

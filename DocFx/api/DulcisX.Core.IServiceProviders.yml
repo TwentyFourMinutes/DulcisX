@@ -28,6 +28,7 @@ items:
     content: 'public interface IServiceProviders : IServiceProvider, IAsyncServiceProvider'
     content.vb: >-
       Public Interface IServiceProviders
+
           Inherits IServiceProvider, IAsyncServiceProvider
   inheritedMembers:
   - System.IServiceProvider.GetService(System.Type)

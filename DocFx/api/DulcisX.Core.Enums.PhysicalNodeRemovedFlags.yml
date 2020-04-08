@@ -1,0 +1,131 @@
+### YamlMime:ManagedReference
+items:
+- uid: DulcisX.Core.Enums.PhysicalNodeRemovedFlags
+  commentId: T:DulcisX.Core.Enums.PhysicalNodeRemovedFlags
+  id: PhysicalNodeRemovedFlags
+  parent: DulcisX.Core.Enums
+  children:
+  - DulcisX.Core.Enums.PhysicalNodeRemovedFlags.Deleted
+  - DulcisX.Core.Enums.PhysicalNodeRemovedFlags.Removed
+  langs:
+  - csharp
+  - vb
+  name: PhysicalNodeRemovedFlags
+  nameWithType: PhysicalNodeRemovedFlags
+  fullName: DulcisX.Core.Enums.PhysicalNodeRemovedFlags
+  type: Enum
+  source:
+    remote:
+      path: src/DulcisX/DulcisX/Core/Enums/PhysicalNodeRemovedFlags.cs
+      branch: master
+      repo: https://github.com/TwentyFourMinutes/DulcisX.git
+    id: PhysicalNodeRemovedFlags
+    path: ../../DulcisX - master/src/DulcisX/DulcisX/Core/Enums/PhysicalNodeRemovedFlags.cs
+    startLine: 7
+  assemblies:
+  - DulcisX
+  namespace: DulcisX.Core.Enums
+  summary: "\nUsed instead of <xref href=\"Microsoft.VisualStudio.Shell.Interop.__VSREMOVEFILEFLAGS2\" data-throw-if-not-resolved=\"false\"></xref>.\n"
+  example: []
+  syntax:
+    content: >-
+      [Flags]
+
+      public enum PhysicalNodeRemovedFlags
+    content.vb: >-
+      <Flags>
+
+      Public Enum PhysicalNodeRemovedFlags
+  attributes:
+  - type: System.FlagsAttribute
+    ctor: System.FlagsAttribute.#ctor
+    arguments: []
+  modifiers.csharp:
+  - public
+  - enum
+  modifiers.vb:
+  - Public
+  - Enum
+- uid: DulcisX.Core.Enums.PhysicalNodeRemovedFlags.Removed
+  commentId: F:DulcisX.Core.Enums.PhysicalNodeRemovedFlags.Removed
+  id: Removed
+  parent: DulcisX.Core.Enums.PhysicalNodeRemovedFlags
+  langs:
+  - csharp
+  - vb
+  name: Removed
+  nameWithType: PhysicalNodeRemovedFlags.Removed
+  fullName: DulcisX.Core.Enums.PhysicalNodeRemovedFlags.Removed
+  type: Field
+  source:
+    remote:
+      path: src/DulcisX/DulcisX/Core/Enums/PhysicalNodeRemovedFlags.cs
+      branch: master
+      repo: https://github.com/TwentyFourMinutes/DulcisX.git
+    id: Removed
+    path: ../../DulcisX - master/src/DulcisX/DulcisX/Core/Enums/PhysicalNodeRemovedFlags.cs
+    startLine: 15
+  assemblies:
+  - DulcisX
+  namespace: DulcisX.Core.Enums
+  summary: "\nIf this flag is set, the file is removed from the project, but still exists on disk.\n"
+  example: []
+  syntax:
+    content: Removed = 1
+    return:
+      type: DulcisX.Core.Enums.PhysicalNodeRemovedFlags
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: DulcisX.Core.Enums.PhysicalNodeRemovedFlags.Deleted
+  commentId: F:DulcisX.Core.Enums.PhysicalNodeRemovedFlags.Deleted
+  id: Deleted
+  parent: DulcisX.Core.Enums.PhysicalNodeRemovedFlags
+  langs:
+  - csharp
+  - vb
+  name: Deleted
+  nameWithType: PhysicalNodeRemovedFlags.Deleted
+  fullName: DulcisX.Core.Enums.PhysicalNodeRemovedFlags.Deleted
+  type: Field
+  source:
+    remote:
+      path: src/DulcisX/DulcisX/Core/Enums/PhysicalNodeRemovedFlags.cs
+      branch: master
+      repo: https://github.com/TwentyFourMinutes/DulcisX.git
+    id: Deleted
+    path: ../../DulcisX - master/src/DulcisX/DulcisX/Core/Enums/PhysicalNodeRemovedFlags.cs
+    startLine: 22
+  assemblies:
+  - DulcisX
+  namespace: DulcisX.Core.Enums
+  summary: "\nIf this flag is set, the file is removed from disk.\n"
+  example: []
+  syntax:
+    content: Deleted = 2
+    return:
+      type: DulcisX.Core.Enums.PhysicalNodeRemovedFlags
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+references:
+- uid: Microsoft.VisualStudio.Shell.Interop.__VSREMOVEFILEFLAGS2
+  commentId: T:Microsoft.VisualStudio.Shell.Interop.__VSREMOVEFILEFLAGS2
+  isExternal: true
+- uid: DulcisX.Core.Enums
+  commentId: N:DulcisX.Core.Enums
+  name: DulcisX.Core.Enums
+  nameWithType: DulcisX.Core.Enums
+  fullName: DulcisX.Core.Enums
+- uid: DulcisX.Core.Enums.PhysicalNodeRemovedFlags
+  commentId: T:DulcisX.Core.Enums.PhysicalNodeRemovedFlags
+  parent: DulcisX.Core.Enums
+  name: PhysicalNodeRemovedFlags
+  nameWithType: PhysicalNodeRemovedFlags
+  fullName: DulcisX.Core.Enums.PhysicalNodeRemovedFlags

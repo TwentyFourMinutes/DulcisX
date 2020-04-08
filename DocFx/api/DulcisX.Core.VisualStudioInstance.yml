@@ -5,12 +5,16 @@ items:
   id: VisualStudioInstance
   parent: DulcisX.Core
   children:
+  - DulcisX.Core.VisualStudioInstance.GetFullReleaseName
   - DulcisX.Core.VisualStudioInstance.GetInstallDirectory
   - DulcisX.Core.VisualStudioInstance.GetLocalAppDataDirectory
   - DulcisX.Core.VisualStudioInstance.GetProjectDirectory
   - DulcisX.Core.VisualStudioInstance.GetReleaseDescription
   - DulcisX.Core.VisualStudioInstance.GetReleaseVersion
+  - DulcisX.Core.VisualStudioInstance.GetShortReleaseName
+  - DulcisX.Core.VisualStudioInstance.GetSKUInfo
   - DulcisX.Core.VisualStudioInstance.GetVisualStudioDirectory
+  - DulcisX.Core.VisualStudioInstance.IsAcademicVersion
   - DulcisX.Core.VisualStudioInstance.IsElevatedInstance
   - DulcisX.Core.VisualStudioInstance.IsPrereleaseVersion
   - DulcisX.Core.VisualStudioInstance.RestartInstance(System.Boolean)
@@ -365,6 +369,134 @@ items:
       description: <xref uid="langword_csharp_true" name="true" href=""></xref> if the instance a pre-release version; otherwise <xref uid="langword_csharp_false" name="false" href=""></xref>.
     content.vb: Public Function IsPrereleaseVersion As Boolean
   overload: DulcisX.Core.VisualStudioInstance.IsPrereleaseVersion*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: DulcisX.Core.VisualStudioInstance.IsAcademicVersion
+  commentId: M:DulcisX.Core.VisualStudioInstance.IsAcademicVersion
+  id: IsAcademicVersion
+  parent: DulcisX.Core.VisualStudioInstance
+  langs:
+  - csharp
+  - vb
+  name: IsAcademicVersion()
+  nameWithType: VisualStudioInstance.IsAcademicVersion()
+  fullName: DulcisX.Core.VisualStudioInstance.IsAcademicVersion()
+  type: Method
+  source:
+    remote:
+      path: src/DulcisX/DulcisX/Core/VisualStudioInstance.cs
+      branch: master
+      repo: https://github.com/TwentyFourMinutes/DulcisX.git
+    id: IsAcademicVersion
+    path: ../../DulcisX - master/src/DulcisX/DulcisX/Core/VisualStudioInstance.cs
+    startLine: 155
+  assemblies:
+  - DulcisX
+  namespace: DulcisX.Core
+  syntax:
+    content: public bool IsAcademicVersion()
+    return:
+      type: System.Boolean
+    content.vb: Public Function IsAcademicVersion As Boolean
+  overload: DulcisX.Core.VisualStudioInstance.IsAcademicVersion*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: DulcisX.Core.VisualStudioInstance.GetFullReleaseName
+  commentId: M:DulcisX.Core.VisualStudioInstance.GetFullReleaseName
+  id: GetFullReleaseName
+  parent: DulcisX.Core.VisualStudioInstance
+  langs:
+  - csharp
+  - vb
+  name: GetFullReleaseName()
+  nameWithType: VisualStudioInstance.GetFullReleaseName()
+  fullName: DulcisX.Core.VisualStudioInstance.GetFullReleaseName()
+  type: Method
+  source:
+    remote:
+      path: src/DulcisX/DulcisX/Core/VisualStudioInstance.cs
+      branch: master
+      repo: https://github.com/TwentyFourMinutes/DulcisX.git
+    id: GetFullReleaseName
+    path: ../../DulcisX - master/src/DulcisX/DulcisX/Core/VisualStudioInstance.cs
+    startLine: 166
+  assemblies:
+  - DulcisX
+  namespace: DulcisX.Core
+  syntax:
+    content: public string GetFullReleaseName()
+    return:
+      type: System.String
+    content.vb: Public Function GetFullReleaseName As String
+  overload: DulcisX.Core.VisualStudioInstance.GetFullReleaseName*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: DulcisX.Core.VisualStudioInstance.GetShortReleaseName
+  commentId: M:DulcisX.Core.VisualStudioInstance.GetShortReleaseName
+  id: GetShortReleaseName
+  parent: DulcisX.Core.VisualStudioInstance
+  langs:
+  - csharp
+  - vb
+  name: GetShortReleaseName()
+  nameWithType: VisualStudioInstance.GetShortReleaseName()
+  fullName: DulcisX.Core.VisualStudioInstance.GetShortReleaseName()
+  type: Method
+  source:
+    remote:
+      path: src/DulcisX/DulcisX/Core/VisualStudioInstance.cs
+      branch: master
+      repo: https://github.com/TwentyFourMinutes/DulcisX.git
+    id: GetShortReleaseName
+    path: ../../DulcisX - master/src/DulcisX/DulcisX/Core/VisualStudioInstance.cs
+    startLine: 177
+  assemblies:
+  - DulcisX
+  namespace: DulcisX.Core
+  syntax:
+    content: public string GetShortReleaseName()
+    return:
+      type: System.String
+    content.vb: Public Function GetShortReleaseName As String
+  overload: DulcisX.Core.VisualStudioInstance.GetShortReleaseName*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: DulcisX.Core.VisualStudioInstance.GetSKUInfo
+  commentId: M:DulcisX.Core.VisualStudioInstance.GetSKUInfo
+  id: GetSKUInfo
+  parent: DulcisX.Core.VisualStudioInstance
+  langs:
+  - csharp
+  - vb
+  name: GetSKUInfo()
+  nameWithType: VisualStudioInstance.GetSKUInfo()
+  fullName: DulcisX.Core.VisualStudioInstance.GetSKUInfo()
+  type: Method
+  source:
+    remote:
+      path: src/DulcisX/DulcisX/Core/VisualStudioInstance.cs
+      branch: master
+      repo: https://github.com/TwentyFourMinutes/DulcisX.git
+    id: GetSKUInfo
+    path: ../../DulcisX - master/src/DulcisX/DulcisX/Core/VisualStudioInstance.cs
+    startLine: 188
+  assemblies:
+  - DulcisX
+  namespace: DulcisX.Core
+  syntax:
+    content: public string GetSKUInfo()
+    return:
+      type: System.String
+    content.vb: Public Function GetSKUInfo As String
+  overload: DulcisX.Core.VisualStudioInstance.GetSKUInfo*
   modifiers.csharp:
   - public
   modifiers.vb:
@@ -732,3 +864,23 @@ references:
   name: IsPrereleaseVersion
   nameWithType: VisualStudioInstance.IsPrereleaseVersion
   fullName: DulcisX.Core.VisualStudioInstance.IsPrereleaseVersion
+- uid: DulcisX.Core.VisualStudioInstance.IsAcademicVersion*
+  commentId: Overload:DulcisX.Core.VisualStudioInstance.IsAcademicVersion
+  name: IsAcademicVersion
+  nameWithType: VisualStudioInstance.IsAcademicVersion
+  fullName: DulcisX.Core.VisualStudioInstance.IsAcademicVersion
+- uid: DulcisX.Core.VisualStudioInstance.GetFullReleaseName*
+  commentId: Overload:DulcisX.Core.VisualStudioInstance.GetFullReleaseName
+  name: GetFullReleaseName
+  nameWithType: VisualStudioInstance.GetFullReleaseName
+  fullName: DulcisX.Core.VisualStudioInstance.GetFullReleaseName
+- uid: DulcisX.Core.VisualStudioInstance.GetShortReleaseName*
+  commentId: Overload:DulcisX.Core.VisualStudioInstance.GetShortReleaseName
+  name: GetShortReleaseName
+  nameWithType: VisualStudioInstance.GetShortReleaseName
+  fullName: DulcisX.Core.VisualStudioInstance.GetShortReleaseName
+- uid: DulcisX.Core.VisualStudioInstance.GetSKUInfo*
+  commentId: Overload:DulcisX.Core.VisualStudioInstance.GetSKUInfo
+  name: GetSKUInfo
+  nameWithType: VisualStudioInstance.GetSKUInfo
+  fullName: DulcisX.Core.VisualStudioInstance.GetSKUInfo

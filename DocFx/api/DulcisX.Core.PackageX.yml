@@ -18,6 +18,7 @@ items:
   - DulcisX.Core.PackageX.Solution
   - DulcisX.Core.PackageX.StatusBar
   - DulcisX.Core.PackageX.VSInstance
+  - DulcisX.Core.PackageX.VSUIInstance
   - DulcisX.Core.PackageX.WebBrowser
   langs:
   - csharp
@@ -43,7 +44,9 @@ items:
     content: 'public abstract class PackageX : AsyncPackage, IVsPackage, IServiceProvider, IOleCommandTarget, IVsPersistSolutionOpts, IServiceContainer, IVsUserSettings, IVsUserSettingsMigration, IVsUserSettingsQuery, IVsToolWindowFactory, IVsToolboxItemProvider, IVsToolboxItemProvider2, IAsyncServiceProvider, IAsyncLoadablePackageInitialize, IAsyncServiceProvider2, IAsyncServiceContainer, IVsAsyncToolWindowFactory, IVsAsyncToolWindowFactoryProvider, IServiceProviders, IServiceProvider, IAsyncServiceProvider'
     content.vb: >-
       Public MustInherit Class PackageX
+
           Inherits AsyncPackage
+
           Implements IVsPackage, IServiceProvider, IOleCommandTarget, IVsPersistSolutionOpts, IServiceContainer, IVsUserSettings, IVsUserSettingsMigration, IVsUserSettingsQuery, IVsToolWindowFactory, IVsToolboxItemProvider, IVsToolboxItemProvider2, IAsyncServiceProvider, IAsyncLoadablePackageInitialize, IAsyncServiceProvider2, IAsyncServiceContainer, IVsAsyncToolWindowFactory, IVsAsyncToolWindowFactoryProvider, IServiceProviders, IServiceProvider, IAsyncServiceProvider
   inheritance:
   - System.Object
@@ -417,6 +420,43 @@ items:
   modifiers.vb:
   - Public
   - ReadOnly
+- uid: DulcisX.Core.PackageX.VSUIInstance
+  commentId: P:DulcisX.Core.PackageX.VSUIInstance
+  id: VSUIInstance
+  parent: DulcisX.Core.PackageX
+  langs:
+  - csharp
+  - vb
+  name: VSUIInstance
+  nameWithType: PackageX.VSUIInstance
+  fullName: DulcisX.Core.PackageX.VSUIInstance
+  type: Property
+  source:
+    remote:
+      path: src/DulcisX/DulcisX/Core/PackageX.cs
+      branch: master
+      repo: https://github.com/TwentyFourMinutes/DulcisX.git
+    id: VSUIInstance
+    path: ../../DulcisX - master/src/DulcisX/DulcisX/Core/PackageX.cs
+    startLine: 128
+  assemblies:
+  - DulcisX
+  namespace: DulcisX.Core
+  summary: "\nGets the <xref href=\"DulcisX.Core.VisualStudioUIInstance\" data-throw-if-not-resolved=\"false\"></xref> of the environment.\n"
+  example: []
+  syntax:
+    content: public VisualStudioUIInstance VSUIInstance { get; }
+    parameters: []
+    return:
+      type: DulcisX.Core.VisualStudioUIInstance
+    content.vb: Public ReadOnly Property VSUIInstance As VisualStudioUIInstance
+  overload: DulcisX.Core.PackageX.VSUIInstance*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
 - uid: DulcisX.Core.PackageX.ServiceContainer
   commentId: P:DulcisX.Core.PackageX.ServiceContainer
   id: ServiceContainer
@@ -435,7 +475,7 @@ items:
       repo: https://github.com/TwentyFourMinutes/DulcisX.git
     id: ServiceContainer
     path: ../../DulcisX - master/src/DulcisX/DulcisX/Core/PackageX.cs
-    startLine: 126
+    startLine: 144
   assemblies:
   - DulcisX
   namespace: DulcisX.Core
@@ -472,7 +512,7 @@ items:
       repo: https://github.com/TwentyFourMinutes/DulcisX.git
     id: .ctor
     path: ../../DulcisX - master/src/DulcisX/DulcisX/Core/PackageX.cs
-    startLine: 135
+    startLine: 153
   assemblies:
   - DulcisX
   namespace: DulcisX.Core
@@ -504,7 +544,7 @@ items:
       repo: https://github.com/TwentyFourMinutes/DulcisX.git
     id: .ctor
     path: ../../DulcisX - master/src/DulcisX/DulcisX/Core/PackageX.cs
-    startLine: 144
+    startLine: 162
   assemblies:
   - DulcisX
   namespace: DulcisX.Core
@@ -543,7 +583,7 @@ items:
       repo: https://github.com/TwentyFourMinutes/DulcisX.git
     id: InitializeAsync
     path: ../../DulcisX - master/src/DulcisX/DulcisX/Core/PackageX.cs
-    startLine: 156
+    startLine: 174
   assemblies:
   - DulcisX
   namespace: DulcisX.Core
@@ -588,7 +628,7 @@ items:
       repo: https://github.com/TwentyFourMinutes/DulcisX.git
     id: GetGlobalService
     path: ../../DulcisX - master/src/DulcisX/DulcisX/Core/PackageX.cs
-    startLine: 179
+    startLine: 197
   assemblies:
   - DulcisX
   namespace: DulcisX.Core
@@ -597,6 +637,7 @@ items:
   syntax:
     content: >-
       public TService GetGlobalService<TService>()
+
           where TService : class
     typeParameters:
     - id: TService
@@ -631,7 +672,7 @@ items:
       repo: https://github.com/TwentyFourMinutes/DulcisX.git
     id: GetGlobalService
     path: ../../DulcisX - master/src/DulcisX/DulcisX/Core/PackageX.cs
-    startLine: 188
+    startLine: 206
   assemblies:
   - DulcisX
   namespace: DulcisX.Core
@@ -640,6 +681,7 @@ items:
   syntax:
     content: >-
       public TService GetGlobalService<TBaseService, TService>()
+
           where TBaseService : class where TService : class
     typeParameters:
     - id: TBaseService
@@ -676,7 +718,7 @@ items:
       repo: https://github.com/TwentyFourMinutes/DulcisX.git
     id: Dispose
     path: ../../DulcisX - master/src/DulcisX/DulcisX/Core/PackageX.cs
-    startLine: 197
+    startLine: 212
   assemblies:
   - DulcisX
   namespace: DulcisX.Core
@@ -5547,6 +5589,17 @@ references:
   name: VSInstance
   nameWithType: PackageX.VSInstance
   fullName: DulcisX.Core.PackageX.VSInstance
+- uid: DulcisX.Core.VisualStudioUIInstance
+  commentId: T:DulcisX.Core.VisualStudioUIInstance
+  parent: DulcisX.Core
+  name: VisualStudioUIInstance
+  nameWithType: VisualStudioUIInstance
+  fullName: DulcisX.Core.VisualStudioUIInstance
+- uid: DulcisX.Core.PackageX.VSUIInstance*
+  commentId: Overload:DulcisX.Core.PackageX.VSUIInstance
+  name: VSUIInstance
+  nameWithType: PackageX.VSUIInstance
+  fullName: DulcisX.Core.PackageX.VSUIInstance
 - uid: SimpleInjector.Container
   commentId: T:SimpleInjector.Container
   parent: SimpleInjector

@@ -1,0 +1,999 @@
+### YamlMime:ManagedReference
+items:
+- uid: DulcisX.Nodes.ModifyProjectDocument
+  commentId: T:DulcisX.Nodes.ModifyProjectDocument
+  id: ModifyProjectDocument
+  parent: DulcisX.Nodes
+  children:
+  - DulcisX.Nodes.ModifyProjectDocument.ExcludeFolderNode(DulcisX.Nodes.FolderNode)
+  - DulcisX.Nodes.ModifyProjectDocument.IncludeFolder(System.String)
+  - DulcisX.Nodes.ModifyProjectDocument.IsDocumentDirty
+  - DulcisX.Nodes.ModifyProjectDocument.MakeDocumentStateDirty
+  - DulcisX.Nodes.ModifyProjectDocument.NodeChanges(DulcisX.Nodes.IPhysicalProjectItemNode)
+  - DulcisX.Nodes.ModifyProjectDocument.NodeChanges(System.String)
+  - DulcisX.Nodes.ModifyProjectDocument.ProjectDocument
+  - DulcisX.Nodes.ModifyProjectDocument.ProjectNode
+  - DulcisX.Nodes.ModifyProjectDocument.RootNode
+  - DulcisX.Nodes.ModifyProjectDocument.SaveChanges
+  - DulcisX.Nodes.ModifyProjectDocument.SaveChangesAsync(System.Nullable{System.TimeSpan})
+  langs:
+  - csharp
+  - vb
+  name: ModifyProjectDocument
+  nameWithType: ModifyProjectDocument
+  fullName: DulcisX.Nodes.ModifyProjectDocument
+  type: Class
+  source:
+    remote:
+      path: src/DulcisX/DulcisX/Nodes/ModifyProjectDocument.cs
+      branch: master
+      repo: https://github.com/TwentyFourMinutes/DulcisX.git
+    id: ModifyProjectDocument
+    path: ../../DulcisX - master/src/DulcisX/DulcisX/Nodes/ModifyProjectDocument.cs
+    startLine: 9
+  assemblies:
+  - DulcisX
+  namespace: DulcisX.Nodes
+  syntax:
+    content: public class ModifyProjectDocument
+    content.vb: Public Class ModifyProjectDocument
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: DulcisX.Nodes.ModifyProjectDocument.ProjectDocument
+  commentId: P:DulcisX.Nodes.ModifyProjectDocument.ProjectDocument
+  id: ProjectDocument
+  parent: DulcisX.Nodes.ModifyProjectDocument
+  langs:
+  - csharp
+  - vb
+  name: ProjectDocument
+  nameWithType: ModifyProjectDocument.ProjectDocument
+  fullName: DulcisX.Nodes.ModifyProjectDocument.ProjectDocument
+  type: Property
+  source:
+    remote:
+      path: src/DulcisX/DulcisX/Nodes/ModifyProjectDocument.cs
+      branch: master
+      repo: https://github.com/TwentyFourMinutes/DulcisX.git
+    id: ProjectDocument
+    path: ../../DulcisX - master/src/DulcisX/DulcisX/Nodes/ModifyProjectDocument.cs
+    startLine: 13
+  assemblies:
+  - DulcisX
+  namespace: DulcisX.Nodes
+  syntax:
+    content: public XDocument ProjectDocument { get; }
+    parameters: []
+    return:
+      type: System.Xml.Linq.XDocument
+    content.vb: Public ReadOnly Property ProjectDocument As XDocument
+  overload: DulcisX.Nodes.ModifyProjectDocument.ProjectDocument*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: DulcisX.Nodes.ModifyProjectDocument.RootNode
+  commentId: P:DulcisX.Nodes.ModifyProjectDocument.RootNode
+  id: RootNode
+  parent: DulcisX.Nodes.ModifyProjectDocument
+  langs:
+  - csharp
+  - vb
+  name: RootNode
+  nameWithType: ModifyProjectDocument.RootNode
+  fullName: DulcisX.Nodes.ModifyProjectDocument.RootNode
+  type: Property
+  source:
+    remote:
+      path: src/DulcisX/DulcisX/Nodes/ModifyProjectDocument.cs
+      branch: master
+      repo: https://github.com/TwentyFourMinutes/DulcisX.git
+    id: RootNode
+    path: ../../DulcisX - master/src/DulcisX/DulcisX/Nodes/ModifyProjectDocument.cs
+    startLine: 39
+  assemblies:
+  - DulcisX
+  namespace: DulcisX.Nodes
+  syntax:
+    content: public XElement RootNode { get; }
+    parameters: []
+    return:
+      type: System.Xml.Linq.XElement
+    content.vb: Public ReadOnly Property RootNode As XElement
+  overload: DulcisX.Nodes.ModifyProjectDocument.RootNode*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: DulcisX.Nodes.ModifyProjectDocument.ProjectNode
+  commentId: P:DulcisX.Nodes.ModifyProjectDocument.ProjectNode
+  id: ProjectNode
+  parent: DulcisX.Nodes.ModifyProjectDocument
+  langs:
+  - csharp
+  - vb
+  name: ProjectNode
+  nameWithType: ModifyProjectDocument.ProjectNode
+  fullName: DulcisX.Nodes.ModifyProjectDocument.ProjectNode
+  type: Property
+  source:
+    remote:
+      path: src/DulcisX/DulcisX/Nodes/ModifyProjectDocument.cs
+      branch: master
+      repo: https://github.com/TwentyFourMinutes/DulcisX.git
+    id: ProjectNode
+    path: ../../DulcisX - master/src/DulcisX/DulcisX/Nodes/ModifyProjectDocument.cs
+    startLine: 52
+  assemblies:
+  - DulcisX
+  namespace: DulcisX.Nodes
+  syntax:
+    content: public ProjectNode ProjectNode { get; }
+    parameters: []
+    return:
+      type: DulcisX.Nodes.ProjectNode
+    content.vb: Public ReadOnly Property ProjectNode As ProjectNode
+  overload: DulcisX.Nodes.ModifyProjectDocument.ProjectNode*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: DulcisX.Nodes.ModifyProjectDocument.IsDocumentDirty
+  commentId: P:DulcisX.Nodes.ModifyProjectDocument.IsDocumentDirty
+  id: IsDocumentDirty
+  parent: DulcisX.Nodes.ModifyProjectDocument
+  langs:
+  - csharp
+  - vb
+  name: IsDocumentDirty
+  nameWithType: ModifyProjectDocument.IsDocumentDirty
+  fullName: DulcisX.Nodes.ModifyProjectDocument.IsDocumentDirty
+  type: Property
+  source:
+    remote:
+      path: src/DulcisX/DulcisX/Nodes/ModifyProjectDocument.cs
+      branch: master
+      repo: https://github.com/TwentyFourMinutes/DulcisX.git
+    id: IsDocumentDirty
+    path: ../../DulcisX - master/src/DulcisX/DulcisX/Nodes/ModifyProjectDocument.cs
+    startLine: 54
+  assemblies:
+  - DulcisX
+  namespace: DulcisX.Nodes
+  syntax:
+    content: public bool IsDocumentDirty { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsDocumentDirty As Boolean
+  overload: DulcisX.Nodes.ModifyProjectDocument.IsDocumentDirty*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: DulcisX.Nodes.ModifyProjectDocument.IncludeFolder(System.String)
+  commentId: M:DulcisX.Nodes.ModifyProjectDocument.IncludeFolder(System.String)
+  id: IncludeFolder(System.String)
+  parent: DulcisX.Nodes.ModifyProjectDocument
+  langs:
+  - csharp
+  - vb
+  name: IncludeFolder(String)
+  nameWithType: ModifyProjectDocument.IncludeFolder(String)
+  fullName: DulcisX.Nodes.ModifyProjectDocument.IncludeFolder(System.String)
+  type: Method
+  source:
+    remote:
+      path: src/DulcisX/DulcisX/Nodes/ModifyProjectDocument.cs
+      branch: master
+      repo: https://github.com/TwentyFourMinutes/DulcisX.git
+    id: IncludeFolder
+    path: ../../DulcisX - master/src/DulcisX/DulcisX/Nodes/ModifyProjectDocument.cs
+    startLine: 68
+  assemblies:
+  - DulcisX
+  namespace: DulcisX.Nodes
+  syntax:
+    content: public FolderNode IncludeFolder(string fullName)
+    parameters:
+    - id: fullName
+      type: System.String
+    return:
+      type: DulcisX.Nodes.FolderNode
+    content.vb: Public Function IncludeFolder(fullName As String) As FolderNode
+  overload: DulcisX.Nodes.ModifyProjectDocument.IncludeFolder*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: DulcisX.Nodes.ModifyProjectDocument.ExcludeFolderNode(DulcisX.Nodes.FolderNode)
+  commentId: M:DulcisX.Nodes.ModifyProjectDocument.ExcludeFolderNode(DulcisX.Nodes.FolderNode)
+  id: ExcludeFolderNode(DulcisX.Nodes.FolderNode)
+  parent: DulcisX.Nodes.ModifyProjectDocument
+  langs:
+  - csharp
+  - vb
+  name: ExcludeFolderNode(FolderNode)
+  nameWithType: ModifyProjectDocument.ExcludeFolderNode(FolderNode)
+  fullName: DulcisX.Nodes.ModifyProjectDocument.ExcludeFolderNode(DulcisX.Nodes.FolderNode)
+  type: Method
+  source:
+    remote:
+      path: src/DulcisX/DulcisX/Nodes/ModifyProjectDocument.cs
+      branch: master
+      repo: https://github.com/TwentyFourMinutes/DulcisX.git
+    id: ExcludeFolderNode
+    path: ../../DulcisX - master/src/DulcisX/DulcisX/Nodes/ModifyProjectDocument.cs
+    startLine: 143
+  assemblies:
+  - DulcisX
+  namespace: DulcisX.Nodes
+  syntax:
+    content: public void ExcludeFolderNode(FolderNode node)
+    parameters:
+    - id: node
+      type: DulcisX.Nodes.FolderNode
+    content.vb: Public Sub ExcludeFolderNode(node As FolderNode)
+  overload: DulcisX.Nodes.ModifyProjectDocument.ExcludeFolderNode*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: DulcisX.Nodes.ModifyProjectDocument.NodeChanges(DulcisX.Nodes.IPhysicalProjectItemNode)
+  commentId: M:DulcisX.Nodes.ModifyProjectDocument.NodeChanges(DulcisX.Nodes.IPhysicalProjectItemNode)
+  id: NodeChanges(DulcisX.Nodes.IPhysicalProjectItemNode)
+  parent: DulcisX.Nodes.ModifyProjectDocument
+  langs:
+  - csharp
+  - vb
+  name: NodeChanges(IPhysicalProjectItemNode)
+  nameWithType: ModifyProjectDocument.NodeChanges(IPhysicalProjectItemNode)
+  fullName: DulcisX.Nodes.ModifyProjectDocument.NodeChanges(DulcisX.Nodes.IPhysicalProjectItemNode)
+  type: Method
+  source:
+    remote:
+      path: src/DulcisX/DulcisX/Nodes/ModifyProjectDocument.cs
+      branch: master
+      repo: https://github.com/TwentyFourMinutes/DulcisX.git
+    id: NodeChanges
+    path: ../../DulcisX - master/src/DulcisX/DulcisX/Nodes/ModifyProjectDocument.cs
+    startLine: 214
+  assemblies:
+  - DulcisX
+  namespace: DulcisX.Nodes
+  syntax:
+    content: public void NodeChanges(IPhysicalProjectItemNode changingNode)
+    parameters:
+    - id: changingNode
+      type: DulcisX.Nodes.IPhysicalProjectItemNode
+    content.vb: Public Sub NodeChanges(changingNode As IPhysicalProjectItemNode)
+  overload: DulcisX.Nodes.ModifyProjectDocument.NodeChanges*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: DulcisX.Nodes.ModifyProjectDocument.NodeChanges(System.String)
+  commentId: M:DulcisX.Nodes.ModifyProjectDocument.NodeChanges(System.String)
+  id: NodeChanges(System.String)
+  parent: DulcisX.Nodes.ModifyProjectDocument
+  langs:
+  - csharp
+  - vb
+  name: NodeChanges(String)
+  nameWithType: ModifyProjectDocument.NodeChanges(String)
+  fullName: DulcisX.Nodes.ModifyProjectDocument.NodeChanges(System.String)
+  type: Method
+  source:
+    remote:
+      path: src/DulcisX/DulcisX/Nodes/ModifyProjectDocument.cs
+      branch: master
+      repo: https://github.com/TwentyFourMinutes/DulcisX.git
+    id: NodeChanges
+    path: ../../DulcisX - master/src/DulcisX/DulcisX/Nodes/ModifyProjectDocument.cs
+    startLine: 219
+  assemblies:
+  - DulcisX
+  namespace: DulcisX.Nodes
+  syntax:
+    content: public void NodeChanges(string fullName)
+    parameters:
+    - id: fullName
+      type: System.String
+    content.vb: Public Sub NodeChanges(fullName As String)
+  overload: DulcisX.Nodes.ModifyProjectDocument.NodeChanges*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: DulcisX.Nodes.ModifyProjectDocument.SaveChangesAsync(System.Nullable{System.TimeSpan})
+  commentId: M:DulcisX.Nodes.ModifyProjectDocument.SaveChangesAsync(System.Nullable{System.TimeSpan})
+  id: SaveChangesAsync(System.Nullable{System.TimeSpan})
+  parent: DulcisX.Nodes.ModifyProjectDocument
+  langs:
+  - csharp
+  - vb
+  name: SaveChangesAsync(Nullable<TimeSpan>)
+  nameWithType: ModifyProjectDocument.SaveChangesAsync(Nullable<TimeSpan>)
+  fullName: DulcisX.Nodes.ModifyProjectDocument.SaveChangesAsync(System.Nullable<System.TimeSpan>)
+  type: Method
+  source:
+    remote:
+      path: src/DulcisX/DulcisX/Nodes/ModifyProjectDocument.cs
+      branch: master
+      repo: https://github.com/TwentyFourMinutes/DulcisX.git
+    id: SaveChangesAsync
+    path: ../../DulcisX - master/src/DulcisX/DulcisX/Nodes/ModifyProjectDocument.cs
+    startLine: 224
+  assemblies:
+  - DulcisX
+  namespace: DulcisX.Nodes
+  syntax:
+    content: public ValueTask<bool> SaveChangesAsync(TimeSpan? timeout = default(TimeSpan? ))
+    parameters:
+    - id: timeout
+      type: System.Nullable{System.TimeSpan}
+    return:
+      type: System.Threading.Tasks.ValueTask{System.Boolean}
+    content.vb: Public Function SaveChangesAsync(timeout As TimeSpan? = Nothing) As ValueTask(Of Boolean)
+  overload: DulcisX.Nodes.ModifyProjectDocument.SaveChangesAsync*
+  nameWithType.vb: ModifyProjectDocument.SaveChangesAsync(Nullable(Of TimeSpan))
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: DulcisX.Nodes.ModifyProjectDocument.SaveChangesAsync(System.Nullable(Of System.TimeSpan))
+  name.vb: SaveChangesAsync(Nullable(Of TimeSpan))
+- uid: DulcisX.Nodes.ModifyProjectDocument.SaveChanges
+  commentId: M:DulcisX.Nodes.ModifyProjectDocument.SaveChanges
+  id: SaveChanges
+  parent: DulcisX.Nodes.ModifyProjectDocument
+  langs:
+  - csharp
+  - vb
+  name: SaveChanges()
+  nameWithType: ModifyProjectDocument.SaveChanges()
+  fullName: DulcisX.Nodes.ModifyProjectDocument.SaveChanges()
+  type: Method
+  source:
+    remote:
+      path: src/DulcisX/DulcisX/Nodes/ModifyProjectDocument.cs
+      branch: master
+      repo: https://github.com/TwentyFourMinutes/DulcisX.git
+    id: SaveChanges
+    path: ../../DulcisX - master/src/DulcisX/DulcisX/Nodes/ModifyProjectDocument.cs
+    startLine: 257
+  assemblies:
+  - DulcisX
+  namespace: DulcisX.Nodes
+  syntax:
+    content: public void SaveChanges()
+    content.vb: Public Sub SaveChanges
+  overload: DulcisX.Nodes.ModifyProjectDocument.SaveChanges*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: DulcisX.Nodes.ModifyProjectDocument.MakeDocumentStateDirty
+  commentId: M:DulcisX.Nodes.ModifyProjectDocument.MakeDocumentStateDirty
+  id: MakeDocumentStateDirty
+  parent: DulcisX.Nodes.ModifyProjectDocument
+  langs:
+  - csharp
+  - vb
+  name: MakeDocumentStateDirty()
+  nameWithType: ModifyProjectDocument.MakeDocumentStateDirty()
+  fullName: DulcisX.Nodes.ModifyProjectDocument.MakeDocumentStateDirty()
+  type: Method
+  source:
+    remote:
+      path: src/DulcisX/DulcisX/Nodes/ModifyProjectDocument.cs
+      branch: master
+      repo: https://github.com/TwentyFourMinutes/DulcisX.git
+    id: MakeDocumentStateDirty
+    path: ../../DulcisX - master/src/DulcisX/DulcisX/Nodes/ModifyProjectDocument.cs
+    startLine: 280
+  assemblies:
+  - DulcisX
+  namespace: DulcisX.Nodes
+  syntax:
+    content: public void MakeDocumentStateDirty()
+    content.vb: Public Sub MakeDocumentStateDirty
+  overload: DulcisX.Nodes.ModifyProjectDocument.MakeDocumentStateDirty*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: DulcisX.Nodes
+  commentId: N:DulcisX.Nodes
+  name: DulcisX.Nodes
+  nameWithType: DulcisX.Nodes
+  fullName: DulcisX.Nodes
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: DulcisX.Nodes.ModifyProjectDocument.ProjectDocument*
+  commentId: Overload:DulcisX.Nodes.ModifyProjectDocument.ProjectDocument
+  name: ProjectDocument
+  nameWithType: ModifyProjectDocument.ProjectDocument
+  fullName: DulcisX.Nodes.ModifyProjectDocument.ProjectDocument
+- uid: System.Xml.Linq.XDocument
+  commentId: T:System.Xml.Linq.XDocument
+  parent: System.Xml.Linq
+  isExternal: true
+  name: XDocument
+  nameWithType: XDocument
+  fullName: System.Xml.Linq.XDocument
+- uid: System.Xml.Linq
+  commentId: N:System.Xml.Linq
+  isExternal: true
+  name: System.Xml.Linq
+  nameWithType: System.Xml.Linq
+  fullName: System.Xml.Linq
+- uid: DulcisX.Nodes.ModifyProjectDocument.RootNode*
+  commentId: Overload:DulcisX.Nodes.ModifyProjectDocument.RootNode
+  name: RootNode
+  nameWithType: ModifyProjectDocument.RootNode
+  fullName: DulcisX.Nodes.ModifyProjectDocument.RootNode
+- uid: System.Xml.Linq.XElement
+  commentId: T:System.Xml.Linq.XElement
+  parent: System.Xml.Linq
+  isExternal: true
+  name: XElement
+  nameWithType: XElement
+  fullName: System.Xml.Linq.XElement
+- uid: DulcisX.Nodes.ModifyProjectDocument.ProjectNode*
+  commentId: Overload:DulcisX.Nodes.ModifyProjectDocument.ProjectNode
+  name: ProjectNode
+  nameWithType: ModifyProjectDocument.ProjectNode
+  fullName: DulcisX.Nodes.ModifyProjectDocument.ProjectNode
+- uid: DulcisX.Nodes.ProjectNode
+  commentId: T:DulcisX.Nodes.ProjectNode
+  parent: DulcisX.Nodes
+  name: ProjectNode
+  nameWithType: ProjectNode
+  fullName: DulcisX.Nodes.ProjectNode
+- uid: DulcisX.Nodes.ModifyProjectDocument.IsDocumentDirty*
+  commentId: Overload:DulcisX.Nodes.ModifyProjectDocument.IsDocumentDirty
+  name: IsDocumentDirty
+  nameWithType: ModifyProjectDocument.IsDocumentDirty
+  fullName: DulcisX.Nodes.ModifyProjectDocument.IsDocumentDirty
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: DulcisX.Nodes.ModifyProjectDocument.IncludeFolder*
+  commentId: Overload:DulcisX.Nodes.ModifyProjectDocument.IncludeFolder
+  name: IncludeFolder
+  nameWithType: ModifyProjectDocument.IncludeFolder
+  fullName: DulcisX.Nodes.ModifyProjectDocument.IncludeFolder
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: DulcisX.Nodes.FolderNode
+  commentId: T:DulcisX.Nodes.FolderNode
+  parent: DulcisX.Nodes
+  name: FolderNode
+  nameWithType: FolderNode
+  fullName: DulcisX.Nodes.FolderNode
+- uid: DulcisX.Nodes.ModifyProjectDocument.ExcludeFolderNode*
+  commentId: Overload:DulcisX.Nodes.ModifyProjectDocument.ExcludeFolderNode
+  name: ExcludeFolderNode
+  nameWithType: ModifyProjectDocument.ExcludeFolderNode
+  fullName: DulcisX.Nodes.ModifyProjectDocument.ExcludeFolderNode
+- uid: DulcisX.Nodes.ModifyProjectDocument.NodeChanges*
+  commentId: Overload:DulcisX.Nodes.ModifyProjectDocument.NodeChanges
+  name: NodeChanges
+  nameWithType: ModifyProjectDocument.NodeChanges
+  fullName: DulcisX.Nodes.ModifyProjectDocument.NodeChanges
+- uid: DulcisX.Nodes.IPhysicalProjectItemNode
+  commentId: T:DulcisX.Nodes.IPhysicalProjectItemNode
+  parent: DulcisX.Nodes
+  name: IPhysicalProjectItemNode
+  nameWithType: IPhysicalProjectItemNode
+  fullName: DulcisX.Nodes.IPhysicalProjectItemNode
+- uid: DulcisX.Nodes.ModifyProjectDocument.SaveChangesAsync*
+  commentId: Overload:DulcisX.Nodes.ModifyProjectDocument.SaveChangesAsync
+  name: SaveChangesAsync
+  nameWithType: ModifyProjectDocument.SaveChangesAsync
+  fullName: DulcisX.Nodes.ModifyProjectDocument.SaveChangesAsync
+- uid: System.Nullable{System.TimeSpan}
+  commentId: T:System.Nullable{System.TimeSpan}
+  parent: System
+  definition: System.Nullable`1
+  name: Nullable<TimeSpan>
+  nameWithType: Nullable<TimeSpan>
+  fullName: System.Nullable<System.TimeSpan>
+  nameWithType.vb: Nullable(Of TimeSpan)
+  fullName.vb: System.Nullable(Of System.TimeSpan)
+  name.vb: Nullable(Of TimeSpan)
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.TimeSpan
+    name: TimeSpan
+    nameWithType: TimeSpan
+    fullName: System.TimeSpan
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.TimeSpan
+    name: TimeSpan
+    nameWithType: TimeSpan
+    fullName: System.TimeSpan
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Threading.Tasks.ValueTask{System.Boolean}
+  commentId: T:System.Threading.Tasks.ValueTask{System.Boolean}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.ValueTask`1
+  name: ValueTask<Boolean>
+  nameWithType: ValueTask<Boolean>
+  fullName: System.Threading.Tasks.ValueTask<System.Boolean>
+  nameWithType.vb: ValueTask(Of Boolean)
+  fullName.vb: System.Threading.Tasks.ValueTask(Of System.Boolean)
+  name.vb: ValueTask(Of Boolean)
+  spec.csharp:
+  - uid: System.Threading.Tasks.ValueTask`1
+    name: ValueTask
+    nameWithType: ValueTask
+    fullName: System.Threading.Tasks.ValueTask
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.Boolean
+    name: Boolean
+    nameWithType: Boolean
+    fullName: System.Boolean
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.ValueTask`1
+    name: ValueTask
+    nameWithType: ValueTask
+    fullName: System.Threading.Tasks.ValueTask
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.Boolean
+    name: Boolean
+    nameWithType: Boolean
+    fullName: System.Boolean
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Nullable`1
+  commentId: T:System.Nullable`1
+  isExternal: true
+  name: Nullable<T>
+  nameWithType: Nullable<T>
+  fullName: System.Nullable<T>
+  nameWithType.vb: Nullable(Of T)
+  fullName.vb: System.Nullable(Of T)
+  name.vb: Nullable(Of T)
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Threading.Tasks.ValueTask`1
+  commentId: T:System.Threading.Tasks.ValueTask`1
+  isExternal: true
+  name: ValueTask<TResult>
+  nameWithType: ValueTask<TResult>
+  fullName: System.Threading.Tasks.ValueTask<TResult>
+  nameWithType.vb: ValueTask(Of TResult)
+  fullName.vb: System.Threading.Tasks.ValueTask(Of TResult)
+  name.vb: ValueTask(Of TResult)
+  spec.csharp:
+  - uid: System.Threading.Tasks.ValueTask`1
+    name: ValueTask
+    nameWithType: ValueTask
+    fullName: System.Threading.Tasks.ValueTask
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TResult
+    nameWithType: TResult
+    fullName: TResult
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.ValueTask`1
+    name: ValueTask
+    nameWithType: ValueTask
+    fullName: System.Threading.Tasks.ValueTask
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TResult
+    nameWithType: TResult
+    fullName: TResult
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Threading.Tasks
+  commentId: N:System.Threading.Tasks
+  isExternal: true
+  name: System.Threading.Tasks
+  nameWithType: System.Threading.Tasks
+  fullName: System.Threading.Tasks
+- uid: DulcisX.Nodes.ModifyProjectDocument.SaveChanges*
+  commentId: Overload:DulcisX.Nodes.ModifyProjectDocument.SaveChanges
+  name: SaveChanges
+  nameWithType: ModifyProjectDocument.SaveChanges
+  fullName: DulcisX.Nodes.ModifyProjectDocument.SaveChanges
+- uid: DulcisX.Nodes.ModifyProjectDocument.MakeDocumentStateDirty*
+  commentId: Overload:DulcisX.Nodes.ModifyProjectDocument.MakeDocumentStateDirty
+  name: MakeDocumentStateDirty
+  nameWithType: ModifyProjectDocument.MakeDocumentStateDirty
+  fullName: DulcisX.Nodes.ModifyProjectDocument.MakeDocumentStateDirty

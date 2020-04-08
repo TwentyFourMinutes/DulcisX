@@ -36,6 +36,7 @@ items:
       description: The enumeration which specifies what happend to the <xref href="DulcisX.Nodes.IPhysicalNode" data-throw-if-not-resolved="false"></xref>.
     content.vb: >-
       Public Class RenamedPhysicalNode(Of TNodeType As IPhysicalNode, TFlag As {Structure,  Enum})
+
           Inherits ChangedNodeBase(Of TNodeType, TFlag)
   inheritance:
   - System.Object

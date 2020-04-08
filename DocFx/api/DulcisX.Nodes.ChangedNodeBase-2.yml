@@ -31,13 +31,14 @@ items:
   syntax:
     content: >-
       public abstract class ChangedNodeBase<TNodeType, TFlag>
-          where TNodeType : INamedNode where TFlag : struct, Enum
+
+          where TNodeType : IPhysicalNode where TFlag : struct, Enum
     typeParameters:
     - id: TNodeType
       description: The type of the node which got changed.
     - id: TFlag
       description: The enumeration which specifies what happend to the <xref href="DulcisX.Nodes.INamedNode" data-throw-if-not-resolved="false"></xref>.
-    content.vb: Public MustInherit Class ChangedNodeBase(Of TNodeType As INamedNode, TFlag As {Structure,  Enum})
+    content.vb: Public MustInherit Class ChangedNodeBase(Of TNodeType As IPhysicalNode, TFlag As {Structure,  Enum})
   inheritance:
   - System.Object
   derivedClasses:

@@ -1,34 +1,34 @@
 ### YamlMime:ManagedReference
 items:
-- uid: DulcisX.Core.Enums.VisualStudio.CommonNodeIds
-  commentId: T:DulcisX.Core.Enums.VisualStudio.CommonNodeIds
+- uid: DulcisX.Core.Enums.CommonNodeIds
+  commentId: T:DulcisX.Core.Enums.CommonNodeIds
   id: CommonNodeIds
-  parent: DulcisX.Core.Enums.VisualStudio
+  parent: DulcisX.Core.Enums
   children:
-  - DulcisX.Core.Enums.VisualStudio.CommonNodeIds.MutlipleSelectedNodes
-  - DulcisX.Core.Enums.VisualStudio.CommonNodeIds.Nil
-  - DulcisX.Core.Enums.VisualStudio.CommonNodeIds.Project
-  - DulcisX.Core.Enums.VisualStudio.CommonNodeIds.Root
-  - DulcisX.Core.Enums.VisualStudio.CommonNodeIds.Solution
-  - DulcisX.Core.Enums.VisualStudio.CommonNodeIds.SolutionFolder
+  - DulcisX.Core.Enums.CommonNodeIds.MutlipleSelectedNodes
+  - DulcisX.Core.Enums.CommonNodeIds.Nil
+  - DulcisX.Core.Enums.CommonNodeIds.Project
+  - DulcisX.Core.Enums.CommonNodeIds.Root
+  - DulcisX.Core.Enums.CommonNodeIds.Solution
+  - DulcisX.Core.Enums.CommonNodeIds.SolutionFolder
   langs:
   - csharp
   - vb
   name: CommonNodeIds
   nameWithType: CommonNodeIds
-  fullName: DulcisX.Core.Enums.VisualStudio.CommonNodeIds
+  fullName: DulcisX.Core.Enums.CommonNodeIds
   type: Class
   source:
     remote:
-      path: src/DulcisX/DulcisX/Core/Enums/VisualStudio/CommonNodeIds.cs
+      path: src/DulcisX/DulcisX/Core/Enums/CommonNodeIds.cs
       branch: master
       repo: https://github.com/TwentyFourMinutes/DulcisX.git
     id: CommonNodeIds
-    path: ../../DulcisX - master/src/DulcisX/DulcisX/Core/Enums/VisualStudio/CommonNodeIds.cs
+    path: ../../DulcisX - master/src/DulcisX/DulcisX/Core/Enums/CommonNodeIds.cs
     startLine: 7
   assemblies:
   - DulcisX
-  namespace: DulcisX.Core.Enums.VisualStudio
+  namespace: DulcisX.Core.Enums
   summary: "\nCommon nodes inside an <xref href=\"Microsoft.VisualStudio.Shell.Interop.IVsHierarchy\" data-throw-if-not-resolved=\"false\"></xref>.\n"
   example: []
   syntax:
@@ -51,28 +51,28 @@ items:
   modifiers.vb:
   - Public
   - Module
-- uid: DulcisX.Core.Enums.VisualStudio.CommonNodeIds.Nil
-  commentId: F:DulcisX.Core.Enums.VisualStudio.CommonNodeIds.Nil
+- uid: DulcisX.Core.Enums.CommonNodeIds.Nil
+  commentId: F:DulcisX.Core.Enums.CommonNodeIds.Nil
   id: Nil
-  parent: DulcisX.Core.Enums.VisualStudio.CommonNodeIds
+  parent: DulcisX.Core.Enums.CommonNodeIds
   langs:
   - csharp
   - vb
   name: Nil
   nameWithType: CommonNodeIds.Nil
-  fullName: DulcisX.Core.Enums.VisualStudio.CommonNodeIds.Nil
+  fullName: DulcisX.Core.Enums.CommonNodeIds.Nil
   type: Field
   source:
     remote:
-      path: src/DulcisX/DulcisX/Core/Enums/VisualStudio/CommonNodeIds.cs
+      path: src/DulcisX/DulcisX/Core/Enums/CommonNodeIds.cs
       branch: master
       repo: https://github.com/TwentyFourMinutes/DulcisX.git
     id: Nil
-    path: ../../DulcisX - master/src/DulcisX/DulcisX/Core/Enums/VisualStudio/CommonNodeIds.cs
+    path: ../../DulcisX - master/src/DulcisX/DulcisX/Core/Enums/CommonNodeIds.cs
     startLine: 12
   assemblies:
   - DulcisX
-  namespace: DulcisX.Core.Enums.VisualStudio
+  namespace: DulcisX.Core.Enums
   summary: "\nRepresents no node.\n"
   example: []
   syntax:
@@ -86,28 +86,28 @@ items:
   modifiers.vb:
   - Public
   - Const
-- uid: DulcisX.Core.Enums.VisualStudio.CommonNodeIds.MutlipleSelectedNodes
-  commentId: F:DulcisX.Core.Enums.VisualStudio.CommonNodeIds.MutlipleSelectedNodes
+- uid: DulcisX.Core.Enums.CommonNodeIds.MutlipleSelectedNodes
+  commentId: F:DulcisX.Core.Enums.CommonNodeIds.MutlipleSelectedNodes
   id: MutlipleSelectedNodes
-  parent: DulcisX.Core.Enums.VisualStudio.CommonNodeIds
+  parent: DulcisX.Core.Enums.CommonNodeIds
   langs:
   - csharp
   - vb
   name: MutlipleSelectedNodes
   nameWithType: CommonNodeIds.MutlipleSelectedNodes
-  fullName: DulcisX.Core.Enums.VisualStudio.CommonNodeIds.MutlipleSelectedNodes
+  fullName: DulcisX.Core.Enums.CommonNodeIds.MutlipleSelectedNodes
   type: Field
   source:
     remote:
-      path: src/DulcisX/DulcisX/Core/Enums/VisualStudio/CommonNodeIds.cs
+      path: src/DulcisX/DulcisX/Core/Enums/CommonNodeIds.cs
       branch: master
       repo: https://github.com/TwentyFourMinutes/DulcisX.git
     id: MutlipleSelectedNodes
-    path: ../../DulcisX - master/src/DulcisX/DulcisX/Core/Enums/VisualStudio/CommonNodeIds.cs
+    path: ../../DulcisX - master/src/DulcisX/DulcisX/Core/Enums/CommonNodeIds.cs
     startLine: 16
   assemblies:
   - DulcisX
-  namespace: DulcisX.Core.Enums.VisualStudio
+  namespace: DulcisX.Core.Enums
   summary: "\nRepresents a node selection of a collection whic is larger or equal to two.\n"
   example: []
   syntax:
@@ -121,28 +121,28 @@ items:
   modifiers.vb:
   - Public
   - Const
-- uid: DulcisX.Core.Enums.VisualStudio.CommonNodeIds.Root
-  commentId: F:DulcisX.Core.Enums.VisualStudio.CommonNodeIds.Root
+- uid: DulcisX.Core.Enums.CommonNodeIds.Root
+  commentId: F:DulcisX.Core.Enums.CommonNodeIds.Root
   id: Root
-  parent: DulcisX.Core.Enums.VisualStudio.CommonNodeIds
+  parent: DulcisX.Core.Enums.CommonNodeIds
   langs:
   - csharp
   - vb
   name: Root
   nameWithType: CommonNodeIds.Root
-  fullName: DulcisX.Core.Enums.VisualStudio.CommonNodeIds.Root
+  fullName: DulcisX.Core.Enums.CommonNodeIds.Root
   type: Field
   source:
     remote:
-      path: src/DulcisX/DulcisX/Core/Enums/VisualStudio/CommonNodeIds.cs
+      path: src/DulcisX/DulcisX/Core/Enums/CommonNodeIds.cs
       branch: master
       repo: https://github.com/TwentyFourMinutes/DulcisX.git
     id: Root
-    path: ../../DulcisX - master/src/DulcisX/DulcisX/Core/Enums/VisualStudio/CommonNodeIds.cs
+    path: ../../DulcisX - master/src/DulcisX/DulcisX/Core/Enums/CommonNodeIds.cs
     startLine: 20
   assemblies:
   - DulcisX
-  namespace: DulcisX.Core.Enums.VisualStudio
+  namespace: DulcisX.Core.Enums
   summary: "\nRepresents the root node of the hierarchy.\n"
   example: []
   syntax:
@@ -156,28 +156,28 @@ items:
   modifiers.vb:
   - Public
   - Const
-- uid: DulcisX.Core.Enums.VisualStudio.CommonNodeIds.Project
-  commentId: F:DulcisX.Core.Enums.VisualStudio.CommonNodeIds.Project
+- uid: DulcisX.Core.Enums.CommonNodeIds.Project
+  commentId: F:DulcisX.Core.Enums.CommonNodeIds.Project
   id: Project
-  parent: DulcisX.Core.Enums.VisualStudio.CommonNodeIds
+  parent: DulcisX.Core.Enums.CommonNodeIds
   langs:
   - csharp
   - vb
   name: Project
   nameWithType: CommonNodeIds.Project
-  fullName: DulcisX.Core.Enums.VisualStudio.CommonNodeIds.Project
+  fullName: DulcisX.Core.Enums.CommonNodeIds.Project
   type: Field
   source:
     remote:
-      path: src/DulcisX/DulcisX/Core/Enums/VisualStudio/CommonNodeIds.cs
+      path: src/DulcisX/DulcisX/Core/Enums/CommonNodeIds.cs
       branch: master
       repo: https://github.com/TwentyFourMinutes/DulcisX.git
     id: Project
-    path: ../../DulcisX - master/src/DulcisX/DulcisX/Core/Enums/VisualStudio/CommonNodeIds.cs
+    path: ../../DulcisX - master/src/DulcisX/DulcisX/Core/Enums/CommonNodeIds.cs
     startLine: 24
   assemblies:
   - DulcisX
-  namespace: DulcisX.Core.Enums.VisualStudio
+  namespace: DulcisX.Core.Enums
   summary: "\nRepresents a <xref href=\"DulcisX.Nodes.ProjectNode\" data-throw-if-not-resolved=\"false\"></xref>.\n"
   example: []
   syntax:
@@ -191,28 +191,28 @@ items:
   modifiers.vb:
   - Public
   - Const
-- uid: DulcisX.Core.Enums.VisualStudio.CommonNodeIds.SolutionFolder
-  commentId: F:DulcisX.Core.Enums.VisualStudio.CommonNodeIds.SolutionFolder
+- uid: DulcisX.Core.Enums.CommonNodeIds.SolutionFolder
+  commentId: F:DulcisX.Core.Enums.CommonNodeIds.SolutionFolder
   id: SolutionFolder
-  parent: DulcisX.Core.Enums.VisualStudio.CommonNodeIds
+  parent: DulcisX.Core.Enums.CommonNodeIds
   langs:
   - csharp
   - vb
   name: SolutionFolder
   nameWithType: CommonNodeIds.SolutionFolder
-  fullName: DulcisX.Core.Enums.VisualStudio.CommonNodeIds.SolutionFolder
+  fullName: DulcisX.Core.Enums.CommonNodeIds.SolutionFolder
   type: Field
   source:
     remote:
-      path: src/DulcisX/DulcisX/Core/Enums/VisualStudio/CommonNodeIds.cs
+      path: src/DulcisX/DulcisX/Core/Enums/CommonNodeIds.cs
       branch: master
       repo: https://github.com/TwentyFourMinutes/DulcisX.git
     id: SolutionFolder
-    path: ../../DulcisX - master/src/DulcisX/DulcisX/Core/Enums/VisualStudio/CommonNodeIds.cs
+    path: ../../DulcisX - master/src/DulcisX/DulcisX/Core/Enums/CommonNodeIds.cs
     startLine: 28
   assemblies:
   - DulcisX
-  namespace: DulcisX.Core.Enums.VisualStudio
+  namespace: DulcisX.Core.Enums
   summary: "\nRepresents a <xref href=\"DulcisX.Nodes.SolutionFolderNode\" data-throw-if-not-resolved=\"false\"></xref>.\n"
   example: []
   syntax:
@@ -226,28 +226,28 @@ items:
   modifiers.vb:
   - Public
   - Const
-- uid: DulcisX.Core.Enums.VisualStudio.CommonNodeIds.Solution
-  commentId: F:DulcisX.Core.Enums.VisualStudio.CommonNodeIds.Solution
+- uid: DulcisX.Core.Enums.CommonNodeIds.Solution
+  commentId: F:DulcisX.Core.Enums.CommonNodeIds.Solution
   id: Solution
-  parent: DulcisX.Core.Enums.VisualStudio.CommonNodeIds
+  parent: DulcisX.Core.Enums.CommonNodeIds
   langs:
   - csharp
   - vb
   name: Solution
   nameWithType: CommonNodeIds.Solution
-  fullName: DulcisX.Core.Enums.VisualStudio.CommonNodeIds.Solution
+  fullName: DulcisX.Core.Enums.CommonNodeIds.Solution
   type: Field
   source:
     remote:
-      path: src/DulcisX/DulcisX/Core/Enums/VisualStudio/CommonNodeIds.cs
+      path: src/DulcisX/DulcisX/Core/Enums/CommonNodeIds.cs
       branch: master
       repo: https://github.com/TwentyFourMinutes/DulcisX.git
     id: Solution
-    path: ../../DulcisX - master/src/DulcisX/DulcisX/Core/Enums/VisualStudio/CommonNodeIds.cs
+    path: ../../DulcisX - master/src/DulcisX/DulcisX/Core/Enums/CommonNodeIds.cs
     startLine: 32
   assemblies:
   - DulcisX
-  namespace: DulcisX.Core.Enums.VisualStudio
+  namespace: DulcisX.Core.Enums
   summary: "\nRepresents a <xref href=\"DulcisX.Nodes.SolutionNode\" data-throw-if-not-resolved=\"false\"></xref>.\n"
   example: []
   syntax:
@@ -269,11 +269,11 @@ references:
   name: IVsHierarchy
   nameWithType: IVsHierarchy
   fullName: Microsoft.VisualStudio.Shell.Interop.IVsHierarchy
-- uid: DulcisX.Core.Enums.VisualStudio
-  commentId: N:DulcisX.Core.Enums.VisualStudio
-  name: DulcisX.Core.Enums.VisualStudio
-  nameWithType: DulcisX.Core.Enums.VisualStudio
-  fullName: DulcisX.Core.Enums.VisualStudio
+- uid: DulcisX.Core.Enums
+  commentId: N:DulcisX.Core.Enums
+  name: DulcisX.Core.Enums
+  nameWithType: DulcisX.Core.Enums
+  fullName: DulcisX.Core.Enums
 - uid: System.Object
   commentId: T:System.Object
   parent: System

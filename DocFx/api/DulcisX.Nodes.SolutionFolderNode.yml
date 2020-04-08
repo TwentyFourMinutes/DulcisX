@@ -6,7 +6,6 @@ items:
   parent: DulcisX.Nodes
   children:
   - DulcisX.Nodes.SolutionFolderNode.#ctor(DulcisX.Nodes.SolutionNode,Microsoft.VisualStudio.Shell.Interop.IVsHierarchy)
-  - DulcisX.Nodes.SolutionFolderNode.NodeType
   langs:
   - csharp
   - vb
@@ -21,18 +20,20 @@ items:
       repo: https://github.com/TwentyFourMinutes/DulcisX.git
     id: SolutionFolderNode
     path: ../../DulcisX - master/src/DulcisX/DulcisX/Nodes/SolutionFolderNode.cs
-    startLine: 9
+    startLine: 8
   assemblies:
   - DulcisX
   namespace: DulcisX.Nodes
   summary: "\nRepresents a Solution Folder within a <xref href=\"DulcisX.Nodes.SolutionNode\" data-throw-if-not-resolved=\"false\"></xref>.\n"
   example: []
   syntax:
-    content: 'public class SolutionFolderNode : SolutionItemNode, INamedNode, IBaseNode'
+    content: 'public class SolutionFolderNode : SolutionItemNode, INamedNode, IBaseNode, IEquatable<IBaseNode>'
     content.vb: >-
       Public Class SolutionFolderNode
+
           Inherits SolutionItemNode
-          Implements INamedNode, IBaseNode
+
+          Implements INamedNode, IBaseNode, IEquatable(Of IBaseNode)
   inheritance:
   - System.Object
   - DulcisX.Nodes.BaseNode
@@ -40,6 +41,7 @@ items:
   implements:
   - DulcisX.Nodes.INamedNode
   - DulcisX.Nodes.IBaseNode
+  - System.IEquatable{DulcisX.Nodes.IBaseNode}
   inheritedMembers:
   - DulcisX.Nodes.SolutionItemNode.GetParent
   - DulcisX.Nodes.SolutionItemNode.GetChildren
@@ -51,12 +53,12 @@ items:
   - DulcisX.Nodes.BaseNode.GetDisplayName
   - DulcisX.Nodes.BaseNode.GetParent(DulcisX.Core.Enums.NodeTypes)
   - DulcisX.Nodes.BaseNode.AsHierarchyItem
-  - DulcisX.Nodes.BaseNode.IsTypeMatching(DulcisX.Core.Enums.NodeTypes)
+  - DulcisX.Nodes.BaseNode.Equals(DulcisX.Nodes.IBaseNode)
+  - DulcisX.Nodes.BaseNode.Equals(System.Object)
+  - DulcisX.Nodes.BaseNode.GetHashCode
   - System.Object.ToString
-  - System.Object.Equals(System.Object)
   - System.Object.Equals(System.Object,System.Object)
   - System.Object.ReferenceEquals(System.Object,System.Object)
-  - System.Object.GetHashCode
   - System.Object.GetType
   - System.Object.MemberwiseClone
   modifiers.csharp:
@@ -65,46 +67,6 @@ items:
   modifiers.vb:
   - Public
   - Class
-- uid: DulcisX.Nodes.SolutionFolderNode.NodeType
-  commentId: P:DulcisX.Nodes.SolutionFolderNode.NodeType
-  id: NodeType
-  parent: DulcisX.Nodes.SolutionFolderNode
-  langs:
-  - csharp
-  - vb
-  name: NodeType
-  nameWithType: SolutionFolderNode.NodeType
-  fullName: DulcisX.Nodes.SolutionFolderNode.NodeType
-  type: Property
-  source:
-    remote:
-      path: src/DulcisX/DulcisX/Nodes/SolutionFolderNode.cs
-      branch: master
-      repo: https://github.com/TwentyFourMinutes/DulcisX.git
-    id: NodeType
-    path: ../../DulcisX - master/src/DulcisX/DulcisX/Nodes/SolutionFolderNode.cs
-    startLine: 12
-  assemblies:
-  - DulcisX
-  namespace: DulcisX.Nodes
-  summary: "\nGets the Type of current Node.\n"
-  example: []
-  syntax:
-    content: public override NodeTypes NodeType { get; }
-    parameters: []
-    return:
-      type: DulcisX.Core.Enums.NodeTypes
-    content.vb: Public Overrides ReadOnly Property NodeType As NodeTypes
-  overridden: DulcisX.Nodes.BaseNode.NodeType
-  overload: DulcisX.Nodes.SolutionFolderNode.NodeType*
-  modifiers.csharp:
-  - public
-  - override
-  - get
-  modifiers.vb:
-  - Public
-  - Overrides
-  - ReadOnly
 - uid: DulcisX.Nodes.SolutionFolderNode.#ctor(DulcisX.Nodes.SolutionNode,Microsoft.VisualStudio.Shell.Interop.IVsHierarchy)
   commentId: M:DulcisX.Nodes.SolutionFolderNode.#ctor(DulcisX.Nodes.SolutionNode,Microsoft.VisualStudio.Shell.Interop.IVsHierarchy)
   id: '#ctor(DulcisX.Nodes.SolutionNode,Microsoft.VisualStudio.Shell.Interop.IVsHierarchy)'
@@ -123,7 +85,7 @@ items:
       repo: https://github.com/TwentyFourMinutes/DulcisX.git
     id: .ctor
     path: ../../DulcisX - master/src/DulcisX/DulcisX/Nodes/SolutionFolderNode.cs
-    startLine: 19
+    startLine: 15
   assemblies:
   - DulcisX
   namespace: DulcisX.Nodes
@@ -187,6 +149,48 @@ references:
   name: IBaseNode
   nameWithType: IBaseNode
   fullName: DulcisX.Nodes.IBaseNode
+- uid: System.IEquatable{DulcisX.Nodes.IBaseNode}
+  commentId: T:System.IEquatable{DulcisX.Nodes.IBaseNode}
+  parent: System
+  definition: System.IEquatable`1
+  name: IEquatable<IBaseNode>
+  nameWithType: IEquatable<IBaseNode>
+  fullName: System.IEquatable<DulcisX.Nodes.IBaseNode>
+  nameWithType.vb: IEquatable(Of IBaseNode)
+  fullName.vb: System.IEquatable(Of DulcisX.Nodes.IBaseNode)
+  name.vb: IEquatable(Of IBaseNode)
+  spec.csharp:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    nameWithType: IEquatable
+    fullName: System.IEquatable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: DulcisX.Nodes.IBaseNode
+    name: IBaseNode
+    nameWithType: IBaseNode
+    fullName: DulcisX.Nodes.IBaseNode
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    nameWithType: IEquatable
+    fullName: System.IEquatable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: DulcisX.Nodes.IBaseNode
+    name: IBaseNode
+    nameWithType: IBaseNode
+    fullName: DulcisX.Nodes.IBaseNode
+  - name: )
+    nameWithType: )
+    fullName: )
 - uid: DulcisX.Nodes.SolutionItemNode.GetParent
   commentId: M:DulcisX.Nodes.SolutionItemNode.GetParent
   parent: DulcisX.Nodes.SolutionItemNode
@@ -470,39 +474,106 @@ references:
   - name: )
     nameWithType: )
     fullName: )
-- uid: DulcisX.Nodes.BaseNode.IsTypeMatching(DulcisX.Core.Enums.NodeTypes)
-  commentId: M:DulcisX.Nodes.BaseNode.IsTypeMatching(DulcisX.Core.Enums.NodeTypes)
+- uid: DulcisX.Nodes.BaseNode.Equals(DulcisX.Nodes.IBaseNode)
+  commentId: M:DulcisX.Nodes.BaseNode.Equals(DulcisX.Nodes.IBaseNode)
   parent: DulcisX.Nodes.BaseNode
-  name: IsTypeMatching(NodeTypes)
-  nameWithType: BaseNode.IsTypeMatching(NodeTypes)
-  fullName: DulcisX.Nodes.BaseNode.IsTypeMatching(DulcisX.Core.Enums.NodeTypes)
+  name: Equals(IBaseNode)
+  nameWithType: BaseNode.Equals(IBaseNode)
+  fullName: DulcisX.Nodes.BaseNode.Equals(DulcisX.Nodes.IBaseNode)
   spec.csharp:
-  - uid: DulcisX.Nodes.BaseNode.IsTypeMatching(DulcisX.Core.Enums.NodeTypes)
-    name: IsTypeMatching
-    nameWithType: BaseNode.IsTypeMatching
-    fullName: DulcisX.Nodes.BaseNode.IsTypeMatching
+  - uid: DulcisX.Nodes.BaseNode.Equals(DulcisX.Nodes.IBaseNode)
+    name: Equals
+    nameWithType: BaseNode.Equals
+    fullName: DulcisX.Nodes.BaseNode.Equals
   - name: (
     nameWithType: (
     fullName: (
-  - uid: DulcisX.Core.Enums.NodeTypes
-    name: NodeTypes
-    nameWithType: NodeTypes
-    fullName: DulcisX.Core.Enums.NodeTypes
+  - uid: DulcisX.Nodes.IBaseNode
+    name: IBaseNode
+    nameWithType: IBaseNode
+    fullName: DulcisX.Nodes.IBaseNode
   - name: )
     nameWithType: )
     fullName: )
   spec.vb:
-  - uid: DulcisX.Nodes.BaseNode.IsTypeMatching(DulcisX.Core.Enums.NodeTypes)
-    name: IsTypeMatching
-    nameWithType: BaseNode.IsTypeMatching
-    fullName: DulcisX.Nodes.BaseNode.IsTypeMatching
+  - uid: DulcisX.Nodes.BaseNode.Equals(DulcisX.Nodes.IBaseNode)
+    name: Equals
+    nameWithType: BaseNode.Equals
+    fullName: DulcisX.Nodes.BaseNode.Equals
   - name: (
     nameWithType: (
     fullName: (
-  - uid: DulcisX.Core.Enums.NodeTypes
-    name: NodeTypes
-    nameWithType: NodeTypes
-    fullName: DulcisX.Core.Enums.NodeTypes
+  - uid: DulcisX.Nodes.IBaseNode
+    name: IBaseNode
+    nameWithType: IBaseNode
+    fullName: DulcisX.Nodes.IBaseNode
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: DulcisX.Nodes.BaseNode.Equals(System.Object)
+  commentId: M:DulcisX.Nodes.BaseNode.Equals(System.Object)
+  parent: DulcisX.Nodes.BaseNode
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: BaseNode.Equals(Object)
+  fullName: DulcisX.Nodes.BaseNode.Equals(System.Object)
+  spec.csharp:
+  - uid: DulcisX.Nodes.BaseNode.Equals(System.Object)
+    name: Equals
+    nameWithType: BaseNode.Equals
+    fullName: DulcisX.Nodes.BaseNode.Equals
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: DulcisX.Nodes.BaseNode.Equals(System.Object)
+    name: Equals
+    nameWithType: BaseNode.Equals
+    fullName: DulcisX.Nodes.BaseNode.Equals
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: DulcisX.Nodes.BaseNode.GetHashCode
+  commentId: M:DulcisX.Nodes.BaseNode.GetHashCode
+  parent: DulcisX.Nodes.BaseNode
+  name: GetHashCode()
+  nameWithType: BaseNode.GetHashCode()
+  fullName: DulcisX.Nodes.BaseNode.GetHashCode()
+  spec.csharp:
+  - uid: DulcisX.Nodes.BaseNode.GetHashCode
+    name: GetHashCode
+    nameWithType: BaseNode.GetHashCode
+    fullName: DulcisX.Nodes.BaseNode.GetHashCode
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: DulcisX.Nodes.BaseNode.GetHashCode
+    name: GetHashCode
+    nameWithType: BaseNode.GetHashCode
+    fullName: DulcisX.Nodes.BaseNode.GetHashCode
+  - name: (
+    nameWithType: (
+    fullName: (
   - name: )
     nameWithType: )
     fullName: )
@@ -534,47 +605,6 @@ references:
   - name: (
     nameWithType: (
     fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
-- uid: System.Object.Equals(System.Object)
-  commentId: M:System.Object.Equals(System.Object)
-  parent: System.Object
-  isExternal: true
-  name: Equals(Object)
-  nameWithType: Object.Equals(Object)
-  fullName: System.Object.Equals(System.Object)
-  spec.csharp:
-  - uid: System.Object.Equals(System.Object)
-    name: Equals
-    nameWithType: Object.Equals
-    fullName: System.Object.Equals
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: System.Object.Equals(System.Object)
-    name: Equals
-    nameWithType: Object.Equals
-    fullName: System.Object.Equals
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
   - name: )
     nameWithType: )
     fullName: )
@@ -692,37 +722,6 @@ references:
   - name: )
     nameWithType: )
     fullName: )
-- uid: System.Object.GetHashCode
-  commentId: M:System.Object.GetHashCode
-  parent: System.Object
-  isExternal: true
-  name: GetHashCode()
-  nameWithType: Object.GetHashCode()
-  fullName: System.Object.GetHashCode()
-  spec.csharp:
-  - uid: System.Object.GetHashCode
-    name: GetHashCode
-    nameWithType: Object.GetHashCode
-    fullName: System.Object.GetHashCode
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: System.Object.GetHashCode
-    name: GetHashCode
-    nameWithType: Object.GetHashCode
-    fullName: System.Object.GetHashCode
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
 - uid: System.Object.GetType
   commentId: M:System.Object.GetType
   parent: System.Object
@@ -791,28 +790,45 @@ references:
   name: System
   nameWithType: System
   fullName: System
-- uid: DulcisX.Nodes.BaseNode.NodeType
-  commentId: P:DulcisX.Nodes.BaseNode.NodeType
-  parent: DulcisX.Nodes.BaseNode
-  name: NodeType
-  nameWithType: BaseNode.NodeType
-  fullName: DulcisX.Nodes.BaseNode.NodeType
-- uid: DulcisX.Nodes.SolutionFolderNode.NodeType*
-  commentId: Overload:DulcisX.Nodes.SolutionFolderNode.NodeType
-  name: NodeType
-  nameWithType: SolutionFolderNode.NodeType
-  fullName: DulcisX.Nodes.SolutionFolderNode.NodeType
-- uid: DulcisX.Core.Enums.NodeTypes
-  commentId: T:DulcisX.Core.Enums.NodeTypes
-  parent: DulcisX.Core.Enums
-  name: NodeTypes
-  nameWithType: NodeTypes
-  fullName: DulcisX.Core.Enums.NodeTypes
-- uid: DulcisX.Core.Enums
-  commentId: N:DulcisX.Core.Enums
-  name: DulcisX.Core.Enums
-  nameWithType: DulcisX.Core.Enums
-  fullName: DulcisX.Core.Enums
+- uid: System.IEquatable`1
+  commentId: T:System.IEquatable`1
+  isExternal: true
+  name: IEquatable<T>
+  nameWithType: IEquatable<T>
+  fullName: System.IEquatable<T>
+  nameWithType.vb: IEquatable(Of T)
+  fullName.vb: System.IEquatable(Of T)
+  name.vb: IEquatable(Of T)
+  spec.csharp:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    nameWithType: IEquatable
+    fullName: System.IEquatable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    nameWithType: IEquatable
+    fullName: System.IEquatable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
 - uid: DulcisX.Nodes.SolutionFolderNode
   commentId: T:DulcisX.Nodes.SolutionFolderNode
   name: SolutionFolderNode

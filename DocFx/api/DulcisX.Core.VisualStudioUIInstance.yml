@@ -1,35 +1,32 @@
 ### YamlMime:ManagedReference
 items:
-- uid: DulcisX.Core.Enums.VisualStudio.CommonStatusCodes
-  commentId: T:DulcisX.Core.Enums.VisualStudio.CommonStatusCodes
-  id: CommonStatusCodes
-  parent: DulcisX.Core.Enums.VisualStudio
+- uid: DulcisX.Core.VisualStudioUIInstance
+  commentId: T:DulcisX.Core.VisualStudioUIInstance
+  id: VisualStudioUIInstance
+  parent: DulcisX.Core
   children:
-  - DulcisX.Core.Enums.VisualStudio.CommonStatusCodes.Failure
-  - DulcisX.Core.Enums.VisualStudio.CommonStatusCodes.Success
+  - DulcisX.Core.VisualStudioUIInstance.ShowMessageBox(System.String,System.String,DulcisX.Core.Enums.MessageBoxButton,System.Int32,DulcisX.Core.Enums.MessageBoxIcon)
   langs:
   - csharp
   - vb
-  name: CommonStatusCodes
-  nameWithType: CommonStatusCodes
-  fullName: DulcisX.Core.Enums.VisualStudio.CommonStatusCodes
+  name: VisualStudioUIInstance
+  nameWithType: VisualStudioUIInstance
+  fullName: DulcisX.Core.VisualStudioUIInstance
   type: Class
   source:
     remote:
-      path: src/DulcisX/DulcisX/Core/Enums/VisualStudio/CommonStatusCodes.cs
+      path: src/DulcisX/DulcisX/Core/VisualStudioUIInstance.cs
       branch: master
       repo: https://github.com/TwentyFourMinutes/DulcisX.git
-    id: CommonStatusCodes
-    path: ../../DulcisX - master/src/DulcisX/DulcisX/Core/Enums/VisualStudio/CommonStatusCodes.cs
-    startLine: 7
+    id: VisualStudioUIInstance
+    path: ../../DulcisX - master/src/DulcisX/DulcisX/Core/VisualStudioUIInstance.cs
+    startLine: 8
   assemblies:
   - DulcisX
-  namespace: DulcisX.Core.Enums.VisualStudio
-  summary: "\nCommon HResults of native methods.\n"
-  example: []
+  namespace: DulcisX.Core
   syntax:
-    content: public static class CommonStatusCodes
-    content.vb: Public Module CommonStatusCodes
+    content: public class VisualStudioUIInstance
+    content.vb: Public Class VisualStudioUIInstance
   inheritance:
   - System.Object
   inheritedMembers:
@@ -42,87 +39,59 @@ items:
   - System.Object.MemberwiseClone
   modifiers.csharp:
   - public
-  - static
   - class
   modifiers.vb:
   - Public
-  - Module
-- uid: DulcisX.Core.Enums.VisualStudio.CommonStatusCodes.Success
-  commentId: F:DulcisX.Core.Enums.VisualStudio.CommonStatusCodes.Success
-  id: Success
-  parent: DulcisX.Core.Enums.VisualStudio.CommonStatusCodes
+  - Class
+- uid: DulcisX.Core.VisualStudioUIInstance.ShowMessageBox(System.String,System.String,DulcisX.Core.Enums.MessageBoxButton,System.Int32,DulcisX.Core.Enums.MessageBoxIcon)
+  commentId: M:DulcisX.Core.VisualStudioUIInstance.ShowMessageBox(System.String,System.String,DulcisX.Core.Enums.MessageBoxButton,System.Int32,DulcisX.Core.Enums.MessageBoxIcon)
+  id: ShowMessageBox(System.String,System.String,DulcisX.Core.Enums.MessageBoxButton,System.Int32,DulcisX.Core.Enums.MessageBoxIcon)
+  parent: DulcisX.Core.VisualStudioUIInstance
   langs:
   - csharp
   - vb
-  name: Success
-  nameWithType: CommonStatusCodes.Success
-  fullName: DulcisX.Core.Enums.VisualStudio.CommonStatusCodes.Success
-  type: Field
+  name: ShowMessageBox(String, String, MessageBoxButton, Int32, MessageBoxIcon)
+  nameWithType: VisualStudioUIInstance.ShowMessageBox(String, String, MessageBoxButton, Int32, MessageBoxIcon)
+  fullName: DulcisX.Core.VisualStudioUIInstance.ShowMessageBox(System.String, System.String, DulcisX.Core.Enums.MessageBoxButton, System.Int32, DulcisX.Core.Enums.MessageBoxIcon)
+  type: Method
   source:
     remote:
-      path: src/DulcisX/DulcisX/Core/Enums/VisualStudio/CommonStatusCodes.cs
+      path: src/DulcisX/DulcisX/Core/VisualStudioUIInstance.cs
       branch: master
       repo: https://github.com/TwentyFourMinutes/DulcisX.git
-    id: Success
-    path: ../../DulcisX - master/src/DulcisX/DulcisX/Core/Enums/VisualStudio/CommonStatusCodes.cs
-    startLine: 12
+    id: ShowMessageBox
+    path: ../../DulcisX - master/src/DulcisX/DulcisX/Core/VisualStudioUIInstance.cs
+    startLine: 17
   assemblies:
   - DulcisX
-  namespace: DulcisX.Core.Enums.VisualStudio
-  summary: "\nRepresents a HResult which indicates the generic success of a native method.\n"
-  example: []
+  namespace: DulcisX.Core
   syntax:
-    content: public const int Success = 0
-    return:
+    content: public MessageBoxResult ShowMessageBox(string title, string message, MessageBoxButton buttons, int selectedButtonIndex = 0, MessageBoxIcon icon = MessageBoxIcon.Info)
+    parameters:
+    - id: title
+      type: System.String
+    - id: message
+      type: System.String
+    - id: buttons
+      type: DulcisX.Core.Enums.MessageBoxButton
+    - id: selectedButtonIndex
       type: System.Int32
-    content.vb: Public Const Success As Integer = 0
+    - id: icon
+      type: DulcisX.Core.Enums.MessageBoxIcon
+    return:
+      type: DulcisX.Core.Enums.MessageBoxResult
+    content.vb: Public Function ShowMessageBox(title As String, message As String, buttons As MessageBoxButton, selectedButtonIndex As Integer = 0, icon As MessageBoxIcon = MessageBoxIcon.Info) As MessageBoxResult
+  overload: DulcisX.Core.VisualStudioUIInstance.ShowMessageBox*
   modifiers.csharp:
   - public
-  - const
   modifiers.vb:
   - Public
-  - Const
-- uid: DulcisX.Core.Enums.VisualStudio.CommonStatusCodes.Failure
-  commentId: F:DulcisX.Core.Enums.VisualStudio.CommonStatusCodes.Failure
-  id: Failure
-  parent: DulcisX.Core.Enums.VisualStudio.CommonStatusCodes
-  langs:
-  - csharp
-  - vb
-  name: Failure
-  nameWithType: CommonStatusCodes.Failure
-  fullName: DulcisX.Core.Enums.VisualStudio.CommonStatusCodes.Failure
-  type: Field
-  source:
-    remote:
-      path: src/DulcisX/DulcisX/Core/Enums/VisualStudio/CommonStatusCodes.cs
-      branch: master
-      repo: https://github.com/TwentyFourMinutes/DulcisX.git
-    id: Failure
-    path: ../../DulcisX - master/src/DulcisX/DulcisX/Core/Enums/VisualStudio/CommonStatusCodes.cs
-    startLine: 16
-  assemblies:
-  - DulcisX
-  namespace: DulcisX.Core.Enums.VisualStudio
-  summary: "\nRepresents a HResult which indicates the generic failure of a native method.\n"
-  example: []
-  syntax:
-    content: public const int Failure = -2147467259
-    return:
-      type: System.Int32
-    content.vb: Public Const Failure As Integer = -2147467259
-  modifiers.csharp:
-  - public
-  - const
-  modifiers.vb:
-  - Public
-  - Const
 references:
-- uid: DulcisX.Core.Enums.VisualStudio
-  commentId: N:DulcisX.Core.Enums.VisualStudio
-  name: DulcisX.Core.Enums.VisualStudio
-  nameWithType: DulcisX.Core.Enums.VisualStudio
-  fullName: DulcisX.Core.Enums.VisualStudio
+- uid: DulcisX.Core
+  commentId: N:DulcisX.Core
+  name: DulcisX.Core
+  nameWithType: DulcisX.Core
+  fullName: DulcisX.Core
 - uid: System.Object
   commentId: T:System.Object
   parent: System
@@ -415,6 +384,24 @@ references:
   name: System
   nameWithType: System
   fullName: System
+- uid: DulcisX.Core.VisualStudioUIInstance.ShowMessageBox*
+  commentId: Overload:DulcisX.Core.VisualStudioUIInstance.ShowMessageBox
+  name: ShowMessageBox
+  nameWithType: VisualStudioUIInstance.ShowMessageBox
+  fullName: DulcisX.Core.VisualStudioUIInstance.ShowMessageBox
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: DulcisX.Core.Enums.MessageBoxButton
+  commentId: T:DulcisX.Core.Enums.MessageBoxButton
+  parent: DulcisX.Core.Enums
+  name: MessageBoxButton
+  nameWithType: MessageBoxButton
+  fullName: DulcisX.Core.Enums.MessageBoxButton
 - uid: System.Int32
   commentId: T:System.Int32
   parent: System
@@ -422,3 +409,20 @@ references:
   name: Int32
   nameWithType: Int32
   fullName: System.Int32
+- uid: DulcisX.Core.Enums.MessageBoxIcon
+  commentId: T:DulcisX.Core.Enums.MessageBoxIcon
+  parent: DulcisX.Core.Enums
+  name: MessageBoxIcon
+  nameWithType: MessageBoxIcon
+  fullName: DulcisX.Core.Enums.MessageBoxIcon
+- uid: DulcisX.Core.Enums.MessageBoxResult
+  commentId: T:DulcisX.Core.Enums.MessageBoxResult
+  parent: DulcisX.Core.Enums
+  name: MessageBoxResult
+  nameWithType: MessageBoxResult
+  fullName: DulcisX.Core.Enums.MessageBoxResult
+- uid: DulcisX.Core.Enums
+  commentId: N:DulcisX.Core.Enums
+  name: DulcisX.Core.Enums
+  nameWithType: DulcisX.Core.Enums
+  fullName: DulcisX.Core.Enums

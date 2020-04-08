@@ -457,6 +457,84 @@ references:
   commentId: N:DulcisX.Core.Enums
   fullName: DulcisX.Core.Enums
   nameWithType: DulcisX.Core.Enums
+- uid: DulcisX.Core.Enums.CommonNodeIds
+  name: CommonNodeIds
+  href: api/DulcisX.Core.Enums.CommonNodeIds.html
+  commentId: T:DulcisX.Core.Enums.CommonNodeIds
+  fullName: DulcisX.Core.Enums.CommonNodeIds
+  nameWithType: CommonNodeIds
+- uid: DulcisX.Core.Enums.CommonNodeIds.MutlipleSelectedNodes
+  name: MutlipleSelectedNodes
+  href: api/DulcisX.Core.Enums.CommonNodeIds.html#DulcisX_Core_Enums_CommonNodeIds_MutlipleSelectedNodes
+  commentId: F:DulcisX.Core.Enums.CommonNodeIds.MutlipleSelectedNodes
+  fullName: DulcisX.Core.Enums.CommonNodeIds.MutlipleSelectedNodes
+  nameWithType: CommonNodeIds.MutlipleSelectedNodes
+- uid: DulcisX.Core.Enums.CommonNodeIds.Nil
+  name: Nil
+  href: api/DulcisX.Core.Enums.CommonNodeIds.html#DulcisX_Core_Enums_CommonNodeIds_Nil
+  commentId: F:DulcisX.Core.Enums.CommonNodeIds.Nil
+  fullName: DulcisX.Core.Enums.CommonNodeIds.Nil
+  nameWithType: CommonNodeIds.Nil
+- uid: DulcisX.Core.Enums.CommonNodeIds.Project
+  name: Project
+  href: api/DulcisX.Core.Enums.CommonNodeIds.html#DulcisX_Core_Enums_CommonNodeIds_Project
+  commentId: F:DulcisX.Core.Enums.CommonNodeIds.Project
+  fullName: DulcisX.Core.Enums.CommonNodeIds.Project
+  nameWithType: CommonNodeIds.Project
+- uid: DulcisX.Core.Enums.CommonNodeIds.Root
+  name: Root
+  href: api/DulcisX.Core.Enums.CommonNodeIds.html#DulcisX_Core_Enums_CommonNodeIds_Root
+  commentId: F:DulcisX.Core.Enums.CommonNodeIds.Root
+  fullName: DulcisX.Core.Enums.CommonNodeIds.Root
+  nameWithType: CommonNodeIds.Root
+- uid: DulcisX.Core.Enums.CommonNodeIds.Solution
+  name: Solution
+  href: api/DulcisX.Core.Enums.CommonNodeIds.html#DulcisX_Core_Enums_CommonNodeIds_Solution
+  commentId: F:DulcisX.Core.Enums.CommonNodeIds.Solution
+  fullName: DulcisX.Core.Enums.CommonNodeIds.Solution
+  nameWithType: CommonNodeIds.Solution
+- uid: DulcisX.Core.Enums.CommonNodeIds.SolutionFolder
+  name: SolutionFolder
+  href: api/DulcisX.Core.Enums.CommonNodeIds.html#DulcisX_Core_Enums_CommonNodeIds_SolutionFolder
+  commentId: F:DulcisX.Core.Enums.CommonNodeIds.SolutionFolder
+  fullName: DulcisX.Core.Enums.CommonNodeIds.SolutionFolder
+  nameWithType: CommonNodeIds.SolutionFolder
+- uid: DulcisX.Core.Enums.CommonStatusCodes
+  name: CommonStatusCodes
+  href: api/DulcisX.Core.Enums.CommonStatusCodes.html
+  commentId: T:DulcisX.Core.Enums.CommonStatusCodes
+  fullName: DulcisX.Core.Enums.CommonStatusCodes
+  nameWithType: CommonStatusCodes
+- uid: DulcisX.Core.Enums.CommonStatusCodes.Failure
+  name: Failure
+  href: api/DulcisX.Core.Enums.CommonStatusCodes.html#DulcisX_Core_Enums_CommonStatusCodes_Failure
+  commentId: F:DulcisX.Core.Enums.CommonStatusCodes.Failure
+  fullName: DulcisX.Core.Enums.CommonStatusCodes.Failure
+  nameWithType: CommonStatusCodes.Failure
+- uid: DulcisX.Core.Enums.CommonStatusCodes.NotImplemented
+  name: NotImplemented
+  href: api/DulcisX.Core.Enums.CommonStatusCodes.html#DulcisX_Core_Enums_CommonStatusCodes_NotImplemented
+  commentId: F:DulcisX.Core.Enums.CommonStatusCodes.NotImplemented
+  fullName: DulcisX.Core.Enums.CommonStatusCodes.NotImplemented
+  nameWithType: CommonStatusCodes.NotImplemented
+- uid: DulcisX.Core.Enums.CommonStatusCodes.Success
+  name: Success
+  href: api/DulcisX.Core.Enums.CommonStatusCodes.html#DulcisX_Core_Enums_CommonStatusCodes_Success
+  commentId: F:DulcisX.Core.Enums.CommonStatusCodes.Success
+  fullName: DulcisX.Core.Enums.CommonStatusCodes.Success
+  nameWithType: CommonStatusCodes.Success
+- uid: DulcisX.Core.Enums.CommonStreamKey
+  name: CommonStreamKey
+  href: api/DulcisX.Core.Enums.CommonStreamKey.html
+  commentId: T:DulcisX.Core.Enums.CommonStreamKey
+  fullName: DulcisX.Core.Enums.CommonStreamKey
+  nameWithType: CommonStreamKey
+- uid: DulcisX.Core.Enums.CommonStreamKey.SolutionConfiguration
+  name: SolutionConfiguration
+  href: api/DulcisX.Core.Enums.CommonStreamKey.html#DulcisX_Core_Enums_CommonStreamKey_SolutionConfiguration
+  commentId: F:DulcisX.Core.Enums.CommonStreamKey.SolutionConfiguration
+  fullName: DulcisX.Core.Enums.CommonStreamKey.SolutionConfiguration
+  nameWithType: CommonStreamKey.SolutionConfiguration
 - uid: DulcisX.Core.Enums.CopyToOutputDirectory
   name: CopyToOutputDirectory
   href: api/DulcisX.Core.Enums.CopyToOutputDirectory.html
@@ -511,6 +589,162 @@ references:
   commentId: F:DulcisX.Core.Enums.DocumentType.Text
   fullName: DulcisX.Core.Enums.DocumentType.Text
   nameWithType: DocumentType.Text
+- uid: DulcisX.Core.Enums.MessageBoxButton
+  name: MessageBoxButton
+  href: api/DulcisX.Core.Enums.MessageBoxButton.html
+  commentId: T:DulcisX.Core.Enums.MessageBoxButton
+  fullName: DulcisX.Core.Enums.MessageBoxButton
+  nameWithType: MessageBoxButton
+- uid: DulcisX.Core.Enums.MessageBoxButton.AbortRetryIgnore
+  name: AbortRetryIgnore
+  href: api/DulcisX.Core.Enums.MessageBoxButton.html#DulcisX_Core_Enums_MessageBoxButton_AbortRetryIgnore
+  commentId: F:DulcisX.Core.Enums.MessageBoxButton.AbortRetryIgnore
+  fullName: DulcisX.Core.Enums.MessageBoxButton.AbortRetryIgnore
+  nameWithType: MessageBoxButton.AbortRetryIgnore
+- uid: DulcisX.Core.Enums.MessageBoxButton.Ok
+  name: Ok
+  href: api/DulcisX.Core.Enums.MessageBoxButton.html#DulcisX_Core_Enums_MessageBoxButton_Ok
+  commentId: F:DulcisX.Core.Enums.MessageBoxButton.Ok
+  fullName: DulcisX.Core.Enums.MessageBoxButton.Ok
+  nameWithType: MessageBoxButton.Ok
+- uid: DulcisX.Core.Enums.MessageBoxButton.OkCancel
+  name: OkCancel
+  href: api/DulcisX.Core.Enums.MessageBoxButton.html#DulcisX_Core_Enums_MessageBoxButton_OkCancel
+  commentId: F:DulcisX.Core.Enums.MessageBoxButton.OkCancel
+  fullName: DulcisX.Core.Enums.MessageBoxButton.OkCancel
+  nameWithType: MessageBoxButton.OkCancel
+- uid: DulcisX.Core.Enums.MessageBoxButton.RetryCancel
+  name: RetryCancel
+  href: api/DulcisX.Core.Enums.MessageBoxButton.html#DulcisX_Core_Enums_MessageBoxButton_RetryCancel
+  commentId: F:DulcisX.Core.Enums.MessageBoxButton.RetryCancel
+  fullName: DulcisX.Core.Enums.MessageBoxButton.RetryCancel
+  nameWithType: MessageBoxButton.RetryCancel
+- uid: DulcisX.Core.Enums.MessageBoxButton.YesAllNoCancel
+  name: YesAllNoCancel
+  href: api/DulcisX.Core.Enums.MessageBoxButton.html#DulcisX_Core_Enums_MessageBoxButton_YesAllNoCancel
+  commentId: F:DulcisX.Core.Enums.MessageBoxButton.YesAllNoCancel
+  fullName: DulcisX.Core.Enums.MessageBoxButton.YesAllNoCancel
+  nameWithType: MessageBoxButton.YesAllNoCancel
+- uid: DulcisX.Core.Enums.MessageBoxButton.YesNo
+  name: YesNo
+  href: api/DulcisX.Core.Enums.MessageBoxButton.html#DulcisX_Core_Enums_MessageBoxButton_YesNo
+  commentId: F:DulcisX.Core.Enums.MessageBoxButton.YesNo
+  fullName: DulcisX.Core.Enums.MessageBoxButton.YesNo
+  nameWithType: MessageBoxButton.YesNo
+- uid: DulcisX.Core.Enums.MessageBoxButton.YesNoCancel
+  name: YesNoCancel
+  href: api/DulcisX.Core.Enums.MessageBoxButton.html#DulcisX_Core_Enums_MessageBoxButton_YesNoCancel
+  commentId: F:DulcisX.Core.Enums.MessageBoxButton.YesNoCancel
+  fullName: DulcisX.Core.Enums.MessageBoxButton.YesNoCancel
+  nameWithType: MessageBoxButton.YesNoCancel
+- uid: DulcisX.Core.Enums.MessageBoxIcon
+  name: MessageBoxIcon
+  href: api/DulcisX.Core.Enums.MessageBoxIcon.html
+  commentId: T:DulcisX.Core.Enums.MessageBoxIcon
+  fullName: DulcisX.Core.Enums.MessageBoxIcon
+  nameWithType: MessageBoxIcon
+- uid: DulcisX.Core.Enums.MessageBoxIcon.Cirtical
+  name: Cirtical
+  href: api/DulcisX.Core.Enums.MessageBoxIcon.html#DulcisX_Core_Enums_MessageBoxIcon_Cirtical
+  commentId: F:DulcisX.Core.Enums.MessageBoxIcon.Cirtical
+  fullName: DulcisX.Core.Enums.MessageBoxIcon.Cirtical
+  nameWithType: MessageBoxIcon.Cirtical
+- uid: DulcisX.Core.Enums.MessageBoxIcon.Info
+  name: Info
+  href: api/DulcisX.Core.Enums.MessageBoxIcon.html#DulcisX_Core_Enums_MessageBoxIcon_Info
+  commentId: F:DulcisX.Core.Enums.MessageBoxIcon.Info
+  fullName: DulcisX.Core.Enums.MessageBoxIcon.Info
+  nameWithType: MessageBoxIcon.Info
+- uid: DulcisX.Core.Enums.MessageBoxIcon.None
+  name: None
+  href: api/DulcisX.Core.Enums.MessageBoxIcon.html#DulcisX_Core_Enums_MessageBoxIcon_None
+  commentId: F:DulcisX.Core.Enums.MessageBoxIcon.None
+  fullName: DulcisX.Core.Enums.MessageBoxIcon.None
+  nameWithType: MessageBoxIcon.None
+- uid: DulcisX.Core.Enums.MessageBoxIcon.Query
+  name: Query
+  href: api/DulcisX.Core.Enums.MessageBoxIcon.html#DulcisX_Core_Enums_MessageBoxIcon_Query
+  commentId: F:DulcisX.Core.Enums.MessageBoxIcon.Query
+  fullName: DulcisX.Core.Enums.MessageBoxIcon.Query
+  nameWithType: MessageBoxIcon.Query
+- uid: DulcisX.Core.Enums.MessageBoxIcon.Warning
+  name: Warning
+  href: api/DulcisX.Core.Enums.MessageBoxIcon.html#DulcisX_Core_Enums_MessageBoxIcon_Warning
+  commentId: F:DulcisX.Core.Enums.MessageBoxIcon.Warning
+  fullName: DulcisX.Core.Enums.MessageBoxIcon.Warning
+  nameWithType: MessageBoxIcon.Warning
+- uid: DulcisX.Core.Enums.MessageBoxResult
+  name: MessageBoxResult
+  href: api/DulcisX.Core.Enums.MessageBoxResult.html
+  commentId: T:DulcisX.Core.Enums.MessageBoxResult
+  fullName: DulcisX.Core.Enums.MessageBoxResult
+  nameWithType: MessageBoxResult
+- uid: DulcisX.Core.Enums.MessageBoxResult.Abort
+  name: Abort
+  href: api/DulcisX.Core.Enums.MessageBoxResult.html#DulcisX_Core_Enums_MessageBoxResult_Abort
+  commentId: F:DulcisX.Core.Enums.MessageBoxResult.Abort
+  fullName: DulcisX.Core.Enums.MessageBoxResult.Abort
+  nameWithType: MessageBoxResult.Abort
+- uid: DulcisX.Core.Enums.MessageBoxResult.Cancel
+  name: Cancel
+  href: api/DulcisX.Core.Enums.MessageBoxResult.html#DulcisX_Core_Enums_MessageBoxResult_Cancel
+  commentId: F:DulcisX.Core.Enums.MessageBoxResult.Cancel
+  fullName: DulcisX.Core.Enums.MessageBoxResult.Cancel
+  nameWithType: MessageBoxResult.Cancel
+- uid: DulcisX.Core.Enums.MessageBoxResult.Close
+  name: Close
+  href: api/DulcisX.Core.Enums.MessageBoxResult.html#DulcisX_Core_Enums_MessageBoxResult_Close
+  commentId: F:DulcisX.Core.Enums.MessageBoxResult.Close
+  fullName: DulcisX.Core.Enums.MessageBoxResult.Close
+  nameWithType: MessageBoxResult.Close
+- uid: DulcisX.Core.Enums.MessageBoxResult.Continue
+  name: Continue
+  href: api/DulcisX.Core.Enums.MessageBoxResult.html#DulcisX_Core_Enums_MessageBoxResult_Continue
+  commentId: F:DulcisX.Core.Enums.MessageBoxResult.Continue
+  fullName: DulcisX.Core.Enums.MessageBoxResult.Continue
+  nameWithType: MessageBoxResult.Continue
+- uid: DulcisX.Core.Enums.MessageBoxResult.Help
+  name: Help
+  href: api/DulcisX.Core.Enums.MessageBoxResult.html#DulcisX_Core_Enums_MessageBoxResult_Help
+  commentId: F:DulcisX.Core.Enums.MessageBoxResult.Help
+  fullName: DulcisX.Core.Enums.MessageBoxResult.Help
+  nameWithType: MessageBoxResult.Help
+- uid: DulcisX.Core.Enums.MessageBoxResult.Ignore
+  name: Ignore
+  href: api/DulcisX.Core.Enums.MessageBoxResult.html#DulcisX_Core_Enums_MessageBoxResult_Ignore
+  commentId: F:DulcisX.Core.Enums.MessageBoxResult.Ignore
+  fullName: DulcisX.Core.Enums.MessageBoxResult.Ignore
+  nameWithType: MessageBoxResult.Ignore
+- uid: DulcisX.Core.Enums.MessageBoxResult.No
+  name: No
+  href: api/DulcisX.Core.Enums.MessageBoxResult.html#DulcisX_Core_Enums_MessageBoxResult_No
+  commentId: F:DulcisX.Core.Enums.MessageBoxResult.No
+  fullName: DulcisX.Core.Enums.MessageBoxResult.No
+  nameWithType: MessageBoxResult.No
+- uid: DulcisX.Core.Enums.MessageBoxResult.Ok
+  name: Ok
+  href: api/DulcisX.Core.Enums.MessageBoxResult.html#DulcisX_Core_Enums_MessageBoxResult_Ok
+  commentId: F:DulcisX.Core.Enums.MessageBoxResult.Ok
+  fullName: DulcisX.Core.Enums.MessageBoxResult.Ok
+  nameWithType: MessageBoxResult.Ok
+- uid: DulcisX.Core.Enums.MessageBoxResult.Retry
+  name: Retry
+  href: api/DulcisX.Core.Enums.MessageBoxResult.html#DulcisX_Core_Enums_MessageBoxResult_Retry
+  commentId: F:DulcisX.Core.Enums.MessageBoxResult.Retry
+  fullName: DulcisX.Core.Enums.MessageBoxResult.Retry
+  nameWithType: MessageBoxResult.Retry
+- uid: DulcisX.Core.Enums.MessageBoxResult.TryAgain
+  name: TryAgain
+  href: api/DulcisX.Core.Enums.MessageBoxResult.html#DulcisX_Core_Enums_MessageBoxResult_TryAgain
+  commentId: F:DulcisX.Core.Enums.MessageBoxResult.TryAgain
+  fullName: DulcisX.Core.Enums.MessageBoxResult.TryAgain
+  nameWithType: MessageBoxResult.TryAgain
+- uid: DulcisX.Core.Enums.MessageBoxResult.Yes
+  name: Yes
+  href: api/DulcisX.Core.Enums.MessageBoxResult.html#DulcisX_Core_Enums_MessageBoxResult_Yes
+  commentId: F:DulcisX.Core.Enums.MessageBoxResult.Yes
+  fullName: DulcisX.Core.Enums.MessageBoxResult.Yes
+  nameWithType: MessageBoxResult.Yes
 - uid: DulcisX.Core.Enums.NodeTypes
   name: NodeTypes
   href: api/DulcisX.Core.Enums.NodeTypes.html
@@ -577,6 +811,138 @@ references:
   commentId: F:DulcisX.Core.Enums.NodeTypes.VirtualProject
   fullName: DulcisX.Core.Enums.NodeTypes.VirtualProject
   nameWithType: NodeTypes.VirtualProject
+- uid: DulcisX.Core.Enums.OpenNodeAttribute
+  name: OpenNodeAttribute
+  href: api/DulcisX.Core.Enums.OpenNodeAttribute.html
+  commentId: T:DulcisX.Core.Enums.OpenNodeAttribute
+  fullName: DulcisX.Core.Enums.OpenNodeAttribute
+  nameWithType: OpenNodeAttribute
+- uid: DulcisX.Core.Enums.OpenNodeAttribute.AltHierarchyItemID
+  name: AltHierarchyItemID
+  href: api/DulcisX.Core.Enums.OpenNodeAttribute.html#DulcisX_Core_Enums_OpenNodeAttribute_AltHierarchyItemID
+  commentId: F:DulcisX.Core.Enums.OpenNodeAttribute.AltHierarchyItemID
+  fullName: DulcisX.Core.Enums.OpenNodeAttribute.AltHierarchyItemID
+  nameWithType: OpenNodeAttribute.AltHierarchyItemID
+- uid: DulcisX.Core.Enums.OpenNodeAttribute.DocDataIsDirty
+  name: DocDataIsDirty
+  href: api/DulcisX.Core.Enums.OpenNodeAttribute.html#DulcisX_Core_Enums_OpenNodeAttribute_DocDataIsDirty
+  commentId: F:DulcisX.Core.Enums.OpenNodeAttribute.DocDataIsDirty
+  fullName: DulcisX.Core.Enums.OpenNodeAttribute.DocDataIsDirty
+  nameWithType: OpenNodeAttribute.DocDataIsDirty
+- uid: DulcisX.Core.Enums.OpenNodeAttribute.DocDataIsNotDirty
+  name: DocDataIsNotDirty
+  href: api/DulcisX.Core.Enums.OpenNodeAttribute.html#DulcisX_Core_Enums_OpenNodeAttribute_DocDataIsNotDirty
+  commentId: F:DulcisX.Core.Enums.OpenNodeAttribute.DocDataIsNotDirty
+  fullName: DulcisX.Core.Enums.OpenNodeAttribute.DocDataIsNotDirty
+  nameWithType: OpenNodeAttribute.DocDataIsNotDirty
+- uid: DulcisX.Core.Enums.OpenNodeAttribute.DocDataIsNotReadOnly
+  name: DocDataIsNotReadOnly
+  href: api/DulcisX.Core.Enums.OpenNodeAttribute.html#DulcisX_Core_Enums_OpenNodeAttribute_DocDataIsNotReadOnly
+  commentId: F:DulcisX.Core.Enums.OpenNodeAttribute.DocDataIsNotReadOnly
+  fullName: DulcisX.Core.Enums.OpenNodeAttribute.DocDataIsNotReadOnly
+  nameWithType: OpenNodeAttribute.DocDataIsNotReadOnly
+- uid: DulcisX.Core.Enums.OpenNodeAttribute.DocDataIsReadOnly
+  name: DocDataIsReadOnly
+  href: api/DulcisX.Core.Enums.OpenNodeAttribute.html#DulcisX_Core_Enums_OpenNodeAttribute_DocDataIsReadOnly
+  commentId: F:DulcisX.Core.Enums.OpenNodeAttribute.DocDataIsReadOnly
+  fullName: DulcisX.Core.Enums.OpenNodeAttribute.DocDataIsReadOnly
+  nameWithType: OpenNodeAttribute.DocDataIsReadOnly
+- uid: DulcisX.Core.Enums.OpenNodeAttribute.DocDataReloaded
+  name: DocDataReloaded
+  href: api/DulcisX.Core.Enums.OpenNodeAttribute.html#DulcisX_Core_Enums_OpenNodeAttribute_DocDataReloaded
+  commentId: F:DulcisX.Core.Enums.OpenNodeAttribute.DocDataReloaded
+  fullName: DulcisX.Core.Enums.OpenNodeAttribute.DocDataReloaded
+  nameWithType: OpenNodeAttribute.DocDataReloaded
+- uid: DulcisX.Core.Enums.OpenNodeAttribute.DocumentInitialized
+  name: DocumentInitialized
+  href: api/DulcisX.Core.Enums.OpenNodeAttribute.html#DulcisX_Core_Enums_OpenNodeAttribute_DocumentInitialized
+  commentId: F:DulcisX.Core.Enums.OpenNodeAttribute.DocumentInitialized
+  fullName: DulcisX.Core.Enums.OpenNodeAttribute.DocumentInitialized
+  nameWithType: OpenNodeAttribute.DocumentInitialized
+- uid: DulcisX.Core.Enums.OpenNodeAttribute.Hierarchy
+  name: Hierarchy
+  href: api/DulcisX.Core.Enums.OpenNodeAttribute.html#DulcisX_Core_Enums_OpenNodeAttribute_Hierarchy
+  commentId: F:DulcisX.Core.Enums.OpenNodeAttribute.Hierarchy
+  fullName: DulcisX.Core.Enums.OpenNodeAttribute.Hierarchy
+  nameWithType: OpenNodeAttribute.Hierarchy
+- uid: DulcisX.Core.Enums.OpenNodeAttribute.HierarchyInitialized
+  name: HierarchyInitialized
+  href: api/DulcisX.Core.Enums.OpenNodeAttribute.html#DulcisX_Core_Enums_OpenNodeAttribute_HierarchyInitialized
+  commentId: F:DulcisX.Core.Enums.OpenNodeAttribute.HierarchyInitialized
+  fullName: DulcisX.Core.Enums.OpenNodeAttribute.HierarchyInitialized
+  nameWithType: OpenNodeAttribute.HierarchyInitialized
+- uid: DulcisX.Core.Enums.OpenNodeAttribute.ItemID
+  name: ItemID
+  href: api/DulcisX.Core.Enums.OpenNodeAttribute.html#DulcisX_Core_Enums_OpenNodeAttribute_ItemID
+  commentId: F:DulcisX.Core.Enums.OpenNodeAttribute.ItemID
+  fullName: DulcisX.Core.Enums.OpenNodeAttribute.ItemID
+  nameWithType: OpenNodeAttribute.ItemID
+- uid: DulcisX.Core.Enums.OpenNodeAttribute.MkDocument
+  name: MkDocument
+  href: api/DulcisX.Core.Enums.OpenNodeAttribute.html#DulcisX_Core_Enums_OpenNodeAttribute_MkDocument
+  commentId: F:DulcisX.Core.Enums.OpenNodeAttribute.MkDocument
+  fullName: DulcisX.Core.Enums.OpenNodeAttribute.MkDocument
+  nameWithType: OpenNodeAttribute.MkDocument
+- uid: DulcisX.Core.Enums.OpenNodeAttribute.NOTIFYDOCCHANGEDMASK
+  name: NOTIFYDOCCHANGEDMASK
+  href: api/DulcisX.Core.Enums.OpenNodeAttribute.html#DulcisX_Core_Enums_OpenNodeAttribute_NOTIFYDOCCHANGEDMASK
+  commentId: F:DulcisX.Core.Enums.OpenNodeAttribute.NOTIFYDOCCHANGEDMASK
+  fullName: DulcisX.Core.Enums.OpenNodeAttribute.NOTIFYDOCCHANGEDMASK
+  nameWithType: OpenNodeAttribute.NOTIFYDOCCHANGEDMASK
+- uid: DulcisX.Core.Enums.OpenNodeAttribute.NotifyDocChangedXMask
+  name: NotifyDocChangedXMask
+  href: api/DulcisX.Core.Enums.OpenNodeAttribute.html#DulcisX_Core_Enums_OpenNodeAttribute_NotifyDocChangedXMask
+  commentId: F:DulcisX.Core.Enums.OpenNodeAttribute.NotifyDocChangedXMask
+  fullName: DulcisX.Core.Enums.OpenNodeAttribute.NotifyDocChangedXMask
+  nameWithType: OpenNodeAttribute.NotifyDocChangedXMask
+- uid: DulcisX.Core.Enums.PhysicalNodeRemovedFlags
+  name: PhysicalNodeRemovedFlags
+  href: api/DulcisX.Core.Enums.PhysicalNodeRemovedFlags.html
+  commentId: T:DulcisX.Core.Enums.PhysicalNodeRemovedFlags
+  fullName: DulcisX.Core.Enums.PhysicalNodeRemovedFlags
+  nameWithType: PhysicalNodeRemovedFlags
+- uid: DulcisX.Core.Enums.PhysicalNodeRemovedFlags.Deleted
+  name: Deleted
+  href: api/DulcisX.Core.Enums.PhysicalNodeRemovedFlags.html#DulcisX_Core_Enums_PhysicalNodeRemovedFlags_Deleted
+  commentId: F:DulcisX.Core.Enums.PhysicalNodeRemovedFlags.Deleted
+  fullName: DulcisX.Core.Enums.PhysicalNodeRemovedFlags.Deleted
+  nameWithType: PhysicalNodeRemovedFlags.Deleted
+- uid: DulcisX.Core.Enums.PhysicalNodeRemovedFlags.Removed
+  name: Removed
+  href: api/DulcisX.Core.Enums.PhysicalNodeRemovedFlags.html#DulcisX_Core_Enums_PhysicalNodeRemovedFlags_Removed
+  commentId: F:DulcisX.Core.Enums.PhysicalNodeRemovedFlags.Removed
+  fullName: DulcisX.Core.Enums.PhysicalNodeRemovedFlags.Removed
+  nameWithType: PhysicalNodeRemovedFlags.Removed
+- uid: DulcisX.Core.Enums.ProjectNodeType
+  name: ProjectNodeType
+  href: api/DulcisX.Core.Enums.ProjectNodeType.html
+  commentId: T:DulcisX.Core.Enums.ProjectNodeType
+  fullName: DulcisX.Core.Enums.ProjectNodeType
+  nameWithType: ProjectNodeType
+- uid: DulcisX.Core.Enums.ProjectNodeType.MiscellaneousFilesProject
+  name: MiscellaneousFilesProject
+  href: api/DulcisX.Core.Enums.ProjectNodeType.html#DulcisX_Core_Enums_ProjectNodeType_MiscellaneousFilesProject
+  commentId: F:DulcisX.Core.Enums.ProjectNodeType.MiscellaneousFilesProject
+  fullName: DulcisX.Core.Enums.ProjectNodeType.MiscellaneousFilesProject
+  nameWithType: ProjectNodeType.MiscellaneousFilesProject
+- uid: DulcisX.Core.Enums.ProjectNodeType.Project
+  name: Project
+  href: api/DulcisX.Core.Enums.ProjectNodeType.html#DulcisX_Core_Enums_ProjectNodeType_Project
+  commentId: F:DulcisX.Core.Enums.ProjectNodeType.Project
+  fullName: DulcisX.Core.Enums.ProjectNodeType.Project
+  nameWithType: ProjectNodeType.Project
+- uid: DulcisX.Core.Enums.ProjectNodeType.SolutionItemsProject
+  name: SolutionItemsProject
+  href: api/DulcisX.Core.Enums.ProjectNodeType.html#DulcisX_Core_Enums_ProjectNodeType_SolutionItemsProject
+  commentId: F:DulcisX.Core.Enums.ProjectNodeType.SolutionItemsProject
+  fullName: DulcisX.Core.Enums.ProjectNodeType.SolutionItemsProject
+  nameWithType: ProjectNodeType.SolutionItemsProject
+- uid: DulcisX.Core.Enums.ProjectNodeType.VirtualProject
+  name: VirtualProject
+  href: api/DulcisX.Core.Enums.ProjectNodeType.html#DulcisX_Core_Enums_ProjectNodeType_VirtualProject
+  commentId: F:DulcisX.Core.Enums.ProjectNodeType.VirtualProject
+  fullName: DulcisX.Core.Enums.ProjectNodeType.VirtualProject
+  nameWithType: ProjectNodeType.VirtualProject
 - uid: DulcisX.Core.Enums.StartupOption
   name: StartupOption
   href: api/DulcisX.Core.Enums.StartupOption.html
@@ -601,186 +967,6 @@ references:
   commentId: F:DulcisX.Core.Enums.StartupOption.StartWithDebugging
   fullName: DulcisX.Core.Enums.StartupOption.StartWithDebugging
   nameWithType: StartupOption.StartWithDebugging
-- uid: DulcisX.Core.Enums.VisualStudio
-  name: DulcisX.Core.Enums.VisualStudio
-  href: api/DulcisX.Core.Enums.VisualStudio.html
-  commentId: N:DulcisX.Core.Enums.VisualStudio
-  fullName: DulcisX.Core.Enums.VisualStudio
-  nameWithType: DulcisX.Core.Enums.VisualStudio
-- uid: DulcisX.Core.Enums.VisualStudio.CommonNodeIds
-  name: CommonNodeIds
-  href: api/DulcisX.Core.Enums.VisualStudio.CommonNodeIds.html
-  commentId: T:DulcisX.Core.Enums.VisualStudio.CommonNodeIds
-  fullName: DulcisX.Core.Enums.VisualStudio.CommonNodeIds
-  nameWithType: CommonNodeIds
-- uid: DulcisX.Core.Enums.VisualStudio.CommonNodeIds.MutlipleSelectedNodes
-  name: MutlipleSelectedNodes
-  href: api/DulcisX.Core.Enums.VisualStudio.CommonNodeIds.html#DulcisX_Core_Enums_VisualStudio_CommonNodeIds_MutlipleSelectedNodes
-  commentId: F:DulcisX.Core.Enums.VisualStudio.CommonNodeIds.MutlipleSelectedNodes
-  fullName: DulcisX.Core.Enums.VisualStudio.CommonNodeIds.MutlipleSelectedNodes
-  nameWithType: CommonNodeIds.MutlipleSelectedNodes
-- uid: DulcisX.Core.Enums.VisualStudio.CommonNodeIds.Nil
-  name: Nil
-  href: api/DulcisX.Core.Enums.VisualStudio.CommonNodeIds.html#DulcisX_Core_Enums_VisualStudio_CommonNodeIds_Nil
-  commentId: F:DulcisX.Core.Enums.VisualStudio.CommonNodeIds.Nil
-  fullName: DulcisX.Core.Enums.VisualStudio.CommonNodeIds.Nil
-  nameWithType: CommonNodeIds.Nil
-- uid: DulcisX.Core.Enums.VisualStudio.CommonNodeIds.Project
-  name: Project
-  href: api/DulcisX.Core.Enums.VisualStudio.CommonNodeIds.html#DulcisX_Core_Enums_VisualStudio_CommonNodeIds_Project
-  commentId: F:DulcisX.Core.Enums.VisualStudio.CommonNodeIds.Project
-  fullName: DulcisX.Core.Enums.VisualStudio.CommonNodeIds.Project
-  nameWithType: CommonNodeIds.Project
-- uid: DulcisX.Core.Enums.VisualStudio.CommonNodeIds.Root
-  name: Root
-  href: api/DulcisX.Core.Enums.VisualStudio.CommonNodeIds.html#DulcisX_Core_Enums_VisualStudio_CommonNodeIds_Root
-  commentId: F:DulcisX.Core.Enums.VisualStudio.CommonNodeIds.Root
-  fullName: DulcisX.Core.Enums.VisualStudio.CommonNodeIds.Root
-  nameWithType: CommonNodeIds.Root
-- uid: DulcisX.Core.Enums.VisualStudio.CommonNodeIds.Solution
-  name: Solution
-  href: api/DulcisX.Core.Enums.VisualStudio.CommonNodeIds.html#DulcisX_Core_Enums_VisualStudio_CommonNodeIds_Solution
-  commentId: F:DulcisX.Core.Enums.VisualStudio.CommonNodeIds.Solution
-  fullName: DulcisX.Core.Enums.VisualStudio.CommonNodeIds.Solution
-  nameWithType: CommonNodeIds.Solution
-- uid: DulcisX.Core.Enums.VisualStudio.CommonNodeIds.SolutionFolder
-  name: SolutionFolder
-  href: api/DulcisX.Core.Enums.VisualStudio.CommonNodeIds.html#DulcisX_Core_Enums_VisualStudio_CommonNodeIds_SolutionFolder
-  commentId: F:DulcisX.Core.Enums.VisualStudio.CommonNodeIds.SolutionFolder
-  fullName: DulcisX.Core.Enums.VisualStudio.CommonNodeIds.SolutionFolder
-  nameWithType: CommonNodeIds.SolutionFolder
-- uid: DulcisX.Core.Enums.VisualStudio.CommonStatusCodes
-  name: CommonStatusCodes
-  href: api/DulcisX.Core.Enums.VisualStudio.CommonStatusCodes.html
-  commentId: T:DulcisX.Core.Enums.VisualStudio.CommonStatusCodes
-  fullName: DulcisX.Core.Enums.VisualStudio.CommonStatusCodes
-  nameWithType: CommonStatusCodes
-- uid: DulcisX.Core.Enums.VisualStudio.CommonStatusCodes.Failure
-  name: Failure
-  href: api/DulcisX.Core.Enums.VisualStudio.CommonStatusCodes.html#DulcisX_Core_Enums_VisualStudio_CommonStatusCodes_Failure
-  commentId: F:DulcisX.Core.Enums.VisualStudio.CommonStatusCodes.Failure
-  fullName: DulcisX.Core.Enums.VisualStudio.CommonStatusCodes.Failure
-  nameWithType: CommonStatusCodes.Failure
-- uid: DulcisX.Core.Enums.VisualStudio.CommonStatusCodes.Success
-  name: Success
-  href: api/DulcisX.Core.Enums.VisualStudio.CommonStatusCodes.html#DulcisX_Core_Enums_VisualStudio_CommonStatusCodes_Success
-  commentId: F:DulcisX.Core.Enums.VisualStudio.CommonStatusCodes.Success
-  fullName: DulcisX.Core.Enums.VisualStudio.CommonStatusCodes.Success
-  nameWithType: CommonStatusCodes.Success
-- uid: DulcisX.Core.Enums.VisualStudio.CommonStreamKeys
-  name: CommonStreamKeys
-  href: api/DulcisX.Core.Enums.VisualStudio.CommonStreamKeys.html
-  commentId: T:DulcisX.Core.Enums.VisualStudio.CommonStreamKeys
-  fullName: DulcisX.Core.Enums.VisualStudio.CommonStreamKeys
-  nameWithType: CommonStreamKeys
-- uid: DulcisX.Core.Enums.VisualStudio.CommonStreamKeys.SolutionConfiguration
-  name: SolutionConfiguration
-  href: api/DulcisX.Core.Enums.VisualStudio.CommonStreamKeys.html#DulcisX_Core_Enums_VisualStudio_CommonStreamKeys_SolutionConfiguration
-  commentId: F:DulcisX.Core.Enums.VisualStudio.CommonStreamKeys.SolutionConfiguration
-  fullName: DulcisX.Core.Enums.VisualStudio.CommonStreamKeys.SolutionConfiguration
-  nameWithType: CommonStreamKeys.SolutionConfiguration
-- uid: DulcisX.Core.Enums.VisualStudio.OpenNodeAttribute
-  name: OpenNodeAttribute
-  href: api/DulcisX.Core.Enums.VisualStudio.OpenNodeAttribute.html
-  commentId: T:DulcisX.Core.Enums.VisualStudio.OpenNodeAttribute
-  fullName: DulcisX.Core.Enums.VisualStudio.OpenNodeAttribute
-  nameWithType: OpenNodeAttribute
-- uid: DulcisX.Core.Enums.VisualStudio.OpenNodeAttribute.AltHierarchyItemID
-  name: AltHierarchyItemID
-  href: api/DulcisX.Core.Enums.VisualStudio.OpenNodeAttribute.html#DulcisX_Core_Enums_VisualStudio_OpenNodeAttribute_AltHierarchyItemID
-  commentId: F:DulcisX.Core.Enums.VisualStudio.OpenNodeAttribute.AltHierarchyItemID
-  fullName: DulcisX.Core.Enums.VisualStudio.OpenNodeAttribute.AltHierarchyItemID
-  nameWithType: OpenNodeAttribute.AltHierarchyItemID
-- uid: DulcisX.Core.Enums.VisualStudio.OpenNodeAttribute.DocDataIsDirty
-  name: DocDataIsDirty
-  href: api/DulcisX.Core.Enums.VisualStudio.OpenNodeAttribute.html#DulcisX_Core_Enums_VisualStudio_OpenNodeAttribute_DocDataIsDirty
-  commentId: F:DulcisX.Core.Enums.VisualStudio.OpenNodeAttribute.DocDataIsDirty
-  fullName: DulcisX.Core.Enums.VisualStudio.OpenNodeAttribute.DocDataIsDirty
-  nameWithType: OpenNodeAttribute.DocDataIsDirty
-- uid: DulcisX.Core.Enums.VisualStudio.OpenNodeAttribute.DocDataIsNotDirty
-  name: DocDataIsNotDirty
-  href: api/DulcisX.Core.Enums.VisualStudio.OpenNodeAttribute.html#DulcisX_Core_Enums_VisualStudio_OpenNodeAttribute_DocDataIsNotDirty
-  commentId: F:DulcisX.Core.Enums.VisualStudio.OpenNodeAttribute.DocDataIsNotDirty
-  fullName: DulcisX.Core.Enums.VisualStudio.OpenNodeAttribute.DocDataIsNotDirty
-  nameWithType: OpenNodeAttribute.DocDataIsNotDirty
-- uid: DulcisX.Core.Enums.VisualStudio.OpenNodeAttribute.DocDataIsNotReadOnly
-  name: DocDataIsNotReadOnly
-  href: api/DulcisX.Core.Enums.VisualStudio.OpenNodeAttribute.html#DulcisX_Core_Enums_VisualStudio_OpenNodeAttribute_DocDataIsNotReadOnly
-  commentId: F:DulcisX.Core.Enums.VisualStudio.OpenNodeAttribute.DocDataIsNotReadOnly
-  fullName: DulcisX.Core.Enums.VisualStudio.OpenNodeAttribute.DocDataIsNotReadOnly
-  nameWithType: OpenNodeAttribute.DocDataIsNotReadOnly
-- uid: DulcisX.Core.Enums.VisualStudio.OpenNodeAttribute.DocDataIsReadOnly
-  name: DocDataIsReadOnly
-  href: api/DulcisX.Core.Enums.VisualStudio.OpenNodeAttribute.html#DulcisX_Core_Enums_VisualStudio_OpenNodeAttribute_DocDataIsReadOnly
-  commentId: F:DulcisX.Core.Enums.VisualStudio.OpenNodeAttribute.DocDataIsReadOnly
-  fullName: DulcisX.Core.Enums.VisualStudio.OpenNodeAttribute.DocDataIsReadOnly
-  nameWithType: OpenNodeAttribute.DocDataIsReadOnly
-- uid: DulcisX.Core.Enums.VisualStudio.OpenNodeAttribute.DocDataReloaded
-  name: DocDataReloaded
-  href: api/DulcisX.Core.Enums.VisualStudio.OpenNodeAttribute.html#DulcisX_Core_Enums_VisualStudio_OpenNodeAttribute_DocDataReloaded
-  commentId: F:DulcisX.Core.Enums.VisualStudio.OpenNodeAttribute.DocDataReloaded
-  fullName: DulcisX.Core.Enums.VisualStudio.OpenNodeAttribute.DocDataReloaded
-  nameWithType: OpenNodeAttribute.DocDataReloaded
-- uid: DulcisX.Core.Enums.VisualStudio.OpenNodeAttribute.DocumentInitialized
-  name: DocumentInitialized
-  href: api/DulcisX.Core.Enums.VisualStudio.OpenNodeAttribute.html#DulcisX_Core_Enums_VisualStudio_OpenNodeAttribute_DocumentInitialized
-  commentId: F:DulcisX.Core.Enums.VisualStudio.OpenNodeAttribute.DocumentInitialized
-  fullName: DulcisX.Core.Enums.VisualStudio.OpenNodeAttribute.DocumentInitialized
-  nameWithType: OpenNodeAttribute.DocumentInitialized
-- uid: DulcisX.Core.Enums.VisualStudio.OpenNodeAttribute.Hierarchy
-  name: Hierarchy
-  href: api/DulcisX.Core.Enums.VisualStudio.OpenNodeAttribute.html#DulcisX_Core_Enums_VisualStudio_OpenNodeAttribute_Hierarchy
-  commentId: F:DulcisX.Core.Enums.VisualStudio.OpenNodeAttribute.Hierarchy
-  fullName: DulcisX.Core.Enums.VisualStudio.OpenNodeAttribute.Hierarchy
-  nameWithType: OpenNodeAttribute.Hierarchy
-- uid: DulcisX.Core.Enums.VisualStudio.OpenNodeAttribute.HierarchyInitialized
-  name: HierarchyInitialized
-  href: api/DulcisX.Core.Enums.VisualStudio.OpenNodeAttribute.html#DulcisX_Core_Enums_VisualStudio_OpenNodeAttribute_HierarchyInitialized
-  commentId: F:DulcisX.Core.Enums.VisualStudio.OpenNodeAttribute.HierarchyInitialized
-  fullName: DulcisX.Core.Enums.VisualStudio.OpenNodeAttribute.HierarchyInitialized
-  nameWithType: OpenNodeAttribute.HierarchyInitialized
-- uid: DulcisX.Core.Enums.VisualStudio.OpenNodeAttribute.ItemID
-  name: ItemID
-  href: api/DulcisX.Core.Enums.VisualStudio.OpenNodeAttribute.html#DulcisX_Core_Enums_VisualStudio_OpenNodeAttribute_ItemID
-  commentId: F:DulcisX.Core.Enums.VisualStudio.OpenNodeAttribute.ItemID
-  fullName: DulcisX.Core.Enums.VisualStudio.OpenNodeAttribute.ItemID
-  nameWithType: OpenNodeAttribute.ItemID
-- uid: DulcisX.Core.Enums.VisualStudio.OpenNodeAttribute.MkDocument
-  name: MkDocument
-  href: api/DulcisX.Core.Enums.VisualStudio.OpenNodeAttribute.html#DulcisX_Core_Enums_VisualStudio_OpenNodeAttribute_MkDocument
-  commentId: F:DulcisX.Core.Enums.VisualStudio.OpenNodeAttribute.MkDocument
-  fullName: DulcisX.Core.Enums.VisualStudio.OpenNodeAttribute.MkDocument
-  nameWithType: OpenNodeAttribute.MkDocument
-- uid: DulcisX.Core.Enums.VisualStudio.OpenNodeAttribute.NOTIFYDOCCHANGEDMASK
-  name: NOTIFYDOCCHANGEDMASK
-  href: api/DulcisX.Core.Enums.VisualStudio.OpenNodeAttribute.html#DulcisX_Core_Enums_VisualStudio_OpenNodeAttribute_NOTIFYDOCCHANGEDMASK
-  commentId: F:DulcisX.Core.Enums.VisualStudio.OpenNodeAttribute.NOTIFYDOCCHANGEDMASK
-  fullName: DulcisX.Core.Enums.VisualStudio.OpenNodeAttribute.NOTIFYDOCCHANGEDMASK
-  nameWithType: OpenNodeAttribute.NOTIFYDOCCHANGEDMASK
-- uid: DulcisX.Core.Enums.VisualStudio.OpenNodeAttribute.NotifyDocChangedXMask
-  name: NotifyDocChangedXMask
-  href: api/DulcisX.Core.Enums.VisualStudio.OpenNodeAttribute.html#DulcisX_Core_Enums_VisualStudio_OpenNodeAttribute_NotifyDocChangedXMask
-  commentId: F:DulcisX.Core.Enums.VisualStudio.OpenNodeAttribute.NotifyDocChangedXMask
-  fullName: DulcisX.Core.Enums.VisualStudio.OpenNodeAttribute.NotifyDocChangedXMask
-  nameWithType: OpenNodeAttribute.NotifyDocChangedXMask
-- uid: DulcisX.Core.Enums.VisualStudio.PhysicalNodeRemovedFlags
-  name: PhysicalNodeRemovedFlags
-  href: api/DulcisX.Core.Enums.VisualStudio.PhysicalNodeRemovedFlags.html
-  commentId: T:DulcisX.Core.Enums.VisualStudio.PhysicalNodeRemovedFlags
-  fullName: DulcisX.Core.Enums.VisualStudio.PhysicalNodeRemovedFlags
-  nameWithType: PhysicalNodeRemovedFlags
-- uid: DulcisX.Core.Enums.VisualStudio.PhysicalNodeRemovedFlags.Deleted
-  name: Deleted
-  href: api/DulcisX.Core.Enums.VisualStudio.PhysicalNodeRemovedFlags.html#DulcisX_Core_Enums_VisualStudio_PhysicalNodeRemovedFlags_Deleted
-  commentId: F:DulcisX.Core.Enums.VisualStudio.PhysicalNodeRemovedFlags.Deleted
-  fullName: DulcisX.Core.Enums.VisualStudio.PhysicalNodeRemovedFlags.Deleted
-  nameWithType: PhysicalNodeRemovedFlags.Deleted
-- uid: DulcisX.Core.Enums.VisualStudio.PhysicalNodeRemovedFlags.Removed
-  name: Removed
-  href: api/DulcisX.Core.Enums.VisualStudio.PhysicalNodeRemovedFlags.html#DulcisX_Core_Enums_VisualStudio_PhysicalNodeRemovedFlags_Removed
-  commentId: F:DulcisX.Core.Enums.VisualStudio.PhysicalNodeRemovedFlags.Removed
-  fullName: DulcisX.Core.Enums.VisualStudio.PhysicalNodeRemovedFlags.Removed
-  nameWithType: PhysicalNodeRemovedFlags.Removed
 - uid: DulcisX.Core.EventSink
   name: EventSink
   href: api/DulcisX.Core.EventSink.html
@@ -1213,6 +1399,19 @@ references:
   isSpec: "True"
   fullName: DulcisX.Core.PackageX.VSInstance
   nameWithType: PackageX.VSInstance
+- uid: DulcisX.Core.PackageX.VSUIInstance
+  name: VSUIInstance
+  href: api/DulcisX.Core.PackageX.html#DulcisX_Core_PackageX_VSUIInstance
+  commentId: P:DulcisX.Core.PackageX.VSUIInstance
+  fullName: DulcisX.Core.PackageX.VSUIInstance
+  nameWithType: PackageX.VSUIInstance
+- uid: DulcisX.Core.PackageX.VSUIInstance*
+  name: VSUIInstance
+  href: api/DulcisX.Core.PackageX.html#DulcisX_Core_PackageX_VSUIInstance_
+  commentId: Overload:DulcisX.Core.PackageX.VSUIInstance
+  isSpec: "True"
+  fullName: DulcisX.Core.PackageX.VSUIInstance
+  nameWithType: PackageX.VSUIInstance
 - uid: DulcisX.Core.PackageX.WebBrowser
   name: WebBrowser
   href: api/DulcisX.Core.PackageX.html#DulcisX_Core_PackageX_WebBrowser
@@ -1232,6 +1431,19 @@ references:
   commentId: T:DulcisX.Core.VisualStudioInstance
   fullName: DulcisX.Core.VisualStudioInstance
   nameWithType: VisualStudioInstance
+- uid: DulcisX.Core.VisualStudioInstance.GetFullReleaseName
+  name: GetFullReleaseName()
+  href: api/DulcisX.Core.VisualStudioInstance.html#DulcisX_Core_VisualStudioInstance_GetFullReleaseName
+  commentId: M:DulcisX.Core.VisualStudioInstance.GetFullReleaseName
+  fullName: DulcisX.Core.VisualStudioInstance.GetFullReleaseName()
+  nameWithType: VisualStudioInstance.GetFullReleaseName()
+- uid: DulcisX.Core.VisualStudioInstance.GetFullReleaseName*
+  name: GetFullReleaseName
+  href: api/DulcisX.Core.VisualStudioInstance.html#DulcisX_Core_VisualStudioInstance_GetFullReleaseName_
+  commentId: Overload:DulcisX.Core.VisualStudioInstance.GetFullReleaseName
+  isSpec: "True"
+  fullName: DulcisX.Core.VisualStudioInstance.GetFullReleaseName
+  nameWithType: VisualStudioInstance.GetFullReleaseName
 - uid: DulcisX.Core.VisualStudioInstance.GetInstallDirectory
   name: GetInstallDirectory()
   href: api/DulcisX.Core.VisualStudioInstance.html#DulcisX_Core_VisualStudioInstance_GetInstallDirectory
@@ -1297,6 +1509,32 @@ references:
   isSpec: "True"
   fullName: DulcisX.Core.VisualStudioInstance.GetReleaseVersion
   nameWithType: VisualStudioInstance.GetReleaseVersion
+- uid: DulcisX.Core.VisualStudioInstance.GetShortReleaseName
+  name: GetShortReleaseName()
+  href: api/DulcisX.Core.VisualStudioInstance.html#DulcisX_Core_VisualStudioInstance_GetShortReleaseName
+  commentId: M:DulcisX.Core.VisualStudioInstance.GetShortReleaseName
+  fullName: DulcisX.Core.VisualStudioInstance.GetShortReleaseName()
+  nameWithType: VisualStudioInstance.GetShortReleaseName()
+- uid: DulcisX.Core.VisualStudioInstance.GetShortReleaseName*
+  name: GetShortReleaseName
+  href: api/DulcisX.Core.VisualStudioInstance.html#DulcisX_Core_VisualStudioInstance_GetShortReleaseName_
+  commentId: Overload:DulcisX.Core.VisualStudioInstance.GetShortReleaseName
+  isSpec: "True"
+  fullName: DulcisX.Core.VisualStudioInstance.GetShortReleaseName
+  nameWithType: VisualStudioInstance.GetShortReleaseName
+- uid: DulcisX.Core.VisualStudioInstance.GetSKUInfo
+  name: GetSKUInfo()
+  href: api/DulcisX.Core.VisualStudioInstance.html#DulcisX_Core_VisualStudioInstance_GetSKUInfo
+  commentId: M:DulcisX.Core.VisualStudioInstance.GetSKUInfo
+  fullName: DulcisX.Core.VisualStudioInstance.GetSKUInfo()
+  nameWithType: VisualStudioInstance.GetSKUInfo()
+- uid: DulcisX.Core.VisualStudioInstance.GetSKUInfo*
+  name: GetSKUInfo
+  href: api/DulcisX.Core.VisualStudioInstance.html#DulcisX_Core_VisualStudioInstance_GetSKUInfo_
+  commentId: Overload:DulcisX.Core.VisualStudioInstance.GetSKUInfo
+  isSpec: "True"
+  fullName: DulcisX.Core.VisualStudioInstance.GetSKUInfo
+  nameWithType: VisualStudioInstance.GetSKUInfo
 - uid: DulcisX.Core.VisualStudioInstance.GetVisualStudioDirectory
   name: GetVisualStudioDirectory()
   href: api/DulcisX.Core.VisualStudioInstance.html#DulcisX_Core_VisualStudioInstance_GetVisualStudioDirectory
@@ -1310,6 +1548,19 @@ references:
   isSpec: "True"
   fullName: DulcisX.Core.VisualStudioInstance.GetVisualStudioDirectory
   nameWithType: VisualStudioInstance.GetVisualStudioDirectory
+- uid: DulcisX.Core.VisualStudioInstance.IsAcademicVersion
+  name: IsAcademicVersion()
+  href: api/DulcisX.Core.VisualStudioInstance.html#DulcisX_Core_VisualStudioInstance_IsAcademicVersion
+  commentId: M:DulcisX.Core.VisualStudioInstance.IsAcademicVersion
+  fullName: DulcisX.Core.VisualStudioInstance.IsAcademicVersion()
+  nameWithType: VisualStudioInstance.IsAcademicVersion()
+- uid: DulcisX.Core.VisualStudioInstance.IsAcademicVersion*
+  name: IsAcademicVersion
+  href: api/DulcisX.Core.VisualStudioInstance.html#DulcisX_Core_VisualStudioInstance_IsAcademicVersion_
+  commentId: Overload:DulcisX.Core.VisualStudioInstance.IsAcademicVersion
+  isSpec: "True"
+  fullName: DulcisX.Core.VisualStudioInstance.IsAcademicVersion
+  nameWithType: VisualStudioInstance.IsAcademicVersion
 - uid: DulcisX.Core.VisualStudioInstance.IsElevatedInstance
   name: IsElevatedInstance()
   href: api/DulcisX.Core.VisualStudioInstance.html#DulcisX_Core_VisualStudioInstance_IsElevatedInstance
@@ -1349,6 +1600,25 @@ references:
   isSpec: "True"
   fullName: DulcisX.Core.VisualStudioInstance.RestartInstance
   nameWithType: VisualStudioInstance.RestartInstance
+- uid: DulcisX.Core.VisualStudioUIInstance
+  name: VisualStudioUIInstance
+  href: api/DulcisX.Core.VisualStudioUIInstance.html
+  commentId: T:DulcisX.Core.VisualStudioUIInstance
+  fullName: DulcisX.Core.VisualStudioUIInstance
+  nameWithType: VisualStudioUIInstance
+- uid: DulcisX.Core.VisualStudioUIInstance.ShowMessageBox(System.String,System.String,DulcisX.Core.Enums.MessageBoxButton,System.Int32,DulcisX.Core.Enums.MessageBoxIcon)
+  name: ShowMessageBox(String, String, MessageBoxButton, Int32, MessageBoxIcon)
+  href: api/DulcisX.Core.VisualStudioUIInstance.html#DulcisX_Core_VisualStudioUIInstance_ShowMessageBox_System_String_System_String_DulcisX_Core_Enums_MessageBoxButton_System_Int32_DulcisX_Core_Enums_MessageBoxIcon_
+  commentId: M:DulcisX.Core.VisualStudioUIInstance.ShowMessageBox(System.String,System.String,DulcisX.Core.Enums.MessageBoxButton,System.Int32,DulcisX.Core.Enums.MessageBoxIcon)
+  fullName: DulcisX.Core.VisualStudioUIInstance.ShowMessageBox(System.String, System.String, DulcisX.Core.Enums.MessageBoxButton, System.Int32, DulcisX.Core.Enums.MessageBoxIcon)
+  nameWithType: VisualStudioUIInstance.ShowMessageBox(String, String, MessageBoxButton, Int32, MessageBoxIcon)
+- uid: DulcisX.Core.VisualStudioUIInstance.ShowMessageBox*
+  name: ShowMessageBox
+  href: api/DulcisX.Core.VisualStudioUIInstance.html#DulcisX_Core_VisualStudioUIInstance_ShowMessageBox_
+  commentId: Overload:DulcisX.Core.VisualStudioUIInstance.ShowMessageBox
+  isSpec: "True"
+  fullName: DulcisX.Core.VisualStudioUIInstance.ShowMessageBox
+  nameWithType: VisualStudioUIInstance.ShowMessageBox
 - uid: DulcisX.Exceptions
   name: DulcisX.Exceptions
   href: api/DulcisX.Exceptions.html
@@ -1628,6 +1898,25 @@ references:
   isSpec: "True"
   fullName: DulcisX.Nodes.BaseNode.AsHierarchyItem
   nameWithType: BaseNode.AsHierarchyItem
+- uid: DulcisX.Nodes.BaseNode.Equals(DulcisX.Nodes.IBaseNode)
+  name: Equals(IBaseNode)
+  href: api/DulcisX.Nodes.BaseNode.html#DulcisX_Nodes_BaseNode_Equals_DulcisX_Nodes_IBaseNode_
+  commentId: M:DulcisX.Nodes.BaseNode.Equals(DulcisX.Nodes.IBaseNode)
+  fullName: DulcisX.Nodes.BaseNode.Equals(DulcisX.Nodes.IBaseNode)
+  nameWithType: BaseNode.Equals(IBaseNode)
+- uid: DulcisX.Nodes.BaseNode.Equals(System.Object)
+  name: Equals(Object)
+  href: api/DulcisX.Nodes.BaseNode.html#DulcisX_Nodes_BaseNode_Equals_System_Object_
+  commentId: M:DulcisX.Nodes.BaseNode.Equals(System.Object)
+  fullName: DulcisX.Nodes.BaseNode.Equals(System.Object)
+  nameWithType: BaseNode.Equals(Object)
+- uid: DulcisX.Nodes.BaseNode.Equals*
+  name: Equals
+  href: api/DulcisX.Nodes.BaseNode.html#DulcisX_Nodes_BaseNode_Equals_
+  commentId: Overload:DulcisX.Nodes.BaseNode.Equals
+  isSpec: "True"
+  fullName: DulcisX.Nodes.BaseNode.Equals
+  nameWithType: BaseNode.Equals
 - uid: DulcisX.Nodes.BaseNode.GetChildren
   name: GetChildren()
   href: api/DulcisX.Nodes.BaseNode.html#DulcisX_Nodes_BaseNode_GetChildren
@@ -1654,6 +1943,19 @@ references:
   isSpec: "True"
   fullName: DulcisX.Nodes.BaseNode.GetDisplayName
   nameWithType: BaseNode.GetDisplayName
+- uid: DulcisX.Nodes.BaseNode.GetHashCode
+  name: GetHashCode()
+  href: api/DulcisX.Nodes.BaseNode.html#DulcisX_Nodes_BaseNode_GetHashCode
+  commentId: M:DulcisX.Nodes.BaseNode.GetHashCode
+  fullName: DulcisX.Nodes.BaseNode.GetHashCode()
+  nameWithType: BaseNode.GetHashCode()
+- uid: DulcisX.Nodes.BaseNode.GetHashCode*
+  name: GetHashCode
+  href: api/DulcisX.Nodes.BaseNode.html#DulcisX_Nodes_BaseNode_GetHashCode_
+  commentId: Overload:DulcisX.Nodes.BaseNode.GetHashCode
+  isSpec: "True"
+  fullName: DulcisX.Nodes.BaseNode.GetHashCode
+  nameWithType: BaseNode.GetHashCode
 - uid: DulcisX.Nodes.BaseNode.GetParent
   name: GetParent()
   href: api/DulcisX.Nodes.BaseNode.html#DulcisX_Nodes_BaseNode_GetParent
@@ -1673,19 +1975,6 @@ references:
   isSpec: "True"
   fullName: DulcisX.Nodes.BaseNode.GetParent
   nameWithType: BaseNode.GetParent
-- uid: DulcisX.Nodes.BaseNode.IsTypeMatching(DulcisX.Core.Enums.NodeTypes)
-  name: IsTypeMatching(NodeTypes)
-  href: api/DulcisX.Nodes.BaseNode.html#DulcisX_Nodes_BaseNode_IsTypeMatching_DulcisX_Core_Enums_NodeTypes_
-  commentId: M:DulcisX.Nodes.BaseNode.IsTypeMatching(DulcisX.Core.Enums.NodeTypes)
-  fullName: DulcisX.Nodes.BaseNode.IsTypeMatching(DulcisX.Core.Enums.NodeTypes)
-  nameWithType: BaseNode.IsTypeMatching(NodeTypes)
-- uid: DulcisX.Nodes.BaseNode.IsTypeMatching*
-  name: IsTypeMatching
-  href: api/DulcisX.Nodes.BaseNode.html#DulcisX_Nodes_BaseNode_IsTypeMatching_
-  commentId: Overload:DulcisX.Nodes.BaseNode.IsTypeMatching
-  isSpec: "True"
-  fullName: DulcisX.Nodes.BaseNode.IsTypeMatching
-  nameWithType: BaseNode.IsTypeMatching
 - uid: DulcisX.Nodes.BaseNode.ItemId
   name: ItemId
   href: api/DulcisX.Nodes.BaseNode.html#DulcisX_Nodes_BaseNode_ItemId
@@ -1699,19 +1988,56 @@ references:
   isSpec: "True"
   fullName: DulcisX.Nodes.BaseNode.ItemId
   nameWithType: BaseNode.ItemId
-- uid: DulcisX.Nodes.BaseNode.NodeType
-  name: NodeType
-  href: api/DulcisX.Nodes.BaseNode.html#DulcisX_Nodes_BaseNode_NodeType
-  commentId: P:DulcisX.Nodes.BaseNode.NodeType
-  fullName: DulcisX.Nodes.BaseNode.NodeType
-  nameWithType: BaseNode.NodeType
-- uid: DulcisX.Nodes.BaseNode.NodeType*
-  name: NodeType
-  href: api/DulcisX.Nodes.BaseNode.html#DulcisX_Nodes_BaseNode_NodeType_
-  commentId: Overload:DulcisX.Nodes.BaseNode.NodeType
+- uid: DulcisX.Nodes.BaseNode.op_Equality(DulcisX.Nodes.BaseNode,DulcisX.Nodes.BaseNode)
+  name: Equality(BaseNode, BaseNode)
+  href: api/DulcisX.Nodes.BaseNode.html#DulcisX_Nodes_BaseNode_op_Equality_DulcisX_Nodes_BaseNode_DulcisX_Nodes_BaseNode_
+  commentId: M:DulcisX.Nodes.BaseNode.op_Equality(DulcisX.Nodes.BaseNode,DulcisX.Nodes.BaseNode)
+  fullName: DulcisX.Nodes.BaseNode.Equality(DulcisX.Nodes.BaseNode, DulcisX.Nodes.BaseNode)
+  nameWithType: BaseNode.Equality(BaseNode, BaseNode)
+- uid: DulcisX.Nodes.BaseNode.op_Equality(DulcisX.Nodes.BaseNode,DulcisX.Nodes.IBaseNode)
+  name: Equality(BaseNode, IBaseNode)
+  href: api/DulcisX.Nodes.BaseNode.html#DulcisX_Nodes_BaseNode_op_Equality_DulcisX_Nodes_BaseNode_DulcisX_Nodes_IBaseNode_
+  commentId: M:DulcisX.Nodes.BaseNode.op_Equality(DulcisX.Nodes.BaseNode,DulcisX.Nodes.IBaseNode)
+  fullName: DulcisX.Nodes.BaseNode.Equality(DulcisX.Nodes.BaseNode, DulcisX.Nodes.IBaseNode)
+  nameWithType: BaseNode.Equality(BaseNode, IBaseNode)
+- uid: DulcisX.Nodes.BaseNode.op_Equality(DulcisX.Nodes.IBaseNode,DulcisX.Nodes.BaseNode)
+  name: Equality(IBaseNode, BaseNode)
+  href: api/DulcisX.Nodes.BaseNode.html#DulcisX_Nodes_BaseNode_op_Equality_DulcisX_Nodes_IBaseNode_DulcisX_Nodes_BaseNode_
+  commentId: M:DulcisX.Nodes.BaseNode.op_Equality(DulcisX.Nodes.IBaseNode,DulcisX.Nodes.BaseNode)
+  fullName: DulcisX.Nodes.BaseNode.Equality(DulcisX.Nodes.IBaseNode, DulcisX.Nodes.BaseNode)
+  nameWithType: BaseNode.Equality(IBaseNode, BaseNode)
+- uid: DulcisX.Nodes.BaseNode.op_Equality*
+  name: Equality
+  href: api/DulcisX.Nodes.BaseNode.html#DulcisX_Nodes_BaseNode_op_Equality_
+  commentId: Overload:DulcisX.Nodes.BaseNode.op_Equality
   isSpec: "True"
-  fullName: DulcisX.Nodes.BaseNode.NodeType
-  nameWithType: BaseNode.NodeType
+  fullName: DulcisX.Nodes.BaseNode.Equality
+  nameWithType: BaseNode.Equality
+- uid: DulcisX.Nodes.BaseNode.op_Inequality(DulcisX.Nodes.BaseNode,DulcisX.Nodes.BaseNode)
+  name: Inequality(BaseNode, BaseNode)
+  href: api/DulcisX.Nodes.BaseNode.html#DulcisX_Nodes_BaseNode_op_Inequality_DulcisX_Nodes_BaseNode_DulcisX_Nodes_BaseNode_
+  commentId: M:DulcisX.Nodes.BaseNode.op_Inequality(DulcisX.Nodes.BaseNode,DulcisX.Nodes.BaseNode)
+  fullName: DulcisX.Nodes.BaseNode.Inequality(DulcisX.Nodes.BaseNode, DulcisX.Nodes.BaseNode)
+  nameWithType: BaseNode.Inequality(BaseNode, BaseNode)
+- uid: DulcisX.Nodes.BaseNode.op_Inequality(DulcisX.Nodes.BaseNode,DulcisX.Nodes.IBaseNode)
+  name: Inequality(BaseNode, IBaseNode)
+  href: api/DulcisX.Nodes.BaseNode.html#DulcisX_Nodes_BaseNode_op_Inequality_DulcisX_Nodes_BaseNode_DulcisX_Nodes_IBaseNode_
+  commentId: M:DulcisX.Nodes.BaseNode.op_Inequality(DulcisX.Nodes.BaseNode,DulcisX.Nodes.IBaseNode)
+  fullName: DulcisX.Nodes.BaseNode.Inequality(DulcisX.Nodes.BaseNode, DulcisX.Nodes.IBaseNode)
+  nameWithType: BaseNode.Inequality(BaseNode, IBaseNode)
+- uid: DulcisX.Nodes.BaseNode.op_Inequality(DulcisX.Nodes.IBaseNode,DulcisX.Nodes.BaseNode)
+  name: Inequality(IBaseNode, BaseNode)
+  href: api/DulcisX.Nodes.BaseNode.html#DulcisX_Nodes_BaseNode_op_Inequality_DulcisX_Nodes_IBaseNode_DulcisX_Nodes_BaseNode_
+  commentId: M:DulcisX.Nodes.BaseNode.op_Inequality(DulcisX.Nodes.IBaseNode,DulcisX.Nodes.BaseNode)
+  fullName: DulcisX.Nodes.BaseNode.Inequality(DulcisX.Nodes.IBaseNode, DulcisX.Nodes.BaseNode)
+  nameWithType: BaseNode.Inequality(IBaseNode, BaseNode)
+- uid: DulcisX.Nodes.BaseNode.op_Inequality*
+  name: Inequality
+  href: api/DulcisX.Nodes.BaseNode.html#DulcisX_Nodes_BaseNode_op_Inequality_
+  commentId: Overload:DulcisX.Nodes.BaseNode.op_Inequality
+  isSpec: "True"
+  fullName: DulcisX.Nodes.BaseNode.Inequality
+  nameWithType: BaseNode.Inequality
 - uid: DulcisX.Nodes.BaseNode.ParentSolution
   name: ParentSolution
   href: api/DulcisX.Nodes.BaseNode.html#DulcisX_Nodes_BaseNode_ParentSolution
@@ -1884,6 +2210,19 @@ references:
   isSpec: "True"
   fullName: DulcisX.Nodes.DocumentNode.GetCopyToOutputDirectory
   nameWithType: DocumentNode.GetCopyToOutputDirectory
+- uid: DulcisX.Nodes.DocumentNode.GetDirectoryName
+  name: GetDirectoryName()
+  href: api/DulcisX.Nodes.DocumentNode.html#DulcisX_Nodes_DocumentNode_GetDirectoryName
+  commentId: M:DulcisX.Nodes.DocumentNode.GetDirectoryName
+  fullName: DulcisX.Nodes.DocumentNode.GetDirectoryName()
+  nameWithType: DocumentNode.GetDirectoryName()
+- uid: DulcisX.Nodes.DocumentNode.GetDirectoryName*
+  name: GetDirectoryName
+  href: api/DulcisX.Nodes.DocumentNode.html#DulcisX_Nodes_DocumentNode_GetDirectoryName_
+  commentId: Overload:DulcisX.Nodes.DocumentNode.GetDirectoryName
+  isSpec: "True"
+  fullName: DulcisX.Nodes.DocumentNode.GetDirectoryName
+  nameWithType: DocumentNode.GetDirectoryName
 - uid: DulcisX.Nodes.DocumentNode.GetDocumentType
   name: GetDocumentType()
   href: api/DulcisX.Nodes.DocumentNode.html#DulcisX_Nodes_DocumentNode_GetDocumentType
@@ -1936,19 +2275,6 @@ references:
   isSpec: "True"
   fullName: DulcisX.Nodes.DocumentNode.IsReadonly
   nameWithType: DocumentNode.IsReadonly
-- uid: DulcisX.Nodes.DocumentNode.NodeType
-  name: NodeType
-  href: api/DulcisX.Nodes.DocumentNode.html#DulcisX_Nodes_DocumentNode_NodeType
-  commentId: P:DulcisX.Nodes.DocumentNode.NodeType
-  fullName: DulcisX.Nodes.DocumentNode.NodeType
-  nameWithType: DocumentNode.NodeType
-- uid: DulcisX.Nodes.DocumentNode.NodeType*
-  name: NodeType
-  href: api/DulcisX.Nodes.DocumentNode.html#DulcisX_Nodes_DocumentNode_NodeType_
-  commentId: Overload:DulcisX.Nodes.DocumentNode.NodeType
-  isSpec: "True"
-  fullName: DulcisX.Nodes.DocumentNode.NodeType
-  nameWithType: DocumentNode.NodeType
 - uid: DulcisX.Nodes.DocumentNode.Rename(System.String)
   name: Rename(String)
   href: api/DulcisX.Nodes.DocumentNode.html#DulcisX_Nodes_DocumentNode_Rename_System_String_
@@ -2552,6 +2878,19 @@ references:
   isSpec: "True"
   fullName: DulcisX.Nodes.FolderNode.FolderNode
   nameWithType: FolderNode.FolderNode
+- uid: DulcisX.Nodes.FolderNode.GetDirectoryName
+  name: GetDirectoryName()
+  href: api/DulcisX.Nodes.FolderNode.html#DulcisX_Nodes_FolderNode_GetDirectoryName
+  commentId: M:DulcisX.Nodes.FolderNode.GetDirectoryName
+  fullName: DulcisX.Nodes.FolderNode.GetDirectoryName()
+  nameWithType: FolderNode.GetDirectoryName()
+- uid: DulcisX.Nodes.FolderNode.GetDirectoryName*
+  name: GetDirectoryName
+  href: api/DulcisX.Nodes.FolderNode.html#DulcisX_Nodes_FolderNode_GetDirectoryName_
+  commentId: Overload:DulcisX.Nodes.FolderNode.GetDirectoryName
+  isSpec: "True"
+  fullName: DulcisX.Nodes.FolderNode.GetDirectoryName
+  nameWithType: FolderNode.GetDirectoryName
 - uid: DulcisX.Nodes.FolderNode.GetFileName
   name: GetFileName()
   href: api/DulcisX.Nodes.FolderNode.html#DulcisX_Nodes_FolderNode_GetFileName
@@ -2578,19 +2917,6 @@ references:
   isSpec: "True"
   fullName: DulcisX.Nodes.FolderNode.GetFullName
   nameWithType: FolderNode.GetFullName
-- uid: DulcisX.Nodes.FolderNode.NodeType
-  name: NodeType
-  href: api/DulcisX.Nodes.FolderNode.html#DulcisX_Nodes_FolderNode_NodeType
-  commentId: P:DulcisX.Nodes.FolderNode.NodeType
-  fullName: DulcisX.Nodes.FolderNode.NodeType
-  nameWithType: FolderNode.NodeType
-- uid: DulcisX.Nodes.FolderNode.NodeType*
-  name: NodeType
-  href: api/DulcisX.Nodes.FolderNode.html#DulcisX_Nodes_FolderNode_NodeType_
-  commentId: Overload:DulcisX.Nodes.FolderNode.NodeType
-  isSpec: "True"
-  fullName: DulcisX.Nodes.FolderNode.NodeType
-  nameWithType: FolderNode.NodeType
 - uid: DulcisX.Nodes.IBaseNode
   name: IBaseNode
   href: api/DulcisX.Nodes.IBaseNode.html
@@ -2642,19 +2968,6 @@ references:
   isSpec: "True"
   fullName: DulcisX.Nodes.IBaseNode.GetParent
   nameWithType: IBaseNode.GetParent
-- uid: DulcisX.Nodes.IBaseNode.IsTypeMatching(DulcisX.Core.Enums.NodeTypes)
-  name: IsTypeMatching(NodeTypes)
-  href: api/DulcisX.Nodes.IBaseNode.html#DulcisX_Nodes_IBaseNode_IsTypeMatching_DulcisX_Core_Enums_NodeTypes_
-  commentId: M:DulcisX.Nodes.IBaseNode.IsTypeMatching(DulcisX.Core.Enums.NodeTypes)
-  fullName: DulcisX.Nodes.IBaseNode.IsTypeMatching(DulcisX.Core.Enums.NodeTypes)
-  nameWithType: IBaseNode.IsTypeMatching(NodeTypes)
-- uid: DulcisX.Nodes.IBaseNode.IsTypeMatching*
-  name: IsTypeMatching
-  href: api/DulcisX.Nodes.IBaseNode.html#DulcisX_Nodes_IBaseNode_IsTypeMatching_
-  commentId: Overload:DulcisX.Nodes.IBaseNode.IsTypeMatching
-  isSpec: "True"
-  fullName: DulcisX.Nodes.IBaseNode.IsTypeMatching
-  nameWithType: IBaseNode.IsTypeMatching
 - uid: DulcisX.Nodes.IBaseNode.ItemId
   name: ItemId
   href: api/DulcisX.Nodes.IBaseNode.html#DulcisX_Nodes_IBaseNode_ItemId
@@ -2668,19 +2981,6 @@ references:
   isSpec: "True"
   fullName: DulcisX.Nodes.IBaseNode.ItemId
   nameWithType: IBaseNode.ItemId
-- uid: DulcisX.Nodes.IBaseNode.NodeType
-  name: NodeType
-  href: api/DulcisX.Nodes.IBaseNode.html#DulcisX_Nodes_IBaseNode_NodeType
-  commentId: P:DulcisX.Nodes.IBaseNode.NodeType
-  fullName: DulcisX.Nodes.IBaseNode.NodeType
-  nameWithType: IBaseNode.NodeType
-- uid: DulcisX.Nodes.IBaseNode.NodeType*
-  name: NodeType
-  href: api/DulcisX.Nodes.IBaseNode.html#DulcisX_Nodes_IBaseNode_NodeType_
-  commentId: Overload:DulcisX.Nodes.IBaseNode.NodeType
-  isSpec: "True"
-  fullName: DulcisX.Nodes.IBaseNode.NodeType
-  nameWithType: IBaseNode.NodeType
 - uid: DulcisX.Nodes.IBaseNode.ParentSolution
   name: ParentSolution
   href: api/DulcisX.Nodes.IBaseNode.html#DulcisX_Nodes_IBaseNode_ParentSolution
@@ -2732,6 +3032,19 @@ references:
   commentId: T:DulcisX.Nodes.IPhysicalNode
   fullName: DulcisX.Nodes.IPhysicalNode
   nameWithType: IPhysicalNode
+- uid: DulcisX.Nodes.IPhysicalNode.GetDirectoryName
+  name: GetDirectoryName()
+  href: api/DulcisX.Nodes.IPhysicalNode.html#DulcisX_Nodes_IPhysicalNode_GetDirectoryName
+  commentId: M:DulcisX.Nodes.IPhysicalNode.GetDirectoryName
+  fullName: DulcisX.Nodes.IPhysicalNode.GetDirectoryName()
+  nameWithType: IPhysicalNode.GetDirectoryName()
+- uid: DulcisX.Nodes.IPhysicalNode.GetDirectoryName*
+  name: GetDirectoryName
+  href: api/DulcisX.Nodes.IPhysicalNode.html#DulcisX_Nodes_IPhysicalNode_GetDirectoryName_
+  commentId: Overload:DulcisX.Nodes.IPhysicalNode.GetDirectoryName
+  isSpec: "True"
+  fullName: DulcisX.Nodes.IPhysicalNode.GetDirectoryName
+  nameWithType: IPhysicalNode.GetDirectoryName
 - uid: DulcisX.Nodes.IPhysicalNode.GetFileName
   name: GetFileName()
   href: api/DulcisX.Nodes.IPhysicalNode.html#DulcisX_Nodes_IPhysicalNode_GetFileName
@@ -2758,6 +3071,189 @@ references:
   isSpec: "True"
   fullName: DulcisX.Nodes.IPhysicalNode.GetFullName
   nameWithType: IPhysicalNode.GetFullName
+- uid: DulcisX.Nodes.IPhysicalProjectItemNode
+  name: IPhysicalProjectItemNode
+  href: api/DulcisX.Nodes.IPhysicalProjectItemNode.html
+  commentId: T:DulcisX.Nodes.IPhysicalProjectItemNode
+  fullName: DulcisX.Nodes.IPhysicalProjectItemNode
+  nameWithType: IPhysicalProjectItemNode
+- uid: DulcisX.Nodes.IProjectItemNode
+  name: IProjectItemNode
+  href: api/DulcisX.Nodes.IProjectItemNode.html
+  commentId: T:DulcisX.Nodes.IProjectItemNode
+  fullName: DulcisX.Nodes.IProjectItemNode
+  nameWithType: IProjectItemNode
+- uid: DulcisX.Nodes.IProjectItemNode.GetDefaultNamespace
+  name: GetDefaultNamespace()
+  href: api/DulcisX.Nodes.IProjectItemNode.html#DulcisX_Nodes_IProjectItemNode_GetDefaultNamespace
+  commentId: M:DulcisX.Nodes.IProjectItemNode.GetDefaultNamespace
+  fullName: DulcisX.Nodes.IProjectItemNode.GetDefaultNamespace()
+  nameWithType: IProjectItemNode.GetDefaultNamespace()
+- uid: DulcisX.Nodes.IProjectItemNode.GetDefaultNamespace*
+  name: GetDefaultNamespace
+  href: api/DulcisX.Nodes.IProjectItemNode.html#DulcisX_Nodes_IProjectItemNode_GetDefaultNamespace_
+  commentId: Overload:DulcisX.Nodes.IProjectItemNode.GetDefaultNamespace
+  isSpec: "True"
+  fullName: DulcisX.Nodes.IProjectItemNode.GetDefaultNamespace
+  nameWithType: IProjectItemNode.GetDefaultNamespace
+- uid: DulcisX.Nodes.IProjectItemNode.GetParentProject
+  name: GetParentProject()
+  href: api/DulcisX.Nodes.IProjectItemNode.html#DulcisX_Nodes_IProjectItemNode_GetParentProject
+  commentId: M:DulcisX.Nodes.IProjectItemNode.GetParentProject
+  fullName: DulcisX.Nodes.IProjectItemNode.GetParentProject()
+  nameWithType: IProjectItemNode.GetParentProject()
+- uid: DulcisX.Nodes.IProjectItemNode.GetParentProject*
+  name: GetParentProject
+  href: api/DulcisX.Nodes.IProjectItemNode.html#DulcisX_Nodes_IProjectItemNode_GetParentProject_
+  commentId: Overload:DulcisX.Nodes.IProjectItemNode.GetParentProject
+  isSpec: "True"
+  fullName: DulcisX.Nodes.IProjectItemNode.GetParentProject
+  nameWithType: IProjectItemNode.GetParentProject
+- uid: DulcisX.Nodes.ModifyProjectDocument
+  name: ModifyProjectDocument
+  href: api/DulcisX.Nodes.ModifyProjectDocument.html
+  commentId: T:DulcisX.Nodes.ModifyProjectDocument
+  fullName: DulcisX.Nodes.ModifyProjectDocument
+  nameWithType: ModifyProjectDocument
+- uid: DulcisX.Nodes.ModifyProjectDocument.ExcludeFolderNode(DulcisX.Nodes.FolderNode)
+  name: ExcludeFolderNode(FolderNode)
+  href: api/DulcisX.Nodes.ModifyProjectDocument.html#DulcisX_Nodes_ModifyProjectDocument_ExcludeFolderNode_DulcisX_Nodes_FolderNode_
+  commentId: M:DulcisX.Nodes.ModifyProjectDocument.ExcludeFolderNode(DulcisX.Nodes.FolderNode)
+  fullName: DulcisX.Nodes.ModifyProjectDocument.ExcludeFolderNode(DulcisX.Nodes.FolderNode)
+  nameWithType: ModifyProjectDocument.ExcludeFolderNode(FolderNode)
+- uid: DulcisX.Nodes.ModifyProjectDocument.ExcludeFolderNode*
+  name: ExcludeFolderNode
+  href: api/DulcisX.Nodes.ModifyProjectDocument.html#DulcisX_Nodes_ModifyProjectDocument_ExcludeFolderNode_
+  commentId: Overload:DulcisX.Nodes.ModifyProjectDocument.ExcludeFolderNode
+  isSpec: "True"
+  fullName: DulcisX.Nodes.ModifyProjectDocument.ExcludeFolderNode
+  nameWithType: ModifyProjectDocument.ExcludeFolderNode
+- uid: DulcisX.Nodes.ModifyProjectDocument.IncludeFolder(System.String)
+  name: IncludeFolder(String)
+  href: api/DulcisX.Nodes.ModifyProjectDocument.html#DulcisX_Nodes_ModifyProjectDocument_IncludeFolder_System_String_
+  commentId: M:DulcisX.Nodes.ModifyProjectDocument.IncludeFolder(System.String)
+  fullName: DulcisX.Nodes.ModifyProjectDocument.IncludeFolder(System.String)
+  nameWithType: ModifyProjectDocument.IncludeFolder(String)
+- uid: DulcisX.Nodes.ModifyProjectDocument.IncludeFolder*
+  name: IncludeFolder
+  href: api/DulcisX.Nodes.ModifyProjectDocument.html#DulcisX_Nodes_ModifyProjectDocument_IncludeFolder_
+  commentId: Overload:DulcisX.Nodes.ModifyProjectDocument.IncludeFolder
+  isSpec: "True"
+  fullName: DulcisX.Nodes.ModifyProjectDocument.IncludeFolder
+  nameWithType: ModifyProjectDocument.IncludeFolder
+- uid: DulcisX.Nodes.ModifyProjectDocument.IsDocumentDirty
+  name: IsDocumentDirty
+  href: api/DulcisX.Nodes.ModifyProjectDocument.html#DulcisX_Nodes_ModifyProjectDocument_IsDocumentDirty
+  commentId: P:DulcisX.Nodes.ModifyProjectDocument.IsDocumentDirty
+  fullName: DulcisX.Nodes.ModifyProjectDocument.IsDocumentDirty
+  nameWithType: ModifyProjectDocument.IsDocumentDirty
+- uid: DulcisX.Nodes.ModifyProjectDocument.IsDocumentDirty*
+  name: IsDocumentDirty
+  href: api/DulcisX.Nodes.ModifyProjectDocument.html#DulcisX_Nodes_ModifyProjectDocument_IsDocumentDirty_
+  commentId: Overload:DulcisX.Nodes.ModifyProjectDocument.IsDocumentDirty
+  isSpec: "True"
+  fullName: DulcisX.Nodes.ModifyProjectDocument.IsDocumentDirty
+  nameWithType: ModifyProjectDocument.IsDocumentDirty
+- uid: DulcisX.Nodes.ModifyProjectDocument.MakeDocumentStateDirty
+  name: MakeDocumentStateDirty()
+  href: api/DulcisX.Nodes.ModifyProjectDocument.html#DulcisX_Nodes_ModifyProjectDocument_MakeDocumentStateDirty
+  commentId: M:DulcisX.Nodes.ModifyProjectDocument.MakeDocumentStateDirty
+  fullName: DulcisX.Nodes.ModifyProjectDocument.MakeDocumentStateDirty()
+  nameWithType: ModifyProjectDocument.MakeDocumentStateDirty()
+- uid: DulcisX.Nodes.ModifyProjectDocument.MakeDocumentStateDirty*
+  name: MakeDocumentStateDirty
+  href: api/DulcisX.Nodes.ModifyProjectDocument.html#DulcisX_Nodes_ModifyProjectDocument_MakeDocumentStateDirty_
+  commentId: Overload:DulcisX.Nodes.ModifyProjectDocument.MakeDocumentStateDirty
+  isSpec: "True"
+  fullName: DulcisX.Nodes.ModifyProjectDocument.MakeDocumentStateDirty
+  nameWithType: ModifyProjectDocument.MakeDocumentStateDirty
+- uid: DulcisX.Nodes.ModifyProjectDocument.NodeChanges(DulcisX.Nodes.IPhysicalProjectItemNode)
+  name: NodeChanges(IPhysicalProjectItemNode)
+  href: api/DulcisX.Nodes.ModifyProjectDocument.html#DulcisX_Nodes_ModifyProjectDocument_NodeChanges_DulcisX_Nodes_IPhysicalProjectItemNode_
+  commentId: M:DulcisX.Nodes.ModifyProjectDocument.NodeChanges(DulcisX.Nodes.IPhysicalProjectItemNode)
+  fullName: DulcisX.Nodes.ModifyProjectDocument.NodeChanges(DulcisX.Nodes.IPhysicalProjectItemNode)
+  nameWithType: ModifyProjectDocument.NodeChanges(IPhysicalProjectItemNode)
+- uid: DulcisX.Nodes.ModifyProjectDocument.NodeChanges(System.String)
+  name: NodeChanges(String)
+  href: api/DulcisX.Nodes.ModifyProjectDocument.html#DulcisX_Nodes_ModifyProjectDocument_NodeChanges_System_String_
+  commentId: M:DulcisX.Nodes.ModifyProjectDocument.NodeChanges(System.String)
+  fullName: DulcisX.Nodes.ModifyProjectDocument.NodeChanges(System.String)
+  nameWithType: ModifyProjectDocument.NodeChanges(String)
+- uid: DulcisX.Nodes.ModifyProjectDocument.NodeChanges*
+  name: NodeChanges
+  href: api/DulcisX.Nodes.ModifyProjectDocument.html#DulcisX_Nodes_ModifyProjectDocument_NodeChanges_
+  commentId: Overload:DulcisX.Nodes.ModifyProjectDocument.NodeChanges
+  isSpec: "True"
+  fullName: DulcisX.Nodes.ModifyProjectDocument.NodeChanges
+  nameWithType: ModifyProjectDocument.NodeChanges
+- uid: DulcisX.Nodes.ModifyProjectDocument.ProjectDocument
+  name: ProjectDocument
+  href: api/DulcisX.Nodes.ModifyProjectDocument.html#DulcisX_Nodes_ModifyProjectDocument_ProjectDocument
+  commentId: P:DulcisX.Nodes.ModifyProjectDocument.ProjectDocument
+  fullName: DulcisX.Nodes.ModifyProjectDocument.ProjectDocument
+  nameWithType: ModifyProjectDocument.ProjectDocument
+- uid: DulcisX.Nodes.ModifyProjectDocument.ProjectDocument*
+  name: ProjectDocument
+  href: api/DulcisX.Nodes.ModifyProjectDocument.html#DulcisX_Nodes_ModifyProjectDocument_ProjectDocument_
+  commentId: Overload:DulcisX.Nodes.ModifyProjectDocument.ProjectDocument
+  isSpec: "True"
+  fullName: DulcisX.Nodes.ModifyProjectDocument.ProjectDocument
+  nameWithType: ModifyProjectDocument.ProjectDocument
+- uid: DulcisX.Nodes.ModifyProjectDocument.ProjectNode
+  name: ProjectNode
+  href: api/DulcisX.Nodes.ModifyProjectDocument.html#DulcisX_Nodes_ModifyProjectDocument_ProjectNode
+  commentId: P:DulcisX.Nodes.ModifyProjectDocument.ProjectNode
+  fullName: DulcisX.Nodes.ModifyProjectDocument.ProjectNode
+  nameWithType: ModifyProjectDocument.ProjectNode
+- uid: DulcisX.Nodes.ModifyProjectDocument.ProjectNode*
+  name: ProjectNode
+  href: api/DulcisX.Nodes.ModifyProjectDocument.html#DulcisX_Nodes_ModifyProjectDocument_ProjectNode_
+  commentId: Overload:DulcisX.Nodes.ModifyProjectDocument.ProjectNode
+  isSpec: "True"
+  fullName: DulcisX.Nodes.ModifyProjectDocument.ProjectNode
+  nameWithType: ModifyProjectDocument.ProjectNode
+- uid: DulcisX.Nodes.ModifyProjectDocument.RootNode
+  name: RootNode
+  href: api/DulcisX.Nodes.ModifyProjectDocument.html#DulcisX_Nodes_ModifyProjectDocument_RootNode
+  commentId: P:DulcisX.Nodes.ModifyProjectDocument.RootNode
+  fullName: DulcisX.Nodes.ModifyProjectDocument.RootNode
+  nameWithType: ModifyProjectDocument.RootNode
+- uid: DulcisX.Nodes.ModifyProjectDocument.RootNode*
+  name: RootNode
+  href: api/DulcisX.Nodes.ModifyProjectDocument.html#DulcisX_Nodes_ModifyProjectDocument_RootNode_
+  commentId: Overload:DulcisX.Nodes.ModifyProjectDocument.RootNode
+  isSpec: "True"
+  fullName: DulcisX.Nodes.ModifyProjectDocument.RootNode
+  nameWithType: ModifyProjectDocument.RootNode
+- uid: DulcisX.Nodes.ModifyProjectDocument.SaveChanges
+  name: SaveChanges()
+  href: api/DulcisX.Nodes.ModifyProjectDocument.html#DulcisX_Nodes_ModifyProjectDocument_SaveChanges
+  commentId: M:DulcisX.Nodes.ModifyProjectDocument.SaveChanges
+  fullName: DulcisX.Nodes.ModifyProjectDocument.SaveChanges()
+  nameWithType: ModifyProjectDocument.SaveChanges()
+- uid: DulcisX.Nodes.ModifyProjectDocument.SaveChanges*
+  name: SaveChanges
+  href: api/DulcisX.Nodes.ModifyProjectDocument.html#DulcisX_Nodes_ModifyProjectDocument_SaveChanges_
+  commentId: Overload:DulcisX.Nodes.ModifyProjectDocument.SaveChanges
+  isSpec: "True"
+  fullName: DulcisX.Nodes.ModifyProjectDocument.SaveChanges
+  nameWithType: ModifyProjectDocument.SaveChanges
+- uid: DulcisX.Nodes.ModifyProjectDocument.SaveChangesAsync(System.Nullable{System.TimeSpan})
+  name: SaveChangesAsync(Nullable<TimeSpan>)
+  href: api/DulcisX.Nodes.ModifyProjectDocument.html#DulcisX_Nodes_ModifyProjectDocument_SaveChangesAsync_System_Nullable_System_TimeSpan__
+  commentId: M:DulcisX.Nodes.ModifyProjectDocument.SaveChangesAsync(System.Nullable{System.TimeSpan})
+  name.vb: SaveChangesAsync(Nullable(Of TimeSpan))
+  fullName: DulcisX.Nodes.ModifyProjectDocument.SaveChangesAsync(System.Nullable<System.TimeSpan>)
+  fullName.vb: DulcisX.Nodes.ModifyProjectDocument.SaveChangesAsync(System.Nullable(Of System.TimeSpan))
+  nameWithType: ModifyProjectDocument.SaveChangesAsync(Nullable<TimeSpan>)
+  nameWithType.vb: ModifyProjectDocument.SaveChangesAsync(Nullable(Of TimeSpan))
+- uid: DulcisX.Nodes.ModifyProjectDocument.SaveChangesAsync*
+  name: SaveChangesAsync
+  href: api/DulcisX.Nodes.ModifyProjectDocument.html#DulcisX_Nodes_ModifyProjectDocument_SaveChangesAsync_
+  commentId: Overload:DulcisX.Nodes.ModifyProjectDocument.SaveChangesAsync
+  isSpec: "True"
+  fullName: DulcisX.Nodes.ModifyProjectDocument.SaveChangesAsync
+  nameWithType: ModifyProjectDocument.SaveChangesAsync
 - uid: DulcisX.Nodes.ProjectItemNode
   name: ProjectItemNode
   href: api/DulcisX.Nodes.ProjectItemNode.html
@@ -2847,12 +3343,12 @@ references:
   commentId: T:DulcisX.Nodes.ProjectNode
   fullName: DulcisX.Nodes.ProjectNode
   nameWithType: ProjectNode
-- uid: DulcisX.Nodes.ProjectNode.#ctor(DulcisX.Nodes.SolutionNode,Microsoft.VisualStudio.Shell.Interop.IVsHierarchy,DulcisX.Core.Enums.NodeTypes)
-  name: ProjectNode(SolutionNode, IVsHierarchy, NodeTypes)
-  href: api/DulcisX.Nodes.ProjectNode.html#DulcisX_Nodes_ProjectNode__ctor_DulcisX_Nodes_SolutionNode_Microsoft_VisualStudio_Shell_Interop_IVsHierarchy_DulcisX_Core_Enums_NodeTypes_
-  commentId: M:DulcisX.Nodes.ProjectNode.#ctor(DulcisX.Nodes.SolutionNode,Microsoft.VisualStudio.Shell.Interop.IVsHierarchy,DulcisX.Core.Enums.NodeTypes)
-  fullName: DulcisX.Nodes.ProjectNode.ProjectNode(DulcisX.Nodes.SolutionNode, Microsoft.VisualStudio.Shell.Interop.IVsHierarchy, DulcisX.Core.Enums.NodeTypes)
-  nameWithType: ProjectNode.ProjectNode(SolutionNode, IVsHierarchy, NodeTypes)
+- uid: DulcisX.Nodes.ProjectNode.#ctor(DulcisX.Nodes.SolutionNode,Microsoft.VisualStudio.Shell.Interop.IVsHierarchy,DulcisX.Core.Enums.ProjectNodeType)
+  name: ProjectNode(SolutionNode, IVsHierarchy, ProjectNodeType)
+  href: api/DulcisX.Nodes.ProjectNode.html#DulcisX_Nodes_ProjectNode__ctor_DulcisX_Nodes_SolutionNode_Microsoft_VisualStudio_Shell_Interop_IVsHierarchy_DulcisX_Core_Enums_ProjectNodeType_
+  commentId: M:DulcisX.Nodes.ProjectNode.#ctor(DulcisX.Nodes.SolutionNode,Microsoft.VisualStudio.Shell.Interop.IVsHierarchy,DulcisX.Core.Enums.ProjectNodeType)
+  fullName: DulcisX.Nodes.ProjectNode.ProjectNode(DulcisX.Nodes.SolutionNode, Microsoft.VisualStudio.Shell.Interop.IVsHierarchy, DulcisX.Core.Enums.ProjectNodeType)
+  nameWithType: ProjectNode.ProjectNode(SolutionNode, IVsHierarchy, ProjectNodeType)
 - uid: DulcisX.Nodes.ProjectNode.#ctor*
   name: ProjectNode
   href: api/DulcisX.Nodes.ProjectNode.html#DulcisX_Nodes_ProjectNode__ctor_
@@ -2879,6 +3375,19 @@ references:
   isSpec: "True"
   fullName: DulcisX.Nodes.ProjectNode.AddExistingDocument
   nameWithType: ProjectNode.AddExistingDocument
+- uid: DulcisX.Nodes.ProjectNode.ContainsPhysicalNode(System.String)
+  name: ContainsPhysicalNode(String)
+  href: api/DulcisX.Nodes.ProjectNode.html#DulcisX_Nodes_ProjectNode_ContainsPhysicalNode_System_String_
+  commentId: M:DulcisX.Nodes.ProjectNode.ContainsPhysicalNode(System.String)
+  fullName: DulcisX.Nodes.ProjectNode.ContainsPhysicalNode(System.String)
+  nameWithType: ProjectNode.ContainsPhysicalNode(String)
+- uid: DulcisX.Nodes.ProjectNode.ContainsPhysicalNode*
+  name: ContainsPhysicalNode
+  href: api/DulcisX.Nodes.ProjectNode.html#DulcisX_Nodes_ProjectNode_ContainsPhysicalNode_
+  commentId: Overload:DulcisX.Nodes.ProjectNode.ContainsPhysicalNode
+  isSpec: "True"
+  fullName: DulcisX.Nodes.ProjectNode.ContainsPhysicalNode
+  nameWithType: ProjectNode.ContainsPhysicalNode
 - uid: DulcisX.Nodes.ProjectNode.CreateDocument(DulcisX.Nodes.FolderNode,System.String)
   name: CreateDocument(FolderNode, String)
   href: api/DulcisX.Nodes.ProjectNode.html#DulcisX_Nodes_ProjectNode_CreateDocument_DulcisX_Nodes_FolderNode_System_String_
@@ -2911,6 +3420,19 @@ references:
   isSpec: "True"
   fullName: DulcisX.Nodes.ProjectNode.GetChildren
   nameWithType: ProjectNode.GetChildren
+- uid: DulcisX.Nodes.ProjectNode.GetDirectoryName
+  name: GetDirectoryName()
+  href: api/DulcisX.Nodes.ProjectNode.html#DulcisX_Nodes_ProjectNode_GetDirectoryName
+  commentId: M:DulcisX.Nodes.ProjectNode.GetDirectoryName
+  fullName: DulcisX.Nodes.ProjectNode.GetDirectoryName()
+  nameWithType: ProjectNode.GetDirectoryName()
+- uid: DulcisX.Nodes.ProjectNode.GetDirectoryName*
+  name: GetDirectoryName
+  href: api/DulcisX.Nodes.ProjectNode.html#DulcisX_Nodes_ProjectNode_GetDirectoryName_
+  commentId: Overload:DulcisX.Nodes.ProjectNode.GetDirectoryName
+  isSpec: "True"
+  fullName: DulcisX.Nodes.ProjectNode.GetDirectoryName
+  nameWithType: ProjectNode.GetDirectoryName
 - uid: DulcisX.Nodes.ProjectNode.GetFileName
   name: GetFileName()
   href: api/DulcisX.Nodes.ProjectNode.html#DulcisX_Nodes_ProjectNode_GetFileName
@@ -2976,6 +3498,19 @@ references:
   isSpec: "True"
   fullName: DulcisX.Nodes.ProjectNode.GetOutputTypeAction
   nameWithType: ProjectNode.GetOutputTypeAction
+- uid: DulcisX.Nodes.ProjectNode.GetRelativePath(DulcisX.Nodes.IPhysicalProjectItemNode)
+  name: GetRelativePath(IPhysicalProjectItemNode)
+  href: api/DulcisX.Nodes.ProjectNode.html#DulcisX_Nodes_ProjectNode_GetRelativePath_DulcisX_Nodes_IPhysicalProjectItemNode_
+  commentId: M:DulcisX.Nodes.ProjectNode.GetRelativePath(DulcisX.Nodes.IPhysicalProjectItemNode)
+  fullName: DulcisX.Nodes.ProjectNode.GetRelativePath(DulcisX.Nodes.IPhysicalProjectItemNode)
+  nameWithType: ProjectNode.GetRelativePath(IPhysicalProjectItemNode)
+- uid: DulcisX.Nodes.ProjectNode.GetRelativePath*
+  name: GetRelativePath
+  href: api/DulcisX.Nodes.ProjectNode.html#DulcisX_Nodes_ProjectNode_GetRelativePath_
+  commentId: Overload:DulcisX.Nodes.ProjectNode.GetRelativePath
+  isSpec: "True"
+  fullName: DulcisX.Nodes.ProjectNode.GetRelativePath
+  nameWithType: ProjectNode.GetRelativePath
 - uid: DulcisX.Nodes.ProjectNode.IsLoaded
   name: IsLoaded()
   href: api/DulcisX.Nodes.ProjectNode.html#DulcisX_Nodes_ProjectNode_IsLoaded
@@ -2989,19 +3524,64 @@ references:
   isSpec: "True"
   fullName: DulcisX.Nodes.ProjectNode.IsLoaded
   nameWithType: ProjectNode.IsLoaded
-- uid: DulcisX.Nodes.ProjectNode.NodeType
-  name: NodeType
-  href: api/DulcisX.Nodes.ProjectNode.html#DulcisX_Nodes_ProjectNode_NodeType
-  commentId: P:DulcisX.Nodes.ProjectNode.NodeType
-  fullName: DulcisX.Nodes.ProjectNode.NodeType
-  nameWithType: ProjectNode.NodeType
-- uid: DulcisX.Nodes.ProjectNode.NodeType*
-  name: NodeType
-  href: api/DulcisX.Nodes.ProjectNode.html#DulcisX_Nodes_ProjectNode_NodeType_
-  commentId: Overload:DulcisX.Nodes.ProjectNode.NodeType
+- uid: DulcisX.Nodes.ProjectNode.Modify(System.Action{DulcisX.Nodes.ModifyProjectDocument})
+  name: Modify(Action<ModifyProjectDocument>)
+  href: api/DulcisX.Nodes.ProjectNode.html#DulcisX_Nodes_ProjectNode_Modify_System_Action_DulcisX_Nodes_ModifyProjectDocument__
+  commentId: M:DulcisX.Nodes.ProjectNode.Modify(System.Action{DulcisX.Nodes.ModifyProjectDocument})
+  name.vb: Modify(Action(Of ModifyProjectDocument))
+  fullName: DulcisX.Nodes.ProjectNode.Modify(System.Action<DulcisX.Nodes.ModifyProjectDocument>)
+  fullName.vb: DulcisX.Nodes.ProjectNode.Modify(System.Action(Of DulcisX.Nodes.ModifyProjectDocument))
+  nameWithType: ProjectNode.Modify(Action<ModifyProjectDocument>)
+  nameWithType.vb: ProjectNode.Modify(Action(Of ModifyProjectDocument))
+- uid: DulcisX.Nodes.ProjectNode.Modify*
+  name: Modify
+  href: api/DulcisX.Nodes.ProjectNode.html#DulcisX_Nodes_ProjectNode_Modify_
+  commentId: Overload:DulcisX.Nodes.ProjectNode.Modify
   isSpec: "True"
-  fullName: DulcisX.Nodes.ProjectNode.NodeType
-  nameWithType: ProjectNode.NodeType
+  fullName: DulcisX.Nodes.ProjectNode.Modify
+  nameWithType: ProjectNode.Modify
+- uid: DulcisX.Nodes.ProjectNode.ModifyAndWaitAsync(System.Action{DulcisX.Nodes.ModifyProjectDocument},System.Nullable{System.TimeSpan})
+  name: ModifyAndWaitAsync(Action<ModifyProjectDocument>, Nullable<TimeSpan>)
+  href: api/DulcisX.Nodes.ProjectNode.html#DulcisX_Nodes_ProjectNode_ModifyAndWaitAsync_System_Action_DulcisX_Nodes_ModifyProjectDocument__System_Nullable_System_TimeSpan__
+  commentId: M:DulcisX.Nodes.ProjectNode.ModifyAndWaitAsync(System.Action{DulcisX.Nodes.ModifyProjectDocument},System.Nullable{System.TimeSpan})
+  name.vb: ModifyAndWaitAsync(Action(Of ModifyProjectDocument), Nullable(Of TimeSpan))
+  fullName: DulcisX.Nodes.ProjectNode.ModifyAndWaitAsync(System.Action<DulcisX.Nodes.ModifyProjectDocument>, System.Nullable<System.TimeSpan>)
+  fullName.vb: DulcisX.Nodes.ProjectNode.ModifyAndWaitAsync(System.Action(Of DulcisX.Nodes.ModifyProjectDocument), System.Nullable(Of System.TimeSpan))
+  nameWithType: ProjectNode.ModifyAndWaitAsync(Action<ModifyProjectDocument>, Nullable<TimeSpan>)
+  nameWithType.vb: ProjectNode.ModifyAndWaitAsync(Action(Of ModifyProjectDocument), Nullable(Of TimeSpan))
+- uid: DulcisX.Nodes.ProjectNode.ModifyAndWaitAsync*
+  name: ModifyAndWaitAsync
+  href: api/DulcisX.Nodes.ProjectNode.html#DulcisX_Nodes_ProjectNode_ModifyAndWaitAsync_
+  commentId: Overload:DulcisX.Nodes.ProjectNode.ModifyAndWaitAsync
+  isSpec: "True"
+  fullName: DulcisX.Nodes.ProjectNode.ModifyAndWaitAsync
+  nameWithType: ProjectNode.ModifyAndWaitAsync
+- uid: DulcisX.Nodes.ProjectNode.MoveNodeInsideProject(DulcisX.Nodes.FolderNode,DulcisX.Nodes.DocumentNode)
+  name: MoveNodeInsideProject(FolderNode, DocumentNode)
+  href: api/DulcisX.Nodes.ProjectNode.html#DulcisX_Nodes_ProjectNode_MoveNodeInsideProject_DulcisX_Nodes_FolderNode_DulcisX_Nodes_DocumentNode_
+  commentId: M:DulcisX.Nodes.ProjectNode.MoveNodeInsideProject(DulcisX.Nodes.FolderNode,DulcisX.Nodes.DocumentNode)
+  fullName: DulcisX.Nodes.ProjectNode.MoveNodeInsideProject(DulcisX.Nodes.FolderNode, DulcisX.Nodes.DocumentNode)
+  nameWithType: ProjectNode.MoveNodeInsideProject(FolderNode, DocumentNode)
+- uid: DulcisX.Nodes.ProjectNode.MoveNodeInsideProject*
+  name: MoveNodeInsideProject
+  href: api/DulcisX.Nodes.ProjectNode.html#DulcisX_Nodes_ProjectNode_MoveNodeInsideProject_
+  commentId: Overload:DulcisX.Nodes.ProjectNode.MoveNodeInsideProject
+  isSpec: "True"
+  fullName: DulcisX.Nodes.ProjectNode.MoveNodeInsideProject
+  nameWithType: ProjectNode.MoveNodeInsideProject
+- uid: DulcisX.Nodes.ProjectNode.ProjectNodeType
+  name: ProjectNodeType
+  href: api/DulcisX.Nodes.ProjectNode.html#DulcisX_Nodes_ProjectNode_ProjectNodeType
+  commentId: P:DulcisX.Nodes.ProjectNode.ProjectNodeType
+  fullName: DulcisX.Nodes.ProjectNode.ProjectNodeType
+  nameWithType: ProjectNode.ProjectNodeType
+- uid: DulcisX.Nodes.ProjectNode.ProjectNodeType*
+  name: ProjectNodeType
+  href: api/DulcisX.Nodes.ProjectNode.html#DulcisX_Nodes_ProjectNode_ProjectNodeType_
+  commentId: Overload:DulcisX.Nodes.ProjectNode.ProjectNodeType
+  isSpec: "True"
+  fullName: DulcisX.Nodes.ProjectNode.ProjectNodeType
+  nameWithType: ProjectNode.ProjectNodeType
 - uid: DulcisX.Nodes.ProjectNode.SaveAllChildren(System.Boolean)
   name: SaveAllChildren(Boolean)
   href: api/DulcisX.Nodes.ProjectNode.html#DulcisX_Nodes_ProjectNode_SaveAllChildren_System_Boolean_
@@ -3296,19 +3876,6 @@ references:
   isSpec: "True"
   fullName: DulcisX.Nodes.SolutionFolderNode.SolutionFolderNode
   nameWithType: SolutionFolderNode.SolutionFolderNode
-- uid: DulcisX.Nodes.SolutionFolderNode.NodeType
-  name: NodeType
-  href: api/DulcisX.Nodes.SolutionFolderNode.html#DulcisX_Nodes_SolutionFolderNode_NodeType
-  commentId: P:DulcisX.Nodes.SolutionFolderNode.NodeType
-  fullName: DulcisX.Nodes.SolutionFolderNode.NodeType
-  nameWithType: SolutionFolderNode.NodeType
-- uid: DulcisX.Nodes.SolutionFolderNode.NodeType*
-  name: NodeType
-  href: api/DulcisX.Nodes.SolutionFolderNode.html#DulcisX_Nodes_SolutionFolderNode_NodeType_
-  commentId: Overload:DulcisX.Nodes.SolutionFolderNode.NodeType
-  isSpec: "True"
-  fullName: DulcisX.Nodes.SolutionFolderNode.NodeType
-  nameWithType: SolutionFolderNode.NodeType
 - uid: DulcisX.Nodes.SolutionItemNode
   name: SolutionItemNode
   href: api/DulcisX.Nodes.SolutionItemNode.html
@@ -3408,6 +3975,19 @@ references:
   isSpec: "True"
   fullName: DulcisX.Nodes.SolutionNode.GetAllProjects
   nameWithType: SolutionNode.GetAllProjects
+- uid: DulcisX.Nodes.SolutionNode.GetDirectoryName
+  name: GetDirectoryName()
+  href: api/DulcisX.Nodes.SolutionNode.html#DulcisX_Nodes_SolutionNode_GetDirectoryName
+  commentId: M:DulcisX.Nodes.SolutionNode.GetDirectoryName
+  fullName: DulcisX.Nodes.SolutionNode.GetDirectoryName()
+  nameWithType: SolutionNode.GetDirectoryName()
+- uid: DulcisX.Nodes.SolutionNode.GetDirectoryName*
+  name: GetDirectoryName
+  href: api/DulcisX.Nodes.SolutionNode.html#DulcisX_Nodes_SolutionNode_GetDirectoryName_
+  commentId: Overload:DulcisX.Nodes.SolutionNode.GetDirectoryName
+  isSpec: "True"
+  fullName: DulcisX.Nodes.SolutionNode.GetDirectoryName
+  nameWithType: SolutionNode.GetDirectoryName
 - uid: DulcisX.Nodes.SolutionNode.GetFileName
   name: GetFileName()
   href: api/DulcisX.Nodes.SolutionNode.html#DulcisX_Nodes_SolutionNode_GetFileName
@@ -3478,6 +4058,22 @@ references:
   isSpec: "True"
   fullName: DulcisX.Nodes.SolutionNode.GetProject
   nameWithType: SolutionNode.GetProject
+- uid: DulcisX.Nodes.SolutionNode.GetRelativePath*
+  name: GetRelativePath
+  href: api/DulcisX.Nodes.SolutionNode.html#DulcisX_Nodes_SolutionNode_GetRelativePath_
+  commentId: Overload:DulcisX.Nodes.SolutionNode.GetRelativePath
+  isSpec: "True"
+  fullName: DulcisX.Nodes.SolutionNode.GetRelativePath
+  nameWithType: SolutionNode.GetRelativePath
+- uid: DulcisX.Nodes.SolutionNode.GetRelativePath``1(``0)
+  name: GetRelativePath<TNode>(TNode)
+  href: api/DulcisX.Nodes.SolutionNode.html#DulcisX_Nodes_SolutionNode_GetRelativePath__1___0_
+  commentId: M:DulcisX.Nodes.SolutionNode.GetRelativePath``1(``0)
+  name.vb: GetRelativePath(Of TNode)(TNode)
+  fullName: DulcisX.Nodes.SolutionNode.GetRelativePath<TNode>(TNode)
+  fullName.vb: DulcisX.Nodes.SolutionNode.GetRelativePath(Of TNode)(TNode)
+  nameWithType: SolutionNode.GetRelativePath<TNode>(TNode)
+  nameWithType.vb: SolutionNode.GetRelativePath(Of TNode)(TNode)
 - uid: DulcisX.Nodes.SolutionNode.GetStartupProjects
   name: GetStartupProjects()
   href: api/DulcisX.Nodes.SolutionNode.html#DulcisX_Nodes_SolutionNode_GetStartupProjects
@@ -3543,19 +4139,6 @@ references:
   isSpec: "True"
   fullName: DulcisX.Nodes.SolutionNode.NodeSelectionEvents
   nameWithType: SolutionNode.NodeSelectionEvents
-- uid: DulcisX.Nodes.SolutionNode.NodeType
-  name: NodeType
-  href: api/DulcisX.Nodes.SolutionNode.html#DulcisX_Nodes_SolutionNode_NodeType
-  commentId: P:DulcisX.Nodes.SolutionNode.NodeType
-  fullName: DulcisX.Nodes.SolutionNode.NodeType
-  nameWithType: SolutionNode.NodeType
-- uid: DulcisX.Nodes.SolutionNode.NodeType*
-  name: NodeType
-  href: api/DulcisX.Nodes.SolutionNode.html#DulcisX_Nodes_SolutionNode_NodeType_
-  commentId: Overload:DulcisX.Nodes.SolutionNode.NodeType
-  isSpec: "True"
-  fullName: DulcisX.Nodes.SolutionNode.NodeType
-  nameWithType: SolutionNode.NodeType
 - uid: DulcisX.Nodes.SolutionNode.OpenNodeEvents
   name: OpenNodeEvents
   href: api/DulcisX.Nodes.SolutionNode.html#DulcisX_Nodes_SolutionNode_OpenNodeEvents
@@ -3731,19 +4314,6 @@ references:
   isSpec: "True"
   fullName: DulcisX.Nodes.UnknownNode.GetParent
   nameWithType: UnknownNode.GetParent
-- uid: DulcisX.Nodes.UnknownNode.NodeType
-  name: NodeType
-  href: api/DulcisX.Nodes.UnknownNode.html#DulcisX_Nodes_UnknownNode_NodeType
-  commentId: P:DulcisX.Nodes.UnknownNode.NodeType
-  fullName: DulcisX.Nodes.UnknownNode.NodeType
-  nameWithType: UnknownNode.NodeType
-- uid: DulcisX.Nodes.UnknownNode.NodeType*
-  name: NodeType
-  href: api/DulcisX.Nodes.UnknownNode.html#DulcisX_Nodes_UnknownNode_NodeType_
-  commentId: Overload:DulcisX.Nodes.UnknownNode.NodeType
-  isSpec: "True"
-  fullName: DulcisX.Nodes.UnknownNode.NodeType
-  nameWithType: UnknownNode.NodeType
 - uid: Guides.GettingStarted.FirstExtension
   name: Your First Extension
   href: guides/getting_started/first-extension.html

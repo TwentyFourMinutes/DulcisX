@@ -246,7 +246,7 @@ items:
     content: EventDistributor<Action<IPhysicalNode, OpenNodeAttribute>> OnAttributeChanged { get; }
     parameters: []
     return:
-      type: DulcisX.Nodes.Events.EventDistributor{System.Action{DulcisX.Nodes.IPhysicalNode,DulcisX.Core.Enums.VisualStudio.OpenNodeAttribute}}
+      type: DulcisX.Nodes.Events.EventDistributor{System.Action{DulcisX.Nodes.IPhysicalNode,DulcisX.Core.Enums.OpenNodeAttribute}}
     content.vb: ReadOnly Property OnAttributeChanged As EventDistributor(Of Action(Of IPhysicalNode, OpenNodeAttribute))
   overload: DulcisX.Nodes.Events.IOpenNodeEvents.OnAttributeChanged*
   modifiers.csharp:
@@ -805,15 +805,15 @@ references:
   name: OnAttributeChanged
   nameWithType: IOpenNodeEvents.OnAttributeChanged
   fullName: DulcisX.Nodes.Events.IOpenNodeEvents.OnAttributeChanged
-- uid: DulcisX.Nodes.Events.EventDistributor{System.Action{DulcisX.Nodes.IPhysicalNode,DulcisX.Core.Enums.VisualStudio.OpenNodeAttribute}}
-  commentId: T:DulcisX.Nodes.Events.EventDistributor{System.Action{DulcisX.Nodes.IPhysicalNode,DulcisX.Core.Enums.VisualStudio.OpenNodeAttribute}}
+- uid: DulcisX.Nodes.Events.EventDistributor{System.Action{DulcisX.Nodes.IPhysicalNode,DulcisX.Core.Enums.OpenNodeAttribute}}
+  commentId: T:DulcisX.Nodes.Events.EventDistributor{System.Action{DulcisX.Nodes.IPhysicalNode,DulcisX.Core.Enums.OpenNodeAttribute}}
   parent: DulcisX.Nodes.Events
   definition: DulcisX.Nodes.Events.EventDistributor`1
   name: EventDistributor<Action<IPhysicalNode, OpenNodeAttribute>>
   nameWithType: EventDistributor<Action<IPhysicalNode, OpenNodeAttribute>>
-  fullName: DulcisX.Nodes.Events.EventDistributor<System.Action<DulcisX.Nodes.IPhysicalNode, DulcisX.Core.Enums.VisualStudio.OpenNodeAttribute>>
+  fullName: DulcisX.Nodes.Events.EventDistributor<System.Action<DulcisX.Nodes.IPhysicalNode, DulcisX.Core.Enums.OpenNodeAttribute>>
   nameWithType.vb: EventDistributor(Of Action(Of IPhysicalNode, OpenNodeAttribute))
-  fullName.vb: DulcisX.Nodes.Events.EventDistributor(Of System.Action(Of DulcisX.Nodes.IPhysicalNode, DulcisX.Core.Enums.VisualStudio.OpenNodeAttribute))
+  fullName.vb: DulcisX.Nodes.Events.EventDistributor(Of System.Action(Of DulcisX.Nodes.IPhysicalNode, DulcisX.Core.Enums.OpenNodeAttribute))
   name.vb: EventDistributor(Of Action(Of IPhysicalNode, OpenNodeAttribute))
   spec.csharp:
   - uid: DulcisX.Nodes.Events.EventDistributor`1
@@ -838,10 +838,10 @@ references:
   - name: ', '
     nameWithType: ', '
     fullName: ', '
-  - uid: DulcisX.Core.Enums.VisualStudio.OpenNodeAttribute
+  - uid: DulcisX.Core.Enums.OpenNodeAttribute
     name: OpenNodeAttribute
     nameWithType: OpenNodeAttribute
-    fullName: DulcisX.Core.Enums.VisualStudio.OpenNodeAttribute
+    fullName: DulcisX.Core.Enums.OpenNodeAttribute
   - name: '>'
     nameWithType: '>'
     fullName: '>'
@@ -871,10 +871,10 @@ references:
   - name: ', '
     nameWithType: ', '
     fullName: ', '
-  - uid: DulcisX.Core.Enums.VisualStudio.OpenNodeAttribute
+  - uid: DulcisX.Core.Enums.OpenNodeAttribute
     name: OpenNodeAttribute
     nameWithType: OpenNodeAttribute
-    fullName: DulcisX.Core.Enums.VisualStudio.OpenNodeAttribute
+    fullName: DulcisX.Core.Enums.OpenNodeAttribute
   - name: )
     nameWithType: )
     fullName: )

@@ -112,6 +112,7 @@
     <h5>Implements</h5>
     <div><a class="xref" href="DulcisX.Nodes.INamedNode.html">INamedNode</a></div>
     <div><a class="xref" href="DulcisX.Nodes.IBaseNode.html">IBaseNode</a></div>
+    <div><span class="xref">System.IEquatable</span>&lt;<a class="xref" href="DulcisX.Nodes.IBaseNode.html">IBaseNode</a>&gt;</div>
   </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
@@ -125,9 +126,6 @@
       <a class="xref" href="DulcisX.Nodes.BaseNode.html#DulcisX_Nodes_BaseNode_ItemId">BaseNode.ItemId</a>
     </div>
     <div>
-      <a class="xref" href="DulcisX.Nodes.BaseNode.html#DulcisX_Nodes_BaseNode_NodeType">BaseNode.NodeType</a>
-    </div>
-    <div>
       <a class="xref" href="DulcisX.Nodes.BaseNode.html#DulcisX_Nodes_BaseNode_GetDisplayName">BaseNode.GetDisplayName()</a>
     </div>
     <div>
@@ -137,22 +135,22 @@
       <a class="xref" href="DulcisX.Nodes.BaseNode.html#DulcisX_Nodes_BaseNode_AsHierarchyItem">BaseNode.AsHierarchyItem()</a>
     </div>
     <div>
-      <a class="xref" href="DulcisX.Nodes.BaseNode.html#DulcisX_Nodes_BaseNode_IsTypeMatching_DulcisX_Core_Enums_NodeTypes_">BaseNode.IsTypeMatching(NodeTypes)</a>
+      <a class="xref" href="DulcisX.Nodes.BaseNode.html#DulcisX_Nodes_BaseNode_Equals_DulcisX_Nodes_IBaseNode_">BaseNode.Equals(IBaseNode)</a>
+    </div>
+    <div>
+      <a class="xref" href="DulcisX.Nodes.BaseNode.html#DulcisX_Nodes_BaseNode_Equals_System_Object_">BaseNode.Equals(Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="DulcisX.Nodes.BaseNode.html#DulcisX_Nodes_BaseNode_GetHashCode">BaseNode.GetHashCode()</a>
     </div>
     <div>
       <span class="xref">System.Object.ToString()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
     </div>
     <div>
       <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
     </div>
     <div>
       <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
     </div>
     <div>
       <span class="xref">System.Object.GetType()</span>
@@ -165,7 +163,7 @@
   <h6><strong>Assembly</strong>: DulcisX.dll</h6>
   <h5 id="DulcisX_Nodes_SolutionItemNode_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public abstract class SolutionItemNode : BaseNode, INamedNode, IBaseNode</code></pre>
+    <pre><code class="lang-csharp hljs">public abstract class SolutionItemNode : BaseNode, INamedNode, IBaseNode, IEquatable&lt;IBaseNode&gt;</code></pre>
   </div>
   <h3 id="constructors">Constructors
   </h3>
@@ -338,8 +336,7 @@
   </span>
   <a id="DulcisX_Nodes_SolutionItemNode_GetChildren_" data-uid="DulcisX.Nodes.SolutionItemNode.GetChildren*"></a>
   <h4 id="DulcisX_Nodes_SolutionItemNode_GetChildren" data-uid="DulcisX.Nodes.SolutionItemNode.GetChildren">GetChildren()</h4>
-  <div class="markdown level1 summary"><p>Returns all immediate children Nodes of the current Node.</p>
-</div>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -356,8 +353,7 @@
     <tbody>
       <tr>
         <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="DulcisX.Nodes.BaseNode.html">BaseNode</a>&gt;</td>
-        <td><p>An <span class="xref">System.Collections.Generic.IEnumerable&lt;T&gt;</span> with the children.</p>
-</td>
+        <td></td>
       </tr>
     </tbody>
   </table>
@@ -372,8 +368,7 @@
   </span>
   <a id="DulcisX_Nodes_SolutionItemNode_GetParent_" data-uid="DulcisX.Nodes.SolutionItemNode.GetParent*"></a>
   <h4 id="DulcisX_Nodes_SolutionItemNode_GetParent" data-uid="DulcisX.Nodes.SolutionItemNode.GetParent">GetParent()</h4>
-  <div class="markdown level1 summary"><p>Returns the immediate parent Node of the current Node.</p>
-</div>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -390,8 +385,7 @@
     <tbody>
       <tr>
         <td><a class="xref" href="DulcisX.Nodes.BaseNode.html">BaseNode</a></td>
-        <td><p>The parent if any could be found, otherwise null.</p>
-</td>
+        <td></td>
       </tr>
     </tbody>
   </table>
@@ -403,6 +397,9 @@
   </div>
   <div>
       <a class="xref" href="DulcisX.Nodes.IBaseNode.html">IBaseNode</a>
+  </div>
+  <div>
+      <span class="xref">System.IEquatable&lt;T&gt;</span>
   </div>
 </article>
           </div>

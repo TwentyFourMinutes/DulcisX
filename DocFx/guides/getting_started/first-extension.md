@@ -33,7 +33,7 @@ The `InitializeAsync` method is the start of your application. It will get calle
 At the very top of your file add a using statement to `DulcisX.Core` and instead of inheriting from `Package`, inherit from `PackageX`. This will provide you access to all the DulcisX API's.
 For now you can delete the `Package Members` region, as we will be using custom events from `PackageX`.
 
-Add a constructor to your class in which we will append our file save event. Place the following code in your class:
+Add a constructor to your class in which we will append our extension initialisation event and inside the initialisation callback we will append the  file save event. Place the following code in your class:
 
 [!code[Sample constructor](samples/constructor.cs)]
 

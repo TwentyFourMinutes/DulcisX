@@ -12,6 +12,7 @@ items:
   - DulcisX.Core.IServiceProviders
   - DulcisX.Core.PackageX
   - DulcisX.Core.VisualStudioInstance
+  - DulcisX.Core.VisualStudioUIInstance
   langs:
   - csharp
   - vb
@@ -128,6 +129,12 @@ references:
   name: VisualStudioInstance
   nameWithType: VisualStudioInstance
   fullName: DulcisX.Core.VisualStudioInstance
+- uid: DulcisX.Core.VisualStudioUIInstance
+  commentId: T:DulcisX.Core.VisualStudioUIInstance
+  parent: DulcisX.Core
+  name: VisualStudioUIInstance
+  nameWithType: VisualStudioUIInstance
+  fullName: DulcisX.Core.VisualStudioUIInstance
 - uid: DulcisX.Core
   commentId: N:DulcisX.Core
   name: DulcisX.Core

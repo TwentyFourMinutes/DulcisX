@@ -110,6 +110,7 @@
     <h5>Implements</h5>
     <div><a class="xref" href="DulcisX.Nodes.INamedNode.html">INamedNode</a></div>
     <div><a class="xref" href="DulcisX.Nodes.IBaseNode.html">IBaseNode</a></div>
+    <div><span class="xref">System.IEquatable</span>&lt;<a class="xref" href="DulcisX.Nodes.IBaseNode.html">IBaseNode</a>&gt;</div>
   </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
@@ -144,22 +145,22 @@
       <a class="xref" href="DulcisX.Nodes.BaseNode.html#DulcisX_Nodes_BaseNode_AsHierarchyItem">BaseNode.AsHierarchyItem()</a>
     </div>
     <div>
-      <a class="xref" href="DulcisX.Nodes.BaseNode.html#DulcisX_Nodes_BaseNode_IsTypeMatching_DulcisX_Core_Enums_NodeTypes_">BaseNode.IsTypeMatching(NodeTypes)</a>
+      <a class="xref" href="DulcisX.Nodes.BaseNode.html#DulcisX_Nodes_BaseNode_Equals_DulcisX_Nodes_IBaseNode_">BaseNode.Equals(IBaseNode)</a>
+    </div>
+    <div>
+      <a class="xref" href="DulcisX.Nodes.BaseNode.html#DulcisX_Nodes_BaseNode_Equals_System_Object_">BaseNode.Equals(Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="DulcisX.Nodes.BaseNode.html#DulcisX_Nodes_BaseNode_GetHashCode">BaseNode.GetHashCode()</a>
     </div>
     <div>
       <span class="xref">System.Object.ToString()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
     </div>
     <div>
       <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
     </div>
     <div>
       <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
     </div>
     <div>
       <span class="xref">System.Object.GetType()</span>
@@ -172,7 +173,7 @@
   <h6><strong>Assembly</strong>: DulcisX.dll</h6>
   <h5 id="DulcisX_Nodes_SolutionFolderNode_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class SolutionFolderNode : SolutionItemNode, INamedNode, IBaseNode</code></pre>
+    <pre><code class="lang-csharp hljs">public class SolutionFolderNode : SolutionItemNode, INamedNode, IBaseNode, IEquatable&lt;IBaseNode&gt;</code></pre>
   </div>
   <h3 id="constructors">Constructors
   </h3>
@@ -181,7 +182,7 @@
     <a href="https://github.com/TwentyFourMinutes/DulcisX/new/master/apiSpec/new?filename=DulcisX_Nodes_SolutionFolderNode__ctor_DulcisX_Nodes_SolutionNode_Microsoft_VisualStudio_Shell_Interop_IVsHierarchy_.md&amp;value=---%0Auid%3A%20DulcisX.Nodes.SolutionFolderNode.%23ctor(DulcisX.Nodes.SolutionNode%2CMicrosoft.VisualStudio.Shell.Interop.IVsHierarchy)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/TwentyFourMinutes/DulcisX/blob/master/src/DulcisX/DulcisX/Nodes/SolutionFolderNode.cs/#L20">View Source</a>
+    <a href="https://github.com/TwentyFourMinutes/DulcisX/blob/master/src/DulcisX/DulcisX/Nodes/SolutionFolderNode.cs/#L16">View Source</a>
   </span>
   <a id="DulcisX_Nodes_SolutionFolderNode__ctor_" data-uid="DulcisX.Nodes.SolutionFolderNode.#ctor*"></a>
   <h4 id="DulcisX_Nodes_SolutionFolderNode__ctor_DulcisX_Nodes_SolutionNode_Microsoft_VisualStudio_Shell_Interop_IVsHierarchy_" data-uid="DulcisX.Nodes.SolutionFolderNode.#ctor(DulcisX.Nodes.SolutionNode,Microsoft.VisualStudio.Shell.Interop.IVsHierarchy)">SolutionFolderNode(SolutionNode, IVsHierarchy)</h4>
@@ -216,47 +217,15 @@
       </tr>
     </tbody>
   </table>
-  <h3 id="properties">Properties
-  </h3>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/TwentyFourMinutes/DulcisX/new/master/apiSpec/new?filename=DulcisX_Nodes_SolutionFolderNode_NodeType.md&amp;value=---%0Auid%3A%20DulcisX.Nodes.SolutionFolderNode.NodeType%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/TwentyFourMinutes/DulcisX/blob/master/src/DulcisX/DulcisX/Nodes/SolutionFolderNode.cs/#L13">View Source</a>
-  </span>
-  <a id="DulcisX_Nodes_SolutionFolderNode_NodeType_" data-uid="DulcisX.Nodes.SolutionFolderNode.NodeType*"></a>
-  <h4 id="DulcisX_Nodes_SolutionFolderNode_NodeType" data-uid="DulcisX.Nodes.SolutionFolderNode.NodeType">NodeType</h4>
-  <div class="markdown level1 summary"><p>Gets the Type of current Node.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public override NodeTypes NodeType { get; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="DulcisX.Core.Enums.NodeTypes.html">NodeTypes</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="overrides">Overrides</h5>
-  <div><a class="xref" href="DulcisX.Nodes.BaseNode.html#DulcisX_Nodes_BaseNode_NodeType">BaseNode.NodeType</a></div>
   <h3 id="implements">Implements</h3>
   <div>
       <a class="xref" href="DulcisX.Nodes.INamedNode.html">INamedNode</a>
   </div>
   <div>
       <a class="xref" href="DulcisX.Nodes.IBaseNode.html">IBaseNode</a>
+  </div>
+  <div>
+      <span class="xref">System.IEquatable&lt;T&gt;</span>
   </div>
 </article>
           </div>
@@ -277,7 +246,7 @@
                     <a href="https://github.com/TwentyFourMinutes/DulcisX/new/master/apiSpec/new?filename=DulcisX_Nodes_SolutionFolderNode.md&amp;value=---%0Auid%3A%20DulcisX.Nodes.SolutionFolderNode%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/TwentyFourMinutes/DulcisX/blob/master/src/DulcisX/DulcisX/Nodes/SolutionFolderNode.cs/#L10" class="contribution-link">View Source</a>
+                    <a href="https://github.com/TwentyFourMinutes/DulcisX/blob/master/src/DulcisX/DulcisX/Nodes/SolutionFolderNode.cs/#L9" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>
