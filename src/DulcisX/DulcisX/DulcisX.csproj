@@ -78,6 +78,9 @@
     <Compile Include="Core\Enums\CopyToOutputDirectory.cs" />
     <Compile Include="Core\Enums\DocumentProperty.cs" />
     <Compile Include="Core\Enums\DocumentType.cs" />
+    <Compile Include="Core\Enums\MessageBoxButton.cs" />
+    <Compile Include="Core\Enums\MessageBoxIcon.cs" />
+    <Compile Include="Core\Enums\MessageBoxResult.cs" />
     <Compile Include="Core\Enums\ModifyHierarchyType.cs" />
     <Compile Include="Core\Enums\NodeTypes.cs" />
     <Compile Include="Core\Enums\StartupOption.cs" />
@@ -98,6 +101,7 @@
     <Compile Include="Core\PackageConfiguration.cs" />
     <Compile Include="Core\PackageX.cs" />
     <Compile Include="Core\VisualStudioInstance.cs" />
+    <Compile Include="Core\VisualStudioUIInstance.cs" />
     <Compile Include="Exceptions\InvalidHierarchyItemException.cs" />
     <Compile Include="Exceptions\NoFlagsAllowedException.cs" />
     <Compile Include="Exceptions\OperationNotSuccessfullException.cs" />

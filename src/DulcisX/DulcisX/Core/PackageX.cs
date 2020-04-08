@@ -121,6 +121,24 @@ namespace DulcisX.Core
             }
         }
 
+        private VisualStudioUIInstance _vsUIInstance;
+
+        /// <summary>
+        /// Gets the <see cref="VisualStudioUIInstance"/> of the environment.
+        /// </summary>
+        public VisualStudioUIInstance VSUIInstance
+        {
+            get
+            {
+                if (_vsUIInstance is null)
+                {
+                    _vsUIInstance = new VisualStudioUIInstance(ServiceContainer.GetCOMInstance<IVsUIShell>());
+                }
+
+                return _vsUIInstance;
+            }
+        }
+
         /// <summary>
         /// Gets the <see cref="Container"/> which holds package and user specifc services.
         /// </summary>
@@ -189,9 +207,6 @@ namespace DulcisX.Core
         public TService GetGlobalService<TBaseService, TService>() where TBaseService : class
                                                                    where TService : class
             => GetGlobalService(typeof(TBaseService)) as TService;
-
-        private IServiceProviders GetServiceProviders()
-            => (IServiceProviders)this;
 
         #endregion
 
