@@ -152,5 +152,49 @@ namespace DulcisX.Core
 
             return (bool)prereleaseVersionObj;
         }
+
+        public bool IsAcademicVersion()
+        {
+            ThreadHelper.ThrowIfNotOnUIThread();
+
+            var result = _shell.GetProperty((int)__VSSPROPID2.VSSPROPID_IsAcademic, out var isAcademicObj);
+
+            ErrorHandler.ThrowOnFailure(result);
+
+            return (bool)isAcademicObj;
+        }
+
+        public string GetFullReleaseName()
+        {
+            ThreadHelper.ThrowIfNotOnUIThread();
+
+            var result = _shell.GetProperty((int)__VSSPROPID5.VSSPROPID_AppBrandName, out var fullReleaseNameObj);
+
+            ErrorHandler.ThrowOnFailure(result);
+
+            return (string)fullReleaseNameObj;
+        }
+
+        public string GetShortReleaseName()
+        {
+            ThreadHelper.ThrowIfNotOnUIThread();
+
+            var result = _shell.GetProperty((int)__VSSPROPID5.VSSPROPID_AppShortBrandName, out var shortReleaseNameObj);
+
+            ErrorHandler.ThrowOnFailure(result);
+
+            return (string)shortReleaseNameObj;
+        }
+
+        public string GetSKUInfo()
+        {
+            ThreadHelper.ThrowIfNotOnUIThread();
+
+            var result = _shell.GetProperty((int)__VSSPROPID5.VSSPROPID_SKUInfo, out var skuInfoObj);
+
+            ErrorHandler.ThrowOnFailure(result);
+
+            return (string)skuInfoObj;
+        }
     }
 }
