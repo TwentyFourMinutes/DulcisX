@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="..\packages\Microsoft.CodeAnalysis.BannedApiAnalyzers.2.9.4\build\Microsoft.CodeAnalysis.BannedApiAnalyzers.props" Condition="Exists('..\packages\Microsoft.CodeAnalysis.BannedApiAnalyzers.2.9.4\build\Microsoft.CodeAnalysis.BannedApiAnalyzers.props')" />
   <Import Project="..\packages\Microsoft.CodeAnalysis.FxCopAnalyzers.2.6.3\build\Microsoft.CodeAnalysis.FxCopAnalyzers.props" Condition="Exists('..\packages\Microsoft.CodeAnalysis.FxCopAnalyzers.2.6.3\build\Microsoft.CodeAnalysis.FxCopAnalyzers.props')" />
@@ -102,7 +102,7 @@
     <Compile Include="Core\IServiceProviders.cs" />
     <Compile Include="Core\PackageConfiguration.cs" />
     <Compile Include="Core\PackageX.cs" />
-    <Compile Include="Core\SolutionExplorer.cs" />
+    <Compile Include="Hierarchy\SolutionExplorer.cs" />
     <Compile Include="Core\VisualStudioInstance.cs" />
     <Compile Include="Core\VisualStudioUIInstance.cs" />
     <Compile Include="Exceptions\InvalidHierarchyItemException.cs" />
@@ -111,44 +111,44 @@
     <Compile Include="Helpers\ExtendedHierarchyUtilities.cs" />
     <Compile Include="Helpers\VsConverter.cs" />
     <Compile Include="Helpers\VSHelper.cs" />
-    <Compile Include="Nodes\ChangedNodeBase.cs" />
-    <Compile Include="Nodes\Events\ModifyHierarchyEvents.cs" />
-    <Compile Include="Nodes\IProjectItemNode.cs" />
-    <Compile Include="Nodes\IPhysicalProjectItemNode.cs" />
-    <Compile Include="Nodes\ModifyProjectDocument.cs" />
-    <Compile Include="Nodes\RemovedPhysicalNode.cs" />
-    <Compile Include="Nodes\BaseNode.cs" />
-    <Compile Include="Nodes\DocumentNode.cs" />
-    <Compile Include="Nodes\Events\CancelTranslatorFactory.cs" />
-    <Compile Include="Nodes\AddedPhysicalNode.cs" />
-    <Compile Include="Nodes\Events\EventDistributor.cs" />
-    <Compile Include="Nodes\Events\INodeSelectionEvents.cs" />
-    <Compile Include="Nodes\Events\IOpenNodeEvents.cs" />
-    <Compile Include="Nodes\Events\IProjectNodeChangeEvents.cs" />
-    <Compile Include="Nodes\Events\ISolutionBuildEvents.cs" />
-    <Compile Include="Nodes\Events\ISolutionEvents.cs" />
-    <Compile Include="Nodes\Events\ISolutionLoadEvents.cs" />
-    <Compile Include="Nodes\Events\NodeEventSink.cs" />
-    <Compile Include="Nodes\Events\NodeSelectionEvents.cs" />
-    <Compile Include="Nodes\Events\OpenNodeEvents.cs" />
-    <Compile Include="Nodes\Events\ProjectNodeChangeEvents.cs" />
-    <Compile Include="Nodes\Events\SolutionBuildEvents.cs" />
-    <Compile Include="Nodes\Events\SolutionEvents.cs" />
-    <Compile Include="Nodes\FolderNode.cs" />
-    <Compile Include="Nodes\IBaseNode.cs" />
-    <Compile Include="Nodes\INamedNode.cs" />
-    <Compile Include="Nodes\IPhysicalNode.cs" />
-    <Compile Include="Nodes\NodeFactory.cs" />
-    <Compile Include="Nodes\ProjectItemNode.cs" />
-    <Compile Include="Nodes\ProjectNode.cs" />
-    <Compile Include="Nodes\RenamedPhysicalNode.cs" />
-    <Compile Include="Nodes\ChangedPhysicalSccNode.cs" />
-    <Compile Include="Nodes\SelectedNodesCollection.cs" />
-    <Compile Include="Nodes\SolutionItemNode.cs" />
-    <Compile Include="Nodes\SolutionNode.cs" />
-    <Compile Include="Core\SolutionExplorerConfiguration.cs" />
-    <Compile Include="Nodes\UnknownNode.cs" />
-    <Compile Include="Nodes\SolutionFolderNode.cs" />
+    <Compile Include="Hierarchy\ChangedNodeBase.cs" />
+    <Compile Include="Hierarchy\Events\ModifyHierarchyEvents.cs" />
+    <Compile Include="Hierarchy\IProjectItemNode.cs" />
+    <Compile Include="Hierarchy\IPhysicalProjectItemNode.cs" />
+    <Compile Include="Hierarchy\ModifyProjectDocument.cs" />
+    <Compile Include="Hierarchy\RemovedPhysicalNode.cs" />
+    <Compile Include="Hierarchy\BaseNode.cs" />
+    <Compile Include="Hierarchy\DocumentNode.cs" />
+    <Compile Include="Hierarchy\Events\CancelTranslatorFactory.cs" />
+    <Compile Include="Hierarchy\AddedPhysicalNode.cs" />
+    <Compile Include="Hierarchy\Events\EventDistributor.cs" />
+    <Compile Include="Hierarchy\Events\INodeSelectionEvents.cs" />
+    <Compile Include="Hierarchy\Events\IOpenNodeEvents.cs" />
+    <Compile Include="Hierarchy\Events\IProjectNodeChangeEvents.cs" />
+    <Compile Include="Hierarchy\Events\ISolutionBuildEvents.cs" />
+    <Compile Include="Hierarchy\Events\ISolutionEvents.cs" />
+    <Compile Include="Hierarchy\Events\ISolutionLoadEvents.cs" />
+    <Compile Include="Hierarchy\Events\NodeEventSink.cs" />
+    <Compile Include="Hierarchy\Events\NodeSelectionEvents.cs" />
+    <Compile Include="Hierarchy\Events\OpenNodeEvents.cs" />
+    <Compile Include="Hierarchy\Events\ProjectNodeChangeEvents.cs" />
+    <Compile Include="Hierarchy\Events\SolutionBuildEvents.cs" />
+    <Compile Include="Hierarchy\Events\SolutionEvents.cs" />
+    <Compile Include="Hierarchy\FolderNode.cs" />
+    <Compile Include="Hierarchy\IBaseNode.cs" />
+    <Compile Include="Hierarchy\INamedNode.cs" />
+    <Compile Include="Hierarchy\IPhysicalNode.cs" />
+    <Compile Include="Hierarchy\NodeFactory.cs" />
+    <Compile Include="Hierarchy\ProjectItemNode.cs" />
+    <Compile Include="Hierarchy\ProjectNode.cs" />
+    <Compile Include="Hierarchy\RenamedPhysicalNode.cs" />
+    <Compile Include="Hierarchy\ChangedPhysicalSccNode.cs" />
+    <Compile Include="Hierarchy\SelectedNodesCollection.cs" />
+    <Compile Include="Hierarchy\SolutionItemNode.cs" />
+    <Compile Include="Hierarchy\SolutionNode.cs" />
+    <Compile Include="Hierarchy\SolutionExplorerConfiguration.cs" />
+    <Compile Include="Hierarchy\UnknownNode.cs" />
+    <Compile Include="Hierarchy\SolutionFolderNode.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

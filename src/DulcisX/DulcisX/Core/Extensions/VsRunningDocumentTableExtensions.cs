@@ -1,4 +1,4 @@
-﻿using DulcisX.Nodes;
+﻿using DulcisX.Hierarchy;
 using Microsoft.VisualStudio;
 using Microsoft.VisualStudio.Shell;
 using Microsoft.VisualStudio.Shell.Interop;

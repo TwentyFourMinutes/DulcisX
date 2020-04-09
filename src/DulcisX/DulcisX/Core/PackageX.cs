@@ -1,5 +1,5 @@
 using DulcisX.Core.Extensions;
-using DulcisX.Nodes;
+using DulcisX.Hierarchy;
 using Microsoft.VisualStudio.Shell;
 using Microsoft.VisualStudio.Shell.Interop;
 using SimpleInjector;

@@ -1,10 +1,9 @@
 using DulcisX.Core;
 using DulcisX.Core.Enums;
-using DulcisX.Nodes;
+using DulcisX.Hierarchy;
 using Microsoft.VisualStudio;
 using Microsoft.VisualStudio.Shell;
 using System;
-using System.Linq;
 using System.Runtime.InteropServices;
 
 namespace DulcisX.SDKTesting
