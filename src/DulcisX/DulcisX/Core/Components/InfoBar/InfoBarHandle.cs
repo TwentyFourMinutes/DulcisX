@@ -1,6 +1,6 @@
 ﻿using Microsoft.VisualStudio.Shell.Interop;
 
-namespace DulcisX.Core.Components
+namespace DulcisX.Core
 {
     /// <summary>
     /// Points to an InfoBar message and serves as a unique pointer to this message.

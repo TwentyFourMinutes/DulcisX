@@ -1,7 +1,7 @@
 ﻿using Microsoft.VisualStudio.Imaging.Interop;
 using System;
 
-namespace DulcisX.Core.Components
+namespace DulcisX.Core
 {
     /// <summary>
     /// Represents the base image builder of an InfoBar message.

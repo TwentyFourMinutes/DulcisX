@@ -1,5 +1,4 @@
-﻿using DulcisX.Core.Components;
-using DulcisX.Core.Enums;
+﻿using DulcisX.Core.Enums;
 using DulcisX.Core.Extensions;
 using Microsoft.VisualStudio;
 using Microsoft.VisualStudio.Shell;

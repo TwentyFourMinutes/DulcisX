@@ -1,7 +1,7 @@
 ﻿using Microsoft.VisualStudio.Shell.Interop;
 using System;
 
-namespace DulcisX.Core.Components
+namespace DulcisX.Core
 {
     internal class ResultInfoBarEvents<TIdentifier> : BaseInfoBarEvents
     {

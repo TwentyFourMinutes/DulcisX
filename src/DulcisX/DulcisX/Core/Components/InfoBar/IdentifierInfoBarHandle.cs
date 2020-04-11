@@ -3,7 +3,7 @@ using System;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace DulcisX.Core.Components
+namespace DulcisX.Core
 {
     /// <summary>
     /// Represents a result Handler of an InforBar message.

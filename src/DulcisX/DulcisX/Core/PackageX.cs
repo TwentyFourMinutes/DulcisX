@@ -1,7 +1,5 @@
-using DulcisX.Core.Extensions;
 using DulcisX.Hierarchy;
 using Microsoft.VisualStudio.Shell;
-using Microsoft.VisualStudio.Shell.Interop;
 using SimpleInjector;
 using StringyEnums;
 using System;

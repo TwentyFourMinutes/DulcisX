@@ -1,0 +1,90 @@
+﻿<vs:DialogWindow
+                 x:Class="DuclisX.Core.InputMessageBox"
+                 xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                 xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                 xmlns:vs="clr-namespace:Microsoft.VisualStudio.PlatformUI;assembly=Microsoft.VisualStudio.Shell.15.0"
+                 xmlns:vsshell="clr-namespace:Microsoft.VisualStudio.Shell;assembly=Microsoft.VisualStudio.Shell.15.0"
+                 xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+                 xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" mc:Ignorable="d"
+                 xmlns:i="clr-namespace:Microsoft.Xaml.Behaviors;assembly=Microsoft.Xaml.Behaviors"
+                 x:Uid="MessagBox" ResizeMode="NoResize" Width="350" SizeToContent="Height"
+                 WindowStartupLocation="CenterOwner" HasDialogFrame="True" ShowInTaskbar="False"
+                 MinWidth="325"
+                 WindowStyle="None"
+                 Background="{DynamicResource {x:Static vsshell:VsBrushes.ToolWindowBackgroundKey}}"
+                 Foreground="{DynamicResource {x:Static vsshell:VsBrushes.ToolWindowTextKey}}"
+                 BorderBrush="LightSlateGray"
+                 BorderThickness="1"
+                 AllowsTransparency="True">
+    <vs:DialogWindow.Resources>
+        <Style x:Key="CloseButton" TargetType="Button">
+            <Setter Property="OverridesDefaultStyle" Value="True" />
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border Name="border" BorderThickness="1" BorderBrush="Transparent" Margin="0,-1,-1,0" Background="{TemplateBinding Background}">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Background" Value="{DynamicResource {x:Static vsshell:VsBrushes.HighlightKey}}" />
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </vs:DialogWindow.Resources>
+    <StackPanel DockPanel.Dock="Right"
+                HorizontalAlignment="Stretch">
+
+        <Grid Background="{DynamicResource {x:Static vsshell:VsBrushes.FileTabHotGradientKey}}"
+              Height="24">
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="MouseLeftButtonDown">
+                    <i:InvokeCommandAction Command="{Binding DragCommand}" />
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+            <Label Content="{Binding Title}" Margin="8,0,40,0" Padding="0,0,0,0" VerticalContentAlignment="Center"
+                   Height="24"
+                   Foreground="{DynamicResource {x:Static vsshell:VsBrushes.FileTabSelectedTextKey}}"
+                   Background="Transparent">
+            </Label>
+            <Button HorizontalAlignment="Right"
+                    Style="{StaticResource CloseButton}"
+                    Command="{Binding CancelCommand}">
+
+                <Canvas Height="24" Width="34">
+                    <Grid Height="24" Width="34">
+                        <Line
+                            X1="0" Y1="0"
+                            X2="10" Y2="10"
+                            Stroke="{DynamicResource {x:Static vsshell:VsBrushes.ButtonTextKey}}" StrokeThickness="0.75"
+                            Margin="12,7,12,7"/>
+                        <Line
+                            X1="0" Y1="10"
+                            X2="10" Y2="0"
+                            Stroke="{DynamicResource {x:Static vsshell:VsBrushes.ButtonTextKey}}" StrokeThickness="0.75"
+                            Margin="12,7,12,7"/>
+                    </Grid>
+                </Canvas>
+            </Button>
+        </Grid>
+
+        <StackPanel Margin="12">
+            <Label x:Name="InputLabel" x:Uid="Label1" Margin="0,0,0,2" Padding="0" Target="{Binding ElementName=InputTextBox}" Content="{Binding Content}"
+                   Style="{DynamicResource {x:Static vsshell:VsResourceKeys.ThemedDialogLabelStyleKey}}"/>
+
+            <TextBox x:Name="InputTextBox" x:Uid="InputTextBox" Text="{Binding Value, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" MaxLength="{Binding MaxLength}" Width="{Binding ActualWidth, ElementName=InputBorder}" AutomationProperties.LabeledBy="{Binding ElementName=InputLabel}"
+                     Margin="0,0,0,18"
+                     BorderBrush="{DynamicResource {x:Static vsshell:VsBrushes.ToolWindowBorderKey}}"
+                     Background="{DynamicResource {x:Static vsshell:VsBrushes.WindowKey}}"
+                     Foreground="{DynamicResource {x:Static vsshell:VsBrushes.ToolWindowTextKey}}"/>
+
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
+                <vs:DialogButton Content="OK" IsDefault="True" Margin="0" Command="{Binding SubmitCommand}" Style="{DynamicResource {x:Static vsshell:VsResourceKeys.ThemedDialogButtonStyleKey}}" />
+                <vs:DialogButton Content="Cancel" IsCancel="True" Margin="6,0,0,0" Command="{Binding CancelCommand}" Style="{DynamicResource {x:Static vsshell:VsResourceKeys.ThemedDialogButtonStyleKey}}" />
+            </StackPanel>
+        </StackPanel>
+    </StackPanel>
+</vs:DialogWindow>

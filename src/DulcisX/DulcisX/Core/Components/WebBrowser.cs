@@ -4,7 +4,7 @@ using Microsoft.VisualStudio.Shell.Interop;
 using System;
 using System.Collections.Generic;
 
-namespace DulcisX.Core.Components
+namespace DulcisX.Core
 {
     /// <summary>
     /// Wraps around the <see cref="IVsWebBrowsingService"/>.

@@ -7,9 +7,8 @@ using Microsoft.VisualStudio.Shell.Interop;
 using SimpleInjector;
 using System;
 using System.Collections.Generic;
-using DulcisX.Core.Components;
-using System.IO;
 using DulcisX.Core;
+using System.IO;
 using StringyEnums;
 
 namespace DulcisX.Hierarchy

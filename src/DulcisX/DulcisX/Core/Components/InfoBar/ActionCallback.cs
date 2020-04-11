@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace DulcisX.Core.Components
+namespace DulcisX.Core
 {
     internal class ActionCallback
     {

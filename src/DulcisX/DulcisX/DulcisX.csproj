@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="..\packages\Microsoft.CodeAnalysis.BannedApiAnalyzers.2.9.4\build\Microsoft.CodeAnalysis.BannedApiAnalyzers.props" Condition="Exists('..\packages\Microsoft.CodeAnalysis.BannedApiAnalyzers.2.9.4\build\Microsoft.CodeAnalysis.BannedApiAnalyzers.props')" />
   <Import Project="..\packages\Microsoft.CodeAnalysis.FxCopAnalyzers.2.6.3\build\Microsoft.CodeAnalysis.FxCopAnalyzers.props" Condition="Exists('..\packages\Microsoft.CodeAnalysis.FxCopAnalyzers.2.6.3\build\Microsoft.CodeAnalysis.FxCopAnalyzers.props')" />
@@ -79,6 +79,7 @@
     <Compile Include="Core\Enums\DocumentProperty.cs" />
     <Compile Include="Core\Enums\DocumentType.cs" />
     <Compile Include="Core\Enums\MessageBoxButton.cs" />
+    <Compile Include="Core\Enums\MessageBoxButtons.cs" />
     <Compile Include="Core\Enums\MessageBoxIcon.cs" />
     <Compile Include="Core\Enums\MessageBoxResult.cs" />
     <Compile Include="Core\Enums\ModifyHierarchyType.cs" />
@@ -99,8 +100,9 @@
     <Compile Include="Core\Extensions\VsRunningDocumentTableExtensions.cs" />
     <Compile Include="Core\CachingEnumerable.cs" />
     <Compile Include="Core\IContainerConfiguration.cs" />
+    <Compile Include="Core\Components\MessageBox.cs" />
     <Compile Include="Core\IServiceProviders.cs" />
-    <Compile Include="Core\InputMessageBox.cs" />
+    <Compile Include="Core\Components\InputMessageBox.cs" />
     <Compile Include="Core\PackageConfiguration.cs" />
     <Compile Include="Core\PackageX.cs" />
     <Compile Include="Hierarchy\SolutionExplorer.cs" />
@@ -531,9 +533,13 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
-    <Page Include="UI\InputMessageBox.xaml">
-      <Generator>MSBuild:Compile</Generator>
+    <Page Include="Core\Components\UI\InputMessageBox.xaml">
       <SubType>Designer</SubType>
+      <Generator>XamlIntelliSenseFileGenerator</Generator>
+    </Page>
+    <Page Include="Core\Components\UI\MessageBox.xaml">
+      <SubType>Designer</SubType>
+      <Generator>XamlIntelliSenseFileGenerator</Generator>
     </Page>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

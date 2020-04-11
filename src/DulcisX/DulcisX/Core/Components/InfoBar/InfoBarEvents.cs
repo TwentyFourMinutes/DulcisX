@@ -3,7 +3,7 @@ using Microsoft.VisualStudio.Shell;
 using Microsoft.VisualStudio.Shell.Interop;
 using System;
 
-namespace DulcisX.Core.Components
+namespace DulcisX.Core
 {
     internal abstract class BaseInfoBarEvents : EventSink, IVsInfoBarUIEvents
     {

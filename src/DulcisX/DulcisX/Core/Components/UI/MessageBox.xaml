@@ -1,11 +1,13 @@
 ﻿<vs:DialogWindow
+                 x:Class="DuclisX.Core.MessageBox"
                  xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
                  xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
                  xmlns:vs="clr-namespace:Microsoft.VisualStudio.PlatformUI;assembly=Microsoft.VisualStudio.Shell.15.0"
                  xmlns:vsshell="clr-namespace:Microsoft.VisualStudio.Shell;assembly=Microsoft.VisualStudio.Shell.15.0"
                  xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-                 xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" mc:Ignorable="d" x:Class="DuclisX.Core.MessageBox"
+                 xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" mc:Ignorable="d"
                  xmlns:i="clr-namespace:Microsoft.Xaml.Behaviors;assembly=Microsoft.Xaml.Behaviors"
+                 xmlns:draw="clr-namespace:System.Drawing;assembly=System.Drawing"
                  x:Uid="MessagBox" ResizeMode="NoResize" Width="350" SizeToContent="Height"
                  WindowStartupLocation="CenterOwner" HasDialogFrame="True" ShowInTaskbar="False"
                  MinWidth="325"
@@ -71,19 +73,26 @@
         </Grid>
 
         <StackPanel Margin="12">
-            <Label x:Name="InputLabel" x:Uid="Label1" Margin="0,0,0,2" Padding="0" Target="{Binding ElementName=InputTextBox}" Content="{Binding Content}"
-                   Style="{DynamicResource {x:Static vsshell:VsResourceKeys.ThemedDialogLabelStyleKey}}"/>
-
-            <TextBox x:Name="InputTextBox" x:Uid="InputTextBox" Text="{Binding Value, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" MaxLength="{Binding MaxLength}" Width="{Binding ActualWidth, ElementName=InputBorder}" AutomationProperties.LabeledBy="{Binding ElementName=InputLabel}"
-                     Margin="0,0,0,18"
-                     BorderBrush="{DynamicResource {x:Static vsshell:VsBrushes.ToolWindowBorderKey}}"
-                     Background="{DynamicResource {x:Static vsshell:VsBrushes.WindowKey}}"
-                     Foreground="{DynamicResource {x:Static vsshell:VsBrushes.ToolWindowTextKey}}"/>
-
-            <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
-                <vs:DialogButton Content="OK" IsDefault="True" Margin="0" Command="{Binding SubmitCommand}" Style="{DynamicResource {x:Static vsshell:VsResourceKeys.ThemedDialogButtonStyleKey}}" />
-                <vs:DialogButton Content="Cancel" IsCancel="True" Margin="6,0,0,0" Command="{Binding CancelCommand}" Style="{DynamicResource {x:Static vsshell:VsResourceKeys.ThemedDialogButtonStyleKey}}" />
+            <StackPanel Orientation="Horizontal" Margin="0,0,0,18">
+                <Image HorizontalAlignment="Left" Width="75" Height="75" Source="{Binding Icon}" />
+                <TextBlock x:Name="InputLabel" TextWrapping="WrapWithOverflow" VerticalAlignment="Center" x:Uid="Label1" Margin="15,0,0,0" Padding="0" Text="{Binding Content}"
+                   Background="Transparent"
+                   Foreground="{DynamicResource {x:Static vsshell:VsBrushes.ToolWindowTextKey}}"/>
             </StackPanel>
+
+
+            <ItemsControl ItemsSource="{Binding ButtonsSource}">
+                <ItemsControl.ItemTemplate>
+                    <DataTemplate>
+                        <vs:DialogButton Content="{Binding Name}" Command="{Binding }" CommandParameter="{Binding Value}" Margin="6,0,0,0" Style="{DynamicResource {x:Static vsshell:VsResourceKeys.ThemedDialogButtonStyleKey}}" />
+                    </DataTemplate>
+                </ItemsControl.ItemTemplate>
+                <ItemsControl.ItemsPanel>
+                    <ItemsPanelTemplate>
+                        <StackPanel Orientation="Horizontal" HorizontalAlignment="Right"/>
+                    </ItemsPanelTemplate>
+                </ItemsControl.ItemsPanel>
+            </ItemsControl>
         </StackPanel>
     </StackPanel>
 </vs:DialogWindow>
