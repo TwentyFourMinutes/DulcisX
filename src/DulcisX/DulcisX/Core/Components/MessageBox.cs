@@ -154,6 +154,11 @@ namespace DulcisX.Core
 
         internal MessageBoxModel(MessageBoxButtons messageBoxButtons, Icon icon)
         {
+            if (GetHammingWeight((uint)messageBoxButtons) > 4u)
+            {
+                throw new ArgumentException("More than four buttons are not supported.", nameof(messageBoxButtons));
+            }
+
             DragCommand = new DelegateCommand(OnDragCommand);
             CancelCommand = new DelegateCommand(OnCancelCommandExecuted);
 
@@ -184,6 +189,13 @@ namespace DulcisX.Core
         private void OnDragCommand(object parameter)
         {
             OnDrag?.Invoke();
+        }
+
+        private uint GetHammingWeight(uint value)
+        {
+            value -= ((value >> 1) & 0x55555555);
+            value = (value & 0x33333333) + ((value >> 2) & 0x33333333);
+            return (((value + (value >> 4)) & 0x0F0F0F0F) * 0x01010101) >> 24;
         }
     }
 

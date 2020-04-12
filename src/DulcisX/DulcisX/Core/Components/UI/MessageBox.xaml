@@ -7,10 +7,8 @@
                  xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
                  xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" mc:Ignorable="d"
                  xmlns:i="clr-namespace:Microsoft.Xaml.Behaviors;assembly=Microsoft.Xaml.Behaviors"
-                 xmlns:draw="clr-namespace:System.Drawing;assembly=System.Drawing"
                  x:Uid="MessagBox" ResizeMode="NoResize" Width="350" SizeToContent="Height"
                  WindowStartupLocation="CenterOwner" HasDialogFrame="True" ShowInTaskbar="False"
-                 MinWidth="325"
                  WindowStyle="None"
                  Background="{DynamicResource {x:Static vsshell:VsBrushes.ToolWindowBackgroundKey}}"
                  Foreground="{DynamicResource {x:Static vsshell:VsBrushes.ToolWindowTextKey}}"
@@ -73,9 +71,9 @@
         </Grid>
 
         <StackPanel Margin="12">
-            <StackPanel Orientation="Horizontal" Margin="0,0,0,18">
-                <Image HorizontalAlignment="Left" Width="75" Height="75" Source="{Binding Icon}" />
-                <TextBlock x:Name="InputLabel" TextWrapping="WrapWithOverflow" VerticalAlignment="Center" x:Uid="Label1" Margin="15,0,0,0" Padding="0" Text="{Binding Content}"
+            <StackPanel Orientation="Horizontal" Margin="0,0,0,18" Width="324">
+                <Image Margin="10,0,0,0" HorizontalAlignment="Left" Width="32" Height="32" Source="{Binding Icon}" />
+                <TextBlock x:Name="InputLabel" TextWrapping="Wrap" VerticalAlignment="Center" x:Uid="Label1" Margin="15,0,0,0" Padding="0" Text="{Binding Content}" Width="257"
                    Background="Transparent"
                    Foreground="{DynamicResource {x:Static vsshell:VsBrushes.ToolWindowTextKey}}"/>
             </StackPanel>
