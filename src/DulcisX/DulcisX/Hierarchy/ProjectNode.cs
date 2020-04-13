@@ -382,5 +382,8 @@ namespace DulcisX.Hierarchy
 
             return document;
         }
+
+        public ProjectNodeReferences GetReferences()
+            => new ProjectNodeReferences(this);
     }
 }
