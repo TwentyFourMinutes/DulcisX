@@ -49,7 +49,12 @@ namespace DulcisX.Hierarchy
             {
                 if (UnderlyingHierarchy.TryGetNestedHierarchy(node, out var nestedHierarchy))
                 {
-                    yield return NodeFactory.GetSolutionItemNode(ParentSolution, nestedHierarchy, CommonNodeIds.Root);
+                    var child = NodeFactory.GetSolutionItemNode(ParentSolution, nestedHierarchy, CommonNodeIds.Root);
+
+                    if (!(child is UnknownNode))
+                    {
+                        yield return child;
+                    }
                 }
 
                 node = HierarchyUtilities.GetNextSibling(UnderlyingHierarchy, node, true);
@@ -67,7 +72,8 @@ namespace DulcisX.Hierarchy
             var collectionProvider = ParentSolution.ServiceContainer.GetInstance<IVsHierarchyItemCollectionProvider>();
 
             return (await collectionProvider.GetDescendantsAsync(UnderlyingHierarchy, ct))
-                                            .Select(hierarchyItem => NodeFactory.GetItemNode(ParentSolution, hierarchyItem));
+                                            .Select(hierarchyItem => NodeFactory.GetItemNode(ParentSolution, hierarchyItem))
+                                            .Where(x=> !(x is UnknownNode));
         }
 
         /// <summary>
@@ -85,7 +91,8 @@ namespace DulcisX.Hierarchy
 
             var filteredItems = await collectionProvider.GetFilteredHierarchyItemsAsync(hierarchyItems, hierarchyItem => predicate(NodeFactory.GetItemNode(ParentSolution, hierarchyItem)), cancellationToken);
 
-            var filteredNodes = filteredItems.Select(hierarchyItem => NodeFactory.GetItemNode(ParentSolution, hierarchyItem));
+            var filteredNodes = filteredItems.Select(hierarchyItem => NodeFactory.GetItemNode(ParentSolution, hierarchyItem))
+                                             .Where(x => !(x is UnknownNode)); ;
 
             filteredItems.Dispose();
 

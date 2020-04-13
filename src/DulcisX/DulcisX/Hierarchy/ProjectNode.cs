@@ -179,7 +179,12 @@ namespace DulcisX.Hierarchy
 
             while (!VsHelper.IsItemIdNil(node))
             {
-                yield return NodeFactory.GetProjectItemNode(ParentSolution, this, UnderlyingHierarchy, node);
+                var child = NodeFactory.GetProjectItemNode(ParentSolution, this, UnderlyingHierarchy, node);
+
+                if (!(child is UnknownNode))
+                {
+                    yield return child;
+                }
 
                 node = HierarchyUtilities.GetNextSibling(UnderlyingHierarchy, node, true);
             }
