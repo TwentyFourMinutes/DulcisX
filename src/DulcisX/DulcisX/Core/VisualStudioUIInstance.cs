@@ -1,4 +1,4 @@
-﻿using DulcisX.Core.Enums;
+using DulcisX.Core.Enums;
 using DulcisX.Core.Extensions;
 using Microsoft.VisualStudio;
 using Microsoft.VisualStudio.Shell;
@@ -75,6 +75,7 @@ namespace DulcisX.Core
             _shell = _serviceContainer.GetCOMInstance<IVsUIShell>();
         }
 
+        // Add notice to XML Documentation that ThemedMessageBox would be a better choice.
         public MessageBoxResult ShowMessageBox(string title, string message, MessageBoxButton buttons, int selectedButtonIndex = 0, MessageBoxIcon icon = MessageBoxIcon.Info)
         {
             ThreadHelper.ThrowIfNotOnUIThread();
