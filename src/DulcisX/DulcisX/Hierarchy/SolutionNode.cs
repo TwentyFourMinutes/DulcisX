@@ -301,5 +301,16 @@ namespace DulcisX.Hierarchy
 
             return ((IVsRunningDocumentTable4)RunningDocumentTable).GetDocumentCookie(fullName);
         }
+
+        public bool IsLocalSolution()
+        {
+            ThreadHelper.ThrowIfNotOnUIThread();
+
+            var result = UnderlyingSolution.GetProperty((int)__VSPROPID2.VSPROPID_SolutionUserFileCreatedOnThisComputer, out var islocalSolutionObj);
+
+            ErrorHandler.ThrowOnFailure(result);
+
+            return (bool)islocalSolutionObj;
+        }
     }
 }
