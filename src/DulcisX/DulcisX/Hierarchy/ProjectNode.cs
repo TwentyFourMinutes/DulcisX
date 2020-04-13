@@ -1,4 +1,5 @@
 using DulcisX.Core.Enums;
+using DulcisX.Core.Extensions;
 using DulcisX.Exceptions;
 using DulcisX.Helpers;
 using Microsoft.Internal.VisualStudio.PlatformUI;
@@ -387,5 +388,20 @@ namespace DulcisX.Hierarchy
 
         public ProjectNodeReferences GetReferences()
             => new ProjectNodeReferences(this);
+
+        public string GetTargetFramework()
+        {
+            return UnderlyingHierarchy.GetProperty<string>(CommonNodeIds.Project, (int)__VSHPROPID4.VSHPROPID_TargetFrameworkMoniker);
+        }
+
+        public string GetTargetPlatform()
+        {
+            return UnderlyingHierarchy.GetProperty<string>(CommonNodeIds.Project, (int)__VSHPROPID5.VSHPROPID_TargetPlatformIdentifier);
+        }
+
+        public __VSPROJTARGETRUNTIME GetTargetRuntime()
+        {
+            return (__VSPROJTARGETRUNTIME)UnderlyingHierarchy.GetProperty(CommonNodeIds.Project, (int)__VSHPROPID5.VSHPROPID_TargetRuntime);
+        }
     }
 }
