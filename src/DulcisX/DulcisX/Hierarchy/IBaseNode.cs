@@ -39,6 +39,10 @@ namespace DulcisX.Hierarchy
         /// <returns>The matching parent if any could be found, otherwise null.</returns>
         BaseNode GetParent(NodeTypes nodeType);
 
+        BaseNode GetParent(int levels);
+
+        BaseNode GetParent(Predicate<BaseNode> condition);
+
         /// <summary>
         /// Returns the <see cref="IVsHierarchyItem"/> which represents the current Node.
         /// </summary>
@@ -50,5 +54,9 @@ namespace DulcisX.Hierarchy
         /// </summary>
         /// <returns>An <see cref="IEnumerable{BaseNode}"/> with the children.</returns>
         IEnumerable<BaseNode> GetChildren();
+
+        IEnumerable<BaseNode> GetChildren(Predicate<BaseNode> condition);
+
+        IEnumerable<TNode> GetChildren<TNode>() where TNode : BaseNode;
     }
 }

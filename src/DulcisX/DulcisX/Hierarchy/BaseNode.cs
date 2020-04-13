@@ -4,6 +4,7 @@ using DulcisX.Exceptions;
 using Microsoft.VisualStudio.Shell;
 using Microsoft.VisualStudio.Shell.Interop;
 using System.Collections.Generic;
+using System;
 
 namespace DulcisX.Hierarchy
 {
@@ -62,6 +63,45 @@ namespace DulcisX.Hierarchy
             return parent;
         }
 
+        public BaseNode GetParent(int levels)
+        {
+            if (levels < 1)
+            {
+                throw new ArgumentOutOfRangeException(nameof(levels), "The value needs to be greater than one.");
+            }
+
+            var node = this;
+
+            for (int level = 0; level < levels; level++)
+            {
+                node = node.GetParent();
+
+                if (node is null)
+                {
+                    return null;
+                }
+            }
+
+            return node;
+        }
+
+        public BaseNode GetParent(Predicate<BaseNode> condition)
+        {
+            var node = this;
+
+            while (node is object)
+            {
+                node = node.GetParent();
+
+                if (condition(node))
+                {
+                    return node;
+                }
+            }
+
+            return null;
+        }
+
         internal uint GetParentNodeId()
             => UnderlyingHierarchy.GetProperty(ItemId, (int)__VSHPROPID.VSHPROPID_Parent);
 
@@ -78,6 +118,28 @@ namespace DulcisX.Hierarchy
         /// </summary>
         /// <returns>An <see cref="IEnumerable{BaseNode}"/> with the children.</returns>
         public abstract IEnumerable<BaseNode> GetChildren();
+
+        public IEnumerable<BaseNode> GetChildren(Predicate<BaseNode> condition)
+        {
+            foreach (var child in GetChildren())
+            {
+                if (condition(child))
+                {
+                    yield return child;
+                }
+            }
+        }
+
+        public IEnumerable<TNode> GetChildren<TNode>() where TNode : BaseNode
+        {
+            foreach (var child in GetChildren())
+            {
+                if (child is TNode node)
+                {
+                    yield return node;
+                }
+            }
+        }
 
         #region Equality Comparison
 
@@ -163,7 +225,6 @@ namespace DulcisX.Hierarchy
         }
 
         #endregion
-
 
         #region Debugger Information
 
