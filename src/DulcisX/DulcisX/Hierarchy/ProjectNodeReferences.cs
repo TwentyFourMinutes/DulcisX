@@ -2,6 +2,7 @@
 using DulcisX.Core.Extensions;
 using Microsoft.VisualStudio.Shell;
 using Microsoft.VisualStudio.Shell.Interop;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -173,6 +174,13 @@ namespace DulcisX.Hierarchy
         internal ProjectNodeReferences(ProjectNode project)
         {
             _project = project;
+        }
+
+        public ProjectNode GetProjectByReference(IVsProjectReference projectReference)
+        {
+            ThreadHelper.ThrowIfNotOnUIThread();
+
+            return _project.ParentSolution.GetProject(new Guid(projectReference.Identity));
         }
 
         private IEnumerable<TReference> GetReferencesOfContextProvider<TContextProvider, TReference>() where TContextProvider : IVsReferenceProviderContext

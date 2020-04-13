@@ -106,6 +106,7 @@
     <Compile Include="Core\PackageConfiguration.cs" />
     <Compile Include="Core\PackageX.cs" />
     <Compile Include="Core\WindowsExplorer.cs" />
+    <Compile Include="Hierarchy\ProjectNodeReferences.cs" />
     <Compile Include="Hierarchy\SolutionExplorer.cs" />
     <Compile Include="Core\VisualStudioInstance.cs" />
     <Compile Include="Core\VisualStudioUIInstance.cs" />
