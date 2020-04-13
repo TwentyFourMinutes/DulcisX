@@ -163,5 +163,15 @@ namespace DulcisX.Hierarchy
         }
 
         #endregion
+
+
+        #region Debugger Information
+
+        private protected string DebuggerDisplay
+        {
+            get => $"Node: {GetDisplayName()}";
+        }
+
+        #endregion
     }
 }

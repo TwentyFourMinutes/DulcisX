@@ -3,12 +3,14 @@ using DulcisX.Core.Enums;
 using Microsoft.VisualStudio.Shell.Interop;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 
 namespace DulcisX.Hierarchy
 {
     /// <summary>
     /// Represents a Node which couldn't be identified.
     /// </summary>
+    [DebuggerDisplay("{DebuggerDisplay,nq}")]
     public class UnknownNode : BaseNode
     {
         /// <summary>

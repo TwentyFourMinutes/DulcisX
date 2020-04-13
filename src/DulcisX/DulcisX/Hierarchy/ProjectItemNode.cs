@@ -4,12 +4,14 @@ using Microsoft.Internal.VisualStudio.PlatformUI;
 using Microsoft.VisualStudio.Shell;
 using Microsoft.VisualStudio.Shell.Interop;
 using System.Collections.Generic;
+using System.Diagnostics;
 
 namespace DulcisX.Hierarchy
 {
     /// <summary>
     /// Represents the most basic <see cref="ProjectNode"/> children Node.
     /// </summary>
+    [DebuggerDisplay("{DebuggerDisplay,nq}")]
     public abstract class ProjectItemNode : BaseNode, IProjectItemNode
     {
         private readonly ProjectNode _parentProject;

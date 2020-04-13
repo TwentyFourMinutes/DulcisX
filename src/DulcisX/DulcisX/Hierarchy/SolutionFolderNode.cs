@@ -1,11 +1,13 @@
 ﻿using DulcisX.Core.Enums;
 using Microsoft.VisualStudio.Shell.Interop;
+using System.Diagnostics;
 
 namespace DulcisX.Hierarchy
 {
     /// <summary>
     /// Represents a Solution Folder within a <see cref="SolutionNode"/>.
     /// </summary>
+    [DebuggerDisplay("{DebuggerDisplay,nq}")]
     public class SolutionFolderNode : SolutionItemNode
     {
         /// <summary>

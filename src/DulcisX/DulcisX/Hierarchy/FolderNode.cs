@@ -2,12 +2,14 @@
 using Microsoft.VisualStudio;
 using Microsoft.VisualStudio.Shell;
 using Microsoft.VisualStudio.Shell.Interop;
+using System.Diagnostics;
 
 namespace DulcisX.Hierarchy
 {
     /// <summary>
     /// Represents a folder within a <see cref="ProjectNode"/>.
     /// </summary>
+    [DebuggerDisplay("{DebuggerDisplay,nq}")]
     public class FolderNode : ProjectItemNode, IPhysicalProjectItemNode
     {
         /// <summary>

@@ -8,6 +8,7 @@ using Microsoft.VisualStudio.Shell;
 using Microsoft.VisualStudio.Shell.Interop;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.IO;
 using System.Threading.Tasks;
 
@@ -16,6 +17,7 @@ namespace DulcisX.Hierarchy
     /// <summary>
     /// Represents a project within a <see cref="SolutionNode"/>.
     /// </summary>
+    [DebuggerDisplay("{DebuggerDisplay,nq}")]
     public class ProjectNode : SolutionItemNode, IPhysicalNode
     {
         /// <summary>

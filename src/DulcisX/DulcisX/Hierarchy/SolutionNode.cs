@@ -10,12 +10,14 @@ using System.Collections.Generic;
 using DulcisX.Core;
 using System.IO;
 using StringyEnums;
+using System.Diagnostics;
 
 namespace DulcisX.Hierarchy
 {
     /// <summary>
     /// Represents a Solution, which is the root of Node of the Solution Explorer.
     /// </summary>
+    [DebuggerDisplay("{DebuggerDisplay,nq}")]
     public class SolutionNode : SolutionItemNode, IPhysicalNode
     {
 

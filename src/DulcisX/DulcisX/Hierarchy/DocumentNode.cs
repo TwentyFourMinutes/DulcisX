@@ -4,6 +4,7 @@ using Microsoft.VisualStudio;
 using Microsoft.VisualStudio.Shell;
 using Microsoft.VisualStudio.Shell.Interop;
 using StringyEnums;
+using System.Diagnostics;
 using System.IO;
 
 namespace DulcisX.Hierarchy
@@ -11,6 +12,7 @@ namespace DulcisX.Hierarchy
     /// <summary>
     /// Represents a document within a <see cref="ProjectNode"/>.
     /// </summary>
+    [DebuggerDisplay("{DebuggerDisplay,nq}")]
     public class DocumentNode : ProjectItemNode, IPhysicalProjectItemNode
     {
         /// <summary>
