@@ -52,7 +52,7 @@ Moreover DulcisX tries to provide a more detailed overview over the Visual Studi
 
 Currently DulcisX only supports *Visual Studio 2019*. 
 
-Now how does it differ from the current DTE? This package provides a cleaner abstraction than the DTE does additionally, it is simpler to use and more powerful and most importantly open-source. However as it currently stands DuclisX doesn't cover all parts which the DTE does. See the table below for more detailed information.
+Now how does it differ from the current DTE? This package provides a cleaner abstraction than the DTE does, additionally it is simpler to use and more powerful and most importantly open-source. However as it currently stands DuclisX doesn't cover all parts which the DTE does. See the table below for more detailed information.
 
 | Status | Name                   |
 | :----: | ---------------------- |
@@ -65,12 +65,10 @@ Now how does it differ from the current DTE? This package provides a cleaner abs
 |   ❌    | Commands               |
 |   ❌    | Debugger               |
 |   ✅    | Documents              |
-|   ❌    | Edition                |
+|   ✅    | Edition                |
 |   🌀    | Events                 |
 |   ❌    | Globals                |
 |   ❌    | LocaleID               |
-|   ❌    | Macros                 |
-|   ❌    | MacrosIDE              |
 |   ❌    | MainWindow             |
 |   ❌    | Mode                   |
 |   ✅    | SelectedItems          |
@@ -97,3 +95,9 @@ The project is not affiliated, associated, authorized, endorsed by, or in any wa
 ### Contact information
 
 If you feel like something is not working as intended or you are experiencing issues, feel free to create an issue. Also for feature requests just create an issue. For further information feel free to send me a [mail](mailto:office@twenty-four.dev) to `office@twenty-four.dev` or message me on Discord `24_minutes#7496`.
+
+## Sponsors
+
+I wanna thank [JetBrains](https://www.jetbrains.com/?from=DulcisX) for providing me and the project with a free Open Source license for their whole JetBrains suite. Their Tools greatly improve the development speed of this Project. If you want to get a free Open Source license for your own project and their collaborators, visit their [Open Source page](https://www.jetbrains.com/opensource/).
+
+<a href="https://www.jetbrains.com/?from=DulcisX"><img width="350px" src="images/jetbrains_logo.png"></a>
